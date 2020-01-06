@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity">
+    tools:context="edu.aku.hassannaqvi.tpvics_hh.activities.RSDInfoActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.RSDInfoActivity" />
+            type="edu.aku.hassannaqvi.tpvics_hh.activities.RSDInfoActivity" />
     </data>
 
     <ScrollView

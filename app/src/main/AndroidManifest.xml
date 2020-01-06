@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="edu.aku.ramshasaeed.mnch">
+    package="edu.aku.hassannaqvi.tpvics_hh">
     <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".core.MainApp"
+        android:name="edu.aku.hassannaqvi.tpvics_hh.core.MainApp"
         android:allowBackup="true"
         android:icon="@mipmap/uen_logo2"
         android:label="@string/app_name"
@@ -22,11 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.DHMT_MonitoringActivity"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.DHMT_MonitoringActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.SplashscreenActivity"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.SplashscreenActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -43,73 +43,71 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.RSDInfoActivity"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.RSDInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.RsdMain"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.RsdMain"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd01"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd01"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd02"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd02"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd03"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd03"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd04"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd04"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd05"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd05"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Rsd06"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Rsd06"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc1"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc2"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc3"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc3"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc4"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc4"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc5"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc5"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc6"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc6"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".activities.Qoc7"
+            android:name="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc7"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
 
-        <activity android:name=".activities.LoginActivity" />
+        <activity android:name="edu.aku.hassannaqvi.tpvics_hh.activities.LoginActivity" />
 
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name="edu.aku.hassannaqvi.tpvics_hh.activities.MainActivity" />
 
-        <activity android:name=".activities.EndingActivity" />
-
-        <activity android:name=".Pending.SurveyPendingActivity" />
+        <activity android:name="edu.aku.hassannaqvi.tpvics_hh.activities.EndingActivity" />
 
     </application>
 

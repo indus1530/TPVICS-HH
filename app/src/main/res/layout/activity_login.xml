@@ -7,7 +7,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.LoginActivity" />
+            type="edu.aku.hassannaqvi.tpvics_hh.activities.LoginActivity" />
     </data>
 
     <LinearLayout

@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Qoc2" />
+            type="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc2" />
     </data>
 
     <ScrollView

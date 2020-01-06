@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.ramshasaeed.mnch.activities.Qoc1" />
+            type="edu.aku.hassannaqvi.tpvics_hh.activities.Qoc1" />
 
     </data>
 
