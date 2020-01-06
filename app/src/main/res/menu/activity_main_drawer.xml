@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!--<item
+            android:id="@+id/nav_hfa"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Health Facility Assessment" />-->
+        <item
+            android:id="@+id/nav_rsd"
+            android:icon="@android:drawable/ic_menu_directions"
+            android:title="@string/routine1one" />
+        <item
+            android:id="@+id/navQOC"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/routine1two" />
+        <item
+            android:id="@+id/nav_dhmt"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="@string/routine1three" />
+    </group>
+
+    <item android:title="Other Tools">
+        <menu>
+            <item
+                android:id="@+id/nav_download"
+                android:icon="@drawable/ic_cloud_download_black_24dp"
+                android:title="Download" />
+
+            <item
+                android:id="@+id/nav_upload"
+                android:icon="@drawable/cloud_computing"
+                android:title="Upload" />
+
+            <item
+                android:id="@+id/nav_opendb"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Open Database Manager" />
+        </menu>
+    </item>
+
+</menu>

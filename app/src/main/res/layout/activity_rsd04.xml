@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.Rsd04">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.ramshasaeed.mnch.activities.Rsd04" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/rsd_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dullWhile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:animateLayoutChanges="true"
+            android:background="@color/dullWhile"
+            android:orientation="vertical">
+
+
+            <!--SECTION 04 STARTS HERE-->
+            <TextView
+                style="@style/textViewCenterGravity"
+                android:text="@string/rshint04" />
+
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="@null"
+                android:layout_marginRight="3dp">
+
+                <LinearLayout
+                    style="@style/linerlayout_view"
+                    android:paddingRight="5dp">
+
+
+                    <!--RS33 STARTS HERE-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs33" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs33"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3399.checked ?  "":rs33.getText.toString }'
+                                android:visibility='@{rs3399.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3399"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS33 ENDS HERE-->
+
+
+                    <!--RS43 STARTS HERE
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs43" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs43"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs4399.checked ?  "":rs43.getText.toString }'
+                                android:visibility='@{rs4399.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs4399"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    RS43 ENDS HERE-->
+
+
+                    <!--RS30 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs30" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs30"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3099.checked ?  "":rs30.getText.toString }'
+                                android:visibility='@{rs3099.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3099"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS30 ENDS HERE-->
+
+
+                    <!--RS44 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs44" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs44"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs4499.checked ?  "":rs44.getText.toString }'
+                                android:visibility='@{rs4499.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs4499"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS44 ENDS HERE-->
+
+
+                    <!--RS37 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs37" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs37"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3799.checked ?  "":rs37.getText.toString }'
+                                android:visibility='@{rs3799.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3799"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS37 ENDS HERE-->
+
+
+                    <!--RS38 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs38" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs38"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3899.checked ?  "":rs38.getText.toString }'
+                                android:visibility='@{rs3899.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3899"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS38 ENDS HERE-->
+
+
+                    <!--RS39 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs39" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs39"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs3999.checked ?  "":rs39.getText.toString }'
+                                android:visibility='@{rs3999.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs3999"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <!--<CheckBox
+                                android:id="@+id/rs3997"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS39 ENDS HERE-->
+
+
+                    <!--RS40 STARTS HERE-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@android:color/darker_gray"
+                        android:paddingTop="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewstartAlignGravity"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="3"
+                            android:text="@string/rs40" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/rs40"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginRight="2dp"
+                                android:gravity="center"
+                                android:hint="@string/numberhint"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:text='@{rs4099.checked ?  "":rs40.getText.toString }'
+                                android:visibility='@{rs4099.checked ? View.GONE : View.VISIBLE }' />
+
+                            <CheckBox
+                                android:id="@+id/rs4099"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/msing"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />
+
+                            <!--<CheckBox
+                                android:id="@+id/rs4097"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="3dp"
+                                android:gravity="center"
+                                android:text="@string/na"
+                                android:textColor="@color/gray"
+                                android:textSize="16sp" />-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--RS40 ENDS HERE-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!--SECTION 04 ENDS HERE-->
+
+
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="32dp">
+
+                <Button
+                    android:id="@+id/btn_End"
+                    style="@style/buttons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/endForm"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    style="@style/buttons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#1ed61e"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

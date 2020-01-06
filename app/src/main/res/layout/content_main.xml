@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.aku.ramshasaeed.mnch.activities.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <TextView
+            android:id="@+id/lblAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/lightOrange"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/darkRed"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/lblsummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorSecondaryDark"
+            android:elevation="2dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="TODAY'S SUMMARY"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.CardView
+            style="@style/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+
+            android:layout_marginTop="@null"
+            android:layout_marginRight="11dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:outlineAmbientShadowColor="@color/black"
+                android:stretchColumns="1">
+
+                <TableRow android:elevation="2dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorSecondary"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="FORM ID"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorSecondary"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="FORM TYPE"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorSecondary"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="FORM STATUS"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorSecondary"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="SYNC STATUS"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/form_id"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="1\n2\n3"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/form_type"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="RSD\nQOC \nDHMT"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/complete_status"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Complete\nIncomplete \nComplete"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/sync_status"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:text="Not Synced\nSynced\nNot Synced"
+                        android:textAlignment="center" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!--  <TextView
+              android:id="@+id/recordSummary"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:background="@color/black"
+              android:padding="20dp"
+              android:text="Records Summary"
+              android:textColor="@color/green"
+              android:textSize="14sp"
+              android:typeface="monospace" />
+
+          <android.support.v4.widget.NestedScrollView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_below="@id/lblsummary"
+              android:background="@color/white"
+              android:padding="5dp">
+
+              <HorizontalScrollView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+                  <TableLayout
+                      android:id="@+id/dashboardTable"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent" />
+
+              </HorizontalScrollView>
+
+          </android.support.v4.widget.NestedScrollView>-->
+
+    </LinearLayout>
+
+</layout>

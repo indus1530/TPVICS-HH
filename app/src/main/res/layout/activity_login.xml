@@ -1,0 +1,234 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.ramshasaeed.mnch.activities.LoginActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        tools:context=".ui.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.7"
+            android:background="@drawable/background_lg"
+            android:orientation="vertical">
+
+            <!-- Login progress -->
+            <ProgressBar
+                android:id="@+id/login_progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <ScrollView
+                android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="72dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="72dp"
+                    android:layout_marginBottom="72dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/testing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/red"
+                        android:elevation="2dp"
+                        android:gravity="center_horizontal"
+                        android:keepScreenOn="true"
+                        android:text="ONLY FOR TESTING"
+                        android:textColor="@color/dullWhile"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="1dp"
+                        android:gravity="center_horizontal"
+                        android:keepScreenOn="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:gravity="center_horizontal"
+                        android:text="A PROJECT OF"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="0dp"
+                        android:contentDescription="Aga Khan LOGO"
+                        android:src="@drawable/agakhannew" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="0.99"
+                            android:drawableStart="@drawable/ic_person"
+                            android:drawablePadding="8dp"
+                            android:hint="Username/Code"
+                            android:imeActionId="6"
+                            android:imeActionLabel="@string/action_sign_in_short"
+                            android:imeOptions="actionUnspecified"
+                            android:inputType="textEmailAddress"
+                            android:layoutDirection="ltr"
+                            android:maxLines="1"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="18sp">
+
+                            <requestFocus />
+
+                        </EditText>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+
+                            <EditText
+                                android:id="@+id/password"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="0.99"
+                                android:drawableStart="@drawable/ic_lock_close"
+                                android:drawablePadding="2dp"
+                                android:hint="@string/prompt_password"
+                                android:imeActionId="7"
+                                android:imeActionLabel="@string/action_sign_in_short"
+                                android:imeOptions="actionUnspecified"
+                                android:inputType="textPassword"
+                                android:layoutDirection="ltr"
+                                android:maxLines="1"
+                                android:paddingStart="4dp"
+                                android:paddingEnd="4dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/showPassword"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/round_button"
+                                android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                                android:gravity="center"
+                                android:onClick="@{() -> callback.onShowPasswordClick()}"
+                                android:padding="3dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/spUC"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center"
+                        android:popupBackground="#3d3d3d"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <Button
+                            android:id="@+id/syncData"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="38"
+                            android:background="@color/black_overlay"
+                            android:drawableStart="@drawable/ic_cloud_download_black_24dp"
+                            android:onClick="@{() -> callback.onSyncDataClick()}"
+                            android:padding="15dp"
+                            android:text="Sync Data"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/email_sign_in_button"
+                            style="?android:textAppearanceSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="68"
+                            android:background="@color/colorPrimary"
+                            android:padding="16dp"
+                            android:text="@string/action_sign_in"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtinstalldate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#efefef"
+                        android:gravity="center"
+                        android:textColor="#565656"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
