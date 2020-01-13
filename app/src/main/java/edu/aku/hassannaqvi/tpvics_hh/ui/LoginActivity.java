@@ -63,6 +63,7 @@ import edu.aku.hassannaqvi.tpvics_hh.data.DAO.GetFncDAO;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityLoginBinding;
 import edu.aku.hassannaqvi.tpvics_hh.get.db.GetIndDBData;
 import edu.aku.hassannaqvi.tpvics_hh.get.server.GetAllData;
+import edu.aku.hassannaqvi.tpvics_hh.utils.AppInfo;
 
 public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     public static AppDatabase db;
@@ -104,31 +105,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         bi = DataBindingUtil.setContentView(this, R.layout.activity_login);
         bi.setCallback(this);
 
-//        MainApp.loginMem = new String[3];
-//        MainApp.loginMem[0] = "...";    //default value
-
-        try {
-            long installedOn = this
-                    .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.tpvics_hh", 0)
-                    .lastUpdateTime;
-            Integer versionCode = this
-                    .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.tpvics_hh", 0)
-                    .versionCode;
-            String versionName = this
-                    .getPackageManager()
-                    .getPackageInfo("edu.aku.hassannaqvi.tpvics_hh", 0)
-                    .versionName;
-            bi.txtinstalldate.setText("Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
-//
-            MainApp.versionCode = versionCode;
-            MainApp.versionName = versionName;
-
-
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+        MainApp.appInfo = new AppInfo(this, getPackageName());
+        bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
 
         // Set up the login form.
 
