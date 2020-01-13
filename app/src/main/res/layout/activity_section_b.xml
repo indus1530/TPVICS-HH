@@ -281,7 +281,7 @@
                     <CheckBox
                         android:id="@+id/hl0698"
                         style="@style/checkbox"
-                        android:text="@string/dkn" />
+                        android:text="@string/hl06b" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

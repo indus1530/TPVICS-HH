@@ -3,13 +3,16 @@ package edu.aku.hassannaqvi.tpvics_hh.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionBBinding;
+import edu.aku.hassannaqvi.tpvics_hh.validation.ValidatorClass;
 
 public class SectionBActivity extends AppCompatActivity {
 
@@ -26,7 +29,41 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
 
-    private void saveDraft() throws JSONException {
+    public void BtnContinue() {
+        if (formValidation()) {
+            try {
+                SaveDraft();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            if (UpdateDB()) {
+//                if (bi.td01b.isChecked()) {
+//                    finish();
+//                    startActivity(new Intent(this, ChildListActivity.class));
+//                } else {
+//                    finish();
+//                    startActivity(new Intent(this, SectionDAActivity.class));
+//                }
+
+            } else {
+                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private boolean UpdateDB() {
+
+        return true;
+    }
+
+    private boolean formValidation() {
+
+        return ValidatorClass.EmptyCheckingContainer(this, bi.GrpName);
+
+    }
+
+
+    private void SaveDraft() throws JSONException {
 //        JSONObject f1 = new JSONObject();
 //        f1.put("hl01", bi.hl01.getText().toString());
 //        f1.put("hl02", bi.hl02.getText().toString());
