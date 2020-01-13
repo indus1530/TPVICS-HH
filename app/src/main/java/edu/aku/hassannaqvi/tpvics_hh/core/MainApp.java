@@ -12,6 +12,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
@@ -27,34 +28,24 @@ import org.json.JSONObject;
 import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
+import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.appVersion.VersionAppContract;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.Forms;
+import edu.aku.hassannaqvi.tpvics_hh.utils.TypefaceUtil;
 
-/**
- * Created by hassan.naqvi on 11/30/2016.
- */
 
 public class MainApp extends Application {
 
-    public static final String AppName = "tpvics_hh"; // Must be without space
-    //  public static final String _IP = "10.1.42.30"; // linux server
+    public static final String _IP = "43.245.131.159"; // Test PHP server
+    //    public static final String _IP = "f49461"; // Test PHP server
+    public static final Integer _PORT = 8080; // Port - with colon (:)
+    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/hfagb/api/";
+    // public static final String TEST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
 
-    /*VCOE1 LIVE SERVER*/
-    /*public static final String _IP = "vcoe1.aku.edu"; // .Net server
-    public static final String _HOST_URL = "https://" + MainApp._IP + "/uen_qoc/api/"; // .VOC server*/
-
-    /*F38158 TEST SERVER*/
-    public static final String _IP = "f38158";// .TEST server
-    public static final Integer _PORT = 80; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + "/uen_qoc/api/"; // .TEST server
-
-
-    public static final String _UPDATE_URL = "https://" + MainApp._IP + "/uen_qoc/app/";
+    //    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
+    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/hfagb/app/";
 
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -68,8 +59,8 @@ public class MainApp extends Application {
     private static final long MINUTES_IN_HOUR = 60;
     private static final long HOURS_IN_DAY = 24;
     public static final long MILLISECONDS_IN_DAY = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY;
-    private static final long DAYS_IN_YEAR = 365;
     public static final long MILLISECONDS_IN_8Days = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * 8;
+    private static final long DAYS_IN_YEAR = 365;
     public static final long MILLISECONDS_IN_YEAR = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_YEAR;
     private static final long DAYS_IN_5_YEAR = 365 * 5;
     public static final long MILLISECONDS_IN_5Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_5_YEAR;
@@ -77,35 +68,17 @@ public class MainApp extends Application {
     public static final long MILLISECONDS_IN_MONTH = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_MONTH;
     private static final long DAYS_IN_9MONTH = 274;
     public static final long MILLISECONDS_IN_9MONTH = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_9MONTH;
-
     private static final long DAYS_IN_2_YEAR = 365 * 2;
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
     public static String deviceId;
-
     public static Boolean admin = false;
     public static String userName = "0000";
     public static int versionCode;
     public static String versionName;
+    public static String[] loginMem;
+    public static String userName2 = "0000";
     public static String IMEI;
-
-    public static String DistrictCode = "0000";
-    public static String tehsilCode = "0000";
-    public static String ucCode;
-    public static String facilityProviderCode;
-    public static String resName;
-    public static String preFix;
-    public static String wSerialNo;
-    public static String wName;
-    public static String DeviceURL = "devices.php";
-    public static String RSD = "RSD";
-    public static String RSDMain = "RSDMain";
-    public static String QOC = "QOC";
-    public static String DHMT = "DHMT";
-    public static String FORM_TYPE = "formType";
-    public static List<String> FORM_SUB_TYPE;
-    public static String MONTH = "month";
-
-
+    public static String WI2C;
     protected static LocationManager locationManager;
 
     public static String getTagName(Context mContext) {
@@ -127,6 +100,71 @@ public class MainApp extends Application {
         return calendar;
     }
 
+    public static long ageInYear_MonthByDOB(String dateStr, char type) {
+        Calendar cal = getCalendarDate(dateStr);
+        long ageInYears;
+
+        if (type == 'y')
+            ageInYears = Calendar.getInstance().get(Calendar.YEAR) - cal.get(Calendar.YEAR);
+        else
+            ageInYears = Calendar.getInstance().get(Calendar.MONTH) - cal.get(Calendar.MONTH);
+
+        return ageInYears;
+    }
+
+    public static void stActivity(final Context currentContext, final Activity currentActivity, final Class nextActivity, final Object currentFormInstance) {
+        currentActivity.finish();
+        Intent end_intent = new Intent(currentContext, nextActivity);
+        end_intent.putExtra(CONSTANTS._URI_FC_OBJ, (Serializable) currentFormInstance);
+        currentContext.startActivity(end_intent);
+    }
+
+    public static void setParamValues(final Context mContext, final String key, final String value) {
+        SharedPreferences shared = mContext.getSharedPreferences("DataParams", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = shared.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    public static String getParamValue(final Context mContext, final String key) {
+        SharedPreferences shared = mContext.getSharedPreferences("DataParams", Context.MODE_PRIVATE);
+        return shared.getString(key, "0");
+    }
+
+    public static void endActivitySetRouting(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+        activity.finish();
+        Intent end_intent = new Intent(context, EndActivityClass);
+        end_intent.putExtra(CONSTANTS._URI_END_FLAG, complete);
+        end_intent.putExtra(CONSTANTS._URI_FC_OBJ, (Serializable) objectData);
+        context.startActivity(end_intent);
+    }
+
+    public static void endActivityDirectRouting(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+        alertDialogBuilder
+                .setTitle("END INTERVIEW")
+                .setIcon(R.drawable.ic_power_settings_new_black_24dp)
+                .setCancelable(false)
+                .setMessage("Do you want to " + (complete ? "End Interview!!" : "Exit??"))
+                .setCancelable(false)
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int id) {
+                                endActivitySetRouting(context, activity, EndActivityClass, complete, objectData);
+                            }
+                        });
+        alertDialogBuilder.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
+
     public static void savingAppVersion(Context context, JSONArray array) {
 
         JSONObject object = null;
@@ -143,39 +181,71 @@ public class MainApp extends Application {
 
     }
 
-    public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
-        String message = "";
+    @Override
+    public void onCreate() {
+        super.onCreate();
+//        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/JameelNooriNastaleeq.ttf"); // font from assets: "assets/fonts/Roboto-Regular.ttf
+        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/JameelNooriNastaleeq.ttf"); // font from assets: "assets/fonts/Roboto-Regular.ttf
 
-        if (complete)
-            message = "Do you want to Finish?";
-        else
-            message = "Do you want to Exit?";
+        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID);
 
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage(message)
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                activity.finish();
-                                Intent end_intent = new Intent(context, EndActivityClass);
-                                end_intent.putExtra("complete", complete);
-                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class));
-                                end_intent.putExtra("fc_data", (Serializable) objectData);
-                                context.startActivity(end_intent);
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
+
+        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
+        // Requires Additional permission for 5.0 -- android.hardware.location.gps
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                // requestPermission();
+            } else {
+                requestLocationUpdate();
+            }
+        } else {
+            requestLocationUpdate();
+        }
+
+    }
+
+    protected void showCurrentLocation() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+        if (location != null) {
+            String message = String.format(
+                    "Current Location \n Longitude: %1$s \n Latitude: %2$s",
+                    location.getLongitude(), location.getLatitude()
+            );
+        }
+
+    }
+
+    public void requestLocationUpdate() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                MINIMUM_TIME_BETWEEN_UPDATES,
+                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+                new GPSLocationListener() // Implement this class from code
+        );
     }
 
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
@@ -228,45 +298,6 @@ public class MainApp extends Application {
         return provider1.equals(provider2);
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
-
-
-        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
-        // Requires Additional permission for 5.0 -- android.hardware.location.gps
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
-                MINIMUM_TIME_BETWEEN_UPDATES,
-                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
-                new GPSLocationListener() // Implement this class from code
-
-        );
-
-
-        FORM_SUB_TYPE = new ArrayList<>();
-
-
-//        Initialize Dead Member List
-//        deadMembers = new ArrayList<String>();
-
-    }
-
-
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {
 
@@ -288,13 +319,6 @@ public class MainApp extends Application {
                 editor.putString("Time", String.valueOf(location.getTime()));
                 editor.putString("Elevation", String.valueOf(location.getAltitude()));
                 String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(String.valueOf(location.getTime()))).toString();
-//                Toast.makeText(getApplicationContext(),
-//                        "GPS Commit! LAT: " + String.valueOf(location.getLongitude()) +
-//                                " LNG: " + String.valueOf(location.getLatitude()) +
-//                                " Accuracy: " + String.valueOf(location.getAccuracy()) +
-//                                " Time: " + date,
-//                        Toast.LENGTH_SHORT).show();
-
                 editor.apply();
             }
         }
@@ -312,57 +336,5 @@ public class MainApp extends Application {
 
         }
     }
-
-  /*  public static void endActivity(final Context context, final Activity activity) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
-        alertDialogBuilder
-                .setMessage("Do you want to Exit??")
-                .setCancelable(false)
-                .setPositiveButton("Yes",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,
-                                                int id) {
-                                activity.finish();
-                                Intent end_intent = new Intent(context, EndingActivity.class);
-                                end_intent.putExtra("complete", false);
-                                context.startActivity(end_intent);
-                            }
-                        });
-        alertDialogBuilder.setNegativeButton("No",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alert = alertDialogBuilder.create();
-        alert.show();
-    }*/
-
-    protected void showCurrentLocation() {
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-        if (location != null) {
-            String message = String.format(
-                    "Current Location \n Longitude: %1$s \n Latitude: %2$s",
-                    location.getLongitude(), location.getLatitude()
-            );
-            //Toast.makeText(getApplicationContext(), message,
-            //Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
 
 }

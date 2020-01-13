@@ -50,7 +50,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
         StringBuilder result = new StringBuilder();
 
-        URL url = null;
+        java.net.URL url = null;
         try {
             url = new URL(URL);
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -92,19 +92,19 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
                     switch (syncClass) {
                         case "User":
-                            GetSyncFncs.syncUsers(jsonArray);
+                            GetSyncFncs.syncUsers(mContext, jsonArray);
                             break;
-                        case "District":
-                            GetSyncFncs.syncDistricts(jsonArray);
+                        case "Clusters":
+                            GetSyncFncs.syncClusters(mContext, jsonArray);
                             break;
-                        case "Tehsils":
-                            GetSyncFncs.syncTehsil(jsonArray);
+                        case "Ucs":
+                            GetSyncFncs.syncUcs(mContext, jsonArray);
                             break;
-                        case "UCs":
-                            GetSyncFncs.syncUCs(jsonArray);
+                        case "Districts":
+                            GetSyncFncs.syncDistricts(mContext, jsonArray);
                             break;
-                        case "FacilityProvider":
-                            GetSyncFncs.syncFacilityProvider(jsonArray);
+                        case "HF":
+                            GetSyncFncs.syncHfa(mContext, jsonArray);
                             break;
                         case "appversion":
                             MainApp.savingAppVersion(mContext, jsonArray);
@@ -121,10 +121,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 pd.show();
             }
         } else {
-//            pd.setTitle("Connection Error");
+            pd.setTitle("Connection Error");
             pd.setMessage("Server not found!");
             pd.show();
         }
     }
+
 
 }

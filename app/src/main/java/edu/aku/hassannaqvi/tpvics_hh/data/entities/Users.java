@@ -8,9 +8,9 @@ import androidx.room.PrimaryKey;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
+import edu.aku.hassannaqvi.tpvics_hh.core.CONSTANTS;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_USERS)
+@Entity(tableName = CONSTANTS.TABLE_USERS)
 public class Users {
 
     @PrimaryKey(autoGenerate = true)
@@ -64,4 +64,5 @@ public class Users {
         this.ROW_PASSWORD = jsonObjectUser.getString("password");
         return this;
     }
+
 }

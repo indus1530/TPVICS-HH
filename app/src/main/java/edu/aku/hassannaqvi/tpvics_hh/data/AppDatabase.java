@@ -5,40 +5,30 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
+import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.core.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.FormsDAO;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.GetFncDAO;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.District;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.FacilityProvider;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.Clusters;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.Districts;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.Forms;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.Tehsil;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.HFA;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.UCs;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.Users;
 
-@Database(entities = {Users.class, Forms.class, District.class,
-        FacilityProvider.class, Tehsil.class, UCs.class}, version = AppDatabase.Sub_DBConnection.DATABASE_VERSION, exportSchema = false)
-
+@Database(entities = {Forms.class, Clusters.class, Users.class, Districts.class, UCs.class, HFA.class}, version = CONSTANTS.DATABASE_VERSION, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     // Alter table for Database Update
-    /*static final Migration MIGRATION_v1_v2 = new Migration(1, 2) {
+    static final Migration MIGRATION_v1_v2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN reportingMonth TEXT");
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN district_code TEXT");
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN tehsil_code TEXT");
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN hf_type TEXT");
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN hf_code TEXT");
-            database.execSQL("ALTER TABLE forms "
-                    + " ADD COLUMN hf_name TEXT");
+            database.execSQL("ALTER TABLE " + CONSTANTS.TABLE_FORMS
+                    + " ADD COLUMN followupType TEXT");
         }
-    };*/
+    };
 
     private static AppDatabase sInstance;
 
@@ -46,8 +36,8 @@ public abstract class AppDatabase extends RoomDatabase {
         if (sInstance == null) {
             synchronized (AppDatabase.class) {
                 if (sInstance == null) {
-                    sInstance = Room.databaseBuilder(context, AppDatabase.class, Sub_DBConnection.DATABASE_NAME)
-                            //.addMigrations(MIGRATION_v1_v2)
+                    sInstance = Room.databaseBuilder(context, AppDatabase.class, CONSTANTS.DATABASE_NAME)
+//                            .addMigrations(MIGRATION_v1_v2)
                             .setJournalMode(JournalMode.TRUNCATE)
                             .build();
                 }
@@ -60,14 +50,4 @@ public abstract class AppDatabase extends RoomDatabase {
 
     public abstract GetFncDAO getFncDao();
 
-    public interface Sub_DBConnection {
-        String DATABASE_NAME = MainApp.AppName;
-        int DATABASE_VERSION = 1;
-        String TABLE_FORMS = "forms";
-        String TABLE_USERS = "users";
-        String TABLE_DISTRICT = "district";
-        String TABLE_FACILITY_PROVIDER = "facility_provider";
-        String TABLE_TEHSIL = "tehsil";
-        String TABLE_UCs = "ucs";
-    }
 }

@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.tpvics_hh.activities;
+package edu.aku.hassannaqvi.tpvics_hh.ui;
 
 import android.Manifest;
 import android.animation.Animator;
@@ -339,21 +339,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         }
     }
 
-//    private void doPermissionGrantedStuffs() {
-//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-//            // TODO: Consider calling
-//            //    ActivityCompat#requestPermissions
-//            // here to request the missing permissions, and then overriding
-//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-//            //                                          int[] grantResults)
-//            // to handle the case where the user grants the permission. See the documentation
-//            // for ActivityCompat#requestPermissions for more details.
-//            return;
-//        }
-//        MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
-//
-//    }
-
     public void dbBackup() {
 
         sharedPref = getSharedPreferences("QOC_UEN", MODE_PRIVATE);
@@ -384,28 +369,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 if (success) {
 
                     try {
-                        /*File dbFile = new File(this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath());
-                        FileInputStream fis = new FileInputStream(dbFile);
-
-                        String outFileName = DirectoryName + File.separator +
-                                AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
-
-                        // Open the empty db as the output stream
-                        OutputStream output = new FileOutputStream(outFileName);
-
-                        // Transfer bytes from the inputfile to the outputfile
-                        byte[] buffer = new byte[1024];
-                        int length;
-                        while ((length = fis.read(buffer)) > 0) {
-                            output.write(buffer, 0, length);
-                        }
-                        // Close the streams
-                        output.flush();
-                        output.close();
-                        fis.close();*/
-
-                        String dbFileName = this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath();
-                        String outFileName = DirectoryName + File.separator + AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
+                        String dbFileName = this.getDatabasePath(CONSTANTS.DATABASE_NAME).getAbsolutePath();
+                        String outFileName = DirectoryName + File.separator + CONSTANTS.DATABASE_NAME + ".db";
 
                         File currentDB = new File(dbFileName);
                         File backupDB = new File(outFileName);
@@ -759,9 +724,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
                 }
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
 
@@ -791,21 +754,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 public void run() {
                     Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_SHORT).show();
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
-                    Toast.makeText(LoginActivity.this, "Sync District", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "District", MainApp._HOST_URL + CONSTANTS.URL_DISTRICT).execute();
-                    Toast.makeText(LoginActivity.this, "Sync Facility Provider", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "FacilityProvider", MainApp._HOST_URL + CONSTANTS.URL_HEALTH_FACILITY).execute();
-                    Toast.makeText(LoginActivity.this, "Sync AppVersion", Toast.LENGTH_SHORT).show();
-                    new GetAllData(mContext, "appversion", MainApp._UPDATE_URL + CONSTANTS.URL_UPDATE_APP).execute();
-                    Toast.makeText(LoginActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Tehsils", MainApp._HOST_URL + CONSTANTS.URL_TEHSILS).execute();
-                    /*Toast.makeText(LoginActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
-
-                    /*Toast.makeText(MainActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Tehsil", MainApp._HOST_URL + CONSTANTS.URL_TEHSIL).execute();
-                    Toast.makeText(MainActivity.this, "Sync UCs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs", MainApp._HOST_URL + CONSTANTS.URL_UCS).execute();*/
                 }
             });
 

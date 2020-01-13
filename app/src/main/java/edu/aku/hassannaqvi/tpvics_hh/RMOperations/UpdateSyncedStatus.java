@@ -13,9 +13,9 @@ import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
 
 public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
 
-    private AppDatabase db;
-    private int _id;
-    private String _date;
+    AppDatabase db;
+    int _id;
+    String _date;
 
     public UpdateSyncedStatus(AppDatabase db, String _date, int _id) {
         this.db = db;
@@ -26,7 +26,7 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = 0L;
+        Long longID = new Long(0);
         try {
 
             Method[] fn = db.getClass().getDeclaredMethods();
@@ -48,7 +48,13 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 

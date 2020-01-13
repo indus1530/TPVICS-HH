@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.tpvics_hh.JSON;
 
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -13,37 +14,29 @@ import androidx.cardview.widget.CardView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.tpvics_hh.validation.validatorClass;
+import edu.aku.hassannaqvi.tpvics_hh.validation.ValidatorClass;
 import io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText;
 
 public abstract class GeneratorClass {
 
-    public static JSONObject formJSON;
-    public static int incr = 0;
+    private static JSONObject formJSON;
 
-    public static JSONObject getContainerJSON(LinearLayout lv, boolean flag, String... convention) {
+    public static JSONObject getContainerJSON(View lv, boolean flag, String... convention) {
 
         if (flag)
             formJSON = new JSONObject();
 
         try {
 
-            for (int i = 0; i < lv.getChildCount(); i++) {
-                View view = lv.getChildAt(i);
+            for (int i = 0; i < ((ViewGroup) lv).getChildCount(); i++) {
+                View view = ((ViewGroup) lv).getChildAt(i);
 
                 String assig_id = convention.length > 0 ? convention[0] : "";
 
-                if (view instanceof CardView) {
-                    for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
-                        View view1 = ((CardView) view).getChildAt(j);
-                        if (view1 instanceof LinearLayout) {
-                            getContainerJSON((LinearLayout) view1, false, assig_id);
-                        }
-                    }
-                } else if (view instanceof RadioGroup) {
+                if (view instanceof RadioGroup) {
 
                     RadioGroup rdp = (RadioGroup) view;
-                    assig_id += validatorClass.getIDComponent(rdp);
+                    assig_id += ValidatorClass.getIDComponent(rdp);
                     int rdbID = rdp.getCheckedRadioButtonId();
 
                     if (rdbID != -1) {
@@ -54,7 +47,23 @@ public abstract class GeneratorClass {
 
                                 RadioButton rdb = rdp.findViewById(((RadioGroup) view).getChildAt(j).getId());
 
-                                formJSON.put(assig_id, getValues(validatorClass.getIDComponent(rdb)));
+                                formJSON.put(assig_id, getValues(ValidatorClass.getIDComponent(rdb)));
+
+
+                                for (byte k = 0; k < ((RadioGroup) view).getChildCount(); k++) {
+
+                                    if (((RadioGroup) view).getChildAt(k).getTag() == null)
+                                        continue;
+
+                                    if (((RadioGroup) view).getChildAt(k).getTag().equals(ValidatorClass.getIDComponent(rdb))) {
+
+                                        assig_id = ValidatorClass.getIDComponent(((RadioGroup) view).getChildAt(k));
+                                        formJSON.put(assig_id, ((EditText) ((RadioGroup) view).getChildAt(k)).getText().toString());
+
+                                        break;
+                                    }
+
+                                }
 
                                 break;
                             }
@@ -63,26 +72,30 @@ public abstract class GeneratorClass {
                     } else {
                         formJSON.put(assig_id, "0");
                     }
-                } else if (view instanceof io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) {
-                    assig_id += validatorClass.getIDComponent(view);
+                } else if (view instanceof DatePickerInputEditText) {
+                    assig_id += ValidatorClass.getIDComponent(view);
                     formJSON.put(assig_id, ((DatePickerInputEditText) view).getText().toString());
                 } else if (view instanceof EditText) {
-                    assig_id += validatorClass.getIDComponent(view);
+                    assig_id += ValidatorClass.getIDComponent(view);
                     formJSON.put(assig_id, ((EditText) view).getText().toString());
                 } else if (view instanceof CheckBox) {
-                    assig_id += validatorClass.getIDComponent(view);
+                    assig_id += ValidatorClass.getIDComponent(view);
                     if (((CheckBox) view).isChecked()) {
                         formJSON.put(assig_id, getValues(assig_id));
                     } else {
                         formJSON.put(assig_id, "0");
                     }
                 } else if (view instanceof Spinner) {
-                    assig_id += validatorClass.getIDComponent(view);
+                    assig_id += ValidatorClass.getIDComponent(view);
                     if (((Spinner) view).getSelectedItemPosition() != 0) {
                         formJSON.put(assig_id, ((Spinner) view).getSelectedItem());
                     } else {
                         formJSON.put(assig_id, "");
                     }
+                } else if (view instanceof CardView) {
+                    getContainerJSON(view, false, assig_id);
+                } else if (view instanceof LinearLayout) {
+                    getContainerJSON(view, false, assig_id);
                 }
 
             }

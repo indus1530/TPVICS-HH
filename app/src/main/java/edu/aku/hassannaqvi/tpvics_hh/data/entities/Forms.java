@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.data.entities;
 
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -10,50 +11,46 @@ import org.json.JSONObject;
 
 import java.io.Serializable;
 
-import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
+import edu.aku.hassannaqvi.tpvics_hh.core.CONSTANTS;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
+@Entity(tableName = CONSTANTS.TABLE_FORMS)
 public class Forms implements Serializable {
 
     @Ignore
-    private final String _projectName = "tpvics_hh";
+    private final String _projectName = "HEALTH-FACILITY-AUDIT";
     @Ignore
-    private final String _surveyType = "";
+    private final String round = "1";
+
+    @ColumnInfo(name = "followupType")
+    private String followupType = "";
+
+    private String tehsilcode = "";
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo
-    private String uid = "";
-    private String username = ""; // Interviewer
     private String formType = "";
+    private String uid = "";
     private String formDate = ""; // Date
-    private String reportingMonth = "";
-
-    @ColumnInfo(name = "district_code")
-    private String districtCode = "";
-
-    @ColumnInfo(name = "tehsil_code")
-    private String tehsilCode = "";
-
-    @ColumnInfo(name = "hf_type")
-    private String facilityType = "";
-
-    @ColumnInfo(name = "hf_code")
-    private String facilityCode = "";
-
-    @ColumnInfo(name = "hf_name")
-    private String facilityName = "";
-
-    private String sA = "";
-    private String sB = "";
-    private String sC = "";
-    private String sD = "";
-    private String sE = "";
-    private String sF = "";
-    private String sG = "";
-    private String starttime = "";
+    private String username = ""; // Interviewer
+    private String participantID = ""; // Child ID
+    private String participantName = ""; // Child Name
+    private String sa1 = "";     // Section 1 - Info
+    private String sa2 = "";     // Section 2
+    private String sa3 = "";     // Section 3
+    private String sa4 = "";     // Section 4
+    private String sa5 = "";     // Section 5
+    private String sa6 = "";     // Section 6
+    private String sa7 = "";     // Section 7
+    private String sa8 = "";     // Section 8
+    private String sa9 = "";     // Section 9
+    private String istatus = "";
     private String endtime = "";
+    private String districtcode = "";
+    private String hfname = "";
+    private String uccode = "";
+    private String hfcode = "";
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -64,40 +61,32 @@ public class Forms implements Serializable {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
-    private String istatus = ""; // Interview Status
-    private String istatus96x = ""; // Interview Status
-
-
-    /*    private String district = "";
-        private String tehsil = "";
-        private String ucs = "";
-        private String uen = ""; */
-
-
     @Ignore
     public Forms(Forms forms) {
 
+        this.formType = forms.formType;
+        this.followupType = forms.followupType;
         this.uid = forms.uid;
         this.formDate = forms.formDate;
-        this.formType = forms.formType;
-        this.reportingMonth = forms.reportingMonth;
-        this.districtCode = forms.districtCode;
-        this.tehsilCode = forms.tehsilCode;
-        this.facilityType = forms.facilityType;
-        this.facilityCode = forms.facilityCode;
-        this.facilityName = forms.facilityName;
         this.username = forms.username;
+        this.participantID = forms.participantID;
+        this.participantName = forms.participantName;
+        this.hfcode = forms.hfcode;
+        this.hfname = forms.hfname;
+        this.sa1 = forms.sa1;
+        this.sa2 = forms.sa2;
+        this.sa3 = forms.sa3;
+        this.sa4 = forms.sa4;
+        this.sa5 = forms.sa5;
+        this.sa6 = forms.sa6;
+        this.sa7 = forms.sa7;
+        this.sa8 = forms.sa8;
+        this.sa9 = forms.sa9;
         this.istatus = forms.istatus;
-        this.istatus96x = forms.istatus96x;
-        this.sA = forms.sA;
-        this.sB = forms.sB;
-        this.sC = forms.sC;
-        this.sD = forms.sD;
-        this.sE = forms.sE;
-        this.sF = forms.sF;
-        this.sG = forms.sG;
-        this.starttime = forms.starttime;
         this.endtime = forms.endtime;
+        this.districtcode = forms.districtcode;
+        this.tehsilcode = forms.tehsilcode;
+        this.uccode = forms.uccode;
         this.gpsLat = forms.gpsLat;
         this.gpsLng = forms.gpsLng;
         this.gpsDT = forms.gpsDT;
@@ -111,17 +100,87 @@ public class Forms implements Serializable {
 
     }
 
+    public String getFollowupType() {
+        return followupType;
+    }
+
+    public void setFollowupType(String followupType) {
+        this.followupType = followupType;
+    }
+
     public Forms() {
     }
 
-    public String getReportingMonth() {
-        return reportingMonth;
+    @Ignore
+    public JSONObject toJSONObject() throws JSONException {
+
+        JSONObject json = new JSONObject();
+
+        json.put("projectName", this._projectName);
+        json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
+        json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
+        json.put("followup", this.followupType == null ? JSONObject.NULL : this.followupType);
+        json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
+        json.put("username", this.username == null ? JSONObject.NULL : this.username);
+//        json.put("participantID", this.participantID == null ? JSONObject.NULL : this.participantID);
+//        json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
+        json.put("hfcode", this.hfcode == null ? JSONObject.NULL : this.hfcode);
+        json.put("hfname", this.hfname == null ? JSONObject.NULL : this.hfname);
+        json.put("districtcode", this.districtcode == null ? JSONObject.NULL : this.districtcode);
+        json.put("tehsilcode", this.tehsilcode == null ? JSONObject.NULL : this.tehsilcode);
+        json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
+        json.put("uccode", this.uccode == null ? JSONObject.NULL : this.uccode);
+        json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
+        json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
+        json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
+        json.put("gpsAcc", this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
+        json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
+        json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
+        json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
+        json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put("round", this.round);
+
+        if (!this.sa1.equals("")) {
+            json.put("sa1", this.sa1.equals("") ? JSONObject.NULL : new JSONObject(this.sa1));
+        }
+        if (!this.sa2.equals("")) {
+            json.put("sa2", this.sa2.equals("") ? JSONObject.NULL : new JSONObject(this.sa2));
+        }
+        if (!this.sa3.equals("")) {
+            json.put("sa3", this.sa3.equals("") ? JSONObject.NULL : new JSONObject(this.sa3));
+        }
+        if (!this.sa4.equals("")) {
+            json.put("sa4", this.sa4.equals("") ? JSONObject.NULL : new JSONObject(this.sa4));
+        }
+        if (!this.sa5.equals("")) {
+            json.put("sa5", this.sa5.equals("") ? JSONObject.NULL : new JSONObject(this.sa5));
+        }
+        if (!this.sa6.equals("")) {
+            json.put("sa6", this.sa6.equals("") ? JSONObject.NULL : new JSONObject(this.sa6));
+        }
+        if (!this.sa7.equals("")) {
+            json.put("sa7", this.sa7.equals("") ? JSONObject.NULL : new JSONObject(this.sa7));
+        }
+        if (!this.sa8.equals("")) {
+            json.put("sa8", this.sa8.equals("") ? JSONObject.NULL : new JSONObject(this.sa8));
+        }
+        if (!this.sa9.equals("")) {
+            json.put("sa9", this.sa9.equals("") ? JSONObject.NULL : new JSONObject(this.sa9));
+        }
+
+
+        return json;
     }
 
-    public void setReportingMonth(String reportingMonth) {
-        this.reportingMonth = reportingMonth;
+    public String getIstatus() {
+        return istatus;
     }
 
+    public void setIstatus(String istatus) {
+        this.istatus = istatus;
+    }
 
     public int getId() {
         return id;
@@ -129,14 +188,6 @@ public class Forms implements Serializable {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
     }
 
     public String getFormType() {
@@ -147,44 +198,12 @@ public class Forms implements Serializable {
         this.formType = formType;
     }
 
-    public String getDistrictCode() {
-        return districtCode;
+    public String getUid() {
+        return uid;
     }
 
-    public void setDistrictCode(String districtCode) {
-        this.districtCode = districtCode;
-    }
-
-    public String getTehsilCode() {
-        return tehsilCode;
-    }
-
-    public void setTehsilCode(String tehsilCode) {
-        this.tehsilCode = tehsilCode;
-    }
-
-    public String getFacilityType() {
-        return facilityType;
-    }
-
-    public void setFacilityType(String facilityType) {
-        this.facilityType = facilityType;
-    }
-
-    public String getFacilityCode() {
-        return facilityCode;
-    }
-
-    public void setFacilityCode(String facilityCode) {
-        this.facilityCode = facilityCode;
-    }
-
-    public String getFacilityName() {
-        return facilityName;
-    }
-
-    public void setFacilityName(String facilityName) {
-        this.facilityName = facilityName;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getFormDate() {
@@ -203,84 +222,108 @@ public class Forms implements Serializable {
         this.username = username;
     }
 
-    public String getIstatus() {
-        return istatus;
+    public String getParticipantID() {
+        return participantID;
     }
 
-    public void setIstatus(String istatus) {
-        this.istatus = istatus;
+    public void setParticipantID(String participantID) {
+        this.participantID = participantID;
     }
 
-    public String getIstatus96x() {
-        return istatus96x;
+    public String getParticipantName() {
+        return participantName;
     }
 
-    public void setIstatus96x(String istatus96x) {
-        this.istatus96x = istatus96x;
+    public void setParticipantName(String participantName) {
+        this.participantName = participantName;
     }
 
-    public String getSA() {
-        return sA;
+    public String getHfcode() {
+        return hfcode;
     }
 
-    public void setSA(String sA) {
-        this.sA = sA;
+    public void setHfcode(String hfcode) {
+        this.hfcode = hfcode;
     }
 
-    public String getSB() {
-        return sB;
+    public String getHfname() {
+        return hfname;
     }
 
-    public void setSB(String sB) {
-        this.sB = sB;
+    public void setHfname(String hfname) {
+        this.hfname = hfname;
     }
 
-    public String getSC() {
-        return sC;
+    public String getSa1() {
+        return sa1;
     }
 
-    public void setSC(String sC) {
-        this.sC = sC;
+    public void setSa1(String sa1) {
+        this.sa1 = sa1;
     }
 
-    public String getSD() {
-        return sD;
+    public String getSa2() {
+        return sa2;
     }
 
-    public void setSD(String sD) {
-        this.sD = sD;
+    public void setSa2(String sa2) {
+        this.sa2 = sa2;
     }
 
-    public String getSE() {
-        return sE;
+    public String getSa3() {
+        return sa3;
     }
 
-    public void setSE(String sE) {
-        this.sE = sE;
+    public void setSa3(String sa3) {
+        this.sa3 = sa3;
     }
 
-    public String getSF() {
-        return sF;
+    public String getSa4() {
+        return sa4;
     }
 
-    public void setSF(String sF) {
-        this.sF = sF;
+    public void setSa4(String sa4) {
+        this.sa4 = sa4;
     }
 
-    public String getSG() {
-        return sG;
+    public String getSa5() {
+        return sa5;
     }
 
-    public void setSG(String sG) {
-        this.sG = sG;
+    public void setSa5(String sa5) {
+        this.sa5 = sa5;
     }
 
-    public String getStarttime() {
-        return starttime;
+    public String getSa6() {
+        return sa6;
     }
 
-    public void setStarttime(String starttime) {
-        this.starttime = starttime;
+    public void setSa6(String sa6) {
+        this.sa6 = sa6;
+    }
+
+    public String getSa7() {
+        return sa7;
+    }
+
+    public void setSa7(String sa7) {
+        this.sa7 = sa7;
+    }
+
+    public String getSa8() {
+        return sa8;
+    }
+
+    public void setSa8(String sa8) {
+        this.sa8 = sa8;
+    }
+
+    public String getSa9() {
+        return sa9;
+    }
+
+    public void setSa9(String sa9) {
+        this.sa9 = sa9;
     }
 
     public String getEndtime() {
@@ -289,6 +332,30 @@ public class Forms implements Serializable {
 
     public void setEndtime(String endtime) {
         this.endtime = endtime;
+    }
+
+    public String getDistrictcode() {
+        return districtcode;
+    }
+
+    public void setDistrictcode(String districtcode) {
+        this.districtcode = districtcode;
+    }
+
+    public String getTehsilcode() {
+        return tehsilcode;
+    }
+
+    public void setTehsilcode(String tehsilcode) {
+        this.tehsilcode = tehsilcode;
+    }
+
+    public String getUccode() {
+        return uccode;
+    }
+
+    public void setUccode(String uccode) {
+        this.uccode = uccode;
     }
 
     public String getGpsLat() {
@@ -370,61 +437,5 @@ public class Forms implements Serializable {
     public void setAppversion(String appversion) {
         this.appversion = appversion;
     }
-
-    @Ignore
-    public JSONObject toJSONObject() throws JSONException {
-
-        JSONObject json = new JSONObject();
-
-        json.put("projectName", this._projectName);
-        json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
-        json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
-        json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
-        json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put("reportingMonth", this.reportingMonth == null ? JSONObject.NULL : this.reportingMonth);
-        json.put("district_code", this.districtCode == null ? JSONObject.NULL : this.districtCode);
-        json.put("tehsil_code", this.tehsilCode == null ? JSONObject.NULL : this.tehsilCode);
-        json.put("hf_type", this.facilityType == null ? JSONObject.NULL : this.facilityType);
-        json.put("hf_code", this.facilityCode == null ? JSONObject.NULL : this.facilityCode);
-        json.put("hf_name", this.facilityName == null ? JSONObject.NULL : this.facilityName);
-        json.put("username", this.username == null ? JSONObject.NULL : this.username);
-        json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
-        json.put("istatus96x", this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
-        json.put("starttime", this.starttime == null ? JSONObject.NULL : this.starttime);
-        json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
-        json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
-        json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
-        json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
-        json.put("gpsAcc", this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
-        json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
-        json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
-        json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
-
-        if (!this.sA.equals("")) {
-            json.put("sA", this.sA.equals("") ? JSONObject.NULL : new JSONObject(this.sA));
-        }
-        if (!this.sB.equals("")) {
-            json.put("sB", this.sB.equals("") ? JSONObject.NULL : new JSONObject(this.sB));
-        }
-        if (!this.sC.equals("")) {
-            json.put("sC", this.sC.equals("") ? JSONObject.NULL : new JSONObject(this.sC));
-        }
-        if (!this.sD.equals("")) {
-            json.put("sD", this.sD.equals("") ? JSONObject.NULL : new JSONObject(this.sD));
-        }
-        if (!this.sE.equals("")) {
-            json.put("sE", this.sE.equals("") ? JSONObject.NULL : new JSONObject(this.sE));
-        }
-        if (!this.sF.equals("")) {
-            json.put("sF", this.sF.equals("") ? JSONObject.NULL : new JSONObject(this.sF));
-        }
-        if (!this.sG.equals("")) {
-            json.put("sG", this.sG.equals("") ? JSONObject.NULL : new JSONObject(this.sG));
-        }
-
-        return json;
-    }
-
 
 }
