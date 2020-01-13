@@ -15,7 +15,7 @@ public abstract class UpdateFncs {
 
     public static void updateSyncedForms(int _id) {
 
-//        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05");
+//        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05");
         try {
             new UpdateSyncedStatus(db, new Date().toString(),_id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms").get();
         } catch (ExecutionException e) {

@@ -11,18 +11,20 @@ import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
  * Created by openm on 19-Jul-18.
  */
 
-public class syncOperations extends AsyncTask<String, Void, Long> {
+public class CrudOperations extends AsyncTask<String, Void, Long> {
 
-    AppDatabase db;
+    private AppDatabase db;
+    private Object forms;
 
-    public syncOperations(AppDatabase db) {
+    public CrudOperations(AppDatabase db, Object forms) {
         this.db = db;
+        this.forms = forms;
     }
 
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = new Long(0);
+        Long longID = 0L;
 
         try {
 
@@ -35,8 +37,8 @@ public class syncOperations extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName())
-                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db))));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
 
                             break;
                         }
@@ -46,16 +48,9 @@ public class syncOperations extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
-
 
         return longID;
     }

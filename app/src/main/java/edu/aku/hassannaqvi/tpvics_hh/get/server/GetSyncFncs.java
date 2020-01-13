@@ -3,8 +3,8 @@ package edu.aku.hassannaqvi.tpvics_hh.get.server;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.tpvics_hh.RMOperations.crudOperations;
-import edu.aku.hassannaqvi.tpvics_hh.RMOperations.syncOperations;
+import edu.aku.hassannaqvi.tpvics_hh.RMOperations.CrudOperations;
+import edu.aku.hassannaqvi.tpvics_hh.RMOperations.SyncOperations;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.FormsDAO;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.District;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.FacilityProvider;
@@ -18,7 +18,7 @@ public abstract class GetSyncFncs {
 
     public static void syncUsers(JSONArray userlist) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUsers");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUsers");
 
         try {
             JSONArray jsonArray = userlist;
@@ -28,7 +28,7 @@ public abstract class GetSyncFncs {
                 Users users = new Users();
                 users.Sync(jsonObjectUser);
 
-                new crudOperations(db, users).execute(FormsDAO.class.getName(), "formsDao", "insertUsers").get();
+                new CrudOperations(db, users).execute(FormsDAO.class.getName(), "formsDao", "insertUsers").get();
             }
             db.close();
 
@@ -38,7 +38,7 @@ public abstract class GetSyncFncs {
 
     public static void syncDistricts(JSONArray clusterList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteDistrict");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteDistrict");
 
         try {
             JSONArray jsonArray = clusterList;
@@ -48,7 +48,7 @@ public abstract class GetSyncFncs {
                 District district = new District();
                 district.Sync(jsonObjectUser);
 
-                new crudOperations(db, district).execute(FormsDAO.class.getName(), "formsDao", "insertDistrict").get();
+                new CrudOperations(db, district).execute(FormsDAO.class.getName(), "formsDao", "insertDistrict").get();
             }
             db.close();
 
@@ -57,7 +57,7 @@ public abstract class GetSyncFncs {
     }
     public static void syncTehsil(JSONArray clusterList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteTehsil");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteTehsil");
 
         try {
             JSONArray jsonArray = clusterList;
@@ -67,7 +67,7 @@ public abstract class GetSyncFncs {
                 Tehsil tehsil = new Tehsil();
                 tehsil.Sync(jsonObjectUser);
 
-                new crudOperations(db, tehsil).execute(FormsDAO.class.getName(), "formsDao", "insertTehsil").get();
+                new CrudOperations(db, tehsil).execute(FormsDAO.class.getName(), "formsDao", "insertTehsil").get();
             }
             db.close();
 
@@ -77,7 +77,7 @@ public abstract class GetSyncFncs {
 
     public static void syncUCs(JSONArray clusterList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUcs");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUcs");
 
         try {
             JSONArray jsonArray = clusterList;
@@ -87,7 +87,7 @@ public abstract class GetSyncFncs {
                 UCs uCs = new UCs();
                 uCs.Sync(jsonObjectUser);
 
-                new crudOperations(db, uCs).execute(FormsDAO.class.getName(), "formsDao", "insertUCs").get();
+                new CrudOperations(db, uCs).execute(FormsDAO.class.getName(), "formsDao", "insertUCs").get();
             }
             db.close();
 
@@ -97,7 +97,7 @@ public abstract class GetSyncFncs {
 
     public static void syncFacilityProvider(JSONArray dataList) {
 
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFacilityProvider");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFacilityProvider");
 
         try {
             JSONArray jsonArray = dataList;
@@ -107,7 +107,7 @@ public abstract class GetSyncFncs {
                 FacilityProvider facility_provider = new FacilityProvider();
                 facility_provider.Sync(jsonObjectdata);
 
-                new crudOperations(db, facility_provider).execute(FormsDAO.class.getName(), "formsDao", "insertFacilityProvider").get();
+                new CrudOperations(db, facility_provider).execute(FormsDAO.class.getName(), "formsDao", "insertFacilityProvider").get();
             }
             db.close();
 

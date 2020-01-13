@@ -13,20 +13,20 @@ import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
 
 public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
 
-    AppDatabase db;
-    int _id;
-    String _date;
+    private AppDatabase db;
+    private int _id;
+    private String _date;
 
     public UpdateSyncedStatus(AppDatabase db, String _date, int _id) {
         this.db = db;
-        this._id= _id;
+        this._id = _id;
         this._date = _date;
     }
 
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = new Long(0);
+        Long longID = 0L;
         try {
 
             Method[] fn = db.getClass().getDeclaredMethods();
@@ -38,8 +38,8 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(),String.class,int.class)
-                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db),this._date, this._id)));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), String.class, int.class)
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), this._date, this._id)));
 
                             break;
                         }
@@ -48,13 +48,7 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 

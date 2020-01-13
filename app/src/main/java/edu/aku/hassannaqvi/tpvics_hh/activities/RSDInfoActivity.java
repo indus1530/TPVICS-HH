@@ -1,11 +1,8 @@
 package edu.aku.hassannaqvi.tpvics_hh.activities;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +10,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import org.json.JSONException;
 
@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.RMOperations.crudOperations;
+import edu.aku.hassannaqvi.tpvics_hh.RMOperations.CrudOperations;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.FormsDAO;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.GetFncDAO;
@@ -47,7 +47,13 @@ import static edu.aku.hassannaqvi.tpvics_hh.activities.LoginActivity.db;
 public class RSDInfoActivity extends AppCompatActivity {
     private ActivityRsdinfoBinding bi;
     private String mon = new SimpleDateFormat("MMM-yy").format(new Date().getTime());
-    private List<String> reportingMonth, districtNames, districtCodes, tehsilName, tehsilCode, UcNames, ucCode, hfName, hfCode;
+    private List<String> districtCodes;
+    private List<String> tehsilName;
+    private List<String> tehsilCode;
+    private List<String> UcNames;
+    private List<String> ucCode;
+    private List<String> hfName;
+    private List<String> hfCode;
     private Map<String, FacilityProvider> facilityMap;
     private Map<String, String> tehsilMap;
     private Map<String, String> UcMap;
@@ -116,9 +122,10 @@ public class RSDInfoActivity extends AppCompatActivity {
 
     }
 
+    @SuppressWarnings("unchecked")
     private void tempVisible(final Context context) {
 
-        districtNames = new ArrayList<>();
+        List<String> districtNames = new ArrayList<>();
         districtCodes = new ArrayList<>();
 
         districtNames.add("....");
@@ -146,9 +153,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                 Toast.makeText(this, "District not found!!", Toast.LENGTH_SHORT).show();
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -181,9 +186,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                         bi.hfTehsil.setAdapter(new ArrayAdapter<>(context,
                                 android.R.layout.simple_spinner_dropdown_item, tehsilName));
 
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
+                    } catch (InterruptedException | ExecutionException e) {
                         e.printStackTrace();
                     }
 
@@ -208,11 +211,6 @@ public class RSDInfoActivity extends AppCompatActivity {
                     Collection<FacilityProvider> hfp;
                     try {
                         hfp =
-                                /*(Collection<FacilityProvider>)
-                                        new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
-                                                .execute(tehsilName.get(position)).get();*/
-
-
                                 (Collection<FacilityProvider>)
                                         new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFacilityProvider")
                                                 .execute("%" + tehsilCode.get(position) + "%", hf_type).get();
@@ -228,9 +226,7 @@ public class RSDInfoActivity extends AppCompatActivity {
                         bi.hfname.setAdapter(new ArrayAdapter<>(context,
                                 android.R.layout.simple_spinner_dropdown_item, hfName));
 
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
+                    } catch (InterruptedException | ExecutionException e) {
                         e.printStackTrace();
                     }
 
@@ -244,7 +240,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         }
 
-        reportingMonth = new ArrayList<>();
+        List<String> reportingMonth = new ArrayList<>();
         reportingMonth.add("....");
         reportingMonth.add(mon.toUpperCase());
         reportingMonth.add(DateUtils.getMonthsBack("MMM-yy", -1).toUpperCase());
@@ -287,7 +283,7 @@ public class RSDInfoActivity extends AppCompatActivity {
 
             if (fc != null) {
                 finish();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
+//                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
                 return;
             }
 
@@ -298,7 +294,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
+//                startActivity(new Intent(RSDInfoActivity.this, type.equals(MainApp.QOC) ? Qoc1.class : type.equals(MainApp.DHMT) ? DHMT_MonitoringActivity.class : RsdMain.class));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -321,36 +317,9 @@ public class RSDInfoActivity extends AppCompatActivity {
                 getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingFormo")
                         .execute(bi.reportMonth.getSelectedItem().toString(),
                                 hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
+            } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
-
-            /*if (bi.pub.isChecked()) {
-                try {
-                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPublicForm")
-                            .execute(bi.reportMonth.getSelectedItem().toString(),
-                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
-                                    hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                try {
-                    getData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getPendingPrivateForm")
-                            .execute(bi.reportMonth.getSelectedItem().toString(),
-                                    districtCodes.get(bi.hfDistrict.getSelectedItemPosition()),
-                                    hfCode.get(bi.hfname.getSelectedItemPosition())).get();
-                    //bi.hfName.getText().toString()).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }*/
 
             if (getData == null) {
                 fc = null;
@@ -400,7 +369,7 @@ public class RSDInfoActivity extends AppCompatActivity {
             String acc = GPSPref.getString("Accuracy", "0");
             String elevation = GPSPref.getString("Elevation", "0");
 
-            if (lat == "0" && lang == "0") {
+            if (lat.equals("0") && lang.equals("0")) {
                 Toast.makeText(this, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
@@ -426,21 +395,19 @@ public class RSDInfoActivity extends AppCompatActivity {
 
         try {
 
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
+            Long longID = new CrudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());
                 fc.setUid(MainApp.deviceId + fc.getId());
-                longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+                longID = new CrudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
                 return longID == 1;
 
             } else {
                 return false;
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 

@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.tpvics_hh.JSON;
 
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -8,6 +7,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+
+import androidx.cardview.widget.CardView;
 
 import org.json.JSONException;
 import org.json.JSONObject;

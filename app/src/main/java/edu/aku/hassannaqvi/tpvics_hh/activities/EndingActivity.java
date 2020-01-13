@@ -1,10 +1,10 @@
 package edu.aku.hassannaqvi.tpvics_hh.activities;
 
-import android.content.Intent;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import org.json.JSONException;
 
@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.RMOperations.crudOperations;
+import edu.aku.hassannaqvi.tpvics_hh.RMOperations.CrudOperations;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.FormsDAO;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityEndingBinding;
@@ -72,8 +72,8 @@ public class EndingActivity extends AppCompatActivity {
                 MainApp.resName = "";
                 finish();
 
-                Intent endSec = new Intent(this, MainActivity.class);
-                startActivity(endSec);
+               /* Intent endSec = new Intent(this, MainActivity.class);
+                startActivity(endSec);*/
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -90,7 +90,7 @@ public class EndingActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            Long longID = new CrudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {
