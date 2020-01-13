@@ -464,7 +464,7 @@
                         android:hint="@string/hh17b"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue=""
+                        app:maxValue="1"
                         app:minValue="11"
                         app:type="range" />
 
@@ -500,7 +500,7 @@
                         android:hint="@string/hh18b"
                         android:inputType="number"
                         app:mask="##"
-                        app:maxValue=""
+                        app:maxValue="1"
                         app:minValue="11"
                         app:type="range" />
                 </LinearLayout>

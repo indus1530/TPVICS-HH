@@ -38,7 +38,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (sInstance == null) {
                     sInstance = Room.databaseBuilder(context, AppDatabase.class, CONSTANTS.DATABASE_NAME)
 //                            .addMigrations(MIGRATION_v1_v2)
-                            .setJournalMode(JournalMode.TRUNCATE)
+                            .setJournalMode(RoomDatabase.JournalMode.TRUNCATE)
                             .build();
                 }
             }
