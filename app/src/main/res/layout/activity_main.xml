@@ -117,7 +117,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{()->callback.OpenFormFunc(1)}'
+                        android:onClick="@{()->callback.openForm(1)}"
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -145,7 +145,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{()->callback.OpenFormFunc(2)}'
+                        android:onClick="@{()->callback.openForm(2)}"
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -182,7 +182,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{()->callback.OpenFormFunc(3)}'
+                        android:onClick="@{()->callback.openForm(3)}"
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout

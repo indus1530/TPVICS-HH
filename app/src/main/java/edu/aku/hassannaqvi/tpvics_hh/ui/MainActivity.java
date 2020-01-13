@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void OpenFormFunc(int index) {
+    public void openForm(int index) {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
             oF = new Intent(MainActivity.this, getActivity(index));
