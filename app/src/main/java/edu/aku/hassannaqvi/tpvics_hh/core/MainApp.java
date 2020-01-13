@@ -33,6 +33,7 @@ import java.util.Date;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.appVersion.VersionAppContract;
+import edu.aku.hassannaqvi.tpvics_hh.utils.AppInfo;
 import edu.aku.hassannaqvi.tpvics_hh.utils.TypefaceUtil;
 
 
@@ -75,6 +76,7 @@ public class MainApp extends Application {
     public static String userName = "0000";
     public static int versionCode;
     public static String versionName;
+    public static AppInfo appInfo;
     public static String[] loginMem;
     public static String userName2 = "0000";
     public static String IMEI;
