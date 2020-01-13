@@ -388,21 +388,21 @@
     <string name="hs17k">گھر میں کھانا نہیں پکتا </string>
     <string name="hs17x">دیگر وضاحت کریں</string>
     <string name="hs18">گھر کے  فرش  بنانے میں کس قسم کا  میٹریل استعمال کیاگیا ہے گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں  اگرمشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔</string>
-    <string name="hs18a">مٹی/چکنی مٹی/زمین/ریت</string>
     <string name="hs18a_title"> قدرتی فرش</string>
+    <string name="hs18a">مٹی/چکنی مٹی/زمین/ریت</string>
     <string name="hs18b">جانوروں کا گوبر </string>
     <string name="hs18c_title">بنیادی /ابتدائی فرش</string>
-    <string name="hs18e">لکٹری کے تختے</string>
-    <string name="hs18f">کھجور  یاناریل کے پتے /بانس</string>
-    <string name="hs18g">لکڑی کا فرش یا پالش والی لکڑی</string>
+    <string name="hs18c">لکٹری کے تختے</string>
+    <string name="hs18d">کھجور  یاناریل کے پتے /بانس</string>
     <string name="hs18g_title">تیار فرش </string>
-    <string name="hs18h">لکڑی کی پلائی  یا  لکڑی کے ٹائلز </string>
-    <string name="hs18i">سرامک ٹائلز </string>
-    <string name="hs18j">سیمنٹ</string>
-    <string name="hs18k">قالین</string>
-    <string name="hs18l">اینٹیں</string>
-    <string name="hs18m">چونے کا پتھر</string>
-    <string name="hs18x">دیگر وضاحت کریں</string>
+    <string name="hs18e">لکڑی کا فرش یا پالش والی لکڑی</string>
+    <string name="hs18f">لکڑی کی پلائی  یا  لکڑی کے ٹائلز </string>
+    <string name="hs18g">سرامک ٹائلز </string>
+    <string name="hs18h">سیمنٹ</string>
+    <string name="hs18i">قالین</string>
+    <string name="hs18j">اینٹیں</string>
+    <string name="hs18k">چونے کا پتھر</string>
+    <string name="hs1896">دیگر وضاحت کریں</string>
     <string name="hs19">گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
     <string name="hs19a">کوئی چھت نہیں</string>
     <string name="hs19a_title">قدرتی چھت</string>
@@ -468,4 +468,5 @@
     <string name="hs27">Record The Time</string>
     <string name="hs27_title">جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12-23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
 
+    <string name="other">دیگر وضاحت کریں  </string>
 </resources>

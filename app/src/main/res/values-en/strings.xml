@@ -474,5 +474,6 @@
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
     <string name="rm">Reporting Month</string>
+    <string name="other">Don't Know (Spacify) </string>
 
 </resources>
