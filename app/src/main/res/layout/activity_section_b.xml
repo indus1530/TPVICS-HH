@@ -66,7 +66,7 @@
 
                     <EditText
                         android:id="@+id/hl02"
-                        style="@style/textInputName"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -239,7 +239,7 @@
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         android:id="@+id/hl05"
-                        style="@style/textInputName"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -475,7 +475,7 @@
                         <RadioButton
                             android:id="@+id/hl0996"
                             style="@style/radiobutton"
-                            android:text="@string/other" />
+                            android:text="@string/hl09x" />
 
                         <EditText
                             android:id="@+id/hl0996x"
