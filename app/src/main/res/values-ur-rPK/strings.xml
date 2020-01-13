@@ -2,6 +2,63 @@
 <resources>
 
     <string name="app_name">TPVICS - HH</string>
+    <string name="module_one"> MNCH </string>
+    <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
+    <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
+    <string name="routinethree"> Performance Evaluation of District Team Meetings </string>
+    <string name="routine1two"> Key Quality Indicator Tool for HF </string>
+    <string name="routine1one"> DHIS Data-Validation Tools for DM </string>
+    <string name="routine1three"> Performance Evaluation of DHMTs </string>
+    <string name="routine2two"> KQI-HF </string>
+    <string name="routine2one"> DHIS-DVT </string>
+    <string name="routine2three"> DHMT Monitoring </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">MNCH</string>
+    <string name="nav_header_subtitle">xyz</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nextSection">Next Section</string>
+    <string name="end_interview">End Interview</string>
+    <string name="endForm">End Form</string>
+    <string name="numberhint">Number</string>
+
+    <string name="default_p">#</string>
+    <string name="default_guest_name">Name</string>
+
+
+    <string name="hf_district">District</string>
+    <string name="meetingtime">Please Select Meeting Date and Time</string>
+    <string name="hf_tehsil">Tehsil</string>
+    <string name="hf_uc">Union Council</string>
+    <string name="hf_uen_private">Private Facility Name</string>
+    <string name="hfname"> Facility Name </string>
+    <string name="hf_consent">Is Consent form Signed</string>
+    <string name="check">Check</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="nap">Not Applicable</string>
+    <string name="msing">Missing</string>
+    <string name="na">Not Available</string>
+    <string name="istatus">Interview Results</string>
+    <string name="istatusa">Complete</string>
+    <string name="istatusb">Incomplete</string>
+    <string name="istatusc">Designate person isn\'t available</string>
+
+
+    <string name="date"> Date </string>
+    <string name="time"> Time </string>
+
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+
+
     <string name="hh01">جغرافیائی علاقہ </string>
     <string name="hh02">اینومیریشن بلاک نمبر </string>
     <string name="hh03">صوبہ  </string>
@@ -409,6 +466,5 @@
     <string name="hs26b">نہیں</string>
     <string name="hs27">Record The Time</string>
     <string name="hs27_title">جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12-23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
-
 
 </resources>

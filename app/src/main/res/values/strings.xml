@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TPVICS - HH</string>
 
-    <!--<string name="module_one"> MNCH </string>
+    <string name="module_one"> MNCH </string>
     <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
     <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
     <string name="routinethree"> Performance Evaluation of District Team Meetings </string>
@@ -55,7 +55,7 @@
     <string name="action_sign_in">Login</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_field_required">This field is required</string>
-    <string name="error_incorrect_password">This password is incorrect</string>-->
+    <string name="error_incorrect_password">This password is incorrect</string>
 
 
     <string name="hh01">Geographical Area</string>
