@@ -14,15 +14,16 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="edu.aku.hassannaqvi.tpvics_hh.core.MainApp"
+        android:name=".core.MainApp"
         android:allowBackup="true"
         android:icon="@mipmap/uen_logo2"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/uen_logo2_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.SectionAActivity"></activity>
         <activity
-            android:name="edu.aku.hassannaqvi.tpvics_hh.ui.SplashscreenActivity"
+            android:name=".ui.SplashscreenActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -38,11 +39,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name="edu.aku.hassannaqvi.tpvics_hh.ui.LoginActivity" />
-
-        <activity android:name="edu.aku.hassannaqvi.tpvics_hh.ui.EndingActivity" />
-
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.EndingActivity" />
     </application>
 
 </manifest>

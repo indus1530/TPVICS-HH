@@ -182,4 +182,17 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <!-- Irfan Scrollview  -->
+    <style name="i_scrollview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">5sp</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:paddingLeft">5sp</item>
+        <item name="android:paddingRight">5sp</item>
+        <item name="android:paddingBottom">5sp</item>
+    </style>
+
 </resources>
