@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -16,8 +15,7 @@
         style="@style/i_scrollview"
         android:fadeScrollbars="false"
         android:fillViewport="true"
-        android:scrollbarSize="10dip"
-        tools:context=".ui.Myactivity">
+        android:scrollbarSize="10dip">
 
         <LinearLayout
             android:id="@+id/fldGrpSecA"
@@ -26,7 +24,7 @@
             android:orientation="vertical">
 
             <!-- hh01  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh01"
                 style="@style/cardView">
 
@@ -38,15 +36,11 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/hh01" />
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/hh01" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh02  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh02"
                 style="@style/cardView">
 
@@ -69,10 +63,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh03  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh03"
                 style="@style/cardView">
 
@@ -95,10 +89,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh04  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh04"
                 style="@style/cardView">
 
@@ -121,10 +115,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh05  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh05"
                 style="@style/cardView">
 
@@ -147,10 +141,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh06  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh06"
                 style="@style/cardView">
 
@@ -173,10 +167,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh07  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh07"
                 style="@style/cardView">
 
@@ -199,10 +193,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh08  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh08"
                 style="@style/cardView">
 
@@ -225,10 +219,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh09  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh09"
                 style="@style/cardView">
 
@@ -251,10 +245,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh10  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh10"
                 style="@style/cardView">
 
@@ -277,10 +271,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh11  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh11"
                 style="@style/cardView">
 
@@ -303,10 +297,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh12  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh12"
                 style="@style/cardView">
 
@@ -329,10 +323,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh13  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh13"
                 style="@style/cardView">
 
@@ -355,10 +349,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh14  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh14"
                 style="@style/cardView">
 
@@ -381,10 +375,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh15  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh15"
                 style="@style/cardView">
 
@@ -407,10 +401,10 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh16  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh16"
                 style="@style/cardView">
 
@@ -439,10 +433,10 @@
                             android:text="@string/hh16b" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh17  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh17"
                 style="@style/cardView">
 
@@ -456,20 +450,18 @@
                         android:text="@string/hh17" />
 
                     <EditText
-                        android:id="@+id/hh17"
-                        style="@style/radiobutton"
+                        android:id="@+id/hh17a"
+                        style="@style/EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="@string/ed_letterOnly"
-                        android:hint="@string/hh17" />
+                        android:hint="@string/hh17a" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/hh17 "
+                        android:id="@+id/hh17b"
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="@string/ed_numbersOnly"
-                        android:hint="@string/hh17"
+                        android:hint="@string/hh17b"
                         android:inputType="number"
                         app:mask="##"
                         app:maxValue=""
@@ -477,10 +469,10 @@
                         app:type="range" />
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh18  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh18"
                 style="@style/cardView">
 
@@ -495,10 +487,9 @@
 
                     <EditText
                         android:id="@+id/hh18a"
-                        style="@style/radiobutton"
+                        style="@style/EditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="@string/ed_letterOnly"
                         android:hint="@string/hh18a" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -506,7 +497,6 @@
                         style="@style/EditTextAlphaNumeric"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="@string/ed_numbersOnly"
                         android:hint="@string/hh18b"
                         android:inputType="number"
                         app:mask="##"
@@ -514,10 +504,10 @@
                         app:minValue="11"
                         app:type="range" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh19  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh19"
                 style="@style/cardView">
 
@@ -538,19 +528,19 @@
                         <RadioButton
                             android:id="@+id/hh19a"
                             style="@style/radiobutton"
-                            android:text="@string/hh19" />
+                            android:text="@string/hh19a" />
 
                         <RadioButton
                             android:id="@+id/hh19b"
                             style="@style/radiobutton"
-                            android:text="@string/hh19" />
+                            android:text="@string/hh19b" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <!-- hh19-title  T   -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldGrpCVhh19-title"
+            <!-- hh19_title  T   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhh19_title"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -560,17 +550,13 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/hh19-title" />
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/hh19-title" />
+                        android:text="@string/hh19_title" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-            <!-- hh20-title  T   -->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldGrpCVhh20-title"
+            <!-- hh20_title  T   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhh20_title"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -580,16 +566,13 @@
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/hh20-title" />
+                        android:text="@string/hh20_title" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/hh20-title" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh20  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh20"
                 style="@style/cardView">
 
@@ -640,24 +623,23 @@
                         <RadioButton
                             android:id="@+id/hh2096"
                             style="@style/radiobutton"
-                            android:text="@string/hh2096" />
+                            android:text="@string/hh20x" />
 
                         <EditText
                             android:id="@+id/hh2096x"
-                            style="@style/radiobutton"
+                            style="@style/EditTextAlphaNumeric"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="@string/ed_letterOnly"
                             android:hint="@string/hh20x"
                             android:tag="hh2096"
                             android:text='@{hh2096.checked? hh2096x.getText().toString() : ""}'
                             android:visibility='@{hh2096.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh21  T   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh21"
                 style="@style/cardView">
 
@@ -686,10 +668,10 @@
                             android:text="@string/hh21b" />
                     </RadioGroup>
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- hh22  E   -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh22"
                 style="@style/cardView">
 
@@ -712,7 +694,7 @@
                         android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
