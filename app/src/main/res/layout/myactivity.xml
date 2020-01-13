@@ -1,0 +1,703 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.template.ui.Myactivity" />
+    </data>
+
+    <ScrollView
+        style="@style/i_scrollview"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:scrollbarSize="10dip"
+        tools:context=".ui.Myactivity">
+
+        <LinearLayout
+            android:id="@+id/GrpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"> <!-- HH01  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH01"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH01" />
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH01" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH02  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH02"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH02" />
+
+                    <EditText
+                        android:id="@+id/HH02"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH03  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH03"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH03" />
+
+                    <EditText
+                        android:id="@+id/HH03"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH04  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH04"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH04" />
+
+                    <EditText
+                        android:id="@+id/HH04"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH05  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH05"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH05" />
+
+                    <EditText
+                        android:id="@+id/HH05"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH06  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH06"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH06" />
+
+                    <EditText
+                        android:id="@+id/HH06"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH07  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH07"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH07" />
+
+                    <EditText
+                        android:id="@+id/HH07"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH08  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH08"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH08" />
+
+                    <EditText
+                        android:id="@+id/HH08"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH09  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH09"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH09" />
+
+                    <EditText
+                        android:id="@+id/HH09"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH10  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH10"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH10" />
+
+                    <EditText
+                        android:id="@+id/HH10"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH11  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH11"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH11" />
+
+                    <EditText
+                        android:id="@+id/HH11"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH12  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH12"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH12" />
+
+                    <EditText
+                        android:id="@+id/HH12"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH13  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH13"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH13" />
+
+                    <EditText
+                        android:id="@+id/HH13"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH14  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH14"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH14" />
+
+                    <EditText
+                        android:id="@+id/HH14"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH15  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH15"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH15" />
+
+                    <EditText
+                        android:id="@+id/HH15"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH16  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH16"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH16" />
+
+                    <RadioGroup
+                        android:id="@+id/HH16"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/HH16A"
+                            style="@style/radiobutton"
+                            android:text="@string/HH16A" />
+
+                        <RadioButton
+                            android:id="@+id/HH16B"
+                            style="@style/radiobutton"
+                            android:text="@string/HH16B" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH17  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH17"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH17" />
+
+                    <RadioGroup
+                        android:id="@+id/HH17"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/HH17A"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_letterOnly"
+                            android:hint="@string/HH17A"
+                            android:tag="HH17A"
+                            android:text='@{HH17A.checked? HH17Ax.getText().toString() : ""}'
+                            android:visibility='@{td1396.checked? View.VISIBLE : View.GONE}' />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/HH17B "
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_numbersOnly"
+                            android:hint="@string/HH17B"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue=""
+                            app:minValue="11"
+                            app:type="range" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH18  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH18"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH18" />
+
+                    <RadioGroup
+                        android:id="@+id/HH18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/HH18A"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_letterOnly"
+                            android:hint="@string/HH18A"
+                            android:tag="HH18A"
+                            android:text='@{HH18A.checked? HH18Ax.getText().toString() : ""}'
+                            android:visibility='@{td1396.checked? View.VISIBLE : View.GONE}' />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/HH18B "
+                            style="@style/EditTextAlphaNumeric"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_numbersOnly"
+                            android:hint="@string/HH18B"
+                            android:inputType="number"
+                            app:mask="##"
+                            app:maxValue=""
+                            app:minValue="11"
+                            app:type="range" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH19  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH19"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH19" />
+
+                    <RadioGroup
+                        android:id="@+id/HH19"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/HH19A"
+                            style="@style/radiobutton"
+                            android:text="@string/HH19A" />
+
+                        <RadioButton
+                            android:id="@+id/HH19B"
+                            style="@style/radiobutton"
+                            android:text="@string/HH19B" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH19-Title  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH19-Title"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH19-Title" />
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH19-Title" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH20  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH20"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH20" />
+
+                    <RadioGroup
+                        android:id="@+id/HH20"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/HH20A"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20A" />
+
+                        <RadioButton
+                            android:id="@+id/HH20B"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20B" />
+
+                        <RadioButton
+                            android:id="@+id/HH20C"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20C" />
+
+                        <RadioButton
+                            android:id="@+id/HH20D"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20D" />
+
+                        <RadioButton
+                            android:id="@+id/HH20E"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20E" />
+
+                        <RadioButton
+                            android:id="@+id/HH20F"
+                            style="@style/radiobutton"
+                            android:text="@string/HH20F" />
+
+                        <EditText
+                            android:id="@+id/HH20X"
+                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="@string/ed_letterOnly"
+                            android:hint="@string/HH20X"
+                            android:tag="HH20X"
+                            android:text='@{HH20X.checked? HH20Xx.getText().toString() : ""}'
+                            android:visibility='@{td1396.checked? View.VISIBLE : View.GONE}' />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH20-Title  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH20-Title"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH20-Title" />
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH20-Title" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH21  T   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH21"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH21" />
+
+                    <RadioGroup
+                        android:id="@+id/HH21"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/HH21A"
+                            style="@style/radiobutton"
+                            android:text="@string/HH21A" />
+
+                        <RadioButton
+                            android:id="@+id/HH21B"
+                            style="@style/radiobutton"
+                            android:text="@string/HH21B" />
+                    </RadioGroup>
+                </LinearLayout>
+            </android.support.v7.widget.CardView> <!-- HH22  E   -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpCVHH22"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/HH22" />
+
+                    <EditText
+                        android:id="@+id/HH22"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="70"
+                        android:focusable="false"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_End"
+                    style="@style/button"
+                    android:layout_marginRight="10dp"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel" />
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    style="@style/button"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="Save" />
+                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
