@@ -19,7 +19,7 @@
         tools:context=".ui.Myactivity">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSecB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -89,7 +89,6 @@
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/hl03" />
-
 
                     <RadioGroup
                         android:layout_width="match_parent"
@@ -185,7 +184,6 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- hl04  T   -->
             <androidx.cardview.widget.CardView
@@ -345,7 +343,6 @@
                         style="@style/i_textview"
                         android:text="@string/hl08" />
 
-
                     <RadioGroup
                         android:id="@+id/hl08"
                         style="@style/i_radiogroup">
@@ -402,7 +399,6 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- hl09  T   -->
             <androidx.cardview.widget.CardView
@@ -487,7 +483,6 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- hl10  T   -->
             <androidx.cardview.widget.CardView
@@ -668,7 +663,6 @@
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <!-- hl16  T   -->
             <androidx.cardview.widget.CardView
