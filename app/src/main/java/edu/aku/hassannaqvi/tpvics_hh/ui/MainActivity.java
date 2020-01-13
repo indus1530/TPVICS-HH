@@ -191,11 +191,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void OpenFormFunc() {
+    public void OpenFormFunc(int index) {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
-//            oF = new Intent(MainActivity.this, InfoActivity.class);
-//            startActivity(oF);
+            oF = new Intent(MainActivity.this, getActivity(index));
+            startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
@@ -230,6 +230,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void syncFamilyMembers() {
+    }
+
+    private Class<?> getActivity(int index) {
+        switch (index) {
+            case 1:
+                return SectionAActivity.class;
+            case 2:
+                return SectionBActivity.class;
+            default:
+                return SectionCActivity.class;
+        }
     }
 
     @Override
