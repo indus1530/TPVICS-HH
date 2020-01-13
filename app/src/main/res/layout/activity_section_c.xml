@@ -126,7 +126,7 @@
 
                         <EditText
                             android:id="@+id/hs02bx"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs02x"
@@ -232,7 +232,7 @@
 
                         <EditText
                             android:id="@+id/hs03nx"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs03x"
@@ -332,10 +332,9 @@
 
                         <EditText
                             android:id="@+id/hs05fx"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs05x"
                             android:tag="hs05f"
                             android:text='@{hs05f.checked? hs05fx.getText().toString() : ""}'
@@ -458,10 +457,9 @@
 
                         <EditText
                             android:id="@+id/hs06nx"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs06x"
                             android:tag="hs06x"
                             android:text='@{hs06n.checked? hs06nx.getText().toString() : ""}'
@@ -547,7 +545,7 @@
 
                         <EditText
                             android:id="@+id/hs07ix"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs07j"
@@ -797,10 +795,9 @@
 
                         <EditText
                             android:id="@+id/hs1396x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs13x"
                             android:tag="hs1396"
                             android:text='@{hs1396.checked ? hs1396x.getText().toString() : ""}'
@@ -1596,7 +1593,7 @@
 
                         <EditText
                             android:id="@+id/hs1696x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs16x"
@@ -1686,7 +1683,7 @@
 
                         <EditText
                             android:id="@+id/hs17x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs17x"
@@ -1785,10 +1782,9 @@
 
                         <EditText
                             android:id="@+id/hs18x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs18x"
                             android:tag="hs18x"
                             android:text='@{hs18x.checked? hs18xx.getText().toString() : ""}'
@@ -1900,10 +1896,9 @@
 
                         <EditText
                             android:id="@+id/hs19x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs19x"
                             android:tag="hs19x"
                             android:text='@{hs19x.checked? hs19xx.getText().toString() : ""}'
@@ -2026,10 +2021,9 @@
 
                         <EditText
                             android:id="@+id/hs20x"
-                            style="@style/i_radiobutton"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs20x"
                             android:tag="hs20x"
                             android:text='@{hs20x.checked? hs20xx.getText().toString() : ""}'
