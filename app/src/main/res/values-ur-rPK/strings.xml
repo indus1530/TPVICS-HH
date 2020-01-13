@@ -36,8 +36,9 @@
     <string name="hfname"> Facility Name </string>
     <string name="hf_consent">Is Consent form Signed</string>
     <string name="check">Check</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
+    <string name="yes"> ہاں </string>
+    <string name="no"> نہیں </string>
+    <string name="dnt"> معلوم نہیں </string>
     <string name="nap">Not Applicable</string>
     <string name="msing">Missing</string>
     <string name="na">Not Available</string>
@@ -62,8 +63,8 @@
     <string name="hh01">جغرافیائی علاقہ </string>
     <string name="hh02">اینومیریشن بلاک نمبر </string>
     <string name="hh03">صوبہ  </string>
-    <string name="hh04">ضلع کا نام اور کوڈ</string>
-    <string name="hh05">تحصیل /  تعلق</string>
+    <string name="hh04">ضلع کا نام اور کوڈ </string>
+    <string name="hh05"> تحصیل /  تعلق </string>
     <string name="hh06">شہر/گاؤں</string>
     <string name="hh07">کلسٹر نمبر</string>
     <string name="hh08">گھرانہ نمبر </string>
@@ -269,7 +270,7 @@
     <string name="hs12">مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں؟</string>
     <string name="hs12a">( گھرانوں کی تعداد(اگر 10 سے کم</string>
     <string name="hs12b"> دس یا اس سے زیادہ گھرانے</string>
-    <string name="hs12c">معلوم نہیں</string>
+    <string name="hs12c"> معلوم نہیں </string>
     <string name="hs13">سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیاکرتے ہیں؟</string>
     <string name="hs13a">بچہ لیٹرین استعمال کرتا ہے</string>
     <string name="hs13b">پاخانہ لیٹرین سے بہادیتے ہیں </string>

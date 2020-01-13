@@ -35,8 +35,9 @@
      <string name="hfname"> Facility Name </string>
      <string name="hf_consent">Is Consent form Signed</string>
      <string name="check">Check</string>
-     <string name="yes">Yes</string>
-     <string name="no">No</string>
+    <string name="yes"> Yes </string>
+    <string name="no"> No </string>
+    <string name="dnt"> Don\'t Know </string>
      <string name="nap">Not Applicable</string>
      <string name="msing">Missing</string>
      <string name="na">Not Available</string>
