@@ -51,7 +51,7 @@ public class SectionCActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (bi.hs09b.isChecked()) {
-                    ClearClass.ClearAllFields(bi.llsos02, null);
+                    ClearClass.ClearAllFields(bi.fldGrpCVhs0x, null);
                 }
             }
         });
