@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TPVICS - HH</string>
-    <string name="module_one"> MNCH </string>
+
+    <!--<string name="module_one"> MNCH </string>
     <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
     <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
     <string name="routinethree"> Performance Evaluation of District Team Meetings </string>
@@ -54,7 +55,7 @@
     <string name="action_sign_in">Login</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_field_required">This field is required</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_password">This password is incorrect</string>-->
 
 
     <string name="hh01">Geographical Area</string>
@@ -88,7 +89,7 @@
     <string name="hh20">Result of Household Questionnaire Discuss any result not completed with supervisor. interview</string>
     <string name="hh20_title">If permission  is not given STOP interview and move to Question HH18 of this section to record the outcome of the interview</string>
     <string name="hh20a">Completed</string>
-    <string name="hh20b">No HH member at home or no competent respondent at home at time of visit </string>
+    <string name="hh20b">No HH member at home or no competent respondent at home at time of visit  </string>
     <string name="hh20c">Entire household absent for extended period of time</string>
     <string name="hh20d">Refused</string>
     <string name="hh20e">Dwelling vacant or address not a dwelling </string>
@@ -208,7 +209,7 @@
     <string name="hs03l">CART WITH SMALL TANK </string>
     <string name="hs03m">SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL)</string>
     <string name="hs03n">BOTTELED WATER </string>
-    <string name="hs03n-tittle">PACKAGED WATER </string>
+    <string name="hs03n_title">PACKAGED WATER </string>
     <string name="hs03x">OTHER (SPECIFY)</string>
     <string name="hs04">Do you take any step to make the water safer to drink? </string>
     <string name="hs04n">No</string>
@@ -221,31 +222,27 @@
     <string name="hs05e">Solar disinfection </string>
     <string name="hs05f">Let it stand and settle </string>
     <string name="hs05x">Other specify </string>
-
-    <string name="hs06"> What is the main source of water used by members of your household for other purposes such as cooking and handwashing? </string>
-    <string name="hs06h1"> If unclear, probe to identify the place from which members of this household most often collect water for other purposes. </string>
-    <string name="hs06h2">Municipal Piped Water Connection</string>
-    <string name="hs06a"> PIPED INTO DWELLING </string>
-    <string name="hs06b"> PIPED TO YARD / PLOT </string>
-    <string name="hs06c"> PIPED TO NEIGHBOUR </string>
-    <string name="hs06d"> PUBLIC TAP / STANDPIPE </string>
-    <string name="hs06e"> TUBE WELL / BOREHOLE </string>
-    <string name="hs06h3"> DUG WELL </string>
-    <string name="hs06f"> PROTECTED WELL </string>
-    <string name="hs06g"> UNPROTECTED WELL </string>
-    <string name="hs06h4"> SPRING </string>
-    <string name="hs06h"> PROTECTED SPRING </string>
-    <string name="hs06i"> UNPROTECTED SPRING </string>
-    <string name="hs06j"> RAIN WATER </string>
-    <string name="hs06k"> TANKER-TRUCK </string>
-    <string name="hs06l"> CART WITH SMALL TANK </string>
-    <string name="hs06m"> SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL) </string>
-    <string name="hs06h5">PACKAGED WATER</string>
-    <string name="hs06n"> BOTTELED WATER </string>
-    <string name="other"> Other </string>
-    <string name="specify"> Specify </string>
-
-
+    <string name="hs06">What is the main source of water used by members of your household for other purposes such as cooking and handwashing? </string>
+    <string name="hs06_title">If unclear, probe to identify the place from which members of this household most often collect water for other purposes.</string>
+    <string name="hs06a">PIPED INTO DWELLING</string>
+    <string name="hs06a_title">Municipal Piped Water Connection</string>
+    <string name="hs06b">PIPED TO YARD/ PLOT </string>
+    <string name="hs06c">PIPED TO NEIGHBOUR</string>
+    <string name="hs06d">PUBLIC TAP /STANDPIPE</string>
+    <string name="hs06e">TUBE WELL / BOREHOLE</string>
+    <string name="hs06f">PROTECTED WELL</string>
+    <string name="hs06f_title">DUG WELL</string>
+    <string name="hs06g">UNPROTECTED WELL</string>
+    <string name="hs06h">PROTECTED SPRING</string>
+    <string name="hs06h_title">SPRING </string>
+    <string name="hs06i">UNPROTECTED SPRING</string>
+    <string name="hs06j">RAIN WATER</string>
+    <string name="hs06k">TANKER-TRUCK</string>
+    <string name="hs06l">CART WITH SMALL TANK</string>
+    <string name="hs06m">SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL)</string>
+    <string name="hs06n">BOTTELED WATER</string>
+    <string name="hs06n_title">PACKAGED WATER</string>
+    <string name="hs06x">OTHER (SPECIFY)</string>
     <string name="hs07">What kind of toilet facility do members of your household usually use? If ‘Flush’ or ‘Pour’, probe: Where does it flush to? If not possible to determine, ask permission to observe the facility</string>
     <string name="hs07a">Flush to piped sewer system </string>
     <string name="hs07a_title">Flush or Pour Flush Toilet </string>
@@ -303,43 +300,43 @@
     <string name="hs14fa">Yes	</string>
     <string name="hs14fb">No	</string>
     <string name="hs14g">Chair</string>
-    <string name="hs14g">Yes	</string>
+    <string name="hs14ga">Yes	</string>
     <string name="hs14gb">No	</string>
     <string name="hs14h">Room Cooler</string>
-    <string name="hs14h">Yes	</string>
+    <string name="hs14ha">Yes	</string>
     <string name="hs14hb">No	</string>
     <string name="hs14i">Air conditioner</string>
-    <string name="hs14i">Yes	</string>
+    <string name="hs14ia">Yes	</string>
     <string name="hs14ib">No	</string>
     <string name="hs14j">Washing machine </string>
-    <string name="hs14j">Yes	</string>
+    <string name="hs14ja">Yes	</string>
     <string name="hs14jb">No	</string>
     <string name="hs14k">Water Pump</string>
-    <string name="hs14k">Yes	</string>
+    <string name="hs14ka">Yes	</string>
     <string name="hs14kb">No	</string>
     <string name="hs14l">Bed </string>
-    <string name="hs14l">Yes	</string>
+    <string name="hs14la">Yes	</string>
     <string name="hs14lb">No	</string>
     <string name="hs14m">Clock </string>
-    <string name="hs14m">Yes	</string>
+    <string name="hs14ma">Yes	</string>
     <string name="hs14mb">No	</string>
     <string name="hs14n">Sofa </string>
-    <string name="hs14n">Yes	</string>
+    <string name="hs14na">Yes	</string>
     <string name="hs14nb">No	</string>
     <string name="hs14o">Camera </string>
-    <string name="hs14o">Yes	</string>
+    <string name="hs14oa">Yes	</string>
     <string name="hs14ob">No	</string>
     <string name="hs14p">Sewing machine</string>
-    <string name="hs14p">Yes	</string>
+    <string name="hs14pa">Yes	</string>
     <string name="hs14pb">No	</string>
     <string name="hs14q">Computer/laptop  </string>
-    <string name="hs14q">Yes	</string>
+    <string name="hs14qa">Yes	</string>
     <string name="hs14qb">No	</string>
     <string name="hs14r">Internet connection </string>
-    <string name="hs14r">Yes	</string>
+    <string name="hs14ra">Yes	</string>
     <string name="hs14rb">No	</string>
     <string name="hs14s"> Dish/Cable Network </string>
-    <string name="hs14s">Yes	</string>
+    <string name="hs14sa">Yes	</string>
     <string name="hs14sb">No	</string>
     <string name="hs15">Does any member of this household own:  Ask/probe for each [Multiple responses]  </string>
     <string name="hs15a">Watch</string>
@@ -444,8 +441,8 @@
     <string name="hs20m">Bricks</string>
     <string name="hs20n">Cement blocks</string>
     <string name="hs20o">Covered adobe</string>
-    <string name="hs20p"> Wood planks/shingles </string>
-    <string name="hs20x"> Other specify </string>
+    <string name="hs20p">Wood planks/shingles/</string>
+    <string name="hs20x">Other specify</string>
     <string name="hs21">How many rooms in your household are used for sleeping?</string>
     <string name="hs22">Does any member of this household own any agricultural land?</string>
     <string name="hs22a">Yes</string>
@@ -469,544 +466,8 @@
     <string name="hs26a">YES</string>
     <string name="hs26b">NO</string>
     <string name="hs27">Record The Time</string>
-    <string name="hs27_title">Thank the respondent for his/her cooperation and then proceed with the administration of the children 12-23 month’s questionnaire for children present in this household۔</string>
+    <string name="hs27_title"> Thank the respondent for his/her cooperation and then proceed with the administration of the children 12-23 month’\s questionnaire for children present in this household۔</string>
 
 
-    <string name="rshint01"> Maternal Health Register (both PHC &amp; SHC) </string>
-    <string name="rs01"> ANC – 1 visit </string>
-    <string name="rs02"> ANC Revisits ( 2, 3, 4 or more) </string>
-    <string name="rs03"> ANC - 1 women with Hb &lt; 10g/dl </string>
-    <string name="rs04"> PNC - 1 visits </string>
-    <string name="rs05"> PNC Revisits (2, 3, 4 or more) </string>
-
-    <string name="rshint02"> Secondary Healthcare Facilities - Ob/Gyn OPD register </string>
-    <string name="rs07"> New Cases OB/GYN </string>
-    <string name="rs08"> Referred Cases Attended (OB/GYN) </string>
-
-    <string name="rshint03"> Obstetric Register (both PHC &amp; SHC) </string>
-    <string name="rs09"> Normal Vaginal Delivery </string>
-    <string name="rs10"> Assisted Vaginal Deliveries </string>
-    <string name="rs11"> Cesarean Sections </string>
-    <string name="rs12"> Postpartum Hemorrhage </string>
-    <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
-    <string name="rs14"> Prolonged Obstructed Labors </string>
-    <string name="rs15"> Puerperal Sepsis </string>
-    <string name="rs16"> Rupture Uterus </string>
-    <string name="rs17"> Maternal Mortality </string>
-    <string name="rs18"> Live births in the facility </string>
-    <string name="rs19"> Live births with LBW ( &lt; 2.5kg ) </string>
-    <string name="rs20"> Stillbirths in the facility </string>
-    <string name="rs41"> IUDs (Intra Uterine Death) in the facility </string>
-    <string name="rs21"> Newborns with birth asphyxia </string>
-    <string name="rs22"> Newborn successfully resuscitated </string>
-    <string name="rs23"> Women provided misoprostol after delivery </string>
-    <string name="rs24"> Newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
-    <string name="rs25"> Pre-term births </string>
-    <string name="rs26"> Birth trauma </string>
-    <string name="rs29"> Neonatal deaths (0 to 28 days) </string>
-    <string name="rs42"> Suspected Neonatal Tetanus </string>
-
-    <string name="rshint04"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
-    <string name="rs33"> Diarrhea / Dysentery cases &lt;5 years (OPD)</string>
-    <string name="rs30"> Number of Pneumonia cases &lt;5 years (OPD) </string>
-    <string name="rs44"> Number of ARI cases &lt;5 years (OPD) </string>
-    <string name="rs37"> Total Peads OPD (1 &#8211; 11 months) </string>
-    <string name="rs38"> Total Peads OPD (12 &#8211; 59 months) </string>
-    <string name="rs39"> Follow up cases Peads </string>
-    <string name="rs40"> Referred Cases attended (Pediatrics) </string>
-
-    <string name="rshint05"> Indoor Register (SHC) </string>
-    <string name="rs34"> Diarrhea / Dysentery cases &lt;5 years (Indoor) </string>
-    <string name="rs31"> Pneumonia cases &lt;5 years (Indoor) </string>
-    <string name="rs27"> Infant deaths (1 &#8211; 11 months) </string>
-    <string name="rs28"> Child deaths (1 to 4 years) </string>
-    <string name="rs35"> Deaths due to Diarrhea / Dysentery among  &lt;5 years (Indoor) </string>
-    <string name="rs32"> Deaths due to Pneumonia cases &lt;5 years (Indoor) </string>
-
-    <string name="rshint06"> EPI Health Register (both PHC &amp; SHC) </string>
-    <string name="rs06"> Pregnant Women given TT-2 vaccination </string>
-    <string name="rs47"> Children &lt;12 months received 3rd dosage of Pentavalent Vaccine </string>
-    <string name="rs48"> Children &lt;12 months received 1st dosage of Measles Vaccine </string>
-
-
-    <!--23-Aug-19
-        <string name="rshint01"> Maternal Health Register (both PHC &amp; SHC) </string>
-        <string name="rs01"> Number of ANC – 1 visit </string>
-        <string name="rs02"> Number of ANC Revisits ( 2, 3, 4 or more) </string>
-        <string name="rs03"> ANC-1 women with Hb &lt; 10g/dl </string>
-        <string name="rs04"> Number of PNC-1 visits </string>
-        <string name="rs05"> Number of PNC Revisits (2, 3, 4 or more) </string>
-
-        <string name="rshint02"> Secondary Healthcare Facilities - Ob/Gyn OPD register </string>
-        <string name="rs07"> Total New Cases OB/GYN </string>
-        <string name="rs08"> Referred Cases attended (OB/GYN) </string>
-
-        <string name="rshint03"> Obstetric Register (both PHC &amp; SHC) </string>
-        <string name="rs09"> Normal Vaginal Delivery </string>
-        <string name="rs10"> Assisted Vaginal Deliveries </string>
-        <string name="rs11"> Cesarean Sections </string>
-        <string name="rs12"> Postpartum Hemorrhage </string>
-        <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
-        <string name="rs14"> Prolonged Obstructed Labors </string>
-        <string name="rs15"> Puerperal Sepsis </string>
-        <string name="rs16"> Rupture Uterus </string>
-        <string name="rs17"> Maternal Mortality </string>
-        <string name="rs18"> Number of live births in the facility </string>
-        <string name="rs19"> Number of live births with LBW ( &lt; 2.5kg ) </string>
-        <string name="rs20"> Number of stillbirths in the facility </string>
-        <string name="rs41"> Number of IUDs (Intra Uterine Death) in the facility </string>
-        <string name="rs21"> Number of newborns with birth asphyxia </string>
-        <string name="rs22"> Number of newborn successfully resuscitated </string>
-        <string name="rs23"> Number of women provided misoprostol after delivery </string>
-        <string name="rs24"> Number of newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
-        <string name="rs25"> Prematurity (no. of pre-term births) </string>
-        <string name="rs26"> Birth trauma </string>
-        <string name="rs29"> Number of neonatal deaths (28 days) </string>
-        <string name="rs42"> Suspected Neonatal Tetanus </string>
-
-        <string name="rshint04"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
-        <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
-        <string name="rs43"> Number of Dysentery cases &lt;5 years (OPD)</string>
-        <string name="rs30"> Number of Pneumonia cases &lt;5 years (OPD) </string>
-        <string name="rs44"> Number of ARI cases &lt;5 years (OPD) </string>
-        <string name="rs37"> Total Peads OPD (1 &#8211; 11 months) </string>
-        <string name="rs38"> Total Peads OPD (12 &#8211; 59 months) </string>
-        <string name="rs39"> Follow up cases Peads </string>
-        <string name="rs40"> Referred Cases attended (Pediatrics) </string>
-
-        <string name="rshint05"> Indoor Register (SHC) </string>
-        <string name="rs34"> Number of Diarrhea cases &lt;5 years (Indoor) </string>
-        <string name="rs31"> Number of Pneumonia cases &lt;5 years (Indoor) </string>
-        <string name="rs45"> Number of Dysentery cases &lt;5 years (Indoor) </string>
-        <string name="rs27"> Number of Infant deaths (1 &#8211; 11 months) </string>
-        <string name="rs28"> Number of child deaths (1 to 4 years) </string>
-        <string name="rs35"> Deaths due to Diarrhea among  &lt;5 years (Indoor) </string>
-        <string name="rs46"> Deaths due to Dysentery among  &lt;5 years (Indoor) </string>
-        <string name="rs32"> Deaths due to Pneumonia cases &lt;5 years (Indoor) </string>
-
-        <string name="rshint06"> EPI Health Register (both PHC &amp; SHC) </string>
-        <string name="rs06"> Pregnant Women given TT-2 vaccination </string>
-        <string name="rs47"> Children &lt;12 months received 3rd Pentavalent Vaccine </string>
-        <string name="rs48"> Children &lt;12 months received 1st Measles Vaccine </string>
-    -->
-
-
-    <!--06Aug19
-    <string name="rshint02"> EPI Health Register </string>
-    <string name="rs06"> Women given TT-2 vaccination </string>
-
-    <string name="rshint03"> SHC - Ob/Gyn OPD register </string>
-    <string name="rs07"> Total New Cases OB/GYN </string>
-    <string name="rs08"> Referred Cases attended (OB/GYN) </string>
-
-    <string name="rshint04"> Obstetric Register </string>
-    <string name="rs09"> Normal Vaginal Delivery </string>
-    <string name="rs10"> Assisted Vaginal Deliveries </string>
-    <string name="rs11"> Cesarean Sections </string>
-    <string name="rs12"> Postpartum Hemorrhage </string>
-    <string name="rs13"> Pre-Eclampsia/ Eclampsia </string>
-    <string name="rs14"> Prolonged Obstructed Labors </string>
-    <string name="rs15"> Puerperal Sepsis </string>
-    <string name="rs16"> Rupture Uterus </string>
-    <string name="rs17"> Maternal Mortality </string>
-    <string name="rs18"> Number of live births in the facility </string>
-    <string name="rs19"> Number of live births with LBW </string>
-    <string name="rs20"> Number of stillbirths in the facility </string>
-    <string name="rs21"> Number of newborns with birth asphyxia </string>
-    <string name="rs22"> Number of newborn successfully resuscitated </string>
-    <string name="rs23"> Number of women provided misoprostol after delivery </string>
-    <string name="rs24"> Number of newborns to whom chlorhexadine gel is applied to umbilical stumps </string>
-    <string name="rs25"> Prematurity (no. of pre-term births) </string>
-    <string name="rs26"> Birth trauma </string>
-    <string name="rs29"> Number of neonatal deaths (28 days) </string>
-
-    <string name="rshint05"> Point where maternal services are provided </string>
-    &lt;!&ndash;<string name="rshint05"> Daily Bed Statement Register (For RHC only)</string>&ndash;&gt;
-    <string name="rs36"> Number of ultrasounds for ANC </string>
-
-    <string name="rshint06"> OPD register-PHC (Pediatrics OPD register for SHC) </string>
-    <string name="rs30"> Number of Pneumonia cases/ ARI &lt;5 years (OPD) </string>
-    <string name="rs33"> Number of Diarrhea cases &lt;5 years (OPD)</string>
-    <string name="rs37"> Total General OPD (1 &#8211; 11months) </string>
-    <string name="rs38"> Total General OPD (1 &#8211; 4 years) </string>
-    <string name="rs39"> Follow up cases (Child Health 0 &#8211; 5yr) </string>
-    <string name="rs40"> Referred Cases attended (Pediatrics) </string>
-
-    <string name="rshint07"> Indoor Register (SHC) </string>
-    <string name="rs27"> Number of Infant deaths (1 -11 months) </string>
-    <string name="rs28"> Number of child deaths (1 to 4 years) </string>
-    <string name="rs34"> Number of Diarrhea cases &lt; 5 years (Indoor) </string>
-    <string name="rs35"> Deaths due to Diarrhea among  &lt; 5 years (Indoor) </string>
-    <string name="rs31"> Number of Pneumonia cases/ARI &lt; 5 years (Indoor) </string>
-    <string name="rs32"> Deaths due to Pneumonia cases/ ARI &lt; 5 years (Indoor) </string>
-    -->
-
-    <string name="rra"> Remarks / Reasons / Action Points </string>
-    <string name="rsrem"> Remarks </string>
-    <string name="summary"> Summary </string>
-    <string name="adsummary"> Add summary of meeting </string>
-
-    <!--<string name="qa01">Water &amp; Sanitation</string>
-    <string name="qa0101">Clean Drinking Water</string>
-    <string name="qa0101a">Availability</string>
-    <string name="qa0101b">Functionality</string>
-    <string name="qaAp">Action Plans to Improve Quality Statement &amp; Standard</string>
-    <string name="qa07a">Available</string>
-    <string name="qa07b">Useable</string>
-    <string name="qa08b">Maintained</string>
-    <string name="qb01b">Functional</string>
-
-    <string name="qa0102">Main Source of Water for Labor Rooms, Toilets and Theaters. 24/7 (Main Source)</string>
-    <string name="qa0103">Alternative Source of Water in case of Main Source is Non Functional</string>
-    <string name="qa0104">Hand Washing /Hygiene Facility in Waiting Area, Labor Rooms, OPDs, Toilets and Theaters.</string>
-    <string name="qa0105">Incinerator or Incineration Pit</string>
-    <string name="qa0106">Waste Disposal Bins for Dry Waste</string>
-    <string name="qa0107">Waste Disposal Bins for Wet Waste</string>
-    <string name="qa0108">Autoclave</string>
-    <string name="qa0109">Boiler</string>
-
-
-    <string name="qa02">Electricity</string>
-
-    <string name="nadnt">NA/Don\'t know</string>
-    <string name="qa0201">Electricity Main Source for OPDs, Waiting Area, Labor Rooms, Toilets and Theaters.</string>
-    <string name="qa0202">Electricity Alternative Source (Generator) for OPDs, Waiting Area, Labor Rooms, Toilets and Theaters.</string>
-    <string name="qa03">Referrals</string>
-    <string name="qa0301">Ambulance 24/7</string>
-    <string name="qa0302">Alternative Patient Transportation Mechanism</string>
-    <string name="qa0303">Emergency Contacts List of District</string>
-    <string name="qa0304">Contact List of Near By CEmONC Centers</string>
-    <string name="qa0305">Communications with Tertiary Care Centers</string>
-
-    <string name="qa04">Equipment’s &amp; Supplies</string>
-    <string name="qa0401">Supplies &amp; Equipment’s for, Routine OPD &amp; IPD Care  (General Items and Furniture)</string>
-    <string name="qa0402">Supplies  Equipment’s for, Infection Prevention.</string>
-    <string name="qa0403">Supplies  Equipment’s for, Maternal Health.</string>
-    <string name="qa0404">Supplies  Equipment’s for, Neonatal &amp; Child Health</string>
-
-
-    <string name="qa05">Blood Bank &amp; Laboratory</string>
-    <string name="qa0501">Laboratory within Premises for baseline biomarkers (CBC, Blood Group &amp; RH factor, Hepatitis B &amp; C, Urine DR)</string>
-    <string name="qa0502">Communications with Peripheral Laboratories</string>
-    <string name="qa0503">24 Hour Blood Bank Services</string>
-    <string name="qa0504">Communications with Peripheral 24 Hour Blood Bank Services</string>
-
-
-    <string name="qa06">Staff / HR</string>
-    <string name="qa0601">24/7 On Call Gynecologist / Obstetrician &amp; Pediatrician</string>
-    <string name="qa0602">24/7 On Call Anesthetist</string>
-    <string name="qa0603">24/7 On Call OT Technician</string>
-    <string name="qa0604">Trained Medical Officers (OB/GYN &amp; PEADS)</string>
-    <string name="qa0605">Trained Staff Nurses, Midwives, Nurse Aids (OB/GYN &amp; PEADS)</string>
-    <string name="qa0606">Lab Technician </string>
-    <string name="qa0607">Pharmacist </string>
-    <string name="qa0608">Support Staff / Sweeper </string>
-
-
-    <string name="qa07">Essential Drugs</string>
-    <string name="qa0701">Separate Area for storage of Essential drugs</string>
-    <string name="qa0702">Availability of essential drugs (3 Months Supplies)</string>
-    <string name="qa0703">Injection Normal Saline/ Ringer lactate</string>
-    <string name="qa0704">Injection Amoxicillin</string>
-    <string name="qa0705">Injection Metronidazole</string>
-    <string name="qa0706">Injection Gentamicin</string>
-    <string name="qa0707">Dispersible Tablets Amoxicillin</string>
-    <string name="qa0708">Syrup &amp; Capsules Amoxicillin</string>
-    <string name="qa0709">Injection Syntocinon (Oxytocin) with maintained cold chain</string>
-    <string name="qa0710">Tablet Misoprostol 200mgm </string>
-    <string name="qa0711">Injection Magnesium Sulphate </string>
-    <string name="qa0712">Injection Calcium Gluconate </string>
-    <string name="qa0713">7.1% Chlorhexadine gel </string>
-    <string name="qa0714">ORS Packets </string>
-    <string name="qa0715">Syrup &amp; Tablets of Zinc </string>
-    <string name="qa0716">Syrup &amp; Tablets of Paracetamol </string>
-    <string name="qa0717">Inhaled Bronchodilator (Salbutamol) </string>
-    <string name="qa0718">Injection Dexamethasone </string>
-    <string name="qa0719">Tablet Ferrous Sulphate (Iron) </string>
-    <string name="qa0720">Tablet of Chewable Calcium </string>
-    <string name="qa0721">Silver Nitrate Eye Drops </string>
-
-
-    <string name="qa08">Data Recording Tools &amp; IEC Material</string>
-    <string name="qa0801">OPD Data Registers</string>
-    <string name="qa0802">Admission &amp; Discharge Data Register</string>
-    <string name="qa0803">DHIS &amp; PPMIS Data Registers</string>
-    <string name="qa0804">IEC Material / Job Aids related to MNCH</string>
-    <string name="qa0805">Partograph in Labor Rooms.</string>
-    <string name="qb01"><![CDATA[Supplies & Instruments (For General Items and Furniture)]]></string>
-
-    <string name="qb0101">Office table</string>
-    <string name="qb0102"> Office chair </string>
-    <string name="qb0103"> Examination Table </string>
-    <string name="qb0104"> Cabinet, for drugs / instruments </string>
-    <string name="qb0105"> Patient stool (Revolving) </string>
-    <string name="qb0106"> waiting bench for high volume facilities </string>
-    <string name="qb0107"> Wall Clock </string>
-    <string name="qb0108"> Screen/curtain for privacy </string>
-    <string name="qb0109"> Instrument Trolley with two trays </string>
-    <string name="qb0110"> Delivery table </string>
-    <string name="qb0111"> IV Infusion Stand, </string>
-    <string name="qb0112"> Emergency standby light </string>
-    <string name="qb0113"> Refrigerator (for facility providing Immunization &amp; Maternal services) </string>
-    <string name="qb0114"> Mobile examination light </string>
-    <string name="qb0115"> BP Apparatus- functional (at least one per service site) </string>
-    <string name="qb0116"> Stethoscope - functional(at least one per service site) </string>
-    <string name="qb0117"> Safety Box for used syringes / needles </string>
-    <string name="qb0118"> Adult Weighing scale </string>
-    <string name="qb0119"> Thermometer, clinical, 35-42°C </string>
-    <string name="qb0120"> Patients drape </string>
-
-    <string name="qb02"> Supplies &amp; Instruments (For Infection Prevention) </string>
-    <string name="qb0201"> Apron </string>
-    <string name="qb0202"> Plastic /Macintosh Draw Sheet, 90 x 180 cm </string>
-    <string name="qb0203"> Brush to clean Instrument </string>
-    <string name="qb0204"> Two separate Tub or Bucket with Lid for Chlorine &amp; Detergent Water </string>
-    <string name="qb0205"> Stand for chlorine buckets or tubs </string>
-    <string name="qb0206"> Utility gloves (pair) </string>
-    <string name="qb0207"> Close toed Cut Shoes </string>
-    <string name="qb0208"> Plastic sheets to cover waste bins </string>
-    <string name="qb0209"> Goggles/face shield </string>
-    <string name="qb0210"> Mops </string>
-    <string name="qb0211"> Hand sanitizer </string>
-    <string name="qb0212"> Chlorine solution (3-5L) </string>
-    <string name="qb0213"> Measuring Jug (1L) </string>
-
-    <string name="qb03"> Supplies &amp; Instruments (For Maternal Health) </string>
-    <string name="qb0301"> Instrument Tray 300 x 200 x 30 mm </string>
-    <string name="qb0302"> Feto-scope Aluminum </string>
-    <string name="qb0303"> Stainless steel bowl 600ml </string>
-    <string name="qb0304"> Angular Episiotomy Scissors, 145 mm </string>
-    <string name="qb0305"> Cord clamps stainless steel </string>
-    <string name="qb0306"> Scissors for cutting the cord </string>
-    <string name="qb0307"> Cylindrical Drum, diameter, 150 mm,250 mm </string>
-    <string name="qb0308"> Mayo-Hegar Straight Needle Holder, 180 mm </string>
-    <string name="qb0309"> Standard Straight Tissue Forceps, 145 mm </string>
-    <string name="qb0310"> Sponge holding forceps </string>
-    <string name="qb0311"> Deaver Scissors, 140 mm </string>
-    <string name="qb0312"> Tooth tissue forceps </string>
-    <string name="qb0313"> Plain tissue forceps </string>
-    <string name="qb0314"> Blunt Scissor </string>
-    <string name="qb0315"> Measuring Tape </string>
-    <string name="qb0316"> Stainless steel kidney Basin </string>
-    <string name="qb0317"> Vacuum extractor (for assisted delivery) </string>
-    <string name="qb0318"> Double-ended, Sims Vaginal medium size/Cusco’s Vaginal Speculum medium size </string>
-    <string name="qb0319"> Stainless steel Kidney Basin, 825 ml </string>
-    <string name="qb0320"> Straight Artery Forceps 140 mm </string>
-    <string name="qb0321"> Sponge holder/straight Artery Forceps, 140 mm </string>
-    <string name="qb0322"> Stainless steel Bowl, 600 ml </string>
-
-
-    <string name="qb04"> Supplies &amp; Instruments (For Neonatal &amp; Child Health) </string>
-    <string name="qb0401"> Weighing scale </string>
-    <string name="qb0402"> One Jug (1L), 6 Cups(50 ml), 6 cups ( 100 ml), 12 Spoon(5ml ) </string>
-    <string name="qb0403"> 2 Chair for ORT Corner </string>
-    <string name="qb0404"> ARI Timer </string>
-    <string name="qb0405"> Thermometer </string>
-    <string name="qb0406"> Instrument tray with drawer to store items </string>
-    <string name="qb0407"> Nebulizer Machine </string>
-    <string name="qb0408"> Pulse Oximeter </string>
-    <string name="qb0409"> Cord cutting Scissor </string>
-    <string name="qb0410"> Cord ties or clamps </string>
-    <string name="qb0411"> Ventilation area (table) </string>
-    <string name="qb0412"> Cotton cloth (2 Pieces)for baby dry </string>
-    <string name="qb0413"> Baby stethoscope </string>
-
-    <string name="qc0101">Greets the woman and respond her nicely on asking questions</string>
-    <string name="qc01">Respectful Maternal Care</string>
-
-    <string name="qc02">Recommended FANC Visits</string>
-    <string name="qc0201"><![CDATA[WHO-recommended schedule of ANC visits: 1st visit: <16 weeks, 2nd visit: 24–28 weeks, 3rd visit: 30–32 weeks, 4th visit: 36–38 weeks]]></string>
-
-    <string name="qc03"><![CDATA[Screened & Describe Women for Danger Signs during Pregnancy]]></string>
-    <string name="qc0301">Convulsions/loss of consciousness, 2. Severe Headache, 3. Blurred Vision, 4. Respiratory Difficulty, 5. Fever, 6. Severe Abdominal Pain, 7. Vaginal Bleeding</string>
-
-    <string name="qc04">Obstetric Examination</string>
-    <string name="qc0401">Measures vital signs (blood pressure, temperature, pulse and respiration)</string>
-    <string name="qc0402">Breast examination</string>
-    <string name="qc0403">Measures fundal height (after 12 weeks)</string>
-    <string name="qc0404">Listens to fetal heart sounds (after 20 weeks)</string>
-    <string name="qc0405">Determines fetal lie and presentation (after 36 weeks)</string>
-    <string name="qc0406"><![CDATA[Calculate & Document the EDD according to LMP or By First Early Scan.]]></string>
-
-    <string name="qc05">Request Laboratory Investigations</string>
-    <string name="qc0501"><![CDATA[Routine investigation (blood group and Rh factor, complete blood count, blood glucose, urine analysis for proteinuria, hepatitis B, & hepatitis C)]]></string>
-    <string name="qc0502"><![CDATA[Specific investigation if needed (Pre Eclampsia Profile (Urea, Creatanine, Uric Acid & LFTs), HIV & Syphilis and ultrasound)]]></string>
-
-    <string name="qc06">Immunization</string>
-    <string name="qc0601">Verifies  tetanus toxoid vaccine to all pregnant women</string>
-
-    <string name="qc07">Prescribe Haematonics</string>
-    <string name="qc0701">Iron folic acid and calcium supplement prescribed to women</string>
-
-    <string name="qc08"><![CDATA[ompulsory Assessment during Labor & Delivery]]></string>
-    <string name="qc0801">Fetal heart rate (every hourly)</string>
-    <string name="qc0802">Labor progress: cervical dilatation (every 4hourly)</string>
-    <string name="qc0803">Strength and frequency of contractions (every hourly)</string>
-    <string name="qc0804">Oxytocin, if used (every hourly)</string>
-    <string name="qc0805">Maternal pulse and blood pressure (every hourly)</string>
-    <string name="qc0806">Give uterotonics within one minute after the baby is born. (Oxytocin OR Misoprostol)</string>
-    <string name="qc0807">Maintained Partograph and Delivery Notes on Record Sheets</string>
-
-    <string name="qc09">Immediate Newborn Care</string>
-    <string name="qc0901">Thoroughly dries baby, stimulates baby and covers baby’s head immediately</string>
-    <string name="qc0902">Places baby on mother’s chest in skin-to-skin contact</string>
-    <string name="qc0903">Assesses breathing</string>
-    <string name="qc0904">Ventilate Baby through Bag &amp; Mask (If Needed)</string>
-    <string name="qc0905">Delays cord cutting until pulsation stops (2–3 minutes)</string>
-    <string name="qc0906">Applies CHX to the cord stump and encourage the mother to continue application for 7 days.</string>
-    <string name="qc0907">Encourages mother to start breastfeeding within one hour of delivery</string>
-    <string name="qc0908">Delays bating to newborn (24 hours)</string>
-    <string name="qc10"><![CDATA[Diagnosis & Management of PPROM/PROM/SROM]]></string>
-    <string name="qc1001">Administered appropriate prophylactic antibiotics to women with rupture of membrane</string>
-    <string name="qc1002"><![CDATA[Administered antibiotics to women with early signs of infection (temp > 38 degrees C or foul-smelling vaginal discharge)]]></string>
-
-    <string name="qc11"><![CDATA[Diagnosis & Management of PPH]]></string>
-    <string name="qc1101">Causes of PPH identified and managed properly and documented.</string>
-    <string name="qc1102">Administers oxytocin 20 IU in 1L of IV fluid at 60 drops/minute and then continue on 40 drops/minute. IV fluid limit is 2-3 Liters.</string>
-    <string name="qc1103">Administered 04 Tablets of Misoprostol (800mcg) Sub Lingual or Per Rectally.</string>
-    <string name="qc1104">Do not administered more than 3 liters containing Oxytocin, Also Not give as an IV Bolos.</string>
-
-    <string name="qc12"><![CDATA[Diagnosis & Management of Pre Eclampsia / Eclampsia]]></string>
-    <string name="qc1201">Pre Eclampsia identified and managed properly and documented.</string>
-    <string name="qc1202">Anti-hypertensive (Nifidipine or Hydralazine) and anti convulsant (Magnesium Sulphate) medication for pre-Eclampsia/Eclampsia administered and documented.</string>
-    <string name="qc1203">Monitor following signs: 1. Level of consciousness/ Convulsions, 2. Severe Headache, 3. Blurred Vision, 4. Difficulty in Breathing and Respiratory rate, 5. Vital Signs, 6. Tendon Reflux, 7. Urine Output (Amount and Proteinuria)</string>
-    <string name="qc13"><![CDATA[Routine Post Natal Examination of Mother & Newborn]]></string>
-    <string name="qc1301">Greets the woman and respond her nicely on asking questions. Provider had complete newborn examination.</string>
-    <string name="qc1302">Encourages the mother to breastfeed exclusively, and Counsels the mother and family member on the importance of completing child immunizations according to schedule</string>
-    <string name="qc14"><![CDATA[Screened & Describe Women for Danger Signs of Newborn]]></string>
-    <string name="qc1401">Screened and Demonstrates about Danger Signs of Newborn: 1. lethargic or unconscious, 2. convulsions, 3. vomiting, 4. not able to suck properly, 5. difficulty in breathing, 6. very cold or warm on touch, and 7. oozing from Umbilical Stump.</string>
-    <string name="qc15">Recommended Post Natal Visits</string>
-    <string name="qc1501">WHO-recommended schedule of PNC visits: 1st visit: 24 hours after birth, 2nd visit: 3rd day after birth, 3rd visit: 7-14th day after birth, 4th visit: at six weeks</string>
-    <string name="qc16"><![CDATA[Screened & Describe Women for Danger Signs after delivery]]></string>
-    <string name="qc1601">Convulsions/loss of consciousness, 2. Severe Headache, 3. Blurred Vision, 4. Respiratory Difficulty, 5. Fever, 6. Severe Abdominal Pain, 7. Severe Vaginal Bleeding,  and 8. Foul Smelling Vaginal Discharge</string>
-
-    <string name="qc17">Cesarean Section</string>
-    <string name="qc1701">Indication for Cesarean Section and time decision for surgery was documented</string>
-    <string name="qc1704"><![CDATA[Lab results (Hb%, Platelets, Blood Group RH factor, Hepatitis B & C, ) Attached or documented.]]></string>
-    <string name="qc1702">Written Informed consent was signed and attached</string>
-    <string name="qc1703">IV Antibiotics for prophylaxis was given and documented</string>
-    <string name="qc1705">Blood is arranged and cross matched before surgery</string>
-    <string name="qc1706">Gives utero tonic, delays cord clamping 1 -3 minutes, clamps and cuts cord, delivers placenta using controlled cord traction, and ensures adequate uterine tone.</string>
-    <string name="qc1707">Ensure immediate newborn care is provided.</string>
-    <string name="qc1708">Completes Operative Note, Post-Op Orders, and ensures safe transfer to recovery area.</string>
-    <string name="qc1709">Monitors and ensures proper post-operative course, Post-Partum Family Planning, Post Natal Counseling, Immunization of Newborn, Exclusive Breast Feeding and discharge.</string>
-
-    <string name="qc18">Blood Transfusion Administration</string>
-    <string name="qc1801">Indication for blood transfusion and blood components;  includes Hb%, WBC, Platelets results</string>
-    <string name="qc1802">Informed consent is properly signed and attached.</string>
-    <string name="qc1803">Patient’s blood Group type (ABO and RhD) verified and documented</string>
-    <string name="qc1804">Time of  transfusion started, infusion rate, and time of transfusion completed was documented</string>
-    <string name="qc1805">Patient\'s General appearance, Temperature, Blood Pressure, Pulse, Respiratory Rate, Fluid balance and signs of transfusion reaction like rash, fever, restlessness, worsening hypotension and/or tachycardia were checked and documented during following time period</string>
-    <string name="qc1806">1. Pre-transfusion (At Start)</string>
-    <string name="qc1807">2. During Transfusion (After 15 minutes of transfusion, then hourly until transfusion completed)</string>
-    <string name="qc1808">3. Post-transfusion (After Complete Transfusion)</string>
-
-    <string name="qc19"><![CDATA[Diagnosis & Management of cough or difficulty in breathing]]></string>
-    <string name="qc1901">Respectful Child Care and Greets</string>
-    <string name="qc1902">Assess child presenting with cough and/or difficult breathing</string>
-    <string name="qc1903">Classifies the child as per protocol</string>
-    <string name="qc1904">Treats/refers the child as per protocol</string>
-    <string name="qc1905">Provides counseling on medication and home care</string>
-
-    <string name="qc20"><![CDATA[Diagnosis & Management of diarrhea]]></string>
-    <string name="qc2001">Assess diarrhea and dehydration in sick child.</string>
-    <string name="qc2002">Classifies diarrhea and dehydration in sick child</string>
-    <string name="qc2003">Treats diarrhea as per protocol</string>
-    <string name="qc2004">Counsels caregiver on four rules of home treatment</string>
-
-    <string name="qc21">Infection Prevention at different sites of Clinic / Maternity Home / Hospital</string>
-    <string name="qc2101">OPD Room</string>
-    <string name="qc2102">Delivery room</string>
-    <string name="qc2103">Postpartum room</string>
-    <string name="qc2104">Procedure room</string>
-    <string name="qc2105">Washing area for used instruments/sterilization and HLD processing area</string>
-    <string name="qc2106">Proper disposable area for medical waste, sharps and needles handling</string>
-
-    <string name="qc22">Linkages Between Facilities</string>
-    <string name="qc2201">Facility has a system of linkages in place for referring women/child in case of complication to THQ/DHQ or Tertiary care hospitals.</string>
-
-    <string name="qc23"><![CDATA[Referral from Community & Facilities]]></string>
-    <string name="qc2301">Check and verify by record from OPD register or slips in referral boxes</string>-->
-
-    <string name="qaAp">Action Plans to Improve Quality Statement &amp; Standard</string>
-    <string name="qa01">Evidence Based Practices for routine care and management of complications during labour, child birth and early post natal period as per guidelines</string>
-    <string name="qa0101"><![CDATA[Routine assessment of every mother on admission, during labour and child birth and are given timely & appropriate care]]></string>
-    <string name="qa0102">Every Women / Newborn / Child have provide support to get immunized for their respective immunization plan as per Guideline</string>
-    <string name="qa0103">Women with Pre Eclampsia / Eclampsia promptly receive appropriate intervention, as per guideline (IV Anticonvulsants and Anti-Hypertensive)</string>
-    <string name="qa0104">Women with Post-Partum Hemorrhages promptly receive appropriate intervention, as per guideline (Active Management of 3rd Stage of Labour through IV / Oral Uterotonics)</string>
-    <string name="qa0105">Women with Prolong / Obstructed Labour promptly receive appropriate intervention, as per guideline (Available and Properly Filled Partograph)</string>
-    <string name="qa0106">Women with Pre-Term Labour promptly receive appropriate intervention, as per guideline (IV Dexamethasone and Nifidipine)</string>
-    <string name="qa0107">Women with or at risk of any infection during labour, child birth and early post natal period promptly receive appropriate intervention, as per guideline (IV Antibiotics)</string>
-    <string name="qa0108"><![CDATA[Newborns who are not breathing spontaneously receive resuscitation with bag & mask within one minute of birth (Implementation of HBB)]]></string>
-    <string name="qa0109">Newborn with or at risk of any suspected infections (PSBI) promptly receive appropriate intervention, as per guideline</string>
-    <string name="qa0110"><![CDATA[Preterm & Small Babies receive appropriate care as per guidelines (Implementation of ECSB & ECEB Guidelines)]]></string>
-    <string name="qa0111">Newborn receive routine care immediately after birth (Breast Feeding, CHX application and Immunization)</string>
-    <string name="qa0112"><![CDATA[Mother and Newborn receive routine post natal care (Maternal & Neonatal Danger Signs in Post Natal Period)]]></string>
-    <string name="qa0113"><![CDATA[Child presenting with Cough or difficult breathing promptly receive appropriate intervention, as per IMNCI guideline (Use of ARI Timer, Pulse Oximeter & Amoxil DT)]]></string>
-    <string name="qa0114">Child presenting with diarrhea promptly receive appropriate intervention, as per IMNCI guideline (Use of Zinc DT, Lo-ORS)</string>
-    <string name="qa0115">Child presenting with Possible serious bacterial infections promptly receive appropriate intervention, as per IMNCI guideline</string>
-    <string name="qa0116">The Health Care Provider and Skilled Birth Attendant in respective facility receive In-Service Training on Updated Intervention / Guidelines</string>
-
-    <string name="qb02">Actionable Information System</string>
-    <string name="qb0201"> Every Women / Newborn / Child has a complete, accurate, standardized medical record during attaining hospital / clinic for OPD / IPD care </string>
-    <string name="qb0202"> Every health facility has a mechanism of Monthly data collection source Registers (DHIS / PPMIS) </string>
-    <string name="qb0203"> Every health facility has a mechanism of Monthly Report Generation through source Registers and Analyzed indicators (DHIS / PPMIS) </string>
-
-    <string name="qc03"> Functioning Referral System </string>
-    <string name="qc0301"> Established both referral system i.e. from community to health facility and between health facilities </string>
-    <string name="qc0302"> Every Women / Newborn / Child is appropriately assessed before referral, and Refer is made without delay</string>
-    <string name="qc0303"> Every Women / Newborn / Child referred within or between health facilities there is appropriate information exchange (Referral Note) </string>
-    <string name="qc0304"> An up to date list of networking facilities in the same geographical area that provide referral care to clients should pasted on wall </string>
-    <string name="qc0305"> The Health Facility has ready access to a functioning ambulance or other vehicle for emergency transportation of clients </string>
-
-    <string name="qd04"> Effective Communications </string>
-    <string name="qd0401"> <![CDATA[Every Women / Newborn / Child along with their families should receive clear and accurate information exchange by health care provider (Before & After getting Care)]]> </string>
-    <string name="qd0402"> Every Women / Newborn / Child receive IEC Material to strengthen his / her understanding during hospital / clinic visit </string>
-    <string name="qd0403"> Every Women / Newborn / Child along with their families should receive Complete counseling care </string>
-    <string name="qd0404"> <![CDATA[Women/Neonate & Child with C-Section / Blood Transfusion priorly signed Informed Written Consent]]> </string>
-
-    <string name="qe05"> <![CDATA[Respect & Dignity]]> </string>
-    <string name="qe0501"> Every Women / Newborn / Child have privacy around the time, and their confidentiality is respected </string>
-    <string name="qe0502"> No Women / Newborn / Child is subjected to mis treatment such as verbal abuse / discrimination / neglect or denial of services </string>
-    <string name="qe0503"> Every Women / Newborn / Child have right to informed choices in the services they receive, and the reason for intervention / outcome are clearly explained </string>
-
-    <string name="qf06"> <![CDATA[Competent & Motivated Personnel]]> </string>
-    <string name="qf0601"> Every Women / Newborn / Child has access at all the time to at least one health care provider and support staff for routine care and management of complication </string>
-    <string name="qf0602"> The Health Care Provider and Support Staff at facility have appropriately competent and skilled (In Service Training on Updated Guidelines are Completed and Refresher will planned after 12months) </string>
-    <string name="qf0603"> Health Facility has a designated focal person for quality improvement of hospital / clinic </string>
-    <string name="qf0604"> Health Facility has record of at least one monthly meeting (MRM-Facility Level) to review Gaps and improve Quality of Care Services </string>
-
-    <string name="qg07"> Availability of Essential Physical Resources </string>
-    <string name="qg0701"> The health facility has a functioning source of safe water located on the premises that is adequate to meet all demands for drinking, personal hygiene, medical interventions. </string>
-    <string name="qg0702"> The health facility has leak proof, covered, labeled waste bins available in every treatment areas as per main 04 categories (Sharps / Non Sharps Infectious Waste / General non-infectious waste / Anatomical Waste) </string>
-    <string name="qg0703"> At least one functioning hand hygiene station with soap / alcohol based hand rub and water </string>
-    <string name="qg0704"> Health facility has energy infrastructure with a backup power source </string>
-    <string name="qg0705"> The Health Facility has written up to date clinical management protocols for Maternal / Neonatal / Child Health Issues, consistent with WHO guidelines. </string>
-    <string name="qg0706"> The health facility has sanitation / toilet facility on premises that are useable and separated by gender for staff and patients </string>
-    <string name="qg0707"> The health facility has a labour and child birth area separated for delivery and post-partum care </string>
-    <string name="qg0708"> A facility offering surgical services has adequately equipped operation theater </string>
-    <string name="qg0709"> <![CDATA[Health facilities has 03 months supplies of Anti-Hypertensive, Anti Convulsant, IV & Oral Uterotonics, IV infusions, Injection Vitamin K, and antenatal corticosteroids (Dexamethasone & Betamethasone) to manage labour and its complications]]> </string>
-    <string name="qg0710"> <![CDATA[The health facility has functional essential equipment’s & supplies for detection of complications like thermometer, sphygmomanometer, stethoscopes, ARI Timers, Pulse Oximeter at all the times]]> </string>
-    <string name="qg0711"> The health facility has 03 months supplies of first and second line oral and injectable antibiotics and other lifesaving essential medicine available at all the time. </string>
-    <string name="qg0712"> The health facility has functional laboratory having essential laboratory test performing there or at least having networking with nearby  laboratory and blood banks </string>
-    <string name="qg0713"> <![CDATA[The health facility has functional essential equipment’s & supplies for saving life from complications like Vaccum, Forceps, Incubators, delivery and C-Section instruments kits, sterile gloves at all the times]]> </string>
-    <string name="qg0714"> The health facility has uninterrupted oxygen source and  resuscitation supplies </string>
-    <string name="qg0715"> The health facility has an on-site pharmacy and medicine / supplies stock management system managed by a trained pharmacist or dispenser </string>
-
-    <string name="dhheading"> Performance Evaluation of DHMTs </string>
-    <string name="dh01"> Regularity of meetings; held within 100 days of last meeting </string>
-    <string name="dh02"> Meeting Conducted on defined date or it was postponed </string>
-    <string name="dh03"> Chairmanship of meetings; chaired by designated/notified chairperson (District Health Officer / Deputy Commissioner) </string>
-    <string name="dh04"> Review of health system’s performance using data sources; DHIS and LHW-MIS (By Others) </string>
-    <string name="dh05"> Presentation of health system’s performance using data sources; DHIS QOC, LHW-MIS, and Gap Analysis (By AKU Representative) </string>
-    <string name="dh06"> What are the basic / key Decisions has been taken on the basis of data review; for improving performance by meeting lead? </string>
-    <string name="dh07"> Follow up of previous decisions and progress; follow up done </string>
-    <string name="s01">Source: \t Direct Observation</string>
-    <string name="s02">Source: \t Direct Observation on Clients</string>
-    <string name="s03">Source: \t Review Medical Records</string>
-    <string name="s02r03">Direct Observation on Clients \n\t OR \n\t Review Medical Records</string>
-    <string name="inr">If No (Reasons)</string>
-    <string name="hftype">Health Facility Type ?</string>
-    <string name="rm">Reporting Month</string>
 
 </resources>
