@@ -63,5 +63,6 @@ public class VersionAppContract {
         public static final String COLUMN_VERSION_NAME = "versionName";
         public static final String COLUMN_PATH_NAME = "path";
 
+        public static final String _URI = "output.json";
     }
 }

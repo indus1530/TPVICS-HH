@@ -1,22 +1,25 @@
 package edu.aku.hassannaqvi.tpvics_hh.get.server;
 
+import android.content.Context;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.RMOperations.CrudOperations;
 import edu.aku.hassannaqvi.tpvics_hh.RMOperations.SyncOperations;
+import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
 import edu.aku.hassannaqvi.tpvics_hh.data.DAO.FormsDAO;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.District;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.FacilityProvider;
-import edu.aku.hassannaqvi.tpvics_hh.data.entities.Tehsil;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.Clusters;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.Districts;
+import edu.aku.hassannaqvi.tpvics_hh.data.entities.HFA;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.UCs;
 import edu.aku.hassannaqvi.tpvics_hh.data.entities.Users;
 
-import static edu.aku.hassannaqvi.tpvics_hh.activities.LoginActivity.db;
-
 public abstract class GetSyncFncs {
 
-    public static void syncUsers(JSONArray userlist) {
+    public static void syncUsers(Context mContext, JSONArray userlist) {
+
+        AppDatabase db = AppDatabase.getDatabase(mContext);
 
         new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUsers");
 
@@ -28,7 +31,7 @@ public abstract class GetSyncFncs {
                 Users users = new Users();
                 users.Sync(jsonObjectUser);
 
-                new CrudOperations(db, users).execute(FormsDAO.class.getName(), "formsDao", "insertUsers").get();
+                new CrudOperations(mContext, FormsDAO.class.getName(), "formsDao", "insertUsers", users).execute().get();
             }
             db.close();
 
@@ -36,38 +39,43 @@ public abstract class GetSyncFncs {
         }
     }
 
-    public static void syncDistricts(JSONArray clusterList) {
+    public static void syncClusters(Context mContext, JSONArray clusterList) {
 
-        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteDistrict");
+        AppDatabase db = AppDatabase.getDatabase(mContext);
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteClusters");
 
         try {
             JSONArray jsonArray = clusterList;
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
 
-                District district = new District();
-                district.Sync(jsonObjectUser);
+                Clusters clusters = new Clusters();
+                clusters.Sync(jsonObjectUser);
 
-                new CrudOperations(db, district).execute(FormsDAO.class.getName(), "formsDao", "insertDistrict").get();
+                new CrudOperations(mContext, FormsDAO.class.getName(), "formsDao", "insertClusters", clusters).execute().get();
             }
             db.close();
 
         } catch (Exception e) {
         }
     }
-    public static void syncTehsil(JSONArray clusterList) {
 
-        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteTehsil");
+    public static void syncDistricts(Context mContext, JSONArray distList) {
+
+        AppDatabase db = AppDatabase.getDatabase(mContext);
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteDistricts");
 
         try {
-            JSONArray jsonArray = clusterList;
+            JSONArray jsonArray = distList;
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
 
-                Tehsil tehsil = new Tehsil();
-                tehsil.Sync(jsonObjectUser);
+                Districts dist = new Districts();
+                dist.Sync(jsonObjectUser);
 
-                new CrudOperations(db, tehsil).execute(FormsDAO.class.getName(), "formsDao", "insertTehsil").get();
+                new CrudOperations(mContext, FormsDAO.class.getName(), "formsDao", "insertDistricts", dist).execute().get();
             }
             db.close();
 
@@ -75,19 +83,21 @@ public abstract class GetSyncFncs {
         }
     }
 
-    public static void syncUCs(JSONArray clusterList) {
+    public static void syncUcs(Context mContext, JSONArray ucsList) {
 
-        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUcs");
+        AppDatabase db = AppDatabase.getDatabase(mContext);
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteUCs");
 
         try {
-            JSONArray jsonArray = clusterList;
+            JSONArray jsonArray = ucsList;
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
 
-                UCs uCs = new UCs();
-                uCs.Sync(jsonObjectUser);
+                UCs ucs = new UCs();
+                ucs.Sync(jsonObjectUser);
 
-                new CrudOperations(db, uCs).execute(FormsDAO.class.getName(), "formsDao", "insertUCs").get();
+                new CrudOperations(mContext, FormsDAO.class.getName(), "formsDao", "insertUcs", ucs).execute().get();
             }
             db.close();
 
@@ -95,19 +105,21 @@ public abstract class GetSyncFncs {
         }
     }
 
-    public static void syncFacilityProvider(JSONArray dataList) {
+    public static void syncHfa(Context mContext, JSONArray hfaList) {
 
-        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFacilityProvider");
+        AppDatabase db = AppDatabase.getDatabase(mContext);
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteHfa");
 
         try {
-            JSONArray jsonArray = dataList;
+            JSONArray jsonArray = hfaList;
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectdata = jsonArray.getJSONObject(i);
+                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
 
-                FacilityProvider facility_provider = new FacilityProvider();
-                facility_provider.Sync(jsonObjectdata);
+                HFA hfa = new HFA();
+                hfa.Sync(jsonObjectUser);
 
-                new CrudOperations(db, facility_provider).execute(FormsDAO.class.getName(), "formsDao", "insertFacilityProvider").get();
+                new CrudOperations(mContext, FormsDAO.class.getName(), "formsDao", "insertHFA", hfa).execute().get();
             }
             db.close();
 

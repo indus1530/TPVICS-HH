@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.RMOperations;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 import java.lang.reflect.InvocationTargetException;
@@ -14,31 +15,37 @@ import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
 public class CrudOperations extends AsyncTask<String, Void, Long> {
 
     private AppDatabase db;
-    private Object forms;
+    private Object objForms;
+    private Context mContext;
+    private String className, DAOClassRef, DAOClassFncRef;
 
-    public CrudOperations(AppDatabase db, Object forms) {
-        this.db = db;
-        this.forms = forms;
+    public CrudOperations(Context mContext, String className, String DAOClassRef, String DAOClassFncRef, Object objForms) {
+        this.mContext = mContext;
+        this.className = className;
+        this.DAOClassRef = DAOClassRef;
+        this.DAOClassFncRef = DAOClassFncRef;
+        this.objForms = objForms;
     }
 
     @Override
     protected Long doInBackground(String... fnNames) {
+        db = AppDatabase.getDatabase(mContext);
 
-        Long longID = 0L;
+        Long longID = new Long(0);
 
         try {
 
             Method[] fn = db.getClass().getDeclaredMethods();
             for (Method method : fn) {
-                if (method.getName().equals(fnNames[1])) {
+                if (method.getName().equals(DAOClassRef)) {
 
-                    Class<?> fnClass = Class.forName(fnNames[0]);
+                    Class<?> fnClass = Class.forName(className);
 
                     for (Method method2 : fnClass.getDeclaredMethods()) {
-                        if (method2.getName().equals(fnNames[2])) {
+                        if (method2.getName().equals(DAOClassFncRef)) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
-                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), objForms.getClass())
+                                    .invoke(db.getClass().getMethod(DAOClassRef).invoke(db), objForms)));
 
                             break;
                         }
@@ -48,7 +55,13 @@ public class CrudOperations extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 

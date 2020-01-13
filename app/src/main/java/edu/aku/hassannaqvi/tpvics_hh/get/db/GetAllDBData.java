@@ -41,24 +41,6 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(DAOFnc)) {
 
-                            /*String arg = "";
-                            if (fnNames[3] != null) {
-
-                                for (byte i = 0; i < ((String[]) fnNames[3]).length; i++) {
-
-                                    arg += ((String[]) fnNames[3])[i];
-
-                                    if (i + 1 != ((String[]) fnNames[3]).length) {
-                                        arg += ",";
-                                    }
-                                }
-
-                                curData = (Collection<?>) fnClass.getMethod(method2.getName())
-                                        .invoke(db.getClass().getMethod(fnNames[1].toString()).invoke(db),arg.split(","));
-
-                                break;
-                            }*/
-
                             Class<?>[] params = new Class[fnNames.length];
                             for (int i = 0; i < fnNames.length; i++) {
                                 if (fnNames[i] instanceof Integer) {
@@ -70,6 +52,8 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
                             curData = (Collection<?>) fnClass.getDeclaredMethod(method2.getName(), params)
                                     .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames);
+
+
                             break;
                         }
                     }
@@ -77,18 +61,10 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
                     break;
                 }
             }
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
         return curData;
     }
-
-
 }

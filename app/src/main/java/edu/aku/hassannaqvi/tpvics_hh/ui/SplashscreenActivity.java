@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.tpvics_hh.activities;
+package edu.aku.hassannaqvi.tpvics_hh.ui;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;

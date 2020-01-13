@@ -64,18 +64,6 @@ public class DateUtils {
         return new SimpleDateFormat(format).format(cal.getTime()); //"dd-MM-yyyy HH:mm"
     }
 
-    public static String getDOB(String format, int year, int month, int day) {
-
-        int totalmonths = (year * 12) + month;
-
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(cal.getTime());
-        cal.add(Calendar.MONTH, -totalmonths);
-        cal.add(Calendar.DAY_OF_MONTH, -day);
-
-        return new SimpleDateFormat(format).format(cal.getTime());
-    }
-
     public static int getAgeInYears(int year) {
         Calendar cal = Calendar.getInstance();
         int currentYear = cal.get(Calendar.YEAR);

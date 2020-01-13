@@ -13,7 +13,7 @@ import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
 
 public class SyncOperations extends AsyncTask<String, Void, Long> {
 
-    private AppDatabase db;
+    AppDatabase db;
 
     public SyncOperations(AppDatabase db) {
         this.db = db;
@@ -22,7 +22,7 @@ public class SyncOperations extends AsyncTask<String, Void, Long> {
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = 0L;
+        Long longID = new Long(0);
 
         try {
 
@@ -46,7 +46,13 @@ public class SyncOperations extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 

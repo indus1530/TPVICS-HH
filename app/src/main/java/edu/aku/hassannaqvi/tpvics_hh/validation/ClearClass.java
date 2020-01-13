@@ -7,7 +7,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 
 import androidx.cardview.widget.CardView;
 
@@ -17,19 +16,16 @@ import androidx.cardview.widget.CardView;
 
 public class ClearClass {
 
-    public static void ClearRadioButton(RadioGroup rdGrp) {
-        rdGrp.clearCheck();
-    }
+    public static void ClearRadioButton(LinearLayout container, RadioGroup rdGrp) {
+        if (rdGrp.getCheckedRadioButtonId() == -1) {
 
-    public static void ClearRadioButton(RadioGroup rdGrp, boolean flag) {
+            rdGrp.clearCheck();
 
-        rdGrp.clearCheck();
-        rdGrp.setEnabled(flag);
-
-        for (int i = 0; i < rdGrp.getChildCount(); i++) {
-            View v = rdGrp.getChildAt(i);
-            if (v instanceof RadioButton) {
-                v.setEnabled(flag);
+            for (int i = 0; i < container.getChildCount(); i++) {
+                View v = container.getChildAt(i);
+                if (v instanceof RadioButton) {
+                    v.setEnabled(false);
+                }
             }
         }
     }
@@ -72,7 +68,7 @@ public class ClearClass {
         }
     }
 
-/*    public static void ClearAllFields(LinearLayout container, Boolean flag) {
+    public static void ClearAllCardFields(LinearLayout container) {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
             if (v instanceof CheckBox) {
@@ -80,19 +76,21 @@ public class ClearClass {
                 ((CheckBox) v).setError(null);
             } else if (v instanceof RadioGroup) {
                 ((RadioGroup) v).clearCheck();
+
             } else if (v instanceof EditText) {
                 ((EditText) v).setText(null);
                 ((EditText) v).setError(null);
                 v.clearFocus();
+
             } else if (v instanceof CardView) {
-                ClearAllCardFields((CardView) v, flag);
+                ClearAllCardFields((CardView) v);
             } else if (v instanceof LinearLayout) {
-                ClearAllFields((LinearLayout) v, flag);
+                ClearAllCardFields((LinearLayout) v);
             }
         }
-    }*/
+    }
 
-    private static void ClearAllCardFields(CardView container, Boolean flag) {
+    public static void ClearAllCardFields(CardView container) {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
             if (v instanceof CheckBox) {
@@ -104,8 +102,21 @@ public class ClearClass {
                 ((EditText) v).setText(null);
                 ((EditText) v).setError(null);
                 v.clearFocus();
+
             } else if (v instanceof LinearLayout) {
-                ClearAllFields(v, null);
+                for (int k = 0; k < ((LinearLayout) v).getChildCount(); k++) {
+                    View v1 = ((LinearLayout) v).getChildAt(k);
+                    if (v1 instanceof CheckBox) {
+                        ((CheckBox) v1).setChecked(false);
+                        ((CheckBox) v1).setError(null);
+                    } else if (v1 instanceof RadioGroup) {
+                        ((RadioGroup) v1).clearCheck();
+                    } else if (v1 instanceof EditText) {
+                        ((EditText) v1).setText(null);
+                        ((EditText) v1).setError(null);
+                        v1.clearFocus();
+                    }
+                }
             }
         }
     }
@@ -119,11 +130,6 @@ public class ClearClass {
                 if (flag != null)
                     v.setEnabled(flag);
 
-            } else if (v instanceof Spinner) {
-                ((Spinner) v).setSelection(0);
-                if (flag != null) {
-                    v.setEnabled(flag);
-                }
             } else if (v instanceof RadioGroup) {
                 ((RadioGroup) v).clearCheck();
                 if (flag != null) {
@@ -141,10 +147,8 @@ public class ClearClass {
                     v.setEnabled(flag);
 
             } else if (v instanceof RadioButton) {
-                ((RadioButton) v).setChecked(false);
                 if (flag != null)
                     v.setEnabled(flag);
-
             } else if (v instanceof CardView) {
                 ClearAllFields(v, flag);
             } else if (v instanceof LinearLayout) {
@@ -153,6 +157,5 @@ public class ClearClass {
 
         }
     }
-
 
 }

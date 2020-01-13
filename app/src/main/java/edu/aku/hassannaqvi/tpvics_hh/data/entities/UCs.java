@@ -2,34 +2,49 @@ package edu.aku.hassannaqvi.tpvics_hh.data.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.tpvics_hh.data.AppDatabase;
+import edu.aku.hassannaqvi.tpvics_hh.core.CONSTANTS;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_UCs)
+@Entity(tableName = CONSTANTS.TABLE_UCS)
 public class UCs {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo
+    private String dist_code = "";
     private String uc_code = "";
     private String uc_name = "";
-    private String tehsil_code = "";
-    private String uen_code = "";
+
+
+    @Ignore
+    public UCs(UCs ucs) {
+        this.dist_code = ucs.dist_code;
+        this.uc_code = ucs.uc_code;
+        this.uc_name = ucs.uc_name;
+    }
+
+    @Ignore
+    public UCs(String dist_code, String uc_code, String uc_name) {
+        this.dist_code = dist_code;
+        this.uc_code = uc_code;
+        this.uc_name = uc_name;
+    }
 
     public UCs() {
     }
 
-    public int getId() {
-        return id;
-    }
+    public UCs Sync(JSONObject jsonObjectCls) throws JSONException {
 
-    public void setId(int id) {
-        this.id = id;
+        this.dist_code = jsonObjectCls.getString("dist_code");
+        this.uc_code = jsonObjectCls.getString("uc_code");
+        this.uc_name = jsonObjectCls.getString("uc_name");
+        return this;
     }
 
     public String getUc_code() {
@@ -48,28 +63,20 @@ public class UCs {
         this.uc_name = uc_name;
     }
 
-    public String getTehsil_code() {
-        return tehsil_code;
+    public String getDist_code() {
+        return dist_code;
     }
 
-    public void setTehsil_code(String tehsil_code) {
-        this.tehsil_code = tehsil_code;
+    public void setDist_code(String dist_code) {
+        this.dist_code = dist_code;
     }
 
-    public String getUen_code() {
-        return uen_code;
+    public int getId() {
+        return id;
     }
 
-    public void setUen_code(String uen_code) {
-        this.uen_code = uen_code;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public UCs Sync(JSONObject jsonObjectCls) throws JSONException {
-
-        this.uc_code = jsonObjectCls.getString("uc_code");
-        this.uc_name = jsonObjectCls.getString("uc_name");
-        this.tehsil_code = jsonObjectCls.getString("tehsil_code");
-//        this.uen_code = jsonObjectCls.getString("hf_uen_code");
-        return this;
-    }
 }

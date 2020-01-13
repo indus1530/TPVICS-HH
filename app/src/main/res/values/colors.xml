@@ -22,4 +22,6 @@
     <color name="darkRed">#D50000</color>
     <color name="lightOrange">#FFE0B2</color>
 
+    <color name="dullWhiteOverlay">#99E7E6E6</color>
+
 </resources>

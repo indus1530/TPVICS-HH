@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.aku.hassannaqvi.tpvics_hh.activities.EndingActivity">
+    tools:context="edu.aku.hassannaqvi.wfp_recruit_form.ui.EndingActivity">
 
     <data>
 
@@ -9,14 +9,14 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.tpvics_hh.activities.EndingActivity" />
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.EndingActivity" />
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:scrollbars="horizontal">
 
         <LinearLayout
@@ -56,19 +56,16 @@
                     android:layout_marginBottom="1dp"
                     android:text="@string/istatusb" />
 
+                <RadioButton
+                    android:id="@+id/istatusc"
+
+                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/istatusc" />
 
             </RadioGroup>
-
-            <!--<Button
-                android:id="@+id/btn_End"
-                style="@style/buttons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_weight="1"
-                android:onClick="@{() -> callback.BtnEnd()}"
-                android:text="@string/end_interview"
-                android:textColor="#ff1e1e" />-->
 
             <Button
                 android:id="@+id/btn_End"
@@ -77,11 +74,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_weight="1"
-                android:background="@color/red"
-                android:onClick="@{() -> callback.BtnEnd()}"
                 android:text="@string/end_interview"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:onClick="@{() -> callback.BtnEnd()}"
+                android:textColor="#ff1e1e" />
 
         </LinearLayout>
     </ScrollView>
