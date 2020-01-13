@@ -1702,13 +1702,13 @@
                             android:text="@string/other" />
 
                         <EditText
-                            android:id="@+id/hs1796"
+                            android:id="@+id/hs1796x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hs17x"
-                            android:tag="hs17x"
-                            android:text='@{hs1796.checked? hs1796.getText().toString() : ""}'
+                            android:hint="@string/other"
+                            android:tag="hs1796"
+                            android:text='@{hs1796.checked? hs1796x.getText().toString() : ""}'
                             android:visibility='@{hs1796.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
 

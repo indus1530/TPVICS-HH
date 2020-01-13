@@ -468,4 +468,7 @@
     <string name="hs27_title">جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12-23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
 
     <string name="other">دیگر وضاحت کریں  </string>
+    <string name="inr">If No (Reasons)</string>
+    <string name="hftype">Health Facility Type ?</string>
+    <string name="rm">Reporting Month</string>
 </resources>

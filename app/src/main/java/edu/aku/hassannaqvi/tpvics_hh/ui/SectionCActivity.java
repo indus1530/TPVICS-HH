@@ -1,7 +1,11 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -123,9 +127,6 @@ public class SectionCActivity extends AppCompatActivity {
     private void SaveDraft() {
     }
 
-    private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
-    }
 
     public void BtnEnd() {
 
