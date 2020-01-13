@@ -3,6 +3,8 @@ package edu.aku.hassannaqvi.tpvics_hh.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
+import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.tpvics_hh.validation.ValidatorClass;
 
@@ -158,5 +161,38 @@ public class SectionBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSecB);
+    }
+
+    public void BtnEnd() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("END INTERVIEW")
+                .setIcon(R.drawable.ic_power_settings_new_black_24dp)
+                .setCancelable(false)
+                .setCancelable(false)
+                .setMessage("Do you want to End Interview??")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        try {
+                            SaveDraft();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        if (!UpdateDB()) {
+                            Toast.makeText(SectionBActivity.this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        MainApp.endActivitySetRouting(SectionBActivity.this, SectionBActivity.this, EndingActivity.class, false,null);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                .show();
     }
 }
