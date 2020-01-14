@@ -402,6 +402,8 @@
     <string name="hs18i">قالین</string>
     <string name="hs18j">اینٹیں</string>
     <string name="hs18k">چونے کا پتھر</string>
+    <string name="hs18l">Bricks</string>
+    <string name="hs18m">Lime</string>
     <string name="hs1896">دیگر وضاحت کریں</string>
     <string name="hs19">گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
     <string name="hs19a_title">قدرتی چھت</string>
@@ -409,6 +411,7 @@
     <string name="hs19b">گھاس پھونس /کھجو ر کے پتے</string>
     <string name="hs19c">گھاس پھوس سے بنی ہوئی چھت</string>
     <string name="hs19d"> تنکے کی  چٹائی</string>
+    <string name="hs19d_title">Rudimentary Roofing</string>
     <string name="hs19e">کھجور  یاناریل کے درخت/بانس</string>
     <string name="hs19f"> لکڑی کے تختے</string>
     <string name="hs19g">گتے سے بنی ہوئی چھت </string>

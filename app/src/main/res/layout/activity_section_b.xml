@@ -645,6 +645,8 @@
                         android:inputType="number"
                         android:maxLength="2"
                         app:mask="##"
+                        app:maxValue="10"
+                        app:minValue="0"
                         app:type="range" />
 
                     <TextView
@@ -660,6 +662,8 @@
                         android:inputType="number"
                         android:maxLength="2"
                         app:mask="##"
+                        app:maxValue="10"
+                        app:minValue="0"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -687,6 +691,8 @@
                         android:inputType="number"
                         android:maxLength="2"
                         app:mask="##"
+                        app:maxValue="10"
+                        app:minValue="0"
                         app:type="range" />
 
                     <TextView
@@ -702,6 +708,8 @@
                         android:inputType="number"
                         android:maxLength="2"
                         app:mask="##"
+                        app:maxValue="10"
+                        app:minValue="0"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

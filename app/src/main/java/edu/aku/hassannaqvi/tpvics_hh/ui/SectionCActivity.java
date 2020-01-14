@@ -74,7 +74,7 @@ public class SectionCActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSecC);
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSecC);
     }
 
     public void BtnContinue() {

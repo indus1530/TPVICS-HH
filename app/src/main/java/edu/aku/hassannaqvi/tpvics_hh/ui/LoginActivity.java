@@ -668,8 +668,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
                         finish();
 
-//                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-//                        startActivity(iLogin);
+                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(iLogin);
 
                     } else {
                         bi.password.setError(getString(R.string.error_incorrect_password));
