@@ -78,16 +78,20 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs01g" />
 
+                        <RadioButton
+                            android:id="@+id/hs0196"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
                         <EditText
-                            android:id="@+id/hs01gx"
+                            android:id="@+id/hs0196x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
-                            android:hint="@string/hs01g"
-                            android:tag="hs01h"
-                            android:text='@{hs01g.checked? hs01gx.getText().toString() : ""}'
-                            android:visibility='@{hs01g.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/other"
+                            android:tag="hs0196"
+                            android:text='@{hs0196.checked? hs0196x.getText().toString() : ""}'
+                            android:visibility='@{hs0196.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -124,15 +128,20 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs02b" />
 
+                        <RadioButton
+                            android:id="@+id/hs0296"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
                         <EditText
-                            android:id="@+id/hs02bx"
+                            android:id="@+id/hs0296x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hs02x"
-                            android:tag="hs02b"
-                            android:text='@{hs02b.checked? hs02bx.getText().toString() : ""}'
-                            android:visibility='@{hs02b.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/other"
+                            android:tag="hs0296"
+                            android:text='@{hs0296.checked? hs0296x.getText().toString() : ""}'
+                            android:visibility='@{hs0296.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -159,6 +168,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs06a_title" />
+
                         <RadioButton
                             android:id="@+id/hs03a"
                             style="@style/i_radiobutton"
@@ -184,6 +197,10 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs03e" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs03f_title" />
+
                         <RadioButton
                             android:id="@+id/hs03f"
                             style="@style/i_radiobutton"
@@ -193,6 +210,10 @@
                             android:id="@+id/hs03g"
                             style="@style/i_radiobutton"
                             android:text="@string/hs03g" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs03h_title" />
 
                         <RadioButton
                             android:id="@+id/hs03h"
@@ -219,26 +240,34 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs03l" />
 
-
                         <RadioButton
                             android:id="@+id/hs03m"
                             style="@style/i_radiobutton"
                             android:text="@string/hs03m" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs03n_title" />
 
                         <RadioButton
                             android:id="@+id/hs03n"
                             style="@style/i_radiobutton"
                             android:text="@string/hs03n" />
 
+                        <RadioButton
+                            android:id="@+id/hs0396"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
                         <EditText
-                            android:id="@+id/hs03nx"
+                            android:id="@+id/hs0396x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hs03x"
-                            android:tag="hs03n"
-                            android:text='@{hs03n.checked? hs03nx.getText().toString() : ""}'
-                            android:visibility='@{hs03n.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/other"
+                            android:tag="hs0396"
+                            android:text='@{hs0396.checked? hs0396x.getText().toString() : ""}'
+                            android:visibility='@{hs0396.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -366,18 +395,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-                        <!--                        <TextView-->
-                        <!--                            style="@style/i_textview"-->
-                        <!--                            android:text="@string/hs06-tittle" />-->
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs06a_title" />
 
                         <RadioButton
                             android:id="@+id/hs06a"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06a" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs06a_title" />
 
                         <RadioButton
                             android:id="@+id/hs06b"
@@ -399,28 +424,28 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs06e" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs06f_title" />
+
                         <RadioButton
                             android:id="@+id/hs06f"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06f" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs06f_title" />
 
                         <RadioButton
                             android:id="@+id/hs06g"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06g" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs06h_title" />
+
                         <RadioButton
                             android:id="@+id/hs06h"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06h" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs06h_title" />
 
                         <RadioButton
                             android:id="@+id/hs06i"
@@ -442,29 +467,34 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs06l" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs06n_title" />
-
                         <RadioButton
                             android:id="@+id/hs06m"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06m" />
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs06n_title" />
 
                         <RadioButton
                             android:id="@+id/hs06n"
                             style="@style/i_radiobutton"
                             android:text="@string/hs06n" />
 
+                        <RadioButton
+                            android:id="@+id/hs0696"
+                            style="@style/i_radiobutton"
+                            android:text="@string/other" />
+
                         <EditText
-                            android:id="@+id/hs06nx"
+                            android:id="@+id/hs0696x"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/hs06x"
-                            android:tag="hs06x"
-                            android:text='@{hs06n.checked? hs06nx.getText().toString() : ""}'
-                            android:visibility='@{hs06n.checked? View.VISIBLE : View.GONE}' />
+                            android:hint="@string/other"
+                            android:tag="hs0696"
+                            android:text='@{hs0696.checked? hs0696x.getText().toString() : ""}'
+                            android:visibility='@{hs0696.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -491,14 +521,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs07a_title" />
+
                         <RadioButton
                             android:id="@+id/hs07a"
                             style="@style/i_radiobutton"
                             android:text="@string/hs07a" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs07a_title" />
 
                         <RadioButton
                             android:id="@+id/hs07b"
@@ -515,14 +545,14 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs07d" />
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hs07e_title" />
+
                         <RadioButton
                             android:id="@+id/hs07e"
                             style="@style/i_radiobutton"
                             android:text="@string/hs07e" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs07e_title" />
 
                         <RadioButton
                             android:id="@+id/hs07f"
@@ -1575,7 +1605,7 @@
                     android:id="@+id/btn_Continue"
                     style="@style/button"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="Save" />
+                    android:text="Continue" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
         </LinearLayout>

@@ -321,10 +321,6 @@
                             style="@style/i_radiobutton"
                             android:text="@string/hs19a" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs19a_title" />
-
                         <RadioButton
                             android:id="@+id/hs19b"
                             style="@style/i_radiobutton"
@@ -343,10 +339,6 @@
                             android:id="@+id/hs19d"
                             style="@style/i_radiobutton"
                             android:text="@string/hs19d" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs19d_title" />
 
                         <RadioButton
                             android:id="@+id/hs19e"
@@ -371,10 +363,6 @@
                             android:id="@+id/hs19h"
                             style="@style/i_radiobutton"
                             android:text="@string/hs19h" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs19h_title" />
 
                         <RadioButton
                             android:id="@+id/hs19i"
@@ -416,9 +404,8 @@
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs19x"
-                            android:tag="hs19x"
+                            android:tag="hs1996"
                             android:text='@{hs1996.checked? hs1996x.getText().toString() : ""}'
                             android:visibility='@{hs1996.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
@@ -454,10 +441,6 @@
                             android:id="@+id/hs20a"
                             style="@style/i_radiobutton"
                             android:text="@string/hs20a" />
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/hs20a_title" />
 
                         <RadioButton
                             android:id="@+id/hs20b"
@@ -657,7 +640,6 @@
                             style="@style/EditTextAlphaNumeric"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs23a"
                             android:inputType="number"
                             app:mask="##"
@@ -670,7 +652,6 @@
                             style="@style/EditTextAlphaNumeric"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/hs23b"
                             android:inputType="number"
                             app:mask="##"
@@ -749,7 +730,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25a"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -759,7 +742,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25b"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -769,7 +754,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25c"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -779,7 +766,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25d"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -789,6 +778,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25e"
                             android:inputType="number"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -798,6 +790,9 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25f"
                             android:inputType="number"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
                             app:type="range" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -806,7 +801,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hs25g"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            app:mask="###"
+                            app:maxValue="999"
+                            app:minValue="000"
+                            app:type="range" />
+
                     </RadioGroup>
                 </LinearLayout>
 
@@ -908,7 +908,7 @@
                     android:id="@+id/btn_Continue"
                     style="@style/button"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="Save" />
+                    android:text="Continue" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
         </LinearLayout>

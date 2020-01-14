@@ -76,7 +76,7 @@
                 android:layout_weight="1"
                 android:text="@string/end_interview"
                 android:onClick="@{() -> callback.BtnEnd()}"
-                android:textColor="#ff1e1e" />
+                android:textColor="#ff2e1e" />
 
         </LinearLayout>
     </ScrollView>

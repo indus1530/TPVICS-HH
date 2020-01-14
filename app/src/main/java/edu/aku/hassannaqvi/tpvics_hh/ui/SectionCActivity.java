@@ -1,15 +1,18 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
@@ -104,7 +107,19 @@ public class SectionCActivity extends AppCompatActivity {
         return true;
     }
 
-    private void SaveDraft() {
+    private void SaveDraft() throws JSONException {
+        JSONObject f3 = new JSONObject();
+
+        //hs01
+        f3.put("hs01", bi.hs01a.isChecked() ? "1"
+                : bi.hs01b.isChecked() ? "2"
+                : bi.hs01c.isChecked() ? "3"
+                : bi.hs01d.isChecked() ? "4"
+                : bi.hs01e.isChecked() ? "5"
+                : bi.hs01f.isChecked() ? "6"
+                : bi.hs01g.isChecked() ? "7"
+                : bi.hs0196.isChecked() ? "96"
+                : "0");
     }
 
 
@@ -119,13 +134,17 @@ public class SectionCActivity extends AppCompatActivity {
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        SaveDraft();
+                        try {
+                            SaveDraft();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         if (!UpdateDB()) {
                             Toast.makeText(SectionCActivity.this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                             return;
                         }
 
-                        MainApp.endActivitySetRouting(SectionCActivity.this, SectionCActivity.this, EndingActivity.class, false, null);
+                        MainApp.endActivitySetRouting(SectionCActivity.this, SectionCActivity.this, EndingActivity.class, false,null);
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
