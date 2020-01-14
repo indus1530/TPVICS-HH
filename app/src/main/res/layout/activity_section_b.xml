@@ -69,9 +69,7 @@
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -240,9 +238,7 @@
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -535,9 +531,7 @@
                         style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -561,9 +555,7 @@
                         style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -587,9 +579,7 @@
                         style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:layout_weight="70"
-                        android:focusable="false"
                         android:textColor="@android:color/black" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

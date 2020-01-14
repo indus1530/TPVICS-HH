@@ -63,7 +63,7 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.2.3'
 
     // Android Validator Crawler
-    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.0'
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.1'
 
     // Fancy Toast
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
