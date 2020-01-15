@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -90,7 +91,7 @@ public class SectionCActivity extends AppCompatActivity {
             if (UpdateDB()) {
 //                if (bi.td01b.isChecked()) {
 //                    finish();
-//                    startActivity(new Intent(this, ChildListActivity.class));
+                    startActivity(new Intent(this, SectionC02Activity.class));
 //                } else {
 //                    finish();
 //                    startActivity(new Intent(this, SectionDAActivity.class));
@@ -120,6 +121,18 @@ public class SectionCActivity extends AppCompatActivity {
                 : bi.hs01g.isChecked() ? "7"
                 : bi.hs0196.isChecked() ? "96"
                 : "0");
+        f3.put("hs0196x", bi.hs0196x.getText().toString());
+
+        //hs02
+        f3.put("hs02", bi.hs02a.isChecked() ? "1"
+                : bi.hs02b.isChecked() ? "2"
+                : bi.hs0296.isChecked() ? "96"
+                : "0");
+        f3.put("hs0296x", bi.hs0296x.getText().toString());
+
+
+
+
     }
 
 

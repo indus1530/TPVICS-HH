@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import org.json.JSONException;
+
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC02Binding;
@@ -58,22 +60,12 @@ public class SectionC02Activity extends AppCompatActivity {
 
     public void BtnContinue() {
         if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            SaveDraft();
             if (UpdateDB()) {
-//                if (bi.td01b.isChecked()) {
-//                    finish();
-//                    startActivity(new Intent(this, ChildListActivity.class));
-//                } else {
-//                    finish();
-//                    startActivity(new Intent(this, SectionDAActivity.class));
-//                }
-
+                setResult(RESULT_OK);
+                finish();
             } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Complete", Toast.LENGTH_SHORT).show();
             }
         }
     }
