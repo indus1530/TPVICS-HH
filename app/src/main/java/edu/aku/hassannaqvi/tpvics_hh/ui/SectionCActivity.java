@@ -377,10 +377,6 @@ public class SectionCActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
     public void BtnEnd() {
 
         new AlertDialog.Builder(this)
