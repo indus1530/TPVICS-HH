@@ -22,7 +22,7 @@
     <string name="nextSection">Next Section</string>
     <string name="end_interview">End Interview</string>
     <string name="endForm">End Form</string>
-    <string name="numberhint">Number</string>
+    <string name="num">Number</string>
 
     <string name="default_p">#</string>
     <string name="default_guest_name">Name</string>
