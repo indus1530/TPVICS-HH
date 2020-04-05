@@ -99,7 +99,8 @@
     <string name="hh21">Who is respondent of household questionnaire?</string>
     <string name="hh21a">HEAD OF THE HOUSEHOLD</string>
     <string name="hh21b">OTHER HOUSEHOLD MEMBER </string>
-    <string name="hh22">How many members are living in this household (NUMBER OF PERSONS) </string>
+    <string name="hh22"> How many members are living in this household ? </string>
+    <string name="hh22a"> NUMBER OF PERSONS </string>
 
 
     <string name="hl01">Line number</string>

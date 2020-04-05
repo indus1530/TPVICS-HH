@@ -1966,7 +1966,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15a"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15aa"
@@ -2000,7 +2000,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15b"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ba"
@@ -2034,7 +2034,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15c"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ca"
@@ -2068,7 +2068,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15d"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15da"
@@ -2102,7 +2102,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15e"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ea"
@@ -2136,7 +2136,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15f"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15fa"
@@ -2170,7 +2170,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15g"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ga"
@@ -2204,7 +2204,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15h"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ha"
@@ -2238,7 +2238,7 @@
 
                     <RadioGroup
                         android:id="@+id/hs15i"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hs15ia"

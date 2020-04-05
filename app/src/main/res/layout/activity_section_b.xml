@@ -199,7 +199,7 @@
 
                     <RadioGroup
                         android:id="@+id/hl04"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl04a"
@@ -295,7 +295,7 @@
 
                     <RadioGroup
                         android:id="@+id/hl07"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl07a"
@@ -341,7 +341,7 @@
 
                     <RadioGroup
                         android:id="@+id/hl08"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl08a"
@@ -412,7 +412,7 @@
 
                     <RadioGroup
                         android:id="@+id/hl09"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl09a"
@@ -496,7 +496,7 @@
 
                     <RadioGroup
                         android:id="@+id/hl10"
-                        style="@style/i_radiogroup">
+                        style="@style/vradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl10a"

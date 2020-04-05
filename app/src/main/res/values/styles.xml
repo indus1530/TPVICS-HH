@@ -248,11 +248,17 @@
         <item name="android:inputType">numberDecimal</item>
     </style>
 
-    <!-- Irfan RadioGroup  -->
-    <style name="i_radiogroup">
+
+    <style name="vradiogroup">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="hradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
     </style>
 
     <!-- Irfan RadioButton  -->

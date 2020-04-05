@@ -100,7 +100,8 @@
     <string name="hh21"> گھرانے کے سوالنامے کا جواب دہندہ کون ہے؟</string>
     <string name="hh21a">  گھر کا سر براہ</string>
     <string name="hh21b"> گھر کا کوئی اور فرد</string>
-    <string name="hh22">افراد کی تعداد         اس گھرانے میں کتنے افراد رہتے ہیں؟        </string>
+    <string name="hh22"> اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh22a"> افراد کی تعداد </string>
 
     <string name="hl01"> لائن نمبر</string>
     <string name="hl02">گھر کے دیگر  افراد کے بارے میں پوچھیں برا ئےمہربانی پہلے مجھے ان تمام افراد کانام بتائیں جو عام طور پر یہاں رہتے ہیں، خاندان کے سربراہ سے شروع کریں</string>
@@ -476,4 +477,5 @@
     <string name="rm">Reporting Month</string>
     <string name="name">نام</string>
     <string name="code">کوڈ</string>
+    <string name="year">سال</string>
 </resources>
