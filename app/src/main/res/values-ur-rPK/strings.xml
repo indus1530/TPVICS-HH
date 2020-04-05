@@ -19,10 +19,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="nextSection">Next Section</string>
-    <string name="end_interview">End Interview</string>
-    <string name="endForm">End Form</string>
-    <string name="num">Number</string>
+    <string name="nextSection"> Next Section </string>
+    <string name="end_interview"> End Interview </string>
+    <string name="endForm"> End Form </string>
+    <string name="num"> Number </string>
 
     <string name="default_p">#</string>
     <string name="default_guest_name">Name</string>
@@ -68,19 +68,23 @@
     <string name="hh06">شہر/گاؤں</string>
     <string name="hh07">کلسٹر نمبر</string>
     <string name="hh08">گھرانہ نمبر </string>
-    <string name="hh09">انٹرویو لینے والے کا نام اور کوڈ نمبر </string>
-    <string name="hh10">سُپروائزر کا نام اور کوڈنمبر </string>
-    <string name="hh11">انٹرویو کی تاریخ  </string>
-    <string name="hh12">نٹرویو کا وقت</string>
-    <string name="hh13">جواب دہندہ کانام</string>
-    <string name="hh14">جواب دہندہ کا لائن نمبر</string>
-    <string name="hh15">جواب دہندہ کی عمر مکمل سالوں میں</string>
-    <string name="hh16">کیا جوابدہندہ گھر کا سربراہ ہے</string>
-    <string name="hh16a">ہاں</string>
-    <string name="hh16b">نہیں</string>
-    <string name="hh17">گھرکےسربراہ کا نام اور فون  نمبر</string>
-    <string name="hh17a">نام </string>
-    <string name="hh17b">فون  نمبر</string>
+    <string name="hh09a"> انٹرویو لینے والے کا نام </string>
+    <string name="hh09b"> انٹرویو لینے والے کا کوڈ نمبر </string>
+    <string name="hh10a"> سُپروائزر کا نام </string>
+    <string name="hh10b"> سُپروائزر کا کوڈ نمبر </string>
+    <string name="hh11"> انٹرویو کی تاریخ  </string>
+    <string name="hh12"> انٹرویو کا وقت </string>
+    <string name="hh13"> جواب دہندہ کا نام </string>
+    <string name="hh14"> جواب دہندہ کا لائن نمبر </string>
+    <string name="hh15"> جواب دہندہ کی عمر مکمل سالوں میں </string>
+
+    <string name="hh16"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
+    <string name="hh16a"> ہاں </string>
+    <string name="hh16b"> نہیں </string>
+
+    <string name="hh17a"> گھر کے سربراہ کا نام </string>
+    <string name="hh17b"> گھر کے سربراہ کا فون نمبر</string>
+
     <string name="hh18">گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
     <string name="hh18a">نام</string>
     <string name="hh18b">فون  نمبر</string>
@@ -475,4 +479,7 @@
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
     <string name="rm">Reporting Month</string>
+    <string name="name">نام</string>
+    <string name="code">کوڈ</string>
+    <string name="year">سال</string>
 </resources>

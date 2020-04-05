@@ -67,8 +67,13 @@
     <string name="hh06">City/Village:</string>
     <string name="hh07">Cluster number: </string>
     <string name="hh08">Household number: </string>
-    <string name="hh09">Interviewer’s name &amp; code:</string>
-    <string name="hh10">Supervisor’s name and code #</string>
+
+    <string name="hh09a"> Interviewer’s Name: </string>
+    <string name="hh09b"> Interviewer’s Code: </string>
+
+    <string name="hh10a"> Supervisor’s Name: </string>
+    <string name="hh10b"> Supervisor’s Code: </string>
+
     <string name="hh11">Date of interview:</string>
     <string name="hh12">Time of interview: </string>
     <string name="hh13">Name of the Respondent</string>
@@ -77,9 +82,10 @@
     <string name="hh16">Is respondent Head of Household?</string>
     <string name="hh16a">Yes</string>
     <string name="hh16b">No</string>
-    <string name="hh17">Name and contact number of the head of Household: </string>
-    <string name="hh17a">Name</string>
-    <string name="hh17b">Contact No </string>
+
+    <string name="hh17a"> Name of the head of Household: </string>
+    <string name="hh17b"> Contact # of the head of Household: </string>
+
     <string name="hh18">Name and contact number of the respondent to head of the HH questionnaire (if head is not respondent):  </string>
     <string name="hh18a">Name</string>
     <string name="hh18b">Contact No </string>
