@@ -484,6 +484,7 @@
                         <TextView
                             style="@style/i_textview"
                             android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1.9"
                             android:text="@string/hh16" />
 

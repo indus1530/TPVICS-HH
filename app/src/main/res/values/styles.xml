@@ -54,7 +54,7 @@
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textSize">25px</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/white</item>
         <item name="android:typeface">normal</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
