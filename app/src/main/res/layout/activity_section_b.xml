@@ -567,15 +567,14 @@
 
                     <EditText
                         android:id="@+id/hl13"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="70"
-                        android:textColor="@android:color/black" />
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
+                        android:maxLength="2" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl14  EN   -->
             <androidx.cardview.widget.CardView
@@ -590,17 +589,17 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hl14"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hl14"
-                        android:inputType="number"
-                        app:mask="##"
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
+                        android:maxLength="2"
                         app:maxValue="11"
-                        app:minValue="11"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl15  T   -->
             <androidx.cardview.widget.CardView
@@ -615,15 +614,11 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hl15a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hl15a"
-                        android:inputType="number"
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
                         android:maxLength="2"
-                        app:mask="##"
                         app:maxValue="10"
-                        app:minValue="0"
+                        app:minValue="1"
                         app:type="range" />
 
                     <TextView
@@ -632,18 +627,17 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hl15b"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hl15b"
-                        android:inputType="number"
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
                         android:maxLength="2"
-                        app:mask="##"
                         app:maxValue="10"
-                        app:minValue="0"
+                        app:minValue="1"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl16  T   -->
             <androidx.cardview.widget.CardView
@@ -658,13 +652,9 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hl16a"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditTextNum"
                         android:hint="@string/hl16a"
-                        android:inputType="number"
                         android:maxLength="2"
-                        app:mask="##"
                         app:maxValue="10"
                         app:minValue="0"
                         app:type="range" />
@@ -675,26 +665,23 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hl16b"
-                        style="@style/EditTextAlphaNumeric"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        style="@style/EditTextNum"
                         android:hint="@string/hl16b"
-                        android:inputType="number"
                         android:maxLength="2"
-                        app:mask="##"
                         app:maxValue="10"
                         app:minValue="0"
                         app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
 
+            <!--  ENDBUTTON LinearLayout   -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/hlinearlayout"
                 android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="20dp">
 
                 <Button
                     android:id="@+id/btn_End"
@@ -708,8 +695,12 @@
                     style="@style/button"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Continue" />
-                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
             </LinearLayout>
+
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>
