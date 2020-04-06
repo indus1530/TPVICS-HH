@@ -477,6 +477,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- hl10  T   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhl10"
@@ -503,8 +504,11 @@
                             android:text="@string/hl10b" />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl11  E   -->
             <androidx.cardview.widget.CardView
@@ -519,13 +523,14 @@
 
                     <EditText
                         android:id="@+id/hl11"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="70"
-                        android:textColor="@android:color/black" />
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
+                        android:maxLength="2" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl12  E   -->
             <androidx.cardview.widget.CardView
@@ -540,13 +545,14 @@
 
                     <EditText
                         android:id="@+id/hl12"
-                        style="@style/textInputName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="70"
-                        android:textColor="@android:color/black" />
+                        style="@style/EditTextNum"
+                        android:hint="@string/num"
+                        android:maxLength="2" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
 
             <!-- hl13  E   -->
             <androidx.cardview.widget.CardView
@@ -566,7 +572,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="70"
                         android:textColor="@android:color/black" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- hl14  EN   -->

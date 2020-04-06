@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TPVICS - HH</string>
+    <string name="app_name"> TPVICS - HH </string>
     <string name="module_one"> MNCH </string>
     <string name="routinetwo"> Key Quality Indicator Tool for Health Facility </string>
     <string name="routineone"> DHIS Data-Validation Tools for Decision Making </string>
@@ -35,12 +35,14 @@
     <string name="hf_uen_private">Private Facility Name</string>
     <string name="hfname"> Facility Name </string>
     <string name="hf_consent">Is Consent form Signed</string>
-    <string name="check">Check</string>
+    <string name="check"> Check </string>
     <string name="yes"> ہاں </string>
     <string name="no"> نہیں </string>
     <string name="dnt"> معلوم نہیں </string>
-    <string name="nap">Not Applicable</string>
-    <string name="msing">Missing</string>
+    <string name="other"> دیگر </string>
+    <string name="specify"> وضاحت کریں </string>
+    <string name="nap"> Not Applicable </string>
+    <string name="msing"> Missing </string>
     <string name="na">Not Available</string>
     <string name="istatus">Interview Results</string>
     <string name="istatusa">Complete</string>
@@ -173,30 +175,30 @@
     <string name="hl10">(نام) کیا اس وقت موجود ہے</string>
     <string name="hl10a"> ہاں </string>
     <string name="hl10b">نہیں</string>
-    <string name="hl11">سے23ماہ کے بچوں کا بچوں کا لائن نمبر لکھیں11 </string>
-    <string name="hl12">والدکا لائن نمبر(صرف 11سے23ماہ کے بچوں کے لئے)</string>
-    <string name="hl13">والدہ کا لائن نمبر(صرف 11سے23ماہ کے بچوں کے لئے)</string>
-    <string name="hl14">   گھر کے سربراہ کا فون نمبر </string>
-    <string name="hl15">گیارہ سے تییس مہینے کی عمرکے بچوں کی تعداد    </string>
-    <string name="hl15a">لڑکے</string>
-    <string name="hl15b">لڑکیاں</string>
-    <string name="hl16"> کل افراد کی تعداد (بشمول بچے)        </string>
-    <string name="hl16a">مرد</string>
-    <string name="hl16b"> خواتین</string>
+    <string name="hl11"> سے 23 ماہ کے بچوں کا بچوں کا لائن نمبر لکھیں 11 </string>
+    <string name="hl12"> والد کا لائن نمبر(صرف 11 سے 23 ماہ کے بچوں کے لئے)</string>
+    <string name="hl13"> والدہ کا لائن نمبر(صرف 11 سے 23 ماہ کے بچوں کے لئے)</string>
+    <string name="hl14"> گھر کے سربراہ کا فون نمبر </string>
+    <string name="hl15"> گیارہ سے تییس مہینے کی عمر کے بچوں کی تعداد </string>
+    <string name="hl15a"> لڑکے </string>
+    <string name="hl15b"> لڑکیاں </string>
+    <string name="hl16"> کل افراد کی تعداد (بشمول بچے) </string>
+    <string name="hl16a"> مرد </string>
+    <string name="hl16b"> خواتین </string>
 
-    <string name="hs01">گھرانےکے سربراہ کی مادری زبان کیا ہے ؟</string>
-    <string name="hs01a">اردو</string>
-    <string name="hs01b">پنجابی</string>
-    <string name="hs01c">سند ھی</string>
-    <string name="hs01d">پشتو</string>
-    <string name="hs01e">بلوچی</string>
-    <string name="hs01f">سرائیکی</string>
-    <string name="hs01g">ھند کو</string>
-    <string name="hs01h">دیگر وضاحت کریں</string>
-    <string name="hs02">آپ کے گھرکی مالکانہ حیثیت کیا ہے ؟</string>
-    <string name="hs02a">اپنا</string>
-    <string name="hs02b">کرائے کا</string>
-    <string name="hs02x">دیگر وضاحت کریں</string>
+    <string name="hs01"> گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
+    <string name="hs01a"> اردو </string>
+    <string name="hs01b"> پنجابی </string>
+    <string name="hs01c"> سندھی </string>
+    <string name="hs01d"> پشتو </string>
+    <string name="hs01e"> بلوچی </string>
+    <string name="hs01f"> سرائیکی </string>
+    <string name="hs01g"> ھند کو </string>
+    <string name="hs01h"> دیگر وضاحت کریں </string>
+    <string name="hs02"> آپ کے گھرکی مالکانہ حیثیت کیا ہے ؟ </string>
+    <string name="hs02a"> اپنا </string>
+    <string name="hs02b"> کرائے کا </string>
+    <string name="hs02x"> دیگر وضاحت کریں </string>
     <string name="hs03">آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
     <string name="hs03a"> گھر میں نلکا</string>
     <string name="hs03b">صحن میں نلکا</string>
@@ -475,7 +477,6 @@
     <string name="hs27">Record The Time</string>
     <string name="hs27_title">جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12-23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
 
-    <string name="other">دیگر وضاحت کریں  </string>
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
     <string name="rm">Reporting Month</string>

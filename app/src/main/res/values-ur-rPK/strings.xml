@@ -39,6 +39,8 @@
     <string name="yes"> ہاں </string>
     <string name="no"> نہیں </string>
     <string name="dnt"> معلوم نہیں </string>
+    <string name="other"> دیگر </string>
+    <string name="specify"> وضاحت کریں </string>
     <string name="nap">Not Applicable</string>
     <string name="msing">Missing</string>
     <string name="na">Not Available</string>
@@ -475,7 +477,6 @@
     <string name="hs27">Record The Time</string>
     <string name="hs27_title">جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12-23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
 
-    <string name="other">دیگر وضاحت کریں  </string>
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
     <string name="rm">Reporting Month</string>

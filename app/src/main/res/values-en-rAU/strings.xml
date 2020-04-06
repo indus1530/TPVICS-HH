@@ -38,6 +38,8 @@
     <string name="yes"> Yes </string>
     <string name="no"> No </string>
     <string name="dnt"> Don\'t Know </string>
+    <string name="other"> Other </string>
+    <string name="specify"> Specify </string>
     <string name="nap">Not Applicable</string>
     <string name="msing">Missing</string>
     <string name="na">Not Available</string>
@@ -481,6 +483,5 @@
     <string name="inr">If No (Reasons)</string>
     <string name="hftype">Health Facility Type ?</string>
     <string name="rm">Reporting Month</string>
-    <string name="other">Don\'t Know (Spacify) </string>
 
 </resources>
