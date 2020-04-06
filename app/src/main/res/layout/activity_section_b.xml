@@ -189,21 +189,27 @@
 
                     <RadioGroup
                         android:id="@+id/hl04"
-                        style="@style/vradiogroup">
+                        style="@style/hradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl04a"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/hl04a" />
 
                         <RadioButton
                             android:id="@+id/hl04b"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/hl04b" />
 
                         <RadioButton
                             android:id="@+id/hl04c"
                             style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:text="@string/hl04c" />
 
                     </RadioGroup>
@@ -462,12 +468,12 @@
                         <RadioButton
                             android:id="@+id/hl0996"
                             style="@style/radiobutton"
-                            android:text="@string/hl09x" />
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/hl0996x"
                             style="@style/EditTextAlpha"
-                            android:hint="@string/hl09x"
+                            android:hint="@string/specify"
                             android:text='@{hl0996.checked? hl0996x.getText().toString() : ""}'
                             android:visibility='@{hl0996.checked? View.VISIBLE : View.GONE}' />
 
@@ -491,17 +497,21 @@
 
                     <RadioGroup
                         android:id="@+id/hl10"
-                        style="@style/vradiogroup">
+                        style="@style/hradiogroup">
 
                         <RadioButton
                             android:id="@+id/hl10a"
                             style="@style/radiobutton"
-                            android:text="@string/hl10a" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/hl10b"
                             style="@style/radiobutton"
-                            android:text="@string/hl10b" />
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
 
                     </RadioGroup>
 
