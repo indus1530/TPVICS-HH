@@ -259,7 +259,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:enabled='@{hl0698.checked? false : true}'
-                            android:hint="@string/hl06"
+                            android:hint="@string/num"
                             android:maxLength="2"
                             android:text='@{hl0698.checked? "" : hl06.getText().toString() }'
                             app:maxValue="31"
