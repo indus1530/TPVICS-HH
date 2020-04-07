@@ -39,7 +39,7 @@
 
         <activity
             android:name="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity"
-            android:label="@string/taheading"
+            android:label="@string/hh01"
             android:screenOrientation="portrait" />
 
         <activity

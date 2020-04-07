@@ -48,7 +48,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
     }
 
     private void setUIComponent() {
-        bi.a101.addTextChangedListener(new TextWatcher() {
+        bi.hh02.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -57,7 +57,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (bi.a101.getText().hashCode() == s.hashCode()) {
+                if (bi.hh02.getText().hashCode() == s.hashCode()) {
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
                     Clear.clearAllFields(bi.fldGrpSectionA01);
@@ -71,7 +71,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             }
         });
 
-        bi.a112.addTextChangedListener(new TextWatcher() {
+        bi.hh07.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -80,7 +80,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (Objects.requireNonNull(bi.a112.getText()).hashCode() == s.hashCode()) {
+                if (Objects.requireNonNull(bi.hh07.getText()).hashCode() == s.hashCode()) {
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
                     Clear.clearAllFields(bi.fldGrpSectionA02);
                 }
@@ -129,8 +129,8 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-        MainApp.fc.setClusterCode(bi.a101.getText().toString());
-        MainApp.fc.setHhno(bi.a112.getText().toString());
+        MainApp.fc.setClusterCode(bi.hh07.getText().toString());
+        MainApp.fc.setHhno(bi.hh08.getText().toString());
         MainApp.fc.setLuid(bl.getLUID());
         MainApp.setGPS(this); // Set GPS
 
@@ -148,17 +148,52 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
         json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
-        json.put("a104", bi.a104.getText().toString());
-        json.put("a105", bi.a105.getText().toString());
-        json.put("a106", bi.a106.getText().toString());
-        json.put("a107", bi.a107.getText().toString());
-        json.put("a109", bi.a109.getText().toString());
-        json.put("a110", bi.a110.getText().toString());
-        json.put("a111", bi.a111.getText().toString());
 
-        json.put("c101a", bi.c101aa.isChecked() ? "1"
-                : bi.c101ab.isChecked() ? "2"
-                : "0");
+        json.put("hh02", bi.hh02.getText().toString());
+        json.put("hh03", bi.hh03.getText().toString());
+        json.put("hh04", bi.hh04.getText().toString());
+        json.put("hh05", bi.hh05.getText().toString());
+        json.put("hh06", bi.hh06.getText().toString());
+        json.put("hh07", bi.hh07.getText().toString());
+        json.put("hh08", bi.hh08.getText().toString());
+        /*json.put("hh09", bi.hh09.getText().toString());
+        json.put("hh09a", bi.hh09a.getText().toString());
+        json.put("hh10", bi.hh10.getText().toString());
+        json.put("hh10a", bi.hh10a.getText().toString());
+        json.put("hh11", bi.hh11.getText().toString());
+        json.put("hh12", bi.hh12.getText().toString());
+        json.put("hh13", bi.hh13.getText().toString());
+        json.put("hh13a", bi.hh13a.getText().toString());
+        json.put("hh14", bi.hh14.getText().toString());
+        json.put("hh15",
+                bi.hh15a.isChecked() ?"1" :
+                        bi.hh15b.isChecked() ?"2" :
+                                "0");
+        json.put("hh16a", bi.hh16a.getText().toString());
+        json.put("hh16b", bi.hh16b.getText().toString());
+        json.put("hh17a", bi.hh17a.getText().toString());
+        json.put("hh17b", bi.hh17b.getText().toString());
+        json.put("hh18",
+                bi.hh18a.isChecked() ?"1" :
+                        bi.hh18b.isChecked() ?"2" :
+                                "0");
+        json.put("hh19", bi.hh19.getText().toString());
+        json.put("hh20",
+                bi.hh20_1.isChecked() ?"1" :
+                        bi.hh20_2.isChecked() ?"2" :
+                                "0");
+        json.put("hh21",
+                bi.hh21a.isChecked() ?"1" :
+                        bi.hh21b.isChecked() ?"2" :
+                                bi.hh21c.isChecked() ?"3" :
+                                        bi.hh21d.isChecked() ?"4" :
+                                                bi.hh21e.isChecked() ?"5" :
+                                                        bi.hh21f.isChecked() ?"6" :
+                                                                bi.hh21x.isChecked() ?"96" :
+                                                                        "0");
+        json.put("hh21xx", bi.hh21xx.getText().toString());
+        json.put("hh20a", bi.hh20a.getText().toString());*/
+
 
         MainApp.fc.setsInfo(String.valueOf(json));
 
@@ -176,13 +211,13 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
     public void BtnCheckCluster() {
 
-        if (!Validator.emptyTextBox(this, bi.a101)) return;
+        if (!Validator.emptyTextBox(this, bi.hh02)) return;
         boolean loginFlag;
-        if (bi.a101.getText().toString().length() != 6) {
+        if (bi.hh02.getText().toString().length() != 6) {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
-        int cluster = Integer.parseInt(bi.a101.getText().toString().substring(3, 6));
+        int cluster = Integer.parseInt(bi.hh02.getText().toString().substring(3, 6));
         if (cluster < 500) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {
@@ -193,7 +228,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             return;
         }
 
-        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.a101.getText().toString());
+        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.hh02.getText().toString());
         if (enumBlockContract != null) {
             String selected = enumBlockContract.getGeoarea();
             if (!selected.equals("")) {
@@ -201,10 +236,10 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
                 String[] selSplit = selected.split("\\|");
 
                 bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
-                bi.a104.setText(selSplit[0]);
-                bi.a105.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
-                bi.a106.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
-                bi.a107.setText(selSplit[3]);
+                bi.hh03.setText(selSplit[0]);
+                bi.hh04.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
+                bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
+                bi.hh06.setText(selSplit[3]);
 
             }
         } else {
@@ -214,9 +249,9 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
     }
 
     public void BtnCheckHH() {
-        if (!Validator.emptyTextBox(this, bi.a112)) return;
+        if (!Validator.emptyTextBox(this, bi.hh07)) return;
 
-        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.a101.getText().toString(), bi.a112.getText().toString().toUpperCase());
+        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh02.getText().toString(), bi.hh07.getText().toString().toUpperCase());
 
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();

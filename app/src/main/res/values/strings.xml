@@ -2509,14 +2509,14 @@
 
 
     <!--TPVICS STRINGS-->
-    <string name="hh01"> hh01: جغرافیائی علاقہ </string>
-    <string name="hh02"> hh02: اینومیریشن بلاک نمبر </string>
-    <string name="hh03"> hh03: صوبہ  </string>
-    <string name="hh04"> hh04: ضلع</string>
-    <string name="hh05"> hh05: تحصیل /  تعلق</string>
-    <string name="hh06"> hh06: شہر/گاؤں</string>
-    <string name="hh07"> hh07: کلسٹر</string>
-    <string name="hh08"> hh08: گھرانہ نمبر </string>
+    <string name="hh01"> جغرافیائی علاقہ </string>
+    <string name="hh02"> اینومیریشن بلاک نمبر </string>
+    <string name="hh03"> صوبہ </string>
+    <string name="hh04"> ضلع </string>
+    <string name="hh05"> تحصیل </string>
+    <string name="hh06"> شہر / گاؤں </string>
+    <string name="hh07"> کلسٹر </string>
+    <string name="hh08"> گھرانہ نمبر </string>
     <string name="hh09"> hh09: انٹرویو لینے والے کا نام </string>
     <string name="hh09a"> hh09a: انٹرویو لینے والے کا کوڈ</string>
     <string name="hh10"> hh10: سُپروائزر کا نام </string>
