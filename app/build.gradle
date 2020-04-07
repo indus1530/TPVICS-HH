@@ -22,7 +22,7 @@ android {
         versionProps.store(versionPropsFile.newWriter(), null)
 
         defaultConfig {
-            applicationId "edu.aku.hassannaqvi.TPVICS_HH"
+            applicationId "edu.aku.hassannaqvi.tpvics_hh"
             minSdkVersion 21
             targetSdkVersion 29
             versionCode code

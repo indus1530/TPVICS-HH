@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.TPVICS_HH.ui.other.MainActivity" />
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.other.MainActivity" />
     </data>
 
     <LinearLayout

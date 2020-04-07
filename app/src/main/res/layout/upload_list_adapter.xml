@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.TPVICS_HH.adapter.UploadListAdapter" />
+            type="edu.aku.hassannaqvi.tpvics_hh.adapter.UploadListAdapter" />
     </data>
 
     <androidx.cardview.widget.CardView
