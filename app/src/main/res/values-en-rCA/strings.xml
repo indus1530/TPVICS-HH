@@ -63,6 +63,7 @@
     <string name="rupees"> Rupees </string>
     <string name="num"> Number </string>
     <string name="name"> Name </string>
+    <string name="contactnum"> Contact Number </string>
 
     <string name="total"> Total </string>
     <string name="mwra"> MWRA </string>
@@ -2485,8 +2486,8 @@
     <string name="hh10a"> hh10a: Supervisor\'s Code</string>
     <string name="hh11"> hh11: Date of interview:</string>
     <string name="hh12"> hh12: Time of interview: </string>
-    <string name="hh13"> hh13: Name of the Respondent</string>
-    <string name="hh13a"> hh13a: Respondent\'s Contact Number</string>
+    <string name="hh13a"> hh13A: Name of the Respondent</string>
+    <string name="hh13b"> hh13B: Respondent\'s Contact Number </string>
     <string name="hh14"> hh14: Age of Respondent in completed   years      </string>
     <string name="hh15"> hh15: Is respondent Head of Household?</string>
     <string name="hh16"> hh16: Name and contact number of the head of Household: </string>

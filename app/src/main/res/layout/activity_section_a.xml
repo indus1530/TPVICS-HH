@@ -374,7 +374,8 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- a109  Input   -->
+
+                <!-- hh13a  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa109"
                     style="@style/cardView">
@@ -389,10 +390,10 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/a109" />
+                            android:text="@string/hh13a" />
 
                         <EditText
-                            android:id="@+id/a109"
+                            android:id="@+id/hh13a"
                             style="@style/EditTextAlphaNmeric"
                             android:layout_width="0dp"
                             android:layout_weight="1"
@@ -402,7 +403,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- a110  Input   -->
+                <!-- hh13b  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa110"
                     style="@style/cardView">
@@ -415,22 +416,21 @@
                         <TextView
                             style="@style/i_textview"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/a110" />
+                            android:text="@string/hh13b" />
 
                         <EditText
-                            android:id="@+id/a110"
+                            android:id="@+id/hh13b"
                             style="@style/EditTextAlphaNmeric"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/a110" />
+                            android:hint="@string/contactnum" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- a111  Input   -->
+                <!-- hh14  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa111"
                     style="@style/cardView">
@@ -443,16 +443,15 @@
                         <TextView
                             style="@style/i_textview"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/a111" />
+                            android:text="@string/hh14" />
 
                         <EditText
-                            android:id="@+id/a111"
+                            android:id="@+id/hh14"
                             style="@style/EditTextAlphaNmeric"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/a111" />
+                            android:hint="@string/year" />
 
                     </LinearLayout>
 

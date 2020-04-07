@@ -62,6 +62,7 @@
     <string name="rupees"> روپے </string>
     <string name="num"> اعداد </string>
     <string name="name"> نام </string>
+    <string name="contactnum"> رابطہ نمبر </string>
 
     <string name="total"> Total </string>
     <string name="mwra"> MWRA </string>
@@ -2523,8 +2524,8 @@
     <string name="hh10a"> hh10a: سُپروائزر کا  کوڈ</string>
     <string name="hh11"> hh11: انٹرویو کی تاریخ  </string>
     <string name="hh12"> hh12: نٹرویو کا وقت</string>
-    <string name="hh13"> hh13: جواب دہندہ کانام</string>
-    <string name="hh13a"> hh13a: جواب دہندگان کا رابطہ نمبر</string>
+    <string name="hh13a"> hh13A: جواب دہندہ کانام </string>
+    <string name="hh13b"> hh13B: جواب دہندگان کا رابطہ نمبر </string>
     <string name="hh14"> hh14: جواب دہندہ کی عمر مکمل سالوں میں</string>
     <string name="hh15"> hh15: کیا جوابدہندہ گھر کا سربراہ ہے</string>
     <string name="hh16"> hh16: گھرکےسربراہ کا نام اور فون  نمبر</string>

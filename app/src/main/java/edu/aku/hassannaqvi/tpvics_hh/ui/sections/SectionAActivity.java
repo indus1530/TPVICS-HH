@@ -156,43 +156,41 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         json.put("hh06", bi.hh06.getText().toString());
         json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());
-        /*json.put("hh09", bi.hh09.getText().toString());
-        json.put("hh09a", bi.hh09a.getText().toString());
-        json.put("hh10", bi.hh10.getText().toString());
-        json.put("hh10a", bi.hh10a.getText().toString());
-        json.put("hh11", bi.hh11.getText().toString());
-        json.put("hh12", bi.hh12.getText().toString());
-        json.put("hh13", bi.hh13.getText().toString());
+        json.put("hh09", MainApp.userName);
+        //json.put("hh10", bi.hh10.getText().toString());
+        json.put("hh11", new SimpleDateFormat("dd-MM-yy").format(new Date().getTime()));
+        json.put("hh12", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
         json.put("hh13a", bi.hh13a.getText().toString());
+        json.put("hh13b", bi.hh13b.getText().toString());
         json.put("hh14", bi.hh14.getText().toString());
-        json.put("hh15",
-                bi.hh15a.isChecked() ?"1" :
-                        bi.hh15b.isChecked() ?"2" :
-                                "0");
-        json.put("hh16a", bi.hh16a.getText().toString());
-        json.put("hh16b", bi.hh16b.getText().toString());
-        json.put("hh17a", bi.hh17a.getText().toString());
-        json.put("hh17b", bi.hh17b.getText().toString());
-        json.put("hh18",
-                bi.hh18a.isChecked() ?"1" :
-                        bi.hh18b.isChecked() ?"2" :
-                                "0");
-        json.put("hh19", bi.hh19.getText().toString());
-        json.put("hh20",
-                bi.hh20_1.isChecked() ?"1" :
-                        bi.hh20_2.isChecked() ?"2" :
-                                "0");
-        json.put("hh21",
-                bi.hh21a.isChecked() ?"1" :
-                        bi.hh21b.isChecked() ?"2" :
-                                bi.hh21c.isChecked() ?"3" :
-                                        bi.hh21d.isChecked() ?"4" :
-                                                bi.hh21e.isChecked() ?"5" :
-                                                        bi.hh21f.isChecked() ?"6" :
-                                                                bi.hh21x.isChecked() ?"96" :
-                                                                        "0");
-        json.put("hh21xx", bi.hh21xx.getText().toString());
-        json.put("hh20a", bi.hh20a.getText().toString());*/
+//        json.put("hh15",
+//                bi.hh15a.isChecked() ?"1" :
+//                        bi.hh15b.isChecked() ?"2" :
+//                                "0");
+//        json.put("hh16a", bi.hh16a.getText().toString());
+//        json.put("hh16b", bi.hh16b.getText().toString());
+//        json.put("hh17a", bi.hh17a.getText().toString());
+//        json.put("hh17b", bi.hh17b.getText().toString());
+//        json.put("hh18",
+//                bi.hh18a.isChecked() ?"1" :
+//                        bi.hh18b.isChecked() ?"2" :
+//                                "0");
+//        json.put("hh19", bi.hh19.getText().toString());
+//        json.put("hh20",
+//                bi.hh20_1.isChecked() ?"1" :
+//                        bi.hh20_2.isChecked() ?"2" :
+//                                "0");
+//        json.put("hh21",
+//                bi.hh21a.isChecked() ?"1" :
+//                        bi.hh21b.isChecked() ?"2" :
+//                                bi.hh21c.isChecked() ?"3" :
+//                                        bi.hh21d.isChecked() ?"4" :
+//                                                bi.hh21e.isChecked() ?"5" :
+//                                                        bi.hh21f.isChecked() ?"6" :
+//                                                                bi.hh21x.isChecked() ?"96" :
+//                                                                        "0");
+//        json.put("hh21xx", bi.hh21xx.getText().toString());
+//        json.put("hh20a", bi.hh20a.getText().toString());
 
 
         MainApp.fc.setsInfo(String.valueOf(json));
