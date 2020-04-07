@@ -35,6 +35,9 @@
     Centre of Excellence Women &amp; Child Health\n
     Aga Khan University, Karachi, Pakistan</string>
 
+    <string name="splashText1"> Coverage Evaluation Survey, Pakistan, 2020 </string>
+    <string name="splashText2"> HOUSEHOLD QUESTIONNAIRE </string>
+
     <string name="title_activity_family_members_list"> Family Members List </string>
 
     <string name="sM"> یو سی </string>
@@ -2510,6 +2513,7 @@
 
 
     <!--TPVICS STRINGS-->
+    <string name="hhsec"> Section H1: HouseHold Information </string>
     <string name="hh01"> جغرافیائی علاقہ </string>
     <string name="hh02"> اینومیریشن بلاک نمبر </string>
     <string name="hh03"> صوبہ </string>
@@ -2637,7 +2641,7 @@
     <string name="ss06n_title"> PACKAGED WATER</string>
     <string name="ss06n"> بوتل کا پانی</string>
     <string name="ss06x"> (وضاحت کریں)دیگر </string>
-    <string name="ss07"> SS07: آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
+    <string name="ss07"> SS07: آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
     <string name="ss07a_title"> فلش یا انڈیل کر پانی ڈالنے والا</string>
     <string name="ss07a"> فلش   سیوریج کے نظام سے منسلک  </string>
     <string name="ss07b"> فلش سپٹک ٹینک سے منسلک  </string>
