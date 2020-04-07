@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                         editorDownload.commit();
 
                         Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
-                        bi.lblAppVersion.setText(new StringBuilder("UEN-ML App New Version ").append(newVer).append("  Downloaded"));
+                        bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " App New Version ").append(newVer).append("  Downloaded"));
 
                         ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
                         List<ActivityManager.RunningTaskInfo> taskInfo = am.getRunningTasks(1);
@@ -350,18 +350,18 @@ public class MainActivity extends AppCompatActivity {
                 file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
 
                 if (file.exists()) {
-                    bi.lblAppVersion.setText(new StringBuilder("UEN-ML App New Version ").append(newVer).append("  Downloaded"));
+                    bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " New Version ").append(newVer).append("  Downloaded"));
                     showDialog(newVer, preVer);
                 } else {
                     NetworkInfo networkInfo = ((ConnectivityManager) Objects.requireNonNull(getSystemService(Context.CONNECTIVITY_SERVICE))).getActiveNetworkInfo();
                     if (networkInfo != null && networkInfo.isConnected()) {
-                        bi.lblAppVersion.setText(new StringBuilder("UEN-ML App New Version ").append(newVer).append("  Downloading.."));
+                        bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " App New Version ").append(newVer).append("  Downloading.."));
                         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                         Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
                         DownloadManager.Request request = new DownloadManager.Request(uri);
                         request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
                                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                .setTitle("Downloading UEN-ML App new App ver." + newVer);
+                                .setTitle("Downloading " + R.string.app_name + " App new App ver." + newVer);
                         refID = downloadManager.enqueue(request);
 
                         editorDownload.putLong("refID", refID);
@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity {
                         editorDownload.apply();
 
                     } else {
-                        bi.lblAppVersion.setText(new StringBuilder("UEN-ML App New Version ").append(newVer).append("  Available..\n(Can't download.. Internet connectivity issue!!)"));
+                        bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " App New Version ").append(newVer).append("  Available..\n(Can't download.. Internet connectivity issue!!)"));
                     }
                 }
 
@@ -413,9 +413,9 @@ public class MainActivity extends AppCompatActivity {
 
             return new AlertDialog.Builder(getActivity())
                     .setIcon(R.drawable.exclamation)
-                    .setTitle("TPVICS-HH APP is available!")
+                    .setTitle(R.string.app_name + " APP is available!")
                     .setCancelable(false)
-                    .setMessage("TPVICS-HH App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
+                    .setMessage(R.string.app_name + " App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
                     .setPositiveButton("INSTALL!!",
                             (dialog, whichButton) -> {
                                 Intent intent = new Intent(Intent.ACTION_VIEW);
