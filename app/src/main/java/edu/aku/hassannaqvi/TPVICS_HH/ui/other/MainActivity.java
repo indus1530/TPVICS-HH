@@ -413,9 +413,9 @@ public class MainActivity extends AppCompatActivity {
 
             return new AlertDialog.Builder(getActivity())
                     .setIcon(R.drawable.exclamation)
-                    .setTitle("UeN Midline 2020 APP is available!")
+                    .setTitle("TPVICS-HH APP is available!")
                     .setCancelable(false)
-                    .setMessage("UeN Midline 2020 App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
+                    .setMessage("TPVICS-HH App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
                     .setPositiveButton("INSTALL!!",
                             (dialog, whichButton) -> {
                                 Intent intent = new Intent(Intent.ACTION_VIEW);

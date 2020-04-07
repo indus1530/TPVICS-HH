@@ -14,9 +14,9 @@ import edu.aku.hassannaqvi.TPVICS_HH.contracts.VersionAppContract;
 
 public final class CreateTable {
 
-    public static final String DATABASE_NAME = "uen_ml20.db";
-    public static final String DB_NAME = "uen_ml20_copy.db";
-    public static final String PROJECT_NAME = "DMU-UENML2020";
+    public static final String DATABASE_NAME = "tpvics_hh.db";
+    public static final String DB_NAME = "tpvics_hh_copy.db";
+    public static final String PROJECT_NAME = "TPVICS_HH";
     public static final int DATABASE_VERSION = 1;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
