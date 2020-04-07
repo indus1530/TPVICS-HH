@@ -14,7 +14,7 @@
 
     <item>
         <bitmap
-            android:gravity="center_vertical|end"
+            android:gravity="center_vertical|start"
             android:src="@drawable/ic_arrow" />
 
     </item>

@@ -9,12 +9,13 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.tpvics_hh.ui.MainActivity" />
+            type="edu.aku.hassannaqvi.TPVICS_HH.ui.other.MainActivity" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/sosas_bg"
         android:orientation="vertical">
         <!-- Login progress -->
 
@@ -31,6 +32,19 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/lightOrange"
+            android:textAlignment="center"
+            android:textColor="@color/darkRed"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
 
         <ScrollView
             android:id="@+id/activity_main"
@@ -117,7 +131,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{()->callback.openForm(1)}"
+                        android:onClick='@{()->callback.OpenFormFunc()}'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -129,72 +143,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:layout_gravity="center_horizontal"
-                                android:text="Section A"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="30sp" />
-                        </RelativeLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{()->callback.openForm(2)}"
-                        app:cardCornerRadius="20dp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_gravity="center_horizontal"
-                                android:text="Section B"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="30sp" />
-                        </RelativeLayout>
-
-
-                    </androidx.cardview.widget.CardView>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="0dp"
-                        android:layout_height="100dp"
-                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{()->callback.openForm(3)}"
-                        app:cardCornerRadius="20dp">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_gravity="center_horizontal"
-                                android:text="Section C"
+                                android:text="Open Form"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                                 android:textColor="@color/colorPrimaryDark"
                                 android:textSize="30sp" />
@@ -306,7 +255,8 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/syncBLRandom"
