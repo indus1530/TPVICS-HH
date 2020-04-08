@@ -2570,23 +2570,23 @@
     <string name="ss02x"> Other (specify) </string>
 
     <string name="ss03"> ss03: What is the main source of drinking water in your household?</string>
-    <string name="ss03a_title"> Municipal Piped Water Connection</string>
+    <string name="ss03h1"> Municipal Piped Water Connection</string>
     <string name="ss03a"> PIPED INTO DWELLING </string>
     <string name="ss03b"> PIPED TO YARD/ PLOT </string>
     <string name="ss03c"> PIPED TO NEIGHBOUR </string>
     <string name="ss03d"> PUBLIC TAP /STANDPIPE </string>
     <string name="ss03e"> TUBE WELL / BOREHOLE</string>
-    <string name="ss03f_title"> DUG WELL</string>
+    <string name="ss03h2"> DUG WELL</string>
     <string name="ss03f"> PROTECTED WELL </string>
     <string name="ss03g"> UNPROTECTED WELL </string>
-    <string name="ss03h_title"> SPRING </string>
+    <string name="ss03h3"> SPRING </string>
     <string name="ss03h"> PROTECTED SPRING </string>
     <string name="ss03i"> UNPROTECTED SPRING</string>
     <string name="ss03j"> RAIN WATER </string>
     <string name="ss03k"> TANKER-TRUCK </string>
     <string name="ss03l"> CART WITH SMALL TANK </string>
     <string name="ss03m"> SURFACE WATER (RIVER, DAM, LAKE, POND, STREAM, CANAL, IRRIGATION CHANNEL)</string>
-    <string name="ss03n_title"> PACKAGED WATER </string>
+    <string name="ss03h4"> PACKAGED WATER </string>
     <string name="ss03n"> BOTTELED WATER </string>
     <string name="ss03x"> Other (specify) </string>
 
@@ -2646,7 +2646,8 @@
     <string name="ss09a"> Yes</string>
     <string name="ss09b"> No</string>
 
-    <string name="ss10"> ss10: If yes, how many other households use this toilet facility?</string>
+    <string name="ss10"> SS10: If yes, how many other households use this toilet facility ? </string>
+    <string name="ss10a"> No. of Households </string>
     <string name="ss11"> ss11: Do you share this facility only with members of other household that you know, or is the facility open to the use of the general public? </string>
     <string name="ss11a"> SHARED WITH KNOWN HOUSEHOLDS (NOT PUBLIC)</string>
     <string name="ss11b"> SHARED WITH GENERAL PUBLIC </string>
