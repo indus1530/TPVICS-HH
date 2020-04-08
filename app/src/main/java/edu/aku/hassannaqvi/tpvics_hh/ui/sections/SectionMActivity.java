@@ -29,13 +29,13 @@ public class SectionMActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_m);
         bi.setCallback(this);
-        setUIComponents();
+        setupSkips();
 
 
     }
 
 
-    private void setUIComponents() {
+    private void setupSkips() {
 
         bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss04b.getId()) {
