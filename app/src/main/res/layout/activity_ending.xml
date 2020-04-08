@@ -25,12 +25,12 @@
             <TextView
                 style="@style/i_textview"
                 android:gravity="center"
-                android:text="@string/hh21" />
+                android:text="@string/hh22" />
 
             <!--Status-->
             <TextView
                 style="@style/i_textviewhint"
-                android:text="@string/hh21h" />
+                android:text="@string/hh22h" />
 
             <RadioGroup
                 android:id="@+id/istatus"
@@ -39,32 +39,32 @@
                 <RadioButton
                     android:id="@+id/istatusa"
                     style="@style/radiobutton"
-                    android:text="@string/hh21a" />
+                    android:text="@string/hh22a" />
 
                 <RadioButton
                     android:id="@+id/istatusb"
                     style="@style/radiobutton"
-                    android:text="@string/hh21b" />
+                    android:text="@string/hh22b" />
 
                 <RadioButton
                     android:id="@+id/istatusc"
                     style="@style/radiobutton"
-                    android:text="@string/hh21c" />
+                    android:text="@string/hh22c" />
 
                 <RadioButton
                     android:id="@+id/istatusd"
                     style="@style/radiobutton"
-                    android:text="@string/hh21d" />
+                    android:text="@string/hh22d" />
 
                 <RadioButton
                     android:id="@+id/istatuse"
                     style="@style/radiobutton"
-                    android:text="@string/hh21e" />
+                    android:text="@string/hh22e" />
 
                 <RadioButton
                     android:id="@+id/istatusf"
                     style="@style/radiobutton"
-                    android:text="@string/hh21f" />
+                    android:text="@string/hh22f" />
 
                 <RadioButton
                     android:id="@+id/istatus96"

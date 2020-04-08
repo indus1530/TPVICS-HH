@@ -2557,17 +2557,18 @@
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 
-    <string name="hh201"> HH201: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh21"> HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
-    <string name="hh21"> HH21: گھرانے کے انٹرویو کا نتیجہ: </string>
-    <string name="hh21h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
-    <string name="hh21a"> مکمل</string>
-    <string name="hh21b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
-    <string name="hh21c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے</string>
-    <string name="hh21d"> انکار کردیا</string>
-    <string name="hh21e"> خالی گھر/غیر رہائشی</string>
-    <string name="hh21f"> گھر نہیں ملا</string>
-    <string name="hh21x"> دیگر وضاحت کریں </string>
+    <string name="hh22"> HH22: گھرانے کے انٹرویو کا نتیجہ: </string>
+    <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
+    <string name="hh22a"> مکمل</string>
+    <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="hh22c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے</string>
+    <string name="hh22d"> انکار کردیا</string>
+    <string name="hh22e"> خالی گھر/غیر رہائشی</string>
+    <string name="hh22f"> گھر نہیں ملا</string>
+    <string name="hh2296"> دیگر </string>
+    <string name="hh2296x"> وضاحت کریں </string>
 
     <string name="ch_title"> ch_title: بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج</string>
     <string name="ch_cluster"> ch_cluster: کلسٹر نمبر</string>

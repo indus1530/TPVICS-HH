@@ -503,7 +503,8 @@
                 <!-- hh16  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvhh16"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility='@{hh15a.checked ? View.VISIBLE : View.GONE }'>
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -525,7 +526,8 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:hint="@string/name"
-                                android:maxLength="30" />
+                                android:maxLength="30"
+                                android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
 
                             <TextView
                                 style="@style/i_textviewhint"
@@ -539,7 +541,8 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="2"
                                 android:hint="@string/contactnum"
-                                android:maxLength="11" />
+                                android:maxLength="11"
+                                android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
 
                         </LinearLayout>
 
@@ -731,7 +734,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/hh201" />
+                            android:text="@string/hh21" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/hh21"

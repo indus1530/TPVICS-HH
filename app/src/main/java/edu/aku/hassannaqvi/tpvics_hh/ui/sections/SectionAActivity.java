@@ -36,17 +36,21 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
     private DatabaseHelper db;
     private BLRandomContract bl;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
-
         setUIComponent();
+
+
     }
 
+
     private void setUIComponent() {
+
         bi.hh02.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -70,6 +74,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             }
         });
 
+
         bi.hh07.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -90,7 +95,28 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
             }
         });
+
+
+        bi.hh18.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.hh18a.getId()) {
+                bi.cvhh19.setVisibility(View.VISIBLE);
+                bi.cvhh20.setVisibility(View.VISIBLE);
+                bi.cvhh21.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bi.cvhh19);
+                Clear.clearAllFields(bi.cvhh20);
+                Clear.clearAllFields(bi.cvhh21);
+                bi.cvhh19.setVisibility(View.GONE);
+                bi.cvhh20.setVisibility(View.GONE);
+                bi.cvhh21.setVisibility(View.GONE);
+            }
+
+        }));
+
+
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
