@@ -2710,11 +2710,12 @@
     <string name="ss11a"> صرف دوسرے گھرانے (عوام الناس نہیں) </string>
     <string name="ss11b"> عوام الناس</string>
 
-    <string name="ss12"> ss12: مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں؟</string>
+    <string name="ss12"> SS12: مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں؟</string>
     <string name="ss12a"> ( گھرانوں کی تعداد(اگر 10 سے کم</string>
     <string name="ss12b">  دس یا اس سے زیادہ گھرانے</string>
     <string name="ss12c"> معلوم نہیں</string>
-    <string name="ss13"> ss13: سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیاکرتے ہیں؟</string>
+
+    <string name="ss13"> SS13: سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیاکرتے ہیں؟</string>
     <string name="ss13a"> بچہ لیٹرین استعمال کرتا ہے</string>
     <string name="ss13b"> پاخانہ لیٹرین سے بہادیتے ہیں </string>
     <string name="ss13c"> پاخانہ نالی /گھڑھے سے بہادیتے ہیں</string>
@@ -2723,101 +2724,131 @@
     <string name="ss13f"> زمین میں دبا دیتے ہیں </string>
     <string name="ss13g"> گھر میں 5 سال سے چھوٹا بچہ نہیں ہے</string>
     <string name="ss13x"> دیگر وضاحت کریں  </string>
-    <string name="ss14"> ss14:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا  آپ کے گھر میں ان میں سے کچھ موجود ہے؟ </string>
-    <string name="ss14a"> ss14a: بجلی</string>
-    <string name="ss14b"> ss14b: ریڈیو</string>
-    <string name="ss14c"> ss14c: ٹیلی وژن</string>
-    <string name="ss14d"> ss14d: ٹیلیفون</string>
-    <string name="ss14e"> ss14e: فریج</string>
-    <string name="ss14f"> ss14f: الماری</string>
-    <string name="ss14g"> ss14g: کرسی</string>
-    <string name="ss14h"> ss14h: روم کولر</string>
-    <string name="ss14i"> ss14i: ائیرکنڈئشن</string>
-    <string name="ss14j"> ss14j: واشنگ مشین</string>
-    <string name="ss14k"> ss14k: پانی کا پمپ</string>
-    <string name="ss14l"> ss14l: پلنگ </string>
-    <string name="ss14m"> ss14m: گھٹری </string>
-    <string name="ss14n"> ss14n: صوفہ</string>
-    <string name="ss14o"> ss14o: کیمرہ </string>
-    <string name="ss14p"> ss14p:  سلائی میشن</string>
-    <string name="ss14q"> ss14q: کمپیوٹر/لیپ ٹاپ</string>
-    <string name="ss14r"> ss14r: انٹرنیٹ کا کنکشن</string>
-    <string name="ss14s"> ss14s: ڈش /کیبل نیٹ ورک</string>
+
+    <string name="ss14"> SS14:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا  آپ کے گھر میں ان میں سے کچھ موجود ہے؟ </string>
+    <string name="ss14a"> بجلی </string>
     <string name="ss14aa"> ہاں </string>
-    <string name="ss14ba"> ہاں </string>
-    <string name="ss14ca"> ہاں </string>
-    <string name="ss14da"> ہاں</string>
-    <string name="ss14ea"> ہاں</string>
-    <string name="ss14fa"> ہاں</string>
-    <string name="ss14ga"> ہاں</string>
-    <string name="ss14ha"> ہاں</string>
-    <string name="ss14ia"> ہاں</string>
-    <string name="ss14ja"> ہاں</string>
-    <string name="ss14ka"> ہاں</string>
-    <string name="ss14la"> ہاں</string>
-    <string name="ss14ma"> ہاں</string>
-    <string name="ss14na"> ہاں</string>
-    <string name="ss14oa"> ہاں</string>
-    <string name="ss14pa"> ہاں</string>
-    <string name="ss14qa"> ہاں</string>
-    <string name="ss14ra"> ہاں</string>
-    <string name="ss14sa"> ہاں</string>
     <string name="ss14ab"> نہیں</string>
+
+    <string name="ss14b"> ریڈیو </string>
+    <string name="ss14ba"> ہاں </string>
     <string name="ss14bb"> نہیں</string>
+
+    <string name="ss14c"> ٹیلی وژن </string>
+    <string name="ss14ca"> ہاں </string>
     <string name="ss14cb"> نہیں</string>
+
+    <string name="ss14d"> ٹیلیفون </string>
+    <string name="ss14da"> ہاں </string>
     <string name="ss14db"> نہیں</string>
+
+    <string name="ss14e"> فریج </string>
+    <string name="ss14ea"> ہاں </string>
     <string name="ss14eb"> نہیں</string>
+
+    <string name="ss14f"> الماری </string>
+    <string name="ss14fa"> ہاں </string>
     <string name="ss14fb"> نہیں</string>
+
+    <string name="ss14g"> کرسی </string>
+    <string name="ss14ga"> ہاں </string>
     <string name="ss14gb"> نہیں</string>
+
+    <string name="ss14h"> روم کولر </string>
+    <string name="ss14ha"> ہاں </string>
     <string name="ss14hb"> نہیں</string>
+
+    <string name="ss14i"> ائیرکنڈئشن </string>
+    <string name="ss14ia"> ہاں </string>
     <string name="ss14ib"> نہیں</string>
+
+    <string name="ss14j"> واشنگ مشین </string>
+    <string name="ss14ja"> ہاں </string>
     <string name="ss14jb"> نہیں</string>
+
+    <string name="ss14k"> پانی کا پمپ </string>
+    <string name="ss14ka"> ہاں </string>
     <string name="ss14kb"> نہیں</string>
+
+    <string name="ss14l"> پلنگ </string>
+    <string name="ss14la"> ہاں </string>
     <string name="ss14lb"> نہیں</string>
+
+    <string name="ss14m"> گھٹری </string>
+    <string name="ss14ma"> ہاں </string>
     <string name="ss14mb"> نہیں</string>
+
+    <string name="ss14n"> صوفہ </string>
+    <string name="ss14na"> ہاں </string>
     <string name="ss14nb"> نہیں</string>
+
+    <string name="ss14o"> کیمرہ </string>
+    <string name="ss14oa"> ہاں </string>
     <string name="ss14ob"> نہیں</string>
+
+    <string name="ss14p">  سلائی میشن </string>
+    <string name="ss14pa"> ہاں </string>
     <string name="ss14pb"> نہیں</string>
+
+    <string name="ss14q"> کمپیوٹر/لیپ ٹاپ </string>
+    <string name="ss14qa"> ہاں </string>
     <string name="ss14qb"> نہیں</string>
+
+    <string name="ss14r"> انٹرنیٹ کا کنکشن </string>
+    <string name="ss14ra"> ہاں </string>
     <string name="ss14rb"> نہیں</string>
+
+    <string name="ss14s"> ڈش / کیبل نیٹ ورک </string>
+    <string name="ss14sa"> ہاں </string>
     <string name="ss14sb"> نہیں</string>
-    <string name="ss15"> ss15:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں؟ </string>
-    <string name="ss15a"> ss15a: گھڑی</string>
-    <string name="ss15b"> ss15b:  موبائل فون </string>
-    <string name="ss15c"> ss15c: سائیکل</string>
-    <string name="ss15d"> ss15d:  موٹر سائیکل/ سکوٹر </string>
-    <string name="ss15e"> ss15e: جانوروں سے چلائی جانے والی گاڑی</string>
-    <string name="ss15f"> ss15f:  گاڑی /ٹرک/ بس</string>
-    <string name="ss15g"> ss15g: ٹریکٹر</string>
-    <string name="ss15h"> ss15h: موٹر کے ساتھ کشتی</string>
-    <string name="ss15i"> ss15i: موٹر کے بغیر کشتی</string>
-    <string name="ss15aa"> ہاں</string>
-    <string name="ss15ba"> ہاں</string>
-    <string name="ss15ca"> ہاں</string>
-    <string name="ss15da"> ہاں</string>
-    <string name="ss15ea"> ہاں</string>
-    <string name="ss15fa"> ہاں</string>
-    <string name="ss15ga"> ہاں</string>
-    <string name="ss15ha"> ہاں</string>
-    <string name="ss15ia"> ہاں</string>
+
+    <string name="ss15"> SS15:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں ؟ </string>
+    <string name="ss15a"> گھڑی </string>
+    <string name="ss15aa"> ہاں </string>
     <string name="ss15ab"> نہیں</string>
+
+    <string name="ss15b">  موبائل فون  </string>
+    <string name="ss15ba"> ہاں </string>
     <string name="ss15bb"> نہیں</string>
+
+    <string name="ss15c"> سائیکل </string>
+    <string name="ss15ca"> ہاں </string>
     <string name="ss15cb"> نہیں</string>
+
+    <string name="ss15d">  موٹر سائیکل / سکوٹر  </string>
+    <string name="ss15da"> ہاں </string>
     <string name="ss15db"> نہیں</string>
+
+    <string name="ss15e"> جانوروں سے چلائی جانے والی گاڑی </string>
+    <string name="ss15ea"> ہاں </string>
     <string name="ss15eb"> نہیں</string>
+
+    <string name="ss15f">  گاڑی / ٹرک / بس </string>
+    <string name="ss15fa"> ہاں </string>
     <string name="ss15fb"> نہیں</string>
+
+    <string name="ss15g"> ٹریکٹر </string>
+    <string name="ss15ga"> ہاں </string>
     <string name="ss15gb"> نہیں</string>
+
+    <string name="ss15h"> موٹر کے ساتھ کشتی </string>
+    <string name="ss15ha"> ہاں </string>
     <string name="ss15hb"> نہیں</string>
+
+    <string name="ss15i"> موٹر کے بغیر کشتی </string>
+    <string name="ss15ia"> ہاں </string>
     <string name="ss15ib"> نہیں</string>
-    <string name="ss16"> ss16:  مشاہدہ کریں، کہ گھرمیں روشنی کے لئے کونسے آلات استعمال ہورہے ہیں۔    [ایک سے زیادہ جوابات آسکتے ہیں]</string>
+
+    <string name="ss16"> SS16:  مشاہدہ کریں، کہ گھرمیں روشنی کے لئے کونسے آلات استعمال ہورہے ہیں۔    [ایک سے زیادہ جوابات آسکتے ہیں]</string>
     <string name="ss16a"> بلب  </string>
     <string name="ss16b">  ٹیوب لائٹ </string>
     <string name="ss16c">  ایل ای ڈی  بلب </string>
     <string name="ss16d">  انرجی سیور</string>
     <string name="ss16e"> موم بتی</string>
     <string name="ss16f"> لالٹین </string>
-    <string name="ss16x"> دیگر وضاحت کریں   </string>
-    <string name="ss17"> ss17: عام طورپر آپ کے گھر میں کھانا پکانے کے لیے کس قسم کا ایندھن /چولہااستعمال ہوتا ہے ؟</string>
+    <string name="ss16x"> دیگر وضاحت کریں </string>
+
+    <string name="ss17"> SS17: عام طورپر آپ کے گھر میں کھانا پکانے کے لیے کس قسم کا ایندھن /چولہااستعمال ہوتا ہے ؟</string>
     <string name="ss17a"> بجلی</string>
     <string name="ss17b"> ایل –پی-جی   سیلنڈر</string>
     <string name="ss17c"> قدرتی گیس</string>
@@ -2830,23 +2861,25 @@
     <string name="ss17j"> جانوروں کا گوبر</string>
     <string name="ss17k"> گھر میں کھانا نہیں پکتا </string>
     <string name="ss17x"> دیگر وضاحت کریں</string>
-    <string name="ss18"> ss18: گھر کے  فرش  بنانے میں کس قسم کا  میٹریل استعمال کیاگیا ہے گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں  اگرمشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔</string>
+
+    <string name="ss18"> SS18: گھر کے  فرش  بنانے میں کس قسم کا  میٹریل استعمال کیاگیا ہے گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں  اگرمشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔</string>
     <string name="ss18a_title">  قدرتی فرش</string>
     <string name="ss18a"> مٹی/چکنی مٹی/زمین/ریت</string>
     <string name="ss18b"> جانوروں کا گوبر </string>
     <string name="ss18c_title"> بنیادی /ابتدائی فرش</string>
-    <string name="ss18e"> لکٹری کے تختے</string>
-    <string name="ss18f"> کھجور  یاناریل کے پتے /بانس</string>
-    <string name="ss18g_title"> تیار فرش </string>
-    <string name="ss18g"> لکڑی کا فرش یا پالش والی لکڑی</string>
-    <string name="ss18h"> لکڑی کی پلائی  یا  لکڑی کے ٹائلز </string>
-    <string name="ss18i"> سرامک ٹائلز </string>
-    <string name="ss18j"> سیمنٹ</string>
-    <string name="ss18k"> قالین</string>
-    <string name="ss18l"> اینٹیں</string>
-    <string name="ss18m"> چونے کا پتھر</string>
+    <string name="ss18c"> لکٹری کے تختے</string>
+    <string name="ss18d"> کھجور  یاناریل کے پتے /بانس</string>
+    <string name="ss18e_title"> تیار فرش </string>
+    <string name="ss18e"> لکڑی کا فرش یا پالش والی لکڑی</string>
+    <string name="ss18f"> لکڑی کی پلائی  یا  لکڑی کے ٹائلز </string>
+    <string name="ss18g"> سرامک ٹائلز </string>
+    <string name="ss18h"> سیمنٹ</string>
+    <string name="ss18i"> قالین</string>
+    <string name="ss18j"> اینٹیں</string>
+    <string name="ss18k"> چونے کا پتھر</string>
     <string name="ss18x"> دیگر وضاحت کریں</string>
-    <string name="ss19"> ss19: گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
+
+    <string name="ss19"> SS19: گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
     <string name="ss19a_title"> قدرتی چھت</string>
     <string name="ss19a"> کوئی چھت نہیں</string>
     <string name="ss19b"> گھاس پھونس /کھجو ر کے پتے</string>
@@ -2865,7 +2898,8 @@
     <string name="ss19m"> چھت میں استعمال ہونے والے ٹائلز</string>
     <string name="ss19n"> اینٹیں</string>
     <string name="ss19x"> دیگر وضاحت کریں </string>
-    <string name="ss20"> ss20: گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:</string>
+
+    <string name="ss20"> SS20: گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:</string>
     <string name="ss20a_title"> قدرتی دیواریں</string>
     <string name="ss20a"> کوئی دیوار نہیں </string>
     <string name="ss20b"> کھجور کے درخت  /بانس </string>
@@ -2886,19 +2920,25 @@
     <string name="ss20o"> کچی اینٹوں سے بنی(لیپ کی ہوئی)</string>
     <string name="ss20p"> لکڑی کے تختے </string>
     <string name="ss20x"> دیگر وضاحت کریں</string>
-    <string name="ss21"> ss21: آپ کے گھر میں کتنے کمرے سونے کے لیے استعمال ہوتے ہیں ؟</string>
-    <string name="ss22"> ss22: کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے؟</string>
+
+    <string name="ss21"> SS21: آپ کے گھر میں کتنے کمرے سونے کے لیے استعمال ہوتے ہیں ؟</string>
+    <string name="ss21a"> کمرے </string>
+
+    <string name="ss22"> SS22: کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے؟</string>
     <string name="ss22a"> ہاں</string>
     <string name="ss22b"> نہیں</string>
-    <string name="ss23"> ss23: اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو \'00\' ریکارڈ کریں۔ </string>
+
+    <string name="ss23"> SS23: اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو \'00\' ریکارڈ کریں۔ </string>
     <string name="ss23a"> ایکٹر</string>
     <string name="ss23a_acr"> ایکڑز تعداد</string>
     <string name="ss23b"> کنال</string>
     <string name="ss23c"> معلوم نہیں</string>
-    <string name="ss24"> ss24: کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
+
+    <string name="ss24"> SS24: کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="ss24a"> ہاں</string>
     <string name="ss24b">  نہیں</string>
-    <string name="ss25"> ss25: اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے  اگر کوئی نہیں تو 000 ؟</string>
+
+    <string name="ss25"> SS25: اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے  اگر کوئی نہیں تو 000 ؟</string>
     <string name="ss25a"> مال مویشی (گائے اور بیل) </string>
     <string name="ss25b"> گھوڑے/گدھے/خچر</string>
     <string name="ss25c"> بکریاں</string>
@@ -2906,15 +2946,21 @@
     <string name="ss25e"> مرغیاں</string>
     <string name="ss25f"> بھینسیں</string>
     <string name="ss25g"> اونٹ</string>
-    <string name="ss26"> ss26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
+
+    <string name="ss26"> SS26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
     <string name="ss27_title"> SS27: جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اور پھر اس گھر میں موجود 12 – 23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
     <string name="ss26a"> ہاں</string>
     <string name="ss26b"> نہیں</string>
-    <string name="ss27"> ss27: وقت ریکار ڈ کریں   </string>
-    <string name="ss28"> ss28: انٹرویو کرنے والے کے مشاہدات                           (اگر کوئی)                                                                                                                           </string>
-    <string name="ss21a">  کمرے</string>
+
+    <string name="ss27"> SS27: وقت ریکار ڈ کریں   </string>
+
+    <string name="ss28"> SS28: اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+
+
     <string name="uf01"> uf01: جغرافیائی علاقہ </string>
+
     <string name="uf02"> uf02: صوبہ </string>
+
     <string name="uf03"> uf03: ضلع </string>
     <string name="uf04"> uf04: شہر</string>
     <string name="uf05"> uf05: گاؤں</string>
