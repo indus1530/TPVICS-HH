@@ -2621,30 +2621,30 @@
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
     <string name="ss02"> SS02: آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
-    <string name="ss02a"> اپنا</string>
-    <string name="ss02b"> کرائے کا</string>
-    <string name="ss02x"> دیگر وضاحت کریں</string>
+    <string name="ss02a"> اپنا </string>
+    <string name="ss02b"> کرائے کا </string>
+    <string name="ss02x"> دیگر وضاحت کریں </string>
 
     <string name="ss03"> SS03: آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
-    <string name="ss03a_title"> میونسپل کمیٹی کا پانی کا کنکشن</string>
+    <string name="ss03h1"> میونسپل کمیٹی کا پانی کا کنکشن </string>
     <string name="ss03a">  گھر میں نلکا</string>
     <string name="ss03b"> صحن میں نلکا</string>
     <string name="ss03c">  پڑوسی کے گھر کا نلکا</string>
     <string name="ss03d">  گلی/علاقہ کا نلکا</string>
     <string name="ss03e"> ٹیوب ویل/بورنگ کا پانی </string>
-    <string name="ss03f_title"> گہراکنواں</string>
+    <string name="ss03h2"> گہراکنواں</string>
     <string name="ss03f"> محفوظ کنواں</string>
     <string name="ss03g"> غیر محفوظ کنواں</string>
-    <string name="ss03h_title"> پانی کا چشمہ </string>
+    <string name="ss03h3"> پانی کا چشمہ </string>
     <string name="ss03h"> محفوظ چشمہ</string>
     <string name="ss03i"> غیر محفوظ چشمہ</string>
     <string name="ss03j">  بارش کا پانی</string>
     <string name="ss03k">  پانی کا ٹینکر/ٹرک</string>
     <string name="ss03l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی</string>
     <string name="ss03m"> سطح والا پانی(دریا ،جھیل،ڈیم،تالاب،ندی،نہر کا پانی</string>
-    <string name="ss03n_title"> PACKAGED WATER </string>
-    <string name="ss03n">  بوتل کا پانی</string>
-    <string name="ss03x"> (وضاحت کریں)دیگر</string>
+    <string name="ss03h4"> PACKAGED WATER </string>
+    <string name="ss03n">  بوتل کا پانی </string>
+    <string name="ss03x"> (وضاحت کریں)دیگر </string>
 
     <string name="ss04"> SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟</string>
     <string name="ss04y"> ہاں</string>
