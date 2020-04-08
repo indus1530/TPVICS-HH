@@ -2522,9 +2522,9 @@
     <string name="hh06"> شہر / گاؤں </string>
     <string name="hh07"> کلسٹر </string>
     <string name="hh08"> گھرانہ نمبر </string>
-    <string name="hh09"> hh09: انٹرویو لینے والے کا نام </string>
-    <string name="hh09a"> hh09a: انٹرویو لینے والے کا کوڈ</string>
-    <string name="hh10"> hh10: سُپروائزر کا نام </string>
+    <string name="hh09"> HH09: انٹرویو لینے والے کا نام </string>
+    <string name="hh09a"> HH09a: انٹرویو لینے والے کا کوڈ</string>
+    <string name="hh10"> HH10: سُپروائزر کا نام </string>
     <string name="hh10a"> hh10a: سُپروائزر کا  کوڈ</string>
     <string name="hh11"> hh11: انٹرویو کی تاریخ  </string>
     <string name="hh12"> hh12: نٹرویو کا وقت</string>
@@ -2570,39 +2570,63 @@
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
 
-    <string name="ch_title"> ch_title: بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج</string>
-    <string name="ch_cluster"> ch_cluster: کلسٹر نمبر</string>
-    <string name="ch_hno"> ch_hno: گھر کا نمبر</string>
-    <string name="ch_childid"> ch_childid: چائلڈآئی ڈی</string>
-    <string name="ch01"> ch01: سیریل نمبر</string>
-    <string name="ch02"> ch02: بچے کا نام</string>
-    <string name="ch03"> ch03: باپ کا نام</string>
-    <string name="ch04"> ch04: جنس</string>
-    <string name="ch04m"> مرد</string>
-    <string name="ch04f"> عورت</string>
-    <string name="ch05"> ch05: تاریخ پیدائش</string>
+
+    <string name="chsec"> Child Information </string>
+    <string name="ch_title"> بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج: </string>
+
+    <string name="ch_cluster"> کلسٹر نمبر: </string>
+
+    <string name="ch_hno"> گھر کا نمبر: </string>
+
+    <string name="ch_childid"> چائلڈ آئی ڈی </string>
+
+    <string name="ch01"> CH01: سیریل نمبر</string>
+
+    <string name="ch02"> CH02: بچے کا نام </string>
+
+    <string name="ch03"> CH03: باپ کا نام </string>
+
+    <string name="ch04"> CH04: جنس </string>
+    <string name="ch04m"> مرد </string>
+    <string name="ch04f"> عورت </string>
+
+    <string name="ch05"> CH05: تاریخ پیدائش </string>
     <string name="ch05dd"> تاریخ پیدائش- دن</string>
     <string name="ch05mm"> تاریخ پیدائش - مہینہ</string>
     <string name="ch05yy"> تاریخ پیدائش - سال</string>
-    <string name="ch06"> ch06: عمر مہینوں مہیں</string>
-    <string name="ch07"> ch07: بچے کی عمر کی تصدیق کا زریعہ</string>
-    <string name="ch07_1"> پیدائش کا سرٹیفکیٹ</string>
-    <string name="ch07_2"> حفاظتی ٹیکوں کا کارڈ</string>
-    <string name="ch07_3"> جوابدہندہ </string>
-    <string name="ch07_96"> دیگر</string>
-    <string name="ch08"> ch08: کیا بچہ اس سروے کے لیے اہل ہے</string>
-    <string name="ch08y"> ہاں</string>
-    <string name="ch08n"> نہیں</string>
-    <string name="ch03b"> ماں کا نام</string>
-    <string name="ss01"> ss01: گھرانےکے سربراہ کی مادری زبان کیا ہے ؟</string>
-    <string name="ss02"> ss02: آپ کے گھرکی مالکانہ حیثیت کیا ہے ؟</string>
-    <string name="ss01a"> اردو</string>
+
+    <string name="ch06"> CH06: عمر مہینوں مہیں</string>
+
+    <string name="ch07"> CH07: بچے کی عمر کی تصدیق کا زریعہ</string>
+    <string name="ch07a"> پیدائش کا سرٹیفکیٹ </string>
+    <string name="ch07b"> حفاظتی ٹیکوں کا کارڈ </string>
+    <string name="ch07c"> جوابدہندہ </string>
+    <string name="ch0796"> دیگر </string>
+
+    <string name="ch08"> CH08: کیا بچہ اس سروے کے لیے اہل ہے </string>
+    <string name="ch08y"> ہاں </string>
+    <string name="ch08n"> نہیں </string>
+    <string name="ch03b"> ماں کا نام </string>
+
+
+    <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
+    <string name="ss01"> SS01: گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
+    <string name="ss01a"> اردو </string>
+    <string name="ss01b"> پنجابی </string>
+    <string name="ss01c"> سند ھی </string>
+    <string name="ss01d"> پشتو </string>
+    <string name="ss01e"> بلوچی </string>
+    <string name="ss01f"> سرائیکی </string>
+    <string name="ss01g"> ھند کو </string>
+    <string name="ss01x"> دیگر وضاحت کریں </string>
+
+    <string name="ss02"> SS02: آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
     <string name="ss02a"> اپنا</string>
     <string name="ss02b"> کرائے کا</string>
     <string name="ss02x"> دیگر وضاحت کریں</string>
-    <string name="ss03"> ss03: آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
+
+    <string name="ss03"> SS03: آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
     <string name="ss03a_title"> میونسپل کمیٹی کا پانی کا کنکشن</string>
-    <string name="ss01b"> پنجابی</string>
     <string name="ss03a">  گھر میں نلکا</string>
     <string name="ss03b"> صحن میں نلکا</string>
     <string name="ss03c">  پڑوسی کے گھر کا نلکا</string>
@@ -2621,25 +2645,25 @@
     <string name="ss03n_title"> PACKAGED WATER </string>
     <string name="ss03n">  بوتل کا پانی</string>
     <string name="ss03x"> (وضاحت کریں)دیگر</string>
-    <string name="ss04"> ss04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟</string>
+
+    <string name="ss04"> SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟</string>
     <string name="ss04y"> ہاں</string>
     <string name="ss04n"> نہیں</string>
-    <string name="ss01c"> سند ھی</string>
-    <string name="ss05"> ss05: عموماً آپ  پینے کےپانی کو محفوظ  بنانے  کے لیے کیا کرتے ہیں؟</string>
+
+    <string name="ss05"> SS05: عموماً آپ  پینے کےپانی کو محفوظ  بنانے  کے لیے کیا کرتے ہیں؟</string>
     <string name="ss05a"> ابالتے ہیں</string>
     <string name="ss05b"> بلیچ/کلورین ملاتے ہیں</string>
     <string name="ss05c"> کپڑے کے ذریعہ چھانتے ہیں</string>
-    <string name="ss01d"> پشتو</string>
     <string name="ss05d"> پانی کا فلٹر استعمال کرتے ہیں</string>
     <string name="ss05e"> سورج کی شعاعوں سے/دھوپ میں رکھتے ہیں</string>
     <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں</string>
     <string name="ss05x"> دیگر وضاحت کریں</string>
-    <string name="ss06"> ss06: آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اورہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے؟ اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں</string>
+
+    <string name="ss06"> SS06: آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اورہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے؟ اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں</string>
     <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن</string>
     <string name="ss06a"> گھر میں نلکا</string>
     <string name="ss06b"> صحن میں نلکا</string>
     <string name="ss06c"> پڑوسی کے گھر کا نلکا</string>
-    <string name="ss01e"> بلوچی</string>
     <string name="ss06d">  گلی/علاقہ کا نلکا</string>
     <string name="ss06e"> ٹیوب ویل/بورنگ کا پان</string>
     <string name="ss06f_title"> گہراکنواں</string>
@@ -2652,16 +2676,16 @@
     <string name="ss06k"> پانی کا ٹینکر/ٹرک</string>
     <string name="ss06l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی</string>
     <string name="ss06m"> سطح والا پانی(دریا ،جھیل،ڈیم،تالاب،ندی،نہر کا پانی)</string>
-    <string name="ss06n_title"> PACKAGED WATER</string>
+    <string name="ss06n_title"> PACKAGED WATER </string>
     <string name="ss06n"> بوتل کا پانی</string>
     <string name="ss06x"> (وضاحت کریں)دیگر </string>
+
     <string name="ss07"> SS07: آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
     <string name="ss07a_title"> فلش یا انڈیل کر پانی ڈالنے والا</string>
     <string name="ss07a"> فلش   سیوریج کے نظام سے منسلک  </string>
     <string name="ss07b"> فلش سپٹک ٹینک سے منسلک  </string>
     <string name="ss07c"> فلش   گڑھےواے لیٹرین سے منسلک </string>
     <string name="ss07d"> فلش کہیں اور</string>
-    <string name="ss01f"> سرائیکی</string>
     <string name="ss07e_title"> گڑھے والا  لیٹرین</string>
     <string name="ss07e"> بہتر ہوا دار گڑھے والا لیٹرین</string>
     <string name="ss07f"> گڑھے والا لیٹرین ڈھکا ہوا</string>
@@ -2673,11 +2697,9 @@
     <string name="ss08a"> اپنی  ذاتی رہائش/گھر میں</string>
     <string name="ss08b">  اپنے صحن/پلاٹ میں</string>
     <string name="ss08c"> کہیں اور</string>
-    <string name="ss01g"> ھند کو</string>
     <string name="ss09"> ss09: کیا اس بیت الخلاء کی سہولت کو   دوسرے   گھرانوں کے افراد بھی استعمال کر تےہیں جو آپ کے گھرانے کے فرد نہیں ہیں؟</string>
     <string name="ss09a"> ہاں</string>
     <string name="ss09b"> نہیں</string>
-    <string name="ss01x"> دیگر وضاحت کریں</string>
     <string name="ss10"> ss10:  اگر ہاں،تو کتنے گھرانےاس بیت الخلاء کی  سہولت کواستعمال کرتے ہیں ؟</string>
     <string name="ss11"> ss11: کیا آپ یہ سہولت صرف ان دوسرے گھرانوں کے افراد کے ساتھ مل کر استعمال کرتے ہیں جنہیں آپ جانتے ہیں یا یہ سہولت عوام الناس کے استعمال کے لئے کھلی ہے؟</string>
     <string name="ss11a"> صرف دوسرے گھرانے (عوام الناس نہیں) </string>

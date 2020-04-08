@@ -19,41 +19,76 @@
             android:id="@+id/fldGrpSectionM"
             style="@style/linearlayout_view_wt_bound">
 
-            <!-- m101  Radio   -->
+
+            <!-- ss01  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVm101"
+                android:id="@+id/fldGrpCVss01"
                 style="@style/cardView">
 
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+                <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/m101" />
+                        android:text="@string/ss01" />
 
                     <RadioGroup
-                        android:id="@+id/m101"
-                        style="@style/radiogroup">
+                        android:id="@+id/ss01"
+                        style="@style/vradiogroup">
 
                         <RadioButton
-                            android:id="@+id/m101a"
+                            android:id="@+id/ss01a"
                             style="@style/radiobutton"
-                            android:text="@string/m101a" />
+                            android:text="@string/ss01a" />
 
                         <RadioButton
-                            android:id="@+id/m101b"
+                            android:id="@+id/ss01b"
                             style="@style/radiobutton"
-                            android:text="@string/m101b" />
+                            android:text="@string/ss01b" />
 
                         <RadioButton
-                            android:id="@+id/m101c"
+                            android:id="@+id/ss01c"
                             style="@style/radiobutton"
-                            android:text="@string/m101c" />
+                            android:text="@string/ss01c" />
+
+                        <RadioButton
+                            android:id="@+id/ss01d"
+                            style="@style/radiobutton"
+                            android:text="@string/ss01d" />
+
+                        <RadioButton
+                            android:id="@+id/ss01e"
+                            style="@style/radiobutton"
+                            android:text="@string/ss01e" />
+
+                        <RadioButton
+                            android:id="@+id/ss01f"
+                            style="@style/radiobutton"
+                            android:text="@string/ss01f" />
+
+                        <RadioButton
+                            android:id="@+id/ss01g"
+                            style="@style/radiobutton"
+                            android:text="@string/ss01g" />
+
+                        <RadioButton
+                            android:id="@+id/ss0196"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/ss0196x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:maxLength="20"
+                            android:text='@{ss0196.checked ? ss0196x.getText().toString() : "" }'
+                            android:visibility='@{ss0196.checked ? View.VISIBLE : View.GONE }' />
 
                     </RadioGroup>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m102  Radio   -->
             <androidx.cardview.widget.CardView
@@ -90,6 +125,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m103  Radio   -->
             <androidx.cardview.widget.CardView
@@ -192,6 +228,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m104  Radio   -->
             <androidx.cardview.widget.CardView
@@ -303,6 +340,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m105  Radio   -->
             <androidx.cardview.widget.CardView
@@ -445,6 +483,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m106  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm106"
@@ -472,6 +511,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m107  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm107"
@@ -489,6 +529,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m107a  Radio   -->
             <androidx.cardview.widget.CardView
@@ -532,6 +573,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m107b  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm107b"
@@ -573,6 +615,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m107c  Radio   -->
             <androidx.cardview.widget.CardView
@@ -616,6 +659,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m107d  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm107d"
@@ -657,6 +701,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m107e  Radio   -->
             <androidx.cardview.widget.CardView
@@ -700,6 +745,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m107f  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm107f"
@@ -741,6 +787,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m107g  Radio   -->
             <androidx.cardview.widget.CardView
@@ -784,6 +831,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- m107h  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVm107h"
@@ -825,6 +873,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- m107i  Radio   -->
             <androidx.cardview.widget.CardView

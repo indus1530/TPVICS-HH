@@ -27,7 +27,7 @@
     <string name="tjheading">SECTION J: IMMUNIZATION</string>
     <string name="tkheading">SECTION K: FAMILY PLANNING</string>
     <string name="tlheading">SECTION L: WOMEN EMPOWERMENT</string>
-    <string name="tmheading">SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD</string>
+    <string name="tmheading">SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD </string>
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
     <string name="toheading">SECTION O: HANDWASHING</string>
 
@@ -2540,24 +2540,37 @@
     <string name="ch05mm"> Date of Birth - Month</string>
     <string name="ch05yy"> Date of Birth - Years</string>
     <string name="ch06"> ch06: Age in Months</string>
+
     <string name="ch07"> ch07: Child age Verification source</string>
-    <string name="ch07_1"> BIRTH CERTIFICATE</string>
-    <string name="ch07_2"> Vaccination Card </string>
-    <string name="ch07_3"> Reported by the respondent </string>
-    <string name="ch07_96"> Other</string>
+    <string name="ch07a"> BIRTH CERTIFICATE</string>
+    <string name="ch07b"> Vaccination Card </string>
+    <string name="ch07c"> Reported by the respondent </string>
+    <string name="ch0796"> Other</string>
+
     <string name="ch08"> ch08: Is child eligible for Survey? </string>
     <string name="ch08y"> Yes</string>
     <string name="ch08n"> No</string>
     <string name="ch03b"> Mother Name</string>
-    <string name="ss01"> ss01: What is the mother tongue of the head of household?</string>
+
+
+    <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
+    <string name="ss01"> SS01: What is the mother tongue of the head of household ? </string>
+    <string name="ss01a"> Urdu </string>
+    <string name="ss01b"> Punjabi </string>
+    <string name="ss01c"> Sindhi </string>
+    <string name="ss01e"> Baluchi </string>
+    <string name="ss01d"> Pushtu </string>
+    <string name="ss01f"> Siraiki </string>
+    <string name="ss01g"> Hindko </string>
+    <string name="ss01x"> Other (specify) </string>
+
     <string name="ss02"> ss02: What is ownership status of household? </string>
-    <string name="ss01a"> Urdu   </string>
     <string name="ss02a"> Own</string>
     <string name="ss02b"> Rented </string>
     <string name="ss02x"> Other (specify) </string>
+
     <string name="ss03"> ss03: What is the main source of drinking water in your household?</string>
     <string name="ss03a_title"> Municipal Piped Water Connection</string>
-    <string name="ss01b"> Punjabi   </string>
     <string name="ss03a"> PIPED INTO DWELLING </string>
     <string name="ss03b"> PIPED TO YARD/ PLOT </string>
     <string name="ss03c"> PIPED TO NEIGHBOUR </string>
@@ -2576,25 +2589,25 @@
     <string name="ss03n_title"> PACKAGED WATER </string>
     <string name="ss03n"> BOTTELED WATER </string>
     <string name="ss03x"> Other (specify) </string>
+
     <string name="ss04"> ss04: Do you take any step to make the water safer to drink? </string>
     <string name="ss04y"> Yes</string>
     <string name="ss04n"> No</string>
-    <string name="ss01c"> Sindhi   </string>
+
     <string name="ss05"> ss05: What do you usually do to make the water safe to drink? </string>
     <string name="ss05a"> Boil</string>
     <string name="ss05b"> Add bleach/chlorine </string>
     <string name="ss05c"> Strain through a cloth </string>
-    <string name="ss01d"> Pushtu   </string>
     <string name="ss05d"> Use water filter </string>
     <string name="ss05e"> Solar disinfection </string>
     <string name="ss05f"> Let it stand and settle </string>
     <string name="ss05x"> Other (specify) </string>
+
     <string name="ss06"> ss06: What is the main source of water used by members of your household for other purposes such as cooking and handwashing?  If unclear, probe to identify the place from which members of this household most often collect water for other purposes.</string>
     <string name="ss06a_title"> Municipal Piped Water Connection</string>
     <string name="ss06a"> PIPED INTO DWELLING</string>
     <string name="ss06b"> PIPED TO YARD/ PLOT </string>
     <string name="ss06c"> PIPED TO NEIGHBOUR</string>
-    <string name="ss01e"> Baluchi   </string>
     <string name="ss06d"> PUBLIC TAP /STANDPIPE</string>
     <string name="ss06e"> TUBE WELL / BOREHOLE</string>
     <string name="ss06f_title"> DUG WELL</string>
@@ -2610,13 +2623,13 @@
     <string name="ss06n_title"> PACKAGED WATER</string>
     <string name="ss06n"> BOTTELED WATER</string>
     <string name="ss06x"> Other (specify) </string>
+
     <string name="ss07"> ss07: What kind of toilet facility do members of your household usually use? If ‘Flush’ or ‘Pour’, probe: Where does it flush to? If not possible to determine, ask permission to observe the facility</string>
     <string name="ss07a_title"> Flush or Pour Flush Toilet </string>
     <string name="ss07a"> Flush to piped sewer system </string>
     <string name="ss07b"> Flush to septic tank </string>
     <string name="ss07c"> Flush to pit latrine </string>
     <string name="ss07d"> Flush to somewhere else</string>
-    <string name="ss01f"> Siraiki  </string>
     <string name="ss07e_title"> PIT Latrine</string>
     <string name="ss07e"> Ventilated improved PIT latrine</string>
     <string name="ss07f"> PIT latrine with slab</string>
@@ -2624,15 +2637,15 @@
     <string name="ss07h"> Bucket toilet</string>
     <string name="ss07i"> No facility/bush/field</string>
     <string name="ss07x"> Other (specify) </string>
+
     <string name="ss08"> ss08: Where is this toilet facility located?</string>
     <string name="ss08a"> IN OWN DWELLING</string>
     <string name="ss08b"> IN OWN YARD/PLOT</string>
     <string name="ss08c"> ELSEWHERE</string>
-    <string name="ss01g"> Hindko   </string>
     <string name="ss09"> ss09: Do you share this toilet facility with others who are not members of your household? </string>
     <string name="ss09a"> Yes</string>
     <string name="ss09b"> No</string>
-    <string name="ss01x"> Other (specify) </string>
+
     <string name="ss10"> ss10: If yes, how many other households use this toilet facility?</string>
     <string name="ss11"> ss11: Do you share this facility only with members of other household that you know, or is the facility open to the use of the general public? </string>
     <string name="ss11a"> SHARED WITH KNOWN HOUSEHOLDS (NOT PUBLIC)</string>
