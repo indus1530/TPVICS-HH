@@ -146,7 +146,281 @@ public class SectionMActivity extends AppCompatActivity {
         json.put("ss06m", bi.ss06m.isChecked() ? "13" : "0");
         json.put("ss06n", bi.ss06n.isChecked() ? "14" : "0");
         json.put("ss0696", bi.ss0696.isChecked() ? "96" : "0");
-        
+
+        json.put("ss07", bi.ss07a.isChecked() ? "1"
+                : bi.ss07b.isChecked() ? "2"
+                : bi.ss07c.isChecked() ? "3"
+                : bi.ss07d.isChecked() ? "4"
+                : bi.ss07e.isChecked() ? "5"
+                : bi.ss07f.isChecked() ? "6"
+                : bi.ss07g.isChecked() ? "7"
+                : bi.ss07h.isChecked() ? "8"
+                : bi.ss07i.isChecked() ? "9"
+                : bi.ss0796.isChecked() ? "96"
+                : "0");
+        json.put("ss0796x", bi.ss0796x.getText().toString());
+
+        json.put("ss08", bi.ss08a.isChecked() ? "1"
+                : bi.ss08b.isChecked() ? "2"
+                : bi.ss08c.isChecked() ? "3"
+                : "0");
+
+        json.put("ss09", bi.ss09a.isChecked() ? "1"
+                : bi.ss09b.isChecked() ? "2"
+                : "0");
+
+        json.put("ss10", bi.ss10.getText().toString());
+
+        json.put("ss11", bi.ss11a.isChecked() ? "1"
+                : bi.ss11b.isChecked() ? "2"
+                : "0");
+
+        json.put("ss12", bi.ss12a.isChecked() ? "1"
+                : bi.ss12b.isChecked() ? "2"
+                : bi.ss1298.isChecked() ? "98"
+                : "0");
+
+        json.put("ss13", bi.ss13a.isChecked() ? "1"
+                : bi.ss13b.isChecked() ? "2"
+                : bi.ss13c.isChecked() ? "3"
+                : bi.ss13d.isChecked() ? "4"
+                : bi.ss13e.isChecked() ? "5"
+                : bi.ss13f.isChecked() ? "6"
+                : bi.ss13g.isChecked() ? "7"
+                : bi.ss1396.isChecked() ? "96"
+                : "0");
+        json.put("ss1396x", bi.ss1396x.getText().toString());
+
+
+        json.put("ss14a", bi.ss14aa.isChecked() ? "1"
+                : bi.ss14ab.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14b", bi.ss14ba.isChecked() ? "1"
+                : bi.ss14bb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14c", bi.ss14ca.isChecked() ? "1"
+                : bi.ss14cb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14d", bi.ss14da.isChecked() ? "1"
+                : bi.ss14db.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14e", bi.ss14ea.isChecked() ? "1"
+                : bi.ss14eb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14f", bi.ss14fa.isChecked() ? "1"
+                : bi.ss14fb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14g", bi.ss14ga.isChecked() ? "1"
+                : bi.ss14gb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14h", bi.ss14ha.isChecked() ? "1"
+                : bi.ss14hb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14i", bi.ss14ia.isChecked() ? "1"
+                : bi.ss14ib.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14j", bi.ss14ja.isChecked() ? "1"
+                : bi.ss14jb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14k", bi.ss14ka.isChecked() ? "1"
+                : bi.ss14kb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14l", bi.ss14la.isChecked() ? "1"
+                : bi.ss14lb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14m", bi.ss14ma.isChecked() ? "1"
+                : bi.ss14mb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14n", bi.ss14na.isChecked() ? "1"
+                : bi.ss14nb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14o", bi.ss14oa.isChecked() ? "1"
+                : bi.ss14ob.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14p", bi.ss14pa.isChecked() ? "1"
+                : bi.ss14pb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14q", bi.ss14qa.isChecked() ? "1"
+                : bi.ss14qb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14r", bi.ss14ra.isChecked() ? "1"
+                : bi.ss14rb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss14s", bi.ss14sa.isChecked() ? "1"
+                : bi.ss14sb.isChecked() ? "2"
+                : "0");
+
+
+        json.put("ss15a", bi.ss15aa.isChecked() ? "1"
+                : bi.ss15ab.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15b", bi.ss15ba.isChecked() ? "1"
+                : bi.ss15bb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15c", bi.ss15ca.isChecked() ? "1"
+                : bi.ss15cb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15d", bi.ss15da.isChecked() ? "1"
+                : bi.ss15db.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15e", bi.ss15ea.isChecked() ? "1"
+                : bi.ss15eb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15f", bi.ss15fa.isChecked() ? "1"
+                : bi.ss15fb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15g", bi.ss15ga.isChecked() ? "1"
+                : bi.ss15gb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15h", bi.ss15ha.isChecked() ? "1"
+                : bi.ss15hb.isChecked() ? "2"
+                : "0");
+
+        json.put("ss15i", bi.ss15ia.isChecked() ? "1"
+                : bi.ss15ib.isChecked() ? "2"
+                : "0");
+
+
+        json.put("ss16a", bi.ss16a.isChecked() ? "1" : "0");
+        json.put("ss16b", bi.ss16b.isChecked() ? "2" : "0");
+        json.put("ss16c", bi.ss16c.isChecked() ? "3" : "0");
+        json.put("ss16d", bi.ss16d.isChecked() ? "4" : "0");
+        json.put("ss16e", bi.ss16e.isChecked() ? "5" : "0");
+        json.put("ss16f", bi.ss16f.isChecked() ? "6" : "0");
+        json.put("ss1696", bi.ss1696.isChecked() ? "96" : "0");
+
+        json.put("ss17", bi.ss17a.isChecked() ? "1"
+                : bi.ss17b.isChecked() ? "2"
+                : bi.ss17c.isChecked() ? "3"
+                : bi.ss17d.isChecked() ? "4"
+                : bi.ss17e.isChecked() ? "5"
+                : bi.ss17f.isChecked() ? "6"
+                : bi.ss17g.isChecked() ? "7"
+                : bi.ss17h.isChecked() ? "8"
+                : bi.ss17i.isChecked() ? "9"
+                : bi.ss17j.isChecked() ? "10"
+                : bi.ss17k.isChecked() ? "11"
+                : bi.ss1796.isChecked() ? "96"
+                : "0");
+        json.put("ss1796x", bi.ss1796x.getText().toString());
+
+        json.put("ss18", bi.ss18a.isChecked() ? "1"
+                : bi.ss18b.isChecked() ? "2"
+                : bi.ss18c.isChecked() ? "3"
+                : bi.ss18d.isChecked() ? "4"
+                : bi.ss18e.isChecked() ? "5"
+                : bi.ss18f.isChecked() ? "6"
+                : bi.ss18g.isChecked() ? "7"
+                : bi.ss18h.isChecked() ? "8"
+                : bi.ss18i.isChecked() ? "9"
+                : bi.ss18j.isChecked() ? "10"
+                : bi.ss18k.isChecked() ? "11"
+                : bi.ss1896.isChecked() ? "96"
+                : "0");
+        json.put("ss1896x", bi.ss1896x.getText().toString());
+
+        json.put("ss19", bi.ss19a.isChecked() ? "1"
+                : bi.ss19b.isChecked() ? "2"
+                : bi.ss19c.isChecked() ? "3"
+                : bi.ss19d.isChecked() ? "4"
+                : bi.ss19e.isChecked() ? "5"
+                : bi.ss19f.isChecked() ? "6"
+                : bi.ss19g.isChecked() ? "7"
+                : bi.ss19h.isChecked() ? "8"
+                : bi.ss19i.isChecked() ? "9"
+                : bi.ss19j.isChecked() ? "10"
+                : bi.ss19k.isChecked() ? "11"
+                : bi.ss19l.isChecked() ? "12"
+                : bi.ss19m.isChecked() ? "13"
+                : bi.ss19n.isChecked() ? "14"
+                : bi.ss1996.isChecked() ? "96"
+                : "0");
+        json.put("ss1996x", bi.ss1996x.getText().toString());
+
+        json.put("ss20", bi.ss20a.isChecked() ? "1"
+                : bi.ss20b.isChecked() ? "2"
+                : bi.ss20c.isChecked() ? "3"
+                : bi.ss20d.isChecked() ? "4"
+                : bi.ss20e.isChecked() ? "5"
+                : bi.ss20f.isChecked() ? "6"
+                : bi.ss20g.isChecked() ? "7"
+                : bi.ss20h.isChecked() ? "8"
+                : bi.ss20i.isChecked() ? "9"
+                : bi.ss20j.isChecked() ? "10"
+                : bi.ss20k.isChecked() ? "11"
+                : bi.ss20l.isChecked() ? "12"
+                : bi.ss20m.isChecked() ? "13"
+                : bi.ss20n.isChecked() ? "14"
+                : bi.ss20o.isChecked() ? "15"
+                : bi.ss20p.isChecked() ? "16"
+                : bi.ss2096.isChecked() ? "96"
+                : "0");
+        json.put("ss2096x", bi.ss2096x.getText().toString());
+
+
+        json.put("ss21", bi.ss21.getText().toString());
+
+
+        json.put("ss22", bi.ss22a.isChecked() ? "1"
+                : bi.ss22b.isChecked() ? "2"
+                : "0");
+
+
+        json.put("ss23", bi.ss23a.isChecked() ? "1"
+                : bi.ss23b.isChecked() ? "2"
+                : bi.ss2398.isChecked() ? "98"
+                : "0");
+        json.put("ss23ax", bi.ss23ax.getText().toString());
+        json.put("ss23bx", bi.ss23bx.getText().toString());
+
+
+        json.put("ss24", bi.ss24a.isChecked() ? "1"
+                : bi.ss24b.isChecked() ? "2"
+                : "0");
+
+
+        json.put("ss25a", bi.ss25a.getText().toString());
+        json.put("ss25b", bi.ss25b.getText().toString());
+        json.put("ss25c", bi.ss25c.getText().toString());
+        json.put("ss25d", bi.ss25d.getText().toString());
+        json.put("ss25e", bi.ss25e.getText().toString());
+        json.put("ss25f", bi.ss25f.getText().toString());
+        json.put("ss25g", bi.ss25g.getText().toString());
+        json.put("ss2598", bi.ss2598.isChecked() ? "98" : "0");
+
+
+        json.put("ss26", bi.ss26a.isChecked() ? "1"
+                : bi.ss26b.isChecked() ? "2"
+                : bi.ss2698.isChecked() ? "98"
+                : "0");
+
+        json.put("ss28", bi.ss28.getText().toString());
+
 
         MainApp.fc.setsM(String.valueOf(json));
 

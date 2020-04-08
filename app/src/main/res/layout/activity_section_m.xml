@@ -744,9 +744,9 @@
                             android:text="@string/ss12b" />
 
                         <RadioButton
-                            android:id="@+id/ss12c"
+                            android:id="@+id/ss1298"
                             style="@style/radiobutton"
-                            android:text="@string/ss12c" />
+                            android:text="@string/dkn" />
 
                     </RadioGroup>
 
