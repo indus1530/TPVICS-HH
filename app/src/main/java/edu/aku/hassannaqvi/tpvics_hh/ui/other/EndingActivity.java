@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
@@ -39,7 +38,6 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusd.setEnabled(false);
             bi.istatuse.setEnabled(false);
             bi.istatusf.setEnabled(false);
-            bi.istatusg.setEnabled(false);
             bi.istatus96.setEnabled(false);
         } else {
             bi.istatusa.setEnabled(false);
@@ -48,7 +46,6 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusd.setEnabled(true);
             bi.istatuse.setEnabled(true);
             bi.istatusf.setEnabled(true);
-            bi.istatusg.setEnabled(true);
             bi.istatus96.setEnabled(true);
         }
 
@@ -75,7 +72,6 @@ public class EndingActivity extends AppCompatActivity {
                 : bi.istatusd.isChecked() ? "4"
                 : bi.istatuse.isChecked() ? "5"
                 : bi.istatusf.isChecked() ? "6"
-                : bi.istatusg.isChecked() ? "7"
                 : bi.istatus96.isChecked() ? "96"
                 : "0");
 
