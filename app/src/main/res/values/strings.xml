@@ -2898,6 +2898,7 @@
     <string name="ss24"> ss24: کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="ss24a"> ہاں</string>
     <string name="ss24b">  نہیں</string>
+
     <string name="ss25"> ss25: اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے  اگر کوئی نہیں تو 000 ؟</string>
     <string name="ss25a"> مال مویشی (گائے اور بیل) </string>
     <string name="ss25b"> گھوڑے/گدھے/خچر</string>
@@ -2906,15 +2907,21 @@
     <string name="ss25e"> مرغیاں</string>
     <string name="ss25f"> بھینسیں</string>
     <string name="ss25g"> اونٹ</string>
-    <string name="ss26"> ss26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
+
+    <string name="ss26"> SS26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
     <string name="ss27_title"> SS27: جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اور پھر اس گھر میں موجود 12 – 23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
     <string name="ss26a"> ہاں</string>
     <string name="ss26b"> نہیں</string>
-    <string name="ss27"> ss27: وقت ریکار ڈ کریں   </string>
-    <string name="ss28"> ss28: انٹرویو کرنے والے کے مشاہدات                           (اگر کوئی)                                                                                                                           </string>
-    <string name="ss21a">  کمرے</string>
+
+    <string name="ss27"> SS27: وقت ریکار ڈ کریں   </string>
+    <string name="ss28"> SS28: اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+    <string name="ss21a"> کمرے </string>
+
+
     <string name="uf01"> uf01: جغرافیائی علاقہ </string>
+
     <string name="uf02"> uf02: صوبہ </string>
+
     <string name="uf03"> uf03: ضلع </string>
     <string name="uf04"> uf04: شہر</string>
     <string name="uf05"> uf05: گاؤں</string>
