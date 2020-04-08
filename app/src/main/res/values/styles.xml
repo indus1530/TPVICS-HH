@@ -249,6 +249,20 @@
         <item name="android:typeface">serif</item>
     </style>
 
+
+    <style name="vradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="hradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textSize">25px</item>
         <item name="android:layout_width">match_parent</item>
@@ -389,6 +403,18 @@
         <item name="android:orientation">vertical</item>
         <item name="android:layout_margin">0dp</item>
         <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="vlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="hlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
     </style>
 
     <!--Card View Start-->

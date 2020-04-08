@@ -403,6 +403,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- hh13b  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa110"
@@ -430,6 +431,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- hh14  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa111"
@@ -446,55 +448,300 @@
                             android:layout_weight="1"
                             android:text="@string/hh14" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/hh14"
-                            style="@style/EditTextAlphaNmeric"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/year" />
+                            android:hint="@string/year"
+                            android:maxLength="2"
+                            app:maxValue="99"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- c101  Input   -->
+
+                <!-- hh15  Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVc101"
+                    android:id="@+id/cvhh15"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/vlinearlayout">
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/c101" />
+                            android:text="@string/hh15" />
+
+                        <RadioGroup
+                            android:id="@+id/hh15"
+                            style="@style/hradiogroup">
+
+                            <RadioButton
+                                android:id="@+id/hh15a"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/hh15a" />
+
+                            <RadioButton
+                                android:id="@+id/hh15b"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/hh15b" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh16  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvhh16"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh16" />
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                style="@style/i_textviewhint"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/name" />
+
+                            <EditText
+                                android:id="@+id/hh16a"
+                                style="@style/EditTextAlpha"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/name"
+                                android:maxLength="30" />
+
+                            <TextView
+                                style="@style/i_textviewhint"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/num" />
+
+                            <EditText
+                                android:id="@+id/hh16b"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/contactnum"
+                                android:maxLength="11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh17  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvhh17"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh17" />
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                style="@style/i_textviewhint"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/name" />
+
+                            <EditText
+                                android:id="@+id/hh17a"
+                                style="@style/EditTextAlpha"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/name"
+                                android:maxLength="30" />
+
+                            <TextView
+                                style="@style/i_textviewhint"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/num" />
+
+                            <EditText
+                                android:id="@+id/hh17b"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/contactnum"
+                                android:maxLength="11" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh18  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVhh18"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh18" />
+
+                        <RadioGroup
+                            android:id="@+id/hh18"
+                            style="@style/hradiogroup">
+
+                            <RadioButton
+                                android:id="@+id/hh18a"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/hh18a" />
+
+                            <RadioButton
+                                android:id="@+id/hh18b"
+                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/hh18b" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh19  Input & Check   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvhh19"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh19" />
 
                         <TextView
                             style="@style/i_textviewhint"
-                            android:text="@string/c101a" />
+                            android:text="@string/hh19h" />
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                style="@style/i_textviewhint"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/hh19a" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/hh19a"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{hh19b.checked ? false : true}'
+                                android:hint="@string/num"
+                                android:maxLength="2"
+                                android:text='@{hh19b.checked ? "" : hh19a.getText().toString }'
+                                app:maxValue="94"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/hh19b"
+                            style="@style/checkbox"
+                            android:tag="-1"
+                            android:text="@string/hh19b" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh20  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvhh20"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh20" />
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:text="@string/hh20h" />
 
                         <RadioGroup
-                            android:id="@+id/c101a"
-                            style="@style/radiogroup"
-                            android:orientation="horizontal">
+                            android:id="@+id/hh20"
+                            style="@style/hradiogroup">
 
                             <RadioButton
-                                android:id="@+id/c101aa"
+                                android:id="@+id/hh20a"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/c101aa" />
+                                android:text="@string/hh20a" />
 
                             <RadioButton
-                                android:id="@+id/c101ab"
+                                android:id="@+id/hh20b"
                                 style="@style/radiobutton"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:text="@string/c101ab" />
+                                android:text="@string/hh20b" />
 
                         </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh21  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvhh21"
+                    style="@style/cardView"
+                    android:visibility='@{hh20a.checked ? View.VISIBLE : View.GONE}'>
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/hh201" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/hh21"
+                            style="@style/EditTextNum"
+                            android:hint="@string/num"
+                            android:maxLength="2"
+                            android:text='@{hh20a.checked ? hh21.getText().toString : ""}'
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -517,7 +764,7 @@
                     android:background="@android:color/holo_red_light"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview"
-                    android:visibility="@{c101ab.checked ? View.VISIBLE : View.GONE}" />
+                    android:visibility="@{hh18b.checked ? View.VISIBLE : View.GONE}" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
 
                 <Button
@@ -526,7 +773,7 @@
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
-                    android:visibility="@{c101aa.checked ? View.VISIBLE : View.GONE}" />
+                    android:visibility="@{hh18a.checked ? View.VISIBLE : View.GONE}" />
 
             </LinearLayout>
 

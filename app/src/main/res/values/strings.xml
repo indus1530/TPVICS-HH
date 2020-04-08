@@ -2530,23 +2530,34 @@
     <string name="hh12"> hh12: نٹرویو کا وقت</string>
     <string name="hh13a"> hh13A: جواب دہندہ کانام </string>
     <string name="hh13b"> hh13B: جواب دہندگان کا رابطہ نمبر </string>
-    <string name="hh14"> hh14: جواب دہندہ کی عمر مکمل سالوں میں</string>
-    <string name="hh15"> hh15: کیا جوابدہندہ گھر کا سربراہ ہے</string>
-    <string name="hh16"> hh16: گھرکےسربراہ کا نام اور فون  نمبر</string>
-    <string name="hh15a"> ہاں</string>
+    <string name="hh14"> HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
+    <string name="hh15"> HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
+    <string name="hh16"> HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
+    <string name="hh15a"> ہاں </string>
+    <string name="hh15b"> نہیں</string>
+
     <string name="hh16a"> گھر کے سربراہ کا نام</string>
     <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
-    <string name="hh17"> hh17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
+
+    <string name="hh17"> HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
     <string name="hh17a"> گھر کے سربراہ کا نام</string>
-    <string name="hh15b"> نہیں</string>
     <string name="hh17b"> گھر کے سربراہ کا فون  نمبر</string>
-    <string name="hh18"> hh18: کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں؟</string>
+
+    <string name="hh18"> HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے</string>
     <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
-    <string name="hh19"> hh19: افراد کی تعداد   :      اس گھرانے میں کتنے افراد رہتے ہیں؟ نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں۔              </string>
-    <string name="hh20"> hh20: کیا اس گھرانے میں کوئی12-23 مہینے کی عمر کا بچہ موجود ہے؟  (یعنی ، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں ، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں) </string>
-    <string name="hh20_1"> ہاں</string>
-    <string name="hh20_2"> نہیں</string>
+
+    <string name="hh19"> HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
+    <string name="hh19a"> افراد کی تعداد: </string>
+    <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
+
+    <string name="hh20"> HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
+    <string name="hh20h"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
+    <string name="hh20a"> ہاں </string>
+    <string name="hh20b"> نہیں </string>
+
+    <string name="hh201"> HH201: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
     <string name="hh21"> HH21: گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh21h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
@@ -2558,7 +2569,6 @@
     <string name="hh21f"> گھر نہیں ملا</string>
     <string name="hh21x"> دیگر وضاحت کریں </string>
 
-    <string name="hh20a"> hh20a: اگر ہاں، تو 12-23 مہینے کی عمر کے بچوں کی تعداد بتائیں</string>
     <string name="ch_title"> ch_title: بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج</string>
     <string name="ch_cluster"> ch_cluster: کلسٹر نمبر</string>
     <string name="ch_hno"> ch_hno: گھر کا نمبر</string>

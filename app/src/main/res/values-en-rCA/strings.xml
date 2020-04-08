@@ -2501,10 +2501,18 @@
     <string name="hh18"> hh18: May I start the interview now?</string>
     <string name="hh18a"> Yes, Permission is Given</string>
     <string name="hh18b"> No, Permission is not Given</string>
-    <string name="hh19"> hh19: How many members are living in this household (NUMBER OF PERSONS) (If 95 or more, record ‘95’) Note for enumorators: Persons who live in this dwelling/ compound and usually share a meal together </string>
-    <string name="hh20"> hh20:  Does this HH have children 12-23 months years of age? (i.e., children who have reached their first birthday, but not their second birthday)</string>
-    <string name="hh20_1"> Yes</string>
-    <string name="hh20_2"> No</string>
+
+    <string name="hh19"> HH19: How many members are living in this household ? </string>
+    <string name="hh19h"> Note for enumorators: Persons who live in this dwelling / compound and usually share a meal together </string>
+    <string name="hh19a"> Number of Persons </string>
+    <string name="hh19b"> If 95 or more </string>
+
+    <string name="hh20"> HH20:  Does this HH have children 12-23 months years of age ? </string>
+    <string name="hh20h"> i.e., children who have reached their first birthday, but not their second birthday </string>
+    <string name="hh20a"> Yes </string>
+    <string name="hh20b"> No </string>
+
+    <string name="hh201"> HH201: If Yes, Numbers of childrens 12-23 months:</string>
 
     <string name="hh21"> HH21: Result of Household Questionnaire interview . </string>
     <string name="hh21h"> Note: Discuss any result not completed with supervisor. </string>
@@ -2516,7 +2524,6 @@
     <string name="hh21f"> Dwelling not found</string>
     <string name="hh21x"> Other (specify) </string>
 
-    <string name="hh20a"> hh20a: If Yes, Numbers of childrens 12-23 months:</string>
     <string name="ch_title"> ch_title: Enter 12-23 Months Children Information</string>
     <string name="ch_cluster"> ch_cluster: Cluster Number</string>
     <string name="ch_hno"> ch_hno: Household Number</string>
