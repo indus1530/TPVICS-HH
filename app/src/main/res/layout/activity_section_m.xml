@@ -2596,227 +2596,233 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- ss25  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25cv"
-                style="@style/cardView">
+            <LinearLayout
+                android:id="@+id/ss25cvall"
+                style="@style/vlinearlayout">
 
-                <LinearLayout style="@style/vlinearlayout">
+                <!-- ss25  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25cv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/ss25" />
+                    <LinearLayout style="@style/vlinearlayout">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/ss25" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25a  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25acv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25a  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25acv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25a" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25a"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25a" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25a"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25b  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25bcv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25b  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25bcv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25b" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25b"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25b" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25b"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25c  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25ccv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25c  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25ccv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25c" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25c"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25c" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25c"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25d  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25dcv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25d  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25dcv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25d" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25d"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25d" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25d"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25e  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25ecv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25e  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25ecv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25e" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25e"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25e" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25e"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25f  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25fcv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25f  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25fcv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25f" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25f"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25f" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25f"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss25g  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss25gcv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss25g  EditText   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss25gcv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/ss25g" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <EditText
-                        android:id="@+id/ss25g"
-                        style="@style/EditTextNum"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:hint="@string/num"
-                        android:maxLength="3" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/ss25g" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/ss25g"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/num"
+                            android:maxLength="3" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!-- ss2598  EditText   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss2598cv"
-                style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/hlinearlayout">
+                <!-- ss2598  CheckBox   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ss2598cv"
+                    style="@style/cardView">
 
-                    <TextView
-                        style="@style/i_textviewhint"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/dkn" />
+                    <LinearLayout style="@style/hlinearlayout">
 
-                    <CheckBox
-                        android:id="@+id/ss2598"
-                        style="@style/checkbox"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:tag="-1" />
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/dkn" />
 
-                </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/ss2598"
+                            style="@style/checkbox"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:tag="-1" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
 
             <!-- ss26  Radio   -->

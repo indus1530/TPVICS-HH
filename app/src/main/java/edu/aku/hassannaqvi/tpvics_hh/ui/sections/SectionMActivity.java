@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.validatorcrawler.aliazaz.Clear;
@@ -28,25 +29,97 @@ public class SectionMActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_m);
         bi.setCallback(this);
-
         setUIComponents();
+
+
     }
+
 
     private void setUIComponents() {
 
-        bi.m109.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.m109b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVm110);
+        bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss04b.getId()) {
+                Clear.clearAllFields(bi.ss05cv);
+                bi.ss05cv.setVisibility(View.GONE);
+            } else {
+                bi.ss05cv.setVisibility(View.VISIBLE);
             }
         }));
 
-        bi.m111.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.m111b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVm112);
+
+        bi.ss07.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss07h.getId() || i == bi.ss07i.getId()) {
+                Clear.clearAllFields(bi.ss08cv);
+                Clear.clearAllFields(bi.ss09cv);
+                Clear.clearAllFields(bi.ss10cv);
+                Clear.clearAllFields(bi.ss11cv);
+                Clear.clearAllFields(bi.ss12cv);
+                bi.ss08cv.setVisibility(View.GONE);
+                bi.ss09cv.setVisibility(View.GONE);
+                bi.ss10cv.setVisibility(View.GONE);
+                bi.ss11cv.setVisibility(View.GONE);
+                bi.ss12cv.setVisibility(View.GONE);
+            } else {
+                bi.ss08cv.setVisibility(View.VISIBLE);
+                bi.ss09cv.setVisibility(View.VISIBLE);
+                bi.ss10cv.setVisibility(View.VISIBLE);
+                bi.ss11cv.setVisibility(View.VISIBLE);
+                bi.ss12cv.setVisibility(View.VISIBLE);
             }
         }));
+
+
+        bi.ss09.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss09b.getId()) {
+                Clear.clearAllFields(bi.ss10cv);
+                Clear.clearAllFields(bi.ss11cv);
+                Clear.clearAllFields(bi.ss12cv);
+                bi.ss10cv.setVisibility(View.GONE);
+                bi.ss11cv.setVisibility(View.GONE);
+                bi.ss12cv.setVisibility(View.GONE);
+            } else {
+                bi.ss10cv.setVisibility(View.VISIBLE);
+                bi.ss11cv.setVisibility(View.VISIBLE);
+                bi.ss12cv.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bi.ss11.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss11b.getId()) {
+                Clear.clearAllFields(bi.ss12cv);
+                Clear.clearAllFields(bi.ss13cv);
+                bi.ss12cv.setVisibility(View.GONE);
+                bi.ss13cv.setVisibility(View.GONE);
+            } else {
+                bi.ss12cv.setVisibility(View.VISIBLE);
+                bi.ss13cv.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bi.ss22.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss22b.getId()) {
+                Clear.clearAllFields(bi.ss23cv);
+                bi.ss23cv.setVisibility(View.GONE);
+            } else {
+                bi.ss23cv.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
+        bi.ss24.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ss24b.getId()) {
+                Clear.clearAllFields(bi.ss25cvall);
+                bi.ss25cvall.setVisibility(View.GONE);
+            } else {
+                bi.ss25cvall.setVisibility(View.VISIBLE);
+            }
+        }));
+
+
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -65,6 +138,7 @@ public class SectionMActivity extends AppCompatActivity {
         }
     }
 
+
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -77,6 +151,7 @@ public class SectionMActivity extends AppCompatActivity {
         }
 
     }
+
 
     private void SaveDraft() throws JSONException {
 
@@ -426,16 +501,19 @@ public class SectionMActivity extends AppCompatActivity {
 
     }
 
+
     private boolean formValidation() {
 
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionM);
 
     }
 
+
     public void BtnEnd() {
 
         Util.openEndActivity(this);
     }
+
 
     @Override
     public void onBackPressed() {
