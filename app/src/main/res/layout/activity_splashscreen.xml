@@ -28,7 +28,19 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/splashText"
+            android:text="@string/splashText1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView7"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/splashText2"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp" />
 

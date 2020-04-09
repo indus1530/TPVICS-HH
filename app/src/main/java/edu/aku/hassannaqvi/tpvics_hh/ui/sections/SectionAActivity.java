@@ -132,6 +132,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         }
     }
 
+
     private boolean UpdateDB() {
         long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
@@ -145,6 +146,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         }
 
     }
+
 
     private void SaveDraft() throws JSONException {
 

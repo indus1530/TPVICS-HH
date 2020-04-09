@@ -2591,13 +2591,13 @@
     <string name="ch04f"> عورت </string>
 
     <string name="ch05"> CH05: تاریخ پیدائش </string>
-    <string name="ch05dd"> تاریخ پیدائش- دن</string>
-    <string name="ch05mm"> تاریخ پیدائش - مہینہ</string>
-    <string name="ch05yy"> تاریخ پیدائش - سال</string>
+    <string name="ch05dd"> دن </string>
+    <string name="ch05mm"> مہینہ </string>
+    <string name="ch05yy"> سال </string>
 
-    <string name="ch06"> CH06: عمر مہینوں مہیں</string>
+    <string name="ch06"> CH06: عمر مہینوں مہیں </string>
 
-    <string name="ch07"> CH07: بچے کی عمر کی تصدیق کا زریعہ</string>
+    <string name="ch07"> CH07: بچے کی عمر کی تصدیق کا زریعہ </string>
     <string name="ch07a"> پیدائش کا سرٹیفکیٹ </string>
     <string name="ch07b"> حفاظتی ٹیکوں کا کارڈ </string>
     <string name="ch07c"> جوابدہندہ </string>
