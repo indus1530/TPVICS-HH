@@ -105,7 +105,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
                 bi.hh20cv.setVisibility(View.VISIBLE);
                 bi.hh21cv.setVisibility(View.VISIBLE);
             } else {
-                Clear.clearAllFields(bi.hh18cv);
+                Clear.clearAllFields(bi.hh19cv);
                 Clear.clearAllFields(bi.hh20cv);
                 Clear.clearAllFields(bi.hh21cv);
                 bi.hh19cv.setVisibility(View.GONE);
