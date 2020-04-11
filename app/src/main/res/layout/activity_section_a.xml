@@ -11,6 +11,7 @@
             type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity" />
     </data>
 
+
     <ScrollView
         style="@style/i_scrollview"
         android:layoutDirection="rtl"
@@ -18,17 +19,12 @@
 
         <LinearLayout
             android:id="@+id/fldGrpSectionA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            style="@style/vlinearlayout">
 
             <!-- HEAD   -->
             <androidx.cardview.widget.CardView style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
                         style="@style/textView3Head"
@@ -38,15 +34,13 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- CLUSTER CHECK  -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa101"
                 style="@style/cardView">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <LinearLayout style="@style/hlinearlayout">
 
 
                     <EditText
@@ -76,18 +70,17 @@
 
             <LinearLayout
                 android:id="@+id/fldGrpSectionA01"
-                style="@style/linearlayout_view"
+                style="@style/vlinearlayout"
                 android:visibility="gone"
                 tools:visibility="visible">
 
 
                 <!-- Province -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh03cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <!--hh03-->
                         <TextView
@@ -116,12 +109,11 @@
 
 
                 <!-- District  -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh04cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <!--hh04-->
                         <TextView
@@ -150,12 +142,11 @@
 
 
                 <!-- Tehsil  -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh05cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <!--hh05-->
                         <TextView
@@ -184,12 +175,11 @@
 
 
                 <!-- Place   -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh06cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <!--hh06-->
                         <TextView
@@ -218,22 +208,18 @@
 
 
                 <!-- Cluster Check   -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh07cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/vlinearlayout">
 
                         <!--hh07-->
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/hh07" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                        <LinearLayout style="@style/hlinearlayout">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/hh07"
@@ -263,22 +249,18 @@
 
 
                 <!-- HouseHold Check   -->
-                <androidx.cardview.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh08cv"
+                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/vlinearlayout">
 
                         <!--hh08-->
                         <TextView
                             style="@style/i_textview"
                             android:text="@string/hh08" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                        <LinearLayout style="@style/hlinearlayout">
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/hh08"
@@ -312,26 +294,24 @@
 
             <LinearLayout
                 android:id="@+id/fldGrpSectionA02"
-                style="@style/linearlayout_view_wt_bound"
+                style="@style/vlinearlayout"
                 android:visibility="gone"
                 tools:visibility="visible">
+
 
                 <!-- checkHHHeadpresen   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpcih110"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <LinearLayout style="@style/vlinearlayout">
 
                         <TextView
                             android:id="@+id/hhName"
                             style="@style/i_textview"
                             android:padding="10dp"
                             android:text="@string/checkHHpresent"
-                            android:textAlignment="center" />
+                            android:gravity="center" />
 
                         <CheckBox
                             android:id="@+id/checkHHHeadpresent"
@@ -343,22 +323,21 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- newHHheadname   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpcih110a"
                     style="@style/cardView"
                     android:visibility='@{checkHHHeadpresent.checked? View.GONE : View.VISIBLE}'>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
                             style="@style/i_textview"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/newHHheadname" />
 
                         <EditText
@@ -380,10 +359,7 @@
                     android:id="@+id/fldGrpCVa109"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
                             style="@style/i_textview"
@@ -409,10 +385,7 @@
                     android:id="@+id/fldGrpCVa110"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
                             style="@style/i_textview"
@@ -437,10 +410,7 @@
                     android:id="@+id/fldGrpCVa111"
                     style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                    <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
                             style="@style/i_textview"
@@ -637,7 +607,7 @@
 
                 <!-- hh19  Input & Check   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh19"
+                    android:id="@+id/hh19cv"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
@@ -686,7 +656,7 @@
 
                 <!-- hh20  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh20"
+                    android:id="@+id/hh20cv"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
@@ -726,7 +696,7 @@
 
                 <!-- hh21  Radio   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh21"
+                    android:id="@+id/hh21cv"
                     style="@style/cardView"
                     android:visibility='@{hh20a.checked ? View.VISIBLE : View.GONE}'>
 
