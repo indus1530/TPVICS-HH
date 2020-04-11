@@ -7,6 +7,9 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -17,8 +20,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
@@ -100,16 +101,16 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         bi.hh18.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.hh18a.getId()) {
-                bi.cvhh19.setVisibility(View.VISIBLE);
-                bi.cvhh20.setVisibility(View.VISIBLE);
-                bi.cvhh21.setVisibility(View.VISIBLE);
+                bi.hh19cv.setVisibility(View.VISIBLE);
+                bi.hh20cv.setVisibility(View.VISIBLE);
+                bi.hh21cv.setVisibility(View.VISIBLE);
             } else {
-                Clear.clearAllFields(bi.cvhh19);
-                Clear.clearAllFields(bi.cvhh20);
-                Clear.clearAllFields(bi.cvhh21);
-                bi.cvhh19.setVisibility(View.GONE);
-                bi.cvhh20.setVisibility(View.GONE);
-                bi.cvhh21.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.hh18cv);
+                Clear.clearAllFields(bi.hh20cv);
+                Clear.clearAllFields(bi.hh21cv);
+                bi.hh19cv.setVisibility(View.GONE);
+                bi.hh20cv.setVisibility(View.GONE);
+                bi.hh21cv.setVisibility(View.GONE);
             }
 
         }));

@@ -436,7 +436,7 @@
 
                 <!-- hh15  Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh15"
+                    android:id="@+id/hh15cv"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
@@ -472,7 +472,7 @@
 
                 <!-- hh16  Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh16"
+                    android:id="@+id/hh16cv"
                     style="@style/cardView"
                     android:visibility='@{hh15a.checked ? View.VISIBLE : View.GONE }'>
 
@@ -523,7 +523,7 @@
 
                 <!-- hh17  Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cvhh17"
+                    android:id="@+id/hh17cv"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
@@ -725,11 +725,9 @@
 
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/hlinearlayout"
                 android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="20dp">
 
                 <Button
                     android:id="@+id/btnEnd"
