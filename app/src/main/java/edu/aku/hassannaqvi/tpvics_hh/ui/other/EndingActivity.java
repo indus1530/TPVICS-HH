@@ -4,18 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityEndingBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionE2Activity;
 
 public class EndingActivity extends AppCompatActivity {
 
@@ -77,7 +77,6 @@ public class EndingActivity extends AppCompatActivity {
 
         MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
         MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        SectionE2Activity.noOfPreCounter = 0;
     }
 
     public boolean UpdateDB() {
