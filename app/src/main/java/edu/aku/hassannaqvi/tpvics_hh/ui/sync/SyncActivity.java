@@ -32,19 +32,11 @@ import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.tpvics_hh.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRAContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRA_PREContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MortalityContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.tpvics_hh.get.GetAllData;
 import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
-import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllData;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncDevice;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
@@ -142,8 +134,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         if (networkInfo != null && networkInfo.isConnected()) {
 
             DatabaseHelper db = new DatabaseHelper(this);
-            //syncStatus.setText(null);
-//            new SyncDevice(this).execute();
+            /*
             new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
             Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
@@ -251,7 +242,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     MainApp._HOST_URL + MainApp._SERVER_URL,
                     MWRAContract.MWRATable.TABLE_NAME,
                     db.getUnsyncedMWRA(), 6, uploadListAdapter, uploadlist
-            ).execute();
+            ).execute();*/
 
 
             bi.noDataItem.setVisibility(View.GONE);
@@ -398,8 +389,6 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         @Override
         protected void onPostExecute(String s) {
             new Handler().postDelayed(() -> {
-
-//                    populateSpinner(mContext);
 
                 editor.putBoolean("flag", true);
                 editor.commit();
