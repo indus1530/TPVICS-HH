@@ -103,7 +103,7 @@ public class SectionDActivity extends AppCompatActivity {
         if (serial == 1) {
             Clear.clearAllFields(bi.d103, false);
             bi.d103a.setChecked(true);
-            bi.d109.setMinvalue(15);
+            bi.ch06.setMinvalue(15);
         }
 
     }
@@ -204,12 +204,12 @@ public class SectionDActivity extends AppCompatActivity {
         sd.put("d107", motherSerial);
         fmc.setMother_serial(motherSerial);
 
-        sd.put("d108a", bi.d108a.getText().toString());
-        sd.put("d108b", bi.d108b.getText().toString());
-        sd.put("d108c", bi.d108c.getText().toString());
-        sd.put("d109", bi.d109.getText().toString());
-        fmc.setAge(bi.d109.getText().toString());
-        fmc.setMonthfm(bi.d109a.getText().toString().trim().isEmpty() ? "0" : bi.d109a.getText().toString());
+        sd.put("ch05a", bi.ch05a.getText().toString());
+        sd.put("ch05b", bi.ch05b.getText().toString());
+        sd.put("ch05c", bi.ch05c.getText().toString());
+        sd.put("ch06", bi.ch06.getText().toString());
+        fmc.setAge(bi.ch06.getText().toString());
+        fmc.setMonthfm(bi.ch06a.getText().toString().trim().isEmpty() ? "0" : bi.ch06a.getText().toString());
 
         sd.put("d110", bi.d110a.isChecked() ? "0"
                 : bi.d110b.isChecked() ? "1"
@@ -267,12 +267,12 @@ public class SectionDActivity extends AppCompatActivity {
         else {
             if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionD))
                 return false;
-            if (!Validator.emptyEditTextPicker(this, bi.d109))
+            if (!Validator.emptyEditTextPicker(this, bi.ch06))
                 return false;
             if (!checkingParentsAge()) {
                 String msg = "Requires difference of 10Years from parent age!!";
                 Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-                bi.d109.setError("Less then Parent Age");
+                bi.ch06.setError("Less then Parent Age");
                 return false;
             }
             return true;
@@ -303,7 +303,7 @@ public class SectionDActivity extends AppCompatActivity {
         if (fAge == 0 && mAge == 0) return true;
         int maxAge = fAge > mAge ? mAge != 0 ? mAge : fAge : fAge != 0 ? fAge : mAge;
 
-        return Integer.valueOf(Objects.requireNonNull(bi.d109.getText()).toString().trim()) <= maxAge - 10;
+        return Integer.valueOf(Objects.requireNonNull(bi.ch06.getText()).toString().trim()) <= maxAge - 10;
     }
 
     public void BtnEnd() {
@@ -312,7 +312,7 @@ public class SectionDActivity extends AppCompatActivity {
 
     private void setListeners() {
 
-        EditText[] txtListener = new EditText[]{bi.d108a, bi.d108b};
+        EditText[] txtListener = new EditText[]{bi.ch05a, bi.ch05b};
         for (EditText txtItem : txtListener) {
 
             txtItem.addTextChangedListener(new TextWatcher() {
@@ -323,8 +323,8 @@ public class SectionDActivity extends AppCompatActivity {
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    bi.d109.setText(null);
-                    bi.d109a.setText(null);
+                    bi.ch06.setText(null);
+                    bi.ch06a.setText(null);
                 }
 
                 @Override
@@ -335,7 +335,7 @@ public class SectionDActivity extends AppCompatActivity {
 
         }
 
-        bi.d108c.addTextChangedListener(new TextWatcher() {
+        bi.ch05c.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -343,27 +343,25 @@ public class SectionDActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                bi.d109.setEnabled(false);
-                bi.d109.setText(null);
-                bi.d109a.setEnabled(false);
-                bi.d109a.setText(null);
-                /*if (bi.d108a.getText().toString().isEmpty() || bi.d108b.getText().toString().isEmpty() || bi.d108c.getText().toString().isEmpty())
-                    return;*/
-                if (!bi.d108a.isRangeTextValidate() || !bi.d108b.isRangeTextValidate() || !bi.d108c.isRangeTextValidate())
+                bi.ch06.setEnabled(false);
+                bi.ch06.setText(null);
+                bi.ch06a.setEnabled(false);
+                bi.ch06a.setText(null);
+                if (!bi.ch05a.isRangeTextValidate() || !bi.ch05b.isRangeTextValidate() || !bi.ch05c.isRangeTextValidate())
                     return;
-                if (bi.d108a.getText().toString().equals("00") && bi.d108b.getText().toString().equals("00") && bi.d108c.getText().toString().equals("00")) {
-                    bi.d109.setEnabled(true);
-                    bi.d109a.setEnabled(true);
+                if (bi.ch05a.getText().toString().equals("00") && bi.ch05b.getText().toString().equals("00") && bi.ch05c.getText().toString().equals("00")) {
+                    bi.ch06.setEnabled(true);
+                    bi.ch06a.setEnabled(true);
                     return;
                 }
-                int day = bi.d108a.getText().toString().equals("00") ? 0 : Integer.valueOf(bi.d108a.getText().toString());
-                int month = Integer.valueOf(bi.d108b.getText().toString());
-                int year = Integer.valueOf(bi.d108c.getText().toString());
+                int day = bi.ch05a.getText().toString().equals("00") ? 0 : Integer.parseInt(bi.ch05a.getText().toString());
+                int month = Integer.parseInt(bi.ch05b.getText().toString());
+                int year = Integer.parseInt(bi.ch05c.getText().toString());
 
                 AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) return;
-                bi.d109.setText(String.valueOf(age.getYear()));
-                bi.d109a.setText(String.valueOf(age.getMonth()));
+                bi.ch06.setText(String.valueOf(age.getYear()));
+                bi.ch06a.setText(String.valueOf(age.getMonth()));
             }
 
             @Override
@@ -381,7 +379,7 @@ public class SectionDActivity extends AppCompatActivity {
             }
         });
 
-        bi.d109.addTextChangedListener(new TextWatcher() {
+        bi.ch06.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -389,8 +387,8 @@ public class SectionDActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (bi.d109.getText().toString().isEmpty()) return;
-                int calAge = Integer.valueOf(bi.d109.getText().toString());
+                if (bi.ch06.getText().toString().isEmpty()) return;
+                int calAge = Integer.parseInt(bi.ch06.getText().toString());
                 if (Integer.signum(calAge) == -1) return;
                 personInfoFunctionality(calAge);
             }
