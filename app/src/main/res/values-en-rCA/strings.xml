@@ -31,19 +31,12 @@
     <string name="tnheading">SECTION N: WATER AND SANITATION</string>
     <string name="toheading">SECTION O: HANDWASHING</string>
 
-    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up\n
-    Empowerment and Care  Strategies  to Address Health and Survival\n
-    Centre of Excellence Women &amp; Child Health\n
-    Aga Khan University, Karachi, Pakistan</string>
+    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up</string>
 
-    <string name="splashText1"> Coverage Evaluation Survey, Pakistan, 2020 </string>
-    <string name="splashText2"> HOUSEHOLD QUESTIONNAIRE </string>
+    <string name="splashText2">"    Empowerment and Care  Strategies  to Address Health and Survival"</string>
 
-    <string name="title_activity_family_members_list">Family Members List</string>
-
-    <string name="sM"> UC </string>
-    <string name="yes"> Yes </string>
-    <string name="no"> No </string>
+    <string name="sM">"    Centre of Excellence Women &amp; Child Health"</string>
+    <string name="no">"    Aga Khan University, Karachi, Pakistan"</string>
     <string name="dkn"> Don\'t Know </string>
     <string name="none"> None </string>
     <string name="never"> Never </string>
@@ -137,7 +130,7 @@
     <string name="c101bb"> No </string>
 
     <string name="d101"> D101:\t Member Serial Number </string>
-    <string name="d101name"> Name &amp; Serial Number: </string>
+    <string name="d101name">Name &amp; Serial Number</string>
 
     <string name="d102"> D102:\t Name </string>
     <string name="d102a"> Please give me the names of the persons who usually live in your household, starting with the head of the household. </string>
@@ -479,7 +472,7 @@
     <string name="f125"> F125:\t Will you please name any danger signs/problems that you are aware of ? </string>
     <string name="f125hint"> DO NOT READ LIST OR PROMPT with any suggestions such as Any other danger signs </string>
     <string name="f125a"> Vaginal bleeding </string>
-    <string name="f125b"> Severe headache &amp; vision problems </string>
+    <string name="f125b">Severe headache &amp; vision problems</string>
     <string name="f125c"> High grade fever (&gt;101) </string>
     <string name="f125d"> Swollen hands/face/feet </string>
     <string name="f125e"> Reduced fatal movement </string>
@@ -501,7 +494,7 @@
 
     <string name="f128"> F128:\t What danger signs/problems did you experience during pregnancy with {NAME} ? </string>
     <string name="f128a"> Vaginal bleeding </string>
-    <string name="f128b"> Severe headache &amp; vision problems </string>
+    <string name="f128b">Severe headache &amp; vision problems</string>
     <string name="f128c"> High fever (&gt;101) </string>
     <string name="f128d"> Swollen hands/face/feet </string>
     <string name="f128e"> Reduced fetal movement </string>
@@ -2536,12 +2529,12 @@
     <string name="ch02"> ch02: Child Name</string>
     <string name="ch03"> ch03: Father Name</string>
     <string name="ch04"> ch04: Gender</string>
-    <string name="ch04m"> Male</string>
-    <string name="ch04f"> Female</string>
+    <string name="ch04a"> Male</string>
+    <string name="ch04b"> Female</string>
     <string name="ch05"> ch05: Date of Birth</string>
-    <string name="ch05dd"> Date of Birth - Day</string>
-    <string name="ch05mm"> Date of Birth - Month</string>
-    <string name="ch05yy"> Date of Birth - Years</string>
+    <string name="ch05a"> Date of Birth - Day</string>
+    <string name="ch05b"> Date of Birth - Month</string>
+    <string name="ch05c"> Date of Birth - Years</string>
     <string name="ch06"> ch06: Age in Months</string>
 
     <string name="ch07"> ch07: Child age Verification source</string>
@@ -2551,8 +2544,8 @@
     <string name="ch0796"> Other</string>
 
     <string name="ch08"> ch08: Is child eligible for Survey? </string>
-    <string name="ch08y"> Yes</string>
-    <string name="ch08n"> No</string>
+    <string name="ch08a"> Yes</string>
+    <string name="ch08b"> No</string>
     <string name="ch03b"> Mother Name</string>
 
 
@@ -3108,5 +3101,13 @@
     <string name="countNo"> No </string>
     <string name="countYes"> Yes </string>
     <string name="countAlertMsg"> Are you sure to continue </string>
+    <string name="splashText1">" Coverage Evaluation Survey, Pakistan, 2020 "</string>
+    <string name="title_activity_family_members_list">" Family Members List "</string>
+    <string name="yes">Yes</string>
+    <string name="hhsec">" Section H1: HouseHold Information "</string>
+    <string name="chsec">" Child Information "</string>
+    <string name="ss18c">" لکٹری کے تختے"</string>
+    <string name="ss18d">" کھجور  یاناریل کے پتے /بانس"</string>
+    <string name="ss18e_title">" تیار فرش "</string>
 
 </resources>

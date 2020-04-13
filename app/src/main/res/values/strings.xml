@@ -2534,7 +2534,7 @@
     <string name="hh15"> HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
     <string name="hh16"> HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
     <string name="hh15a"> ہاں </string>
-    <string name="hh15b"> نہیں</string>
+    <string name="hh15b"> نہیں </string>
 
     <string name="hh16a"> گھر کے سربراہ کا نام</string>
     <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
@@ -2587,13 +2587,13 @@
     <string name="ch03"> CH03: باپ کا نام </string>
 
     <string name="ch04"> CH04: جنس </string>
-    <string name="ch04m"> مرد </string>
-    <string name="ch04f"> عورت </string>
+    <string name="ch04a"> مرد </string>
+    <string name="ch04b"> عورت </string>
 
     <string name="ch05"> CH05: تاریخ پیدائش </string>
-    <string name="ch05dd"> تاریخ پیدائش- دن</string>
-    <string name="ch05mm"> تاریخ پیدائش - مہینہ</string>
-    <string name="ch05yy"> تاریخ پیدائش - سال</string>
+    <string name="ch05a"> تاریخ پیدائش- دن</string>
+    <string name="ch05b"> تاریخ پیدائش - مہینہ</string>
+    <string name="ch05c"> تاریخ پیدائش - سال</string>
 
     <string name="ch06"> CH06: عمر مہینوں مہیں</string>
 
@@ -2604,8 +2604,8 @@
     <string name="ch0796"> دیگر </string>
 
     <string name="ch08"> CH08: کیا بچہ اس سروے کے لیے اہل ہے </string>
-    <string name="ch08y"> ہاں </string>
-    <string name="ch08n"> نہیں </string>
+    <string name="ch08a"> ہاں </string>
+    <string name="ch08b"> نہیں </string>
     <string name="ch03b"> ماں کا نام </string>
 
 
@@ -3210,6 +3210,9 @@
     <string name="countNo"> نہیں </string>
     <string name="countYes"> جی ہاں </string>
     <string name="countAlertMsg"> یقینا! آپ جاری رکھنا چاہتے ہیں </string>
+    <string name="ss18g_title">Finished Floor</string>
+    <string name="ss18l">Bricks</string>
+    <string name="ss18m">Lime</string>
 
 
 </resources>
