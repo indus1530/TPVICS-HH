@@ -70,13 +70,13 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:gravity="center"
-                        android:text="@string/mwra"
+                        android:text="@string/under1_2"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
-                        android:id="@+id/mwra"
+                        android:id="@+id/under12"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"

@@ -180,13 +180,11 @@ public final class CreateTable {
             FamilyMembersContract.SingleMember.COLUMN_HHNO + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SERIAL_NO + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_NAME + " TEXT," +
-            FamilyMembersContract.SingleMember.COLUMN_RELATION_HH + " TEXT," +
+            FamilyMembersContract.SingleMember.COLUMN_FATHER_NAME + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_AGE + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_MONTH_FM + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_MOTHER_NAME + " TEXT," +
-            FamilyMembersContract.SingleMember.COLUMN_MOTHER_SERIAL + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_GENDER + " TEXT," +
-            FamilyMembersContract.SingleMember.COLUMN_MARITAL + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SD + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SYNCED + " TEXT," +
             FamilyMembersContract.SingleMember.COLUMN_SYNCED_DATE + " TEXT"

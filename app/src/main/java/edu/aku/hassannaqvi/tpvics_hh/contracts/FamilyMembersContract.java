@@ -16,18 +16,12 @@ public class FamilyMembersContract {
 
     private String serialno;
     private String name;
-    private String relHH;
     private String age;
     private String monthfm;
+    private String father_name;
     private String mother_name;
-    private String mother_serial;
     private String gender;
-    private String marital;
     private String sD;
-
-    //Not required in db
-    private String fName;
-    private String available;
 
     public FamilyMembersContract() {
     }
@@ -41,13 +35,11 @@ public class FamilyMembersContract {
         this.hhno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_HHNO));
         this.serialno = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_SERIAL_NO));
         this.name = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_NAME));
-        this.relHH = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_RELATION_HH));
+        this.father_name = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_FATHER_NAME));
         this.age = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_AGE));
         this.monthfm = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MONTH_FM));
         this.mother_name = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MOTHER_NAME));
-        this.mother_serial = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MOTHER_SERIAL));
         this.gender = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_GENDER));
-        this.marital = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_MARITAL));
         this.sD = cursor.getString(cursor.getColumnIndex(SingleMember.COLUMN_SD));
 
         return this;
@@ -64,16 +56,14 @@ public class FamilyMembersContract {
         json.put(SingleMember.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
         json.put(SingleMember.COLUMN_SERIAL_NO, this.serialno == null ? JSONObject.NULL : this.serialno);
         json.put(SingleMember.COLUMN_NAME, this.name == null ? JSONObject.NULL : this.name);
-        json.put(SingleMember.COLUMN_RELATION_HH, this.relHH == null ? JSONObject.NULL : this.relHH);
+        json.put(SingleMember.COLUMN_FATHER_NAME, this.father_name == null ? JSONObject.NULL : this.father_name);
         json.put(SingleMember.COLUMN_AGE, this.age == null ? JSONObject.NULL : this.age);
         json.put(SingleMember.COLUMN_MONTH_FM, this.monthfm == null ? JSONObject.NULL : this.monthfm);
         json.put(SingleMember.COLUMN_MOTHER_NAME, this.mother_name == null ? JSONObject.NULL : this.mother_name);
-        json.put(SingleMember.COLUMN_MOTHER_SERIAL, this.mother_serial == null ? JSONObject.NULL : this.mother_serial);
         json.put(SingleMember.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
-        json.put(SingleMember.COLUMN_MARITAL, this.marital == null ? JSONObject.NULL : this.marital);
 
         if (!this.sD.equals("")) {
-            json.put(SingleMember.COLUMN_SD, this.sD.equals("") ? JSONObject.NULL : new JSONObject(this.sD));
+            json.put(SingleMember.COLUMN_SD, new JSONObject(this.sD));
         }
 
         return json;
@@ -143,12 +133,12 @@ public class FamilyMembersContract {
         this.name = name;
     }
 
-    public String getRelHH() {
-        return relHH;
+    public String getFather_name() {
+        return father_name;
     }
 
-    public void setRelHH(String relHH) {
-        this.relHH = relHH;
+    public void setFather_name(String father_name) {
+        this.father_name = father_name;
     }
 
     public String getAge() {
@@ -175,14 +165,6 @@ public class FamilyMembersContract {
         this.mother_name = mother_name;
     }
 
-    public String getMother_serial() {
-        return mother_serial;
-    }
-
-    public void setMother_serial(String mother_serial) {
-        this.mother_serial = mother_serial;
-    }
-
     public String getGender() {
         return gender;
     }
@@ -191,36 +173,12 @@ public class FamilyMembersContract {
         this.gender = gender;
     }
 
-    public String getMarital() {
-        return marital;
-    }
-
-    public void setMarital(String marital) {
-        this.marital = marital;
-    }
-
     public String getsD() {
         return sD;
     }
 
     public void setsD(String sD) {
         this.sD = sD;
-    }
-
-    public String getfName() {
-        return fName;
-    }
-
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getAvailable() {
-        return available;
-    }
-
-    public void setAvailable(String available) {
-        this.available = available;
     }
 
     public static abstract class SingleMember implements BaseColumns {
@@ -234,17 +192,14 @@ public class FamilyMembersContract {
         public static final String COLUMN_MONTH_FM = "monthfm";
         public static final String COLUMN_CLUSTERNO = "clusterno";
         public static final String COLUMN_HHNO = "hhno";
-        public static final String COLUMN_RELATION_HH = "relHH";
+        public static final String COLUMN_FATHER_NAME = "father_name";
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_SERIAL_NO = "serial_no";
         public static final String COLUMN_MOTHER_NAME = "mother_name";
-        public static final String COLUMN_MOTHER_SERIAL = "mother_serial";
         public static final String COLUMN_GENDER = "gender";
-        public static final String COLUMN_MARITAL = "marital";
         public static final String COLUMN_SD = "sD";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
 
-        public static String _URL = "sosas.php";
     }
 }

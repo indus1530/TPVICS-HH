@@ -52,7 +52,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
     private void setUIComponent() {
 
-        bi.hh02.addTextChangedListener(new TextWatcher() {
+        bi.hh07.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -61,7 +61,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (bi.hh02.getText().hashCode() == s.hashCode()) {
+                if (bi.hh07.getText().hashCode() == s.hashCode()) {
                     bi.fldGrpSectionA01.setVisibility(View.GONE);
                     bi.fldGrpSectionA02.setVisibility(View.GONE);
                     Clear.clearAllFields(bi.fldGrpSectionA01);
@@ -177,7 +177,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
 
-        json.put("hh02", bi.hh02.getText().toString());
+        json.put("hh07", bi.hh07.getText().toString());
         json.put("hh03", bi.hh03.getText().toString());
         json.put("hh04", bi.hh04.getText().toString());
         json.put("hh05", bi.hh05.getText().toString());
@@ -232,13 +232,13 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
     public void BtnCheckCluster() {
 
-        if (!Validator.emptyTextBox(this, bi.hh02)) return;
+        if (!Validator.emptyTextBox(this, bi.hh07)) return;
         boolean loginFlag;
-        if (bi.hh02.getText().toString().length() != 6) {
+        if (bi.hh07.getText().toString().length() != 6) {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
-        int cluster = Integer.parseInt(bi.hh02.getText().toString().substring(3, 6));
+        /*int cluster = Integer.parseInt(bi.hh07.getText().toString().substring(3, 6));
         if (cluster < 500) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {
@@ -247,9 +247,9 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         if (!loginFlag) {
             Toast.makeText(this, "Can't proceed test cluster for current user!!", Toast.LENGTH_SHORT).show();
             return;
-        }
+        }*/
 
-        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.hh02.getText().toString());
+        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.hh07.getText().toString());
         if (enumBlockContract != null) {
             String selected = enumBlockContract.getGeoarea();
             if (!selected.equals("")) {
@@ -272,7 +272,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
 
-        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh02.getText().toString(), bi.hh07.getText().toString().toUpperCase());
+        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh07.getText().toString().toUpperCase());
 
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();

@@ -18,10 +18,8 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp.openDialog
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ItemMemListBinding
-import edu.aku.hassannaqvi.tpvics_hh.otherClasses.KishGrid
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionDActivity
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionE1Activity
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionE3Activity
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionBActivity
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity
 import edu.aku.hassannaqvi.tpvics_hh.utils.Util
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
@@ -61,7 +59,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                     listOf(
                             ActionItem(
                                     0,
-                                    "Add Member",
+                                    "Add Child",
                                     getDrawable(R.drawable.ic_account_circle_black_24dp)
                             )
                             ,
@@ -81,27 +79,15 @@ class FamilyMembersListActivity : AppCompatActivity() {
                         run {
                             when (item.id) {
                                 0 -> {
-                                    startActivityForResult(Intent(this, SectionDActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
+                                    startActivityForResult(Intent(this, SectionBActivity::class.java).putExtra(SERIAL_EXTRA, serial), CONSTANTS.MEMBER_ITEM)
                                 }
                                 1 -> {
                                     if (memSelectedCounter == 0) return@run
 
                                     if (memSelectedCounter != serial - 1) return@run
 
-                                    MainApp.pragnantWoman = mainVModel.getAllWomenName()
-
-                                    MainApp.selectedKishMWRA = mainVModel.mwraChildU5Lst.value?.get(kishSelectedMWRA(intent.getIntExtra("sno", 0), mainVModel.mwraChildU5Lst.value!!.size) - 1)
-
-                                    if (MainApp.selectedKishMWRA != null) {
-                                        val childLst = mainVModel.getAllChildrenOfSelMWRA(MainApp.selectedKishMWRA.serialno.toInt())
-                                        MainApp.indexKishMWRAChild = childLst?.let {
-                                            childLst[kishSelectedMWRA(intent.getIntExtra("sno", 0),
-                                                    childLst.size) - 1]
-                                        }
-                                    }
-
                                     finish()
-                                    startActivity(Intent(this, if (bi.contentScroll.mwra.text.toString().toInt() > 0) SectionE1Activity::class.java else SectionE3Activity::class.java))
+                                    startActivity(Intent(this, SectionC1Activity::class.java))
                                 }
                                 else -> Util.openEndActivity(this)
                             }
@@ -111,7 +97,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
             ).show(this)
 
         }
-        toolbar_layout.title = "Household FamilyMembers"
+        toolbar_layout.title = "Household Children's"
         toolbar_layout.setExpandedTitleTextAppearance(R.style.expandCollapse)
     }
 
@@ -120,7 +106,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
             ViewModelProviders.of(this)[MainVModel::class.java]
         }
         mainVModel.childLstU5.observe(this, Observer { item -> bi.contentScroll.under5.text = String.format("%02d", item.size) })
-        mainVModel.mwraLst.observe(this, Observer { item -> bi.contentScroll.mwra.text = String.format("%02d", item.size) })
+        mainVModel.childLstU12.observe(this, Observer { item -> bi.contentScroll.under12.text = String.format("%02d", item.size) })
         mainVModel.familyMemLst.observe(this, Observer { item ->
             bi.contentScroll.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
@@ -138,7 +124,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
                 currentFM = item
 
-                startActivityForResult(Intent(this, SectionDActivity::class.java)
+                startActivityForResult(Intent(this, SectionBActivity::class.java)
                         .putExtra(SERIAL_EXTRA, item.serialno.toInt()), CONSTANTS.MEMBER_ITEM)
 
             }
@@ -167,10 +153,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
             mainVModel.setCheckedItemValues(currentFM!!.serialno.toInt())
         }
 
-    }
-
-    private fun kishSelectedMWRA(sno: Int, size: Int): Int {
-        return KishGrid.kishGridProcess(sno, size)
     }
 
     companion object {
