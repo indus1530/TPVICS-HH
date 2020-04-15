@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void OpenFormFunc() {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
