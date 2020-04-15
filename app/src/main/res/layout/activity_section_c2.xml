@@ -379,7 +379,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <!-- ss16  Check   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/ss16cv"
@@ -443,7 +442,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss17  Radio   -->
             <androidx.cardview.widget.CardView
@@ -533,7 +531,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss18  Radio   -->
             <androidx.cardview.widget.CardView
@@ -635,7 +632,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss19  Radio   -->
             <androidx.cardview.widget.CardView
@@ -752,7 +748,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss20  Radio   -->
             <androidx.cardview.widget.CardView
@@ -880,7 +875,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <!-- ss21  EditText   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/ss21cv"
@@ -917,7 +911,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <!-- ss22  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/ss22cv"
@@ -952,7 +945,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss23  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1017,7 +1009,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss24  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1339,7 +1330,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <!-- ss28  EditText   -->
             <androidx.cardview.widget.CardView

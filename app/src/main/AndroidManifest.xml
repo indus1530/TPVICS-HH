@@ -22,7 +22,10 @@
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionC2Activity"></activity>
+        <activity android:name=".ui.sections.SectionCHCActivity"></activity>
+        <activity android:name=".ui.sections.SectionCHAActivity" />
+        <activity android:name=".ui.sections.SectionCHBActivity" />
+        <activity android:name=".ui.sections.SectionC2Activity" />
         <activity android:name=".ui.sections.SectionC1Activity" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
