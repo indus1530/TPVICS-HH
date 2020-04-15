@@ -131,7 +131,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{()->callback.OpenFormFunc()}'
+                        android:onClick='@{(v)->callback.OpenFormFunc(1)}'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -167,9 +167,8 @@
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="openForm"
+                        android:onClick='@{(v)->callback.OpenFormFunc(2)}'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -196,9 +195,8 @@
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="openForm"
+                        android:onClick='@{(v)->callback.OpenFormFunc(3)}'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -225,7 +223,6 @@
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
-                        android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
                         app:cardCornerRadius="20dp">
 

@@ -169,12 +169,15 @@ public class MainActivity extends AppCompatActivity {
     public void OpenFormFunc(int id) {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionAActivity.class);
+            oF = null;
             switch (id) {
-                case R.id.formA:
+                case 1:
+                    oF = new Intent(this, SectionAActivity.class);
+                    break;
+                case 2:
                     oF = new Intent(this, SectionCHAActivity.class);
                     break;
-                case R.id.formB:
+                case 3:
                     oF = new Intent(this, SectionCHBActivity.class);
                     break;
                 /*case R.id.formC:
