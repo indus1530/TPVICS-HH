@@ -227,7 +227,6 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="openForm"
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
