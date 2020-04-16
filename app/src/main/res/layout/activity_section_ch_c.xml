@@ -11,9 +11,8 @@
     </data>
 
     <ScrollView
-        style="@style/i_scrollview"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -29,7 +28,8 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im1_title1" />
 
                 </LinearLayout>
@@ -46,7 +46,8 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/imtitle2" />
 
                 </LinearLayout>
@@ -61,7 +62,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im01" />
 
                     <RadioGroup
@@ -97,7 +99,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im02" />
 
                     <RadioGroup
@@ -132,7 +135,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im02a" />
 
                     <RadioGroup
@@ -188,13 +192,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im03" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im03_dd" />
@@ -215,7 +220,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im03_dd1" />
@@ -236,7 +241,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im03_mm" />
@@ -257,7 +262,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im03_yy" />
@@ -287,7 +292,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_title1" />
 
                 </LinearLayout>
@@ -302,7 +308,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_title2" />
 
                 </LinearLayout>
@@ -317,13 +324,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_1bcg" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_1bcg_dd" />
@@ -340,7 +348,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_1bcg_mm" />
@@ -357,7 +365,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_1bcg_yy" />
@@ -383,13 +391,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_2opv0" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_2opv0_dd" />
@@ -406,7 +415,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_2opv0_mm" />
@@ -423,7 +432,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_2opv0_yy" />
@@ -449,13 +458,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_3opv1" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_3opv1_dd" />
@@ -472,7 +482,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_3opv1_mm" />
@@ -489,7 +499,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_3opv1_yy" />
@@ -515,13 +525,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_4penta1" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_4penta1_dd" />
@@ -538,7 +549,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_4penta1_mm" />
@@ -555,7 +566,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_4penta1_yy" />
@@ -581,13 +592,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_5pcv1" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_5pcv1_dd" />
@@ -604,7 +616,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_5pcv1_mm" />
@@ -621,7 +633,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_5pcv1_yy" />
@@ -647,13 +659,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_6rv1" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_6rv1_dd" />
@@ -670,7 +683,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_6rv1_mm" />
@@ -687,7 +700,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_6rv1_yy" />
@@ -713,13 +726,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_7opv2" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_7opv2_dd" />
@@ -736,7 +750,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_7opv2_mm" />
@@ -753,7 +767,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_7opv2_yy" />
@@ -779,13 +793,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_8penta2" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_8penta2_dd" />
@@ -802,7 +817,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_8penta2_mm" />
@@ -819,7 +834,8 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
+
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_8penta2_yy" />
@@ -845,13 +861,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_9pcv2" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_9pcv2_dd" />
@@ -868,7 +885,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_9pcv2_mm" />
@@ -885,7 +902,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_9pcv2_yy" />
@@ -911,13 +928,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_10rv2" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_10rv2_dd" />
@@ -934,7 +952,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_10rv2_mm" />
@@ -951,7 +969,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_10rv2_yy" />
@@ -977,13 +995,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_11opv3" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_11opv3_dd" />
@@ -1000,7 +1019,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_11opv3_mm" />
@@ -1017,7 +1036,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_11opv3_yy" />
@@ -1043,13 +1062,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_12penta3" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_12penta3_dd" />
@@ -1066,7 +1086,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_12penta3_mm" />
@@ -1083,7 +1103,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_12penta3_yy" />
@@ -1109,13 +1129,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_13pcv3" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_13pcv3_dd" />
@@ -1132,7 +1153,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_13pcv3_mm" />
@@ -1149,7 +1170,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_13pcv3_yy" />
@@ -1175,13 +1196,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_14ipv" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_14ipv_dd" />
@@ -1198,7 +1220,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_14ipv_mm" />
@@ -1215,7 +1237,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_14ipv_yy" />
@@ -1241,13 +1263,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_15measles1" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_15measles1_dd" />
@@ -1264,7 +1287,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_15measles1_mm" />
@@ -1281,7 +1304,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_15measles1_yy" />
@@ -1307,13 +1330,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im4_16measles2" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_16measles2_dd" />
@@ -1330,7 +1354,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_16measles2_mm" />
@@ -1347,7 +1371,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/im4_16measles2_yy" />
@@ -1373,26 +1397,33 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im05" />
 
                     <RadioGroup
                         android:id="@+id/im05"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
 
                         <RadioButton
                             android:id="@+id/im05_1"
-                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/im05_1" />
 
                         <RadioButton
                             android:id="@+id/im05_2"
-                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/im05_2" />
 
                         <RadioButton
                             android:id="@+id/im05_3"
-                            style="@style/radiobutton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/im05_3" />
 
                     </RadioGroup>
@@ -1409,7 +1440,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im06" />
 
                     <RadioGroup
@@ -1440,7 +1472,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im08" />
 
                     <RadioGroup
@@ -1476,7 +1509,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im09" />
 
                     <RadioGroup
@@ -1512,7 +1546,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im10" />
 
                     <RadioGroup
@@ -1548,7 +1583,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im11" />
 
                     <RadioGroup
@@ -1584,7 +1620,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/im12" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker

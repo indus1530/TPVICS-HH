@@ -11,9 +11,8 @@
     </data>
 
     <ScrollView
-        style="@style/i_scrollview"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -28,7 +27,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb0_title" />
 
                 </LinearLayout>
@@ -43,13 +43,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb01" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb01a" />
@@ -70,7 +71,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb01b" />
@@ -105,13 +106,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb02" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb02a" />
@@ -132,7 +134,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb02b" />
@@ -167,13 +169,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb03" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb03_dd" />
@@ -194,7 +197,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb03_mm" />
@@ -215,7 +218,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb03_yy" />
@@ -250,13 +253,14 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb04" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb04_mm" />
@@ -277,7 +281,7 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            style="@style/i_textviewhint"
+                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:text="@string/cb04_yy" />
@@ -307,7 +311,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb05" />
 
                     <RadioGroup
