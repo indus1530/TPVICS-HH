@@ -32,7 +32,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:text="01"
+                        android:text="@string/serialStart"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -61,35 +61,31 @@
 
                     <TextView
                         android:id="@+id/name"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mother Name Not Found"
+                        android:text="@string/name_not_found"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/realHead"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/fatherName"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Relation to Head Not Found"
+                        android:text="@string/father_name_not_found"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <TextView
                         android:id="@+id/motherName"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Mother name Not Found"
+                        android:text="@string/mother_name_not_found"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
                     <TextView
                         android:id="@+id/dob"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text=""
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 

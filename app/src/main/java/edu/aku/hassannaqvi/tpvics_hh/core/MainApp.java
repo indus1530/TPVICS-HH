@@ -25,16 +25,12 @@ import androidx.databinding.DataBindingUtil;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
-import java.util.List;
-
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.KishMWRAContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import kotlin.Pair;
 
 
 /**
@@ -43,6 +39,7 @@ import kotlin.Pair;
 
 public class MainApp extends Application {
 
+    public static final String TAG = "AppMain";
     //    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
     public static final String _IP = "http://f38158";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/tpvics/api/";// .TEST server;
@@ -75,7 +72,6 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
-    public static KishMWRAContract kish;
     public static ChildContract child;
     public static FamilyMembersContract selectedKishMWRA;
     public static FamilyMembersContract indexKishMWRAChild;
@@ -85,16 +81,8 @@ public class MainApp extends Application {
     public static String IMEI;
     public static String G102;
     public static SharedPreferences sharedPref;
-    public static String TAG = "AppMain";
-    public static int noOfPragnencies = 0;
-    public static boolean twinFlag = false;
-    public static Pair<List<Integer>, List<String>> pragnantWoman;
     protected static LocationManager locationManager;
-
     public static String DIST_ID;
-
-    public static String[] relationHHLst = {"Head of HH", "Wife/Husband", "Son/Daughters", "Son in law/Daughter in law", "Grand child", "Parents", "Parents in law",
-            "Brother/Sister", "Brother in law/Sister in law", "Niece/Nephew", "Grand Parents", "Aunts/Uncle", "Adopted/Step child", "Domestic Servant", "Don’t Know"};
 
     public static void setItemClick(OnItemClick itemClick) {
         MainApp.itemClick = itemClick;
@@ -103,15 +91,13 @@ public class MainApp extends Application {
     public static void setGPS(Activity activity) {
         SharedPreferences GPSPref = activity.getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
 
-//        String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
-
         try {
             String lat = GPSPref.getString("Latitude", "0");
             String lang = GPSPref.getString("Longitude", "0");
             String acc = GPSPref.getString("Accuracy", "0");
             String dt = GPSPref.getString("Time", "0");
 
-            if (lat == "0" && lang == "0") {
+            if (lat.equals("0") && lang.equals("0")) {
                 Toast.makeText(activity, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();

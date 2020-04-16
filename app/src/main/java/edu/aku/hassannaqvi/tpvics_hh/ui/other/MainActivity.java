@@ -51,6 +51,8 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -164,16 +166,32 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void OpenFormFunc() {
+    public void OpenFormFunc(int id) {
         Intent oF;
         if (!MainApp.userName.equals("0000")) {
-            oF = new Intent(MainActivity.this, SectionAActivity.class);
+            oF = null;
+            switch (id) {
+                case 1:
+                    oF = new Intent(this, SectionAActivity.class);
+                    break;
+                case 2:
+                    oF = new Intent(this, SectionCHAActivity.class);
+                    break;
+                case 3:
+                    oF = new Intent(this, SectionCHBActivity.class);
+                    break;
+                /*case R.id.formC:
+                    oF = new Intent(this, SectionCHCActivity.class);
+                    break;*/
+
+
+            }
             startActivity(oF);
         } else {
             Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
         }
-
     }
+
 
     public void openDB() {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);

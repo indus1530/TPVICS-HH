@@ -1,0 +1,364 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity" />
+    </data>
+
+    <ScrollView
+        style="@style/i_scrollview"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl">
+
+        <LinearLayout
+            android:id="@+id/GrpName"
+            style="@style/linearlayout_view_wt_bound">
+
+
+            <!-- cb0_title  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb0_title"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb0_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb01  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb01"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb01" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb01a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb01a"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb01a"
+                            app:mask="##"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb01b" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb01b"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb01b"
+                            app:mask="##"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb01_dk"
+                        style="@style/checkbox"
+                        android:text="@string/cb01_dk" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb02  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb02"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb02" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb02a" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb02a"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb02a"
+                            app:mask="##"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb02b" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb02b"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb02b"
+                            app:mask="##"
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb02_dk"
+                        style="@style/checkbox"
+                        android:text="@string/cb02_dk" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb03  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb03"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb03" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb03_dd" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb03_dd"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb03_dd"
+                            app:mask="##"
+                            app:maxValue="29"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb03_mm" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb03_mm"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb03_mm"
+                            app:mask="##"
+                            app:maxValue="11"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb03_yy" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb03_yy"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb03_yy"
+                            app:mask="##"
+                            app:maxValue="2020"
+                            app:minValue="2018"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb03_dk"
+                        style="@style/checkbox"
+                        android:text="@string/cb03_dk" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb04  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb04"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb04" />
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb04_mm" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb04_mm"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb04_mm"
+                            app:mask="##"
+                            app:maxValue="36"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            style="@style/i_textviewhint"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb04_yy" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/cb04_yy"
+                            style="@style/EditTextAlpha"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:hint="@string/cb04_yy"
+                            app:mask="##"
+                            app:maxValue="3"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- cb05  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVcb05"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/cb05" />
+
+                    <RadioGroup
+                        android:id="@+id/cb05"
+                        style="@style/hradiogroup">
+
+                        <RadioButton
+                            android:id="@+id/cb05_1"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb05_1" />
+
+                        <RadioButton
+                            android:id="@+id/cb05_2"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/cb05_2" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--ENDBUTTON linearlayout-->
+            <LinearLayout
+                style="@style/hlinearlayout"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_red_light"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/buttons_bottom"
+                    android:background="@android:color/holo_green_light"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

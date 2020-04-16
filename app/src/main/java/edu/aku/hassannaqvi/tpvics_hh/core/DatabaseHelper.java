@@ -29,14 +29,6 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract.SingleMember;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.KishMWRAContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.KishMWRAContract.SingleKishMWRA;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRAContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRAContract.MWRATable;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRA_PREContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MortalityContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MortalityContract.SingleMortality;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.TalukasContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UCsContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
@@ -50,10 +42,6 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_BL_RAND
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_FORMS;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_KISH_TABLE;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_MORTALITY;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_MWRAPRE_TABLE;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_MWRA_TABLE;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_PSU_TABLE;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.SQL_CREATE_VERSIONAPP;
@@ -83,33 +71,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-//        db.execSQL(SQL_CREATE_TALUKAS);
-//        db.execSQL(SQL_CREATE_UCS);
         db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);
-//        db.execSQL(SQL_CREATE_AREAS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
-        db.execSQL(SQL_CREATE_KISH_TABLE);
-        db.execSQL(SQL_CREATE_MWRA_TABLE);
-        db.execSQL(SQL_CREATE_MWRAPRE_TABLE);
         db.execSQL(SQL_CREATE_CHILD_TABLE);
-        db.execSQL(SQL_CREATE_MORTALITY);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-//        db.execSQL(SQL_DELETE_USERS);
-//        db.execSQL(SQL_DELETE_FORMS);
-//        db.execSQL("DROP TABLE IF EXISTS " + LHWContract.lhwEntry.TABLE_NAME);
-//        db.execSQL(SQL_DELETE_CHILDREN);
-//        db.execSQL(SQL_DELETE_CHILDLIST);
-//        db.execSQL(SQL_DELETE_VILLAGES);
-//        db.execSQL(SQL_DELETE_TALUKAS);
-//        db.execSQL(SQL_DELETE_UCS);
-//        db.execSQL(SQL_DELETE_AREAS);
-
-
     }
 
     public void syncVillages(JSONArray pcList) {
@@ -627,82 +597,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return newRowId;
     }
 
-    public Long addMortality(MortalityContract morc) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-        values.put(SingleMortality.COLUMN__UUID, morc.get_UUID());
-        values.put(SingleMortality.COLUMN_DEVICEID, morc.getDeviceId());
-        values.put(SingleMortality.COLUMN_DEVICETAGID, morc.getDevicetagID());
-        values.put(SingleMortality.COLUMN_FORMDATE, morc.getFormDate());
-        values.put(SingleMortality.COLUMN_USER, morc.getUser());
-        values.put(SingleMortality.COLUMN_SE3, morc.getsE3());
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                SingleMortality.TABLE_NAME,
-                SingleMortality.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-    public Long addKishMWRA(KishMWRAContract kishmwra) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-
-        values.put(SingleKishMWRA.COLUMN_UID, kishmwra.getUID());
-        values.put(SingleKishMWRA.COLUMN__UUID, kishmwra.get_UUID());
-        values.put(SingleKishMWRA.COLUMN_DEVICEID, kishmwra.getDeviceId());
-        values.put(SingleKishMWRA.COLUMN_FORMDATE, kishmwra.getFormDate());
-        values.put(SingleKishMWRA.COLUMN_USER, kishmwra.getUser());
-        values.put(SingleKishMWRA.COLUMN_SF, kishmwra.getsF());
-        values.put(SingleKishMWRA.COLUMN_SG, kishmwra.getsG());
-        values.put(SingleKishMWRA.COLUMN_SH1, kishmwra.getsH1());
-        values.put(SingleKishMWRA.COLUMN_SH2, kishmwra.getsH2());
-        values.put(SingleKishMWRA.COLUMN_SK, kishmwra.getsK());
-        values.put(SingleKishMWRA.COLUMN_SL, kishmwra.getsL());
-        values.put(SingleKishMWRA.COLUMN_DEVICETAGID, kishmwra.getDevicetagID());
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                SingleKishMWRA.TABLE_NAME,
-                SingleKishMWRA.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-    public Long addMWRA(MWRAContract mwra) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
-        values.put(MWRATable.COLUMN_UUID, mwra.get_UUID());
-        values.put(MWRATable.COLUMN_DEVICEID, mwra.getDeviceId());
-        values.put(MWRATable.COLUMN_FORMDATE, mwra.getFormDate());
-        values.put(MWRATable.COLUMN_USER, mwra.getUser());
-        values.put(MWRATable.COLUMN_DEVICETAGID, mwra.getDevicetagID());
-        values.put(MWRATable.COLUMN_SE1, mwra.getsE1());
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                MWRATable.TABLE_NAME,
-                null,
-                values);
-        return newRowId;
-    }
-
     public Long addChild(ChildContract childContract) {
 
         // Gets the data repository in write mode
@@ -725,30 +619,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long newRowId;
         newRowId = db.insert(
                 SingleChild.TABLE_NAME,
-                null,
-                values);
-        return newRowId;
-    }
-
-    public Long addPregnantMWRA(MWRA_PREContract mwra) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
-        values.put(SingleMWRAPRE.COLUMN__UUID, mwra.get_UUID());
-        values.put(SingleMWRAPRE.COLUMN_DEVICEID, mwra.getDeviceId());
-        values.put(SingleMWRAPRE.COLUMN_FORMDATE, mwra.getFormDate());
-        values.put(SingleMWRAPRE.COLUMN_USER, mwra.getUser());
-        values.put(SingleMWRAPRE.COLUMN_DEVICETAGID, mwra.getDevicetagID());
-        values.put(SingleMWRAPRE.COLUMN_SE2, mwra.getsE2());
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                SingleMWRAPRE.TABLE_NAME,
                 null,
                 values);
         return newRowId;
@@ -811,25 +681,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int count = db.update(
                 FormsTable.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateMWRAs(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(MWRAContract.MWRATable.COLUMN_SYNCED, true);
-        values.put(MWRAContract.MWRATable.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = MWRAContract.MWRATable.COLUMN_ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                MWRAContract.MWRATable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);
@@ -1016,202 +867,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allFC;
-    }
-
-    public Collection<MWRAContract> getUnsyncedMWRA() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                MWRAContract.MWRATable.COLUMN_ID,
-                MWRAContract.MWRATable.COLUMN_UID,
-                MWRAContract.MWRATable.COLUMN_UUID,
-                MWRAContract.MWRATable.COLUMN_FORMDATE,
-                MWRAContract.MWRATable.COLUMN_USER,
-                MWRAContract.MWRATable.COLUMN_SE1,
-                MWRAContract.MWRATable.COLUMN_DEVICEID,
-                MWRAContract.MWRATable.COLUMN_DEVICETAGID
-        };
-        String whereClause = MWRAContract.MWRATable.COLUMN_SYNCED + " is null";
-        String[] whereArgs = null;
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                MWRAContract.MWRATable.COLUMN_ID + " ASC";
-
-        Collection<MWRAContract> allMC = new ArrayList<MWRAContract>();
-        try {
-            c = db.query(
-                    MWRAContract.MWRATable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                MWRAContract mc = new MWRAContract();
-                allMC.add(mc.Hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allMC;
-    }
-
-    public Collection<MWRA_PREContract> getUnsyncedPregMWRA() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                SingleMWRAPRE._ID,
-                SingleMWRAPRE.COLUMN_UID,
-                SingleMWRAPRE.COLUMN__UUID,
-                SingleMWRAPRE.COLUMN_DEVICEID,
-                SingleMWRAPRE.COLUMN_FORMDATE,
-                SingleMWRAPRE.COLUMN_USER,
-                SingleMWRAPRE.COLUMN_SE2,
-                SingleMWRAPRE.COLUMN_DEVICETAGID,
-
-        };
-        String whereClause = SingleMWRAPRE.COLUMN_SYNCED + " is null";
-        String[] whereArgs = null;
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                SingleMWRAPRE._ID + " ASC";
-
-        Collection<MWRA_PREContract> allMC = new ArrayList<MWRA_PREContract>();
-        try {
-            c = db.query(
-                    SingleMWRAPRE.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                MWRA_PREContract mc = new MWRA_PREContract();
-                allMC.add(mc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allMC;
-    }
-
-    public Collection<MortalityContract> getUnsyncedMortality() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                SingleMortality._ID,
-                SingleMortality.COLUMN_UID,
-                SingleMortality.COLUMN__UUID,
-                SingleMortality.COLUMN_DEVICEID,
-                SingleMortality.COLUMN_DEVICETAGID,
-                SingleMortality.COLUMN_FORMDATE,
-                SingleMortality.COLUMN_USER,
-                SingleMortality.COLUMN_SE3,
-
-
-        };
-        String whereClause = SingleMWRAPRE.COLUMN_SYNCED + " is null";
-        String[] whereArgs = null;
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                SingleMWRAPRE._ID + " ASC";
-
-        Collection<MortalityContract> allMC = new ArrayList<MortalityContract>();
-        try {
-            c = db.query(
-                    SingleMortality.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                MortalityContract mc = new MortalityContract();
-                allMC.add(mc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allMC;
-    }
-
-    public Collection<KishMWRAContract> getUnsyncedKishMWRA() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                SingleKishMWRA._ID,
-                SingleKishMWRA.COLUMN_UID,
-                SingleKishMWRA.COLUMN__UUID,
-                SingleKishMWRA.COLUMN_DEVICEID,
-                SingleKishMWRA.COLUMN_FORMDATE,
-                SingleKishMWRA.COLUMN_USER,
-                SingleKishMWRA.COLUMN_SF,
-                SingleKishMWRA.COLUMN_SG,
-                SingleKishMWRA.COLUMN_SH1,
-                SingleKishMWRA.COLUMN_SH2,
-                SingleKishMWRA.COLUMN_SK,
-                SingleKishMWRA.COLUMN_SL,
-                SingleKishMWRA.COLUMN_DEVICETAGID,
-        };
-        String whereClause = SingleKishMWRA.COLUMN_SYNCED + " is null";
-        String[] whereArgs = null;
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                SingleKishMWRA._ID + " ASC";
-
-        Collection<KishMWRAContract> allMC = new ArrayList<KishMWRAContract>();
-        try {
-            c = db.query(
-                    SingleKishMWRA.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                KishMWRAContract mc = new KishMWRAContract();
-                allMC.add(mc.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allMC;
     }
 
     public Collection<FormsContract> getUnsyncedForms() {
@@ -1534,70 +1189,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 selectionArgs);
     }
 
-    //Generic update MWRAPREColumn
-    public int updatesMWRAPREColumn(MWRA_PREContract mwra_pre) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(SingleMWRAPRE.COLUMN_UID, mwra_pre.getUID());
-
-        String selection = SingleMWRAPRE._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mwra_pre.get_ID())};
-
-        return db.update(SingleMWRAPRE.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-    //Generic update MortalityColumn
-    public int updatesMortalityColumn(String column, String value, MortalityContract mortality) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = SingleMortality._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mortality.get_ID())};
-
-        return db.update(SingleMortality.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-    //Generic update KishMWRAColumn
-    public int updatesKishMWRAColumn(String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = SingleKishMWRA._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.kish.get_ID())};
-
-        return db.update(SingleKishMWRA.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
-    //Generic update MWRAColumn
-    public int updateMWRAUID(MWRAContract mwra) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(MWRATable.COLUMN_UID, mwra.getUID());
-
-        String selection = MWRATable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(mwra.get_ID())};
-
-        return db.update(MWRATable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
     //Generic update ChildColumn
     public int updatesChildColumn(String column, String value) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1680,63 +1271,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedKishMWRAForms(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(SingleKishMWRA.COLUMN_SYNCED, true);
-        values.put(SingleKishMWRA.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = SingleKishMWRA._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                SingleKishMWRA.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateSyncedMortalityForms(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(SingleMortality.COLUMN_SYNCED, true);
-        values.put(SingleMortality.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = SingleMortality._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                SingleMortality.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateSyncedPregMWRAForms(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(SingleMWRAPRE.COLUMN_SYNCED, true);
-        values.put(SingleMWRAPRE.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = SingleMWRAPRE._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                SingleMWRAPRE.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
     public void updateSyncedFamilyMemForms(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -1751,25 +1285,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int count = db.update(
                 SingleMember.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
-    }
-
-    public void updateSyncedMWRAForms(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(MWRATable.COLUMN_SYNCED, true);
-        values.put(MWRATable.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = MWRATable._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                MWRATable.TABLE_NAME,
                 values,
                 where,
                 whereArgs);

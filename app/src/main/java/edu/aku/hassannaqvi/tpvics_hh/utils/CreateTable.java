@@ -5,10 +5,6 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract.SingleChild;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.KishMWRAContract.SingleKishMWRA;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRAContract.MWRATable;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MWRA_PREContract.SingleMWRAPRE;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.MortalityContract.SingleMortality;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.VersionAppContract;
 
@@ -102,47 +98,6 @@ public final class CreateTable {
             EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA + " TEXT " +
             ");";
 
-    public static final String SQL_CREATE_KISH_TABLE = "CREATE TABLE " + SingleKishMWRA.TABLE_NAME + "("
-            + SingleKishMWRA._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleKishMWRA.COLUMN_UID + " TEXT,"
-            + SingleKishMWRA.COLUMN__UUID + " TEXT,"
-            + SingleKishMWRA.COLUMN_DEVICEID + " TEXT,"
-            + SingleKishMWRA.COLUMN_FORMDATE + " TEXT,"
-            + SingleKishMWRA.COLUMN_USER + " TEXT,"
-            + SingleKishMWRA.COLUMN_SF + " TEXT,"
-            + SingleKishMWRA.COLUMN_SG + " TEXT,"
-            + SingleKishMWRA.COLUMN_SH1 + " TEXT,"
-            + SingleKishMWRA.COLUMN_SH2 + " TEXT,"
-            + SingleKishMWRA.COLUMN_SK + " TEXT,"
-            + SingleKishMWRA.COLUMN_SL + " TEXT,"
-            + SingleKishMWRA.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleKishMWRA.COLUMN_SYNCED + " TEXT,"
-            + SingleKishMWRA.COLUMN_SYNCED_DATE + " TEXT );";
-
-    public static final String SQL_CREATE_MWRA_TABLE = "CREATE TABLE " + MWRATable.TABLE_NAME + "("
-            + MWRATable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + MWRATable.COLUMN_UID + " TEXT,"
-            + MWRATable.COLUMN_UUID + " TEXT,"
-            + MWRATable.COLUMN_FORMDATE + " TEXT,"
-            + MWRATable.COLUMN_DEVICEID + " TEXT,"
-            + MWRATable.COLUMN_USER + " TEXT,"
-            + MWRATable.COLUMN_SE1 + " TEXT,"
-            + MWRATable.COLUMN_DEVICETAGID + " TEXT,"
-            + MWRATable.COLUMN_SYNCED + " TEXT,"
-            + MWRATable.COLUMN_SYNCED_DATE + " TEXT );";
-
-    public static final String SQL_CREATE_MWRAPRE_TABLE = "CREATE TABLE " + SingleMWRAPRE.TABLE_NAME + "("
-            + SingleMWRAPRE._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleMWRAPRE.COLUMN_UID + " TEXT,"
-            + SingleMWRAPRE.COLUMN__UUID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_FORMDATE + " TEXT,"
-            + SingleMWRAPRE.COLUMN_DEVICEID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_USER + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SE2 + " TEXT,"
-            + SingleMWRAPRE.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SYNCED + " TEXT,"
-            + SingleMWRAPRE.COLUMN_SYNCED_DATE + " TEXT );";
-
     public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + SingleChild.TABLE_NAME + "("
             + SingleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + SingleChild.COLUMN_UID + " TEXT,"
@@ -156,20 +111,6 @@ public final class CreateTable {
             + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
             + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
-
-
-    public static final String SQL_CREATE_MORTALITY = "CREATE TABLE " + SingleMortality.TABLE_NAME + "("
-            + SingleMortality._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleMortality.COLUMN_UID + " TEXT,"
-            + SingleMortality.COLUMN__UUID + " TEXT,"
-            + SingleMortality.COLUMN_DEVICEID + " TEXT,"
-            + SingleMortality.COLUMN_FORMDATE + " TEXT,"
-            + SingleMortality.COLUMN_USER + " TEXT,"
-            + SingleMortality.COLUMN_SE3 + " TEXT,"
-            + SingleMortality.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleMortality.COLUMN_SYNCED + " TEXT,"
-            + SingleMortality.COLUMN_SYNCED_DATE + " TEXT );";
-
 
     public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +

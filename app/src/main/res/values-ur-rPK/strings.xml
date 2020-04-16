@@ -3209,6 +3209,10 @@
     <string name="ss18g_title">Finished Floor</string>
     <string name="ss18l">Bricks</string>
     <string name="ss18m">Lime</string>
+    <string name="name_not_found">Name Not Found</string>
+    <string name="father_name_not_found">Father name Not Found</string>
+    <string name="mother_name_not_found">Mother name Not Found</string>
+    <string name="serialStart">00</string>
 
 
 </resources>

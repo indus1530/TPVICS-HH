@@ -377,7 +377,7 @@
                                     android:hint="@string/year"
                                     android:maxLength="2"
                                     app:maxValue="99"
-                                    app:minValue="1"
+                                    app:minValue="15"
                                     app:type="range" />
 
                             </LinearLayout>
@@ -446,7 +446,7 @@
                                         style="@style/EditTextAlpha"
                                         android:layout_width="0dp"
                                         android:layout_weight="2"
-                                        android:hint="@string/name"
+                                        android:hint="@string/hh16a"
                                         android:maxLength="30"
                                         android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
 
@@ -454,14 +454,14 @@
                                         style="@style/i_textviewhint"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
-                                        android:text="@string/num" />
+                                        android:text="@string/hh16b" />
 
                                     <EditText
                                         android:id="@+id/hh16b"
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
                                         android:layout_weight="2"
-                                        android:hint="@string/contactnum"
+                                        android:hint="@string/hh16b"
                                         android:maxLength="11"
                                         android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
 
@@ -496,21 +496,21 @@
                                         style="@style/EditTextAlpha"
                                         android:layout_width="0dp"
                                         android:layout_weight="2"
-                                        android:hint="@string/name"
+                                        android:hint="@string/hh17a"
                                         android:maxLength="30" />
 
                                     <TextView
                                         style="@style/i_textviewhint"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
-                                        android:text="@string/num" />
+                                        android:text="@string/hh17b" />
 
                                     <EditText
                                         android:id="@+id/hh17b"
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
                                         android:layout_weight="2"
-                                        android:hint="@string/contactnum"
+                                        android:hint="@string/hh17b"
                                         android:maxLength="11" />
 
                                 </LinearLayout>
@@ -571,6 +571,12 @@
                                     style="@style/i_textviewhint"
                                     android:text="@string/hh19h" />
 
+                                <CheckBox
+                                    android:id="@+id/hh19b"
+                                    style="@style/checkbox"
+                                    android:tag="-1"
+                                    android:text="@string/hh19b" />
+
                                 <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
@@ -593,12 +599,6 @@
                                         app:type="range" />
 
                                 </LinearLayout>
-
-                                <CheckBox
-                                    android:id="@+id/hh19b"
-                                    style="@style/checkbox"
-                                    android:tag="-1"
-                                    android:text="@string/hh19b" />
 
                             </LinearLayout>
 
