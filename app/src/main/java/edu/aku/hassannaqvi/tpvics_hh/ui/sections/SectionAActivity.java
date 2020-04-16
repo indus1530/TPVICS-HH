@@ -165,7 +165,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         JSONObject json = new JSONObject();
 
         json.put("imei", MainApp.IMEI);
-/*        json.put("rndid", bl.get_ID());
+        json.put("rndid", bl.get_ID());
         json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
         json.put("hh03", bl.getStructure());
@@ -174,7 +174,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         json.put("hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
         json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
-        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());*/
+        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
 
 
         json.put("hh07", bi.hh07.getText().toString());
@@ -272,7 +272,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
 
-        /*bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh07.getText().toString().toUpperCase());
+        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh07.getText().toString().toUpperCase());
 
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
@@ -282,9 +282,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }*/
-
-        bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+        }
 
     }
 
