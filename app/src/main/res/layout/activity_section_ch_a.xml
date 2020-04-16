@@ -11,9 +11,8 @@
     </data>
 
     <ScrollView
-        style="@style/i_scrollview"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout style="@style/linearlayout_view_wt_bound">
 
@@ -26,7 +25,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf09" />
 
                     <EditText
@@ -46,7 +46,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf9a" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
@@ -71,7 +72,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf9b" />
 
                     <RadioGroup
@@ -107,7 +109,8 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf14" />
 
                     <RadioGroup
@@ -138,7 +141,9 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textview"
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf15" />
 
                     <RadioGroup
@@ -169,7 +174,9 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/i_textviewhint"
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/uf15b_title" />
 
                 </LinearLayout>

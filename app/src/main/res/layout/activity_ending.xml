@@ -13,9 +13,8 @@
     </data>
 
     <ScrollView
-        style="@style/i_scrollview"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/fldGrpEnd"
@@ -23,13 +22,15 @@
 
             <!--Status-->
             <TextView
-                style="@style/i_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/hh22" />
 
             <!--Status-->
             <TextView
-                style="@style/i_textviewhint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/hh22h" />
 
             <RadioGroup

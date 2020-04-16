@@ -36,7 +36,7 @@
     Aga Khan University, Karachi, Pakistan</string>
 
     <string name="splashText1"> Coverage Evaluation Survey, Pakistan, 2020 </string>
-    <string name="splashText2"> HOUSEHOLD QUESTIONNAIRE </string>
+    <string name="splashText2"> ۔HOUSEHOLD QUESTIONNAIRE </string>
 
     <string name="title_activity_family_members_list"> Family Members List </string>
 
@@ -712,44 +712,44 @@
     <string name="g129b"> نہیں </string>
 
     <string name="th1heading"> SECTION H: NEWBORN HEALTH </string>
-    <string name="h101"> H101:\t (نام) کی پیدائش کے وقت آپ کے حمل کی مدُت کیا تھی ؟ </string>
+    <string name="h101"> ۔H101:\t (نام) کی پیدائش کے وقت آپ کے حمل کی مدُت کیا تھی ؟ </string>
 
-    <string name="h102"> H102:\t کیا (نام) پیدائش کے فوراً بعد رویا تھا ؟ </string>
+    <string name="h102"> ۔H102:\t کیا (نام) پیدائش کے فوراً بعد رویا تھا ؟ </string>
     <string name="h102a"> ہاں </string>
     <string name="h102b"> نہیں </string>
     <string name="h102c"> معلوم نہیں </string>
 
-    <string name="h103"> H103:\t کیا (نام) کی پیدائش میں آپ کی مدد کرنے والی نے آپ کے بچے کی سانس کو بحال کرنے کیلئے کوئی اقدامات کیے تھے ؟ </string>
+    <string name="h103"> ۔H103:\t کیا (نام) کی پیدائش میں آپ کی مدد کرنے والی نے آپ کے بچے کی سانس کو بحال کرنے کیلئے کوئی اقدامات کیے تھے ؟ </string>
     <string name="h103a"> ہاں </string>
     <string name="h103b"> نہیں </string>
     <string name="h103c"> معلوم نہیں </string>
 
-    <string name="h104"> H104:\t (نام) کی پیدائش میں آپ کی مدد کرنے والی نے بچے کی سانس کو بحال کرنے کیلئے کیا اقدامات کیے تھے ؟ </string>
+    <string name="h104"> ۔H104:\t (نام) کی پیدائش میں آپ کی مدد کرنے والی نے بچے کی سانس کو بحال کرنے کیلئے کیا اقدامات کیے تھے ؟ </string>
     <string name="h104a"> کمر کو تھپ تھپانا </string>
     <string name="h104b"> منہ سے سانس دینا </string>
     <string name="h104c"> امبو بیگنگ </string>
     <string name="h104x"> دیگر (وضاحت کریں) </string>
 
-    <string name="h105"> H105:\t کیا (نام) کو پیدائش کے فوراً بعد صاف کپڑے سے خشک کیا گیا تھا ؟ </string>
+    <string name="h105"> ۔H105:\t کیا (نام) کو پیدائش کے فوراً بعد صاف کپڑے سے خشک کیا گیا تھا ؟ </string>
     <string name="h105a"> ہاں </string>
     <string name="h105b"> نہیں </string>
     <string name="h105c"> معلوم نہیں </string>
 
-    <string name="h106"> H106:\t (نام) کو پیدائش کے کتنی دیر بعد صاف کپڑے سے خشک کیا گیا تھا ؟ </string>
+    <string name="h106"> ۔H106:\t (نام) کو پیدائش کے کتنی دیر بعد صاف کپڑے سے خشک کیا گیا تھا ؟ </string>
 
-    <string name="h107"> H107:\t (نام) کو خشک کرنے / یا لپیٹنے کے لئے کس قسم کے کپڑے کا استعمال کیا گیا تھا ؟ </string>
+    <string name="h107"> ۔H107:\t (نام) کو خشک کرنے / یا لپیٹنے کے لئے کس قسم کے کپڑے کا استعمال کیا گیا تھا ؟ </string>
     <string name="h107a"> نیا کپڑا </string>
     <string name="h107b"> پراناگندا کپڑا </string>
     <string name="h107c"> تولیہ </string>
     <string name="h107d"> کمبل </string>
 
-    <string name="h108"> H108:\t (نام) کی حمل نال کو کاٹنے کے لئے کس چیز کا استعمال کیا گیا تھا ؟ </string>
+    <string name="h108"> ۔H108:\t (نام) کی حمل نال کو کاٹنے کے لئے کس چیز کا استعمال کیا گیا تھا ؟ </string>
     <string name="h108a"> نیا ریز بلیڈ </string>
     <string name="h108b"> پرانا ریز بلیڈ </string>
     <string name="h108c"> قینچی </string>
     <string name="h108d"> چُھری </string>
 
-    <string name="h109"> H109:\t (نام) کی ناڑو پر کیا لگایا گیا تھا ؟ </string>
+    <string name="h109"> ۔H109:\t (نام) کی ناڑو پر کیا لگایا گیا تھا ؟ </string>
     <string name="h109a"> جانوروں کا فضلہ </string>
     <string name="h109b"> کسی قسم کا تیل </string>
     <string name="h109c"> ڈیٹول </string>
@@ -759,23 +759,23 @@
     <string name="h109g"> ماں کا دودھ </string>
     <string name="h109h"> کچھ بھی نہیں </string>
 
-    <string name="h110"> H110:\t کیا (نام) کو پیدائش کے بعد ماں کے ساتھ جلد سے جلد ملاکر رکھا گیا تھا ؟ </string>
+    <string name="h110"> ۔H110:\t کیا (نام) کو پیدائش کے بعد ماں کے ساتھ جلد سے جلد ملاکر رکھا گیا تھا ؟ </string>
     <string name="h110a"> ہاں </string>
     <string name="h110b"> نہیں </string>
     <string name="h110c"> معلوم نہیں </string>
 
-    <string name="h111"> H111:\t (نام) کو پیدائش کے کتنی دیر بعدماں کے ساتھ جلد سے جلد ملاکر رکھا گیا تھا ؟ </string>
+    <string name="h111"> ۔H111:\t (نام) کو پیدائش کے کتنی دیر بعدماں کے ساتھ جلد سے جلد ملاکر رکھا گیا تھا ؟ </string>
 
-    <string name="h112"> H112:\t (نام) کو پیدائش کے کتنی دیر بعد ماں کا دودھ پلایا گیا تھا ؟ </string>
+    <string name="h112"> ۔H112:\t (نام) کو پیدائش کے کتنی دیر بعد ماں کا دودھ پلایا گیا تھا ؟ </string>
     <string name="h112a"> 1 گھنٹے سے بھی کم </string>
     <string name="h112b"> 1 گھنٹے سے زیادہ </string>
     <string name="h112c"> 1 دن سے زیادہ </string>
 
-    <string name="h113"> H113:\t کیا زچگی کے بعد آنے والے ماں کے گاڑھے دودھ (کلوسٹرم) کو ضائع کردیا گیا تھا ؟ </string>
+    <string name="h113"> ۔H113:\t کیا زچگی کے بعد آنے والے ماں کے گاڑھے دودھ (کلوسٹرم) کو ضائع کردیا گیا تھا ؟ </string>
     <string name="h113a"> ہاں </string>
     <string name="h113b"> نہیں </string>
 
-    <string name="h114"> H114:\t زچگی کے بعد آنے والے ماں کے گاڑھے دودھ (کلوسٹرم) کو کیوں ضائع کیا گیا تھا ؟ </string>
+    <string name="h114"> ۔H114:\t زچگی کے بعد آنے والے ماں کے گاڑھے دودھ (کلوسٹرم) کو کیوں ضائع کیا گیا تھا ؟ </string>
     <string name="h114a"> ماں بیمار تھی </string>
     <string name="h114b"> نوزائیدہ بیمار تھا </string>
     <string name="h114c"> نوزائیدہ دودھ چوسنے کے قابل نہیں تھا </string>
@@ -785,7 +785,7 @@
     <string name="h114g"> وہ بہت بھاری ہوتاہے </string>
     <string name="h114h"> تہذیبی/ مذہبی وجوہات </string>
 
-    <string name="h115"> H115:\t  پچھلے 24 گھنٹوں میں (نام) کو کھانے پینے کے لئے کیا دیا گیا ؟ تمام پر نشان لگائیں جو لاگو ہوتے ہیں </string>
+    <string name="h115"> ۔H115:\t  پچھلے 24 گھنٹوں میں (نام) کو کھانے پینے کے لئے کیا دیا گیا ؟ تمام پر نشان لگائیں جو لاگو ہوتے ہیں </string>
     <string name="h115a"> دودھ (ماں کے دودھ کے علاوہ) </string>
     <string name="h115b"> سادہ پانی </string>
     <string name="h115c"> شہد یا شہد کا پانی </string>
@@ -796,21 +796,21 @@
     <string name="h115h"> ماں کا دودھ </string>
     <string name="h115i"> نیم ٹھوس غذا </string>
 
-    <string name="h116"> H116:\t کیا آپ نے (نام) کو ماں کا دودھ پلوایا تھا ؟ </string>
+    <string name="h116"> ۔H116:\t کیا آپ نے (نام) کو ماں کا دودھ پلوایا تھا ؟ </string>
     <string name="h116hint"> صرف ماں کے دودھ کا مطلب ہے کہ بچے کو صرف اور صرف ماں کا دودھ ہی پلایا گیا ہے اور کچھ بھی نہیں دیا گیا۔ اس میں پانی اور پیٹ درد کی دوا وغیرہ شامل ہیں۔ </string>
     <string name="h116a"> ہاں، صرف ماں کا دودھ </string>
     <string name="h116b"> ہاں ، ماں کے دودھ کے علاوہ کچھ اور بھی دیا تھا </string>
     <string name="h116c"> (نام) کو ماں دودھ کبھی نہیں پلایا </string>
 
-    <string name="h117"> H117:\t آپ نے (نام) کو کتنے عرصہ تک صرف اور صرف ماں کا دودھ پلایا تھا ؟ </string>
+    <string name="h117"> ۔H117:\t آپ نے (نام) کو کتنے عرصہ تک صرف اور صرف ماں کا دودھ پلایا تھا ؟ </string>
 
-    <string name="h118"> H118:\t کیا آپ ابھی بھی (نام) کو ماں کا دودھ پلا رہی ہیں ؟ </string>
+    <string name="h118"> ۔H118:\t کیا آپ ابھی بھی (نام) کو ماں کا دودھ پلا رہی ہیں ؟ </string>
     <string name="h118a"> ہاں </string>
     <string name="h118b"> نہیں </string>
 
-    <string name="h119"> H119:\t آپ نے (نام) کو کتنے مہینوں تک ماں کا دودھ پلایا تھا ؟ </string>
+    <string name="h119"> ۔H119:\t آپ نے (نام) کو کتنے مہینوں تک ماں کا دودھ پلایا تھا ؟ </string>
 
-    <string name="h120"> H120:\t (نام) کو پیدائش کے کتنی دیر بعد پہلی بار نہلایا گیا تھا ؟ </string>
+    <string name="h120"> ۔H120:\t (نام) کو پیدائش کے کتنی دیر بعد پہلی بار نہلایا گیا تھا ؟ </string>
     <string name="h120a"> فوراً یا 1 گھنٹے کے اندر </string>
     <string name="h120b"> گھنٹے کے بعد </string>
     <string name="h120c"> 6 سے 12 گھنٹوں کے درمیان </string>
@@ -818,19 +818,19 @@
     <string name="h120e"> 24 گھنٹوں سے زیادہ دیر بعد </string>
     <string name="h120f"> معلوم نہیں / یاد نہیں </string>
 
-    <string name="h121"> H121:\t کیا پیدائش کے وقت (نام) کا وزن کیا گیا تھا ؟ </string>
+    <string name="h121"> ۔H121:\t کیا پیدائش کے وقت (نام) کا وزن کیا گیا تھا ؟ </string>
     <string name="h121a"> ہاں </string>
     <string name="h121b"> نہیں </string>
 
-    <string name="h122"> H122:\t پیدائش کے وقت (نام) کا وزن کتنا تھا ؟ </string>
+    <string name="h122"> ۔H122:\t پیدائش کے وقت (نام) کا وزن کتنا تھا ؟ </string>
     <string name="h122a"> کلو گرام </string>
     <string name="h122b"> معلوم نہیں </string>
 
-    <string name="h123"> H123:\t وزن کی معلومات کے ذرائع کیا تھے ؟ </string>
+    <string name="h123"> ۔H123:\t وزن کی معلومات کے ذرائع کیا تھے ؟ </string>
     <string name="h123a"> حفاظتی ٹیکوں کا کارڈ </string>
     <string name="h123b"> یاد کرکے بتایا تھا </string>
 
-    <string name="h124"> H124:\t جب (نام) کی پیدائش ہوا / ہوئی تو کیا اسکا سائز بہت بڑا، معمول سے زیادہ لمبا، معمول کے مطابق، معمول سے چھوٹا یا بہت زیادہ چھو ٹا تھا </string>
+    <string name="h124"> ۔H124:\t جب (نام) کی پیدائش ہوا / ہوئی تو کیا اسکا سائز بہت بڑا، معمول سے زیادہ لمبا، معمول کے مطابق، معمول سے چھوٹا یا بہت زیادہ چھو ٹا تھا </string>
     <string name="h124a"> بہت بڑا </string>
     <string name="h124b"> اوسط سے بڑا </string>
     <string name="h124c"> اوسط </string>
@@ -838,26 +838,26 @@
     <string name="h124e"> بہت چھوٹا </string>
     <string name="h124f"> معلوم نہیں </string>
 
-    <string name="h125"> H125:\t اب میں (نام) ولادت کے بعد کیئے گیئے صحت کے معائنے سے متعلق کچھ سوالات پوچھون گی۔ </string>
+    <string name="h125"> ۔H125:\t اب میں (نام) ولادت کے بعد کیئے گیئے صحت کے معائنے سے متعلق کچھ سوالات پوچھون گی۔ </string>
 
     <string name="h125hint"> (نام) کی پیدائش کے بعد، کیا کسی نے (نام) کی صحت کا معائنہ کیا تھا ؟ </string>
     <string name="h125a"> ہاں </string>
     <string name="h125b"> نہیں </string>
 
-    <string name="h126"> H126:\t پیدائش کے کتنے عرصہ بعد، (نام) کا پہلی بار معائنہ کیا گیا تھا ؟ </string>
+    <string name="h126"> ۔H126:\t پیدائش کے کتنے عرصہ بعد، (نام) کا پہلی بار معائنہ کیا گیا تھا ؟ </string>
     <string name="h126a"> پیدائش کے بعد 24 گھنٹے کے اندر </string>
     <string name="h126b"> پیدائش کے بعد 24 سے 48 گھنٹے کے اندر </string>
     <string name="h126c"> ولادت کے 3 سے 7 دن کے اندر </string>
     <string name="h126d"> 7 دن سے زیادہ </string>
     <string name="h126e"> معلوم نہیں </string>
 
-    <string name="h127"> H127:\t (نام) کا پہلی بار معائنہ کس جگہ کیا گیا تھا ؟ </string>
+    <string name="h127"> ۔H127:\t (نام) کا پہلی بار معائنہ کس جگہ کیا گیا تھا ؟ </string>
     <string name="h127a"> گھر پر </string>
     <string name="h127b"> سرکاری مرکز صحت میں </string>
     <string name="h127c"> نجی مرکز صحت میں </string>
     <string name="h127d"> رفاہی ادارے یا رفاہی مرکز صحت میں </string>
 
-    <string name="h128"> H128:\t (نام) کا پہلی بار معائنہ کس نے کیا تھا ؟ </string>
+    <string name="h128"> ۔H128:\t (نام) کا پہلی بار معائنہ کس نے کیا تھا ؟ </string>
     <string name="h128a"> ڈاکٹر </string>
     <string name="h128b"> ایل ایچ وی (لیڈی ہیلتھ وزیٹر) </string>
     <string name="h128c"> نرس </string>
@@ -865,7 +865,7 @@
     <string name="h128e"> ایل ایچ ڈبلیو (لیڈی ہیلتھ ورکر) </string>
     <string name="h128f"> دائی / ٹی بی اے (پیشہ ور زچگی کروانے والی) </string>
 
-    <string name="h129"> H129:\t پہلی بار صحت کے چیک اپ کے دوران، کیا (نام) کا مندرجہ زیل میں سے کوئی معائنہ ہوا تھا ؟ </string>
+    <string name="h129"> ۔H129:\t پہلی بار صحت کے چیک اپ کے دوران، کیا (نام) کا مندرجہ زیل میں سے کوئی معائنہ ہوا تھا ؟ </string>
 
     <string name="h129a"> ناڑو کا معائنہ H129a:\t </string>
     <string name="h129aa"> ہاں </string>
@@ -892,20 +892,20 @@
     <string name="h129eb"> نہیں </string>
     <string name="h129ec"> معلوم نہیں </string>
 
-    <string name="h130"> H130:\t کیا صحت کی سہولت فراہم کرنے والے نے (نام) کو حفاظتی ٹیکے لگوانے کا مشورہ دیا تھا ؟ </string>
+    <string name="h130"> ۔H130:\t کیا صحت کی سہولت فراہم کرنے والے نے (نام) کو حفاظتی ٹیکے لگوانے کا مشورہ دیا تھا ؟ </string>
     <string name="h130a"> ہاں </string>
     <string name="h130b"> نہیں </string>
 
-    <string name="h131"> H131:\t کیا آپ (نام) کو حفاظتی ٹیکوں کے لیے لے کر گئی تھیں ؟ </string>
+    <string name="h131"> ۔H131:\t کیا آپ (نام) کو حفاظتی ٹیکوں کے لیے لے کر گئی تھیں ؟ </string>
     <string name="h131a"> ہاں </string>
     <string name="h131b"> نہیں </string>
 
-    <string name="h132"> H132:\t کیا نوزائیدہ کی پیدائش کے بعد ایل ایچ ڈبلیو نے دورہ کیا تھا ؟ </string>
+    <string name="h132"> ۔H132:\t کیا نوزائیدہ کی پیدائش کے بعد ایل ایچ ڈبلیو نے دورہ کیا تھا ؟ </string>
     <string name="h132a"> ہاں </string>
     <string name="h132b"> نہیں </string>
     <string name="h132c"> زچگی کسی اور علاقہ میں ہوئی تھی </string>
 
-    <string name="h133"> H133:\t لیڈی ہیلتھ ورکر کا (نام) کی ولادت کے بعد آنے کا مقصد کیا تھا ؟ </string>
+    <string name="h133"> ۔H133:\t لیڈی ہیلتھ ورکر کا (نام) کی ولادت کے بعد آنے کا مقصد کیا تھا ؟ </string>
     <string name="h133a"> وزن کیا تھا </string>
     <string name="h133b"> معائنہ کیا (درجہ حرارت ، سانس کی رفتار، صحت کے بارے میں آگاہی) </string>
     <string name="h133c"> صحت و صفائی اور خوراک کے بارے میں بتایا </string>
@@ -915,11 +915,11 @@
     <string name="h133g"> ماں کو دودھ پلانے کا صحیح طریقہ بتایا </string>
     <string name="h133h"> خطرناک علامات کے بارے میں بتایا </string>
 
-    <string name="h134"> H134:\t کیا آپ نوزائیدہ کو پیش آنے والی خطرناک علامات / مسائل کے بارے میں جانتی ہیں ؟ </string>
+    <string name="h134"> ۔H134:\t کیا آپ نوزائیدہ کو پیش آنے والی خطرناک علامات / مسائل کے بارے میں جانتی ہیں ؟ </string>
     <string name="h134a"> ہاں </string>
     <string name="h134b"> نہیں </string>
 
-    <string name="h135"> H135:\t کیا آپ نوزائیدہ کو پیش آنے والی کسی خطرناک علامت / مسائل کے بارے میں بتا سکتی ہیں ؟ : جلدی نہ کریں۔ مزید پوچھیں: کوئی اور خطرناک علامات ؟ مزید علامات کے لئے پوچھتے رہیں جب تک شرکت کنندہ کو کوئی اور اضافی علامت یاد نہ آئے۔ بتائی گئی تمام علامات پر نشان لگائیں، لیکن کوئی تجویز نہ دیں۔ </string>
+    <string name="h135"> ۔H135:\t کیا آپ نوزائیدہ کو پیش آنے والی کسی خطرناک علامت / مسائل کے بارے میں بتا سکتی ہیں ؟ : جلدی نہ کریں۔ مزید پوچھیں: کوئی اور خطرناک علامات ؟ مزید علامات کے لئے پوچھتے رہیں جب تک شرکت کنندہ کو کوئی اور اضافی علامت یاد نہ آئے۔ بتائی گئی تمام علامات پر نشان لگائیں، لیکن کوئی تجویز نہ دیں۔ </string>
     <string name="h135a"> جھٹکے / دورے پڑنا </string>
     <string name="h135b"> جسم کا ہلانے پر حرکت کرنا یا ہلائے جانے پر بھی حرکت نہیں کرنا </string>
     <string name="h135c"> ماں کا دودھ صحیح سے نہ پینا </string>
@@ -931,7 +931,7 @@
     <string name="h135i"> پیدائش کے فورا بعد نہ رونا </string>
     <string name="h135j"> معلوم نہیں </string>
 
-    <string name="h136"> H136:\t خطرناک علامات کے بارے میں آپکو کس نے بتایا ؟ </string>
+    <string name="h136"> ۔H136:\t خطرناک علامات کے بارے میں آپکو کس نے بتایا ؟ </string>
     <string name="h136a"> ڈاکٹر </string>
     <string name="h136b"> ایل ایچ وی (لیڈی ہیلتھ وزیٹر) </string>
     <string name="h136c"> نرس </string>
@@ -939,18 +939,18 @@
     <string name="h136e"> ایل ایچ ڈبلیو (لیڈی ہیلتھ ورکر) </string>
     <string name="h136f"> دائی / ٹی بی اے (پیشہ ور زچگی کروانے والی) </string>
 
-    <string name="h137"> H137:\t کیا (نام) کو پیدائش کے بعد بی-سی-جی کا ٹیکہ لگا تھا ؟ (عموماً بائیں بازو پر ٹیکے کا داغ رہ جاتا ہے) </string>
+    <string name="h137"> ۔H137:\t کیا (نام) کو پیدائش کے بعد بی-سی-جی کا ٹیکہ لگا تھا ؟ (عموماً بائیں بازو پر ٹیکے کا داغ رہ جاتا ہے) </string>
     <string name="h137a"> ہاں </string>
     <string name="h137b"> نہیں </string>
 
-    <string name="h137aa"> H137a:\t (نام) کو بی سی جی کا ٹیکہ کہاں سے لگوایا تھا ؟ </string>
+    <string name="h137aa"> ۔H137a:\t (نام) کو بی سی جی کا ٹیکہ کہاں سے لگوایا تھا ؟ </string>
     <string name="h137aaa"> سرکاری صحت کی سہولت </string>
     <string name="h137aab"> نجی صحت کی سہولت </string>
     <string name="h137aac"> ای پی آئی سینٹر(EPI) </string>
     <string name="h137aad"> کمیونٹی میں موجود ماں اور بچے کی صحت کا سینٹر </string>
     <string name="h137aae"> رفاہی ادارے کی سہولت NGO </string>
 
-    <string name="h137bb"> H137b:\t (نام) کو حفاظتی ٹیکے کس نے لگائے تھے ؟ </string>
+    <string name="h137bb"> ۔H137b:\t (نام) کو حفاظتی ٹیکے کس نے لگائے تھے ؟ </string>
     <string name="h137bba"> ڈاکٹر </string>
     <string name="h137bbb"> لیڈی ہیلتھ ورکر </string>
     <string name="h137bbc"> لیڈی ہیلتھ وزیٹر </string>
@@ -962,31 +962,31 @@
 
 
     <string name="th2heading"> SECTION H: POSTNATAL CARE </string>
-    <string name="h201"> H201:\t اگر (نام) کی پیدائش مرکز صحت میں ہوئی تھی تو پیدائش کے بعد آپ کتنا عرصہ مرکزِ صحت میں رہی تھیں ؟ </string>
-    <string name="h202"> H202:\t کیا (نام) کی پیدائش کے بعد وہاں کسی نے آپ کا طبی معائنہ کیا تھا ؟ </string>
+    <string name="h201"> ۔H201:\t اگر (نام) کی پیدائش مرکز صحت میں ہوئی تھی تو پیدائش کے بعد آپ کتنا عرصہ مرکزِ صحت میں رہی تھیں ؟ </string>
+    <string name="h202"> ۔H202:\t کیا (نام) کی پیدائش کے بعد وہاں کسی نے آپ کا طبی معائنہ کیا تھا ؟ </string>
     <string name="h202a"> ہاں </string>
     <string name="h202b"> نہیں </string>
 
-    <string name="h203"> H203:\t زچگی کے کتنی دیر کے بعد آپ کا پہلا طبی معائنہ کیا گیا تھا ؟ </string>
+    <string name="h203"> ۔H203:\t زچگی کے کتنی دیر کے بعد آپ کا پہلا طبی معائنہ کیا گیا تھا ؟ </string>
 
-    <string name="h204"> H204:\t (نام) کی پیدائش کے بعد آپ کا پہلا طبی معائنہ کہاں کیا گیا تھا ؟ </string>
+    <string name="h204"> ۔H204:\t (نام) کی پیدائش کے بعد آپ کا پہلا طبی معائنہ کہاں کیا گیا تھا ؟ </string>
     <string name="h204a"> سرکاری مرکز صحت میں </string>
     <string name="h204b"> نجی مرکز صحت میں </string>
     <string name="h204c"> رفاہی ادارے یا رفاہی مرکز صحت میں </string>
     <string name="h204d"> پیدائش اسٹیشن </string>
 
-    <string name="h205"> H205:\t آپ کا پہلا طبی معائنہ کس نے کیا تھا ؟ </string>
+    <string name="h205"> ۔H205:\t آپ کا پہلا طبی معائنہ کس نے کیا تھا ؟ </string>
     <string name="h205a"> ڈاکٹر </string>
     <string name="h205b"> ایل ایچ وی (لیڈی ہیلتھ وزیٹر) </string>
     <string name="h205c"> نرس </string>
     <string name="h205d"> سی ایم ڈبلیو (کمیونیٹی مڈوائف) </string>
     <string name="h205e"> دائی / ٹی بی اے (پیشہ ور زچگی کروانے والی) </string>
 
-    <string name="h206"> H206:\t کیا آپ کو زچگی کے بعد کی خطرناک علامات / مسائل کے بارے میں معلومات ہے ؟ </string>
+    <string name="h206"> ۔H206:\t کیا آپ کو زچگی کے بعد کی خطرناک علامات / مسائل کے بارے میں معلومات ہے ؟ </string>
     <string name="h206a"> ہاں </string>
     <string name="h206b"> نہیں </string>
 
-    <string name="h207"> H207:\t کیا آپ زچگی کے بعد پیش آنے والی کسی خطرناک علامات / مسائل کے نام بتا سکتی ہیں ؟ </string>
+    <string name="h207"> ۔H207:\t کیا آپ زچگی کے بعد پیش آنے والی کسی خطرناک علامات / مسائل کے نام بتا سکتی ہیں ؟ </string>
     <string name="h207a"> تیز بخار، پیٹ کے نچلے حصہ میں درد یا بدبودار پانی کا اخراج (انفیکشن) </string>
     <string name="h207b"> شدید سر میں درد، نظر کا دھندلا پن، ہائی بلڈ پریشر </string>
     <string name="h207c"> جھٹکے / دورے پڑنا </string>
@@ -997,7 +997,7 @@
     <string name="h207h"> چھاتی کے مسائل : (engorgement, sore, cracked bleeding or inverted nipples) </string>
     <string name="h207i"> معلوم نہیں </string>
 
-    <string name="h208"> H208:\t زچگی کے بعد پیش آنے والی خطرناک علامات / مسائل کے حوالہ سے معلومات آپ کو کس نے دی تھی ؟ تمام پر نشان لگائیں جو لاگو ہوتے ہیں۔ </string>
+    <string name="h208"> ۔H208:\t زچگی کے بعد پیش آنے والی خطرناک علامات / مسائل کے حوالہ سے معلومات آپ کو کس نے دی تھی ؟ تمام پر نشان لگائیں جو لاگو ہوتے ہیں۔ </string>
     <string name="h208a"> ڈاکٹر </string>
     <string name="h208b"> ایل ایچ وی (لیڈی ہیلتھ وزیٹر) </string>
     <string name="h208c"> نرس </string>
@@ -1005,17 +1005,17 @@
     <string name="h208e"> ایل ایچ ڈبلیو (لیڈی ہیلتھ ورکر) </string>
     <string name="h208f"> دائی / ٹی بی اے (پیشہ ور زچگی کروانے والی) </string>
 
-    <string name="h209"> H209:\t کیا لیڈی ہیلتھ ورکر نے زچگی کے بعد آپ کے پاس دورہ کیا تھا ؟ </string>
+    <string name="h209"> ۔H209:\t کیا لیڈی ہیلتھ ورکر نے زچگی کے بعد آپ کے پاس دورہ کیا تھا ؟ </string>
     <string name="h209a"> ہاں </string>
     <string name="h209b"> نہیں </string>
 
-    <string name="h210"> H210:\t اس نے کب دورہ کیا تھا ؟ </string>
+    <string name="h210"> ۔H210:\t اس نے کب دورہ کیا تھا ؟ </string>
     <string name="h210a"> چوبیس گھنٹوں کے اندر </string>
     <string name="h210b"> ایک ہفتہ کے اندر </string>
     <string name="h210c"> ایک مہینے میں </string>
     <string name="h210d"> معلوم نہیں </string>
 
-    <string name="h211"> H211:\t زچگی کے بعد لیڈی ہیلتھ ورکر کے آنے کا مقصد کیا تھا ؟ </string>
+    <string name="h211"> ۔H211:\t زچگی کے بعد لیڈی ہیلتھ ورکر کے آنے کا مقصد کیا تھا ؟ </string>
     <string name="h211a"> طبی معائنہ برائے (Pulse Rate,BP,Temp) </string>
     <string name="h211b"> خون کی کمی </string>
     <string name="h211c"> شرمگاہ سے خون کا اخراج </string>
@@ -1026,32 +1026,32 @@
     <string name="h211h"> دودھ پلانے کے فوائد </string>
     <string name="h211i"> خاندانی منصوبہ بندی کے بارے میں مشورہ </string>
 
-    <string name="h212"> H212:\t لیڈی ہیلتھ ورکر نے آپ کے گھر کے دورے میں کتنا وقت گزارا ؟ </string>
+    <string name="h212"> ۔H212:\t لیڈی ہیلتھ ورکر نے آپ کے گھر کے دورے میں کتنا وقت گزارا ؟ </string>
 
-    <string name="h213"> H213:\t کیا آپ اس کی فراہم کردہ معلومات اور کام سے مطمئن ہیں ؟ </string>
+    <string name="h213"> ۔H213:\t کیا آپ اس کی فراہم کردہ معلومات اور کام سے مطمئن ہیں ؟ </string>
     <string name="h213a"> بہت زیادہ مطمئن </string>
     <string name="h213b"> مطمئن </string>
     <string name="h213c"> بلکل مطمئن نہیں </string>
 
-    <string name="h214"> H214:\t کیا آپ کو عورتوں کی صحت عامہ کے بارے میں لیڈی ہیلتھ ورکر کی بات چیت کے بارے میں معلوم ہے یا کبھی آپ نے اس بات چیت میں حصہ لیا ؟ </string>
+    <string name="h214"> ۔H214:\t کیا آپ کو عورتوں کی صحت عامہ کے بارے میں لیڈی ہیلتھ ورکر کی بات چیت کے بارے میں معلوم ہے یا کبھی آپ نے اس بات چیت میں حصہ لیا ؟ </string>
     <string name="h214a"> ہاں معلوم ہے </string>
     <string name="h214b"> نہیں ،میں نہیں جانتی </string>
     <string name="h214c"> ہاں حصہ لیا تھا </string>
     <string name="h214d"> کبھی حصہ نہیں لیا </string>
 
-    <string name="h215"> H215:\t غریب اور پسماندہ لوگوں کی صحت کے لیئے معاشی مدد کا ذرائع کیا ہے ؟ </string>
+    <string name="h215"> ۔H215:\t غریب اور پسماندہ لوگوں کی صحت کے لیئے معاشی مدد کا ذرائع کیا ہے ؟ </string>
     <string name="h215a"> سماجی ادارہ </string>
     <string name="h215b"> گاؤں کے فنڈ </string>
     <string name="h215c"> مقامی،سماجی کارکن </string>
     <string name="h215d"> بیرونی سماجی کارکن </string>
     <string name="h215e"> صحت کے لئے کمیونٹی کی کوئی امداد نہیں </string>
 
-    <string name="h216"> H216:\t کیا آپ کے گھر کے کسی مرد نے ولیج ہیلتھ کمیٹی کی میٹنگ میں حصہ لیا ہے ؟ </string>
+    <string name="h216"> ۔H216:\t کیا آپ کے گھر کے کسی مرد نے ولیج ہیلتھ کمیٹی کی میٹنگ میں حصہ لیا ہے ؟ </string>
     <string name="h216a"> ہاں </string>
     <string name="h216b"> نہیں </string>
     <string name="h216c"> کبھی سنا نہیں اس کے بارے میں </string>
 
-    <string name="h217"> H217:\t زچہ اور بچہ کی ضروریات کے لیئے مالی ذرائع کیا تھے ؟ </string>
+    <string name="h217"> ۔H217:\t زچہ اور بچہ کی ضروریات کے لیئے مالی ذرائع کیا تھے ؟ </string>
     <string name="h217a"> خاندان (شوہر یا اپنے وسائل) </string>
     <string name="h217b"> بینک / آرگنائزیشن سے قرضہ </string>
     <string name="h217c"> کمیونٹی کا فنڈ </string>
@@ -1060,12 +1060,12 @@
     <string name="h217f"> طبی انشورنس </string>
     <string name="h217x"> دیگر (وضاحت کریں) </string>
 
-    <string name="h218"> H218:\t کیا آپ نے اپنے آخری حمل یا زچگی کے لئے مالی ذرائع حاصل کئے تھے ؟ </string>
+    <string name="h218"> ۔H218:\t کیا آپ نے اپنے آخری حمل یا زچگی کے لئے مالی ذرائع حاصل کئے تھے ؟ </string>
     <string name="h218a"> ہاں </string>
     <string name="h218b"> نہیں </string>
     <string name="h218c"> اس طرح کی مدد کے بارے میں نہیں جانتی </string>
 
-    <string name="h219"> H219:\t آپ کے آخری حمل یا زچگی کے لئے مالی معاونت کا ذریعہ کیا تھا ؟ </string>
+    <string name="h219"> ۔H219:\t آپ کے آخری حمل یا زچگی کے لئے مالی معاونت کا ذریعہ کیا تھا ؟ </string>
     <string name="h219a"> خاندان (شوہر یا اپنے وسائل) </string>
     <string name="h219b"> بینک / آرگنائزیشن سے قرضہ </string>
     <string name="h219c"> کمیونٹی کا فنڈ </string>
@@ -1074,7 +1074,7 @@
     <string name="h219f"> طبی انشورنس </string>
     <string name="h219x"> دیگر (وضاحت کریں) </string>
 
-    <string name="h220"> H220:\t اس مالی معاونت کے زیادہ تر حصے کو کس مقصد کے لئے استعمال کیا گیا تھا ؟ </string>
+    <string name="h220"> ۔H220:\t اس مالی معاونت کے زیادہ تر حصے کو کس مقصد کے لئے استعمال کیا گیا تھا ؟ </string>
     <string name="h220a"> ٹرانسپورٹ </string>
     <string name="h220b"> حمل کی دیکھ بھال </string>
     <string name="h220c"> زچگی / آپریشن </string>
@@ -1083,18 +1083,18 @@
     <string name="h220f"> نو زائیدہ یا 5 سال سے کم عمر بچے کی صحت </string>
     <string name="h220x"> دیگر (وضاحت کریں) </string>
 
-    <string name="h221"> H221:\t آج تک، کیا آپ نے قرض کی مکمل یا جزوی رقم واپس کر دی ہے ؟ </string>
+    <string name="h221"> ۔H221:\t آج تک، کیا آپ نے قرض کی مکمل یا جزوی رقم واپس کر دی ہے ؟ </string>
     <string name="h221a"> مکمل </string>
     <string name="h221b"> جزوی </string>
     <string name="h221c"> ابھی تک کچھ بھی ادا نہیں کیا </string>
 
-    <string name="h222"> H222:\t قرض کی رقم واپس ادا کر نے کا طریقہ کار کیا تھا ؟ </string>
+    <string name="h222"> ۔H222:\t قرض کی رقم واپس ادا کر نے کا طریقہ کار کیا تھا ؟ </string>
     <string name="h222a"> گھر کی ماہانہ آمدنی کے مخصوص حصہ سے قرض کی ادائیگی </string>
     <string name="h222b"> اثاثوں کی فروخت </string>
     <string name="h222c"> کسی اور سے مزید قرض لے کر </string>
     <string name="h222d"> چندہ / فنڈ اکھٹا کرنا </string>
 
-    <string name="h223"> H223:\t وہ کونسی حکمت عملی ہے جس کے ذریعے قرض کے بقیہ حصے کی ادائیگی کی جائے گی ؟ </string>
+    <string name="h223"> ۔H223:\t وہ کونسی حکمت عملی ہے جس کے ذریعے قرض کے بقیہ حصے کی ادائیگی کی جائے گی ؟ </string>
     <string name="h223a"> گھر کی ماہانہ آمدنی کے مخصوص حصہ سے قرض کی ادائیگی </string>
     <string name="h223b"> اثاثوں کی فروخت </string>
     <string name="h223c"> کسی اور سے مزید قرض لے کر </string>
@@ -2522,44 +2522,44 @@
     <string name="hh06"> شہر / گاؤں </string>
     <string name="hh07"> کلسٹر </string>
     <string name="hh08"> گھرانہ نمبر </string>
-    <string name="hh09"> HH09: انٹرویو لینے والے کا نام </string>
-    <string name="hh09a"> HH09a: انٹرویو لینے والے کا کوڈ</string>
-    <string name="hh10"> HH10: سُپروائزر کا نام </string>
-    <string name="hh10a"> hh10a: سُپروائزر کا  کوڈ</string>
-    <string name="hh11"> hh11: انٹرویو کی تاریخ  </string>
-    <string name="hh12"> hh12: نٹرویو کا وقت</string>
-    <string name="hh13a"> hh13A: جواب دہندہ کانام </string>
-    <string name="hh13b"> hh13B: جواب دہندگان کا رابطہ نمبر </string>
-    <string name="hh14"> HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
-    <string name="hh15"> HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
-    <string name="hh16"> HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
+    <string name="hh09"> ۔HH09: انٹرویو لینے والے کا نام </string>
+    <string name="hh09a"> ۔HH09a: انٹرویو لینے والے کا کوڈ</string>
+    <string name="hh10"> ۔HH10: سُپروائزر کا نام </string>
+    <string name="hh10a"> ۔Hh10a: سُپروائزر کا  کوڈ</string>
+    <string name="hh11"> ۔Hh11: انٹرویو کی تاریخ  </string>
+    <string name="hh12"> ۔Hh12: نٹرویو کا وقت</string>
+    <string name="hh13a"> ۔hh13A: جواب دہندہ کانام </string>
+    <string name="hh13b"> ۔Hh13B: جواب دہندگان کا رابطہ نمبر </string>
+    <string name="hh14"> ۔HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
+    <string name="hh15"> ۔HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
+    <string name="hh16"> ۔HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
     <string name="hh15a"> ہاں </string>
     <string name="hh15b"> نہیں </string>
 
     <string name="hh16a"> گھر کے سربراہ کا نام</string>
     <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh17"> HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
+    <string name="hh17"> ۔HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
     <string name="hh17a"> گھر کے سربراہ کا نام</string>
     <string name="hh17b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh18"> HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+    <string name="hh18"> ۔HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے</string>
     <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
 
-    <string name="hh19"> HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh19"> ۔HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
 
-    <string name="hh20"> HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
+    <string name="hh20"> ۔HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
     <string name="hh20h"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 
-    <string name="hh21"> HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh21"> ۔HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
-    <string name="hh22"> HH22: گھرانے کے انٹرویو کا نتیجہ: </string>
+    <string name="hh22"> ۔HH22: گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل</string>
     <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
@@ -3029,7 +3029,7 @@
     <string name="im01_1"> ہاں دیکھ لیا</string>
     <string name="im01_2">  ہاں، کارڈنہیں دیکھا</string>
     <string name="im01_3"> کارڈ نہیں ہے</string>
-    <string name="im02"> im02: کیا بچےکے لئےآپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا؟</string>
+    <string name="im02"> im02: کیا بچےکے لئےآپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا؟ </string>
     <string name="im02_1"> ہاں</string>
     <string name="im02_2"> نہیں</string>
     <string name="im02a"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا؟</string>

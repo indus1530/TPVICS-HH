@@ -18,7 +18,9 @@
             style="@style/textView3Head"
             android:text="@string/a101a" />
 
-        <ScrollView style="@style/i_scrollview">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/fldGrpSectionA"
@@ -33,7 +35,8 @@
 
                         <!--hh07-->
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/hh07" />
 
                         <LinearLayout
@@ -79,7 +82,6 @@
 
                             <!--hh03-->
                             <TextView
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
@@ -89,7 +91,6 @@
 
                             <TextView
                                 android:id="@+id/hh03"
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="3"
@@ -112,7 +113,6 @@
 
                             <!--hh04-->
                             <TextView
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
@@ -122,7 +122,6 @@
 
                             <TextView
                                 android:id="@+id/hh04"
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="3"
@@ -145,7 +144,6 @@
 
                             <!--hh05-->
                             <TextView
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
@@ -155,7 +153,6 @@
 
                             <TextView
                                 android:id="@+id/hh05"
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="3"
@@ -178,7 +175,6 @@
 
                             <!--hh06-->
                             <TextView
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
@@ -188,7 +184,6 @@
 
                             <TextView
                                 android:id="@+id/hh06"
-                                style="@style/i_textview"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="3"
@@ -211,7 +206,8 @@
 
                             <!--hh08-->
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/hh08" />
 
                             <LinearLayout style="@style/hlinearlayout">
@@ -258,8 +254,10 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
                                     android:id="@+id/hhName"
-                                    style="@style/i_textview"
                                     android:gravity="center"
                                     android:padding="10dp"
                                     android:text="@string/checkHHpresent" />
@@ -284,7 +282,6 @@
                             <LinearLayout style="@style/hlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -313,7 +310,6 @@
                             <LinearLayout style="@style/hlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
@@ -339,7 +335,7 @@
                             <LinearLayout style="@style/hlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_height="wrap_content"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
                                     android:text="@string/hh13b" />
@@ -364,7 +360,7 @@
                             <LinearLayout style="@style/hlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_height="wrap_content"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
                                     android:text="@string/hh14" />
@@ -393,7 +389,9 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh15" />
 
                                 <RadioGroup
@@ -430,13 +428,14 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh16" />
 
                                 <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
-                                        style="@style/i_textviewhint"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/name" />
@@ -451,7 +450,7 @@
                                         android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
 
                                     <TextView
-                                        style="@style/i_textviewhint"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh16b" />
@@ -480,13 +479,14 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh17" />
 
                                 <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
-                                        style="@style/i_textviewhint"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/name" />
@@ -500,7 +500,7 @@
                                         android:maxLength="30" />
 
                                     <TextView
-                                        style="@style/i_textviewhint"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh17b" />
@@ -528,7 +528,8 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh18" />
 
                                 <RadioGroup
@@ -564,11 +565,13 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh19" />
 
                                 <TextView
-                                    style="@style/i_textviewhint"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh19h" />
 
                                 <CheckBox
@@ -580,7 +583,7 @@
                                 <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
-                                        style="@style/i_textviewhint"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh19a" />
@@ -613,11 +616,13 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh20" />
 
                                 <TextView
-                                    style="@style/i_textviewhint"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh20h" />
 
                                 <RadioGroup
@@ -654,7 +659,8 @@
                             <LinearLayout style="@style/vlinearlayout">
 
                                 <TextView
-                                    style="@style/i_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:text="@string/hh21" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
