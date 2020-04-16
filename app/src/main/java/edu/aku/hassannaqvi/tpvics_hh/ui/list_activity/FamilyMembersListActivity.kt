@@ -110,6 +110,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel.familyMemLst.observe(this, Observer { item ->
             bi.contentScroll.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
+            currentFM = item.last()
         })
         setupRecyclerView(mutableListOf())
     }
@@ -152,7 +153,6 @@ class FamilyMembersListActivity : AppCompatActivity() {
         currentFM?.let {
             mainVModel.setCheckedItemValues(currentFM!!.serialno.toInt())
         }
-
     }
 
     companion object {
