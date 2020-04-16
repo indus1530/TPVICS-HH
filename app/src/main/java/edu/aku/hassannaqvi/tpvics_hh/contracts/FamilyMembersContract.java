@@ -183,7 +183,7 @@ public class FamilyMembersContract {
 
     public static abstract class SingleMember implements BaseColumns {
 
-        public static final String TABLE_NAME = "familymembers";
+        public static final String TABLE_NAME = "childrenroaster";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_UUID = "_uuid";
