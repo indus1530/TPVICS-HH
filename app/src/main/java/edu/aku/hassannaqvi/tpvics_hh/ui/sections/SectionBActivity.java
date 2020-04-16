@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -58,7 +59,7 @@ public class SectionBActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            setResult(RESULT_OK);
+            setResult(RESULT_OK, new Intent().putExtra(SERIAL_EXTRA, serial));
             finish();
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
