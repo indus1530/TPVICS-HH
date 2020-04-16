@@ -13,7 +13,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ItemMemListBinding;
 import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel;
@@ -48,12 +47,12 @@ public class FamilyMemberListAdapter extends RecyclerView.Adapter<FamilyMemberLi
         holder.bi.parentLayout.setTag(i);
 
         holder.bi.name.setText(mList.get(i).getName());
-        holder.bi.realHead.setText(MainApp.relationHHLst[Integer.parseInt(mList.get(i).getFather_name()) - 1]);
         String age = mList.get(i).getAge();
         holder.bi.dob.setText(new StringBuilder().append("Age:").append(Integer.parseInt(age) < 0 ? "-" : age).append(" Year(s)"));
         holder.bi.index.setText(String.format("%02d", Integer.valueOf(mList.get(i).getSerialno())));
         holder.bi.genderImage.setImageResource(Util.getMemberIcon(Integer.parseInt(mList.get(i).getGender()), mList.get(i).getAge()));
         holder.bi.motherName.setText(mList.get(i).getMother_name());
+        holder.bi.fatherName.setText(mList.get(i).getFather_name());
         holder.bi.parentLayout.setOnClickListener(v -> {
             itemClicked.onItemClick(mList.get(i), i);
         });

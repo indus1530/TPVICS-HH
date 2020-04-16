@@ -11,9 +11,8 @@
     </data>
 
     <ScrollView
-        style="@style/i_scrollview"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/fldGrpSectionD"
@@ -42,7 +41,8 @@
                             android:orientation="vertical">
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/ch01" />
 
                         </LinearLayout>
@@ -62,7 +62,8 @@
 
                             <TextView
                                 android:id="@+id/ch01"
-                                style="@style/i_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:background="@color/pink_100"
                                 android:gravity="center"
                                 android:text="@string/num"
@@ -85,7 +86,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch02" />
 
                         <EditText
@@ -108,7 +110,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch03" />
 
                         <EditText
@@ -131,7 +134,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch03b" />
 
                         <EditText
@@ -154,7 +158,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch04" />
 
                         <RadioGroup
@@ -192,7 +197,8 @@
 
                         <TextView
                             android:id="@+id/txtcih2dob"
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text='@string/ch05' />
 
                         <LinearLayout
@@ -290,7 +296,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch06" />
 
                         <LinearLayout
@@ -298,7 +305,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:gravity="center"
@@ -317,7 +324,7 @@
                                 app:type="range" />
 
                             <TextView
-                                style="@style/i_textview"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:gravity="center"
@@ -353,7 +360,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch07" />
 
                         <RadioGroup
@@ -395,7 +403,8 @@
                         android:orientation="vertical">
 
                         <TextView
-                            style="@style/i_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:text="@string/ch08" />
 
                         <RadioGroup

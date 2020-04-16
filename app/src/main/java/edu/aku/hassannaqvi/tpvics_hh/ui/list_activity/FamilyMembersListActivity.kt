@@ -110,6 +110,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
         mainVModel.familyMemLst.observe(this, Observer { item ->
             bi.contentScroll.total.text = String.format("%02d", item.size)
             adapter.setMList(item)
+            mainVModel.setCheckedItemValues(item.last().serialno.toInt())
         })
         setupRecyclerView(mutableListOf())
     }
@@ -139,7 +140,10 @@ class FamilyMembersListActivity : AppCompatActivity() {
         if (requestCode == CONSTANTS.MEMBER_ITEM) {
             when (resultCode) {
                 Activity.RESULT_OK -> {
-                    data?.let { serial = data.getIntExtra(SERIAL_EXTRA, 0) } ?: handlingHolder()
+                    data?.let {
+                        serial = data.getIntExtra(SERIAL_EXTRA, 0)
+                        handlingHolder()
+                    }
                 }
                 Activity.RESULT_CANCELED -> {
                 }
@@ -149,10 +153,9 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     private fun handlingHolder() {
         memSelectedCounter++
-        currentFM?.let {
+        /*currentFM?.let {
             mainVModel.setCheckedItemValues(currentFM!!.serialno.toInt())
-        }
-
+        }*/
     }
 
     companion object {

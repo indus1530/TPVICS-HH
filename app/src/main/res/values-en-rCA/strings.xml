@@ -3109,5 +3109,9 @@
     <string name="ss18c">" لکٹری کے تختے"</string>
     <string name="ss18d">" کھجور  یاناریل کے پتے /بانس"</string>
     <string name="ss18e_title">" تیار فرش "</string>
+    <string name="name_not_found">Name Not Found</string>
+    <string name="father_name_not_found">Father name Not Found</string>
+    <string name="mother_name_not_found">Mother name Not Found</string>
+    <string name="serialStart">00</string>
 
 </resources>
