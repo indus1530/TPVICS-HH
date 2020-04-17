@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/GrpName"
+            android:id="@+id/fldGrpSectionCHB"
             style="@style/linearlayout_view_wt_bound">
 
 
@@ -90,9 +90,9 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/cb01_dk"
+                        android:id="@+id/cb01dk"
                         style="@style/checkbox"
-                        android:text="@string/cb01_dk" />
+                        android:text="@string/cb01dk" />
 
                 </LinearLayout>
 
@@ -153,9 +153,9 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/cb02_dk"
+                        android:id="@+id/cb02dk"
                         style="@style/checkbox"
-                        android:text="@string/cb02_dk" />
+                        android:text="@string/cb02dk" />
 
                 </LinearLayout>
 
@@ -179,14 +179,14 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb03_dd" />
+                            android:text="@string/cb03dd" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb03_dd"
+                            android:id="@+id/cb03dd"
                             style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03_dd"
+                            android:hint="@string/cb03dd"
                             app:mask="##"
                             app:maxValue="29"
                             app:minValue="1"
@@ -200,14 +200,14 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb03_mm" />
+                            android:text="@string/cb03mm" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb03_mm"
+                            android:id="@+id/cb03mm"
                             style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03_mm"
+                            android:hint="@string/cb03mm"
                             app:mask="##"
                             app:maxValue="11"
                             app:minValue="1"
@@ -221,14 +221,14 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb03_yy" />
+                            android:text="@string/cb03yy" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb03_yy"
+                            android:id="@+id/cb03yy"
                             style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03_yy"
+                            android:hint="@string/cb03yy"
                             app:mask="##"
                             app:maxValue="2020"
                             app:minValue="2018"
@@ -237,9 +237,9 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/cb03_dk"
+                        android:id="@+id/cb03dk"
                         style="@style/checkbox"
-                        android:text="@string/cb03_dk" />
+                        android:text="@string/cb03dk" />
 
                 </LinearLayout>
 
@@ -263,14 +263,14 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb04_mm" />
+                            android:text="@string/cb04mm" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb04_mm"
+                            android:id="@+id/cb04mm"
                             style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb04_mm"
+                            android:hint="@string/cb04mm"
                             app:mask="##"
                             app:maxValue="36"
                             app:minValue="1"
@@ -284,14 +284,14 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb04_yy" />
+                            android:text="@string/cb04yy" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb04_yy"
+                            android:id="@+id/cb04yy"
                             style="@style/EditTextAlpha"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb04_yy"
+                            android:hint="@string/cb04yy"
                             app:mask="##"
                             app:maxValue="3"
                             app:minValue="1"
@@ -320,18 +320,18 @@
                         style="@style/hradiogroup">
 
                         <RadioButton
-                            android:id="@+id/cb05_1"
+                            android:id="@+id/cb051"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb05_1" />
+                            android:text="@string/cb051" />
 
                         <RadioButton
-                            android:id="@+id/cb05_2"
+                            android:id="@+id/cb052"
                             style="@style/radiobutton"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="@string/cb05_2" />
+                            android:text="@string/cb052" />
 
                     </RadioGroup>
 
