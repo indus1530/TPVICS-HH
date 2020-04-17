@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -23,7 +24,8 @@ public class SectionCHBActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_ch_b);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_b);
+        bi.setCallback(this);
     }
 
     private boolean UpdateDB() {
