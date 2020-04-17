@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -26,6 +27,18 @@ public class SectionCHAActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_a);
         bi.setCallback(this);
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
+
+        bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.uf14a.getId())
+                Clear.clearAllFields(bi.fldGrpCVuf15);
+        });
+
+
     }
 
     private boolean UpdateDB() {

@@ -44,24 +44,6 @@ public class SectionCHCActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVim02);
         });
 
-        /*bi.im01.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.im011.getId()) {
-                bi.fldGrpSecChc1.setVisibility(View.GONE);
-                Clear.clearAllFields(bi.fldGrpSecChc1);
-            } else {
-                bi.fldGrpSecChc1.setVisibility(View.VISIBLE);
-            }
-
-            if (i == bi.im012.getId()) {
-                bi.fldGrpCVim02.setVisibility(View.GONE);
-                Clear.clearAllFields(bi.fldGrpCVim02);
-            } else {
-                bi.fldGrpCVim02.setVisibility(View.VISIBLE);
-            }
-
-        }));*/
-
 
         bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im021.getId())
@@ -141,26 +123,6 @@ public class SectionCHCActivity extends AppCompatActivity {
             if (i != bi.im211.getId())
                 Clear.clearAllFields(bi.fldGrpCVim22);
         });
-
-
-
-
-
-
-
-
-
-
-
-        /*bi.kf3d1797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                    ClearClass.ClearAllFields(bi.fldGrpLLkf3d17, false);
-                else
-                    ClearClass.ClearAllFields(bi.fldGrpLLkf3d17, true);
-            }
-        });*/
 
     }
 
