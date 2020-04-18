@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,9 +40,9 @@ public class SectionC1Activity extends AppCompatActivity {
         bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss04b.getId()) {
                 Clear.clearAllFields(bi.ss05cv);
-                bi.ss05cv.setVisibility(View.GONE);
+                bi.ss05cv.setEnabled(false);
             } else {
-                bi.ss05cv.setVisibility(View.VISIBLE);
+                bi.ss05cv.setEnabled(true);
             }
         }));
 
@@ -55,17 +54,17 @@ public class SectionC1Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.ss10cv);
                 Clear.clearAllFields(bi.ss11cv);
                 Clear.clearAllFields(bi.ss12cv);
-                bi.ss08cv.setVisibility(View.GONE);
-                bi.ss09cv.setVisibility(View.GONE);
-                bi.ss10cv.setVisibility(View.GONE);
-                bi.ss11cv.setVisibility(View.GONE);
-                bi.ss12cv.setVisibility(View.GONE);
+                bi.ss08cv.setEnabled(false);
+                bi.ss09cv.setEnabled(false);
+                bi.ss10cv.setEnabled(false);
+                bi.ss11cv.setEnabled(false);
+                bi.ss12cv.setEnabled(false);
             } else {
-                bi.ss08cv.setVisibility(View.VISIBLE);
-                bi.ss09cv.setVisibility(View.VISIBLE);
-                bi.ss10cv.setVisibility(View.VISIBLE);
-                bi.ss11cv.setVisibility(View.VISIBLE);
-                bi.ss12cv.setVisibility(View.VISIBLE);
+                bi.ss08cv.setEnabled(true);
+                bi.ss09cv.setEnabled(true);
+                bi.ss10cv.setEnabled(true);
+                bi.ss11cv.setEnabled(true);
+                bi.ss12cv.setEnabled(true);
             }
         }));
 
@@ -75,13 +74,13 @@ public class SectionC1Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.ss10cv);
                 Clear.clearAllFields(bi.ss11cv);
                 Clear.clearAllFields(bi.ss12cv);
-                bi.ss10cv.setVisibility(View.GONE);
-                bi.ss11cv.setVisibility(View.GONE);
-                bi.ss12cv.setVisibility(View.GONE);
+                bi.ss10cv.setEnabled(false);
+                bi.ss11cv.setEnabled(false);
+                bi.ss12cv.setEnabled(false);
             } else {
-                bi.ss10cv.setVisibility(View.VISIBLE);
-                bi.ss11cv.setVisibility(View.VISIBLE);
-                bi.ss12cv.setVisibility(View.VISIBLE);
+                bi.ss10cv.setEnabled(true);
+                bi.ss11cv.setEnabled(true);
+                bi.ss12cv.setEnabled(true);
             }
         }));
 
@@ -90,11 +89,11 @@ public class SectionC1Activity extends AppCompatActivity {
             if (i == bi.ss11b.getId()) {
                 Clear.clearAllFields(bi.ss12cv);
                 Clear.clearAllFields(bi.ss13cv);
-                bi.ss12cv.setVisibility(View.GONE);
-                bi.ss13cv.setVisibility(View.GONE);
+                bi.ss12cv.setEnabled(false);
+                bi.ss13cv.setEnabled(false);
             } else {
-                bi.ss12cv.setVisibility(View.VISIBLE);
-                bi.ss13cv.setVisibility(View.VISIBLE);
+                bi.ss12cv.setEnabled(true);
+                bi.ss13cv.setEnabled(true);
             }
         }));
 
