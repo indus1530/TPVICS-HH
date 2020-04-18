@@ -35,6 +35,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- cb01  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb01"
@@ -57,11 +58,14 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb01a"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb01a"
-                            app:mask="##"
+                            android:enabled='@{cb01dk.checked ? false : true}'
+                            android:maxLength="2"
+                            android:text='@{cb01dk.checked ? "" : cb01a.getText().toString() }'
+                            app:defaultValue="77"
                             app:maxValue="20"
                             app:minValue="1"
                             app:type="range" />
@@ -78,11 +82,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb01b"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb01b"
-                            app:mask="##"
+                            android:enabled='@{cb01dk.checked ? false : true}'
+                            android:maxLength="2"
+                            android:text='@{cb01dk.checked ? "" : cb01b.getText().toString() }'
                             app:maxValue="20"
                             app:minValue="1"
                             app:type="range" />
@@ -92,6 +98,7 @@
                     <CheckBox
                         android:id="@+id/cb01dk"
                         style="@style/checkbox"
+                        android:tag="-1"
                         android:text="@string/cb01dk" />
 
                 </LinearLayout>
@@ -120,11 +127,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb02a"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb02a"
-                            app:mask="##"
+                            android:enabled='@{cb02dk.checked ? false : true}'
+                            android:maxLength="2"
+                            android:text='@{cb02dk.checked ? "" : cb02a.getText().toString() }'
                             app:maxValue="20"
                             app:minValue="1"
                             app:type="range" />
@@ -141,11 +150,13 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb02b"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb02b"
-                            app:mask="##"
+                            android:enabled='@{cb02dk.checked ? false : true}'
+                            android:maxLength="2"
+                            android:text='@{cb02dk.checked ? "" : cb02b.getText().toString() }'
                             app:maxValue="20"
                             app:minValue="1"
                             app:type="range" />
@@ -155,6 +166,7 @@
                     <CheckBox
                         android:id="@+id/cb02dk"
                         style="@style/checkbox"
+                        android:tag="-1"
                         android:text="@string/cb02dk" />
 
                 </LinearLayout>

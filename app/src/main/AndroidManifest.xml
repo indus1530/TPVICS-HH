@@ -24,11 +24,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity android:name=".ui.sections.SectionCHCActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
         </activity>
         <activity android:name=".ui.sections.SectionCHAActivity" />
         <activity android:name=".ui.sections.SectionCHBActivity" />
@@ -37,11 +37,11 @@
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.other.LoginActivity"
