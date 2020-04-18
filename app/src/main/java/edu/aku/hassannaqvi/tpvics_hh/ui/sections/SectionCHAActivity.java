@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -23,7 +25,20 @@ public class SectionCHAActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_ch_a);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_a);
+        bi.setCallback(this);
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
+
+        bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.uf14a.getId())
+                Clear.clearAllFields(bi.fldGrpCVuf15);
+        });
+
+
     }
 
     private boolean UpdateDB() {
@@ -45,7 +60,9 @@ public class SectionCHAActivity extends AppCompatActivity {
         JSONObject f1 = new JSONObject();
 
         f1.put("uf09", bi.uf09.getText().toString());
+
         f1.put("uf9a", bi.uf9a.getText().toString());
+
         f1.put("uf9b",
                 bi.uf9b1.isChecked() ? "1" :
                         bi.uf9b2.isChecked() ? "2" :

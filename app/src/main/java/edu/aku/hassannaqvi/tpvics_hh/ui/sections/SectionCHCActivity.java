@@ -2,10 +2,13 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -23,7 +26,104 @@ public class SectionCHCActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_ch_c);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_c);
+        bi.setCallback(this);
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
+
+        bi.im01.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im011.getId())
+                Clear.clearAllFields(bi.fldGrpSecChc1);
+        });
+
+        bi.im01.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im012.getId())
+                Clear.clearAllFields(bi.fldGrpCVim02);
+        });
+
+
+        bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im021.getId())
+                Clear.clearAllFields(bi.fldGrpCVim02a);
+        });
+
+        bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im021.getId())
+                Clear.clearAllFields(bi.fldGrpSecChc2);
+        });
+
+        bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im051.getId())
+                Clear.clearAllFields(bi.fldGrpCVim06);
+        });
+
+        bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im051.getId())
+                Clear.clearAllFields(bi.fldGrpSecChc3);
+        });
+
+        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im231.getId() || i == bi.im232.getId() || i == bi.im233.getId())
+                Clear.clearAllFields(bi.fldGrpSecChc4);
+        });
+
+        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im234.getId())
+                Clear.clearAllFields(bi.fldGrpCVim23a);
+        });
+
+        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im234.getId())
+                Clear.clearAllFields(bi.fldGrpCVim23a);
+        });
+
+
+        bi.im08.setOnCheckedChangeListener(((radioGroup, i) -> {
+
+            if (i == bi.im081.getId()) {
+                bi.fldGrpSecChc3.setVisibility(View.VISIBLE);
+                bi.fldGrpCVim23.setVisibility(View.VISIBLE);
+                bi.fldGrpCVim23a.setVisibility(View.VISIBLE);
+            } else {
+                Clear.clearAllFields(bi.fldGrpSecChc3);
+                Clear.clearAllFields(bi.fldGrpCVim23);
+                Clear.clearAllFields(bi.fldGrpCVim23a);
+                bi.fldGrpSecChc3.setVisibility(View.GONE);
+                bi.fldGrpCVim23.setVisibility(View.GONE);
+                bi.fldGrpCVim23a.setVisibility(View.GONE);
+            }
+
+        }));
+
+
+        bi.im10.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im101.getId())
+                Clear.clearAllFields(bi.fldGrpSecChc5);
+        });
+
+        bi.im14.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im141.getId())
+                Clear.clearAllFields(bi.fldGrpCVim15);
+        });
+
+        bi.im16.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im161.getId())
+                Clear.clearAllFields(bi.fldGrpCVim17);
+        });
+
+        bi.im18.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im181.getId())
+                Clear.clearAllFields(bi.fldGrpCVim19);
+        });
+
+        bi.im21.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i != bi.im211.getId())
+                Clear.clearAllFields(bi.fldGrpCVim22);
+        });
+
     }
 
     private boolean UpdateDB() {
