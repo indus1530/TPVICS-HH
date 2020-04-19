@@ -35,7 +35,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <!-- cb01  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb01"

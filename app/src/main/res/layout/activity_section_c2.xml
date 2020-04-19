@@ -380,7 +380,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:text="@string/ss16" />
 
                     <LinearLayout
@@ -428,7 +427,7 @@
                             android:hint="@string/specify"
                             android:tag="ss1696"
                             android:text='@{ss1696.checked ? ss1696x.getText().toString() : "" }'
-                            android:visibility='@{ss1696.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss1696.checked ? true : false }' />
 
                     </LinearLayout>
 
@@ -446,7 +445,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:text="@string/ss17" />
 
                     <RadioGroup
@@ -519,7 +517,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss1796.checked ? ss1796x.getText().toString() : "" }'
-                            android:visibility='@{ss1796.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss1796.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -537,7 +535,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:text="@string/ss18" />
 
                     <RadioGroup
@@ -547,7 +544,6 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:text="@string/ss18a_title" />
 
                         <RadioButton
@@ -626,7 +622,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss1896.checked ? ss1896x.getText().toString() : "" }'
-                            android:visibility='@{ss1896.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss1896.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -652,8 +648,6 @@
                         style="@style/vradiogroup">
 
                         <TextView
-
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ss19a_title" />
@@ -749,7 +743,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss1996.checked ? ss1996x.getText().toString() : "" }'
-                            android:visibility='@{ss1996.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss1996.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -879,7 +873,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss2096.checked ? ss2096x.getText().toString() : "" }'
-                            android:visibility='@{ss2096.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss2096.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -1004,7 +998,7 @@
                         style="@style/EditTextNum"
                         android:hint="##.#"
                         android:text='@{ss23a.checked ? ss23ax.getText().toString() : "" }'
-                        android:visibility='@{ss23a.checked ? View.VISIBLE : View.GONE }'
+                        android:enabled='@{ss23a.checked ? true : false }'
                         app:mask="##.#"
                         app:maxValue="99"
                         app:minValue="1"
@@ -1015,7 +1009,7 @@
                         style="@style/EditTextNum"
                         android:hint="##.#"
                         android:text='@{ss23b.checked ? ss23bx.getText().toString() : "" }'
-                        android:visibility='@{ss23b.checked ? View.VISIBLE : View.GONE }'
+                        android:enabled='@{ss23b.checked ? true : false }'
                         app:mask="##.#"
                         app:maxValue="99"
                         app:minValue="1"
@@ -1086,7 +1080,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25acv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1113,7 +1107,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25bcv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1140,7 +1134,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25ccv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1167,7 +1161,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25dcv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1194,7 +1188,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25ecv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1221,7 +1215,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25fcv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -1248,7 +1242,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/ss25gcv"
                     style="@style/cardView"
-                    android:visibility='@{ss2598.checked ? View.GONE : View.VISIBLE}'>
+                    android:enabled='@{ss2598.checked ? true : false }'>
 
                     <LinearLayout style="@style/hlinearlayout">
 

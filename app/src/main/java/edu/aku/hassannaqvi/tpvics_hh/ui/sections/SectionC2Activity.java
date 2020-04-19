@@ -2,8 +2,10 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
@@ -11,8 +13,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
@@ -32,7 +32,6 @@ public class SectionC2Activity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
 
-
     }
 
 
@@ -41,9 +40,9 @@ public class SectionC2Activity extends AppCompatActivity {
         bi.ss22.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss22b.getId()) {
                 Clear.clearAllFields(bi.ss23cv);
-                bi.ss23cv.setVisibility(View.GONE);
+                bi.ss23cv.setEnabled(false);
             } else {
-                bi.ss23cv.setVisibility(View.VISIBLE);
+                bi.ss23cv.setEnabled(true);
             }
         }));
 
@@ -51,9 +50,9 @@ public class SectionC2Activity extends AppCompatActivity {
         bi.ss24.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss24b.getId()) {
                 Clear.clearAllFields(bi.ss25cvall);
-                bi.ss25cvall.setVisibility(View.GONE);
+                bi.ss25cvall.setEnabled(false);
             } else {
-                bi.ss25cvall.setVisibility(View.VISIBLE);
+                bi.ss25cvall.setEnabled(true);
             }
         }));
 
