@@ -2049,7 +2049,7 @@
                             android:hint="@string/im236"
                             android:tag="im236"
                             android:text='@{im236.checked? im236x.getText().toString() : ""}'
-                            android:visibility='@{im236.checked? View.VISIBLE : View.GONE}' />
+                            android:enabled='@{im236.checked ? true : false}' />
 
                     </RadioGroup>
 
@@ -2213,7 +2213,7 @@
                                 android:hint="@string/im2417"
                                 android:tag="im2417"
                                 android:text='@{im2417.checked? im2417x.getText().toString() : ""}'
-                                android:visibility='@{im2417.checked? View.VISIBLE : View.GONE}' />
+                                android:enabled='@{im2417.checked ? true : false}' />
 
                             <RadioButton
                                 android:id="@+id/im2499"
