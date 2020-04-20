@@ -26,6 +26,7 @@ public class SectionCHBActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_b);
         bi.setCallback(this);
+        setTitle(R.string.cb0_title);
     }
 
     private boolean UpdateDB() {

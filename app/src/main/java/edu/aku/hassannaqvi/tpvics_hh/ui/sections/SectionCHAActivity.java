@@ -28,6 +28,7 @@ public class SectionCHAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_a);
         bi.setCallback(this);
 
+        setTitle(R.string.ch_title);
         setupListeners();
     }
 
