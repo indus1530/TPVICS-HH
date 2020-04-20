@@ -36,6 +36,8 @@
         </activity>
         <activity
             android:name=".ui.other.SplashscreenActivity"
+            android:theme="@style/AppTheme"
+
             android:screenOrientation="portrait">
 
         </activity>
@@ -65,14 +67,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
 
         <service android:name=".DownloadFileService" />

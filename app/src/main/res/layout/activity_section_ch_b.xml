@@ -27,6 +27,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
+                        style="@style/sub"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb0_title" />
@@ -46,6 +47,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb01" />
+
+                    <TextView
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb01_sub" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -116,6 +123,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/cb02" />
 
+                    <TextView
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb02_sub" />
+
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
@@ -183,6 +196,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb03" />
+
+                    <TextView
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb03_sub" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -267,6 +286,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb04" />
+
+                    <TextView
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb04_sub" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
