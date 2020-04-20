@@ -27,15 +27,17 @@
         <activity android:name=".ui.sections.SectionCHAActivity" />
         <activity android:name=".ui.sections.SectionCHBActivity" />
         <activity android:name=".ui.sections.SectionC2Activity" />
-        <activity android:name=".ui.sections.SectionC1Activity" />
-        <activity
-            android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>
+        <activity android:name=".ui.sections.SectionC1Activity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.other.SplashscreenActivity"
+            android:screenOrientation="portrait">
+
         </activity>
         <activity
             android:name=".ui.other.LoginActivity"
