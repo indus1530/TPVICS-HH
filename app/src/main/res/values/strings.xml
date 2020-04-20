@@ -30,18 +30,11 @@
     <string name="tnheading"> SECTION N: WATER AND SANITATION </string>
     <string name="toheading"> SECTION O: HANDWASHING </string>
 
-    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up\n
-    Empowerment and Care  Strategies  to Address Health and Survival\n
-    Centre of Excellence Women &amp; Child Health\n
-    Aga Khan University, Karachi, Pakistan</string>
+    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up</string>
 
-    <string name="splashText1"> Coverage Evaluation Survey, Pakistan, 2020 </string>
-    <string name="splashText2"> ۔HOUSEHOLD QUESTIONNAIRE </string>
+    <string name="splashText2">"    Empowerment and Care  Strategies  to Address Health and Survival"</string>
 
-    <string name="title_activity_family_members_list"> Family Members List </string>
-
-    <string name="sM"> یو سی </string>
-    <string name="yes"> ہاں </string>
+    <string name="sM">"    Centre of Excellence Women &amp; Child Health"</string>
     <string name="no"> نہیں </string>
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
@@ -86,44 +79,44 @@
     <string name="hh06"> شہر / گاؤں </string>
     <string name="hh07"> کلسٹر </string>
     <string name="hh08"> گھرانہ نمبر </string>
-    <string name="hh09"> HH09: انٹرویو لینے والے کا نام </string>
-    <string name="hh09a"> HH09a: انٹرویو لینے والے کا کوڈ </string>
-    <string name="hh10"> HH10: سُپروائزر کا نام </string>
-    <string name="hh10a"> Hh10a: سُپروائزر کا  کوڈ</string>
-    <string name="hh11"> Hh11: انٹرویو کی تاریخ </string>
-    <string name="hh12"> Hh12: نٹرویو کا وقت </string>
-    <string name="hh13a"> hh13A: جواب دہندہ کانام </string>
-    <string name="hh13b"> Hh13B: جواب دہندگان کا رابطہ نمبر </string>
-    <string name="hh14"> HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
-    <string name="hh15"> HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
-    <string name="hh16"> HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
+    <string name="hh09"> ۔HH09: انٹرویو لینے والے کا نام </string>
+    <string name="hh09a"> ۔HH09a: انٹرویو لینے والے کا کوڈ</string>
+    <string name="hh10"> ۔HH10: سُپروائزر کا نام </string>
+    <string name="hh10a"> ۔HH10a: سُپروائزر کا  کوڈ</string>
+    <string name="hh11"> ۔HH11: انٹرویو کی تاریخ  </string>
+    <string name="hh12"> ۔HH12: نٹرویو کا وقت</string>
+    <string name="hh13a"> ۔HH13A: جواب دہندہ کانام </string>
+    <string name="hh13b"> ۔HH13B: جواب دہندگان کا رابطہ نمبر </string>
+    <string name="hh14"> ۔HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
+    <string name="hh15"> ۔HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
+    <string name="hh16"> ۔HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
     <string name="hh15a"> ہاں </string>
-    <string name="hh15b"> نہیں </string>
+    <string name="hh15b"> نہیں</string>
 
     <string name="hh16a"> گھر کے سربراہ کا نام</string>
     <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh17"> HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے) </string>
+    <string name="hh17"> ۔HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
     <string name="hh17a"> گھر کے سربراہ کا نام</string>
     <string name="hh17b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh18"> HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+    <string name="hh18"> ۔HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے</string>
     <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
 
-    <string name="hh19"> HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh19"> ۔HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
 
-    <string name="hh20"> HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
+    <string name="hh20"> ۔HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
     <string name="hh20h"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 
-    <string name="hh21"> HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh21"> ۔HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
-    <string name="hh22"> HH22: :گھرانے کے انٹرویو کا نتیجہ </string>
+    <string name="hh22"> ۔HH22: گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل</string>
     <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
@@ -144,37 +137,37 @@
 
     <string name="ch_childid"> چائلڈ آئی ڈی </string>
 
-    <string name="ch01"> CH01: سیریل نمبر</string>
+    <string name="ch01"> ۔CH01: سیریل نمبر</string>
 
-    <string name="ch02"> CH02: بچے کا نام </string>
+    <string name="ch02"> ۔CH02: بچے کا نام </string>
 
-    <string name="ch03"> CH03: باپ کا نام </string>
+    <string name="ch03"> ۔CH03: باپ کا نام </string>
 
-    <string name="ch04"> CH04: جنس </string>
+    <string name="ch04"> ۔CH04: جنس </string>
     <string name="ch04a"> مرد </string>
     <string name="ch04b"> عورت </string>
 
-    <string name="ch05"> CH05: تاریخ پیدائش </string>
-    <string name="ch05a"> تاریخ پیدائش- دن</string>
-    <string name="ch05b"> تاریخ پیدائش - مہینہ</string>
-    <string name="ch05c"> تاریخ پیدائش - سال</string>
+    <string name="ch05"> ۔CH05: تاریخ پیدائش </string>
+    <string name="ch05a"> دن </string>
+    <string name="ch05b"> مہینہ </string>
+    <string name="ch05c"> سال </string>
 
-    <string name="ch06"> CH06: عمر مہینوں مہیں</string>
+    <string name="ch06"> ۔CH06: عمر مہینوں مہیں </string>
 
-    <string name="ch07"> CH07: بچے کی عمر کی تصدیق کا زریعہ</string>
+    <string name="ch07"> ۔CH07: بچے کی عمر کی تصدیق کا زریعہ </string>
     <string name="ch07a"> پیدائش کا سرٹیفکیٹ </string>
     <string name="ch07b"> حفاظتی ٹیکوں کا کارڈ </string>
     <string name="ch07c"> جوابدہندہ </string>
     <string name="ch0796"> دیگر </string>
 
-    <string name="ch08"> CH08: کیا بچہ اس سروے کے لیے اہل ہے </string>
+    <string name="ch08"> ۔CH08: کیا بچہ اس سروے کے لیے اہل ہے </string>
     <string name="ch08a"> ہاں </string>
     <string name="ch08b"> نہیں </string>
     <string name="ch03b"> ماں کا نام </string>
 
 
     <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
-    <string name="ss01"> SS01: گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
+    <string name="ss01"> ۔SS01:  گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
     <string name="ss01a"> اردو </string>
     <string name="ss01b"> پنجابی </string>
     <string name="ss01c"> سند ھی </string>
@@ -184,67 +177,67 @@
     <string name="ss01g"> ھند کو </string>
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
-    <string name="ss02"> SS02: آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
+    <string name="ss02"> ۔SS02: آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
     <string name="ss02a"> اپنا </string>
     <string name="ss02b"> کرائے کا </string>
     <string name="ss02x"> دیگر وضاحت کریں </string>
 
-    <string name="ss03"> SS03: آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
+    <string name="ss03"> ۔SS03: آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
     <string name="ss03h1"> میونسپل کمیٹی کا پانی کا کنکشن </string>
-    <string name="ss03a">  گھر میں نلکا </string>
-    <string name="ss03b"> صحن میں نلکا </string>
-    <string name="ss03c">  پڑوسی کے گھر کا نلکا </string>
-    <string name="ss03d"> گلی / علاقہ کا نلکا </string>
-    <string name="ss03e"> ٹیوب ویل / بورنگ کا پانی </string>
-    <string name="ss03h2"> گہرا کنواں </string>
-    <string name="ss03f"> محفوظ کنواں </string>
-    <string name="ss03g"> غیر محفوظ کنواں </string>
+    <string name="ss03a">  گھر میں نلکا</string>
+    <string name="ss03b"> صحن میں نلکا</string>
+    <string name="ss03c">  پڑوسی کے گھر کا نلکا</string>
+    <string name="ss03d">  گلی/علاقہ کا نلکا</string>
+    <string name="ss03e"> ٹیوب ویل/بورنگ کا پانی </string>
+    <string name="ss03h2"> گہراکنواں</string>
+    <string name="ss03f"> محفوظ کنواں</string>
+    <string name="ss03g"> غیر محفوظ کنواں</string>
     <string name="ss03h3"> پانی کا چشمہ </string>
-    <string name="ss03h"> محفوظ چشمہ </string>
-    <string name="ss03i"> غیر محفوظ چشمہ </string>
-    <string name="ss03j">  بارش کا پانی </string>
-    <string name="ss03k">  پانی کا ٹینکر / ٹرک </string>
-    <string name="ss03l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
-    <string name="ss03m"> سطح والا پانی(دریا ،جھیل، ڈیم، تالاب، ندی، نہر کا پانی </string>
+    <string name="ss03h"> محفوظ چشمہ</string>
+    <string name="ss03i"> غیر محفوظ چشمہ</string>
+    <string name="ss03j">  بارش کا پانی</string>
+    <string name="ss03k">  پانی کا ٹینکر/ٹرک</string>
+    <string name="ss03l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی</string>
+    <string name="ss03m"> سطح والا پانی(دریا ،جھیل،ڈیم،تالاب،ندی،نہر کا پانی</string>
     <string name="ss03h4"> PACKAGED WATER </string>
     <string name="ss03n">  بوتل کا پانی </string>
     <string name="ss03x"> (وضاحت کریں)دیگر </string>
 
-    <string name="ss04"> SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں ؟ </string>
-    <string name="ss04y"> ہاں </string>
-    <string name="ss04n"> نہیں </string>
+    <string name="ss04"> ۔SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟ </string>
+    <string name="ss04y"> ہاں</string>
+    <string name="ss04n"> نہیں</string>
 
-    <string name="ss05"> SS05: عموماً آپ  پینے کے پانی کو محفوظ  بنانے  کے لیے کیا کرتے ہیں ؟ </string>
-    <string name="ss05a"> ابالتے ہیں </string>
-    <string name="ss05b"> بلیچ / کلورین ملاتے ہیں </string>
-    <string name="ss05c"> کپڑے کے ذریعہ چھانتے ہیں </string>
-    <string name="ss05d"> پانی کا فلٹر استعمال کرتے ہیں </string>
-    <string name="ss05e"> سورج کی شعاعوں سے / دھوپ میں رکھتے ہیں </string>
-    <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں </string>
-    <string name="ss05x"> دیگر وضاحت کریں </string>
+    <string name="ss05"> ۔SS05: عموماً آپ  پینے کےپانی کو محفوظ  بنانے  کے لیے کیا کرتے ہیں؟</string>
+    <string name="ss05a"> ابالتے ہیں</string>
+    <string name="ss05b"> بلیچ/کلورین ملاتے ہیں</string>
+    <string name="ss05c"> کپڑے کے ذریعہ چھانتے ہیں</string>
+    <string name="ss05d"> پانی کا فلٹر استعمال کرتے ہیں</string>
+    <string name="ss05e"> سورج کی شعاعوں سے/دھوپ میں رکھتے ہیں</string>
+    <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں</string>
+    <string name="ss05x"> دیگر وضاحت کریں</string>
 
-    <string name="ss06"> SS06: آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اورہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے؟ اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں</string>
-    <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن </string>
-    <string name="ss06a"> گھر میں نلکا </string>
-    <string name="ss06b"> صحن میں نلکا </string>
-    <string name="ss06c"> پڑوسی کے گھر کا نلکا </string>
-    <string name="ss06d">  گلی/علاقہ کا نلکا </string>
-    <string name="ss06e"> ٹیوب ویل/بورنگ کا پان </string>
-    <string name="ss06f_title"> گہرا کنواں </string>
-    <string name="ss06f"> محفوظ کنواں </string>
-    <string name="ss06g"> غیر محفوظ کنواں </string>
-    <string name="ss06h_title"> پانی کا چشمہ </string>
-    <string name="ss06h"> محفوظ چشمہ </string>
-    <string name="ss06i"> غیر محفوظ چشمہ </string>
-    <string name="ss06j"> بارش کا پانی </string>
-    <string name="ss06k"> پانی کا ٹینکر / ٹرک </string>
-    <string name="ss06l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
-    <string name="ss06m"> سطح والا پانی (دریا ،جھیل، ڈیم، تالاب، ندی، نہر کا پانی) </string>
+    <string name="ss06"> ۔SS06: آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اورہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے؟ اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں</string>
+    <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن</string>
+    <string name="ss06a"> گھر میں نلکا</string>
+    <string name="ss06b"> صحن میں نلکا</string>
+    <string name="ss06c"> پڑوسی کے گھر کا نلکا</string>
+    <string name="ss06d">  گلی/علاقہ کا نلکا</string>
+    <string name="ss06e"> ٹیوب ویل/بورنگ کا پان</string>
+    <string name="ss06f_title"> گہراکنواں</string>
+    <string name="ss06f"> محفوظ کنواں</string>
+    <string name="ss06g"> غیر محفوظ کنواں</string>
+    <string name="ss06h_title"> پانی کا چشمہ</string>
+    <string name="ss06h"> محفوظ چشمہ</string>
+    <string name="ss06i"> غیر محفوظ چشمہ</string>
+    <string name="ss06j"> بارش کا پانی</string>
+    <string name="ss06k"> پانی کا ٹینکر/ٹرک</string>
+    <string name="ss06l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی</string>
+    <string name="ss06m"> سطح والا پانی(دریا ،جھیل،ڈیم،تالاب،ندی،نہر کا پانی)</string>
     <string name="ss06n_title"> PACKAGED WATER </string>
-    <string name="ss06n"> بوتل کا پانی </string>
+    <string name="ss06n"> بوتل کا پانی</string>
     <string name="ss06x"> (وضاحت کریں)دیگر </string>
 
-    <string name="ss07"> SS07: آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
+    <string name="ss07"> ۔SS07: آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
     <string name="ss07a_title"> فلش یا انڈیل کر پانی ڈالنے والا</string>
     <string name="ss07a"> فلش   سیوریج کے نظام سے منسلک  </string>
     <string name="ss07b"> فلش سپٹک ٹینک سے منسلک  </string>
@@ -258,28 +251,28 @@
     <string name="ss07i">  کوئی سہولت نہیں /جھاڑیوں/زمین پر</string>
     <string name="ss07x"> دیگر وضاحت کریں</string>
 
-    <string name="ss08"> SS08: بیت الخلاء کی یہ سہولت کہاں واقع ہے؟</string>
+    <string name="ss08"> ۔SS08: بیت الخلاء کی یہ سہولت کہاں واقع ہے؟</string>
     <string name="ss08a"> اپنی  ذاتی رہائش/گھر میں </string>
     <string name="ss08b">  اپنے صحن/پلاٹ میں </string>
     <string name="ss08c"> کہیں اور </string>
 
-    <string name="ss09"> SS09: کیا اس بیت الخلاء کی سہولت کو   دوسرے   گھرانوں کے افراد بھی استعمال کر تےہیں جو آپ کے گھرانے کے فرد نہیں ہیں؟</string>
+    <string name="ss09"> ۔SS09: کیا اس بیت الخلاء کی سہولت کو   دوسرے   گھرانوں کے افراد بھی استعمال کر تےہیں جو آپ کے گھرانے کے فرد نہیں ہیں؟</string>
     <string name="ss09a"> ہاں </string>
     <string name="ss09b"> نہیں </string>
 
-    <string name="ss10"> SS10:  اگر ہاں،تو کتنے گھرانےاس بیت الخلاء کی  سہولت کواستعمال کرتے ہیں ؟ </string>
+    <string name="ss10"> ۔SS10:  اگر ہاں،تو کتنے گھرانےاس بیت الخلاء کی  سہولت کواستعمال کرتے ہیں ؟ </string>
     <string name="ss10a"> گھراںوں کی تعداد </string>
 
-    <string name="ss11"> SS11: کیا آپ یہ سہولت صرف ان دوسرے گھرانوں کے افراد کے ساتھ مل کر استعمال کرتے ہیں جنہیں آپ جانتے ہیں یا یہ سہولت عوام الناس کے استعمال کے لئے کھلی ہے؟</string>
+    <string name="ss11"> ۔SS11: کیا آپ یہ سہولت صرف ان دوسرے گھرانوں کے افراد کے ساتھ مل کر استعمال کرتے ہیں جنہیں آپ جانتے ہیں یا یہ سہولت عوام الناس کے استعمال کے لئے کھلی ہے؟</string>
     <string name="ss11a"> صرف دوسرے گھرانے (عوام الناس نہیں) </string>
     <string name="ss11b"> عوام الناس</string>
 
-    <string name="ss12"> SS12: مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں؟</string>
+    <string name="ss12"> ۔SS12: مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں؟</string>
     <string name="ss12a"> ( گھرانوں کی تعداد(اگر 10 سے کم</string>
     <string name="ss12b">  دس یا اس سے زیادہ گھرانے</string>
     <string name="ss12c"> معلوم نہیں</string>
 
-    <string name="ss13"> SS13: سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیاکرتے ہیں؟</string>
+    <string name="ss13"> ۔SS13: سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیاکرتے ہیں؟</string>
     <string name="ss13a"> بچہ لیٹرین استعمال کرتا ہے</string>
     <string name="ss13b"> پاخانہ لیٹرین سے بہادیتے ہیں </string>
     <string name="ss13c"> پاخانہ نالی /گھڑھے سے بہادیتے ہیں</string>
@@ -289,7 +282,7 @@
     <string name="ss13g"> گھر میں 5 سال سے چھوٹا بچہ نہیں ہے</string>
     <string name="ss13x"> دیگر وضاحت کریں  </string>
 
-    <string name="ss14"> SS14:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا  آپ کے گھر میں ان میں سے کچھ موجود ہے؟ </string>
+    <string name="ss14"> ۔SS14:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا  آپ کے گھر میں ان میں سے کچھ موجود ہے؟ </string>
     <string name="ss14a"> بجلی </string>
     <string name="ss14aa"> ہاں </string>
     <string name="ss14ab"> نہیں</string>
@@ -366,7 +359,7 @@
     <string name="ss14sa"> ہاں </string>
     <string name="ss14sb"> نہیں</string>
 
-    <string name="ss15"> SS15:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں ؟ </string>
+    <string name="ss15"> ۔SS15:  [ایک سے زیادہ جوابات آسکتے ہیں] کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں ؟ </string>
     <string name="ss15a"> گھڑی </string>
     <string name="ss15aa"> ہاں </string>
     <string name="ss15ab"> نہیں</string>
@@ -403,7 +396,7 @@
     <string name="ss15ia"> ہاں </string>
     <string name="ss15ib"> نہیں</string>
 
-    <string name="ss16"> SS16:  مشاہدہ کریں، کہ گھرمیں روشنی کے لئے کونسے آلات استعمال ہورہے ہیں۔    [ایک سے زیادہ جوابات آسکتے ہیں]</string>
+    <string name="ss16"> ۔SS16:  مشاہدہ کریں، کہ گھرمیں روشنی کے لئے کونسے آلات استعمال ہورہے ہیں۔    [ایک سے زیادہ جوابات آسکتے ہیں]</string>
     <string name="ss16a"> بلب  </string>
     <string name="ss16b">  ٹیوب لائٹ </string>
     <string name="ss16c">  ایل ای ڈی  بلب </string>
@@ -412,7 +405,7 @@
     <string name="ss16f"> لالٹین </string>
     <string name="ss16x"> دیگر وضاحت کریں </string>
 
-    <string name="ss17"> SS17: عام طورپر آپ کے گھر میں کھانا پکانے کے لیے کس قسم کا ایندھن /چولہااستعمال ہوتا ہے ؟</string>
+    <string name="ss17"> ۔SS17: عام طورپر آپ کے گھر میں کھانا پکانے کے لیے کس قسم کا ایندھن /چولہااستعمال ہوتا ہے ؟</string>
     <string name="ss17a"> بجلی</string>
     <string name="ss17b"> ایل –پی-جی   سیلنڈر</string>
     <string name="ss17c"> قدرتی گیس</string>
@@ -426,7 +419,7 @@
     <string name="ss17k"> گھر میں کھانا نہیں پکتا </string>
     <string name="ss17x"> دیگر وضاحت کریں</string>
 
-    <string name="ss18"> SS18: گھر کے  فرش  بنانے میں کس قسم کا  میٹریل استعمال کیاگیا ہے گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں  اگرمشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔</string>
+    <string name="ss18"> ۔SS18: گھر کے  فرش  بنانے میں کس قسم کا  میٹریل استعمال کیاگیا ہے گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں  اگرمشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔</string>
     <string name="ss18a_title">  قدرتی فرش</string>
     <string name="ss18a"> مٹی/چکنی مٹی/زمین/ریت</string>
     <string name="ss18b"> جانوروں کا گوبر </string>
@@ -443,7 +436,7 @@
     <string name="ss18k"> چونے کا پتھر</string>
     <string name="ss18x"> دیگر وضاحت کریں</string>
 
-    <string name="ss19"> SS19: گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
+    <string name="ss19"> ۔SS19:  گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔</string>
     <string name="ss19a_title"> قدرتی چھت</string>
     <string name="ss19a"> کوئی چھت نہیں</string>
     <string name="ss19b"> گھاس پھونس /کھجو ر کے پتے</string>
@@ -463,7 +456,7 @@
     <string name="ss19n"> اینٹیں</string>
     <string name="ss19x"> دیگر وضاحت کریں </string>
 
-    <string name="ss20"> SS20: گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:</string>
+    <string name="ss20"> ۔SS20: گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد:</string>
     <string name="ss20a_title"> قدرتی دیواریں</string>
     <string name="ss20a"> کوئی دیوار نہیں </string>
     <string name="ss20b"> کھجور کے درخت  /بانس </string>
@@ -485,24 +478,24 @@
     <string name="ss20p"> لکڑی کے تختے </string>
     <string name="ss20x"> دیگر وضاحت کریں</string>
 
-    <string name="ss21"> SS21: آپ کے گھر میں کتنے کمرے سونے کے لیے استعمال ہوتے ہیں ؟</string>
+    <string name="ss21"> ۔SS21: آپ کے گھر میں کتنے کمرے سونے کے لیے استعمال ہوتے ہیں ؟</string>
     <string name="ss21a"> کمرے </string>
 
-    <string name="ss22"> SS22: کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے؟</string>
+    <string name="ss22"> ۔SS22: کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے؟</string>
     <string name="ss22a"> ہاں</string>
     <string name="ss22b"> نہیں</string>
 
-    <string name="ss23"> SS23: اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو \'00\' ریکارڈ کریں۔ </string>
+    <string name="ss23"> ۔SS23: اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو \'00\' ریکارڈ کریں۔ </string>
     <string name="ss23a"> ایکٹر</string>
     <string name="ss23a_acr"> ایکڑز تعداد</string>
     <string name="ss23b"> کنال</string>
     <string name="ss23c"> معلوم نہیں</string>
 
-    <string name="ss24"> SS24: کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
+    <string name="ss24"> ۔SS24: کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="ss24a"> ہاں</string>
     <string name="ss24b">  نہیں</string>
 
-    <string name="ss25"> SS25: اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے  اگر کوئی نہیں تو 000 ؟</string>
+    <string name="ss25"> ۔SS25: اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے  اگر کوئی نہیں تو 000 ؟</string>
     <string name="ss25a"> مال مویشی (گائے اور بیل) </string>
     <string name="ss25b"> گھوڑے/گدھے/خچر</string>
     <string name="ss25c"> بکریاں</string>
@@ -511,48 +504,48 @@
     <string name="ss25f"> بھینسیں</string>
     <string name="ss25g"> اونٹ</string>
 
-    <string name="ss26"> SS26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
+    <string name="ss26"> ۔SS26: کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے؟</string>
     <string name="ss27_title"> SS27: جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اور پھر اس گھر میں موجود 12 – 23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں۔ </string>
     <string name="ss26a"> ہاں</string>
     <string name="ss26b"> نہیں</string>
 
-    <string name="ss27"> SS27: وقت ریکار ڈ کریں   </string>
+    <string name="ss27"> ۔SS27: وقت ریکار ڈ کریں   </string>
 
-    <string name="ss28"> SS28: اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+    <string name="ss28"> ۔SS28: اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
 
 
-    <string name="uf01"> uf01: جغرافیائی علاقہ </string>
+    <string name="uf01"> ۔uf01: جغرافیائی علاقہ </string>
 
-    <string name="uf02"> uf02: صوبہ </string>
+    <string name="uf02"> ۔uf02: صوبہ </string>
 
-    <string name="uf03"> uf03: ضلع </string>
-    <string name="uf04"> uf04: شہر</string>
-    <string name="uf05"> uf05: گاؤں</string>
-    <string name="uf06"> uf06: کلسٹر نمبر</string>
-    <string name="uf07"> uf07: گھر کا نمبر</string>
-    <string name="uf08a_childid"> uf08a_childid: بچے کا لائن نمبر</string>
-    <string name="uf08"> uf08: بچے کا نام</string>
-    <string name="uf09"> uf09: والدہ / دیکھ بھال کرنے والے  کا نام</string>
-    <string name="uf9a"> uf9a: والدہ/ دیکھ بھال کرنے والے  کی عمرمکمل سالوں میں </string>
+    <string name="uf03"> ۔uf03: ضلع </string>
+    <string name="uf04"> ۔uf04: شہر</string>
+    <string name="uf05"> ۔uf05: گاؤں</string>
+    <string name="uf06"> ۔uf06: کلسٹر نمبر</string>
+    <string name="uf07"> ۔uf07: گھر کا نمبر</string>
+    <string name="uf08a_childid"> ۔childid_uf08a: بچے کا لائن نمبر</string>
+    <string name="uf08"> ۔uf08: بچے کا نام</string>
+    <string name="uf09"> ۔uf09: والدہ / دیکھ بھال کرنے والے  کا نام</string>
+    <string name="uf9a"> ۔uf9a: والدہ/ دیکھ بھال کرنے والے  کی عمرمکمل سالوں میں </string>
     <string name="uf9b">  کا رشتہ بچے کے ساتھ جواب دہندہ</string>
     <string name="uf9b1"> والد/والدہ/ دیکھ بھال کرنے والا/وال</string>
     <string name="uf9b2"> حفاظتی ٹیکے لگ گئے لیکن خاندان کے رکن کو معلوم نہیں</string>
     <string name="uf9b98"> دیگر وضاحت</string>
-    <string name="uf10"> uf10:  انٹرویو لینے والے کا نام</string>
-    <string name="uf10a"> uf10a:  انٹرویو لینے والے کا کوڈ</string>
-    <string name="uf11"> uf11:  سُپروائزر کا نام</string>
-    <string name="uf11a"> uf11a: سُپروائزرکا کوڈنمبر</string>
-    <string name="uf12"> uf12: انٹرویو کا دن / مہینہ / سال  </string>
+    <string name="uf10"> ۔uf10:  انٹرویو لینے والے کا نام</string>
+    <string name="uf10a"> ۔uf10a:  انٹرویو لینے والے کا کوڈ</string>
+    <string name="uf11"> ۔uf11:  سُپروائزر کا نام</string>
+    <string name="uf11a"> ۔uf11a: سُپروائزرکا کوڈنمبر</string>
+    <string name="uf12"> ۔uf12: انٹرویو کا دن / مہینہ / سال  </string>
     <string name="uf12a"> دن </string>
     <string name="uf12b"> مہینہ </string>
     <string name="uf12c"> سال  </string>
-    <string name="uf13"> uf13: وقت ریکارڈ کریں</string>
+    <string name="uf13"> ۔uf13: وقت ریکارڈ کریں</string>
     <string name="uf13a"> گھنٹے</string>
     <string name="uf13b"> منٹس</string>
-    <string name="uf14"> uf14:  چیک کریں کہ کیا آیااس گھر میں جواب دہندہ کا انٹرویو گھریلو یا بچوں کے سوالنامہ کے لئےکر لیا گیا ہے؟</string>
+    <string name="uf14"> ۔uf14:  چیک کریں کہ کیا آیااس گھر میں جواب دہندہ کا انٹرویو گھریلو یا بچوں کے سوالنامہ کے لئےکر لیا گیا ہے؟</string>
     <string name="uf14a"> ہاں ،  پہلے ہی انٹرہو چکاہے</string>
     <string name="uf14b"> نہیں ، پہلا انٹرویو</string>
-    <string name="uf15"> uf15: اسلام وعلیکم، میرا نام(آپ کا نام)ہے۔ ہ ہمارا تعلق  قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات  کے بارے میں بات کرنا چاہتا/چاہتی ہوں۔اس انٹرویو میں تقریباً 30منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات  مکمل طور پر خفیہ رہیں گی اور آپکا نام ظاہرنہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویوکو روکنا چاہتے  ہیں ، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں؟</string>
+    <string name="uf15"> ۔uf15: اسلام وعلیکم، میرا نام(آپ کا نام)ہے۔ ہ ہمارا تعلق  قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات  کے بارے میں بات کرنا چاہتا/چاہتی ہوں۔اس انٹرویو میں تقریباً 30منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات  مکمل طور پر خفیہ رہیں گی اور آپکا نام ظاہرنہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویوکو روکنا چاہتے  ہیں ، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں؟</string>
     <string name="uf15a"> ہاں، اجازت مل گئی ہے</string>
     <string name="uf15b"> نہیں، اجازت نہیں ملی</string>
     <string name="uf15b_title"> uf15b_title: اب میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات  کے بارے میں مزید تفصیل سے  بات کرنا چاہتا/چاہتی ہوں۔اس انٹرویو میں تقریباً 30منٹس لگیں گے۔میں پھر کہتا /کہتی ہوں کہ، آپ سے حاصل کردہ تمام معلومات  مکمل طور پر خفیہ اور  رہیں گی اور آپکا نام ظاہرنہیں  کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویوکو روکنا چاہتے  ہیں ، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں؟</string>
@@ -568,36 +561,32 @@
     <string name="uf16_9"> گھر نہیں ملا</string>
     <string name="uf16_96">  دیگر وضاحت کریں</string>
     <string name="cb0_title"> cb0_title: اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب  بچے کا پیدائش کا سرٹیفیکیٹ ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔</string>
-    <string name="cb01"> cb01: آپ کی زیادہ سے زیادہ مکمل  کردہ تعلیم کتنی ہے؟  </string>
-    <string name="cb01_sub"> جہاں تک ماں  یا دیکھ بھال کرنے والے کا تعلیمی گریڈ  ہےپوچھیں۔ (اگر غیر تعلیم تافتہ یا ان پڑھ تو 77 لکھیں اور مذہبی تعلیم کے لئے 20 لھکیں) </string>
+    <string name="cb01"> ۔cb01:  جہاں تک ماں  یا دیکھ بھال کرنے والے کا تعلیمی گریڈ  ہےپوچھیں۔ (اگر غیر تعلیم تافتہ یا ان پڑھ تو 77 لکھیں اور مذہبی تعلیم کے لئے 20 لھکیں)آپ کی زیادہ سے زیادہ مکمل  کردہ تعلیم کتنی ہے؟  </string>
     <string name="cb01a"> گریڈ</string>
     <string name="cb01b"> مذہبی تعلیم </string>
     <string name="cb01dk"> معلوم نہیں کے لئے 98 درج کریں</string>
-    <string name="cb02"> cb02: بچہ / بچی (نام)کے والد کی مکمل کردہ زیادہ سے زیادہ تعلیم کتنی ہے؟ </string>
-    <string name="cb02_sub">  اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں </string>
+    <string name="cb02"> ۔cb02: بچہ / بچی (نام)کے والد کی مکمل کردہ زیادہ سے زیادہ تعلیم کتنی ہے؟ اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں </string>
     <string name="cb02a"> گریڈ</string>
     <string name="cb02b"> مذہبی تعلیم </string>
     <string name="cb02dk"> معلوم نہیں کے لئے 98 درج کریں</string>
-
+    <string name="cb03"> ۔cb03: اگر ماں / دیکھ بھال کرنے والا  بچے کی پیدائش کی صحیح تاریخ جانتے ہیں ، تو پھر دن بھی ریکارڈ کریں؛ ورنہ ، دن کے لئے \'98\' پر نشان لگائیں۔ مہینہ اور سال ریکارڈ کرنا ضروری ہے مزید پوچھیں: (بچے/بچی )کی تاریخ پیدائش کیا ہے؟ بچہ/بچی (نام) کی  پیدائش کس دن، مہینے اور سال میں ہوئی تھی؟ </string>
     <string name="cb03dd"> پیدائش کا دن</string>
     <string name="cb03mm"> پیدائش کا مہینہ</string>
     <string name="cb03yy"> پیدائش کا سال</string>
     <string name="cb03dk"> دن معلوم نہیں </string>
-    <string name="cb04"> cb04:  بچہ/بچی (نام) کی عمر کتنی ہے؟ </string>
-    <string name="cb04_sub">عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں \'0\' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو \'0\' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال </string>
+    <string name="cb04"> ۔cb04: عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں \'0\' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو \'0\' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال </string>
     <string name="cb04mm"> عمر(مکمل سالوں میں)</string>
     <string name="cb04yy"> عمر(مکمل مہینوں میں)</string>
-    <string name="cb05"> cb05: (نام) کی جنس کیا ہے؟</string>
+    <string name="cb05"> ۔cb05: (نام) کی جنس کیا ہے؟</string>
     <string name="cb051"> لڑکا</string>
     <string name="cb052"> لڑکی</string>
-    <string name="im1title1"> im1title1: سے چیک کریں:CB4اہل بچے کی عمر سوال نمبر</string>
-    <string name="imtitle2"> imtitle2: اگر بچہ12سے 23 ماہ کی عمر کے گروپ کا نہیں ہے،تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگرپھر بھی اس کی عمر12سے 23ماہ نہیں بنتی ،تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔اہل بچے کے معلوماتی پینل UF16 پر جائیں ، اور بچہ اہل نہیں/بچے کی عمر 12 سے 23مہینے  نہیں کوڈ05 پر نشان لگائیں ۔</string>
-    <string name="im01"> im01: کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ/بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو؟ </string>
-    <string name="im01_sub">  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں </string>
+    <string name="im1title1"> ۔im1title1: سے چیک کریں:CB4اہل بچے کی عمر سوال نمبر</string>
+    <string name="imtitle2"> ۔imtitle2: اگر بچہ12سے 23 ماہ کی عمر کے گروپ کا نہیں ہے،تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگرپھر بھی اس کی عمر12سے 23ماہ نہیں بنتی ،تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔اہل بچے کے معلوماتی پینل UF16 پر جائیں ، اور بچہ اہل نہیں/بچے کی عمر 12 سے 23مہینے  نہیں کوڈ05 پر نشان لگائیں ۔</string>
+    <string name="im01"> ۔im01: کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ/بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو؟ اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں </string>
     <string name="im011"> ہاں دیکھ لیا</string>
     <string name="im012">  ہاں، کارڈنہیں دیکھا</string>
     <string name="im013"> کارڈ نہیں ہے</string>
-    <string name="im02"> im02: کیا بچےکے لئےآپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا؟ </string>
+    <string name="im02"> ۔im02: کیا بچےکے لئےآپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا؟</string>
     <string name="im021"> ہاں</string>
     <string name="im022"> نہیں</string>
     <string name="im02a"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا؟</string>
@@ -608,70 +597,70 @@
     <string name="im02a5"> ویکسینیٹر/ مرکزصحت نے کارڈ مہیا نہیں کی</string>
     <string name="im02a6"> ایسے کارڈوں سے واقف نہیں </string>
     <string name="im02a96"> دیگر وضاحت کریں</string>
-    <string name="im03"> im03: کارڈ پر لکھی ہوئی تاریخ پیدائش چیک کر یں اور درج کریں۔</string>
+    <string name="im03"> ۔im03: کارڈ پر لکھی ہوئی تاریخ پیدائش چیک کر یں اور درج کریں۔</string>
     <string name="im03dd"> دن</string>
     <string name="im03dd1"> دن معلوم نہیں</string>
     <string name="im03mm"> مہینہ</string>
     <string name="im03yy">  سال</string>
-    <string name="im4title1"> im4title1: حفاظتی ٹیکوں کی تفصیلات </string>
-    <string name="im4title2">حفاظتی ٹیکوں کے کارڈ سے ہرحفاظتی ٹیکے کی تاریخ لکھ دیں۔ اگر کارڈ دکھاتا ہے کہ ویکسینیشن فراہم کی گئی تھی لیکن کوئی تاریخ ریکارڈ نہیں ہوئی یا اگر کارڈ میں لکھی ہوئی تاریخ واضع طور پر پڑھی نہیں جارہی ہے تو دن کے کالم میں &quot;44&quot; لکھیں۔ اگر مخصوص ویکسین کا کوئی ریکارڑنہیں ہے تو ، دن ، مہینے اور سال کے کالم میں &quot;97&quot; لکھیں</string>
-    <string name="im41bcg"> im41bcg: (بی سی جی) ٹی بی کی بیماری سے بچائو کا ٹیکہ </string>
+    <string name="im4title1"> ۔im4title1: حفاظتی ٹیکوں کی تفصیلات </string>
+    <string name="im4title2"> ۔im4title2: حفاظتی ٹیکوں کے کارڈ سے ہرحفاظتی ٹیکے کی تاریخ لکھ دیں۔ اگر کارڈ دکھاتا ہے کہ ویکسینیشن فراہم کی گئی تھی لیکن کوئی تاریخ ریکارڈ نہیں ہوئی یا اگر کارڈ میں لکھی ہوئی تاریخ واضع طور پر پڑھی نہیں جارہی ہے تو دن کے کالم میں &quot;44&quot; لکھیں۔ اگر مخصوص ویکسین کا کوئی ریکارڑنہیں ہے تو ، دن ، مہینے اور سال کے کالم میں &quot;97&quot; لکھیں</string>
+    <string name="im41bcg"> ۔im41bcg: (بی سی جی) ٹی بی کی بیماری سے بچائو کا ٹیکہ </string>
     <string name="im41bcgdd"> دن</string>
     <string name="im41bcgmm"> مہینہ</string>
     <string name="im41bcgyy"> سال</string>
-    <string name="im42opv0"> im42opv0:  پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  پہلی خورا ک </string>
+    <string name="im42opv0"> ۔im42opv0:  پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  پہلی خورا ک </string>
     <string name="im42opv0dd"> دن</string>
     <string name="im42opv0mm"> مہینہ</string>
     <string name="im42opv0yy"> سال</string>
-    <string name="im43opv1"> im43opv1:      پولیو(پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے)  </string>
+    <string name="im43opv1"> ۔im43opv1:      پولیو(پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے)  </string>
     <string name="im43opv1dd"> دن</string>
     <string name="im43opv1mm"> مہینہ</string>
     <string name="im43opv1yy"> سال</string>
-    <string name="im44penta1"> im44penta1:    پہلی خوراک        پینٹا وایلنٹ ویکسین</string>
+    <string name="im44penta1"> ۔im44penta1:    پہلی خوراک        پینٹا وایلنٹ ویکسین</string>
     <string name="im44penta1dd"> دن</string>
     <string name="im44penta1mm"> مہینہ</string>
     <string name="im44penta1yy"> سال</string>
-    <string name="im45pcv1"> im45pcv1:      پہلی خوراک      نمونیا کی ویکسین</string>
+    <string name="im45pcv1"> ۔im45pcv1:      پہلی خوراک      نمونیا کی ویکسین</string>
     <string name="im45pcv1dd"> دن</string>
     <string name="im45pcv1mm"> مہینہ</string>
     <string name="im45pcv1yy"> سال</string>
-    <string name="im46rv1"> im46rv1:    روٹا وائرس ویکسین 1</string>
+    <string name="im46rv1"> ۔im46rv1:    روٹا وائرس ویکسین 1</string>
     <string name="im46rv1dd"> دن</string>
     <string name="im46rv1mm"> مہینہ</string>
     <string name="im46rv1yy"> سال</string>
-    <string name="im47opv2"> im47opv2:  پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  دوسری خوراک                             </string>
+    <string name="im47opv2"> ۔im47opv2:  پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  دوسری خوراک </string>
     <string name="im47opv2dd"> دن</string>
     <string name="im47opv2mm"> مہینہ</string>
     <string name="im47opv2yy"> سال</string>
-    <string name="im48penta2"> im48penta2:   دوسری خوراک  پینٹاوایلنٹ ویکسین</string>
+    <string name="im48penta2"> ۔im48penta2:   دوسری خوراک  پینٹاوایلنٹ ویکسین</string>
     <string name="im48penta2dd"> دن</string>
     <string name="im48penta2mm"> مہینہ</string>
     <string name="im48penta2yy"> سال</string>
-    <string name="im49pcv2"> im49pcv2:        دوسری  خوراک  نمونیا کی ویکسین</string>
+    <string name="im49pcv2"> ۔im49pcv2: دوسری  خوراک  نمونیا کی ویکسین</string>
     <string name="im49pcv2dd"> دن</string>
     <string name="im49pcv2mm"> مہینہ</string>
     <string name="im49pcv2yy"> سال</string>
-    <string name="im410rv2"> im410rv2:    روٹا وائرس ویکسین 2</string>
+    <string name="im410rv2"> ۔im410rv2: روٹا وائرس ویکسین 2</string>
     <string name="im410rv2dd"> دن</string>
     <string name="im410rv2mm"> مہینہ</string>
     <string name="im410rv2yy"> سال</string>
-    <string name="im411opv3"> im411opv3:   پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  تیسری خوراک</string>
+    <string name="im411opv3"> ۔im411opv3:   پولیو(منہ کے ذریعے دیئے جانے والے قطرے)  تیسری خوراک</string>
     <string name="im411opv3dd"> دن</string>
     <string name="im411opv3mm"> مہینہ</string>
     <string name="im411opv3yy"> سال</string>
-    <string name="im412penta3"> im412penta3:      تیسری خوراک   پینٹاوایلنٹ ویکسین</string>
+    <string name="im412penta3"> ۔im412penta3: تیسری خوراک   پینٹاوایلنٹ ویکسین</string>
     <string name="im412penta3dd"> دن</string>
     <string name="im412penta3mm"> مہینہ</string>
     <string name="im412penta3yy"> سال</string>
-    <string name="im413pcv3"> im413pcv3: تیسری  خوراک   ((نمونیا کی ویکسین</string>
+    <string name="im413pcv3"> ۔im413pcv3: تیسری  خوراک   ((نمونیا کی ویکسین</string>
     <string name="im413pcv3dd"> دن</string>
     <string name="im413pcv3mm"> مہینہ</string>
     <string name="im413pcv3yy"> سال</string>
-    <string name="im414ipv"> im414ipv:         پولیو(آئی پی وی انجکشن)</string>
+    <string name="im414ipv"> ۔im414ipv:         پولیو(آئی پی وی انجکشن)</string>
     <string name="im414ipvdd"> دن</string>
     <string name="im414ipvmm"> مہینہ</string>
     <string name="im414ipvyy"> سال</string>
-    <string name="im415measles1"> im415measles1:   (خسرہ کا ٹیکہ) پہلی خوراک </string>
+    <string name="im415measles1"> ۔im415measles1:   (خسرہ کا ٹیکہ) پہلی خوراک </string>
     <string name="im415measles1dd"> دن</string>
     <string name="im415measles1mm"> مہینہ</string>
     <string name="im415measles1yy"> سال</string>
@@ -679,59 +668,59 @@
     <string name="im416measles2dd"> دن</string>
     <string name="im416measles2mm"> مہینہ</string>
     <string name="im416measles2yy"> سال</string>
-    <string name="im05"> im05: اس کارڈ پر درج ویکسین کے علاوہ جو آپ نے مجھے دکھایا ہے، کیا بچےکو کوئی اوراضافی  ویکسین بھی لگی ہے؟  </string>
+    <string name="im05"> ۔im05: اس کارڈ پر درج ویکسین کے علاوہ جو آپ نے مجھے دکھایا ہے، کیا بچےکو کوئی اوراضافی  ویکسین بھی لگی ہے؟  </string>
     <string name="im051">  ہاں</string>
     <string name="im052"> نہیں</string>
     <string name="im053"> معلوم نہیں</string>
-    <string name="im06"> im06: ٓئی ایم۴ چیک کریں: کیا تمام حفاظتی ٹیکوں(بی سی جی سے لے کر خسرہ کی دوسری   خوراک تک کی معلومات ریکارڈ کر لی گئی ہیں؟ </string>
+    <string name="im06"> ۔im06: ٓئی ایم۴ چیک کریں: کیا تمام حفاظتی ٹیکوں(بی سی جی سے لے کر خسرہ کی دوسری   خوراک تک کی معلومات ریکارڈ کر لی گئی ہیں؟ </string>
     <string name="im061"> ہاں</string>
     <string name="im062">   نہیں</string>
-    <string name="im08"> im08: کیا بچےکو کوئی ویکسین لگی ہےجو اسے بیماریوں سے بچا سکے۔ اس میں حفاظتی ٹیکوں کی مہم کے دوران لگنے والی ویکسین ، حفاظتی ٹیکے لگانے والا دن یا بچوں کی صحت کے دن لگنے والی ویکسین شامل ہیں۔</string>
+    <string name="im08"> ۔im08: کیا بچےکو کوئی ویکسین لگی ہےجو اسے بیماریوں سے بچا سکے۔ اس میں حفاظتی ٹیکوں کی مہم کے دوران لگنے والی ویکسین ، حفاظتی ٹیکے لگانے والا دن یا بچوں کی صحت کے دن لگنے والی ویکسین شامل ہیں۔</string>
     <string name="im081"> ہاں</string>
     <string name="im082">  نہیں</string>
     <string name="im083"> معلوم نہیں</string>
-    <string name="im09"> im09: کیا بچےکوکبھی ٹی بی(تپ دق) کی بیماری سے بچاؤکے لئے بی سی جی کی ویکسین لگی ہے، یہ ایک انجکشن ہےجوعام طور پر  بازو یا کندھے میں لگایا جاتا ہے جس کی وجہ سے بازو یا کندھے پر نشان پڑ جاتا ہے؟</string>
+    <string name="im09"> ۔im09: کیا بچےکوکبھی ٹی بی(تپ دق) کی بیماری سے بچاؤکے لئے بی سی جی کی ویکسین لگی ہے، یہ ایک انجکشن ہےجوعام طور پر  بازو یا کندھے میں لگایا جاتا ہے جس کی وجہ سے بازو یا کندھے پر نشان پڑ جاتا ہے؟</string>
     <string name="im091"> ہاں</string>
     <string name="im092"> نہیں</string>
     <string name="im093"> معلوم نہیں</string>
-    <string name="im10"> im10: کیا بچےکوکبھی منہ کے ذ ریعے دیئے جانے والے  پولیو کی بیماری سے بچاؤکے قطرےپلوائے گئے ہیں؟   نشاندہی کرتے ہوئے  اس بات کی تحقیق کریں کہ بعض اوقات پولیو کے قطروں کی پہلی خوراک پیدائش کے وقت  اور  دیگر بیماریوں سے بچاؤکے انجکشن لگاتے وقت ایک ساتھ ہی دے دی جاتی ہے</string>
+    <string name="im10"> ۔im10: کیا بچےکوکبھی منہ کے ذ ریعے دیئے جانے والے  پولیو کی بیماری سے بچاؤکے قطرےپلوائے گئے ہیں؟   نشاندہی کرتے ہوئے  اس بات کی تحقیق کریں کہ بعض اوقات پولیو کے قطروں کی پہلی خوراک پیدائش کے وقت  اور  دیگر بیماریوں سے بچاؤکے انجکشن لگاتے وقت ایک ساتھ ہی دے دی جاتی ہے</string>
     <string name="im101"> ہاں</string>
     <string name="im102">  نہیں</string>
     <string name="im103"> معلوم نہیں</string>
-    <string name="im11"> im11: کیاپہلی بار پلائے گئے پولیو کے قطرے پیدائش کےبعد  پہلے دو ہفتوں میں دیئےگئے تھے؟</string>
+    <string name="im11"> ۔im11: کیاپہلی بار پلائے گئے پولیو کے قطرے پیدائش کےبعد  پہلے دو ہفتوں میں دیئےگئے تھے؟</string>
     <string name="im111">  ہاں</string>
     <string name="im112">  نہیں</string>
     <string name="im113">  معلوم نہیں</string>
-    <string name="im12"> im12: پولیو کے قطرےکتنی بار پلائے  گئے تھے؟ تعداد </string>
-    <string name="im13"> im13:  آخری بار جب بچے کوپولیو کے قطرےپلائے  گئے تھے؛ تو کیا اس وقت(بچے/بچی) کو پولیو سےبچائو کا ٹیکہ بھی لگوایا گیا تھا؟   اس بات کی یقین دہانی کرنے کے لئےمزید پوچھیں کہ اس وقت قطرے اور  ٹیکہ  دونوں دیئے گئے تھے۔</string>
+    <string name="im12"> ۔im12: پولیو کے قطرےکتنی بار پلائے  گئے تھے؟ تعداد </string>
+    <string name="im13"> ۔im13:  آخری بار جب بچے کوپولیو کے قطرےپلائے  گئے تھے؛ تو کیا اس وقت(بچے/بچی) کو پولیو سےبچائو کا ٹیکہ بھی لگوایا گیا تھا؟   اس بات کی یقین دہانی کرنے کے لئےمزید پوچھیں کہ اس وقت قطرے اور  ٹیکہ  دونوں دیئے گئے تھے۔</string>
     <string name="im131"> ہاں</string>
     <string name="im132"> نہیں</string>
     <string name="im133"> معلوم نہیں</string>
-    <string name="im14"> im14: ،) کاانجیکشن لگا ہے یہ ایک انجکشن  ہےجو ران  میں لگایا جاتا ہے جوبچہ/بچی کو تشنج،کالی کھانسی،خناق،ہیپاٹاٹس  کی بیماری اور ہیمو فائلس انفلوئنزا بی سے محفوظ رکھتا ہے؟  Pentavalentکیا بچہ/بچی کوکبھی</string>
+    <string name="im14"> ۔im14: ،) کاانجیکشن لگا ہے یہ ایک انجکشن  ہےجو ران  میں لگایا جاتا ہے جوبچہ/بچی کو تشنج،کالی کھانسی،خناق،ہیپاٹاٹس  کی بیماری اور ہیمو فائلس انفلوئنزا بی سے محفوظ رکھتا ہے؟  Pentavalentکیا بچہ/بچی کوکبھی</string>
     <string name="im141"> ہاں</string>
     <string name="im142">  نہیں</string>
     <string name="im143"> معلوم نہیں</string>
-    <string name="im15"> im15: پینٹا ویلینٹ ویکسین کتنی بار لگی تھی؟ تعداد                                     </string>
-    <string name="im16"> im16: کی ویکسین لگی ہےجو ایک انجیکشن ران میں لگایا جاتا ہے جس سے وہ بچہ /بچی نمونیہ کان کا انفیکشن اور گردن توڑ بخار کی بیماریوں سے محفوظ رہتا ہے؟(Pneumococcal)کیا(نام)کو کبھی نمونیہ</string>
+    <string name="im15"> ۔im15: پینٹا ویلینٹ ویکسین کتنی بار لگی تھی؟ تعداد  </string>
+    <string name="im16"> ۔im16: کی ویکسین لگی ہےجو ایک انجیکشن ران میں لگایا جاتا ہے جس سے وہ بچہ /بچی نمونیہ کان کا انفیکشن اور گردن توڑ بخار کی بیماریوں سے محفوظ رہتا ہے؟(Pneumococcal)کیا(نام)کو کبھی نمونیہ</string>
     <string name="im161"> ہاں</string>
     <string name="im162"> نہیں</string>
     <string name="im163"> معلوم نہیں</string>
-    <string name="im17"> im17: نمونیہ کی ویکسین کتنی بار لگی تھی؟ تعداد                                  </string>
-    <string name="im18"> im18: کیا بچے کو کبھی روٹا وائرس سے بچاؤ کے قطرے پلاۓ گئے ہیں؟ہے؟ یہ قطرےمنہ کے ذریعےپیدائش کےچھے ہفتے بعد دی جاتی ہے،  روٹا وائرس چھوٹے بچوں میں شدید اسہال کی سب سے بڑی وجہ بنتی ہے۔</string>
+    <string name="im17"> ۔im17: نمونیہ کی ویکسین کتنی بار لگی تھی؟ تعداد </string>
+    <string name="im18"> ۔im18: کیا بچے کو کبھی روٹا وائرس سے بچاؤ کے قطرے پلاۓ گئے ہیں؟ہے؟ یہ قطرےمنہ کے ذریعےپیدائش کےچھے ہفتے بعد دی جاتی ہے،  روٹا وائرس چھوٹے بچوں میں شدید اسہال کی سب سے بڑی وجہ بنتی ہے۔</string>
     <string name="im181"> ہاں</string>
     <string name="im182"> نہیں</string>
     <string name="im183">  معلوم نہیں</string>
-    <string name="im19"> im19: قطرےکتنی بار پلائے  گئے تھے؟ تعداد</string>
-    <string name="im20"> im20: کیا بچہ/بچی (نام) کوکبھیآئی پی وی انجکشن لگا ہے، ایک انجکشن جو 14 ہفتےیا اس سے زیادہ عمر میں ران  میں لگایا جاتا ہے جس سے (بچہ/بچی) پولیو  کی بیماری سے محفوظ رہتا /رہتی ہے؟</string>
+    <string name="im19"> ۔im19: قطرےکتنی بار پلائے  گئے تھے؟ تعداد</string>
+    <string name="im20"> ۔im20: کیا بچہ/بچی (نام) کوکبھیآئی پی وی انجکشن لگا ہے، ایک انجکشن جو 14 ہفتےیا اس سے زیادہ عمر میں ران  میں لگایا جاتا ہے جس سے (بچہ/بچی) پولیو  کی بیماری سے محفوظ رہتا /رہتی ہے؟</string>
     <string name="im201"> ہاں</string>
     <string name="im202"> نہیں</string>
     <string name="im203"> معلوم نہیں</string>
-    <string name="im21"> im21: کیا بچےکوکبھی خسرہ کا ٹیکہ لگا ہے، جو ایک انجکشن 9مہینےیا اس سے زیادہ عمر میں بازو  میں لگایا جاتا ہے جس سے (بچہ/بچی) خسرہ   کی بیماری سے محفوظ رہتا ہے؟</string>
+    <string name="im21"> ۔im21: کیا بچےکوکبھی خسرہ کا ٹیکہ لگا ہے، جو ایک انجکشن 9مہینےیا اس سے زیادہ عمر میں بازو  میں لگایا جاتا ہے جس سے (بچہ/بچی) خسرہ   کی بیماری سے محفوظ رہتا ہے؟</string>
     <string name="im211"> ہاں</string>
     <string name="im212"> نہیں</string>
     <string name="im213"> معلوم نہیں</string>
-    <string name="im22"> im22: کتنی بار خسرہ کا ٹیکہ لگاتھا؟ تعداد</string>
-    <string name="im23"> im23: بچے کو عام طور پر حفاظتی ٹیکے کہاں سے لگواتے ہیں؟   اگر بچے کو حفاظتی ٹیکے مختلف ذ رائع سے لگوائے گئے ہیں،تومعمول کے مطابق سب سے زیادہ ویکسین جس جگہ سے لگوائی گئیں ہیں اس کو بیان کریں۔</string>
+    <string name="im22"> ۔im22: کتنی بار خسرہ کا ٹیکہ لگاتھا؟ تعداد</string>
+    <string name="im23"> ۔im23: بچے کو عام طور پر حفاظتی ٹیکے کہاں سے لگواتے ہیں؟   اگر بچے کو حفاظتی ٹیکے مختلف ذ رائع سے لگوائے گئے ہیں،تومعمول کے مطابق سب سے زیادہ ویکسین جس جگہ سے لگوائی گئیں ہیں اس کو بیان کریں۔</string>
     <string name="im23a"> کیا آپ براۓ مہربانی بتا سکتی ہیں کہ یہ مرکزصحت کہاں واقع ہے؟</string>
     <string name="im23a1"> اسی احاطے کے دس کلومیڑ کے </string>
     <string name="im23a2"> ضلع/شہر کے اندر</string>
@@ -742,7 +731,7 @@
     <string name="im233"> سرکاری آؤٹ ریچ سروس</string>
     <string name="im234"> حفاظتی ٹیکےنہیں لگوائے</string>
     <string name="im236"> دیگر(وضاحت کریں)</string>
-    <string name="im24"> im24:   بچے کو حفاظتی ٹیکے کیوں نہیں لگوائے؟   اگر بچے کوتمام حفاظتی ٹیکے نہیں لگوائے گئے، تو ماں/دیکھ بھال کرنے والے سے  پوچھیں۔   بتائی گئیں تمام وجوہات کو ریکارڈ کریں  لیکن فوری طور پر کسی مخصوص وجہ پر مت جائیں۔ ماں کو تمام وجوہات فراہم کرنے کی ترغیب دیں۔</string>
+    <string name="im24"> ۔im24:   بچے کو حفاظتی ٹیکے کیوں نہیں لگوائے؟   اگر بچے کوتمام حفاظتی ٹیکے نہیں لگوائے گئے، تو ماں/دیکھ بھال کرنے والے سے  پوچھیں۔   بتائی گئیں تمام وجوہات کو ریکارڈ کریں  لیکن فوری طور پر کسی مخصوص وجہ پر مت جائیں۔ ماں کو تمام وجوہات فراہم کرنے کی ترغیب دیں۔</string>
     <string name="im241"> حفاظتی ٹیکوں کا مرکزبہت دور تھا</string>
     <string name="im242"> حفاظتی ٹیکے لگائے جانے کا وقت مناسب نہیں تھا</string>
     <string name="im243"> ماں مصروف تھی</string>
@@ -761,7 +750,7 @@
     <string name="im2416">  بچے کو لے کر گئے لیکن ٹیکے لگانے کا دن نہیں تھا</string>
     <string name="im2417"> دیگر(وضاحت کریں</string>
     <string name="im2499"> معلوم نہیں</string>
-    <string name="im25"> im25: اس بچے کے حفاظتی  ٹیکوں کے ریکارڈ کے لئے مرکز صحت پر  ایک سوالنامہ  کا فارم جاری کریں۔ اس سوالنامہ  کا انفارمیشن پینل مکمل کریں۔</string>
+    <string name="im25"> ۔im25: اس بچے کے حفاظتی  ٹیکوں کے ریکارڈ کے لئے مرکز صحت پر  ایک سوالنامہ  کا فارم جاری کریں۔ اس سوالنامہ  کا انفارمیشن پینل مکمل کریں۔</string>
     <string name="im26a"> im26a: IM26A. RESPONDENT KNOWLEDGE ABOUT IMMUNIZATION</string>
     <string name="im26b"> im26b: IM26B. RESPONDENT COOPERATION AND BEHAVIOUR IN RESPONDING TO QUESTION</string>
     <string name="im26c"> im26c: IM26C. CARD AVAILABILITY, COMPLETENESS (SPECIFICALLY ABOUT CARD SHOWS A DATE BUT YOU CANNOT  READ IT CLEARLY) </string>
@@ -778,6 +767,9 @@
     <string name="countNo"> نہیں </string>
     <string name="countYes"> جی ہاں </string>
     <string name="countAlertMsg"> یقینا! آپ جاری رکھنا چاہتے ہیں </string>
+    <string name="splashText1">" Coverage Evaluation Survey, Pakistan, 2020 "</string>
+    <string name="title_activity_family_members_list">" Family Members List "</string>
+    <string name="yes">" ہاں "</string>
     <string name="ss18g_title">Finished Floor</string>
     <string name="ss18l">Bricks</string>
     <string name="ss18m">Lime</string>
@@ -785,8 +777,11 @@
     <string name="father_name_not_found">Father name Not Found</string>
     <string name="mother_name_not_found">Mother name Not Found</string>
     <string name="serialStart">00</string>
-    <string name="cb03_sub"> اگر ماں / دیکھ بھال کرنے والا  بچے کی پیدائش کی صحیح تاریخ جانتے ہیں ، تو پھر دن بھی ریکارڈ کریں؛ ورنہ ، دن کے لئے \\\'98\\\' پر نشان لگائیں۔ مہینہ اور سال ریکارڈ کرنا ضروری ہے مزید پوچھیں: (بچے/بچی )کی تاریخ پیدائش کیا ہے؟</string>
-    <string name="cb03">"cb03: بچہ/بچی (نام) کی  پیدائش کس دن، مہینے اور سال میں ہوئی تھی؟ "</string>
+    <string name="cb01_sub">"  جہاں تک ماں  یا دیکھ بھال کرنے والے کا تعلیمی گریڈ  ہےپوچھیں۔ (اگر غیر تعلیم تافتہ یا ان پڑھ تو 77 لکھیں اور مذہبی تعلیم کے لئے 20 لھکیں) "</string>
+    <string name="cb02_sub">اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں</string>
+    <string name="cb03_sub">اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں</string>
+    <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
+    <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
 
 
 </resources>
