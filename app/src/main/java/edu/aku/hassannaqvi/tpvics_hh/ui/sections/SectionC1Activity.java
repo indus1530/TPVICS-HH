@@ -29,6 +29,7 @@ public class SectionC1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
         bi.setCallback(this);
+        setTitle(R.string.sssec);
         setupSkips();
 
 
@@ -39,61 +40,52 @@ public class SectionC1Activity extends AppCompatActivity {
 
         bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss04b.getId()) {
-                Clear.clearAllFields(bi.ss05cv);
-                bi.ss05cv.setEnabled(false);
+                Clear.clearAllFields(bi.ss05cv, false);
             } else {
-                bi.ss05cv.setEnabled(true);
+                Clear.clearAllFields(bi.ss05cv, true);
             }
         }));
 
 
         bi.ss07.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss07h.getId() || i == bi.ss07i.getId()) {
-                Clear.clearAllFields(bi.ss08cv);
-                Clear.clearAllFields(bi.ss09cv);
-                Clear.clearAllFields(bi.ss10cv);
-                Clear.clearAllFields(bi.ss11cv);
-                Clear.clearAllFields(bi.ss12cv);
-                bi.ss08cv.setEnabled(false);
-                bi.ss09cv.setEnabled(false);
-                bi.ss10cv.setEnabled(false);
-                bi.ss11cv.setEnabled(false);
-                bi.ss12cv.setEnabled(false);
+                Clear.clearAllFields(bi.ss08cv, false);
+                Clear.clearAllFields(bi.ss09cv, false);
+                Clear.clearAllFields(bi.ss10cv, false);
+                Clear.clearAllFields(bi.ss11cv, false);
+                Clear.clearAllFields(bi.ss12cv, false);
             } else {
-                bi.ss08cv.setEnabled(true);
-                bi.ss09cv.setEnabled(true);
-                bi.ss10cv.setEnabled(true);
-                bi.ss11cv.setEnabled(true);
-                bi.ss12cv.setEnabled(true);
+                Clear.clearAllFields(bi.ss08cv, true);
+                Clear.clearAllFields(bi.ss09cv, true);
+                Clear.clearAllFields(bi.ss10cv, true);
+                Clear.clearAllFields(bi.ss11cv, true);
+                Clear.clearAllFields(bi.ss12cv, true);
             }
         }));
 
 
         bi.ss09.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss09b.getId()) {
-                Clear.clearAllFields(bi.ss10cv);
-                Clear.clearAllFields(bi.ss11cv);
-                Clear.clearAllFields(bi.ss12cv);
-                bi.ss10cv.setEnabled(false);
-                bi.ss11cv.setEnabled(false);
-                bi.ss12cv.setEnabled(false);
+                Clear.clearAllFields(bi.ss10cv, false);
+                Clear.clearAllFields(bi.ss11cv, false);
+                Clear.clearAllFields(bi.ss12cv, false);
+
             } else {
-                bi.ss10cv.setEnabled(true);
-                bi.ss11cv.setEnabled(true);
-                bi.ss12cv.setEnabled(true);
+                Clear.clearAllFields(bi.ss10cv, true);
+                Clear.clearAllFields(bi.ss11cv, true);
+                Clear.clearAllFields(bi.ss12cv, true);
+
             }
         }));
 
 
         bi.ss11.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss11b.getId()) {
-                Clear.clearAllFields(bi.ss12cv);
-                Clear.clearAllFields(bi.ss13cv);
-                bi.ss12cv.setEnabled(false);
-                bi.ss13cv.setEnabled(false);
+                Clear.clearAllFields(bi.ss12cv, false);
+                Clear.clearAllFields(bi.ss13cv, false);
             } else {
-                bi.ss12cv.setEnabled(true);
-                bi.ss13cv.setEnabled(true);
+                Clear.clearAllFields(bi.ss12cv, true);
+                Clear.clearAllFields(bi.ss13cv, true);
             }
         }));
 

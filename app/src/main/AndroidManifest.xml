@@ -27,15 +27,19 @@
         <activity android:name=".ui.sections.SectionCHAActivity" />
         <activity android:name=".ui.sections.SectionCHBActivity" />
         <activity android:name=".ui.sections.SectionC2Activity" />
-        <activity android:name=".ui.sections.SectionC1Activity" />
-        <activity
-            android:name=".ui.other.SplashscreenActivity"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>
+        <activity android:name=".ui.sections.SectionC1Activity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.other.SplashscreenActivity"
+            android:theme="@style/AppTheme"
+
+            android:screenOrientation="portrait">
+
         </activity>
         <activity
             android:name=".ui.other.LoginActivity"
@@ -63,14 +67,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait" />
 
         <service android:name=".DownloadFileService" />

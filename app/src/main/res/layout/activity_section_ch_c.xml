@@ -18,22 +18,6 @@
             android:id="@+id/fldGrpSectionCHC"
             style="@style/linearlayout_view_wt_bound">
 
-            <!-- im1title1  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVim1title1"
-                style="@style/cardView">
-
-                <LinearLayout style="@style/vlinearlayout">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/im1title1" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
             <!-- imtitle2  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVimtitle2"
@@ -42,6 +26,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
+                        style="@style/sub"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/imtitle2" />
@@ -61,6 +46,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/im01" />
+
+                    <TextView
+                        style="@style/sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im01_sub" />
 
                     <RadioGroup
                         android:id="@+id/im01"
@@ -308,18 +299,9 @@
                             android:layout_height="wrap_content"
                             android:text="@string/im4title1" />
 
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!-- im4title2  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVim4title2"
-                    style="@style/cardView">
-
-                    <LinearLayout style="@style/vlinearlayout">
 
                         <TextView
+                            style="@style/sub"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im4title2" />
@@ -1416,24 +1398,28 @@
                         <RadioGroup
                             android:id="@+id/im05"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/im051"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:text="@string/im051" />
 
                             <RadioButton
                                 android:id="@+id/im052"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im052" />
 
                             <RadioButton
                                 android:id="@+id/im053"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im053" />
 
                         </RadioGroup>
@@ -1457,16 +1443,22 @@
 
                         <RadioGroup
                             android:id="@+id/im06"
-                            style="@style/radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/im061"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im061" />
 
                             <RadioButton
                                 android:id="@+id/im062"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im062" />
 
                         </RadioGroup>
@@ -2049,7 +2041,7 @@
                             android:hint="@string/im236"
                             android:tag="im236"
                             android:text='@{im236.checked? im236x.getText().toString() : ""}'
-                            android:visibility='@{im236.checked? View.VISIBLE : View.GONE}' />
+                            android:enabled='@{im236.checked ? true : false}' />
 
                     </RadioGroup>
 
@@ -2213,7 +2205,7 @@
                                 android:hint="@string/im2417"
                                 android:tag="im2417"
                                 android:text='@{im2417.checked? im2417x.getText().toString() : ""}'
-                                android:visibility='@{im2417.checked? View.VISIBLE : View.GONE}' />
+                                android:enabled='@{im2417.checked ? true : false}' />
 
                             <RadioButton
                                 android:id="@+id/im2499"

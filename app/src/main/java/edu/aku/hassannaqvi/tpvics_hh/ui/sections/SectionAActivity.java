@@ -45,6 +45,8 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
         setUIComponent();
+        setTitle(R.string.hhsec);
+
 
 
     }

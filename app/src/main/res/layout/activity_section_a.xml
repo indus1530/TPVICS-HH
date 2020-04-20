@@ -15,7 +15,7 @@
 
         <!-- HEAD   -->
         <TextView
-            style="@style/textView3Head"
+            style="@style/sub"
             android:text="@string/a101a" />
 
         <ScrollView
@@ -285,7 +285,6 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:gravity="center"
                                     android:text="@string/newHHheadname" />
 
                                 <EditText
@@ -432,39 +431,35 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh16" />
 
-                                <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
                                         android:text="@string/name" />
 
                                     <EditText
                                         android:id="@+id/hh16a"
                                         style="@style/EditTextAlpha"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:hint="@string/hh16a"
                                         android:maxLength="30"
                                         android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
 
                                     <TextView
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
                                         android:text="@string/hh16b" />
 
                                     <EditText
                                         android:id="@+id/hh16b"
                                         style="@style/EditTextNum"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:hint="@string/hh16b"
                                         android:maxLength="11"
                                         android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
 
-                                </LinearLayout>
 
                             </LinearLayout>
 
@@ -483,37 +478,33 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh17" />
 
-                                <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
                                         android:text="@string/name" />
 
                                     <EditText
                                         android:id="@+id/hh17a"
                                         style="@style/EditTextAlpha"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:hint="@string/hh17a"
                                         android:maxLength="30" />
 
                                     <TextView
+                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="1"
                                         android:text="@string/hh17b" />
 
                                     <EditText
                                         android:id="@+id/hh17b"
                                         style="@style/EditTextNum"
-                                        android:layout_width="0dp"
-                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:hint="@string/hh17b"
                                         android:maxLength="11" />
 
-                                </LinearLayout>
 
                             </LinearLayout>
 
@@ -570,6 +561,7 @@
                                     android:text="@string/hh19" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh19h" />
@@ -621,6 +613,7 @@
                                     android:text="@string/hh20" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh20h" />

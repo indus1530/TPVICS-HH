@@ -28,15 +28,25 @@ public class SectionCHAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_a);
         bi.setCallback(this);
 
+        setTitle(R.string.ch_title);
         setupListeners();
     }
 
     private void setupListeners() {
 
-        bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
+        /*bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.uf14a.getId())
                 Clear.clearAllFields(bi.fldGrpCVuf15);
-        });
+        });*/
+
+        bi.uf14.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.uf14a.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVuf15);
+                bi.fldGrpCVuf15.setEnabled(false);
+            } else {
+                bi.fldGrpCVuf15.setEnabled(true);
+            }
+        }));
 
 
     }
