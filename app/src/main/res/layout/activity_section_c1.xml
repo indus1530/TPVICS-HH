@@ -364,9 +364,10 @@
                         <EditText
                             android:id="@+id/ss0596x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss0596.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:enabled='@{ss0596.checked ? true : false }'
+                            android:tag="ss0596"
                             android:text='@{ss0596.checked ? ss0596x.getText().toString() : ""}' />
 
                     </RadioGroup>
@@ -389,6 +390,7 @@
                         android:text="@string/ss06" />
 
                     <LinearLayout
+                        android:id="@+id/fldGrpss06cv"
                         style="@style/vlinearlayout"
                         android:tag="0">
 
@@ -490,10 +492,10 @@
                         <EditText
                             android:id="@+id/ss0696x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss0696.checked ? true : false }'
                             android:hint="@string/specify"
                             android:tag="ss0696"
-                            android:text='@{ss0696.checked ? ss0696x.getText().toString() : "" }'
-                            android:enabled='@{ss0696.checked ? true : false }' />
+                            android:text='@{ss0696.checked ? ss0696x.getText().toString() : "" }' />
 
                     </LinearLayout>
 
@@ -581,10 +583,11 @@
                         <EditText
                             android:id="@+id/ss0796x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss0796.checked ? true : false }'
                             android:hint="@string/specify"
+                            android:tag="ss0796x"
                             android:maxLength="20"
-                            android:text='@{ss0796.checked ? ss0796x.getText().toString() : "" }'
-                            android:enabled='@{ss0796.checked ? true : false }' />
+                            android:text='@{ss0796.checked ? ss0796x.getText().toString() : "" }' />
 
                     </RadioGroup>
 
@@ -683,8 +686,8 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/ss10a" />
 
@@ -840,10 +843,11 @@
                         <EditText
                             android:id="@+id/ss1396x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss1396.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss1396.checked ? ss1396x.getText().toString() : "" }'
-                            android:enabled='@{ss1396.checked ? true : false }' />
+                            android:tag="ss1396x"
+                            android:text='@{ss1396.checked ? ss1396x.getText().toString() : "" }' />
 
                     </RadioGroup>
 

@@ -81,8 +81,7 @@
 
             <LinearLayout
                 android:id="@+id/fldGrpSecChc1"
-                style="@style/linearlayout_view_wt_bound"
-                android:visibility='@{im011.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/linearlayout_view_wt_bound">
 
                 <!-- im02  Radio   -->
                 <androidx.cardview.widget.CardView
