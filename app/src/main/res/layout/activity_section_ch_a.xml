@@ -138,8 +138,7 @@
             <!-- uf15  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVuf15"
-                style="@style/cardView"
-                android:enabled='@{uf14a.checked ? false : true}'>
+                style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
 

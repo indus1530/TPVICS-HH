@@ -39,20 +39,18 @@ public class SectionC2Activity extends AppCompatActivity {
 
         bi.ss22.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss22b.getId()) {
-                Clear.clearAllFields(bi.ss23cv);
-                bi.ss23cv.setEnabled(false);
+                Clear.clearAllFields(bi.ss23cv, false);
             } else {
-                bi.ss23cv.setEnabled(true);
+                Clear.clearAllFields(bi.ss23cv, true);
             }
         }));
 
 
         bi.ss24.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss24b.getId()) {
-                Clear.clearAllFields(bi.ss25cvall);
-                bi.ss25cvall.setEnabled(false);
+                Clear.clearAllFields(bi.ss25cvall, false);
             } else {
-                bi.ss25cvall.setEnabled(true);
+                Clear.clearAllFields(bi.ss25cvall, true);
             }
         }));
 

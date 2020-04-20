@@ -18,6 +18,22 @@
             android:id="@+id/fldGrpSectionCHC"
             style="@style/linearlayout_view_wt_bound">
 
+            <!-- im1title1  Title   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVim1title1"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im1title1" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <!-- imtitle2  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVimtitle2"
@@ -26,7 +42,6 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/sub"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/imtitle2" />
@@ -46,12 +61,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/im01" />
-
-                    <TextView
-                        style="@style/sub"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/im01_sub" />
 
                     <RadioGroup
                         android:id="@+id/im01"
@@ -86,8 +95,7 @@
                 <!-- im02  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim02"
-                    style="@style/cardView"
-                    android:visibility='@{im012.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -123,8 +131,7 @@
                 <!-- im02a  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim02a"
-                    style="@style/cardView"
-                    android:visibility='@{im021.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -183,8 +190,7 @@
 
             <LinearLayout
                 android:id="@+id/fldGrpSecChc2"
-                style="@style/linearlayout_view_wt_bound"
-                android:visibility='@{im021.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/linearlayout_view_wt_bound">
 
                 <!-- im03  Title   -->
                 <androidx.cardview.widget.CardView
@@ -298,9 +304,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/im4title1" />
 
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- im4title2  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim4title2"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
 
                         <TextView
-                            style="@style/sub"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im4title2" />
@@ -1397,28 +1412,24 @@
                         <RadioGroup
                             android:id="@+id/im05"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im051"
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/im051" />
 
                             <RadioButton
                                 android:id="@+id/im052"
-                                android:layout_width="0dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im052" />
 
                             <RadioButton
                                 android:id="@+id/im053"
-                                android:layout_width="0dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im053" />
 
                         </RadioGroup>
@@ -1430,8 +1441,7 @@
                 <!-- im06  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim06"
-                    style="@style/cardView"
-                    android:visibility='@{im052.checked || im053.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -1442,22 +1452,16 @@
 
                         <RadioGroup
                             android:id="@+id/im06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            style="@style/radiogroup">
 
                             <RadioButton
                                 android:id="@+id/im061"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/im061" />
 
                             <RadioButton
                                 android:id="@+id/im062"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                style="@style/radiobutton"
                                 android:text="@string/im062" />
 
                         </RadioGroup>
@@ -1468,12 +1472,10 @@
 
             </LinearLayout>
 
-
             <!-- im08  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim08"
-                style="@style/cardView"
-                android:visibility='@{im052.checked || im053.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
 
@@ -1507,11 +1509,9 @@
 
             </androidx.cardview.widget.CardView>
 
-
             <LinearLayout
                 android:id="@+id/fldGrpSecChc3"
-                style="@style/linearlayout_view_wt_bound"
-                android:visibility='@{im052.checked || im053.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/linearlayout_view_wt_bound">
 
 
                 <!-- im09  Radio   -->
@@ -1591,8 +1591,7 @@
 
                 <LinearLayout
                     android:id="@+id/fldGrpSecChc5"
-                    style="@style/linearlayout_view_wt_bound"
-                    android:visibility='@{im101.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/linearlayout_view_wt_bound">
 
                     <!-- im11  Radio   -->
                     <androidx.cardview.widget.CardView
@@ -1737,8 +1736,7 @@
                 <!-- im15  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim15"
-                    style="@style/cardView"
-                    android:visibility='@{im141.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -1801,8 +1799,7 @@
                 <!-- im17  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim17"
-                    style="@style/cardView"
-                    android:visibility='@{im161.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -1865,8 +1862,7 @@
                 <!-- im19  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim19"
-                    style="@style/cardView"
-                    android:visibility='@{im181.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -1966,8 +1962,7 @@
                 <!-- im22  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim22"
-                    style="@style/cardView"
-                    android:visibility='@{im211.checked ? View.VISIBLE : View.GONE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
@@ -2051,14 +2046,12 @@
 
             <LinearLayout
                 android:id="@+id/fldGrpSecChc4"
-                style="@style/linearlayout_view_wt_bound"
-                android:visibility='@{im231.checked || im232.checked || im233.checked ? View.GONE : View.VISIBLE}'>
+                style="@style/linearlayout_view_wt_bound">
 
                 <!-- im23a  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim23a"
-                    style="@style/cardView"
-                    android:visibility='@{im234.checked ? View.GONE : View.VISIBLE}'>
+                    style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
 
