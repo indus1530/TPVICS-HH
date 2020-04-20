@@ -139,7 +139,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVuf15"
                 style="@style/cardView"
-                android:visibility='@{uf14a.checked ? View.GONE : View.VISIBLE}'>
+                android:enabled='@{uf14a.checked ? false : true}'>
 
                 <LinearLayout style="@style/vlinearlayout">
 

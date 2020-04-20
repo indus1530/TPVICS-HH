@@ -86,7 +86,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss0196.checked ? ss0196x.getText().toString() : "" }'
-                            android:visibility='@{ss0196.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss0196.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -103,7 +103,6 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/ss02" />
@@ -141,7 +140,7 @@
                         android:hint="@string/specify"
                         android:maxLength="20"
                         android:text='@{ss0296.checked ? ss0296x.getText().toString() : "" }'
-                        android:visibility='@{ss0296.checked ? View.VISIBLE : View.GONE }' />
+                        android:enabled='@{ss0296.checked ? true : false }' />
 
                 </LinearLayout>
 
@@ -265,7 +264,7 @@
                             android:hint="@string/specify"
                             android:tag="ss0396"
                             android:text='@{ss0396.checked ? ss0396x.getText().toString() : "" }'
-                            android:visibility='@{ss0396.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss0396.checked ? true : false }' />
 
                     </LinearLayout>
 
@@ -367,8 +366,8 @@
                             style="@style/EditTextAlpha"
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss0596.checked ? ss0596x.getText().toString() : "" }'
-                            android:visibility='@{ss0596.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss0596.checked ? true : false }'
+                            android:text='@{ss0596.checked ? ss0596x.getText().toString() : ""}' />
 
                     </RadioGroup>
 
@@ -494,7 +493,7 @@
                             android:hint="@string/specify"
                             android:tag="ss0696"
                             android:text='@{ss0696.checked ? ss0696x.getText().toString() : "" }'
-                            android:visibility='@{ss0696.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss0696.checked ? true : false }' />
 
                     </LinearLayout>
 
@@ -585,7 +584,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss0796.checked ? ss0796x.getText().toString() : "" }'
-                            android:visibility='@{ss0796.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss0796.checked ? true : false }' />
 
                     </RadioGroup>
 
@@ -844,7 +843,7 @@
                             android:hint="@string/specify"
                             android:maxLength="20"
                             android:text='@{ss1396.checked ? ss1396x.getText().toString() : "" }'
-                            android:visibility='@{ss1396.checked ? View.VISIBLE : View.GONE }' />
+                            android:enabled='@{ss1396.checked ? true : false }' />
 
                     </RadioGroup>
 

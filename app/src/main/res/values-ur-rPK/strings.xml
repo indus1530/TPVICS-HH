@@ -2603,7 +2603,7 @@
 
 
     <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
-    <string name="ss01"> SS01: گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
+    <string name="ss01"> SS01: گھرانے کے سربراہ کی مادری زبان کیا ہے ؟</string>
     <string name="ss01a"> اردو </string>
     <string name="ss01b"> پنجابی </string>
     <string name="ss01c"> سند ھی </string>
@@ -2613,7 +2613,7 @@
     <string name="ss01g"> ھند کو </string>
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
-    <string name="ss02"> SS02: آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
+    <string name="ss02">آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟  :SS02 </string>
     <string name="ss02a"> اپنا </string>
     <string name="ss02b"> کرائے کا </string>
     <string name="ss02x"> دیگر وضاحت کریں </string>
@@ -2639,7 +2639,7 @@
     <string name="ss03n">  بوتل کا پانی </string>
     <string name="ss03x"> (وضاحت کریں)دیگر </string>
 
-    <string name="ss04"> SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟</string>
+    <string name="ss04"> SS04: کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں؟ </string>
     <string name="ss04y"> ہاں</string>
     <string name="ss04n"> نہیں</string>
 

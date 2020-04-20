@@ -34,10 +34,19 @@ public class SectionCHAActivity extends AppCompatActivity {
 
     private void setupListeners() {
 
-        bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
+        /*bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.uf14a.getId())
                 Clear.clearAllFields(bi.fldGrpCVuf15);
-        });
+        });*/
+
+        bi.uf14.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.uf14a.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVuf15);
+                bi.fldGrpCVuf15.setEnabled(false);
+            } else {
+                bi.fldGrpCVuf15.setEnabled(true);
+            }
+        }));
 
 
     }
@@ -61,7 +70,9 @@ public class SectionCHAActivity extends AppCompatActivity {
         JSONObject f1 = new JSONObject();
 
         f1.put("uf09", bi.uf09.getText().toString());
+
         f1.put("uf9a", bi.uf9a.getText().toString());
+
         f1.put("uf9b",
                 bi.uf9b1.isChecked() ? "1" :
                         bi.uf9b2.isChecked() ? "2" :
