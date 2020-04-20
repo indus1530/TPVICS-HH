@@ -60,40 +60,37 @@ public class SectionCHCActivity extends AppCompatActivity {
         });
 
         bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.im052.getId() || i == bi.im053.getId()) {
+            if (i != bi.im051.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim06, false);
                 Clear.clearAllFields(bi.fldGrpSecChc3, false);
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
+                Clear.clearAllFields(bi.fldGrpCVim23, true);
+                Clear.clearAllFields(bi.fldGrpCVim23a, true);
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim06, true);
                 Clear.clearAllFields(bi.fldGrpSecChc3, true);
                 Clear.clearAllFields(bi.fldGrpCVim08, true);
-            }
-
-        });
-
-        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.im231.getId() || i == bi.im232.getId() || i == bi.im233.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecChc4, false);
-            } else if (i == bi.im234.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVim23, false);
                 Clear.clearAllFields(bi.fldGrpCVim23a, false);
-                Clear.clearAllFields(bi.fldGrpSecChc4, true);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVim23a, true);
-                Clear.clearAllFields(bi.fldGrpSecChc4, true);
             }
-
         });
 
         bi.im08.setOnCheckedChangeListener(((radioGroup, i) -> {
+
             if (i == bi.im081.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecChc3, false);
-                Clear.clearAllFields(bi.fldGrpCVim23, false);
-                Clear.clearAllFields(bi.fldGrpCVim23a, false);
-            } else {
-                Clear.clearAllFields(bi.fldGrpSecChc3, true);
+                Clear.clearAllFields(bi.fldGrpCVim09, true);
+                Clear.clearAllFields(bi.fldGrpCVim10, true);
+                Clear.clearAllFields(bi.fldGrpSecChc5, true);
+                Clear.clearAllFields(bi.fldGrpSecChc6, true);
                 Clear.clearAllFields(bi.fldGrpCVim23, true);
                 Clear.clearAllFields(bi.fldGrpCVim23a, true);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVim09, false);
+                Clear.clearAllFields(bi.fldGrpCVim10, false);
+                Clear.clearAllFields(bi.fldGrpSecChc5, false);
+                Clear.clearAllFields(bi.fldGrpSecChc6, false);
+                Clear.clearAllFields(bi.fldGrpCVim23, false);
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);
             }
 
         }));
@@ -137,6 +134,19 @@ public class SectionCHCActivity extends AppCompatActivity {
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim22, false);
             }
+        });
+
+        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im231.getId() || i == bi.im232.getId() || i == bi.im233.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecChc4, false);
+            } else if (i == bi.im234.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);
+                Clear.clearAllFields(bi.fldGrpSecChc4, true);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVim23a, true);
+                Clear.clearAllFields(bi.fldGrpSecChc4, true);
+            }
+
         });
 
     }
