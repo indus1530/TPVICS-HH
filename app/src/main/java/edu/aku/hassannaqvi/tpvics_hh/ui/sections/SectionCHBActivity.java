@@ -17,7 +17,8 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionCHBActivity extends AppCompatActivity {
 
@@ -50,7 +51,7 @@ public class SectionCHBActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
                 if ((bi.cb01a.getText()).hashCode() == s.hashCode()) {
-                    if (Integer.parseInt(bi.cb01a.getText().toString()) == 77) {
+                    if (bi.cb01a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb01a.getText().toString()) == 77) {
                         bi.cb01b.setEnabled(true);
                     } else {
                         bi.cb01b.setEnabled(false);
@@ -76,7 +77,7 @@ public class SectionCHBActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
                 if ((bi.cb02a.getText()).hashCode() == s.hashCode()) {
-                    if (Integer.parseInt(bi.cb02a.getText().toString()) == 77) {
+                    if (bi.cb02a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb02a.getText().toString()) == 77) {
                         bi.cb02b.setEnabled(true);
                     } else {
                         bi.cb02b.setEnabled(false);
@@ -152,7 +153,7 @@ public class SectionCHBActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
     @Override

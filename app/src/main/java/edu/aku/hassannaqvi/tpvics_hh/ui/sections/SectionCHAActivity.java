@@ -16,7 +16,8 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionCHAActivity extends AppCompatActivity {
 
@@ -34,20 +35,13 @@ public class SectionCHAActivity extends AppCompatActivity {
 
     private void setupListeners() {
 
-        /*bi.uf14.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.uf14a.getId())
-                Clear.clearAllFields(bi.fldGrpCVuf15);
-        });*/
-
         bi.uf14.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.uf14a.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVuf15);
-                bi.fldGrpCVuf15.setEnabled(false);
+                Clear.clearAllFields(bi.fldGrpCVuf15, false);
             } else {
-                bi.fldGrpCVuf15.setEnabled(true);
+                Clear.clearAllFields(bi.fldGrpCVuf15, true);
             }
         }));
-
 
     }
 
@@ -115,8 +109,7 @@ public class SectionCHAActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
     @Override

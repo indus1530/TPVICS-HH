@@ -29,14 +29,15 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSecAActivity;
 
-public class SectionAActivity extends AppCompatActivity implements Util.EndSecAActivity {
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
+
+public class SectionAActivity extends AppCompatActivity implements EndSecAActivity {
 
     ActivitySectionABinding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +47,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         db = MainApp.appInfo.getDbHelper();
         setUIComponent();
         setTitle(R.string.hhsec);
-
-
-
     }
-
 
     private void setUIComponent() {
 
@@ -101,25 +98,11 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
 
         bi.hh18.setOnCheckedChangeListener(((radioGroup, i) -> {
-
-            if (i == bi.hh18a.getId()) {
-                bi.hh19cv.setVisibility(View.VISIBLE);
-                bi.hh20cv.setVisibility(View.VISIBLE);
-                bi.hh21cv.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.hh19cv);
-                Clear.clearAllFields(bi.hh20cv);
-                Clear.clearAllFields(bi.hh21cv);
-                bi.hh19cv.setVisibility(View.GONE);
-                bi.hh20cv.setVisibility(View.GONE);
-                bi.hh21cv.setVisibility(View.GONE);
-            }
-
+            Clear.clearAllFields(bi.fldGrpAHH17, i == bi.hh18a.getId());
         }));
 
 
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -135,7 +118,6 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         }
     }
 
-
     private boolean UpdateDB() {
         long updcount = db.addForm(MainApp.fc);
         MainApp.fc.set_ID(String.valueOf(updcount));
@@ -149,7 +131,6 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
         }
 
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -209,8 +190,11 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
                 : bi.hh18b.isChecked() ? "2"
                 : "0");
 
-        json.put("hh19", bi.hh19b.isChecked() ? "95" : bi.hh19a.getText().toString());
+        json.put("hh18", bi.hh19b.isChecked() ? "1"
+                : bi.hh18b.isChecked() ? "2"
+                : "0");
 
+        json.put("hh19", bi.hh19b.isChecked() ? "95" : bi.hh19a.getText().toString());
         json.put("hh20", bi.hh20a.isChecked() ? "1"
                 : bi.hh20b.isChecked() ? "2"
                 : "0");
@@ -228,7 +212,7 @@ public class SectionAActivity extends AppCompatActivity implements Util.EndSecAA
 
     public void BtnEnd() {
         if (formValidation()) {
-            Util.contextEndActivity(this);
+            contextEndActivity(this);
         }
     }
 

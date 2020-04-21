@@ -58,7 +58,7 @@ public class DateUtils {
     }
 
     public static long ageInMonths(String year, String month) {
-        return (Integer.valueOf(year) * 12) + Integer.valueOf(month);
+        return (Integer.parseInt(year) * 12) + Integer.parseInt(month);
     }
 
     public static String convertDateFormat(String dateStr) {

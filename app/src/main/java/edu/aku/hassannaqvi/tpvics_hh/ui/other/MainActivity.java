@@ -51,6 +51,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
@@ -180,9 +181,9 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     oF = new Intent(this, SectionCHBActivity.class);
                     break;
-                /*case R.id.formC:
-                    oF = new Intent(this, SectionCHCActivity.class);
-                    break;*/
+                case 4:
+                    oF = new Intent(this, SectionC1Activity.class);
+                    break;
 
 
             }
@@ -407,6 +408,9 @@ public class MainActivity extends AppCompatActivity {
 
         //loadTagDialog();
 
+    }
+
+    public void gotoC1(View view) {
     }
 
     public static class MyDialogFragment extends DialogFragment {

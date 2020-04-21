@@ -27,7 +27,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb0_title" />
@@ -43,13 +43,32 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb01" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb01"
+                            android:text="@string/cb01" />
+
+                        <TextView
+                            android:id="@+id/q_cb01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb01"
+                            android:layout_alignBottom="@id/qtxt_cb01"
+                            android:gravity="top"
+                            android:text="@string/Q_cb01" />
+
+                    </RelativeLayout>
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb01_sub" />
@@ -92,7 +111,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb01b"
-                            android:enabled='@{cb01dk.checked ? false : true}'
+                            android:enabled='@{cb01dk.checked ? false : false}'
                             android:maxLength="2"
                             android:text='@{cb01dk.checked ? "" : cb01b.getText().toString() }'
                             app:maxValue="20"
@@ -118,13 +137,32 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb02" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb02"
+                            android:text="@string/cb02" />
+
+                        <TextView
+                            android:id="@+id/q_cb02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb02"
+                            android:layout_alignBottom="@id/qtxt_cb02"
+                            android:gravity="top"
+                            android:text="@string/Q_cb02" />
+
+                    </RelativeLayout>
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb02_sub" />
@@ -146,6 +184,7 @@
                             android:enabled='@{cb02dk.checked ? false : true}'
                             android:maxLength="2"
                             android:text='@{cb02dk.checked ? "" : cb02a.getText().toString() }'
+                            app:defaultValue="77"
                             app:maxValue="20"
                             app:minValue="1"
                             app:type="range" />
@@ -166,7 +205,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb02b"
-                            android:enabled='@{cb02dk.checked ? false : true}'
+                            android:enabled='@{cb02dk.checked ? false : false}'
                             android:maxLength="2"
                             android:text='@{cb02dk.checked ? "" : cb02b.getText().toString() }'
                             app:maxValue="20"
@@ -192,13 +231,33 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb03" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb03"
+                            android:text="@string/cb03" />
+
+                        <TextView
+                            android:id="@+id/q_cb03"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb03"
+                            android:layout_alignBottom="@id/qtxt_cb03"
+                            android:gravity="top"
+                            android:text="@string/Q_cb03" />
+
+                    </RelativeLayout>
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb03_sub" />
@@ -282,13 +341,32 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb04" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb04"
+                            android:text="@string/cb04" />
+
+                        <TextView
+                            android:id="@+id/q_cb04"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb04"
+                            android:layout_alignBottom="@id/qtxt_cb04"
+                            android:gravity="top"
+                            android:text="@string/Q_cb04" />
+
+                    </RelativeLayout>
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb04_sub" />
@@ -346,10 +424,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb05" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb05"
+                            android:text="@string/cb05" />
+
+                        <TextView
+                            android:id="@+id/q_cb05"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb05"
+                            android:layout_alignBottom="@id/qtxt_cb05"
+                            android:gravity="top"
+                            android:text="@string/Q_cb05" />
+
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/cb05"

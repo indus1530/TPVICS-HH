@@ -18,7 +18,8 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC1Binding;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionC1Activity extends AppCompatActivity {
 
@@ -129,7 +130,7 @@ public class SectionC1Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-        json.put("ss01", bi.ss01a.isChecked() ? "1"
+/*        json.put("ss01", bi.ss01a.isChecked() ? "1"
                 : bi.ss01b.isChecked() ? "2"
                 : bi.ss01c.isChecked() ? "3"
                 : bi.ss01d.isChecked() ? "4"
@@ -161,7 +162,7 @@ public class SectionC1Activity extends AppCompatActivity {
         json.put("ss03l", bi.ss03l.isChecked() ? "12" : "0");
         json.put("ss03m", bi.ss03m.isChecked() ? "13" : "0");
         json.put("ss03n", bi.ss03n.isChecked() ? "14" : "0");
-        json.put("ss0396", bi.ss0396.isChecked() ? "96" : "0");
+        json.put("ss0396", bi.ss0396.isChecked() ? "96" : "0");*/
 
         json.put("ss04", bi.ss04a.isChecked() ? "1"
                 : bi.ss04b.isChecked() ? "2"
@@ -328,8 +329,7 @@ public class SectionC1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
 
