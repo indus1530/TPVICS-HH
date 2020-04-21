@@ -195,17 +195,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
 
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf15" />
+                        android:background="@drawable/bottom">
 
-                    <TextView
-                        style="@style/info"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/uf15_info" />
+                        <TextView
+                            android:id="@+id/qtxt_uf15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf15"
+                            android:text="@string/uf14" />
+
+                        <TextView
+                            android:id="@+id/q_uf15"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf15"
+                            android:layout_alignBottom="@id/qtxt_uf15"
+                            android:gravity="center"
+                            android:text="@string/Q_uf15" />
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf15"
