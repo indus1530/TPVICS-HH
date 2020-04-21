@@ -75,6 +75,7 @@
 
                 </LinearLayout>
 
+
                 <!-- ch02  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVch02"
@@ -85,10 +86,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/ch02" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_ch02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_ch02"
+                                android:text="@string/ch02" />
+
+                            <TextView
+                                android:id="@+id/q_ch02"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_ch02"
+                                android:layout_alignBottom="@id/qtxt_ch02"
+                                android:gravity="top"
+                                android:text="@string/Q_ch02" />
+
+                        </RelativeLayout>
 
                         <EditText
                             android:id="@+id/ch02"
@@ -98,6 +118,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- ch03  Input   -->
                 <androidx.cardview.widget.CardView
@@ -109,10 +130,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/ch03" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_ch03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_ch03"
+                                android:text="@string/ch03" />
+
+                            <TextView
+                                android:id="@+id/q_ch03"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_ch03"
+                                android:layout_alignBottom="@id/qtxt_ch03"
+                                android:gravity="top"
+                                android:text="@string/Q_ch03" />
+
+                        </RelativeLayout>
 
                         <EditText
                             android:id="@+id/ch03"
@@ -133,10 +173,29 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/ch03b" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_ch04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_ch04"
+                                android:text="@string/ch04" />
+
+                            <TextView
+                                android:id="@+id/q_ch04"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_ch04"
+                                android:layout_alignBottom="@id/qtxt_ch04"
+                                android:gravity="top"
+                                android:text="@string/Q_ch04" />
+
+                        </RelativeLayout>
 
                         <EditText
                             android:id="@+id/ch03b"
