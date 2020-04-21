@@ -148,14 +148,16 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:textColor">@color/white</item>
+        <!--
+                <item name="android:background">@color/colorPrimary</item>
+        -->
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">24sp</item>
-        <item name="android:paddingTop">16dp</item>
-        <item name="android:paddingStart">8dp</item>
+        <item name="android:padding">16dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:paddingEnd">8dp</item>
+        <item name="android:background">@drawable/bottom_options</item>
+
     </style>
 
     <style name="HeadingTitle" parent="@android:style/TextAppearance.Widget.TextView">
@@ -187,7 +189,7 @@
         <item name="android:padding">16dp</item>
     </style>
 
-    <style name="sub">
+    <style name="info">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">0dp</item>
@@ -196,6 +198,19 @@
         <item name="android:textColor">@color/red</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+
+    </style>
+
+    <style name="sub">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">#d6d6d6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:padding">16dp</item>
     </style>
 
@@ -245,7 +260,8 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">32sp</item>
         <item name="android:textColorHint">@color/colorAccent</item>
-        <item name="android:padding">12dp</item>
+        <item name="android:padding">16dp</item><![CDATA[
+        ]]>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
         <item name="android:focusable">true</item>
@@ -349,14 +365,15 @@
     </style>
 
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:textSize">24sp</item>
+        <item name="android:layout_gravity">right</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">1dp</item>
-        <item name="android:background">@color/white</item>
-        <!--        <item name="android:button">@color/colorPrimary</item>-->
-        <item name="android:elevation">1dp</item>
-        <item name="android:radius">2dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:background">@drawable/bottom_options</item>
+        <item name="android:padding">16dp</item>
+
     </style>
 
     <style name="button" parent="android:Widget.Material.Light.Button">
@@ -375,14 +392,11 @@
         <item name="android:layout_gravity">right</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:button">@null</item>
         <item name="android:textSize">24sp</item>
         <item name="android:clickable">true</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="android:drawableStart">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:drawablePadding">12dp</item>
-        <item name="android:background">@color/white</item>
-        <item name="android:padding">12dp</item>
+        <item name="android:background">@drawable/bottom_options</item>
+        <item name="android:padding">16dp</item>
 
     </style>
 
@@ -524,6 +538,20 @@
 
     <style name="expandCollapse">
         <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="quesNum">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

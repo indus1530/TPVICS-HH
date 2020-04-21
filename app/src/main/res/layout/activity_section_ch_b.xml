@@ -27,7 +27,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb0_title" />
@@ -49,7 +49,7 @@
                         android:text="@string/cb01" />
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb01_sub" />
@@ -124,7 +124,7 @@
                         android:text="@string/cb02" />
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb02_sub" />
@@ -199,7 +199,7 @@
                         android:text="@string/cb03" />
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb03_sub" />
@@ -289,7 +289,7 @@
                         android:text="@string/cb04" />
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/cb04_sub" />
