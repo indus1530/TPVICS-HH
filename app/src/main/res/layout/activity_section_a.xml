@@ -388,11 +388,29 @@
 
                             <LinearLayout style="@style/vlinearlayout">
 
-                                <TextView
+                                <RelativeLayout
                                     android:layout_width="match_parent"
-
                                     android:layout_height="wrap_content"
-                                    android:text="@string/hh15" />
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_hh15"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_hh15"
+                                        android:text="@string/hh15" />
+
+                                    <TextView
+                                        android:id="@+id/q_hh15"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_hh15"
+                                        android:layout_alignBottom="@id/qtxt_hh15"
+                                        android:gravity="top"
+                                        android:text="@string/Q_hh15" />
+
+                                </RelativeLayout>
 
                                 <RadioGroup
                                     android:id="@+id/hh15"
@@ -427,11 +445,29 @@
 
                             <LinearLayout style="@style/vlinearlayout">
 
-                                <TextView
+                                <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/hh16" />
+                                    android:background="@drawable/bottom">
 
+                                    <TextView
+                                        android:id="@+id/qtxt_hh16"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_hh16"
+                                        android:text="@string/hh16" />
+
+                                    <TextView
+                                        android:id="@+id/q_hh16"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_hh16"
+                                        android:layout_alignBottom="@id/qtxt_hh16"
+                                        android:gravity="top"
+                                        android:text="@string/Q_hh16" />
+
+                                </RelativeLayout>
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -474,10 +510,29 @@
 
                             <LinearLayout style="@style/vlinearlayout">
 
-                                <TextView
+                                <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/hh17" />
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_hh17"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_hh17"
+                                        android:text="@string/hh17" />
+
+                                    <TextView
+                                        android:id="@+id/q_hh17"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_hh17"
+                                        android:layout_alignBottom="@id/qtxt_hh17"
+                                        android:gravity="top"
+                                        android:text="@string/Q_hh17" />
+
+                                </RelativeLayout>
 
 
                                 <TextView
@@ -518,10 +573,29 @@
 
                             <LinearLayout style="@style/vlinearlayout">
 
-                                <TextView
+                                <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/hh18" />
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_hh18"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_hh18"
+                                        android:text="@string/hh18" />
+
+                                    <TextView
+                                        android:id="@+id/q_hh18"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_hh18"
+                                        android:layout_alignBottom="@id/qtxt_hh18"
+                                        android:gravity="top"
+                                        android:text="@string/Q_hh18" />
+
+                                </RelativeLayout>
 
                                 <RadioGroup
                                     android:id="@+id/hh18"
@@ -547,6 +621,7 @@
 
                         </androidx.cardview.widget.CardView>
 
+
                         <LinearLayout
                             android:id="@+id/fldGrpAHH17"
                             style="@style/linearlayout_view_wt_bound">
@@ -558,10 +633,29 @@
 
                                 <LinearLayout style="@style/vlinearlayout">
 
-                                    <TextView
+                                    <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/hh19" />
+                                        android:background="@drawable/bottom">
+
+                                        <TextView
+                                            android:id="@+id/qtxt_hh19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/q_hh19"
+                                            android:text="@string/hh19" />
+
+                                        <TextView
+                                            android:id="@+id/q_hh19"
+                                            style="@style/quesNum"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignTop="@id/qtxt_hh19"
+                                            android:layout_alignBottom="@id/qtxt_hh19"
+                                            android:gravity="top"
+                                            android:text="@string/Q_hh19" />
+
+                                    </RelativeLayout>
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/hh19a"
@@ -584,6 +678,7 @@
 
                             </androidx.cardview.widget.CardView>
 
+
                             <!-- hh20  Radio   -->
                             <androidx.cardview.widget.CardView
                                 android:id="@+id/hh20cv"
@@ -591,10 +686,29 @@
 
                                 <LinearLayout style="@style/vlinearlayout">
 
-                                    <TextView
+                                    <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/hh20" />
+                                        android:background="@drawable/bottom">
+
+                                        <TextView
+                                            android:id="@+id/qtxt_hh20"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/q_hh20"
+                                            android:text="@string/hh20" />
+
+                                        <TextView
+                                            android:id="@+id/q_hh20"
+                                            style="@style/quesNum"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignTop="@id/qtxt_hh20"
+                                            android:layout_alignBottom="@id/qtxt_hh20"
+                                            android:gravity="top"
+                                            android:text="@string/Q_hh20" />
+
+                                    </RelativeLayout>
 
                                     <TextView
                                         style="@style/sub"
@@ -633,10 +747,29 @@
 
                                 <LinearLayout style="@style/vlinearlayout">
 
-                                    <TextView
+                                    <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/hh21" />
+                                        android:background="@drawable/bottom">
+
+                                        <TextView
+                                            android:id="@+id/qtxt_hh21"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@id/q_hh21"
+                                            android:text="@string/hh21" />
+
+                                        <TextView
+                                            android:id="@+id/q_hh21"
+                                            style="@style/quesNum"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignTop="@id/qtxt_hh21"
+                                            android:layout_alignBottom="@id/qtxt_hh21"
+                                            android:gravity="top"
+                                            android:text="@string/Q_hh21" />
+
+                                    </RelativeLayout>
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/hh21"
