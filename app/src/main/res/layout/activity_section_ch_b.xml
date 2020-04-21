@@ -43,10 +43,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb01" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb01"
+                            android:text="@string/cb01" />
+
+                        <TextView
+                            android:id="@+id/q_cb01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb01"
+                            android:layout_alignBottom="@id/qtxt_cb01"
+                            android:gravity="top"
+                            android:text="@string/Q_cb01" />
+
+                    </RelativeLayout>
 
                     <TextView
                         style="@style/info"
@@ -118,10 +137,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb02" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb02"
+                            android:text="@string/cb02" />
+
+                        <TextView
+                            android:id="@+id/q_cb02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb02"
+                            android:layout_alignBottom="@id/qtxt_cb02"
+                            android:gravity="top"
+                            android:text="@string/Q_cb02" />
+
+                    </RelativeLayout>
 
                     <TextView
                         style="@style/info"
@@ -193,10 +231,30 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb03" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb03"
+                            android:text="@string/cb03" />
+
+                        <TextView
+                            android:id="@+id/q_cb03"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb03"
+                            android:layout_alignBottom="@id/qtxt_cb03"
+                            android:gravity="top"
+                            android:text="@string/Q_cb03" />
+
+                    </RelativeLayout>
 
                     <TextView
                         style="@style/info"
@@ -283,10 +341,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb04" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb04"
+                            android:text="@string/cb04" />
+
+                        <TextView
+                            android:id="@+id/q_cb04"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb04"
+                            android:layout_alignBottom="@id/qtxt_cb04"
+                            android:gravity="top"
+                            android:text="@string/Q_cb04" />
+
+                    </RelativeLayout>
 
                     <TextView
                         style="@style/info"
@@ -347,10 +424,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb05" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_cb05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_cb05"
+                            android:text="@string/cb05" />
+
+                        <TextView
+                            android:id="@+id/q_cb05"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_cb05"
+                            android:layout_alignBottom="@id/qtxt_cb05"
+                            android:gravity="top"
+                            android:text="@string/Q_cb05" />
+
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/cb05"
