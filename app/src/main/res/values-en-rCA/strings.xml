@@ -483,6 +483,8 @@
     <string name="uf14a"> Yes, interviewed already</string>
     <string name="uf14b"> No, first interview </string>
     <string name="uf15"> uf15: ASALUM-O-ALAIKUM, my name is (your name). We are from NATIONAL MINISTRY OF HEALTH SERVICES, REGULATION AND COORDINATION, GOVERNMENT OF PAKISTAN. We are conducting a survey about the situation of the children health in Pakistan. I would like to talk to you about (child’s name)’s vaccination history. This interview will take about 30 minutes. All the information we obtain will remain strictly confidential and anonymous. If you wish not to answer a question or wish to stop the interview, please let me know. May I start now?</string>
+
+    <string name="uf15_info"> ۔uf15: اسلام وعلیکم، میرا نام(آپ کا نام)ہے۔ ہ ہمارا تعلق  قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات  کے بارے میں بات کرنا چاہتا/چاہتی ہوں۔اس انٹرویو میں تقریباً 30منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات  مکمل طور پر خفیہ رہیں گی اور آپکا نام ظاہرنہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویوکو روکنا چاہتے  ہیں</string>
     <string name="uf15a"> Yes, permission is granted  </string>
     <string name="uf15b"> No, permission is denied  </string>
     <string name="uf15b_title"> uf15b_title: Now I would like to talk to you about (child’s name)’s vaccination record in more detail. This interview will take about 30 minutes. Again, all the information we obtain will remain strictly confidential and anonymous. If you wish not to answer a question or wish to stop the interview, please let me know. May I start now?</string>
@@ -722,8 +724,8 @@
     <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
     <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
 
+    <string name="ss06_info">"  اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں"</string>
 
-    <string name="Q_hh15">hh15</string>
     <string name='Q_cb0_title'>cb0_title</string>
     <string name='Q_cb01'>cb01</string>
     <string name='Q_cb02'>cb02</string>
@@ -743,9 +745,12 @@
     <string name='Q_ch07'>ch07</string>
     <string name='Q_ch08'>ch08</string>
     <string name='Q_childid'>childid</string>
-
+    <string name='Q_hf_childid'>hf_childid</string>
+    <string name='Q_hf01'>hf01</string>
     <string name='Q_hf01_title'>hf01_title</string>
-
+    <string name='Q_hf02'>hf02</string>
+    <string name='Q_hf03'>hf03</string>
+    <string name='Q_hf04'>hf04</string>
     <string name='Q_hf05'>hf05</string>
     <string name='Q_hf05a'>hf05a</string>
     <string name='Q_hf06'>hf06</string>
@@ -753,7 +758,7 @@
     <string name='Q_hf07'>hf07</string>
     <string name='Q_hf08'>hf08</string>
     <string name='Q_hf09_title'>hf09_title</string>
-
+    <string name='Q_hf10'>hf10</string>
     <string name='Q_hf11'>hf11</string>
     <string name='Q_hf12_10rv2'>hf12_10rv2</string>
     <string name='Q_hf12_11opv3'>hf12_11opv3</string>
@@ -775,15 +780,24 @@
     <string name='Q_hf15'>hf15</string>
     <string name='Q_hfhf03b'>hfhf03b</string>
     <string name='Q_hfim03a'>hfim03a</string>
+    <string name='Q_hh01'>hh01</string>
     <string name='Q_hh02'>hh02</string>
+    <string name='Q_hh03'>hh03</string>
     <string name='Q_hh04'>hh04</string>
+    <string name='Q_hh05'>hh05</string>
+    <string name='Q_hh06'>hh06</string>
     <string name='Q_hh07'>hh07</string>
+    <string name='Q_hh08'>hh08</string>
     <string name='Q_hh09'>hh09</string>
     <string name='Q_hh09a'>hh09a</string>
     <string name='Q_hh10'>hh10</string>
     <string name='Q_hh10a'>hh10a</string>
+    <string name='Q_hh11'>hh11</string>
+    <string name='Q_hh12'>hh12</string>
+    <string name='Q_hh13'>hh13</string>
     <string name='Q_hh13a'>hh13a</string>
     <string name='Q_hh14'>hh14</string>
+    <string name='Q_hh15'>hh15</string>
     <string name='Q_hh16'>hh16</string>
     <string name='Q_hh17'>hh17</string>
     <string name='Q_hh18'>hh18</string>
@@ -829,6 +843,7 @@
     <string name='Q_hw8b'>hw8b</string>
     <string name='Q_im01'>im01</string>
     <string name='Q_im02'>im02</string>
+    <string name='Q_im02a'>im02a</string>
     <string name='Q_im03'>im03</string>
     <string name='Q_im05'>im05</string>
     <string name='Q_im06'>im06</string>
@@ -849,6 +864,7 @@
     <string name='Q_im21'>im21</string>
     <string name='Q_im22'>im22</string>
     <string name='Q_im23'>im23</string>
+    <string name='Q_im23a'>im23a</string>
     <string name='Q_im24'>im24</string>
     <string name='Q_im25'>im25</string>
     <string name='Q_im26a'>im26a</string>
@@ -875,6 +891,7 @@
     <string name='Q_im4_title2'>im4_title2</string>
     <string name='Q_imtitle2'>imtitle2</string>
     <string name='Q_ss01'>ss01</string>
+    <string name='Q_ss02'>ss02</string>
     <string name='Q_ss03'>ss03</string>
     <string name='Q_ss04'>ss04</string>
     <string name='Q_ss05'>ss05</string>
@@ -951,7 +968,7 @@
     <string name='Q_uf15b_title'>uf15b_title</string>
     <string name='Q_uf16'>uf16</string>
     <string name='Q_uf9a'>uf9a</string>
+    <string name='Q_uf9b'>uf9b</string>
 
-    <string name="ss06_info">"  اگر وضاحت درکارہو تواس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں"</string>
 
 </resources>
