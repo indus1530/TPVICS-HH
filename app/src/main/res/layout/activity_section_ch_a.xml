@@ -54,9 +54,8 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/uf9a"
-                        style="@style/EditTextAlpha"
+                        style="@style/EditTextNum"
                         android:hint="@string/uf9a"
-                        android:inputType="number"
                         app:mask="##"
                         app:maxValue="99"
                         app:minValue="17"
@@ -143,7 +142,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/uf15" />
@@ -176,7 +175,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
-                        style="@style/sub"
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/uf15b_title" />

@@ -15,7 +15,7 @@
 
         <!-- HEAD   -->
         <TextView
-            style="@style/sub"
+            style="@style/info"
             android:text="@string/a101a" />
 
         <ScrollView
@@ -561,7 +561,7 @@
                                     android:text="@string/hh19" />
 
                                 <TextView
-                                    style="@style/sub"
+                                    style="@style/info"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh19h" />
@@ -613,7 +613,7 @@
                                     android:text="@string/hh20" />
 
                                 <TextView
-                                    style="@style/sub"
+                                    style="@style/info"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/hh20h" />
