@@ -20,7 +20,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityFamilyMembersListBindin
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionBActivity
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util
+import edu.aku.hassannaqvi.tpvics_hh.utils.openEndActivity
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
 import ru.whalemare.sheetmenu.ActionItem
@@ -89,7 +89,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     finish()
                                     startActivity(Intent(this, SectionC1Activity::class.java))
                                 }
-                                else -> Util.openEndActivity(this)
+                                else -> openEndActivity(this)
                             }
                         }
 

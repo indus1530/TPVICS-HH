@@ -68,7 +68,7 @@
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
         <item name="android:typeface">sans</item>
-        <item name="android:textDirection">ltr</item>
+        <!--        <item name="android:textDirection">ltr</item>-->
 
         <item name="android:focusableInTouchMode">true</item>
     </style>

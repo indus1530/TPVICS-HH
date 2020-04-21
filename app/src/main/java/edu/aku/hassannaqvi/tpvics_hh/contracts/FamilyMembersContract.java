@@ -133,7 +133,7 @@ public class FamilyMembersContract {
         this.name = name;
     }
 
-    public String getFather_name() {
+    public String getFatherName() {
         return father_name;
     }
 
@@ -157,7 +157,7 @@ public class FamilyMembersContract {
         this.monthfm = monthfm;
     }
 
-    public String getMother_name() {
+    public String getMotherName() {
         return mother_name;
     }
 
