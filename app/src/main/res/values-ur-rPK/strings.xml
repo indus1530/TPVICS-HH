@@ -783,6 +783,8 @@
     <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
     <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
 
+
+    <string name="Q_hh15">hh15</string>
     <string name='Q_cb0_title'>cb0_title</string>
     <string name='Q_cb01'>cb01</string>
     <string name='Q_cb02'>cb02</string>
@@ -843,6 +845,7 @@
     <string name='Q_hh10a'>hh10a</string>
     <string name='Q_hh13a'>hh13a</string>
     <string name='Q_hh14'>hh14</string>
+    <string name='Q_hh16'>hh16</string>
     <string name='Q_hh17'>hh17</string>
     <string name='Q_hh18'>hh18</string>
     <string name='Q_hh19'>hh19</string>

@@ -88,33 +88,35 @@
     <string name="hh13a"> ۔HH13A: جواب دہندہ کانام </string>
     <string name="hh13b"> ۔HH13B: جواب دہندگان کا رابطہ نمبر </string>
     <string name="hh14"> ۔HH14: جواب دہندہ کی عمر مکمل سالوں میں </string>
-    <string name="hh15"> ۔HH15: کیا جوابدہندہ گھر کا سربراہ ہے </string>
-    <string name="hh16"> ۔HH16: گھر کے سربراہ کا نام اور فون  نمبر </string>
+
+    <string name="hh15"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
     <string name="hh15a"> ہاں </string>
-    <string name="hh15b"> نہیں</string>
+    <string name="hh15b"> نہیں </string>
+
+    <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
 
     <string name="hh16a"> گھر کے سربراہ کا نام</string>
     <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh17"> ۔HH17: گھرانےکےسربراہ  کے سوالنامے میں جواب دہندہ کا نام اور فون  نمبر(اگر سربراہ جواب دہندہ نہیں ہے)</string>
+    <string name="hh17"> گھرانے کے سربراہ  کے سوال نامے میں جواب دہندہ کا نام اور فون  نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
     <string name="hh17a"> گھر کے سربراہ کا نام</string>
     <string name="hh17b"> گھر کے سربراہ کا فون  نمبر</string>
 
-    <string name="hh18"> ۔HH18: کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+    <string name="hh18"> کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے</string>
     <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
 
-    <string name="hh19"> ۔HH19: اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh19"> اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
 
-    <string name="hh20"> ۔HH20: کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
+    <string name="hh20"> کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
     <string name="hh20h"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 
-    <string name="hh21"> ۔HH21: اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh21"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
     <string name="hh22"> ۔HH22: گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
@@ -785,6 +787,7 @@
     <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
     <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
 
+    <string name="Q_hh15">hh15</string>
     <string name='Q_cb0_title'>cb0_title</string>
     <string name='Q_cb01'>cb01</string>
     <string name='Q_cb02'>cb02</string>
@@ -845,6 +848,7 @@
     <string name='Q_hh10a'>hh10a</string>
     <string name='Q_hh13a'>hh13a</string>
     <string name='Q_hh14'>hh14</string>
+    <string name='Q_hh16'>hh16</string>
     <string name='Q_hh17'>hh17</string>
     <string name='Q_hh18'>hh18</string>
     <string name='Q_hh19'>hh19</string>
