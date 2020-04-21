@@ -67,7 +67,6 @@ import edu.aku.hassannaqvi.tpvics_hh.core.AppInfo;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
@@ -77,6 +76,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DB_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.getPermissionsList;
 import static java.lang.Thread.sleep;
 
 
@@ -174,8 +174,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean checkAndRequestPermissions() {
-        if (!Util.getPermissionsList(this).isEmpty()) {
-            ActivityCompat.requestPermissions(this, Util.getPermissionsList(this).toArray(new String[Util.getPermissionsList(this).size()]),
+        if (!getPermissionsList(this).isEmpty()) {
+            ActivityCompat.requestPermissions(this, getPermissionsList(this).toArray(new String[getPermissionsList(this).size()]),
                     MY_PERMISSIONS_REQUEST_READ_CONTACTS);
             return false;
         }

@@ -26,10 +26,28 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf09" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_uf09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf09"
+                            android:text="@string/uf09" />
+
+                        <TextView
+                            android:id="@+id/q_uf09"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf09"
+                            android:layout_alignBottom="@id/qtxt_uf09"
+                            android:gravity="center"
+                            android:text="@string/Q_uf09" />
+                    </RelativeLayout>
 
                     <EditText
                         android:id="@+id/uf09"
@@ -72,10 +90,28 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf9b" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_uf9b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf9b"
+                            android:text="@string/uf9b" />
+
+                        <TextView
+                            android:id="@+id/q_uf9b"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf9b"
+                            android:layout_alignBottom="@id/qtxt_uf9b"
+                            android:gravity="center"
+                            android:text="@string/Q_uf9b" />
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf9b"
@@ -109,10 +145,28 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf14" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_uf14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf14"
+                            android:text="@string/uf14" />
+
+                        <TextView
+                            android:id="@+id/q_uf14"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf14"
+                            android:layout_alignBottom="@id/qtxt_uf14"
+                            android:gravity="center"
+                            android:text="@string/Q_uf14" />
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf14"
@@ -141,11 +195,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
-                        style="@style/info"
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf15" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_uf15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf15"
+                            android:text="@string/uf14" />
+
+                        <TextView
+                            android:id="@+id/q_uf15"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf15"
+                            android:layout_alignBottom="@id/qtxt_uf15"
+                            android:gravity="center"
+                            android:text="@string/Q_uf15" />
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf15"

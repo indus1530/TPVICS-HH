@@ -17,7 +17,8 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionCHBActivity extends AppCompatActivity {
 
@@ -152,7 +153,7 @@ public class SectionCHBActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
     @Override

@@ -18,7 +18,8 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC1Binding;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionC1Activity extends AppCompatActivity {
 
@@ -328,8 +329,7 @@ public class SectionC1Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
 

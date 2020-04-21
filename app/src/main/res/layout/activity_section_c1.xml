@@ -209,7 +209,6 @@
 
                         <TextView
                             android:id="@+id/qtxt_ss03"
-
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/q_ss03"
@@ -223,6 +222,7 @@
                             android:layout_alignTop="@id/qtxt_ss03"
                             android:layout_alignBottom="@id/qtxt_ss03"
                             android:text="@string/Q_ss03" />
+
                     </RelativeLayout>
 
                     <LinearLayout

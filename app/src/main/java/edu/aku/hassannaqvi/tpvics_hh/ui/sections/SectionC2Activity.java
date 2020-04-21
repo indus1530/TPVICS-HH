@@ -19,7 +19,8 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC2Binding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.Util;
+
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionC2Activity extends AppCompatActivity {
 
@@ -260,8 +261,7 @@ public class SectionC2Activity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-
-        Util.openEndActivity(this);
+        openEndActivity(this);
     }
 
 

@@ -57,10 +57,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/im01" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_im01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_im01"
+                            android:text="@string/im01" />
+
+                        <TextView
+                            android:id="@+id/q_im01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_im01"
+                            android:layout_alignBottom="@id/qtxt_im01"
+                            android:gravity="center"
+                            android:text="@string/Q_im01" />
+                    </RelativeLayout>
+
 
                     <RadioGroup
                         android:id="@+id/im01"
@@ -99,10 +118,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im02" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im02"
+                                android:text="@string/im02" />
+
+                            <TextView
+                                android:id="@+id/q_im02"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im02"
+                                android:layout_alignBottom="@id/qtxt_im02"
+                                android:gravity="center"
+                                android:text="@string/Q_im02" />
+
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im02"
@@ -135,10 +174,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im02a" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im02a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im02a"
+                                android:text="@string/im02a" />
+
+                            <TextView
+                                android:id="@+id/q_im02a"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im02a"
+                                android:layout_alignBottom="@id/qtxt_im02a"
+                                android:gravity="center"
+                                android:text="@string/Q_im02a" />
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im02a"
@@ -199,10 +257,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im03" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im03"
+                                android:text="@string/im03" />
+
+                            <TextView
+                                android:id="@+id/q_im03"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im03"
+                                android:layout_alignBottom="@id/qtxt_im03"
+                                android:gravity="center"
+                                android:text="@string/Q_im03" />
+                        </RelativeLayout>
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -331,10 +408,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im41bcg" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im41bcg"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im41bcg"
+                                android:text="@string/im02a" />
+
+                            <TextView
+                                android:id="@+id/q_im41bcg"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im41bcg"
+                                android:layout_alignBottom="@id/qtxt_im41bcg"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_1bcg" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -398,10 +494,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im42opv0" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im42opv0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im42opv0"
+                                android:text="@string/im02a" />
+
+                            <TextView
+                                android:id="@+id/q_im42opv0"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im42opv0"
+                                android:layout_alignBottom="@id/qtxt_im42opv0"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_2opv0" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -532,10 +648,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im44penta1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im44penta1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im44penta1"
+                                android:text="@string/im44penta1" />
+
+                            <TextView
+                                android:id="@+id/q_im44penta1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im44penta1"
+                                android:layout_alignBottom="@id/qtxt_im44penta1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_4penta1" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -599,10 +734,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im45pcv1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im45pcv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im45pcv1"
+                                android:text="@string/im45pcv1" />
+
+                            <TextView
+                                android:id="@+id/q_im45pcv1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im45pcv1"
+                                android:layout_alignBottom="@id/qtxt_im45pcv1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_5pcv1" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -666,10 +820,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im46rv1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im46rv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im46rv1"
+                                android:text="@string/im46rv1" />
+
+                            <TextView
+                                android:id="@+id/q_im46rv1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im46rv1"
+                                android:layout_alignBottom="@id/qtxt_im46rv1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_6rv1" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -732,6 +905,30 @@
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im47opv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im47opv2"
+                                android:text="@string/im47opv2" />
+
+                            <TextView
+                                android:id="@+id/q_im47opv2"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im47opv2"
+                                android:layout_alignBottom="@id/qtxt_im47opv2"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_7opv2" />
+                        </RelativeLayout>
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -800,10 +997,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im48penta2" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im48penta2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im48penta2"
+                                android:text="@string/im48penta2" />
+
+                            <TextView
+                                android:id="@+id/q_im48penta2"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im48penta2"
+                                android:layout_alignBottom="@id/qtxt_im48penta2"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_8penta2" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -868,10 +1084,31 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im49pcv2" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im49pcv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im49pcv2"
+                                android:text="@string/im49pcv2" />
+
+                            <TextView
+                                android:id="@+id/q_im49pcv2"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im49pcv2"
+                                android:layout_alignBottom="@id/qtxt_im49pcv2"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_9pcv2" />
+
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -935,10 +1172,28 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im410rv2" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im410rv2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im410rv2"
+                                android:text="@string/im410rv2" />
+
+                            <TextView
+                                android:id="@+id/q_im410rv2"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im410rv2"
+                                android:layout_alignBottom="@id/qtxt_im410rv2"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_10rv2" />
+                        </RelativeLayout>
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1002,10 +1257,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im411opv3" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im411opv3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im411opv3"
+                                android:text="@string/im411opv3" />
+
+                            <TextView
+                                android:id="@+id/q_im411opv3"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im411opv3"
+                                android:layout_alignBottom="@id/qtxt_im411opv3"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_11opv3" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1069,10 +1343,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im412penta3" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im412penta3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im412penta3"
+                                android:text="@string/im412penta3" />
+
+                            <TextView
+                                android:id="@+id/q_im412penta3"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im412penta3"
+                                android:layout_alignBottom="@id/qtxt_im412penta3"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_12penta3" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1136,10 +1430,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im413pcv3" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im413pcv3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im413pcv3"
+                                android:text="@string/im413pcv3" />
+
+                            <TextView
+                                android:id="@+id/q_im413pcv3"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im413pcv3"
+                                android:layout_alignBottom="@id/qtxt_im413pcv3"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_13pcv3" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1270,10 +1583,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im415measles1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im415measles1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im415measles1"
+                                android:text="@string/im415measles1" />
+
+                            <TextView
+                                android:id="@+id/q_im415measles1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im415measles1"
+                                android:layout_alignBottom="@id/qtxt_im415measles1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_15measles1" />
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1337,10 +1669,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im416measles2" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im416measles2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im416measles2"
+                                android:text="@string/im416measles2" />
+
+                            <TextView
+                                android:id="@+id/q_im416measles2"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im416measles2"
+                                android:layout_alignBottom="@id/qtxt_im416measles2"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_16measles2" />
+
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1404,10 +1756,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im05" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im05"
+                                android:text="@string/im05" />
+
+                            <TextView
+                                android:id="@+id/q_im05"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im05"
+                                android:layout_alignBottom="@id/qtxt_im05"
+                                android:gravity="center"
+                                android:text="@string/Q_im05" />
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im05"
@@ -1445,10 +1817,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im06" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im06"
+                                android:text="@string/im06" />
+
+                            <TextView
+                                android:id="@+id/q_im06"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im06"
+                                android:layout_alignBottom="@id/qtxt_im06"
+                                android:gravity="center"
+                                android:text="@string/Q_im06" />
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im06"
@@ -1479,10 +1870,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/im08" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_im08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_im08"
+                            android:text="@string/im08" />
+
+                        <TextView
+                            android:id="@+id/q_im08"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_im08"
+                            android:layout_alignBottom="@id/qtxt_im08"
+                            android:gravity="center"
+                            android:text="@string/Q_im08" />
+                    </RelativeLayout>
+
 
                     <RadioGroup
                         android:id="@+id/im08"
@@ -1521,10 +1931,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im09" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im09"
+                                android:text="@string/im09" />
+
+                            <TextView
+                                android:id="@+id/q_im09"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im09"
+                                android:layout_alignBottom="@id/qtxt_im09"
+                                android:gravity="center"
+                                android:text="@string/Q_im09" />
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im09"
@@ -1558,10 +1987,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im10" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im10"
+                                android:text="@string/im10" />
+
+                            <TextView
+                                android:id="@+id/q_im10"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im10"
+                                android:layout_alignBottom="@id/qtxt_im10"
+                                android:gravity="center"
+                                android:text="@string/Q_im10" />
+                        </RelativeLayout>
+
 
                         <RadioGroup
                             android:id="@+id/im10"
@@ -1600,10 +2048,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im11" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im11"
+                                    android:text="@string/im11" />
+
+                                <TextView
+                                    android:id="@+id/q_im11"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im11"
+                                    android:layout_alignBottom="@id/qtxt_im11"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im11" />
+                            </RelativeLayout>
+
 
                             <RadioGroup
                                 android:id="@+id/im11"
@@ -1637,10 +2104,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im12" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im12"
+                                    android:text="@string/im12" />
+
+                                <TextView
+                                    android:id="@+id/q_im12"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im12"
+                                    android:layout_alignBottom="@id/qtxt_im12"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im12" />
+                            </RelativeLayout>
+
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im12"
@@ -1663,10 +2149,30 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im13" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im13"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im13"
+                                    android:text="@string/im13" />
+
+                                <TextView
+                                    android:id="@+id/q_im13"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im13"
+                                    android:layout_alignBottom="@id/qtxt_im13"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im13" />
+
+                            </RelativeLayout>
+
 
                             <RadioGroup
                                 android:id="@+id/im13"
@@ -1706,6 +2212,31 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im14"
+                                    android:text="@string/im14" />
+
+                                <TextView
+                                    android:id="@+id/q_im14"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im14"
+                                    android:layout_alignBottom="@id/qtxt_im14"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im14" />
+
+                            </RelativeLayout>
+
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -1743,10 +2274,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im15" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im15"
+                                    android:text="@string/im15" />
+
+                                <TextView
+                                    android:id="@+id/q_im15"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im15"
+                                    android:layout_alignBottom="@id/qtxt_im15"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im15" />
+
+                            </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im15"
@@ -1769,10 +2319,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im16" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im16"
+                                    android:text="@string/im16" />
+
+                                <TextView
+                                    android:id="@+id/q_im16"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im16"
+                                    android:layout_alignBottom="@id/qtxt_im16"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im16" />
+
+                            </RelativeLayout>
 
                             <RadioGroup
                                 android:id="@+id/im16"
@@ -1799,6 +2368,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im17  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim17"
@@ -1806,10 +2376,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im17" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im17"
+                                    android:text="@string/im17" />
+
+                                <TextView
+                                    android:id="@+id/q_im17"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im17"
+                                    android:layout_alignBottom="@id/qtxt_im17"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im17" />
+
+                            </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im17"
@@ -1825,6 +2414,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im18  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim18"
@@ -1832,10 +2422,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im18" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im18"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im18"
+                                    android:text="@string/im18" />
+
+                                <TextView
+                                    android:id="@+id/q_im18"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im18"
+                                    android:layout_alignBottom="@id/qtxt_im18"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im18" />
+
+                            </RelativeLayout>
 
                             <RadioGroup
                                 android:id="@+id/im18"
@@ -1862,6 +2471,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im19  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim19"
@@ -1869,10 +2479,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im19" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im19"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im19"
+                                    android:text="@string/im19" />
+
+                                <TextView
+                                    android:id="@+id/q_im19"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im19"
+                                    android:layout_alignBottom="@id/qtxt_im19"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im19" />
+
+                            </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im19"
@@ -1888,6 +2517,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im20  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim20"
@@ -1895,10 +2525,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im20" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im20"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im20"
+                                    android:text="@string/im20" />
+
+                                <TextView
+                                    android:id="@+id/q_im20"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im20"
+                                    android:layout_alignBottom="@id/qtxt_im20"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im20" />
+
+                            </RelativeLayout>
 
                             <RadioGroup
                                 android:id="@+id/im20"
@@ -1932,10 +2581,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im21" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im21"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im21"
+                                    android:text="@string/im21" />
+
+                                <TextView
+                                    android:id="@+id/q_im21"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im21"
+                                    android:layout_alignBottom="@id/qtxt_im21"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im21" />
+
+                            </RelativeLayout>
 
                             <RadioGroup
                                 android:id="@+id/im21"
@@ -1969,10 +2637,29 @@
 
                         <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/im22" />
+                                android:background="@drawable/bottom">
+
+                                <TextView
+                                    android:id="@+id/qtxt_im22"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_im22"
+                                    android:text="@string/im22" />
+
+                                <TextView
+                                    android:id="@+id/q_im22"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_im22"
+                                    android:layout_alignBottom="@id/qtxt_im22"
+                                    android:gravity="center"
+                                    android:text="@string/Q_im22" />
+
+                            </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im22"
@@ -2000,10 +2687,29 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/im23" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_im23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_im23"
+                            android:text="@string/im23" />
+
+                        <TextView
+                            android:id="@+id/q_im23"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_im23"
+                            android:layout_alignBottom="@id/qtxt_im23"
+                            android:gravity="center"
+                            android:text="@string/Q_im23" />
+
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/im23"
@@ -2060,10 +2766,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im23a" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im23a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im23a"
+                                android:text="@string/im23a" />
+
+                            <TextView
+                                android:id="@+id/q_im23a"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im23a"
+                                android:layout_alignBottom="@id/qtxt_im23a"
+                                android:gravity="center"
+                                android:text="@string/Q_im23a" />
+
+                        </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/im23a"
@@ -2095,6 +2820,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- im24  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim24"
@@ -2102,10 +2828,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im24" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im24"
+                                android:text="@string/im24" />
+
+                            <TextView
+                                android:id="@+id/q_im24"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im24"
+                                android:layout_alignBottom="@id/qtxt_im24"
+                                android:gravity="center"
+                                android:text="@string/Q_im24" />
+
+                        </RelativeLayout>
 
                         <RadioGroup
                             android:id="@+id/im24"
@@ -2234,6 +2979,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- im26a  TextArea   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26a"
@@ -2249,6 +2995,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- im26b  TextArea   -->
             <androidx.cardview.widget.CardView
@@ -2266,6 +3013,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- im26c  TextArea   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26c"
@@ -2281,6 +3029,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- im26d  TextArea   -->
             <androidx.cardview.widget.CardView
