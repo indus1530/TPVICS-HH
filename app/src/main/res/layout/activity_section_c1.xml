@@ -1178,7 +1178,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14a" />
 
@@ -1206,7 +1207,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14b" />
 
@@ -1233,7 +1235,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14c" />
 
@@ -1260,7 +1263,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14d" />
 
@@ -1289,7 +1293,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14e" />
 
@@ -1316,7 +1321,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14f" />
 
@@ -1343,7 +1349,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14g" />
 
@@ -1370,7 +1377,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14h" />
 
@@ -1397,7 +1405,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14i" />
 
@@ -1424,7 +1433,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14j" />
 
@@ -1451,7 +1461,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14k" />
 
@@ -1478,7 +1489,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14l" />
 
@@ -1505,7 +1517,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14m" />
 
@@ -1531,7 +1544,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14n" />
 
@@ -1559,7 +1573,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14o" />
 
@@ -1586,7 +1601,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14p" />
 
@@ -1613,7 +1629,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14q" />
 
@@ -1640,7 +1657,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14r" />
 
@@ -1667,7 +1685,8 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
                             android:layout_weight="2"
                             android:text="@string/ss14s" />
 
@@ -1695,22 +1714,26 @@
             <!--ENDBUTTON linearlayout-->
             <LinearLayout
                 style="@style/hlinearlayout"
-                android:layout_gravity="end"
-                android:layout_marginTop="20dp">
-
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp">
                 <Button
                     android:id="@+id/btnEnd"
-                    style="@style/buttons_bottom"
-                    android:background="@android:color/holo_red_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/grayOverlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview" />
-
                 <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
                     android:id="@+id/btnNext"
-                    style="@style/buttons_bottom"
-                    android:background="@android:color/holo_green_light"
+                    android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.BtnContinue()}"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:text="@string/nextSection" />
+
 
             </LinearLayout>
 
