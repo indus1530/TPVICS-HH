@@ -1866,7 +1866,7 @@
             </LinearLayout>
 
             <!-- im08  Radio   -->
-            <androidx.cardview.widget.CardView
+            <!--<androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim08"
                 style="@style/cardView">
 
@@ -1926,7 +1926,7 @@
                 android:id="@+id/fldGrpSecChc3"
                 style="@style/linearlayout_view_wt_bound">
 
-                <!-- im09  Radio   -->
+                &lt;!&ndash; im09  Radio   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim09"
                     style="@style/cardView">
@@ -1982,7 +1982,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- im10  Radio   -->
+                &lt;!&ndash; im10  Radio   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim10"
                     style="@style/cardView">
@@ -2043,7 +2043,7 @@
                     android:id="@+id/fldGrpSecChc5"
                     style="@style/linearlayout_view_wt_bound">
 
-                    <!-- im11  Radio   -->
+                    &lt;!&ndash; im11  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim11"
                         style="@style/cardView">
@@ -2099,7 +2099,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im12  Input-Numeric   -->
+                    &lt;!&ndash; im12  Input-Numeric   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim12"
                         style="@style/cardView">
@@ -2144,7 +2144,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im13  Radio   -->
+                    &lt;!&ndash; im13  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim13"
                         style="@style/cardView">
@@ -2207,7 +2207,7 @@
                     android:id="@+id/fldGrpSecChc6"
                     style="@style/linearlayout_view_wt_bound">
 
-                    <!-- im14  Radio   -->
+                    &lt;!&ndash; im14  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim14"
                         style="@style/cardView">
@@ -2269,7 +2269,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im15  Input-Numeric   -->
+                    &lt;!&ndash; im15  Input-Numeric   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim15"
                         style="@style/cardView">
@@ -2314,7 +2314,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im16  Radio   -->
+                    &lt;!&ndash; im16  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim16"
                         style="@style/cardView">
@@ -2371,7 +2371,7 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!-- im17  Input-Numeric   -->
+                    &lt;!&ndash; im17  Input-Numeric   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim17"
                         style="@style/cardView">
@@ -2417,7 +2417,7 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!-- im18  Radio   -->
+                    &lt;!&ndash; im18  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim18"
                         style="@style/cardView">
@@ -2474,7 +2474,7 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!-- im19  Radio   -->
+                    &lt;!&ndash; im19  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim19"
                         style="@style/cardView">
@@ -2520,7 +2520,7 @@
                     </androidx.cardview.widget.CardView>
 
 
-                    <!-- im20  Radio   -->
+                    &lt;!&ndash; im20  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim20"
                         style="@style/cardView">
@@ -2576,7 +2576,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im21  Radio   -->
+                    &lt;!&ndash; im21  Radio   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim21"
                         style="@style/cardView">
@@ -2632,7 +2632,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- im22  Input-Numeric   -->
+                    &lt;!&ndash; im22  Input-Numeric   &ndash;&gt;
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim22"
                         style="@style/cardView">
@@ -2682,7 +2682,7 @@
             </LinearLayout>
 
 
-            <!-- im23  Radio   -->
+            &lt;!&ndash; im23  Radio   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim23"
                 style="@style/cardView">
@@ -2761,7 +2761,7 @@
                 android:id="@+id/fldGrpSecChc4"
                 style="@style/linearlayout_view_wt_bound">
 
-                <!-- im23a  Radio   -->
+                &lt;!&ndash; im23a  Radio   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim23a"
                     style="@style/cardView">
@@ -2823,7 +2823,7 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- im24  Radio   -->
+                &lt;!&ndash; im24  Radio   &ndash;&gt;
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim24"
                     style="@style/cardView">
@@ -2965,7 +2965,7 @@
             </LinearLayout>
 
 
-            <!-- im25  Title   -->
+            &lt;!&ndash; im25  Title   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim25"
                 style="@style/cardView">
@@ -2982,7 +2982,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- im26a  TextArea   -->
+            &lt;!&ndash; im26a  TextArea   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26a"
                 style="@style/cardView">
@@ -2999,7 +2999,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- im26b  TextArea   -->
+            &lt;!&ndash; im26b  TextArea   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26b"
                 style="@style/cardView">
@@ -3016,7 +3016,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- im26c  TextArea   -->
+            &lt;!&ndash; im26c  TextArea   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26c"
                 style="@style/cardView">
@@ -3033,7 +3033,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- im26d  TextArea   -->
+            &lt;!&ndash; im26d  TextArea   &ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim26d"
                 style="@style/cardView">
@@ -3048,6 +3048,8 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
+-->
 
 
             <!--ENDBUTTON linearlayout-->

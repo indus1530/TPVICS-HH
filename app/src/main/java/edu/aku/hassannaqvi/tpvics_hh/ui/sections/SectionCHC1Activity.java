@@ -28,11 +28,12 @@ public class SectionCHC1Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_chc1);
         bi.setCallback(this);
         setTitle(R.string.chsec);
-        setupListeners();
+        setupSkips();
+
     }
 
-    private void setupListeners() {
 
+    private void setupSkips() {
 
         bi.im01.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.im011.getId()) {
@@ -62,20 +63,20 @@ public class SectionCHC1Activity extends AppCompatActivity {
         bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i != bi.im051.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim06, false);
-                Clear.clearAllFields(bi.fldGrpSecChc3, false);
+                /*Clear.clearAllFields(bi.fldGrpSecChc3, false);
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
                 Clear.clearAllFields(bi.fldGrpCVim23, true);
-                Clear.clearAllFields(bi.fldGrpCVim23a, true);
+                Clear.clearAllFields(bi.fldGrpCVim23a, true);*/
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim06, true);
-                Clear.clearAllFields(bi.fldGrpSecChc3, true);
+                /*Clear.clearAllFields(bi.fldGrpSecChc3, true);
                 Clear.clearAllFields(bi.fldGrpCVim08, true);
                 Clear.clearAllFields(bi.fldGrpCVim23, false);
-                Clear.clearAllFields(bi.fldGrpCVim23a, false);
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);*/
             }
         });
 
-        bi.im08.setOnCheckedChangeListener(((radioGroup, i) -> {
+        /*bi.im08.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.im081.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim09, true);
@@ -147,9 +148,10 @@ public class SectionCHC1Activity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpSecChc4, true);
             }
 
-        });
+        });*/
 
     }
+
 
     private boolean UpdateDB() {
         /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -165,20 +167,21 @@ public class SectionCHC1Activity extends AppCompatActivity {
         return false;
     }
 
+
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("im01",
+        json.put("im01",
                 bi.im011.isChecked() ? "1" :
                         bi.im012.isChecked() ? "2" :
                                 bi.im013.isChecked() ? "3" :
                                         "0");
-        f1.put("im02",
+        json.put("im02",
                 bi.im021.isChecked() ? "1" :
                         bi.im022.isChecked() ? "2" :
                                 "0");
-        f1.put("im02a",
+        json.put("im02a",
                 bi.im02a1.isChecked() ? "1" :
                         bi.im02a2.isChecked() ? "2" :
                                 bi.im02a3.isChecked() ? "3" :
@@ -187,138 +190,138 @@ public class SectionCHC1Activity extends AppCompatActivity {
                                                         bi.im02a6.isChecked() ? "6" :
                                                                 bi.im02a96.isChecked() ? "96" :
                                                                         "0");
-        f1.put("im03dd", bi.im03dd.getText().toString());
-        f1.put("im03dd1", bi.im03dd1.getText().toString());
-        f1.put("im03mm", bi.im03mm.getText().toString());
-        f1.put("im03yy", bi.im03yy.getText().toString());
-        f1.put("im41bcgdd", bi.im41bcgdd.getText().toString());
-        f1.put("im41bcgmm", bi.im41bcgmm.getText().toString());
-        f1.put("im41bcgyy", bi.im41bcgyy.getText().toString());
-        f1.put("im42opv0dd", bi.im42opv0dd.getText().toString());
-        f1.put("im42opv0mm", bi.im42opv0mm.getText().toString());
-        f1.put("im42opv0yy", bi.im42opv0yy.getText().toString());
-        f1.put("im43opv1dd", bi.im43opv1dd.getText().toString());
-        f1.put("im43opv1mm", bi.im43opv1mm.getText().toString());
-        f1.put("im43opv1yy", bi.im43opv1yy.getText().toString());
-        f1.put("im44penta1dd", bi.im44penta1dd.getText().toString());
-        f1.put("im44penta1mm", bi.im44penta1mm.getText().toString());
-        f1.put("im44penta1yy", bi.im44penta1yy.getText().toString());
-        f1.put("im45pcv1dd", bi.im45pcv1dd.getText().toString());
-        f1.put("im45pcv1mm", bi.im45pcv1mm.getText().toString());
-        f1.put("im45pcv1yy", bi.im45pcv1yy.getText().toString());
-        f1.put("im46rv1dd", bi.im46rv1dd.getText().toString());
-        f1.put("im46rv1mm", bi.im46rv1mm.getText().toString());
-        f1.put("im46rv1yy", bi.im46rv1yy.getText().toString());
-        f1.put("im47opv2dd", bi.im47opv2dd.getText().toString());
-        f1.put("im47opv2mm", bi.im47opv2mm.getText().toString());
-        f1.put("im47opv2yy", bi.im47opv2yy.getText().toString());
-        f1.put("im48penta2dd", bi.im48penta2dd.getText().toString());
-        f1.put("im48penta2mm", bi.im48penta2mm.getText().toString());
-        f1.put("im48penta2yy", bi.im48penta2yy.getText().toString());
-        f1.put("im49pcv2dd", bi.im49pcv2dd.getText().toString());
-        f1.put("im49pcv2mm", bi.im49pcv2mm.getText().toString());
-        f1.put("im49pcv2yy", bi.im49pcv2yy.getText().toString());
-        f1.put("im410rv2dd", bi.im410rv2dd.getText().toString());
-        f1.put("im410rv2mm", bi.im410rv2mm.getText().toString());
-        f1.put("im410rv2yy", bi.im410rv2yy.getText().toString());
-        f1.put("im411opv3dd", bi.im411opv3dd.getText().toString());
-        f1.put("im411opv3mm", bi.im411opv3mm.getText().toString());
-        f1.put("im411opv3yy", bi.im411opv3yy.getText().toString());
-        f1.put("im412penta3dd", bi.im412penta3dd.getText().toString());
-        f1.put("im412penta3mm", bi.im412penta3mm.getText().toString());
-        f1.put("im412penta3yy", bi.im412penta3yy.getText().toString());
-        f1.put("im413pcv3dd", bi.im413pcv3dd.getText().toString());
-        f1.put("im413pcv3mm", bi.im413pcv3mm.getText().toString());
-        f1.put("im413pcv3yy", bi.im413pcv3yy.getText().toString());
-        f1.put("im414ipvdd", bi.im414ipvdd.getText().toString());
-        f1.put("im414ipvmm", bi.im414ipvmm.getText().toString());
-        f1.put("im414ipvyy", bi.im414ipvyy.getText().toString());
-        f1.put("im415measles1dd", bi.im415measles1dd.getText().toString());
-        f1.put("im415measles1mm", bi.im415measles1mm.getText().toString());
-        f1.put("im415measles1yy", bi.im415measles1yy.getText().toString());
-        f1.put("im416measles2dd", bi.im416measles2dd.getText().toString());
-        f1.put("im416measles2mm", bi.im416measles2mm.getText().toString());
-        f1.put("im416measles2yy", bi.im416measles2yy.getText().toString());
-        f1.put("im05",
+        json.put("im03dd", bi.im03dd.getText().toString());
+        json.put("im03dd1", bi.im03dd1.getText().toString());
+        json.put("im03mm", bi.im03mm.getText().toString());
+        json.put("im03yy", bi.im03yy.getText().toString());
+        json.put("im41bcgdd", bi.im41bcgdd.getText().toString());
+        json.put("im41bcgmm", bi.im41bcgmm.getText().toString());
+        json.put("im41bcgyy", bi.im41bcgyy.getText().toString());
+        json.put("im42opv0dd", bi.im42opv0dd.getText().toString());
+        json.put("im42opv0mm", bi.im42opv0mm.getText().toString());
+        json.put("im42opv0yy", bi.im42opv0yy.getText().toString());
+        json.put("im43opv1dd", bi.im43opv1dd.getText().toString());
+        json.put("im43opv1mm", bi.im43opv1mm.getText().toString());
+        json.put("im43opv1yy", bi.im43opv1yy.getText().toString());
+        json.put("im44penta1dd", bi.im44penta1dd.getText().toString());
+        json.put("im44penta1mm", bi.im44penta1mm.getText().toString());
+        json.put("im44penta1yy", bi.im44penta1yy.getText().toString());
+        json.put("im45pcv1dd", bi.im45pcv1dd.getText().toString());
+        json.put("im45pcv1mm", bi.im45pcv1mm.getText().toString());
+        json.put("im45pcv1yy", bi.im45pcv1yy.getText().toString());
+        json.put("im46rv1dd", bi.im46rv1dd.getText().toString());
+        json.put("im46rv1mm", bi.im46rv1mm.getText().toString());
+        json.put("im46rv1yy", bi.im46rv1yy.getText().toString());
+        json.put("im47opv2dd", bi.im47opv2dd.getText().toString());
+        json.put("im47opv2mm", bi.im47opv2mm.getText().toString());
+        json.put("im47opv2yy", bi.im47opv2yy.getText().toString());
+        json.put("im48penta2dd", bi.im48penta2dd.getText().toString());
+        json.put("im48penta2mm", bi.im48penta2mm.getText().toString());
+        json.put("im48penta2yy", bi.im48penta2yy.getText().toString());
+        json.put("im49pcv2dd", bi.im49pcv2dd.getText().toString());
+        json.put("im49pcv2mm", bi.im49pcv2mm.getText().toString());
+        json.put("im49pcv2yy", bi.im49pcv2yy.getText().toString());
+        json.put("im410rv2dd", bi.im410rv2dd.getText().toString());
+        json.put("im410rv2mm", bi.im410rv2mm.getText().toString());
+        json.put("im410rv2yy", bi.im410rv2yy.getText().toString());
+        json.put("im411opv3dd", bi.im411opv3dd.getText().toString());
+        json.put("im411opv3mm", bi.im411opv3mm.getText().toString());
+        json.put("im411opv3yy", bi.im411opv3yy.getText().toString());
+        json.put("im412penta3dd", bi.im412penta3dd.getText().toString());
+        json.put("im412penta3mm", bi.im412penta3mm.getText().toString());
+        json.put("im412penta3yy", bi.im412penta3yy.getText().toString());
+        json.put("im413pcv3dd", bi.im413pcv3dd.getText().toString());
+        json.put("im413pcv3mm", bi.im413pcv3mm.getText().toString());
+        json.put("im413pcv3yy", bi.im413pcv3yy.getText().toString());
+        json.put("im414ipvdd", bi.im414ipvdd.getText().toString());
+        json.put("im414ipvmm", bi.im414ipvmm.getText().toString());
+        json.put("im414ipvyy", bi.im414ipvyy.getText().toString());
+        json.put("im415measles1dd", bi.im415measles1dd.getText().toString());
+        json.put("im415measles1mm", bi.im415measles1mm.getText().toString());
+        json.put("im415measles1yy", bi.im415measles1yy.getText().toString());
+        json.put("im416measles2dd", bi.im416measles2dd.getText().toString());
+        json.put("im416measles2mm", bi.im416measles2mm.getText().toString());
+        json.put("im416measles2yy", bi.im416measles2yy.getText().toString());
+        json.put("im05",
                 bi.im051.isChecked() ? "1" :
                         bi.im052.isChecked() ? "2" :
                                 bi.im053.isChecked() ? "98" :
                                         "0");
-        f1.put("im06",
+        json.put("im06",
                 bi.im061.isChecked() ? "1" :
                         bi.im062.isChecked() ? "2" :
                                 "0");
-        f1.put("im08",
+        /*json.put("im08",
                 bi.im081.isChecked() ? "1" :
                         bi.im082.isChecked() ? "2" :
                                 bi.im083.isChecked() ? "98" :
                                         "0");
-        f1.put("im09",
+        json.put("im09",
                 bi.im091.isChecked() ? "1" :
                         bi.im092.isChecked() ? "2" :
                                 bi.im093.isChecked() ? "98" :
                                         "0");
-        f1.put("im10",
+        json.put("im10",
                 bi.im101.isChecked() ? "1" :
                         bi.im102.isChecked() ? "2" :
                                 bi.im103.isChecked() ? "98" :
                                         "0");
-        f1.put("im11",
+        json.put("im11",
                 bi.im111.isChecked() ? "1" :
                         bi.im112.isChecked() ? "2" :
                                 bi.im113.isChecked() ? "98" :
                                         "0");
-        f1.put("im12", bi.im12.getText().toString());
-        f1.put("im13",
+        json.put("im12", bi.im12.getText().toString());
+        json.put("im13",
                 bi.im131.isChecked() ? "1" :
                         bi.im132.isChecked() ? "2" :
                                 bi.im133.isChecked() ? "98" :
                                         "0");
-        f1.put("im14",
+        json.put("im14",
                 bi.im141.isChecked() ? "1" :
                         bi.im142.isChecked() ? "2" :
                                 bi.im143.isChecked() ? "98" :
                                         "0");
-        f1.put("im15", bi.im15.getText().toString());
-        f1.put("im16",
+        json.put("im15", bi.im15.getText().toString());
+        json.put("im16",
                 bi.im161.isChecked() ? "1" :
                         bi.im162.isChecked() ? "2" :
                                 bi.im163.isChecked() ? "98" :
                                         "0");
-        f1.put("im17", bi.im17.getText().toString());
-        f1.put("im18",
+        json.put("im17", bi.im17.getText().toString());
+        json.put("im18",
                 bi.im181.isChecked() ? "1" :
                         bi.im182.isChecked() ? "2" :
                                 bi.im183.isChecked() ? "98" :
                                         "0");
-        f1.put("im19",
+        json.put("im19",
                 "0");
-        f1.put("im20",
+        json.put("im20",
                 bi.im201.isChecked() ? "1" :
                         bi.im202.isChecked() ? "2" :
                                 bi.im203.isChecked() ? "98" :
                                         "0");
-        f1.put("im21",
+        json.put("im21",
                 bi.im211.isChecked() ? "1" :
                         bi.im212.isChecked() ? "2" :
                                 bi.im213.isChecked() ? "98" :
                                         "0");
-        f1.put("im22", bi.im22.getText().toString());
-        f1.put("im23",
+        json.put("im22", bi.im22.getText().toString());
+        json.put("im23",
                 bi.im231.isChecked() ? "1" :
                         bi.im232.isChecked() ? "2" :
                                 bi.im233.isChecked() ? "3" :
                                         bi.im234.isChecked() ? "4" :
                                                 bi.im236.isChecked() ? "6" :
                                                         "0");
-        f1.put("im236x", bi.im236x.getText().toString());
-        f1.put("im23a",
+        json.put("im236x", bi.im236x.getText().toString());
+        json.put("im23a",
                 bi.im23a1.isChecked() ? "1" :
                         bi.im23a2.isChecked() ? "2" :
                                 bi.im23a3.isChecked() ? "3" :
                                         bi.im23a96.isChecked() ? "96" :
                                                 "0");
-        f1.put("im24",
+        json.put("im24",
                 bi.im241.isChecked() ? "1" :
                         bi.im242.isChecked() ? "2" :
                                 bi.im243.isChecked() ? "3" :
@@ -338,13 +341,15 @@ public class SectionCHC1Activity extends AppCompatActivity {
                                                                                                                                                 bi.im2417.isChecked() ? "98" :
                                                                                                                                                         bi.im2499.isChecked() ? "98" :
                                                                                                                                                                 "0");
-        f1.put("im2417x", bi.im2417x.getText().toString());
+        json.put("im2417x", bi.im2417x.getText().toString());*/
 
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHC);
     }
+
 
     public void BtnContinue() {
 
@@ -365,14 +370,15 @@ public class SectionCHC1Activity extends AppCompatActivity {
 
     }
 
-    public void BtnEnd() {
 
+    public void BtnEnd() {
         openEndActivity(this);
     }
 
+
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Back Press Locked.", Toast.LENGTH_SHORT).show();
     }
 
 }
