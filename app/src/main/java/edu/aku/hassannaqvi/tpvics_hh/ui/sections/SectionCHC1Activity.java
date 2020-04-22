@@ -13,14 +13,14 @@ import org.json.JSONObject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChc1Binding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionCHC1Activity extends AppCompatActivity {
 
-    ActivitySectionChCBinding bi;
+    ActivitySectionChc1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
