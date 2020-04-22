@@ -30,9 +30,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -42,6 +39,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.AreasContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
@@ -51,9 +50,9 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHCActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -182,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionCHBActivity.class);
                     break;
                 case 4:
-                    oF = new Intent(this, SectionC1Activity.class);
+                    oF = new Intent(this, SectionCHCActivity.class);
                     break;
 
 

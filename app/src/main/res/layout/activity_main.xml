@@ -224,6 +224,7 @@
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='@{(v)->callback.OpenFormFunc(4)}'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
