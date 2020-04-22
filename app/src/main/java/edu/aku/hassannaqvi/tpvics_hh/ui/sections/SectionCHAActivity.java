@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,15 +16,22 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
+import java.util.ArrayList;
+import java.util.List;
 
+import edu.aku.hassannaqvi.tpvics_hh.R;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
+
+import static edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity.mainVModel;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionCHAActivity extends AppCompatActivity {
 
     ActivitySectionChABinding bi;
+    int position;
+    FamilyMembersContract selMWRA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,31 @@ public class SectionCHAActivity extends AppCompatActivity {
             }
         }));
 
+        List<String> childrenLst = new ArrayList<String>() {
+            {
+                add("....");
+                addAll(MainApp.selectedChildren.getSecond());
+            }
+        };
+
+        bi.uf09.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childrenLst));
+
+        bi.uf09.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                position = i;
+                if (i == 0) return;
+                selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.uf09.getSelectedItemPosition() - 1));
+                bi.uf09a.setText(selMWRA.getMotherName());
+                int totalAge = Integer.parseInt(selMWRA.getAge()) * 12 + Integer.parseInt(selMWRA.getMonthfm());
+                bi.uf9a.setText(String.valueOf(totalAge));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
     }
 
     private boolean UpdateDB() {
@@ -63,7 +98,8 @@ public class SectionCHAActivity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
 
-        f1.put("uf09", bi.uf09.getText().toString());
+        f1.put("uf09", selMWRA.getName());
+        f1.put("uf09a", selMWRA.getMotherName());
 
         f1.put("uf9a", bi.uf9a.getText().toString());
 
@@ -83,6 +119,10 @@ public class SectionCHAActivity extends AppCompatActivity {
                         bi.uf15b.isChecked() ? "2" :
                                 "0");
 
+        // Deleting item in list
+        MainApp.selectedChildren.getFirst().remove(position - 1);
+        MainApp.selectedChildren.getSecond().remove(position - 1);
+
     }
 
     private boolean formValidation() {
@@ -99,8 +139,7 @@ public class SectionCHAActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-
+                startActivity(new Intent(this, SectionCHBActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

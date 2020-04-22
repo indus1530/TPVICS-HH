@@ -18,8 +18,10 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC2Binding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.selectedChildren;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
 public class SectionC2Activity extends AppCompatActivity {
@@ -67,7 +69,11 @@ public class SectionC2Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+
+                selectedChildren = FamilyMembersListActivity.mainVModel.getAllUnder12();
+                Class<?> T = EndingActivity.class;
+                if (selectedChildren.getFirst().size() > 0) T = SectionCHAActivity.class;
+                startActivity(new Intent(this, T).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

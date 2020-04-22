@@ -25,12 +25,15 @@ import androidx.databinding.DataBindingUtil;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
+import java.util.List;
+
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
+import kotlin.Pair;
 
 
 /**
@@ -83,6 +86,7 @@ public class MainApp extends Application {
     public static SharedPreferences sharedPref;
     protected static LocationManager locationManager;
     public static String DIST_ID;
+    public static Pair<List<Integer>, List<String>> selectedChildren;
 
     public static void setItemClick(OnItemClick itemClick) {
         MainApp.itemClick = itemClick;
