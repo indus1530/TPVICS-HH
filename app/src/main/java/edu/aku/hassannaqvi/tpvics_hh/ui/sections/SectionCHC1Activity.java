@@ -181,15 +181,17 @@ public class SectionCHC1Activity extends AppCompatActivity {
                 bi.im021.isChecked() ? "1" :
                         bi.im022.isChecked() ? "2" :
                                 "0");
-        json.put("im02a",
-                bi.im02a1.isChecked() ? "1" :
-                        bi.im02a2.isChecked() ? "2" :
-                                bi.im02a3.isChecked() ? "3" :
-                                        bi.im02a4.isChecked() ? "4" :
-                                                bi.im02a5.isChecked() ? "5" :
-                                                        bi.im02a6.isChecked() ? "6" :
-                                                                bi.im02a96.isChecked() ? "96" :
-                                                                        "0");
+
+        json.put("im02a", bi.im02a1.isChecked() ? "1"
+                : bi.im02a2.isChecked() ? "2"
+                : bi.im02a3.isChecked() ? "3"
+                : bi.im02a4.isChecked() ? "4"
+                : bi.im02a5.isChecked() ? "5"
+                : bi.im02a6.isChecked() ? "6"
+                : bi.im02a96.isChecked() ? "96"
+                : "0");
+        json.put("im02a96x", bi.im02a96x.getText().toString());
+
         json.put("im03dd", bi.im03dd.getText().toString());
         json.put("im03dd1", bi.im03dd1.getText().toString());
         json.put("im03mm", bi.im03mm.getText().toString());
@@ -242,6 +244,7 @@ public class SectionCHC1Activity extends AppCompatActivity {
         json.put("im416measles2dd", bi.im416measles2dd.getText().toString());
         json.put("im416measles2mm", bi.im416measles2mm.getText().toString());
         json.put("im416measles2yy", bi.im416measles2yy.getText().toString());
+
         json.put("im05",
                 bi.im051.isChecked() ? "1" :
                         bi.im052.isChecked() ? "2" :
