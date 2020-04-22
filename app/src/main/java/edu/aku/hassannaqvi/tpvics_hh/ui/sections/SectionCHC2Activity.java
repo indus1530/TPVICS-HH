@@ -249,9 +249,9 @@ public class SectionCHC2Activity extends AppCompatActivity {
         openEndActivity(this);
     }
 
-    @Override
+   /* @Override
     public void onBackPressed() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 }

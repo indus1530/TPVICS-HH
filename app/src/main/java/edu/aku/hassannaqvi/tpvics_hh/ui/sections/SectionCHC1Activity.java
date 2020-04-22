@@ -379,9 +379,9 @@ public class SectionCHC1Activity extends AppCompatActivity {
     }
 
 
-    @Override
+    /*@Override
     public void onBackPressed() {
         Toast.makeText(this, "Back Press Locked.", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 }

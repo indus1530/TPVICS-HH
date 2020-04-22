@@ -4,15 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
@@ -112,9 +111,9 @@ public class SectionCHAActivity extends AppCompatActivity {
         openEndActivity(this);
     }
 
-    @Override
+    /*@Override
     public void onBackPressed() {
         Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
 }

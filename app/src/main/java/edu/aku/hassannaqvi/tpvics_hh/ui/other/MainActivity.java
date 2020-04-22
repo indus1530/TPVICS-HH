@@ -53,6 +53,7 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHC1Activity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHC2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -183,8 +184,9 @@ public class MainActivity extends AppCompatActivity {
                 case 4:
                     oF = new Intent(this, SectionCHC1Activity.class);
                     break;
-
-
+                case 5:
+                    oF = new Intent(this, SectionCHC2Activity.class);
+                    break;
             }
             startActivity(oF);
         } else {
