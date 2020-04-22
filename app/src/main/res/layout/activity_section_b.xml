@@ -193,7 +193,7 @@
                                 android:layout_alignTop="@id/qtxt_ch03b"
                                 android:layout_alignBottom="@id/qtxt_ch03b"
                                 android:gravity="top"
-                                android:text="@string/Q_ch03" />
+                                android:text="@string/Q_ch03b" />
 
                         </RelativeLayout>
 
@@ -305,6 +305,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
@@ -330,6 +331,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
@@ -354,6 +356,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
                                 android:layout_weight="1"
                                 android:orientation="vertical">
 
@@ -420,8 +423,8 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:text="@string/year" />
@@ -439,8 +442,8 @@
                                 app:type="range" />
 
                             <TextView
-                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
+                                android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
                                 android:text="@string/month" />
