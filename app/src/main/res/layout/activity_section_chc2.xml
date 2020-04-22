@@ -46,6 +46,7 @@
                             android:layout_alignBottom="@id/qtxt_im08"
                             android:gravity="center"
                             android:text="@string/Q_im08" />
+
                     </RelativeLayout>
 
 
@@ -107,26 +108,31 @@
                                 android:layout_alignBottom="@id/qtxt_im09"
                                 android:gravity="center"
                                 android:text="@string/Q_im09" />
+
                         </RelativeLayout>
 
 
                         <RadioGroup
                             android:id="@+id/im09"
-                            style="@style/radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im091"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im091" />
 
                             <RadioButton
                                 android:id="@+id/im092"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im092" />
 
                             <RadioButton
                                 android:id="@+id/im093"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im093" />
 
                         </RadioGroup>
@@ -163,26 +169,31 @@
                                 android:layout_alignBottom="@id/qtxt_im10"
                                 android:gravity="center"
                                 android:text="@string/Q_im10" />
+
                         </RelativeLayout>
 
 
                         <RadioGroup
                             android:id="@+id/im10"
-                            style="@style/radiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im101"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im101" />
 
                             <RadioButton
                                 android:id="@+id/im102"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im102" />
 
                             <RadioButton
                                 android:id="@+id/im103"
-                                style="@style/radiobutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:text="@string/im103" />
 
                         </RadioGroup>
