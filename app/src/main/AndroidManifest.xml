@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity android:name=".ui.sections.SectionCHC2Activity"></activity>
-        <activity android:name=".ui.sections.SectionCHCActivity"></activity>
+        <activity android:name=".ui.sections.SectionCHC1Activity"></activity>
         <activity android:name=".ui.sections.SectionCHAActivity" />
         <activity android:name=".ui.sections.SectionCHBActivity" />
         <activity android:name=".ui.sections.SectionC2Activity" />

@@ -52,7 +52,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHCActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHC1Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
                     oF = new Intent(this, SectionCHBActivity.class);
                     break;
                 case 4:
-                    oF = new Intent(this, SectionCHCActivity.class);
+                    oF = new Intent(this, SectionCHC1Activity.class);
                     break;
 
 

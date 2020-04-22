@@ -4,29 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
-public class SectionCHCActivity extends AppCompatActivity {
+public class SectionCHC1Activity extends AppCompatActivity {
 
     ActivitySectionChCBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_c);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_chc1);
         bi.setCallback(this);
         setTitle(R.string.chsec);
         setupListeners();
