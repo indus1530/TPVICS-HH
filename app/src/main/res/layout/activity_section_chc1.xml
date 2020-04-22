@@ -79,8 +79,8 @@
                             android:layout_alignBottom="@id/qtxt_im01"
                             android:gravity="center"
                             android:text="@string/Q_im01" />
-                    </RelativeLayout>
 
+                    </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/im01"
@@ -259,7 +259,6 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -281,6 +280,7 @@
                                 android:layout_alignBottom="@id/qtxt_im03"
                                 android:gravity="center"
                                 android:text="@string/Q_im03" />
+
                         </RelativeLayout>
 
                         <LinearLayout style="@style/hlinearlayout">
@@ -431,6 +431,7 @@
                                 android:layout_alignBottom="@id/qtxt_im41bcg"
                                 android:gravity="center"
                                 android:text="@string/Q_im4_1bcg" />
+
                         </RelativeLayout>
 
 
@@ -496,7 +497,6 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -518,6 +518,7 @@
                                 android:layout_alignBottom="@id/qtxt_im42opv0"
                                 android:gravity="center"
                                 android:text="@string/Q_im4_2opv0" />
+
                         </RelativeLayout>
 
 
@@ -583,10 +584,29 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im43opv1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im43opv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im43opv1"
+                                android:text="@string/im43opv1" />
+
+                            <TextView
+                                android:id="@+id/q_im43opv1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im43opv1"
+                                android:layout_alignBottom="@id/qtxt_im43opv1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_3opv1" />
+
+                        </RelativeLayout>
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -929,13 +949,9 @@
                                 android:layout_alignBottom="@id/qtxt_im47opv2"
                                 android:gravity="center"
                                 android:text="@string/Q_im4_7opv2" />
+
                         </RelativeLayout>
 
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/im47opv2" />
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1518,10 +1534,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im414ipv" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im414ipv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im414ipv"
+                                android:text="@string/im414ipv" />
+
+                            <TextView
+                                android:id="@+id/q_im414ipv"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im414ipv"
+                                android:layout_alignBottom="@id/qtxt_im414ipv"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_14ipv" />
+
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
@@ -1606,6 +1642,7 @@
                                 android:layout_alignBottom="@id/qtxt_im415measles1"
                                 android:gravity="center"
                                 android:text="@string/Q_im4_15measles1" />
+
                         </RelativeLayout>
 
 
