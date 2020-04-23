@@ -9,24 +9,21 @@ import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityEndingBinding;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 
-public class EndingActivity extends AppCompatActivity {
+public class ChildEndingActivity extends AppCompatActivity {
 
-    ActivityEndingBinding bi;
+    ActivityChildEndingBinding bi;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_child_ending);
         bi.setCallback(this);
 
         boolean check = getIntent().getBooleanExtra("complete", false);
@@ -57,7 +54,9 @@ public class EndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, MainActivity.class));
+                Class<?> T = EndingActivity.class;
+                if (MainApp.selectedChildren.getFirst().size() > 0) T = SectionCHAActivity.class;
+                startActivity(new Intent(this, T).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -66,7 +65,7 @@ public class EndingActivity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
+        /*MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
                 : bi.istatusb.isChecked() ? "2"
                 : bi.istatusc.isChecked() ? "3"
                 : bi.istatusd.isChecked() ? "4"
@@ -76,19 +75,20 @@ public class EndingActivity extends AppCompatActivity {
                 : "0");
 
         MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
-        MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));*/
     }
 
     public boolean UpdateDB() {
 
-        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updateEnding();
         if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
+        return true;
 
     }
 

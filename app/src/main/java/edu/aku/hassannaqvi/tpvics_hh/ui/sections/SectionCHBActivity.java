@@ -80,7 +80,7 @@ public class SectionCHBActivity extends AppCompatActivity {
                         bi.cb02b.setEnabled(true);
                     } else {
                         bi.cb02b.setEnabled(false);
-                        bi.cb02b.setText("");
+                        bi.cb02b.setText(null);
                     }
                 }
 

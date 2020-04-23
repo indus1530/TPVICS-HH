@@ -49,10 +49,18 @@
                             android:text="@string/Q_uf09" />
                     </RelativeLayout>
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/uf09"
+                        style="@style/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp" />
+
+                    <EditText
+                        android:id="@+id/uf09a"
                         style="@style/EditTextAlpha"
-                        android:hint="@string/uf09" />
+                        android:enabled="false"
+                        android:textAlignment="center" />
 
                 </LinearLayout>
 
@@ -73,10 +81,12 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/uf9a"
                         style="@style/EditTextNum"
+                        android:enabled="false"
                         android:hint="@string/uf9a"
+                        android:textAlignment="center"
                         app:mask="##"
-                        app:maxValue="99"
-                        app:minValue="17"
+                        app:maxValue="23"
+                        app:minValue="12"
                         app:type="range" />
 
                 </LinearLayout>

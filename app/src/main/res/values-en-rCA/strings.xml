@@ -489,16 +489,16 @@
     <string name="uf15b"> No, permission is denied  </string>
     <string name="uf15b_title"> uf15b_title: Now I would like to talk to you about (child’s name)’s vaccination record in more detail. This interview will take about 30 minutes. Again, all the information we obtain will remain strictly confidential and anonymous. If you wish not to answer a question or wish to stop the interview, please let me know. May I start now?</string>
     <string name="uf16"> uf16: Result of interview for children 12-23 months</string>
-    <string name="uf16_1"> Completed</string>
-    <string name="uf16_2"> Partially completed</string>
-    <string name="uf16_3"> No HH member or no competent respondent at home at time  of visit  </string>
-    <string name="uf16_4"> Entire household absent for extended period of Time</string>
-    <string name="uf16_5"> Child not eligible/Not 12-23 Months Age </string>
-    <string name="uf16_6"> Incapacitated(Specify)</string>
-    <string name="uf16_7"> Refused</string>
-    <string name="uf16_8"> Dwelling vacant or address not a dwelling</string>
-    <string name="uf16_9"> Dwelling not found</string>
-    <string name="uf16_96"> Other specify</string>
+    <string name="uf16a"> Completed</string>
+    <string name="uf16b"> Partially completed</string>
+    <string name="uf16c"> No HH member or no competent respondent at home at time  of visit  </string>
+    <string name="uf16d"> Entire household absent for extended period of Time</string>
+    <string name="uf16e"> Child not eligible/Not 12-23 Months Age </string>
+    <string name="uf16f"> Incapacitated(Specify)</string>
+    <string name="uf16g"> Refused</string>
+    <string name="uf16h"> Dwelling vacant or address not a dwelling</string>
+    <string name="uf16i"> Dwelling not found</string>
+    <string name="uf1696"> Other specify</string>
     <string name="cb0_title"> cb0_title: Before I begin the interview, could you please bring (name)’s Birth Certificate, Immunization Card, and any other immunization record from a public or private health provider available in home? We will need to refer to those documents.</string>
     <string name="cb01"> cb01: What is your highest grade of completed education?  As for Education Grade passed for mother/caregiver (Write 77 if un educated and for Religious Education , write 20)</string>
     <string name="cb01a"> Grade</string>
@@ -969,6 +969,7 @@
     <string name='Q_uf16'>uf16</string>
     <string name='Q_uf9a'>uf9a</string>
     <string name='Q_uf9b'>uf9b</string>
+    <string name="Q_ch03b">CH03b</string>
 
 
 </resources>
