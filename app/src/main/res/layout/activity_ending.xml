@@ -20,83 +20,110 @@
             android:id="@+id/fldGrpEnd"
             style="@style/linearlayout_view">
 
-            <!--Status-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/hh22" />
 
-            <!--Status-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hh22h" />
+            <!-- hh22  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVhh22"
+                style="@style/cardView">
 
-            <RadioGroup
-                android:id="@+id/istatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <LinearLayout style="@style/vlinearlayout">
 
-                <RadioButton
-                    android:id="@+id/istatusa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22a" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
 
-                <RadioButton
-                    android:id="@+id/istatusb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22b" />
+                        <TextView
+                            android:id="@+id/qtxt_hh22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_hh22"
+                            android:text="@string/hh22" />
 
-                <RadioButton
-                    android:id="@+id/istatusc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22c" />
+                        <TextView
+                            android:id="@+id/q_hh22"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_hh22"
+                            android:layout_alignBottom="@id/qtxt_hh22"
+                            android:text="@string/Q_hh22" />
 
-                <RadioButton
-                    android:id="@+id/istatusd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22d" />
+                    </RelativeLayout>
 
-                <RadioButton
-                    android:id="@+id/istatuse"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22e" />
+                    <!--Status-->
+                    <TextView
+                        style="@style/info"
+                        android:text="@string/hh22h" />
 
-                <RadioButton
-                    android:id="@+id/istatusf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/hh22f" />
+                    <RadioGroup
+                        android:id="@+id/istatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/istatus96"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:text="@string/other" />
+                        <RadioButton
+                            android:id="@+id/istatusa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22a" />
 
-                <EditText
-                    android:id="@+id/istatus96x"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/specify"
-                    android:maxLength="40"
-                    android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
-                    android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
+                        <RadioButton
+                            android:id="@+id/istatusb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22b" />
 
-            </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/istatusc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22c" />
+
+                        <RadioButton
+                            android:id="@+id/istatusd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22d" />
+
+                        <RadioButton
+                            android:id="@+id/istatuse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22e" />
+
+                        <RadioButton
+                            android:id="@+id/istatusf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hh22f" />
+
+                        <RadioButton
+                            android:id="@+id/istatus96"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/istatus96x"
+                            style="@style/EditTextAlpha"
+                            android:hint="@string/specify"
+                            android:maxLength="40"
+                            android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
+                            android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <!--ENDBUTTON linearlayout-->
             <LinearLayout
                 style="@style/hlinearlayout"
                 android:layout_gravity="start"
                 android:layout_marginTop="24dp">
+
                 <Button
                     android:id="@+id/btnEnd"
                     android:layout_width="wrap_content"
