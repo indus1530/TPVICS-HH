@@ -22,6 +22,7 @@
                 android:id="@+id/fldGrpSecChc2"
                 style="@style/linearlayout_view_wt_bound">
 
+
                 <!-- im03  Title   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim03"
@@ -131,7 +132,7 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:hint="@string/im03yy"
-                                android:maxLength="2"
+                                android:maxLength="4"
                                 app:maxValue="0"
                                 app:minValue="0"
                                 app:type="range" />
@@ -141,6 +142,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- im4_title1  Title   -->
                 <androidx.cardview.widget.CardView
@@ -158,6 +160,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- im4title2  Title   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim4title2"
@@ -173,6 +176,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
                 <!-- im41bcg  Title   -->
                 <androidx.cardview.widget.CardView
