@@ -44,6 +44,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
         bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i != bi.im051.getId()) {
+                Clear.clearAllFields(bi.qtxtIm06, false);
                 Clear.clearAllFields(bi.fldGrpCVim06, false);
                 Clear.clearAllFields(bi.fldGrpSecChc3, false);
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
@@ -344,7 +345,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "Press top back button.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
 }
