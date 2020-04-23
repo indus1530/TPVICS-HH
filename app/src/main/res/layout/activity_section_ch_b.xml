@@ -272,7 +272,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb03dd"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb03dd"
@@ -293,7 +293,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb03mm"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb03mm"
@@ -314,7 +314,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb03yy"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb03yy"
@@ -381,7 +381,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb04mm"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb04mm"
@@ -402,7 +402,7 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/cb04yy"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb04yy"
