@@ -19,7 +19,7 @@
         <item name="android:radioButtonStyle">@style/radiobutton</item>
         <item name="checkboxStyle">@style/checkbox</item>
         <item name="android:buttonStyle">@style/button</item>
-        <item name="android:textColorHint">@color/colorPrimaryBeta</item>
+        <item name="android:textColorHint">@color/grayOverlay</item>
         <item name="android:typeface">sans</item>
         <item name="android:fillAfter">true</item>
         <item name="android:enterFadeDuration">600</item>
@@ -62,7 +62,6 @@
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/colorAccent</item>
         <item name="android:padding">4dp</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
@@ -86,7 +85,6 @@
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/colorAccent</item>
         <item name="android:padding">4dp</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
@@ -109,7 +107,6 @@
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/colorAccent</item>
         <item name="android:padding">4dp</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
@@ -262,7 +259,6 @@
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">20sp</item>
-        <item name="android:textColorHint">@color/colorAccent</item>
         <item name="android:padding">4dp</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
