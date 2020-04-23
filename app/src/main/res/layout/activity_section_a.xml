@@ -265,7 +265,8 @@
 
                                 <CheckBox
                                     android:id="@+id/checkHHHeadpresent"
-                                    style="@style/checkbox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:tag="-1"
                                     android:text="@string/checkHHpresent" />
 
@@ -415,18 +416,20 @@
 
                                 <RadioGroup
                                     android:id="@+id/hh15"
-                                    style="@style/hradiogroup">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
 
                                     <RadioButton
                                         android:id="@+id/hh15a"
-                                        style="@style/radiobutton"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh15a" />
 
                                     <RadioButton
                                         android:id="@+id/hh15b"
-                                        style="@style/radiobutton"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh15b" />
@@ -600,18 +603,20 @@
 
                                 <RadioGroup
                                     android:id="@+id/hh18"
-                                    style="@style/hradiogroup">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
 
                                     <RadioButton
                                         android:id="@+id/hh18a"
-                                        style="@style/radiobutton"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh18a" />
 
                                     <RadioButton
                                         android:id="@+id/hh18b"
-                                        style="@style/radiobutton"
+                                        android:layout_height="wrap_content"
                                         android:layout_width="0dp"
                                         android:layout_weight="1"
                                         android:text="@string/hh18b" />
@@ -670,7 +675,8 @@
 
                                     <CheckBox
                                         android:id="@+id/hh19b"
-                                        style="@style/checkbox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:tag="-1"
                                         android:text="@string/hh19b" />
 
@@ -717,18 +723,20 @@
 
                                     <RadioGroup
                                         android:id="@+id/hh20"
-                                        style="@style/hradiogroup">
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
 
                                         <RadioButton
                                             android:id="@+id/hh20a"
-                                            style="@style/radiobutton"
+                                            android:layout_height="wrap_content"
                                             android:layout_width="0dp"
                                             android:layout_weight="1"
                                             android:text="@string/hh20a" />
 
                                         <RadioButton
                                             android:id="@+id/hh20b"
-                                            style="@style/radiobutton"
+                                            android:layout_height="wrap_content"
                                             android:layout_width="0dp"
                                             android:layout_weight="1"
                                             android:text="@string/hh20b" />

@@ -122,7 +122,8 @@
 
                     <CheckBox
                         android:id="@+id/cb01dk"
-                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:tag="-1"
                         android:text="@string/cb01dk" />
 
@@ -216,7 +217,8 @@
 
                     <CheckBox
                         android:id="@+id/cb02dk"
-                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:tag="-1"
                         android:text="@string/cb02dk" />
 
@@ -327,7 +329,8 @@
 
                     <CheckBox
                         android:id="@+id/cb03dk"
-                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/cb03dk" />
 
                 </LinearLayout>
