@@ -91,7 +91,6 @@
                                 style="@style/checkbox"
                                 android:layout_height="match_parent"
                                 android:layout_width="0dp"
-                                android:hint="@string/im03dd1"
                                 android:layout_weight="1"
                                 android:tag="-1" />
 
