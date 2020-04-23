@@ -83,7 +83,8 @@
 
                     <RadioGroup
                         android:id="@+id/im01"
-                        style="@style/radiogroup">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/im011"
@@ -200,7 +201,9 @@
 
                         <RadioGroup
                             android:id="@+id/im02a"
-                            style="@style/radiogroup">
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im02a1"

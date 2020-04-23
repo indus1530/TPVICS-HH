@@ -318,7 +318,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:hint="@string/cb03yy"
-                            app:mask="##"
+                            app:mask="####"
                             app:maxValue="2020"
                             app:minValue="2018"
                             app:type="range" />

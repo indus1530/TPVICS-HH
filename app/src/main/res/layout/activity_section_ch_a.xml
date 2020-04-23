@@ -123,7 +123,9 @@
 
                     <RadioGroup
                         android:id="@+id/uf9b"
-                        style="@style/radiogroup">
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/uf9b1"
@@ -178,7 +180,9 @@
 
                     <RadioGroup
                         android:id="@+id/uf14"
-                        style="@style/radiogroup">
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/uf14a"
@@ -229,7 +233,9 @@
 
                     <RadioGroup
                         android:id="@+id/uf15"
-                        style="@style/radiogroup">
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/uf15a"
