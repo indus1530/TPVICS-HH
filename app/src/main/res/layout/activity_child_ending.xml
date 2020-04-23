@@ -28,47 +28,56 @@
             <!--Status-->
             <RadioGroup
                 android:id="@+id/istatus"
-                style="@style/radiogroup">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/istatusa"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16a" />
 
                 <RadioButton
                     android:id="@+id/istatusb"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16b" />
 
                 <RadioButton
                     android:id="@+id/istatusc"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16c" />
 
                 <RadioButton
                     android:id="@+id/istatusd"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16d" />
 
                 <RadioButton
                     android:id="@+id/istatuse"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16e" />
 
                 <RadioButton
                     android:id="@+id/istatusf"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/uf16f" />
 
                 <RadioButton
                     android:id="@+id/istatus96"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/other" />
 
                 <EditText
                     android:id="@+id/istatus96x"
-                    style="@style/EditTextAlpha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="@string/specify"
                     android:maxLength="40"
                     android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
