@@ -71,9 +71,7 @@ public class SectionCHAActivity extends AppCompatActivity {
                 position = i;
                 if (i == 0) return;
                 selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.uf09.getSelectedItemPosition() - 1));
-                bi.uf09a.setText(selMWRA.getMotherName());
-                int totalAge = Integer.parseInt(selMWRA.getAge()) * 12 + Integer.parseInt(selMWRA.getMonthfm());
-                bi.uf9a.setText(new StringBuilder("Mother name:").append(totalAge));
+                bi.uf09a.setText(new StringBuilder("Mother name:").append(selMWRA.getMotherName()));
             }
 
             @Override

@@ -342,10 +342,11 @@
 
                                 <EditText
                                     android:id="@+id/hh13b"
-                                    style="@style/EditTextAlphaNmeric"
+                                    style="@style/EditTextNum"
                                     android:layout_width="0dp"
                                     android:layout_weight="1"
-                                    android:hint="@string/contactnum" />
+                                    android:hint="@string/contactnum"
+                                    android:maxLength="11" />
 
                             </LinearLayout>
 
