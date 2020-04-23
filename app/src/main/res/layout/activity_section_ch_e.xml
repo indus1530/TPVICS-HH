@@ -45,6 +45,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/im26a" />
 
+                    <EditText
+                        android:id="@+id/im26a"
+                        style="@style/EditTextAlpha"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -61,6 +68,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/im26b" />
 
+                    <EditText
+                        android:id="@+id/im26b"
+                        style="@style/EditTextAlpha"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -77,6 +90,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/im26c" />
 
+                    <EditText
+                        android:id="@+id/im26c"
+                        style="@style/EditTextAlpha"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -92,6 +111,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/im26d" />
+
+                    <EditText
+                        android:id="@+id/im26d"
+                        style="@style/EditTextAlpha"
+                        android:ems="10"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine" />
 
                 </LinearLayout>
 

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@color/greenInfo"
         android:gravity="center"
-        android:minHeight="120dp"
+        android:minHeight="160dp"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnOk"
@@ -67,7 +67,23 @@
             android:background="@drawable/outline_btn"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Okay!"
+            android:text="Yes, Exit"
+            android:textColor="@color/greenInfo" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNo"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/outline_btn"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="No"
             android:textColor="@color/greenInfo" />
 
     </LinearLayout>

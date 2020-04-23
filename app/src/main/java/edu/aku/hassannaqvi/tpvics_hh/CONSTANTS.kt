@@ -24,6 +24,9 @@ class CONSTANTS {
         const val MWRA_INFO = "mwra"
         const val SYNC_LOGIN = "sync_login"
 
+        //For CHC Section
+        const val IM02FLAG = "im02_flag"
+
 
     }
 }

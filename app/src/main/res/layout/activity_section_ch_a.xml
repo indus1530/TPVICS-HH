@@ -81,12 +81,10 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/uf9a"
                         style="@style/EditTextNum"
-                        android:enabled="false"
                         android:hint="@string/uf9a"
-                        android:textAlignment="center"
                         app:mask="##"
-                        app:maxValue="23"
-                        app:minValue="12"
+                        app:maxValue="99"
+                        app:minValue="17"
                         app:type="range" />
 
                 </LinearLayout>

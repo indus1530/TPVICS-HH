@@ -609,9 +609,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(SingleChild.COLUMN_DEVICEID, childContract.getDeviceId());
         values.put(SingleChild.COLUMN_FORMDATE, childContract.getFormDate());
         values.put(SingleChild.COLUMN_USER, childContract.getUser());
-        values.put(SingleChild.COLUMN_SI1, childContract.getsI1());
-        values.put(SingleChild.COLUMN_SI2, childContract.getsI2());
-        values.put(SingleChild.COLUMN_SJ, childContract.getsJ());
+        values.put(SingleChild.COLUMN_SCA, childContract.getsCA());
+        values.put(SingleChild.COLUMN_SCB, childContract.getsCB());
+        values.put(SingleChild.COLUMN_SCC, childContract.getsCC());
         values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
 
 
@@ -945,9 +945,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_DEVICEID,
                 SingleChild.COLUMN_FORMDATE,
                 SingleChild.COLUMN_USER,
-                SingleChild.COLUMN_SI1,
-                SingleChild.COLUMN_SI2,
-                SingleChild.COLUMN_SJ,
+                SingleChild.COLUMN_SCA,
+                SingleChild.COLUMN_SCB,
+                SingleChild.COLUMN_SCC,
                 SingleChild.COLUMN_DEVICETAGID,
 
         };

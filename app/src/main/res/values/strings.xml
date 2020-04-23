@@ -831,7 +831,7 @@
     <string name="nextPregnancy"> Next Pregnancy </string>
     <string name="nextMortality"> Next Mortality </string>
 
-    <string name="dialog_text"> برائے کرم دوسرے بچے کے لئے معلومات شامل کریں۔ </string>
+    <string name="dialog_text"> Surely! You Want To Exit this Child Module? </string>
     <string name="countNo"> نہیں </string>
     <string name="countYes"> جی ہاں </string>
     <string name="countAlertMsg"> یقینا! آپ جاری رکھنا چاہتے ہیں </string>

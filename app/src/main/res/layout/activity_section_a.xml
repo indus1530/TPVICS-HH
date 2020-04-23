@@ -440,8 +440,7 @@
                         <!-- hh16  Input   -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/hh16cv"
-                            style="@style/cardView"
-                            android:visibility='@{hh15a.checked ? View.VISIBLE : View.GONE }'>
+                            style="@style/cardView">
 
                             <LinearLayout style="@style/vlinearlayout">
 
@@ -479,6 +478,7 @@
                                     style="@style/EditTextAlpha"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:enabled="@{hh15a.checked ? true : false }"
                                     android:hint="@string/hh16a"
                                     android:maxLength="30"
                                     android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
@@ -493,6 +493,7 @@
                                     style="@style/EditTextNum"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:enabled="@{hh15a.checked ? true : false }"
                                     android:hint="@string/hh16b"
                                     android:maxLength="11"
                                     android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
@@ -800,7 +801,7 @@
                                 android:background="@android:color/holo_red_light"
                                 android:onClick="@{() -> callback.BtnEnd()}"
                                 android:text="@string/end_interview"
-                                android:visibility="@{hh18b.checked || !hh20a.checked ? View.VISIBLE : View.GONE}" />
+                                android:visibility="@{hh18b.checked ? View.VISIBLE : View.GONE}" />
                             <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
 
                             <Button
@@ -809,7 +810,7 @@
                                 android:background="@android:color/holo_green_light"
                                 android:onClick="@{() -> callback.BtnContinue()}"
                                 android:text="@string/nextSection"
-                                android:visibility="@{hh18a.checked || !hh20b.checked ? View.VISIBLE : View.GONE}" />
+                                android:visibility="@{hh18a.checked ? View.VISIBLE : View.GONE}" />
 
                         </LinearLayout>
 

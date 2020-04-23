@@ -15,9 +15,9 @@ public class ChildContract {
     private String deviceId = "";
     private String formDate = ""; // Date
     private String user = ""; // Interviewer
-    private String sI1 = "";
-    private String sI2 = "";
-    private String sJ = "";
+    private String sCA = "";
+    private String sCB = "";
+    private String sCC = "";
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
@@ -49,9 +49,9 @@ public class ChildContract {
         this.deviceId = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICEID));
         this.formDate = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_FORMDATE));
         this.user = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_USER));
-        this.sI1 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SI1));
-        this.sI2 = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SI2));
-        this.sJ = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SJ));
+        this.sCA = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCA));
+        this.sCB = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCB));
+        this.sCC = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCC));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICETAGID));
 
         return this;
@@ -68,14 +68,14 @@ public class ChildContract {
         json.put(SingleChild.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(SingleChild.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
-        if (this.sI1 != null && !this.sI1.equals("")) {
-            json.put(SingleChild.COLUMN_SI1, this.sI1.equals("") ? JSONObject.NULL : new JSONObject(this.sI1));
+        if (this.sCA != null && !this.sCA.equals("")) {
+            json.put(SingleChild.COLUMN_SCA, this.sCA.equals("") ? JSONObject.NULL : new JSONObject(this.sCA));
         }
-        if (this.sI2 != null && !this.sI2.equals("")) {
-            json.put(SingleChild.COLUMN_SI2, this.sI2.equals("") ? JSONObject.NULL : new JSONObject(this.sI2));
+        if (this.sCB != null && !this.sCB.equals("")) {
+            json.put(SingleChild.COLUMN_SCB, this.sCB.equals("") ? JSONObject.NULL : new JSONObject(this.sCB));
         }
-        if (this.sJ != null && !this.sJ.equals("")) {
-            json.put(SingleChild.COLUMN_SJ, this.sJ.equals("") ? JSONObject.NULL : new JSONObject(this.sJ));
+        if (this.sCC != null && !this.sCC.equals("")) {
+            json.put(SingleChild.COLUMN_SCC, this.sCC.equals("") ? JSONObject.NULL : new JSONObject(this.sCC));
         }
         json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
@@ -131,28 +131,28 @@ public class ChildContract {
         this.user = user;
     }
 
-    public String getsI1() {
-        return sI1;
+    public String getsCA() {
+        return sCA;
     }
 
-    public void setsI1(String sI1) {
-        this.sI1 = sI1;
+    public void setsCA(String sCA) {
+        this.sCA = sCA;
     }
 
-    public String getsI2() {
-        return sI2;
+    public String getsCB() {
+        return sCB;
     }
 
-    public void setsI2(String sI2) {
-        this.sI2 = sI2;
+    public void setsCB(String sCB) {
+        this.sCB = sCB;
     }
 
-    public String getsJ() {
-        return sJ;
+    public String getsCC() {
+        return sCC;
     }
 
-    public void setsJ(String sJ) {
-        this.sJ = sJ;
+    public void setsCC(String sCC) {
+        this.sCC = sCC;
     }
 
     public String getDevicetagID() {
@@ -188,9 +188,9 @@ public class ChildContract {
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_USER = "username";
-        public static final String COLUMN_SI1 = "si1";
-        public static final String COLUMN_SI2 = "si2";
-        public static final String COLUMN_SJ = "sj";
+        public static final String COLUMN_SCA = "sca";
+        public static final String COLUMN_SCB = "scb";
+        public static final String COLUMN_SCC = "scc";
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";

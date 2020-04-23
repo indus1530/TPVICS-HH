@@ -101,6 +101,16 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
             Clear.clearAllFields(bi.fldGrpAHH17, i == bi.hh18a.getId());
         }));
 
+        bi.hh20.setOnCheckedChangeListener((group, checkedId) -> {
+            if (checkedId == bi.hh20a.getId()) {
+                bi.btnEnd.setVisibility(View.GONE);
+                bi.btnNext.setVisibility(View.VISIBLE);
+            } else {
+                bi.btnEnd.setVisibility(View.VISIBLE);
+                bi.btnNext.setVisibility(View.GONE);
+            }
+        });
+
 
     }
 

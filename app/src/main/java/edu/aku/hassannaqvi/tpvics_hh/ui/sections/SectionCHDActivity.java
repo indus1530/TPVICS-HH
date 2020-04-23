@@ -14,10 +14,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
+import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
+import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChDBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 
 public class SectionCHDActivity extends AppCompatActivity {
 
@@ -33,6 +39,8 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
+
+        Clear.clearAllFields(bi.fldGrpSecChc2, getIntent().getBooleanExtra(IM02FLAG, true));
 
         bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i != bi.im051.getId()) {
@@ -127,17 +135,14 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addFamilyMember(fmc);
-        fmc.set_id(String.valueOf(updcount));
-        if (updcount > 0) {
-            fmc.setUid(MainApp.deviceId + fmc.get_id());
-            db.updatesFamilyMemberColumn(FamilyMembersContract.SingleMember.COLUMN_UID, fmc.getUid(), fmc.get_id());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SCC, child.getsCC());
+        if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        }*/
-        return false;
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -297,6 +302,16 @@ public class SectionCHDActivity extends AppCompatActivity {
                                                                                                                                                                 "0");
         f1.put("im2417x", bi.im2417x.getText().toString());
 
+
+        try {
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(child.getsCC()), f1);
+
+            child.setsCC(String.valueOf(json_merge));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private boolean formValidation() {
@@ -324,7 +339,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        openEndActivity(this);
+        openChildEndActivity(this);
     }
 
     @Override

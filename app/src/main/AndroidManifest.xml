@@ -23,12 +23,30 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionCHC2Activity"></activity>
-        <activity android:name=".ui.sections.SectionCHC1Activity"></activity>
-        <activity android:name=".ui.sections.SectionCHAActivity" />
-        <activity android:name=".ui.sections.SectionCHBActivity" />
-        <activity android:name=".ui.sections.SectionC2Activity" />
-        <activity android:name=".ui.sections.SectionC1Activity"></activity>
+        <activity
+            android:name=".ui.sections.SectionCHCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionCHAActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionCHBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionCHCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionCHDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionCHEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionC2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.sections.SectionC1Activity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"

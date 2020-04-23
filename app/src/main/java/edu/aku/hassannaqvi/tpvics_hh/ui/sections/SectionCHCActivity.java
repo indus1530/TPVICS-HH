@@ -14,14 +14,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
+import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
+import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 
 public class SectionCHCActivity extends AppCompatActivity {
 
     ActivitySectionChCBinding bi;
+    boolean im02Flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,30 +55,30 @@ public class SectionCHCActivity extends AppCompatActivity {
         }));
 
         bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.im021.getId()) {
+/*            if (i == bi.im021.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02a, false);
 //                Clear.clearAllFields(bi.fldGrpSecChc2, false);
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim02a, true);
 //                Clear.clearAllFields(bi.fldGrpSecChc2, true);
-            }
+            }*/
+
+            Clear.clearAllFields(bi.fldGrpCVim02a, i == bi.im022.getId());
+            im02Flag = i == bi.im022.getId();
 
         });
 
     }
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addFamilyMember(fmc);
-        fmc.set_id(String.valueOf(updcount));
-        if (updcount > 0) {
-            fmc.setUid(MainApp.deviceId + fmc.get_id());
-            db.updatesFamilyMemberColumn(FamilyMembersContract.SingleMember.COLUMN_UID, fmc.getUid(), fmc.get_id());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SCC, child.getsCC());
+        if (updcount == 1) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        }*/
-        return false;
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -99,6 +104,7 @@ public class SectionCHCActivity extends AppCompatActivity {
                                                                 bi.im02a96.isChecked() ? "96" :
                                                                         "0");
 
+        child.setsCC(String.valueOf(f1));
     }
 
     private boolean formValidation() {
@@ -115,7 +121,7 @@ public class SectionCHCActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, im02Flag));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -126,7 +132,7 @@ public class SectionCHCActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        openEndActivity(this);
+        openChildEndActivity(this);
     }
 
     @Override
