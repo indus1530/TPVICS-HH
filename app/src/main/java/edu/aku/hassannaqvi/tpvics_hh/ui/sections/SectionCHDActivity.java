@@ -44,13 +44,14 @@ public class SectionCHDActivity extends AppCompatActivity {
 
         bi.im05.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i != bi.im051.getId()) {
+                /*bi.qIm06.setEnabled(false);
+                Clear.clearAllFields(bi.qIm08, false);*/
                 Clear.clearAllFields(bi.fldGrpCVim06, false);
                 Clear.clearAllFields(bi.fldGrpSecChc3, false);
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
                 Clear.clearAllFields(bi.fldGrpCVim23, true);
                 Clear.clearAllFields(bi.fldGrpCVim23a, true);
             } else {
-                Clear.clearAllFields(bi.qtxtIm06, true);
                 Clear.clearAllFields(bi.fldGrpCVim06, true);
                 Clear.clearAllFields(bi.fldGrpSecChc3, true);
                 Clear.clearAllFields(bi.fldGrpCVim08, true);
@@ -151,7 +152,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         JSONObject f1 = new JSONObject();
 
         f1.put("im03dd", bi.im03dd.getText().toString());
-        f1.put("im03dd1", bi.im03dd1.getText().toString());
+        f1.put("im03dd1", bi.im03dd1.isChecked() ? "98" : "0");
         f1.put("im03mm", bi.im03mm.getText().toString());
         f1.put("im03yy", bi.im03yy.getText().toString());
         f1.put("im41bcgdd", bi.im41bcgdd.getText().toString());
