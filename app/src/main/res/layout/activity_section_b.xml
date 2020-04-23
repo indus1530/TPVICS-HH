@@ -565,19 +565,20 @@
 
                         <RadioGroup
                             android:id="@+id/ch08"
-                            style="@style/radiogroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/ch08a"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch08a" />
 
                             <RadioButton
                                 android:id="@+id/ch08b"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch08b" />

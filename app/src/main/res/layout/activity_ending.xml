@@ -35,47 +35,56 @@
 
             <RadioGroup
                 android:id="@+id/istatus"
-                style="@style/radiogroup">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/istatusa"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22a" />
 
                 <RadioButton
                     android:id="@+id/istatusb"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22b" />
 
                 <RadioButton
                     android:id="@+id/istatusc"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22c" />
 
                 <RadioButton
                     android:id="@+id/istatusd"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22d" />
 
                 <RadioButton
                     android:id="@+id/istatuse"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22e" />
 
                 <RadioButton
                     android:id="@+id/istatusf"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hh22f" />
 
                 <RadioButton
                     android:id="@+id/istatus96"
-                    style="@style/radiobutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="1dp"
                     android:text="@string/other" />
 
                 <EditText
                     android:id="@+id/istatus96x"
-                    style="@style/EditTextAlpha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="@string/specify"
                     android:maxLength="40"
                     android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
@@ -83,19 +92,22 @@
 
             </RadioGroup>
 
+            <!--ENDBUTTON linearlayout-->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
+                style="@style/hlinearlayout"
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp">
                 <Button
-                    android:id="@+id/btn_End"
-                    style="@style/buttons_bottom"
-                    android:background="@android:color/holo_green_light"
+                    android:id="@+id/btnEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview" />
+                    android:text="@string/end_interview"
+                    android:visibility="@{hh18b.checked ? View.VISIBLE : View.GONE}" />
+                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+
 
             </LinearLayout>
 
