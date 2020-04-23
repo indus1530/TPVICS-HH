@@ -51,10 +51,13 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionBActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHCActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHDActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHC1Activity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHC2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -168,31 +171,40 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void openForm(View v) {
+        OpenFormFunc(v.getId());
+    }
+
     public void OpenFormFunc(int id) {
-        Intent oF;
-        if (!MainApp.userName.equals("0000")) {
-            oF = null;
-            switch (id) {
-                case 1:
-                    oF = new Intent(this, SectionAActivity.class);
-                    break;
-                case 2:
-                    oF = new Intent(this, SectionCHAActivity.class);
-                    break;
-                case 3:
-                    oF = new Intent(this, SectionCHBActivity.class);
-                    break;
-                case 4:
-                    oF = new Intent(this, SectionCHCActivity.class);
-                    break;
-                case 5:
-                    oF = new Intent(this, SectionCHDActivity.class);
-                    break;
-            }
-            startActivity(oF);
-        } else {
-            Toast.makeText(getApplicationContext(), "Please login Again!", Toast.LENGTH_LONG).show();
+        Intent oF = null;
+        switch (id) {
+            case R.id.formA:
+                oF = new Intent(this, SectionAActivity.class);
+                break;
+            case R.id.formB:
+                oF = new Intent(this, SectionBActivity.class);
+                break;
+            case R.id.formC1:
+                oF = new Intent(this, SectionC1Activity.class);
+                break;
+            case R.id.formC2:
+                oF = new Intent(this, SectionC2Activity.class);
+                break;
+            case R.id.formCHA:
+                oF = new Intent(this, SectionCHAActivity.class);
+                break;
+            case R.id.formCHB:
+                oF = new Intent(this, SectionCHBActivity.class);
+                break;
+            case R.id.formCHC1:
+                oF = new Intent(this, SectionCHC1Activity.class);
+                break;
+            case R.id.formCHC2:
+                oF = new Intent(this, SectionCHC2Activity.class);
+                break;
         }
+        startActivity(oF);
     }
 
 

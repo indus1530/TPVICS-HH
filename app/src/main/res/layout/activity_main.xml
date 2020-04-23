@@ -125,13 +125,14 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/formA"
                         android:layout_width="0dp"
                         android:layout_height="100dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v)->callback.OpenFormFunc(1)}'
+                        android:onClick='openForm'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -162,13 +163,97 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/formA"
+                        android:id="@+id/formB"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v)->callback.OpenFormFunc(2)}'
+                        android:onClick='openForm'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="B"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formC1"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='openForm'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="C1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formC2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='openForm'
+                        app:cardCornerRadius="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:text="C2"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="30sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/formCHA"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick='openForm'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -190,13 +275,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/formB"
+                        android:id="@+id/formCHB"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v)->callback.OpenFormFunc(3)}'
+                        android:onClick='openForm'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -218,13 +303,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/formC1"
+                        android:id="@+id/formCHC1"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v)->callback.OpenFormFunc(4)}'
+                        android:onClick='openForm'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -246,13 +331,13 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/formC2"
+                        android:id="@+id/formCHC2"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v)->callback.OpenFormFunc(5)}'
+                        android:onClick='openForm'
                         app:cardCornerRadius="20dp">
 
                         <RelativeLayout
@@ -462,6 +547,7 @@
             </LinearLayout>
 
         </ScrollView>
+
     </LinearLayout>
 
 </layout>
