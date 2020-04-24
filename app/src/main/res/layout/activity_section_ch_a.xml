@@ -47,6 +47,7 @@
                             android:layout_alignBottom="@id/qtxt_uf09"
                             android:gravity="center"
                             android:text="@string/Q_uf09" />
+
                     </RelativeLayout>
 
                     <Spinner
@@ -66,6 +67,7 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!-- uf9a  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVuf9a"
@@ -73,16 +75,35 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf9a" />
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_uf9a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_uf9a"
+                            android:text="@string/uf9a" />
+
+                        <TextView
+                            android:id="@+id/q_uf9a"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_uf9a"
+                            android:layout_alignBottom="@id/qtxt_uf9a"
+                            android:gravity="center"
+                            android:text="@string/Q_uf9a" />
+
+                    </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/uf9a"
                         style="@style/EditTextNum"
-                        android:hint="@string/uf9a"
-                        app:mask="##"
+                        android:hint="@string/year"
+                        android:maxLength="2"
                         app:maxValue="99"
                         app:minValue="17"
                         app:type="range" />
@@ -90,6 +111,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!-- uf9b  Radio   -->
             <androidx.cardview.widget.CardView
@@ -119,11 +141,11 @@
                             android:layout_alignBottom="@id/qtxt_uf9b"
                             android:gravity="center"
                             android:text="@string/Q_uf9b" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf9b"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -176,11 +198,12 @@
                             android:layout_alignBottom="@id/qtxt_uf14"
                             android:gravity="center"
                             android:text="@string/Q_uf14" />
+
                     </RelativeLayout>
+
 
                     <RadioGroup
                         android:id="@+id/uf14"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

@@ -150,10 +150,6 @@ public class SectionCHDActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
-        json.put("im03dd", bi.im03dd1.isChecked() ? "98" : bi.im03dd.getText().toString());
-        json.put("im03mm", bi.im03mm.getText().toString());
-        json.put("im03yy", bi.im03yy.getText().toString());
         json.put("im41bcgdd", bi.im41bcgdd.getText().toString());
         json.put("im41bcgmm", bi.im41bcgmm.getText().toString());
         json.put("im41bcgyy", bi.im41bcgyy.getText().toString());

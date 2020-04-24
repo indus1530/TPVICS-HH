@@ -537,8 +537,8 @@
 
     <string name="uf09"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
     <string name="uf9a"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
-    <string name="uf9b">  کا رشتہ بچے کے ساتھ جواب دہندہ </string>
-    <string name="uf9b1"> والد / والدہ / دیکھ بھال کرنے والا / وال </string>
+    <string name="uf9b"> جواب دہندہ کا رشتہ بچے کے ساتھ </string>
+    <string name="uf9b1"> والی/والدہ، دیکھ بھال کرنے والا/والد </string>
     <string name="uf9b2"> حفاظتی ٹیکے لگ گئے لیکن خاندان کے رکن کو معلوم نہیں </string>
     <string name="uf9b98"> دیگر وضاحت </string>
 
@@ -644,7 +644,7 @@
     <string name="im42opv0mm"> مہینہ </string>
     <string name="im42opv0yy"> سال </string>
 
-    <string name="im43opv1"> پولیو (پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے) </string>
+    <string name="im43opv1"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
     <string name="im43opv1dd"> دن </string>
     <string name="im43opv1mm"> مہینہ </string>
     <string name="im43opv1yy"> سال </string>
