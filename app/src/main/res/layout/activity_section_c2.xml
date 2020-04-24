@@ -886,7 +886,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss20"
                             android:layout_alignBottom="@id/qtxt_ss20"
-                            android:gravity="top"
                             android:text="@string/Q_ss20" />
 
                     </RelativeLayout>
@@ -1036,7 +1035,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss21"
                             android:layout_alignBottom="@id/qtxt_ss21"
-                            android:gravity="top"
                             android:text="@string/Q_ss21" />
 
                     </RelativeLayout>
@@ -1093,7 +1091,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss22"
                             android:layout_alignBottom="@id/qtxt_ss22"
-                            android:gravity="top"
                             android:text="@string/Q_ss22" />
 
                     </RelativeLayout>
@@ -1151,7 +1148,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss23"
                             android:layout_alignBottom="@id/qtxt_ss23"
-                            android:gravity="top"
                             android:text="@string/Q_ss23" />
 
                     </RelativeLayout>
@@ -1164,22 +1160,22 @@
 
                         <RadioButton
                             android:id="@+id/ss23a"
+                            style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/ss23a" />
 
                         <RadioButton
                             android:id="@+id/ss23b"
+                            style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/ss23b" />
 
                         <RadioButton
                             android:id="@+id/ss2398"
+                            style="@style/radiobutton"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/dkn" />
 
@@ -1188,9 +1184,11 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/ss23ax"
                         style="@style/EditTextNum"
+                        android:gravity="center"
+                        android:textDirection="ltr"
                         android:hint="##.#"
                         android:text='@{ss23a.checked ? ss23ax.getText().toString() : "" }'
-                        android:enabled='@{ss23a.checked ? true : false }'
+                        android:visibility='@{ss23a.checked ? View.VISIBLE : View.GONE }'
                         app:mask="##.#"
                         app:maxValue="99"
                         app:minValue="1"
@@ -1199,9 +1197,11 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/ss23bx"
                         style="@style/EditTextNum"
+                        android:gravity="center"
+                        android:textDirection="ltr"
                         android:hint="##.#"
                         android:text='@{ss23b.checked ? ss23bx.getText().toString() : "" }'
-                        android:enabled='@{ss23b.checked ? true : false }'
+                        android:visibility='@{ss23b.checked ? View.VISIBLE : View.GONE }'
                         app:mask="##.#"
                         app:maxValue="99"
                         app:minValue="1"
@@ -1238,7 +1238,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss24"
                             android:layout_alignBottom="@id/qtxt_ss24"
-                            android:gravity="top"
                             android:text="@string/Q_ss24" />
 
                     </RelativeLayout>
@@ -1298,7 +1297,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss25"
                             android:layout_alignBottom="@id/qtxt_ss25"
-                            android:gravity="top"
                             android:text="@string/Q_ss25" />
 
                     </RelativeLayout>
@@ -1554,7 +1552,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss26"
                             android:layout_alignBottom="@id/qtxt_ss26"
-                            android:gravity="top"
                             android:text="@string/Q_ss26" />
 
                     </RelativeLayout>
@@ -1618,7 +1615,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss28"
                             android:layout_alignBottom="@id/qtxt_ss28"
-                            android:gravity="top"
                             android:text="@string/Q_ss28" />
 
                     </RelativeLayout>
