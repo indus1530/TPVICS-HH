@@ -68,7 +68,7 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{im03dd1.checked ? false : true}'
+                                android:enabled='@{!im03dd1.checked ? true : false}'
                                 android:hint="@string/im03dd"
                                 android:maxLength="2"
                                 android:text='@{im03dd1.checked ? "" : im03dd.getText().toString() }'
@@ -133,7 +133,7 @@
                                 android:hint="@string/im03yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
-                                app:minValue="0"
+                                app:minValue="2015"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -216,12 +216,16 @@
                                 android:layout_weight="1"
                                 android:text="@string/im41bcgdd" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im41bcgdd"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/im41bcgdd" />
+                                android:hint="@string/im41bcgdd"
+                                android:maxLength="2"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -233,12 +237,16 @@
                                 android:layout_weight="1"
                                 android:text="@string/im41bcgmm" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im41bcgmm"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/im41bcgmm" />
+                                android:hint="@string/im41bcgmm"
+                                android:maxLength="2"
+                                app:maxValue="11"
+                                app:minValue="1"
+                                app:type="range" />
 
                         </LinearLayout>
 
@@ -250,12 +258,16 @@
                                 android:layout_weight="1"
                                 android:text="@string/im41bcgyy" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im41bcgyy"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/im41bcgyy" />
+                                android:hint="@string/im41bcgyy"
+                                android:maxLength="4"
+                                app:maxValue="2020"
+                                app:minValue="2015"
+                                app:type="range" />
 
                         </LinearLayout>
 

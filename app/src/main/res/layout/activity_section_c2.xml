@@ -1326,6 +1326,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25a.getText().toString() }' />
 
                     </LinearLayout>
@@ -1353,6 +1354,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25b.getText().toString() }' />
 
                     </LinearLayout>
@@ -1380,6 +1382,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25c.getText().toString() }' />
 
                     </LinearLayout>
@@ -1407,6 +1410,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25d.getText().toString() }' />
 
                     </LinearLayout>
@@ -1434,6 +1438,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25e.getText().toString() }' />
 
                     </LinearLayout>
@@ -1461,6 +1466,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25f.getText().toString() }' />
 
                     </LinearLayout>
@@ -1488,6 +1494,7 @@
                             android:layout_weight="1"
                             android:hint="@string/num"
                             android:maxLength="3"
+                            android:enabled='@{ss2598.checked ? false : true }'
                             android:text='@{ss2598.checked ? "" : ss25g.getText().toString() }' />
 
                     </LinearLayout>
