@@ -104,6 +104,10 @@ public class SectionCHCActivity extends AppCompatActivity {
                                                                 bi.im02a96.isChecked() ? "96" :
                                                                         "0");
 
+        f1.put("im03dd", bi.im03dd1.isChecked() ? "98" : bi.im03dd.getText().toString());
+        f1.put("im03mm", bi.im03mm.getText().toString());
+        f1.put("im03yy", bi.im03yy.getText().toString());
+
         child.setsCC(String.valueOf(f1));
     }
 
