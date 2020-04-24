@@ -96,6 +96,43 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
             }
         });
 
+        bi.hh08.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                //      Toast.makeText(SectionAActivity.this, charSequence+" i="+i+" i1="+i1+" i2="+i2, Toast.LENGTH_LONG).show();
+
+                if (i == 1 && i1 == 0 && i2 == 1) {
+                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                }
+                if (i == 6 && i1 == 0 && i2 == 1) {
+                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                }
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if (i == 0 && i1 == 0 && i2 == 1) {
+                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                }
+                if (i == 2 && i1 == 1 && i2 == 0) {
+                    bi.hh08.setText(bi.hh08.getText().toString().substring(0, 1));
+                }
+                if (i == 1 && i1 == 4 && i2 == 5) {
+                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                }
+                if (i == 7 && i1 == 1 && i2 == 0) {
+                    bi.hh08.setText(bi.hh08.getText().toString().substring(0, 6));
+                }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                bi.hh08.setSelection(bi.hh08.getText().toString().length());
+            }
+        });
+
 
         bi.hh18.setOnCheckedChangeListener(((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpAHH17, i == bi.hh18a.getId());
@@ -166,15 +203,15 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
         json.put("hhhead", bl.getHhhead());
         json.put("hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());*/
-        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
-        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());
+/*        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
+        json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());*/
 
 
         json.put("hh07", bi.hh07.getText().toString());
-        json.put("hh03", bi.hh03.getText().toString());
-        json.put("hh04", bi.hh04.getText().toString());
+        json.put("geoarea", bi.hh06txt.getText().toString() + ", " + bi.geoarea.getText().toString());
+  /*      json.put("hh04", bi.hh04.getText().toString());
         json.put("hh05", bi.hh05.getText().toString());
-        json.put("hh06", bi.hh06.getText().toString());
+        json.put("hh06", bi.hh06.getText().toString());*/
         json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());
         json.put("hh09", MainApp.userName);
@@ -253,11 +290,12 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
                 String[] selSplit = selected.split("\\|");
 
                 bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
-                bi.hh03.setText(selSplit[0]);
+         /*       bi.hh03.setText(selSplit[0]);
                 bi.hh04.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
                 bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
-                bi.hh06.setText(selSplit[3]);
-
+                bi.hh06.setText(selSplit[3]);*/
+                bi.hh06txt.setText(selSplit[3]);
+                bi.geoarea.setText(selSplit[2] + ", " + selSplit[1] + ", " + selSplit[0]);
             }
         } else {
             Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
@@ -268,17 +306,17 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
 
-        /*bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh07.getText().toString().toUpperCase());
+        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase());
 
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
-            bi.hhName.setText(bl.getHhhead().toUpperCase());
-            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
-
+            bi.hh08msg.setText("Household Found!");
+            bi.hh08name.setText(bl.getHhhead().toUpperCase());
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }*/
+        }
+
 
         bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
 
