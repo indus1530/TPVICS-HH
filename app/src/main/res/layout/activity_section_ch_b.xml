@@ -328,6 +328,7 @@
                     <CheckBox
                         android:id="@+id/cb03dk"
                         style="@style/checkbox"
+                        android:tag="-1"
                         android:text="@string/cb03dk" />
 
                 </LinearLayout>
