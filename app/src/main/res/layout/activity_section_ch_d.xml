@@ -72,7 +72,7 @@
                                 android:hint="@string/im03dd"
                                 android:maxLength="2"
                                 android:text='@{im03dd1.checked ? "" : im03dd.getText().toString() }'
-                                app:maxValue="30"
+                                app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -111,7 +111,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im03mm"
                                 android:maxLength="2"
-                                app:maxValue="12"
+                                app:maxValue="11"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -132,7 +132,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im03yy"
                                 android:maxLength="4"
-                                app:maxValue="0"
+                                app:maxValue="2020"
                                 app:minValue="0"
                                 app:type="range" />
 
@@ -194,7 +194,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_toEndOf="@id/q_im41bcg"
-                                android:text="@string/im02a" />
+                                android:text="@string/im41bcg" />
 
                             <TextView
                                 android:id="@+id/q_im41bcg"
@@ -270,7 +270,6 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -292,6 +291,7 @@
                                 android:layout_alignBottom="@id/qtxt_im42opv0"
                                 android:gravity="center"
                                 android:text="@string/Q_im4_2opv0" />
+
                         </RelativeLayout>
 
 
@@ -357,10 +357,30 @@
 
                     <LinearLayout style="@style/vlinearlayout">
 
-                        <TextView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/im43opv1" />
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im43opv1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im43opv1"
+                                android:text="@string/im43opv1" />
+
+                            <TextView
+                                android:id="@+id/q_im43opv1"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im43opv1"
+                                android:layout_alignBottom="@id/qtxt_im43opv1"
+                                android:gravity="center"
+                                android:text="@string/Q_im4_3opv1" />
+
+                        </RelativeLayout>
+
 
                         <LinearLayout style="@style/hlinearlayout">
 
