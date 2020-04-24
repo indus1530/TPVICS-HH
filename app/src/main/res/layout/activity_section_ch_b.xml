@@ -262,7 +262,7 @@
                         style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb03_sub" />
+                        android:text="@string/cb03_info" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
