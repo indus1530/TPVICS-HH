@@ -555,7 +555,6 @@
                             android:onClick="showTooltip"
                             android:text="@string/Q_ss18" />
 
-
                     </RelativeLayout>
 
                     <TextView
@@ -1267,10 +1266,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25a.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1289,10 +1286,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25b.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1312,10 +1307,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25c.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1333,10 +1326,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25d.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1354,10 +1345,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25e.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1375,10 +1364,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25f.getText().toString() }' />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1396,29 +1383,8 @@
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{ss2598.checked ? false : true }'
                                 android:hint="@string/num"
-                                android:maxLength="3"
-                                android:text='@{ss2598.checked ? "" : ss25g.getText().toString() }' />
-
-                        </LinearLayout>
-
-
-                        <LinearLayout style="@style/hlinearlayout">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:padding="4dp"
-                                android:text="@string/dkn" />
-
-                            <CheckBox
-                                android:id="@+id/ss2598"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:tag="-1" />
+                                android:maxLength="3" />
 
                         </LinearLayout>
 
@@ -1535,8 +1501,6 @@
 
 
             <!--ENDBUTTON linearlayout-->
-            =
-
             <LinearLayout
                 style="@style/hlinearlayout"
                 android:layout_gravity="start"

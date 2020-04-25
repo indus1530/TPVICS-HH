@@ -230,7 +230,6 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -252,11 +251,11 @@
                             android:layout_alignBottom="@id/qtxt_uf15"
                             android:gravity="center"
                             android:text="@string/Q_uf15" />
+
                     </RelativeLayout>
 
                     <RadioGroup
                         android:id="@+id/uf15"
-
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 

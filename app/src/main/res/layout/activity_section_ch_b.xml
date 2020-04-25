@@ -62,7 +62,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_cb01"
                             android:layout_alignBottom="@id/qtxt_cb01"
-                            android:gravity="top"
                             android:text="@string/Q_cb01" />
 
                     </RelativeLayout>
@@ -157,7 +156,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_cb02"
                             android:layout_alignBottom="@id/qtxt_cb02"
-                            android:gravity="top"
                             android:text="@string/Q_cb02" />
 
                     </RelativeLayout>
@@ -253,7 +251,9 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_cb03"
                             android:layout_alignBottom="@id/qtxt_cb03"
-                            android:gravity="top"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="showTooltip"
                             android:text="@string/Q_cb03" />
 
                     </RelativeLayout>
@@ -376,7 +376,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_cb04"
                             android:layout_alignBottom="@id/qtxt_cb04"
-                            android:gravity="top"
                             android:text="@string/Q_cb04" />
 
                     </RelativeLayout>
@@ -459,7 +458,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_cb05"
                             android:layout_alignBottom="@id/qtxt_cb05"
-                            android:gravity="top"
                             android:text="@string/Q_cb05" />
 
                     </RelativeLayout>

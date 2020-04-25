@@ -105,7 +105,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch02"
                                 android:layout_alignBottom="@id/qtxt_ch02"
-                                android:gravity="top"
                                 android:text="@string/Q_ch02" />
 
                         </RelativeLayout>
@@ -150,7 +149,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch03"
                                 android:layout_alignBottom="@id/qtxt_ch03"
-                                android:gravity="top"
                                 android:text="@string/Q_ch03" />
 
                         </RelativeLayout>
@@ -194,7 +192,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch03b"
                                 android:layout_alignBottom="@id/qtxt_ch03b"
-                                android:gravity="top"
                                 android:text="@string/Q_ch03b" />
 
                         </RelativeLayout>
@@ -238,7 +235,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch04"
                                 android:layout_alignBottom="@id/qtxt_ch04"
-                                android:gravity="top"
                                 android:text="@string/Q_ch04" />
 
                         </RelativeLayout>
@@ -296,7 +292,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch05"
                                 android:layout_alignBottom="@id/qtxt_ch05"
-                                android:gravity="top"
                                 android:text="@string/Q_ch05" />
 
                         </RelativeLayout>
@@ -421,7 +416,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch06"
                                 android:layout_alignBottom="@id/qtxt_ch06"
-                                android:gravity="top"
                                 android:text="@string/Q_ch06" />
 
                         </RelativeLayout>
@@ -504,7 +498,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch07"
                                 android:layout_alignBottom="@id/qtxt_ch07"
-                                android:gravity="top"
                                 android:text="@string/Q_ch07" />
 
                         </RelativeLayout>
@@ -566,7 +559,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ch08"
                                 android:layout_alignBottom="@id/qtxt_ch08"
-                                android:gravity="top"
                                 android:text="@string/Q_ch08" />
 
                         </RelativeLayout>

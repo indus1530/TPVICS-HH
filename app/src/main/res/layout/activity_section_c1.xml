@@ -51,7 +51,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss01"
                             android:layout_alignBottom="@id/qtxt_ss01"
-                            android:gravity="top"
                             android:text="@string/Q_ss01" />
                     </RelativeLayout>
 
@@ -389,7 +388,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ss04"
                                 android:layout_alignBottom="@id/qtxt_ss04"
-                                android:gravity="top"
                                 android:text="@string/Q_ss04" />
                         </RelativeLayout>
 
@@ -453,7 +451,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_ss05"
                                 android:layout_alignBottom="@id/qtxt_ss05"
-                                android:gravity="top"
                                 android:text="@string/Q_ss05" />
                         </RelativeLayout>
 
@@ -548,8 +545,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss06"
                             android:layout_alignBottom="@id/qtxt_ss06"
-                            android:gravity="top"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="showTooltip"
                             android:text="@string/Q_ss06" />
+
                     </RelativeLayout>
 
                     <TextView
@@ -557,6 +557,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/ss06_info" />
+
                     <LinearLayout
                         android:id="@+id/fldGrpss06cv"
                         style="@style/vlinearlayout"
@@ -718,8 +719,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss07"
                             android:layout_alignBottom="@id/qtxt_ss07"
-                            android:gravity="top"
                             android:text="@string/Q_ss07" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -805,7 +806,6 @@
                             android:enabled='@{ss0796.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:tag="ss0796x"
                             android:text='@{ss0796.checked ? ss0796x.getText().toString() : "" }' />
 
                     </RadioGroup>
@@ -841,8 +841,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss08"
                             android:layout_alignBottom="@id/qtxt_ss08"
-                            android:gravity="top"
                             android:text="@string/Q_ss08" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -901,8 +901,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss09"
                             android:layout_alignBottom="@id/qtxt_ss09"
-                            android:gravity="top"
                             android:text="@string/Q_ss09" />
+
                     </RelativeLayout>
 
                     <RadioGroup
@@ -958,7 +958,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss10"
                             android:layout_alignBottom="@id/qtxt_ss10"
-                            android:gravity="top"
                             android:text="@string/Q_ss10" />
                     </RelativeLayout>
 
@@ -1006,7 +1005,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss11"
                             android:layout_alignBottom="@id/qtxt_ss11"
-                            android:gravity="top"
                             android:text="@string/Q_ss11" />
                     </RelativeLayout>
 
@@ -1060,7 +1058,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss12"
                             android:layout_alignBottom="@id/qtxt_ss12"
-                            android:gravity="top"
                             android:text="@string/Q_ss12" />
                     </RelativeLayout>
 
@@ -1120,7 +1117,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss13"
                             android:layout_alignBottom="@id/qtxt_ss13"
-                            android:gravity="top"
                             android:text="@string/Q_ss13" />
                     </RelativeLayout>
 
@@ -1219,7 +1215,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss14"
                             android:layout_alignBottom="@id/qtxt_ss14"
-                            android:gravity="top"
                             android:text="@string/Q_ss14" />
                     </RelativeLayout>
 

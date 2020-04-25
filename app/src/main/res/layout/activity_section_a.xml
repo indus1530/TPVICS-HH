@@ -48,7 +48,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_hh07"
                                 android:layout_alignBottom="@id/qtxt_hh07"
-                                android:gravity="top"
                                 android:text="@string/Q_hh07" />
 
                             <TextView
@@ -284,7 +283,6 @@
                                     android:layout_height="wrap_content"
                                     android:layout_alignTop="@id/qtxt_hh08"
                                     android:layout_alignBottom="@id/qtxt_hh08"
-                                    android:gravity="top"
                                     android:text="@string/Q_hh08" />
 
                                 <TextView
@@ -396,7 +394,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh13a"
                                         android:layout_alignBottom="@id/qtxt_hh13a"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh13a" />
 
                                 </RelativeLayout>
@@ -438,7 +435,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh13"
                                         android:layout_alignBottom="@id/qtxt_hh13"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh13" />
 
                                 </RelativeLayout>
@@ -480,7 +476,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh14"
                                         android:layout_alignBottom="@id/qtxt_hh14"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh14" />
 
                                 </RelativeLayout>
@@ -526,7 +521,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh15"
                                         android:layout_alignBottom="@id/qtxt_hh15"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh15" />
 
                                 </RelativeLayout>
@@ -584,7 +578,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh16"
                                         android:layout_alignBottom="@id/qtxt_hh16"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh16" />
 
                                 </RelativeLayout>
@@ -736,7 +729,6 @@
                                         android:layout_height="wrap_content"
                                         android:layout_alignTop="@id/qtxt_hh18"
                                         android:layout_alignBottom="@id/qtxt_hh18"
-                                        android:gravity="top"
                                         android:text="@string/Q_hh18" />
 
                                 </RelativeLayout>

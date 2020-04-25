@@ -246,7 +246,6 @@ public class SectionC2Activity extends AppCompatActivity {
         json.put("ss25e", bi.ss25e.getText().toString());
         json.put("ss25f", bi.ss25f.getText().toString());
         json.put("ss25g", bi.ss25g.getText().toString());
-        json.put("ss2598", bi.ss2598.isChecked() ? "98" : "0");
 
 
         json.put("ss26", bi.ss26a.isChecked() ? "1"
