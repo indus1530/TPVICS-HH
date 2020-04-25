@@ -66,15 +66,15 @@
 
                         <RadioButton
                             android:id="@+id/ss15aa"
-                            android:layout_height="match_parent"
                             android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/ss15ab"
-                            android:layout_height="match_parent"
                             android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:text="@string/no" />
 
@@ -336,8 +336,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss16"
                             android:layout_alignBottom="@id/qtxt_ss16"
-                            android:tooltipText="@string/ss18_info"
-                            android:text="@string/Q_ss16" />
+                            android:text="@string/Q_ss16"
+                            android:tooltipText="@string/ss18_info" />
 
                     </RelativeLayout>
 
@@ -391,10 +391,10 @@
                         <EditText
                             android:id="@+id/ss1696x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss1696.checked ? true : false }'
                             android:hint="@string/specify"
                             android:tag="ss1696"
-                            android:text='@{ss1696.checked ? ss1696x.getText().toString() : "" }'
-                            android:enabled='@{ss1696.checked ? true : false }' />
+                            android:text='@{ss1696.checked ? ss1696x.getText().toString() : "" }' />
 
                     </LinearLayout>
 
@@ -513,10 +513,10 @@
                         <EditText
                             android:id="@+id/ss1796x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss1796.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss1796.checked ? ss1796x.getText().toString() : "" }'
-                            android:enabled='@{ss1796.checked ? true : false }' />
+                            android:text='@{ss1796.checked ? ss1796x.getText().toString() : "" }' />
 
                     </RadioGroup>
 
@@ -563,6 +563,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/ss18_info" />
+
                     <RadioGroup
                         android:id="@+id/ss18"
                         android:layout_width="match_parent"
@@ -662,10 +663,10 @@
                         <EditText
                             android:id="@+id/ss1896x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss1896.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss1896.checked ? ss1896x.getText().toString() : "" }'
-                            android:enabled='@{ss1896.checked ? true : false }' />
+                            android:text='@{ss1896.checked ? ss1896x.getText().toString() : "" }' />
 
                     </RadioGroup>
 
@@ -805,10 +806,10 @@
                         <EditText
                             android:id="@+id/ss1996x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss1996.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss1996.checked ? ss1996x.getText().toString() : "" }'
-                            android:enabled='@{ss1996.checked ? true : false }' />
+                            android:text='@{ss1996.checked ? ss1996x.getText().toString() : "" }' />
 
                     </RadioGroup>
 
@@ -957,10 +958,10 @@
                         <EditText
                             android:id="@+id/ss2096x"
                             style="@style/EditTextAlpha"
+                            android:enabled='@{ss2096.checked ? true : false }'
                             android:hint="@string/specify"
                             android:maxLength="20"
-                            android:text='@{ss2096.checked ? ss2096x.getText().toString() : "" }'
-                            android:enabled='@{ss2096.checked ? true : false }' />
+                            android:text='@{ss2096.checked ? ss2096x.getText().toString() : "" }' />
 
                     </RadioGroup>
 
@@ -999,15 +1000,15 @@
 
                     </RelativeLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ss21"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:hint="@string/num"
-                            android:maxLength="2"
-                            app:maxValue="15"
-                            app:minValue="1"
-                            app:type="range" />
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/ss21"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:hint="@string/num"
+                        android:maxLength="2"
+                        app:maxValue="15"
+                        app:minValue="1"
+                        app:type="range" />
 
 
                 </LinearLayout>
@@ -1134,9 +1135,9 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/ss23ax"
                         style="@style/EditTextNum"
-                        android:textDirection="ltr"
                         android:hint="##.#"
                         android:text='@{ss23a.checked ? ss23ax.getText().toString() : "" }'
+                        android:textDirection="ltr"
                         android:visibility='@{ss23a.checked ? View.VISIBLE : View.GONE }'
                         app:mask="##.#"
                         app:maxValue="99"
@@ -1146,9 +1147,9 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/ss23bx"
                         style="@style/EditTextNum"
-                        android:textDirection="ltr"
                         android:hint="##.#"
                         android:text='@{ss23b.checked ? ss23bx.getText().toString() : "" }'
+                        android:textDirection="ltr"
                         android:visibility='@{ss23b.checked ? View.VISIBLE : View.GONE }'
                         app:mask="##.#"
                         app:maxValue="99"
@@ -1227,203 +1228,202 @@
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
 
-                        <TextView
-                            android:id="@+id/qtxt_ss25"
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_ss25"
-                            android:text="@string/ss25" />
+                            android:background="@drawable/bottom">
 
-                        <TextView
-                            android:id="@+id/q_ss25"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_ss25"
-                            android:layout_alignBottom="@id/qtxt_ss25"
-                            android:text="@string/Q_ss25" />
+                            <TextView
+                                android:id="@+id/qtxt_ss25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_ss25"
+                                android:text="@string/ss25" />
 
-                    </RelativeLayout>
+                            <TextView
+                                android:id="@+id/q_ss25"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_ss25"
+                                android:layout_alignBottom="@id/qtxt_ss25"
+                                android:text="@string/Q_ss25" />
+
+                        </RelativeLayout>
 
 
+                        <LinearLayout style="@style/hlinearlayout">
 
-                    <LinearLayout style="@style/hlinearlayout">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25a" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:padding="4dp"
-                            android:layout_weight="1"
-                            android:text="@string/ss25a" />
+                            <EditText
+                                android:id="@+id/ss25a"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25a.getText().toString() }' />
 
-                        <EditText
-                            android:id="@+id/ss25a"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25a.getText().toString() }' />
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25b" />
+
+                            <EditText
+                                android:id="@+id/ss25b"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25b.getText().toString() }' />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25c" />
+
+                            <EditText
+                                android:id="@+id/ss25c"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25c.getText().toString() }' />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25d" />
+
+                            <EditText
+                                android:id="@+id/ss25d"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25d.getText().toString() }' />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25e" />
+
+                            <EditText
+                                android:id="@+id/ss25e"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25e.getText().toString() }' />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25f" />
+
+                            <EditText
+                                android:id="@+id/ss25f"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25f.getText().toString() }' />
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/ss25g" />
+
+                            <EditText
+                                android:id="@+id/ss25g"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:enabled='@{ss2598.checked ? false : true }'
+                                android:hint="@string/num"
+                                android:maxLength="3"
+                                android:text='@{ss2598.checked ? "" : ss25g.getText().toString() }' />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/hlinearlayout">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:text="@string/dkn" />
+
+                            <CheckBox
+                                android:id="@+id/ss2598"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:tag="-1" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25b" />
-
-                        <EditText
-                            android:id="@+id/ss25b"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25b.getText().toString() }' />
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25c" />
-
-                        <EditText
-                            android:id="@+id/ss25c"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25c.getText().toString() }' />
-
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25d" />
-
-                        <EditText
-                            android:id="@+id/ss25d"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25d.getText().toString() }' />
-
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25e" />
-
-                        <EditText
-                            android:id="@+id/ss25e"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25e.getText().toString() }' />
-
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25f" />
-
-                        <EditText
-                            android:id="@+id/ss25f"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25f.getText().toString() }' />
-
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/ss25g" />
-
-                        <EditText
-                            android:id="@+id/ss25g"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:hint="@string/num"
-                            android:maxLength="3"
-                            android:enabled='@{ss2598.checked ? false : true }'
-                            android:text='@{ss2598.checked ? "" : ss25g.getText().toString() }' />
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout style="@style/hlinearlayout">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:padding="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/dkn" />
-
-                        <CheckBox
-                            android:id="@+id/ss2598"
-                            android:layout_height="wrap_content"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:tag="-1" />
-
-                    </LinearLayout>
-                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -1541,6 +1541,7 @@
                 style="@style/hlinearlayout"
                 android:layout_gravity="start"
                 android:layout_marginTop="24dp">
+
                 <Button
                     android:id="@+id/btnEnd"
                     android:layout_width="wrap_content"
@@ -1549,14 +1550,15 @@
                     android:background="@color/grayOverlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview" />
+
                 <Button
+                    android:id="@+id/btnNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="12dp"
-                    android:id="@+id/btnNext"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.BtnContinue()}"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
 
 

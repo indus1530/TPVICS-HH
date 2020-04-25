@@ -44,6 +44,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         setTitle(R.string.chsec);
         setupListeners();
         setupTextWatchers();
+
     }
 
     private void setupTextWatchers() {
