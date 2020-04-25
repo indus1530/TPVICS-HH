@@ -2,11 +2,15 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -18,6 +22,8 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChDBinding;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
@@ -28,6 +34,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHDActivity extends AppCompatActivity {
 
     ActivitySectionChDBinding bi;
+    boolean imFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,81 @@ public class SectionCHDActivity extends AppCompatActivity {
         bi.setCallback(this);
         setTitle(R.string.chsec);
         setupListeners();
+        setupTextWatchers();
+    }
+
+    private void setupTextWatchers() {
+        editTextImplementation(new EditTextPicker[]{bi.im41bcgdd, bi.im41bcgmm, bi.im41bcgyy});
+        editTextImplementation(new EditTextPicker[]{bi.im42opv0dd, bi.im42opv0mm, bi.im42opv0yy});
+    }
+
+    public void editTextImplementation(EditTextPicker[] editTextsArray) {
+        if (editTextsArray.length != 3) return;
+        EditTextPicker editTextPicker01 = editTextsArray[0];
+        EditTextPicker editTextPicker02 = editTextsArray[1];
+        EditTextPicker editTextPicker03 = editTextsArray[2];
+
+        for (EditTextPicker item : new EditTextPicker[]{editTextPicker01, editTextPicker02}) {
+            item.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    editTextPicker03.setText(null);
+                    editTextPicker03.setError(null);
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+        }
+
+        editTextPicker03.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String txt01, txt02, txt03;
+                editTextPicker01.setEnabled(true);
+                editTextPicker02.setEnabled(true);
+                if (!TextUtils.isEmpty(editTextPicker01.getText()) && !TextUtils.isEmpty(editTextPicker02.getText()) && !TextUtils.isEmpty(editTextPicker03.getText())) {
+                    txt01 = editTextPicker01.getText().toString();
+                    txt02 = editTextPicker02.getText().toString();
+                    txt03 = editTextPicker03.getText().toString();
+                } else return;
+                if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97")) ||
+                        (!editTextPicker02.isRangeTextValidate() || txt02.trim().equals("44") || txt02.trim().equals("97")) ||
+                        (!editTextPicker03.isRangeTextValidate() || txt03.trim().equals("44") || txt03.trim().equals("97")))
+                    return;
+                int day = Integer.parseInt(txt01);
+                int month = Integer.parseInt(txt02);
+                int year = Integer.parseInt(txt03);
+                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+                if (age == null) {
+                    editTextPicker03.setError("Invalid date!!");
+                    imFlag = false;
+                } else {
+                    imFlag = true;
+                    editTextPicker01.setEnabled(false);
+                    editTextPicker02.setEnabled(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+
     }
 
     private void setupListeners() {
@@ -312,6 +394,10 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
+        if (!imFlag) {
+            Toast.makeText(this, "Invalid date!!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHD);
     }
 
