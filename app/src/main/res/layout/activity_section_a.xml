@@ -805,7 +805,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/hh19a"
                                         style="@style/EditTextNum"
-                                        android:enabled='@{hh19b.checked ? false : false}'
+                                        android:enabled='@{!hh19b.checked ? true : false}'
                                         android:hint="@string/num"
                                         android:maxLength="2"
                                         android:text='@{hh19b.checked ? "" : hh19a.getText().toString }'
