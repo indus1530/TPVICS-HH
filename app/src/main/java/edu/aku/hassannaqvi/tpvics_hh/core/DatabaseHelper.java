@@ -1067,6 +1067,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public BLRandomContract getHHFromBLRandom(String subAreaCode, String hh) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
+
         String[] columns = {
                 SingleRandomHH.COLUMN_ID,
                 SingleRandomHH.COLUMN_LUID,

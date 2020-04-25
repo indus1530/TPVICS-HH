@@ -112,7 +112,8 @@
 
                         <EditText
                             android:id="@+id/ch02"
-                            style="@style/textInputName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:hint="@string/ch02" />
 
                     </LinearLayout>
@@ -156,7 +157,8 @@
 
                         <EditText
                             android:id="@+id/ch03"
-                            style="@style/textInputName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:hint="@string/ch03" />
 
                     </LinearLayout>
@@ -199,7 +201,8 @@
 
                         <EditText
                             android:id="@+id/ch03b"
-                            style="@style/textInputName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:hint="@string/ch03b" />
 
                     </LinearLayout>
@@ -242,18 +245,20 @@
 
                         <RadioGroup
                             android:id="@+id/ch04"
-                            style="@style/hradiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/ch04a"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch04a" />
 
                             <RadioButton
                                 android:id="@+id/ch04b"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch04b" />
@@ -314,7 +319,8 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05c"
-                                    style="@style/textInput"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:digits="0123456789"
                                     android:hint="@string/ch05c"
                                     android:inputType="number"
@@ -340,7 +346,8 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05b"
-                                    style="@style/textInput"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:hint="@string/ch05b"
                                     android:inputType="number"
                                     android:maxLength="2"
@@ -365,7 +372,8 @@
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05a"
-                                    style="@style/textInput"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:hint="@string/ch05a"
                                     android:inputType="number"
                                     android:maxLength="2"
@@ -564,18 +572,20 @@
 
                         <RadioGroup
                             android:id="@+id/ch08"
-                            style="@style/hradiogroup">
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/ch08a"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch08a" />
 
                             <RadioButton
                                 android:id="@+id/ch08b"
-                                style="@style/radiobutton"
+                                android:layout_height="wrap_content"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:text="@string/ch08b" />
