@@ -189,6 +189,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:background">#FFEB9C</item>
+        <item name="android:visibility">gone</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/green</item>
         <item name="android:textSize">20sp</item>
@@ -205,7 +206,7 @@
 
         <item name="android:textSize">20sp</item>
         <item name="android:padding">8dp</item>
-        <item name="android:textColor">@color/dullWhite</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
     <style name="textInputName" parent="Widget.AppCompat.EditText">
@@ -247,7 +248,6 @@
     <style name="textInput">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">12dp</item>
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:elevation">1dp</item>
         <item name="android:background">@color/white</item>
@@ -364,7 +364,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
         <item name="android:clickable">true</item>
-        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawablePadding">16dp</item>
         <item name="android:background">@drawable/bottom_options</item>
         <item name="android:padding">4dp</item>
 
@@ -390,7 +390,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
         <item name="android:clickable">true</item>
-        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawablePadding">16dp</item>
         <item name="android:background">@drawable/bottom_options</item>
         <item name="android:padding">4dp</item>
 

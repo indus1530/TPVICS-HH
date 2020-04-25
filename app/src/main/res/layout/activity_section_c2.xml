@@ -47,7 +47,6 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss15"
                             android:layout_alignBottom="@id/qtxt_ss15"
-                            android:gravity="top"
                             android:text="@string/Q_ss15" />
 
                     </RelativeLayout>
@@ -337,6 +336,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss16"
                             android:layout_alignBottom="@id/qtxt_ss16"
+                            android:tooltipText="@string/ss18_info"
                             android:text="@string/Q_ss16" />
 
                     </RelativeLayout>
@@ -550,7 +550,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_ss18"
                             android:layout_alignBottom="@id/qtxt_ss18"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="showTooltip"
                             android:text="@string/Q_ss18" />
+
 
                     </RelativeLayout>
 
@@ -1308,6 +1312,7 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:layout_height="wrap_content"
                             android:hint="@string/num"
                             android:maxLength="3"
                             android:enabled='@{ss2598.checked ? false : true }'
