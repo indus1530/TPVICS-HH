@@ -995,12 +995,10 @@
 
                     </RelativeLayout>
 
-
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/ss21"
                             style="@style/EditTextNum"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:hint="@string/num"
                             android:maxLength="2"
                             app:maxValue="15"
