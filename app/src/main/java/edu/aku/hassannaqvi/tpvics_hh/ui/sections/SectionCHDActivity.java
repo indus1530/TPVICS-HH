@@ -34,7 +34,6 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHDActivity extends AppCompatActivity {
 
     ActivitySectionChDBinding bi;
-    EditTextPicker[] im41bcg;
     boolean imFlag = false;
 
     @Override
@@ -48,9 +47,8 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private void setupTextWatchers() {
-        im41bcg = new EditTextPicker[]{bi.im41bcgdd, bi.im41bcgmm, bi.im41bcgyy};
-        editTextImplementation(im41bcg);
-
+        editTextImplementation(new EditTextPicker[]{bi.im41bcgdd, bi.im41bcgmm, bi.im41bcgyy});
+        editTextImplementation(new EditTextPicker[]{bi.im42opv0dd, bi.im42opv0mm, bi.im42opv0yy});
     }
 
     public void editTextImplementation(EditTextPicker[] editTextsArray) {
@@ -59,7 +57,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         EditTextPicker editTextPicker02 = editTextsArray[1];
         EditTextPicker editTextPicker03 = editTextsArray[2];
 
-        for (EditTextPicker item : new EditTextPicker[]{editTextPicker02, editTextPicker03}) {
+        for (EditTextPicker item : new EditTextPicker[]{editTextPicker01, editTextPicker02}) {
             item.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -69,6 +67,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     editTextPicker03.setText(null);
+                    editTextPicker03.setError(null);
                 }
 
                 @Override
@@ -103,7 +102,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
                 AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) {
-                    Validator.emptyCustomTextBox(SectionCHDActivity.this, editTextPicker03, "Invalid date!!");
+                    editTextPicker03.setError("Invalid date!!");
                     imFlag = false;
                 } else {
                     imFlag = true;
@@ -395,6 +394,10 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
+        if (!imFlag) {
+            Toast.makeText(this, "Invalid date!!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHD);
     }
 
