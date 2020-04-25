@@ -23,10 +23,12 @@
             <LinearLayout
                 android:id="@+id/fldGrpSectionA"
                 style="@style/vlinearlayout">
+
                 <!-- HEAD   -->
                 <TextView
                     style="@style/info"
                     android:text="@string/a101a" />
+
                 <!-- Cluster Check   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/checkPSUcv"
@@ -697,6 +699,7 @@
                                         android:layout_height="wrap_content"
                                         android:hint="@string/hh17b"
                                         android:maxLength="11" />
+
                                 </LinearLayout>
 
                             </LinearLayout>

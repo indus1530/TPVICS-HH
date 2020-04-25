@@ -202,7 +202,7 @@
     <string name="ss03k">  پانی کا ٹینکر / ٹرک </string>
     <string name="ss03l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
     <string name="ss03m"> سطح والا پانی (دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی) </string>
-    <string name="ss03h4"> PACKAGED WATER </string>
+    <string name="ss03h4"> پیک شدہ پانی </string>
     <string name="ss03n">  بوتل کا پانی </string>
     <string name="ss03x"> دیگر </string>
 
@@ -220,7 +220,7 @@
     <string name="ss05x"> کریں </string>
 
     <string name="ss06"> آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اور ہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے ؟ </string>
-    <string name="ss06_info">  اگر وضاحت درکار ہو تو اس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں </string>
+    <string name="ss06_info"> اگر وضاحت درکار ہو تو اس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں </string>
     <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن </string>
     <string name="ss06a"> گھر میں نلکا </string>
     <string name="ss06b"> صحن میں نلکا </string>
@@ -237,7 +237,7 @@
     <string name="ss06k"> پانی کا ٹینکر / ٹرک </string>
     <string name="ss06l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
     <string name="ss06m"> سطح والا پانی ( دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی ) </string>
-    <string name="ss06n_title"> PACKAGED WATER </string>
+    <string name="ss06n_title"> پیک شدہ پانی </string>
     <string name="ss06n"> بوتل کا پانی </string>
     <string name="ss06x"> دیگر </string>
 
