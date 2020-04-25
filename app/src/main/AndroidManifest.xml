@@ -23,40 +23,51 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
+
         <activity
             android:name=".ui.sections.SectionCHCActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionCHAActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionCHBActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionCHCActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionCHDActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionCHEActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionC2Activity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionC1Activity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
@@ -65,10 +76,12 @@
             android:name=".ui.sections.SectionAActivity"
             android:label="@string/hhsec"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".ui.sections.SectionBActivity"
             android:label="@string/tdheading"
@@ -78,18 +91,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity" />
         </activity>
+
         <activity
             android:name=".ui.other.EndingActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".ui.sync.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"

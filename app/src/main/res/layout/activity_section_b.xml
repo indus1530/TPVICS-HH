@@ -324,6 +324,7 @@
                                     android:digits="0123456789"
                                     android:hint="@string/ch05c"
                                     android:inputType="number"
+                                    android:onTextChanged="@{callback.ch05cOnTextChanged}"
                                     android:maxLength="4"
                                     android:textColor="@android:color/black"
                                     app:defaultValue="00"
