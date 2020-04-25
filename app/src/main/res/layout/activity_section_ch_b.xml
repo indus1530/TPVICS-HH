@@ -277,12 +277,12 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
+                            android:hint="@string/days"
                             android:enabled='@{!cb03dk.checked ? true : false }'
+                            android:text='@{cb03dk.checked ? "" : cb03dd.getText().toString() }'
                             app:mask="##"
                             app:maxValue="29"
                             app:minValue="1"
-                            android:hint="@string/days"
-                            android:text='@{cb03dk.checked ? "" : cb03dd.getText().toString() }'
                             app:type="range" />
 
                     </LinearLayout>
