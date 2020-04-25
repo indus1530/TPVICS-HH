@@ -278,6 +278,7 @@ public class SectionC2Activity extends AppCompatActivity {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
+
     public void showTooltip(@NotNull View view) {
         if (view.getId() != View.NO_ID) {
             String package_name = getApplicationContext().getPackageName();
@@ -289,10 +290,14 @@ public class SectionC2Activity extends AppCompatActivity {
             int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
 
             // Fetch info text from strings.xml
-            String infoText = (String) getResources().getText(stringRes);
+            //String infoText = (String) getResources().getText(stringRes);
 
             // Check if string resource exists to avoid crash on missing info string
             if (stringRes != 0) {
+
+                // Fetch info text from strings.xml
+                String infoText = (String) getResources().getText(stringRes);
+
                 new AlertDialog.Builder(this)
                         .setTitle("Info: " + infoid.toUpperCase())
                         .setMessage(infoText)
