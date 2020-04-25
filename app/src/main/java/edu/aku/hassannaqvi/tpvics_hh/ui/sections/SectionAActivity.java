@@ -18,7 +18,6 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
@@ -49,52 +48,13 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
         setTitle(R.string.hhsec);
     }
 
+    public void hh07TextChanged(CharSequence s, int start, int before, int count) {
+        bi.fldGrpSectionA01.setVisibility(View.GONE);
+        bi.fldGrpSectionA02.setVisibility(View.GONE);
+        Clear.clearAllFields(bi.fldGrpSectionA01);
+    }
+
     private void setUIComponent() {
-
-        bi.hh07.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (bi.hh07.getText().hashCode() == s.hashCode()) {
-                    bi.fldGrpSectionA01.setVisibility(View.GONE);
-                    bi.fldGrpSectionA02.setVisibility(View.GONE);
-                    Clear.clearAllFields(bi.fldGrpSectionA01);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-
-        bi.hh07.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (Objects.requireNonNull(bi.hh07.getText()).hashCode() == s.hashCode()) {
-                    bi.fldGrpSectionA02.setVisibility(View.GONE);
-                    Clear.clearAllFields(bi.fldGrpSectionA02);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
         bi.hh08.addTextChangedListener(new TextWatcher() {
             @Override

@@ -60,6 +60,7 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/hh07"
+                                android:onTextChanged="@{callback.hh07TextChanged}"
                                 style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

@@ -172,41 +172,28 @@ public class SectionBActivity extends AppCompatActivity {
 
         }
 
-        bi.ch05c.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    }
 
-            }
+    public void ch05cOnTextChanged(CharSequence s, int start, int before, int count) {
+        bi.ch06.setEnabled(false);
+        bi.ch06.setText(null);
+        bi.ch06a.setEnabled(false);
+        bi.ch06a.setText(null);
+        if (!bi.ch05a.isRangeTextValidate() || !bi.ch05b.isRangeTextValidate() || !bi.ch05c.isRangeTextValidate())
+            return;
+        if (bi.ch05a.getText().toString().equals("00") && bi.ch05b.getText().toString().equals("00") && bi.ch05c.getText().toString().equals("00")) {
+            bi.ch06.setEnabled(true);
+            bi.ch06a.setEnabled(true);
+            return;
+        }
+        int day = bi.ch05a.getText().toString().equals("00") ? 0 : Integer.parseInt(bi.ch05a.getText().toString());
+        int month = Integer.parseInt(bi.ch05b.getText().toString());
+        int year = Integer.parseInt(bi.ch05c.getText().toString());
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                bi.ch06.setEnabled(false);
-                bi.ch06.setText(null);
-                bi.ch06a.setEnabled(false);
-                bi.ch06a.setText(null);
-                if (!bi.ch05a.isRangeTextValidate() || !bi.ch05b.isRangeTextValidate() || !bi.ch05c.isRangeTextValidate())
-                    return;
-                if (bi.ch05a.getText().toString().equals("00") && bi.ch05b.getText().toString().equals("00") && bi.ch05c.getText().toString().equals("00")) {
-                    bi.ch06.setEnabled(true);
-                    bi.ch06a.setEnabled(true);
-                    return;
-                }
-                int day = bi.ch05a.getText().toString().equals("00") ? 0 : Integer.parseInt(bi.ch05a.getText().toString());
-                int month = Integer.parseInt(bi.ch05b.getText().toString());
-                int year = Integer.parseInt(bi.ch05c.getText().toString());
-
-                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
-                if (age == null) return;
-                bi.ch06.setText(String.valueOf(age.getYear()));
-                bi.ch06a.setText(String.valueOf(age.getMonth()));
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
+        AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+        if (age == null) return;
+        bi.ch06.setText(String.valueOf(age.getYear()));
+        bi.ch06a.setText(String.valueOf(age.getMonth()));
     }
 
     @Override
