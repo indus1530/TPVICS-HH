@@ -131,6 +131,7 @@
 
 
     <string name="chsec"> Child Information </string>
+    <string name="chBsec"> Child Background </string>
     <string name="ch_title"> بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج: </string>
 
     <string name="ch_cluster"> کلسٹر نمبر: </string>

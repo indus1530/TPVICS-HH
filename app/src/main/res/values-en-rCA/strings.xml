@@ -711,6 +711,7 @@
     <string name="yes">Yes</string>
     <string name="hhsec">" Section H1: HouseHold Information "</string>
     <string name="chsec">" Child Information "</string>
+    <string name="chBsec"> Child Background </string>
     <string name="ss18c">" لکٹری کے تختے"</string>
     <string name="ss18d">" کھجور  یاناریل کے پتے /بانس"</string>
     <string name="ss18e_title">" تیار فرش "</string>
