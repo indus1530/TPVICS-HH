@@ -277,11 +277,30 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03dd"
+                            android:enabled='@{!cb03dk.checked ? true : false }'
                             app:mask="##"
                             app:maxValue="29"
                             app:minValue="1"
+                            android:hint="@string/days"
+                            android:text='@{cb03dk.checked ? "" : cb03dd.getText().toString() }'
                             app:type="range" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/cb03dk" />
+
+                        <CheckBox
+                            android:id="@+id/cb03dk"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:tag="-1" />
 
                     </LinearLayout>
 
@@ -298,7 +317,7 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03mm"
+                            android:hint="@string/month"
                             app:mask="##"
                             app:maxValue="11"
                             app:minValue="1"
@@ -319,19 +338,13 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb03yy"
+                            android:hint="@string/year"
                             app:mask="####"
                             app:maxValue="2020"
                             app:minValue="2018"
                             app:type="range" />
 
                     </LinearLayout>
-
-                    <CheckBox
-                        android:id="@+id/cb03dk"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/cb03dk" />
 
                 </LinearLayout>
 
