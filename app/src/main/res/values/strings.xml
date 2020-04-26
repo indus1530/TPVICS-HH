@@ -32,9 +32,9 @@
 
     <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up</string>
 
-    <string name="splashText2">"    Empowerment and Care  Strategies  to Address Health and Survival"</string>
+    <string name="splashText2">"Empowerment and Care  Strategies  to Address Health and Survival"</string>
 
-    <string name="sM">"    Centre of Excellence Women &amp; Child Health"</string>
+    <string name="sM">"Centre of Excellence Women &amp; Child Health"</string>
     <string name="no"> نہیں </string>
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
@@ -95,12 +95,12 @@
 
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
 
-    <string name="hh16a"> گھر کے سربراہ کا نام</string>
-    <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
+    <string name="hh16a"> سربراہ کا نام </string>
+    <string name="hh16b"> سربراہ کا فون نمبر </string>
 
-    <string name="hh17"> گھرانے کے سربراہ  کے سوال نامے میں جواب دہندہ کا نام اور فون  نمبر ( اگر سربراہ جواب دہندہ نہیں ہے ) </string>
-    <string name="hh17a"> گھر کے سربراہ کا نام </string>
-    <string name="hh17b"> گھر کے سربراہ کا فون  نمبر </string>
+    <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
+    <string name="hh17a"> سربراہ کا نام </string>
+    <string name="hh17b"> سربراہ کا فون نمبر </string>
 
     <string name="hh18"> کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے </string>
@@ -110,9 +110,10 @@
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
+    <string name="hh19_info"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔   اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے تو 95 درج کریں </string>
 
     <string name="hh20"> کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
-    <string name="hh20h"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
+    <string name="hh20_info"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 

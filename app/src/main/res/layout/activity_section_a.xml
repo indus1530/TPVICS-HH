@@ -15,7 +15,6 @@
     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
 
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -61,13 +60,13 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/hh07"
-                                android:onTextChanged="@{callback.hh07TextChanged}"
                                 style="@style/EditTextNum"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_toEndOf="@id/qtxt_hh07"
                                 android:inputType="number"
                                 android:maxLength="6"
+                                android:onTextChanged="@{callback.hh07TextChanged}"
                                 android:textDirection="ltr" />
 
                         </RelativeLayout>
@@ -302,8 +301,8 @@
                                     android:layout_toEndOf="@id/qtxt_hh08"
                                     android:hint="#-####-###"
                                     android:inputType="textCapCharacters"
-                                    android:textDirection="ltr"
-                                    android:maxLength="10" />
+                                    android:maxLength="10"
+                                    android:textDirection="ltr" />
 
                             </RelativeLayout>
 
@@ -345,6 +344,7 @@
                                         android:typeface="sans" />
 
                                 </LinearLayout>
+
                                 <Button
                                     android:id="@+id/checkHHBtn3"
                                     android:layout_width="wrap_content"
@@ -356,6 +356,7 @@
                                     android:padding="12dp"
                                     android:text="CHECK HOUSEHOLD"
                                     android:textColor="@color/colorPrimaryDark" />
+
                             </LinearLayout>
 
                         </LinearLayout>
@@ -403,8 +404,8 @@
                                 <EditText
                                     android:id="@+id/hh13a"
                                     style="@style/EditTextAlpha"
-                                    android:maxLength="20"
-                                    android:hint="@string/name" />
+                                    android:hint="@string/name"
+                                    android:maxLength="20" />
 
                             </LinearLayout>
 
@@ -588,45 +589,52 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/name" />
 
-                                <EditText
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/hh16a" />
 
-                                    android:id="@+id/hh16a"
-                                    style="@style/EditTextAlpha"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:enabled="@{hh15a.checked ? true : false }"
-                                    android:hint="@string/hh16a"
-                                    android:maxLength="30"
-                                    android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
+                                    <EditText
+                                        android:id="@+id/hh16a"
+                                        style="@style/EditTextAlpha"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:enabled="@{hh15a.checked ? true : false }"
+                                        android:hint="@string/name"
+                                        android:maxLength="30"
+                                        android:text='@{hh15a.checked ? hh16a.getText().toString() : "" }' />
+
                                 </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/hh16b" />
 
-                                <EditText
-                                    android:id="@+id/hh16b"
-                                    style="@style/EditTextNum"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:enabled="@{hh15a.checked ? true : false }"
-                                    android:hint="@string/hh16b"
-                                    android:maxLength="11"
-                                    android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/hh16b" />
+
+                                    <EditText
+                                        android:id="@+id/hh16b"
+                                        style="@style/EditTextNum"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:enabled="@{hh15a.checked ? true : false }"
+                                        android:hint="@string/hh16b"
+                                        android:maxLength="11"
+                                        android:text='@{hh15a.checked ? hh16b.getText().toString() : "" }' />
 
                                 </LinearLayout>
+
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
@@ -662,41 +670,43 @@
 
                                 </RelativeLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/name" />
 
-                                <EditText
-                                    android:id="@+id/hh17a"
-                                    style="@style/EditTextAlpha"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="wrap_content"
-                                    android:hint="@string/hh17a"
-                                    android:maxLength="30" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                                <LinearLayout style="@style/hlinearlayout">
 
                                     <TextView
-                                        android:layout_width="wrap_content"
+                                        android:layout_width="0dp"
                                         android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/hh17a" />
+
+                                    <EditText
+                                        android:id="@+id/hh17a"
+                                        style="@style/EditTextAlpha"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:hint="@string/hh17a"
+                                        android:maxLength="30" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout style="@style/hlinearlayout">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
                                         android:text="@string/hh17b" />
 
                                     <EditText
                                         android:id="@+id/hh17b"
                                         style="@style/EditTextNum"
                                         android:layout_width="0dp"
-                                        android:layout_weight="1"
-                                        android:layout_height="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
                                         android:hint="@string/hh17b"
                                         android:maxLength="11" />
 
@@ -705,6 +715,7 @@
                             </LinearLayout>
 
                         </androidx.cardview.widget.CardView>
+
 
                         <!-- hh18  Radio   -->
                         <androidx.cardview.widget.CardView
@@ -793,6 +804,9 @@
                                             android:layout_height="wrap_content"
                                             android:layout_alignTop="@id/qtxt_hh19"
                                             android:layout_alignBottom="@id/qtxt_hh19"
+                                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                            android:drawablePadding="16dp"
+                                            android:onClick="showTooltip"
                                             android:text="@string/Q_hh19" />
 
                                     </RelativeLayout>
@@ -800,20 +814,11 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/hh19a"
                                         style="@style/EditTextNum"
-                                        android:enabled='@{!hh19b.checked ? true : false}'
-                                        android:hint="@string/num"
+                                        android:hint="@string/hh19a"
                                         android:maxLength="2"
-                                        android:text='@{hh19b.checked ? "" : hh19a.getText().toString }'
-                                        app:maxValue="94"
+                                        app:maxValue="95"
                                         app:minValue="1"
                                         app:type="range" />
-
-                                    <CheckBox
-                                        android:id="@+id/hh19b"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:tag="-1"
-                                        android:text="@string/hh19b" />
 
                                 </LinearLayout>
 
@@ -846,15 +851,12 @@
                                             android:layout_height="wrap_content"
                                             android:layout_alignTop="@id/qtxt_hh20"
                                             android:layout_alignBottom="@id/qtxt_hh20"
+                                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                            android:drawablePadding="16dp"
+                                            android:onClick="showTooltip"
                                             android:text="@string/Q_hh20" />
 
                                     </RelativeLayout>
-
-                                    <TextView
-                                        style="@style/info"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/hh20h" />
 
                                     <RadioGroup
                                         android:id="@+id/hh20"
@@ -929,6 +931,7 @@
 
                         </LinearLayout>
 
+
                         <!--ENDBUTTON linearlayout-->
                         <LinearLayout
                             style="@style/hlinearlayout"
@@ -954,7 +957,6 @@
                                 android:background="@color/colorPrimary"
                                 android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                                 android:onClick="@{() -> callback.BtnContinue()}"
-
                                 android:text="@string/nextSection"
                                 android:visibility="@{hh18a.checked ? View.VISIBLE : View.GONE}" />
 

@@ -7,18 +7,19 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
@@ -182,10 +183,9 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
         json.put("hh13b", bi.hh13b.getText().toString());
         json.put("hh14", bi.hh14.getText().toString());
 
-        json.put("hh15",
-                bi.hh15a.isChecked() ? "1" :
-                        bi.hh15b.isChecked() ? "2" :
-                                "0");
+        json.put("hh15", bi.hh15a.isChecked() ? "1"
+                : bi.hh15b.isChecked() ? "2"
+                : "0");
 
         json.put("hh16a", bi.hh16a.getText().toString());
         json.put("hh16b", bi.hh16b.getText().toString());
@@ -197,11 +197,12 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
                 : bi.hh18b.isChecked() ? "2"
                 : "0");
 
-        json.put("hh18", bi.hh19b.isChecked() ? "1"
+        json.put("hh18", bi.hh18a.isChecked() ? "1"
                 : bi.hh18b.isChecked() ? "2"
                 : "0");
 
-        json.put("hh19", bi.hh19b.isChecked() ? "95" : bi.hh19a.getText().toString());
+        json.put("hh19", bi.hh19a.getText().toString());
+
         json.put("hh20", bi.hh20a.isChecked() ? "1"
                 : bi.hh20b.isChecked() ? "2"
                 : "0");
@@ -298,4 +299,41 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
         }
 
     }
+
+
+    public void showTooltip(@NotNull View view) {
+        if (view.getId() != View.NO_ID) {
+            String package_name = getApplicationContext().getPackageName();
+
+            // Question Number Textview ID must be prefixed with q_ e.g.: 'q_aa12a'
+            String infoid = view.getResources().getResourceName(view.getId()).replace(package_name + ":id/q_", "");
+
+            // Question info text must be suffixed with _info e.g.: aa12a_info
+            int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
+
+            // Fetch info text from strings.xml
+            //String infoText = (String) getResources().getText(stringRes);
+
+            // Check if string resource exists to avoid crash on missing info string
+            if (stringRes != 0) {
+
+                // Fetch info text from strings.xml
+                String infoText = (String) getResources().getText(stringRes);
+
+                new AlertDialog.Builder(this)
+                        .setTitle("Info: " + infoid.toUpperCase())
+                        .setMessage(infoText)
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .show();
+            } else {
+                Toast.makeText(this, "No information available on this question.", Toast.LENGTH_SHORT).show();
+            }
+
+        } else {
+            Toast.makeText(this, "No ID Associated with this question.", Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+
 }

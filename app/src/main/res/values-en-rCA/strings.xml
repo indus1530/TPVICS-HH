@@ -105,9 +105,10 @@
     <string name="hh19h"> Note for enumorators: Persons who live in this dwelling / compound and usually share a meal together </string>
     <string name="hh19a"> Number of Persons </string>
     <string name="hh19b"> If 95 or more </string>
+    <string name="hh19_info"> Note for Enumorators: Persons who live in this dwelling / compound and usually share a meal together- \n Enter 95 If 95 or more </string>
 
     <string name="hh20"> HH20:  Does this HH have children 12-23 months years of age ? </string>
-    <string name="hh20h"> i.e., children who have reached their first birthday, but not their second birthday </string>
+    <string name="hh20_info"> i.e., children who have reached their first birthday, but not their second birthday </string>
     <string name="hh20a"> Yes </string>
     <string name="hh20b"> No </string>
 
