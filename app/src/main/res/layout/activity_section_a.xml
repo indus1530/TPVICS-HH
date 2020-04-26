@@ -299,10 +299,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_toEndOf="@id/qtxt_hh08"
-                                    android:textDirection="ltr"
                                     android:hint="#-####-###"
-                                    app:mask="#-####-###"
-                                    app:type="equal" />
+                                    android:inputType="textCapCharacters"
+                                    android:maxLength="10"
+                                    android:textDirection="ltr" />
 
                             </RelativeLayout>
 
