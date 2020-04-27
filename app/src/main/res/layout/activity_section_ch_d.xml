@@ -2031,12 +2031,12 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im12"
-                                style="@style/EditTextAlpha"
+                                style="@style/EditTextNum"
                                 android:hint="@string/im12"
                                 android:inputType="number"
                                 app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                app:maxValue="50"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
