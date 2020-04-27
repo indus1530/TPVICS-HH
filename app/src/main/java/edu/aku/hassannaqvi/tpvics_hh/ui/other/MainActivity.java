@@ -50,15 +50,15 @@ import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionBActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHCActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHDActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHEActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionHHActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSS1Activity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSS2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 
@@ -181,16 +181,16 @@ public class MainActivity extends AppCompatActivity {
         Intent oF = null;
         switch (id) {
             case R.id.formA:
-                oF = new Intent(this, SectionAActivity.class);
+                oF = new Intent(this, SectionHHActivity.class);
                 break;
             case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);
                 break;
             case R.id.formC1:
-                oF = new Intent(this, SectionC1Activity.class);
+                oF = new Intent(this, SectionSS1Activity.class);
                 break;
             case R.id.formC2:
-                oF = new Intent(this, SectionC2Activity.class);
+                oF = new Intent(this, SectionSS2Activity.class);
                 break;
             case R.id.formCHA:
                 oF = new Intent(this, SectionCHAActivity.class);

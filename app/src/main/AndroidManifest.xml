@@ -49,11 +49,11 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionC2Activity"
+            android:name=".ui.sections.SectionSS2Activity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.sections.SectionC1Activity"
+            android:name=".ui.sections.SectionSS1Activity"
             android:screenOrientation="portrait" />
 
         <activity
@@ -73,7 +73,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ui.sections.SectionAActivity"
+            android:name=".ui.sections.SectionHHActivity"
             android:label="@string/hhsec"
             android:screenOrientation="portrait" />
 

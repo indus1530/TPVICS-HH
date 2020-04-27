@@ -20,18 +20,18 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC1Binding;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSs1Binding;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
-public class SectionC1Activity extends AppCompatActivity {
+public class SectionSS1Activity extends AppCompatActivity {
 
-    ActivitySectionC1Binding bi;
+    ActivitySectionSs1Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ss1);
         bi.setCallback(this);
         setTitle(R.string.sssec);
         setupSkips();
@@ -106,7 +106,7 @@ public class SectionC1Activity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionC2Activity.class));
+                startActivity(new Intent(this, SectionSS2Activity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

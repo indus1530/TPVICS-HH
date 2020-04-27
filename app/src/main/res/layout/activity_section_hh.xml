@@ -1,7 +1,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.sections.SectionAActivity">
+    tools:context=".ui.sections.SectionHHActivity">
 
     <data>
 
@@ -9,7 +9,7 @@
 
         <variable
             name="callback"
-            type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionAActivity" />
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionHHActivity" />
     </data>
 
     <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -66,7 +66,7 @@
                                 android:layout_toEndOf="@id/qtxt_hh07"
                                 android:inputType="number"
                                 android:maxLength="6"
-                                android:onTextChanged="@{callback.hh07TextChanged}"
+                                android:onTextChanged="@{callback::hh07TextChanged}"
                                 android:textDirection="ltr" />
 
                         </RelativeLayout>

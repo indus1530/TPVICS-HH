@@ -7,6 +7,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -17,32 +21,29 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionHhBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSecAActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
-public class SectionAActivity extends AppCompatActivity implements EndSecAActivity {
+public class SectionHHActivity extends AppCompatActivity implements EndSecAActivity {
 
-    ActivitySectionABinding bi;
+    ActivitySectionHhBinding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_hh);
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
         setUIComponent();
@@ -60,7 +61,7 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
         bi.hh08.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                //      Toast.makeText(SectionAActivity.this, charSequence+" i="+i+" i1="+i1+" i2="+i2, Toast.LENGTH_LONG).show();
+                //      Toast.makeText(SectionHHActivity.this, charSequence+" i="+i+" i1="+i1+" i2="+i2, Toast.LENGTH_LONG).show();
 
                 if (i == 1 && i1 == 0 && i2 == 1) {
                     bi.hh08.setText(bi.hh08.getText().toString() + "-");
@@ -121,7 +122,7 @@ public class SectionAActivity extends AppCompatActivity implements EndSecAActivi
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(SectionAActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf("5")));
+                startActivity(new Intent(SectionHHActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf("5")));
             }
         }
     }

@@ -20,21 +20,21 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
-import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionC2Binding;
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSs2Binding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.selectedChildren;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
 
-public class SectionC2Activity extends AppCompatActivity {
+public class SectionSS2Activity extends AppCompatActivity {
 
-    ActivitySectionC2Binding bi;
+    ActivitySectionSs2Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c2);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ss2);
         bi.setCallback(this);
         setupSkips();
 
@@ -288,9 +288,6 @@ public class SectionC2Activity extends AppCompatActivity {
 
             // Question info text must be suffixed with _info e.g.: aa12a_info
             int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
-
-            // Fetch info text from strings.xml
-            //String infoText = (String) getResources().getText(stringRes);
 
             // Check if string resource exists to avoid crash on missing info string
             if (stringRes != 0) {

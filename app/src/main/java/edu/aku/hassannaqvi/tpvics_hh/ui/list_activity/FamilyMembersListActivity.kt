@@ -19,7 +19,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp.openDialog
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityFamilyMembersListBinding
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ItemMemListBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionBActivity
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionC1Activity
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSS1Activity
 import edu.aku.hassannaqvi.tpvics_hh.utils.openEndActivity
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
 import kotlinx.android.synthetic.main.activity_family_members_list.*
@@ -87,7 +87,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
                                     if (memSelectedCounter != serial - 1) return@run
 
                                     finish()
-                                    startActivity(Intent(this, SectionC1Activity::class.java))
+                                    startActivity(Intent(this, SectionSS1Activity::class.java))
                                 }
                                 else -> openEndActivity(this)
                             }
