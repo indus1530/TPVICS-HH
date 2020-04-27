@@ -1127,8 +1127,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnumBlockTable.COLUMN_CLUSTER_AREA
         };
 
-        String whereClause = EnumBlockTable.COLUMN_CLUSTER_AREA + " =?";
-        String[] whereArgs = new String[]{cluster};
+        String whereClause = null;
+        String[] whereArgs = null;
+        if (cluster != null) {
+            whereClause = EnumBlockTable.COLUMN_CLUSTER_AREA + " =?";
+            whereArgs = new String[]{cluster};
+        }
         String groupBy = null;
         String having = null;
 

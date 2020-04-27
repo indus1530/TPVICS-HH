@@ -37,6 +37,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -100,17 +101,16 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     TextView txtinstalldate;
     @BindView(R.id.email_sign_in_button)
     AppCompatButton mEmailSignInButton;
-
     @BindView(R.id.syncData)
     ImageButton syncData;
-
+    @BindView(R.id.spinnerProvince)
+    Spinner spinnerProvince;
+    @BindView(R.id.spinnerDistrict)
+    Spinner spinnerDistrict;
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
-
     String DirectoryName;
-
     DatabaseHelper db;
-
     private UserLoginTask mAuthTask = null;
 
     @Override
@@ -133,12 +133,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         }
 
-
-        // Set up the login form.
-//        mEmailView = findViewById(R.id.email);
         populateAutoComplete();
         gettingDeviceIMEI();
-        Target viewTarget = new ViewTarget(R.id.syncData, this);
+        Target viewTarget = new ViewTarget(syncData.getId(), this);
 
         new ShowcaseView.Builder(this)
                 .setTarget(viewTarget)
@@ -156,12 +153,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             return false;
         });
 
-
         mEmailSignInButton.setOnClickListener(view -> attemptLogin());
 
         db = new DatabaseHelper(this);
 //        DB backup
-
         dbBackup();
     }
 
@@ -309,24 +304,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
     }
 
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
-    }
-
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() >= 7;
     }
 
-    /**
-     * Shows the progress UI and hides the login form.
-     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     private void showProgress(final boolean show) {
-        // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
-        // for very easy animations. If available, use these APIs to fade-in
-        // the progress spinner.
         int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
         mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
@@ -391,14 +375,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mPasswordView.setTransformationMethod(null);
             mPasswordView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
         }
-    }
-
-    public void gotoMain(View v) {
-
-        finish();
-
-        Intent im = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(im);
     }
 
     @Override
@@ -593,7 +569,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     public void populateSpinner(Context context) {
 
-
     }
 
     private interface ProfileQuery {
@@ -603,7 +578,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         };
 
         int ADDRESS = 0;
-        int IS_PRIMARY = 1;
     }
 
     public class GPSLocationListener implements LocationListener {

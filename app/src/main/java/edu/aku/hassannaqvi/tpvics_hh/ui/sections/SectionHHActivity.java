@@ -257,7 +257,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
                 bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
                 bi.hh06.setText(selSplit[3]);*/
                 bi.hh06txt.setText(selSplit[3]);
-                bi.geoarea.setText(selSplit[2] + ", " + selSplit[1] + ", " + selSplit[0]);
+                bi.geoarea.setText(new StringBuilder(selSplit[2]).append(", ").append(selSplit[1]).append(", ").append(selSplit[0]));
             }
         } else {
             Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
@@ -267,21 +267,16 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
 
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
-
         bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase());
-
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
             bi.hh08msg.setText("Household Found!");
             bi.hh08name.setText(bl.getHhhead().toUpperCase());
+            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
         }
-
-
-        bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
-
     }
 
     @Override

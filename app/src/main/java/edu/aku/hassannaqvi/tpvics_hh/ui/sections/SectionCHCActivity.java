@@ -26,7 +26,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHCActivity extends AppCompatActivity {
 
     ActivitySectionChCBinding bi;
-    boolean im02Flag;
+    boolean im02Flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class SectionCHCActivity extends AppCompatActivity {
             }*/
 
             Clear.clearAllFields(bi.fldGrpCVim02a, i == bi.im022.getId());
-            im02Flag = i == bi.im022.getId();
+            im02Flag = i == bi.im021.getId();
 
         });
 
@@ -125,7 +125,7 @@ public class SectionCHCActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, im02Flag));
+                startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, !im02Flag));
 
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
