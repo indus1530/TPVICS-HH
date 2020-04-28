@@ -2032,9 +2032,8 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im12"
                                 style="@style/EditTextNum"
-                                android:hint="@string/im12"
-                                android:inputType="number"
-                                app:mask="##"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="50"
                                 app:minValue="1"
                                 app:type="range" />
@@ -2203,10 +2202,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im15"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im15"
-                                android:inputType="number"
-                                app:mask="##"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="0"
                                 app:minValue="0"
                                 app:type="range" />
@@ -2306,10 +2304,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im17"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im17"
-                                android:inputType="number"
-                                app:mask="##"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="0"
                                 app:minValue="0"
                                 app:type="range" />
@@ -2410,10 +2407,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im19"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im19"
-                                android:inputType="number"
-                                app:mask="##"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="0"
                                 app:minValue="0"
                                 app:type="range" />
@@ -2570,10 +2566,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im22"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im22"
-                                android:inputType="number"
-                                app:mask="##"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="0"
                                 app:minValue="0"
                                 app:type="range" />
