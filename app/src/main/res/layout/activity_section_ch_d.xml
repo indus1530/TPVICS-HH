@@ -2138,11 +2138,6 @@
                             </RelativeLayout>
 
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/im14" />
-
                             <RadioGroup
                                 android:id="@+id/im14"
                                 android:layout_width="match_parent"
