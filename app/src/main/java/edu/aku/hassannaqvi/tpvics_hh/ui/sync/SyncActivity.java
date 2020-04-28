@@ -32,11 +32,14 @@ import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.tpvics_hh.adapter.UploadListAdapter;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.tpvics_hh.get.GetAllData;
 import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllData;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncDevice;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
@@ -134,7 +137,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         if (networkInfo != null && networkInfo.isConnected()) {
 
             DatabaseHelper db = new DatabaseHelper(this);
-            /*
+
             new SyncDevice(this, false).execute();
 //  *******************************************************Forms*********************************
             Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
@@ -168,7 +171,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     ChildContract.SingleChild.TABLE_NAME,
                     db.getUnsyncedChildForms(), 1, uploadListAdapter, uploadlist
             ).execute();
-
+/*
             if (uploadlistActivityCreated) {
                 uploadmodel = new SyncModel();
                 uploadmodel.setstatusID(0);
