@@ -157,14 +157,14 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
         JSONObject json = new JSONObject();
 
         json.put("imei", MainApp.IMEI);
-        /*json.put("rndid", bl.get_ID());
+        json.put("rndid", bl.get_ID());
         json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
         json.put("hh03", bl.getStructure());
         json.put("hh07", bl.getExtension());
         json.put("hhhead", bl.getHhhead());
         json.put("hh09", bl.getContact());
-        json.put("hhss", bl.getSelStructure());*/
+        json.put("hhss", bl.getSelStructure());
 /*        json.put("hhheadpresent", bi.checkHHHeadpresent.isChecked() ? "1" : "2");
         json.put("hhheadpresentnew", bi.newHHheadname.getText().toString());*/
 
