@@ -2200,8 +2200,8 @@
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2302,8 +2302,8 @@
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2405,8 +2405,8 @@
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2564,8 +2564,8 @@
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
                                 android:maxLength="2"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
