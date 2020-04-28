@@ -25,10 +25,6 @@
         android:theme="@style/AppTheme1">
 
         <activity
-            android:name=".ui.sections.SectionCHCActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".ui.sections.SectionCHAActivity"
             android:screenOrientation="portrait" />
 
