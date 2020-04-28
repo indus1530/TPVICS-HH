@@ -2871,7 +2871,7 @@
             </LinearLayout>
 
 
-            <!-- &lt;!&ndash;ENDBUTTON linearlayout&ndash;&gt;
+            <!--ENDBUTTON linearlayout-->
              <LinearLayout
                  style="@style/hlinearlayout"
                  android:layout_gravity="start"
@@ -2896,7 +2896,7 @@
                      android:onClick="@{() -> callback.BtnContinue()}"
                      android:text="@string/nextSection" />
 
-             </LinearLayout>-->
+             </LinearLayout>
 
         </LinearLayout>
 
