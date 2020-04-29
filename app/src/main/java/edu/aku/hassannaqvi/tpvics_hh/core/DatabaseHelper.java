@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.contracts.AreasContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.AreasContract.singleAreas;
@@ -124,7 +125,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 ContentValues values = new ContentValues();
 
-                values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDsit_code());
+                values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDist_code());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
 
@@ -1127,12 +1128,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 EnumBlockTable.COLUMN_CLUSTER_AREA
         };
 
-        String whereClause = null;
-        String[] whereArgs = null;
-        if (cluster != null) {
-            whereClause = EnumBlockTable.COLUMN_CLUSTER_AREA + " =?";
-            whereArgs = new String[]{cluster};
-        }
+        String whereClause = EnumBlockTable.COLUMN_CLUSTER_AREA + " =?";
+        String[] whereArgs = {cluster};
+
         String groupBy = null;
         String having = null;
 
@@ -1150,6 +1148,49 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             );
             while (c.moveToNext()) {
                 allEB = new EnumBlockContract().HydrateEnum(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allEB;
+    }
+
+    // Get all Enumblock
+    public List<EnumBlockContract> getEnumBlock() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                EnumBlockTable._ID,
+                EnumBlockTable.COLUMN_DIST_ID,
+                EnumBlockTable.COLUMN_GEO_AREA,
+                EnumBlockTable.COLUMN_CLUSTER_AREA
+        };
+
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = EnumBlockTable._ID + " ASC";
+        List<EnumBlockContract> allEB = new ArrayList<>();
+        try {
+            c = db.query(
+                    EnumBlockTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allEB.add(new EnumBlockContract().HydrateEnum(c));
             }
         } finally {
             if (c != null) {

@@ -124,7 +124,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im41bcgmm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -222,7 +222,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im42opv0mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -321,7 +321,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im43opv1mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -420,7 +420,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im44penta1mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -519,7 +519,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im45pcv1mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -618,7 +618,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im46rv1mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -717,7 +717,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im47opv2mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -816,7 +816,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im48penta2mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -916,7 +916,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im49pcv2mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1015,7 +1015,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im410rv2mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1114,7 +1114,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im411opv3mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1213,7 +1213,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im412penta3mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1312,7 +1312,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im413pcv3mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1416,7 +1416,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im414ipvmm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1515,7 +1515,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im415measles1mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -1614,7 +1614,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im416measles2mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 

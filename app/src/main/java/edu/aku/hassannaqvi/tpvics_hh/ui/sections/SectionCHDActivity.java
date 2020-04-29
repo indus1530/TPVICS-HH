@@ -347,8 +347,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                         bi.im182.isChecked() ? "2" :
                                 bi.im183.isChecked() ? "98" :
                                         "0");
-        json.put("im19",
-                "0");
+        json.put("im19", bi.im19.getText().toString());
         json.put("im20",
                 bi.im201.isChecked() ? "1" :
                         bi.im202.isChecked() ? "2" :

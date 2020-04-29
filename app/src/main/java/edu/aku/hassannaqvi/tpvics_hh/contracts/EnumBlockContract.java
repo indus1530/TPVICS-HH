@@ -10,7 +10,7 @@ import org.json.JSONObject;
 public class EnumBlockContract {
 
     private static final String TAG = "EnumBlock_CONTRACT";
-    String dsit_code;
+    String dist_code;
     String geoarea;
     String cluster;
 
@@ -19,25 +19,25 @@ public class EnumBlockContract {
     }
 
     public EnumBlockContract Sync(JSONObject jsonObject) throws JSONException {
-        this.dsit_code = jsonObject.getString(EnumBlockTable.COLUMN_DIST_ID);
+        this.dist_code = jsonObject.getString(EnumBlockTable.COLUMN_DIST_ID);
         this.geoarea = jsonObject.getString(EnumBlockTable.COLUMN_GEO_AREA);
         this.cluster = jsonObject.getString(EnumBlockTable.COLUMN_CLUSTER_AREA);
         return this;
     }
 
     public EnumBlockContract HydrateEnum(Cursor cursor) {
-        this.dsit_code = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_DIST_ID));
+        this.dist_code = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_DIST_ID));
         this.geoarea = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_GEO_AREA));
         this.cluster = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_CLUSTER_AREA));
         return this;
     }
 
-    public String getDsit_code() {
-        return dsit_code;
+    public String getDist_code() {
+        return dist_code;
     }
 
-    public void setDsit_code(String dsit_code) {
-        this.dsit_code = dsit_code;
+    public void setDist_code(String dsit_code) {
+        this.dist_code = dsit_code;
     }
 
     public String getGeoarea() {
@@ -59,7 +59,7 @@ public class EnumBlockContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(EnumBlockTable.COLUMN_DIST_ID, this.dsit_code == null ? JSONObject.NULL : this.dsit_code);
+        json.put(EnumBlockTable.COLUMN_DIST_ID, this.dist_code == null ? JSONObject.NULL : this.dist_code);
         json.put(EnumBlockTable.COLUMN_GEO_AREA, this.geoarea == null ? JSONObject.NULL : this.geoarea);
         json.put(EnumBlockTable.COLUMN_CLUSTER_AREA, this.cluster == null ? JSONObject.NULL : this.cluster);
         return json;

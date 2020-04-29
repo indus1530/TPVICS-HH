@@ -34,10 +34,10 @@ import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
 
 public class GetAllData extends AsyncTask<String, String, String> {
 
-    HttpURLConnection urlConnection;
-    SyncListAdapter adapter;
-    List<SyncModel> list;
-    int position;
+    private HttpURLConnection urlConnection;
+    private SyncListAdapter adapter;
+    private List<SyncModel> list;
+    private int position;
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
@@ -64,10 +64,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 position = 1;
                 break;
             case "EnumBlock":
-                position = 0;
+                position = 2;
                 break;
             case "BLRandom":
-                position = 1;
+                position = 0;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -98,10 +98,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
                 position = 1;
                 break;
             case "EnumBlock":
-                position = 0;
+                position = 2;
                 break;
             case "BLRandom":
-                position = 1;
+                position = 0;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -128,11 +128,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     break;
                 case "EnumBlock":
                     url = new URL(MainApp._HOST_URL + EnumBlockContract.EnumBlockTable._URI);
-                    position = 0;
+                    position = 2;
                     break;
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.SingleRandomHH._URI);
-                    position = 1;
+                    position = 0;
                     break;
             }
 
@@ -141,11 +141,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
-                case "EnumBlock":
                 case "BLRandom":
 
                     if (args[0] != null && !args[0].equals("")) {
-                        if (Integer.valueOf(args[0]) > 0) {
+                        if (Integer.parseInt(args[0]) > 0) {
                             urlConnection.setRequestMethod("POST");
                             urlConnection.setDoOutput(true);
                             urlConnection.setDoInput(true);
@@ -171,6 +170,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     }
                     break;
 
+                case "EnumBlock":
                 case "User":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
@@ -215,8 +215,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
         } finally {
             urlConnection.disconnect();
         }
-
-
         return result.toString();
     }
 
@@ -241,11 +239,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             break;
                         case "EnumBlock":
                             db.syncEnumBlocks(jsonArray);
-                            position = 0;
+                            position = 2;
                             break;
                         case "BLRandom":
                             db.syncBLRandom(jsonArray);
-                            position = 1;
+                            position = 0;
                             break;
 
                     }
