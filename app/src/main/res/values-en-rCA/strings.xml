@@ -431,11 +431,21 @@
     <string name="ss22"> ss22: Does any member of this household own any agricultural land?</string>
     <string name="ss22a"> Yes</string>
     <string name="ss22b"> No</string>
-    <string name="ss23"> ss23: If yes, how many acres or canals of agricultural land do members of this household own?  If less than 1, record ‘00’.</string>
+
+
+    <!--<string name="ss23"> ss23: If yes, how many acres or canals of agricultural land do members of this household own?  If less than 1, record ‘00’.</string>
     <string name="ss23a"> Acres</string>
     <string name="ss23a_acr"> Record Acres</string>
     <string name="ss23b"> Kanals</string>
-    <string name="ss23c"> Don’t know</string>
+    <string name="ss23c"> Don’t know</string>-->
+
+    <string name="ss23">If yes, how many acres or canals of agricultural land do members of this household own?  If less than 1, record ‘00’.</string>
+    <string name="ss23a">Acres</string>
+    <string name="ss23b">Kanals</string>
+    <string name="ss23c">Don\'t Know</string>
+    <string name="ss23land">Land</string>
+
+
     <string name="ss24"> ss24: Do you have your own livestock, animals or poultry?</string>
     <string name="ss24a"> Yes</string>
     <string name="ss24b"> No</string>

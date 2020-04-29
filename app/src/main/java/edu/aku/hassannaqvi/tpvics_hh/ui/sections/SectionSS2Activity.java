@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -16,6 +12,9 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
@@ -45,9 +44,9 @@ public class SectionSS2Activity extends AppCompatActivity {
 
         bi.ss22.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss22b.getId()) {
-                Clear.clearAllFields(bi.ss23cv, false);
+                Clear.clearAllFields(bi.fldGrpCVss23, false);
             } else {
-                Clear.clearAllFields(bi.ss23cv, true);
+                Clear.clearAllFields(bi.fldGrpCVss23, true);
             }
         }));
 
@@ -226,12 +225,20 @@ public class SectionSS2Activity extends AppCompatActivity {
                 : "0");
 
 
-        json.put("ss23", bi.ss23a.isChecked() ? "1"
+        /*json.put("ss23", bi.ss23a.isChecked() ? "1"
                 : bi.ss23b.isChecked() ? "2"
                 : bi.ss2398.isChecked() ? "98"
                 : "0");
         json.put("ss23ax", bi.ss23ax.getText().toString());
-        json.put("ss23bx", bi.ss23bx.getText().toString());
+        json.put("ss23bx", bi.ss23bx.getText().toString());*/
+
+
+        json.put("ss23", bi.ss23a.isChecked() ? "1"
+                : bi.ss23b.isChecked() ? "2"
+                : bi.ss23c.isChecked() ? "98"
+                : bi.ss23land.isChecked() ? ""
+                : "0");
+        json.put("ss23landx", bi.ss23landx.getText().toString());
 
 
         json.put("ss24", bi.ss24a.isChecked() ? "1"
