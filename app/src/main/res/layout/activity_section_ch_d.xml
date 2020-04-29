@@ -2032,9 +2032,8 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im12"
                                 style="@style/EditTextNum"
-                                android:hint="@string/im12"
-                                android:inputType="number"
-                                app:mask="##"
+                                android:hint="@string/num"
+                                android:maxLength="2"
                                 app:maxValue="50"
                                 app:minValue="1"
                                 app:type="range" />
@@ -2139,11 +2138,6 @@
                             </RelativeLayout>
 
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/im14" />
-
                             <RadioGroup
                                 android:id="@+id/im14"
                                 android:layout_width="match_parent"
@@ -2203,12 +2197,11 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im15"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im15"
-                                android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2306,12 +2299,11 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im17"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im17"
-                                android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2410,12 +2402,11 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im19"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im19"
-                                android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2570,12 +2561,11 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im22"
-                                style="@style/EditTextAlpha"
-                                android:hint="@string/im22"
-                                android:inputType="number"
-                                app:mask="##"
-                                app:maxValue="0"
-                                app:minValue="0"
+                                style="@style/EditTextNum"
+                                android:hint="@string/num"
+                                android:maxLength="2"
+                                app:maxValue="5"
+                                app:minValue="1"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -2871,7 +2861,7 @@
             </LinearLayout>
 
 
-            <!-- &lt;!&ndash;ENDBUTTON linearlayout&ndash;&gt;
+            <!--ENDBUTTON linearlayout-->
              <LinearLayout
                  style="@style/hlinearlayout"
                  android:layout_gravity="start"
@@ -2896,7 +2886,7 @@
                      android:onClick="@{() -> callback.BtnContinue()}"
                      android:text="@string/nextSection" />
 
-             </LinearLayout>-->
+             </LinearLayout>
 
         </LinearLayout>
 

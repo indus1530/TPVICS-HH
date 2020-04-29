@@ -178,8 +178,8 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
         json.put("hh08", bi.hh08.getText().toString());
         json.put("hh09", MainApp.userName);
         //json.put("hh10", bi.hh10.getText().toString());
-        json.put("hh11", new SimpleDateFormat("dd-MM-yy").format(new Date().getTime()));
-        json.put("hh12", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        json.put("hh11", bi.hh11.getText().toString());
+        json.put("hh12", bi.hh12.getText().toString());
         json.put("hh13a", bi.hh13a.getText().toString());
         json.put("hh13b", bi.hh13b.getText().toString());
         json.put("hh14", bi.hh14.getText().toString());

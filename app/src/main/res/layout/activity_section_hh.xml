@@ -28,6 +28,100 @@
                     style="@style/info"
                     android:text="@string/a101a" />
 
+
+                <!-- hh11  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh11cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_hh11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_hh11"
+                                android:text="@string/hh11" />
+
+                            <TextView
+                                android:id="@+id/q_hh11"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_hh11"
+                                android:layout_alignBottom="@id/qtxt_hh11"
+                                android:text="@string/Q_hh11" />
+
+                        </RelativeLayout>
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/hh11"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            app:dateFormat="dd/MM/yyyy"
+                            app:maxDate="CR_DATE"
+                            app:minDate="01/01/2017" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- hh12  Input   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hh12cv"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_hh12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_hh12"
+                                android:text="@string/hh12" />
+
+                            <TextView
+                                android:id="@+id/q_hh12"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_hh12"
+                                android:layout_alignBottom="@id/qtxt_hh12"
+                                android:text="@string/Q_hh12" />
+
+                        </RelativeLayout>
+
+                        <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                            android:id="@+id/hh12"
+                            style="@style/EditTextNum"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:hint="HH:mm"
+                            app:is24HourView="true"
+                            app:timeFormat="HH:mm" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
                 <!-- Cluster Check   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/checkPSUcv"
@@ -128,6 +222,7 @@
 
 
                 </androidx.cardview.widget.CardView>
+
 
                 <LinearLayout
                     android:id="@+id/fldGrpSectionA01"

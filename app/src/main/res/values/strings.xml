@@ -84,7 +84,7 @@
     <string name="hh10"> سُپروائزر کا نام </string>
     <string name="hh10a"> سُپروائزر کا  کوڈ </string>
     <string name="hh11"> انٹرویو کی تاریخ </string>
-    <string name="hh12"> نٹرویو کا وقت </string>
+    <string name="hh12"> انٹرویو کا وقت </string>
     <string name="hh13a"> جواب دہندہ کانام </string>
     <string name="hh13b"> جواب دہندگان کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
@@ -518,6 +518,7 @@
     <string name="ss27"> وقت ریکارڈ کریں </string>
 
     <string name="ss28"> اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+    <string name="ss28a"> مشاہدات </string>
 
 
     <string name="uf01"> جغرافیائی علاقہ </string>

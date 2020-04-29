@@ -1492,6 +1492,7 @@
                         android:id="@+id/ss28"
                         style="@style/EditTextAlphaNmeric"
                         android:inputType="textMultiLine"
+                        android:hint="@string/ss28a"
                         android:maxLines="8"
                         android:minLines="4" />
 
