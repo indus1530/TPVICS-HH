@@ -164,55 +164,61 @@
 
                             <!--Province-->
                             <LinearLayout
-                                style="@style/linearlayout_view"
-                                android:layout_marginTop="10dp"
-                                android:layoutDirection="ltr"
-                                android:orientation="horizontal">
+                                android:id="@+id/spinners"
+                                style="@style/linearlayout_view">
 
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Province"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="@color/black_overlay"
-                                    android:textSize="17sp"
-                                    android:textStyle="bold" />
+                                <LinearLayout
+                                    style="@style/linearlayout_view"
+                                    android:layout_marginTop="10dp"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
 
-                                <Spinner
-                                    android:id="@+id/spinnerProvince"
-                                    style="@style/spinner"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:layout_weight="2" />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Province"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black_overlay"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
 
-                            </LinearLayout>
+                                    <Spinner
+                                        android:id="@+id/spinnerProvince"
+                                        style="@style/spinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="2" />
 
-                            <!--Districts-->
-                            <LinearLayout
-                                style="@style/linearlayout_view"
-                                android:layout_marginTop="10dp"
-                                android:layoutDirection="ltr"
-                                android:orientation="horizontal">
+                                </LinearLayout>
 
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="District"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                    android:textColor="@color/black_overlay"
-                                    android:textSize="17sp"
-                                    android:textStyle="bold" />
+                                <!--Districts-->
+                                <LinearLayout
+                                    style="@style/linearlayout_view"
+                                    android:layout_marginTop="10dp"
+                                    android:layoutDirection="ltr"
+                                    android:orientation="horizontal">
 
-                                <Spinner
-                                    android:id="@+id/spinnerDistrict"
-                                    style="@style/spinner"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="10dp"
-                                    android:layout_weight="2" />
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="District"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                        android:textColor="@color/black_overlay"
+                                        android:textSize="17sp"
+                                        android:textStyle="bold" />
+
+                                    <Spinner
+                                        android:id="@+id/spinnerDistrict"
+                                        style="@style/spinner"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="2" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 

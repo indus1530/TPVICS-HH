@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import edu.aku.hassannaqvi.tpvics_hh.R
+import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract
 import edu.aku.hassannaqvi.tpvics_hh.repository.getEnumData
 import edu.aku.hassannaqvi.tpvics_hh.repository.setProvinceDistricts
 import kotlinx.coroutines.*
@@ -17,7 +18,7 @@ class SplashscreenActivity : Activity() {
 
     init {
         provinces = mutableListOf("....")
-        districts = mutableMapOf()
+        districtsMap = mutableMapOf()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class SplashscreenActivity : Activity() {
         activityScope.launch {
             val def = withContext(Dispatchers.Main) { getEnumData(this@SplashscreenActivity) }
             if (def.isNotEmpty())
-                withContext(Dispatchers.Main) { setProvinceDistricts(def) }
+                withContext(Dispatchers.Main) { setProvinceDistricts(this@SplashscreenActivity, def) }
             delay(SPLASH_TIME_OUT.toLong())
             finish()
             startActivity(Intent(this@SplashscreenActivity, LoginActivity::class.java))
@@ -34,13 +35,21 @@ class SplashscreenActivity : Activity() {
     }
 
     companion object {
-        private const val SPLASH_TIME_OUT = 3000
-        lateinit var provinces: List<String>
-        lateinit var districts: MutableMap<String, String>
+        private const val SPLASH_TIME_OUT = 1000
+        lateinit var provinces: MutableList<String>
+        lateinit var districtsMap: MutableMap<String, Pair<String, EnumBlockContract>>
     }
 
     override fun onPause() {
         activityScope.cancel()
         super.onPause()
+    }
+
+
+    //Only use for calling coroutine in java
+    abstract class Continuation<in T> : kotlin.coroutines.Continuation<T> {
+        abstract fun resume(value: T)
+        abstract fun resumeWithException(exception: Throwable)
+        override fun resumeWith(result: Result<T>) = result.fold(::resume, ::resumeWithException)
     }
 }

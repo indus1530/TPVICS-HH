@@ -33,8 +33,11 @@ import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.Spinner;
@@ -48,6 +51,9 @@ import androidx.core.app.ActivityCompat;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
+import com.validatorcrawler.aliazaz.Validator;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -56,34 +62,38 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.AppInfo;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
+import kotlin.Pair;
+import kotlin.Unit;
+import kotlin.coroutines.CoroutineContext;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
+import static edu.aku.hassannaqvi.tpvics_hh.repository.SplashRepositoryKt.populatingSpinners;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DB_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.getPermissionsList;
 import static java.lang.Thread.sleep;
 
-
-/**
- * A login screen that offers login via email/password.
- */
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     protected static LocationManager locationManager;
@@ -105,6 +115,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     ImageButton syncData;
     @BindView(R.id.spinnerProvince)
     Spinner spinnerProvince;
+    @BindView(R.id.spinners)
+    LinearLayout spinners;
     @BindView(R.id.spinnerDistrict)
     Spinner spinnerDistrict;
     SharedPreferences sharedPref;
@@ -155,9 +167,44 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         mEmailSignInButton.setOnClickListener(view -> attemptLogin());
 
+        setListeners();
+
         db = new DatabaseHelper(this);
 //        DB backup
         dbBackup();
+    }
+
+    private void setListeners() {
+        spinnerProvince.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, SplashscreenActivity.provinces));
+        spinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                List<String> districts = new ArrayList<>(Collections.singletonList("...."));
+                for (Map.Entry<String, Pair<String, EnumBlockContract>> entry : SplashscreenActivity.districtsMap.entrySet()) {
+                    if (entry.getValue().getFirst().equals(spinnerProvince.getSelectedItem().toString()))
+                        districts.add(entry.getKey());
+                }
+                spinnerDistrict.setAdapter(new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_dropdown_item_1line, districts));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                MainApp.DIST_ID = Objects.requireNonNull(SplashscreenActivity.districtsMap.get(spinnerDistrict.getSelectedItem().toString())).getSecond().getDist_code();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     private void gettingDeviceIMEI() {
@@ -224,7 +271,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         output.close();
                         fis.close();
                     } catch (IOException e) {
-                        Log.e("dbBackup:", e.getMessage());
+                        Log.e("dbBackup:", Objects.requireNonNull(e.getMessage()));
                     }
 
                 }
@@ -283,11 +330,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } /*else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }*/
+        }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -296,11 +339,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
+            if (!Validator.emptyCheckingContainer(this, spinners))
+                return;
             showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
+            mAuthTask = new UserLoginTask(this, email, password);
             mAuthTask.execute((Void) null);
-
-
         }
     }
 
@@ -626,6 +669,30 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //To call coroutine here
+        populatingSpinners(getApplicationContext(), new SplashscreenActivity.Continuation<Unit>() {
+            @Override
+            public void resume(Unit value) {
+
+            }
+
+            @Override
+            public void resumeWithException(@NotNull Throwable exception) {
+
+            }
+
+            @NotNull
+            @Override
+            public CoroutineContext getContext() {
+                return null;
+            }
+        });
+    }
+
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -634,10 +701,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         private final String mEmail;
         private final String mPassword;
+        private final Context mContext;
 
-        UserLoginTask(String email, String password) {
+        UserLoginTask(Context context, String email, String password) {
             mEmail = email;
             mPassword = password;
+            mContext = context;
         }
 
 
@@ -664,7 +733,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 }
             }
 
-            // TODO: register the new account here.
             return true;
         }
 
@@ -672,17 +740,16 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
             showProgress(false);
-
+            if (!success) return;
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+            assert mlocManager != null;
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
                 if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
                         (mEmail.equals("guest@aku") && mPassword.equals("aku1234")) || db.Login(mEmail, mPassword)
                         || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
                     MainApp.userName = mEmail;
                     MainApp.admin = mEmail.contains("@");
-
                     Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(iLogin);
 
@@ -691,6 +758,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     mPasswordView.requestFocus();
                     Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
                 }
+
+
             } else {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                         LoginActivity.this);
@@ -698,13 +767,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         .setMessage("GPS is disabled in your device. Enable it?")
                         .setCancelable(false)
                         .setPositiveButton("Enable GPS",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        Intent callGPSSettingIntent = new Intent(
-                                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                                        startActivity(callGPSSettingIntent);
-                                    }
+                                (dialog, id) -> {
+                                    Intent callGPSSettingIntent = new Intent(
+                                            android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                                    startActivity(callGPSSettingIntent);
                                 });
                 alertDialogBuilder.setNegativeButton("Cancel",
                         (dialog, id) -> dialog.cancel());
@@ -722,8 +788,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             showProgress(false);
         }
     }
-
-
 }
 
 

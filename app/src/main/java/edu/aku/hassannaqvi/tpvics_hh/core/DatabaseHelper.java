@@ -188,7 +188,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 db.insert(SingleRandomHH.TABLE_NAME, null, values);
             }
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         } finally {
             db.close();
         }
@@ -516,13 +516,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + "=? AND " + UsersContract.singleUser.ROW_PASSWORD + "=?", new String[]{username, password});
         if (mCursor != null) {
 
-            if (mCursor.getCount() > 0) {
-
-                if (mCursor.moveToFirst()) {
+            /*if (mCursor.moveToFirst()) {
                     MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
-                }
-                return true;
-            }
+                }*/
+            return mCursor.getCount() > 0;
         }
         return false;
     }
