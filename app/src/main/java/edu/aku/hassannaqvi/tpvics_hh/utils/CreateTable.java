@@ -28,6 +28,7 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_LUID + " TEXT,"
             + FormsContract.FormsTable.COLUMN_USER + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SINFO + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_HSTATUS + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SM + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SN + " TEXT,"
