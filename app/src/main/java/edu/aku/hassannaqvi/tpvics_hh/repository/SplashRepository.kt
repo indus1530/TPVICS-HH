@@ -11,7 +11,7 @@ import kotlinx.coroutines.withContext
 
 private suspend fun getEnumGeoArea(context: Context) = withContext(Dispatchers.IO) {
     val db = DatabaseHelper(context)
-    return@withContext db.enumBlock.map { it.geoarea.split("|").subList(0, 2) }
+    return@withContext db.enumBlock.map { it.geoarea.partialList(0, 2) }
 }
 
 suspend fun getEnumData(context: Context): MutableMap<String, String> {
@@ -25,7 +25,7 @@ suspend fun getEnumData(context: Context): MutableMap<String, String> {
 
 private suspend fun getEnumContract(context: Context, province: String, district: String) = withContext(Dispatchers.IO) {
     val db = DatabaseHelper(context)
-    return@withContext db.enumBlock.find { it.geoarea.split("|").subList(0, 2)[1] == district }
+    return@withContext db.enumBlock.find { it.geoarea.partialList(0, 2)[1] == district }
 }
 
 suspend fun setProvinceDistricts(context: Context, def: MutableMap<String, String>) {
@@ -43,3 +43,10 @@ suspend fun populatingSpinners(context: Context) {
     }
 }
 
+private fun String.partialList(min: Int, max: Int): List<String> {
+    val items = this.split("|")
+    return when {
+        items.size < max || items.size < min -> items.subList(0, 0)
+        else -> items.subList(min, max)
+    }
+}
