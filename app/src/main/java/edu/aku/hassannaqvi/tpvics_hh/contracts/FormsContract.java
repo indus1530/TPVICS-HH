@@ -36,6 +36,7 @@ public class FormsContract {
     private String clusterCode = "";
     private String hhno = "";
     private String sInfo = "";
+    private String hStatus = "";
     private String sE = "";
     private String sM = "";
     private String sN = "";
@@ -50,6 +51,14 @@ public class FormsContract {
 
     public void setsInfo(String sInfo) {
         this.sInfo = sInfo;
+    }
+
+    public String gethStatus() {
+        return hStatus;
+    }
+
+    public void sethStatus(String hStatus) {
+        this.hStatus = hStatus;
     }
 
     public String getsE() {
@@ -114,6 +123,8 @@ public class FormsContract {
         this.clusterCode = jsonObject.getString(FormsTable.COLUMN_CLUSTERCODE);
         this.hhno = jsonObject.getString(FormsTable.COLUMN_HHNO);
         this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
+        this.sInfo = jsonObject.getString(FormsTable.COLUMN_SINFO);
+        this.hStatus = jsonObject.getString(FormsTable.COLUMN_HSTATUS);
         this.sE = jsonObject.getString(FormsTable.COLUMN_SE);
         this.sM = jsonObject.getString(FormsTable.COLUMN_SM);
         this.sN = jsonObject.getString(FormsTable.COLUMN_SN);
@@ -143,6 +154,7 @@ public class FormsContract {
         this.clusterCode = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HHNO));
         this.sInfo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SINFO));
+        this.hStatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HSTATUS));
         this.sE = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE));
         this.sM = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SM));
         this.sN = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SN));
@@ -167,6 +179,10 @@ public class FormsContract {
 
         if (!this.sInfo.equals("")) {
             json.put(FormsTable.COLUMN_SINFO, this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
+        }
+
+        if (!this.hStatus.equals("")) {
+            json.put(FormsTable.COLUMN_HSTATUS, this.hStatus.equals("") ? JSONObject.NULL : new JSONObject(this.hStatus));
         }
 
         if (!this.sE.equals("")) {
@@ -386,6 +402,7 @@ public class FormsContract {
         public static final String COLUMN_CLUSTERCODE = "cluster_code";
         public static final String COLUMN_HHNO = "hhno";
         public static final String COLUMN_SINFO = "sInfo";
+        public static final String COLUMN_HSTATUS = "hStatus";
         public static final String COLUMN_SE = "sE";
         public static final String COLUMN_SM = "sM";
         public static final String COLUMN_SN = "sN";
