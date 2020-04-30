@@ -27,6 +27,9 @@ class CONSTANTS {
         //For CHC Section
         const val IM02FLAG = "im02_flag"
 
+        //Login Result Code
+        const val LOGIN_RESULT_CODE = 10101
+        const val LOGIN_SPLASH_FLAG = "splash_flag"
 
     }
 }

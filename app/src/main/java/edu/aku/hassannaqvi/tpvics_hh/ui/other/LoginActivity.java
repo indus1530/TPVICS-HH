@@ -82,6 +82,7 @@ import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.LOGIN_SPLASH_FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
@@ -672,7 +673,21 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @Override
     protected void onResume() {
         super.onResume();
+        if (getIntent().getBooleanExtra(LOGIN_SPLASH_FLAG, false))
+            callingCoroutine();
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CONSTANTS.LOGIN_RESULT_CODE) {
+            if (resultCode == RESULT_OK) {
+                callingCoroutine();
+            }
+        }
+    }
+
+    private void callingCoroutine() {
         //To call coroutine here
         populatingSpinners(getApplicationContext(), new SplashscreenActivity.Continuation<Unit>() {
             @Override
@@ -697,7 +712,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
      */
-    public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
+    private class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
         private final String mPassword;

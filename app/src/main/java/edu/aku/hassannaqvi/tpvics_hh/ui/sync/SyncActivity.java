@@ -274,9 +274,9 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
             String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
+            if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
                 editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
-                editor.commit();
+                editor.apply();
             }
 
             File folder = new File(Environment.getExternalStorageDirectory() + File.separator + PROJECT_NAME);
@@ -332,7 +332,14 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         }
     }
 
-    public class SyncData extends AsyncTask<Boolean, String, String> {
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        setResult(RESULT_OK);
+        finish();
+    }
+
+    private class SyncData extends AsyncTask<Boolean, String, String> {
 
         private Context mContext;
         private String distID;
@@ -402,6 +409,4 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             }, 1200);
         }
     }
-
-
 }

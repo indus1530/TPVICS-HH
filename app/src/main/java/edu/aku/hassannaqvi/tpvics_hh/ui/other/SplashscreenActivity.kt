@@ -3,10 +3,9 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.other
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.R
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract
-import edu.aku.hassannaqvi.tpvics_hh.repository.getEnumData
-import edu.aku.hassannaqvi.tpvics_hh.repository.setProvinceDistricts
 import kotlinx.coroutines.*
 
 /**
@@ -25,17 +24,17 @@ class SplashscreenActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
         activityScope.launch {
-            val def = withContext(Dispatchers.Main) { getEnumData(this@SplashscreenActivity) }
+            /*val def = withContext(Dispatchers.Main) { getEnumData(this@SplashscreenActivity) }
             if (def.isNotEmpty())
-                withContext(Dispatchers.Main) { setProvinceDistricts(this@SplashscreenActivity, def) }
+                withContext(Dispatchers.Main) { setProvinceDistricts(this@SplashscreenActivity, def) }*/
             delay(SPLASH_TIME_OUT.toLong())
             finish()
-            startActivity(Intent(this@SplashscreenActivity, LoginActivity::class.java))
+            startActivity(Intent(this@SplashscreenActivity, LoginActivity::class.java).putExtra(CONSTANTS.LOGIN_SPLASH_FLAG, true))
         }
     }
 
     companion object {
-        private const val SPLASH_TIME_OUT = 1000
+        private const val SPLASH_TIME_OUT = 2000
         lateinit var provinces: MutableList<String>
         lateinit var districtsMap: MutableMap<String, Pair<String, EnumBlockContract>>
     }

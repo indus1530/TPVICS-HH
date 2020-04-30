@@ -68,6 +68,12 @@
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ui.sections.SectionInfoActivity"
+            android:label="@string/hhsec"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.sections.SectionHHActivity"
             android:label="@string/hhsec"
