@@ -1216,21 +1216,14 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ss23c" />
 
-                        <RadioButton
-                            android:id="@+id/ss23land"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss23land" />
-
                         <EditText
                             android:id="@+id/ss23landx"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/ss23land"
-                            android:tag="ss23land"
-                            android:text='@{ss23land.checked? ss23landx.getText().toString() : ""}'
-                            android:visibility='@{ss23land.checked? View.VISIBLE : View.GONE}' />
+                            android:enabled='@{ss23c.checked ? false : true }'
+                            android:text='@{ss23c.checked ? "" : ss23landx.getText().toString() }' />
 
                     </RadioGroup>
 
