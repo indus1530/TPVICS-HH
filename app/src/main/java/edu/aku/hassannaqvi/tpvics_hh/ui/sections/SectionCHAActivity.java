@@ -2,9 +2,6 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,25 +13,20 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity.mainVModel;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 
 public class SectionCHAActivity extends AppCompatActivity {
 
     ActivitySectionChABinding bi;
     int position;
-    FamilyMembersContract selMWRA;
+//    FamilyMembersContract selMWRA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +48,7 @@ public class SectionCHAActivity extends AppCompatActivity {
             }
         }));
 
-        List<String> childrenLst = new ArrayList<String>() {
+        /*List<String> childrenLst = new ArrayList<String>() {
             {
                 add("....");
                 addAll(MainApp.selectedChildren.getSecond());
@@ -77,7 +69,7 @@ public class SectionCHAActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
-        });
+        });*/
 
     }
 
@@ -109,13 +101,13 @@ public class SectionCHAActivity extends AppCompatActivity {
         f1.put("hhno", MainApp.fc.getHhno());
         f1.put("cluster_no", MainApp.fc.getClusterCode());
         f1.put("_luid", MainApp.fc.getLuid());
-        f1.put("fm_uid", selMWRA.getUid());
+/*        f1.put("fm_uid", selMWRA.getUid());
         f1.put("fm_serial", selMWRA.getSerialno());
         f1.put("mm_name", selMWRA.getMotherName());
         f1.put("appversion", MainApp.appInfo.getAppVersion());
 
         f1.put("uf09", selMWRA.getName());
-        f1.put("uf09a", selMWRA.getMotherName());
+        f1.put("uf09a", selMWRA.getMotherName());*/
 
         f1.put("uf9a", bi.uf9a.getText().toString());
 
@@ -138,8 +130,8 @@ public class SectionCHAActivity extends AppCompatActivity {
         child.setsCA(String.valueOf(f1));
 
         // Deleting item in list
-        MainApp.selectedChildren.getFirst().remove(position - 1);
-        MainApp.selectedChildren.getSecond().remove(position - 1);
+/*        MainApp.selectedChildren.getFirst().remove(position - 1);
+        MainApp.selectedChildren.getSecond().remove(position - 1);*/
 
     }
 

@@ -56,7 +56,7 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHBActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHCActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHDActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHEActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionHHActivity;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSS1Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSS2Activity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         Intent oF = null;
         switch (id) {
             case R.id.formA:
-                oF = new Intent(this, SectionHHActivity.class);
+                oF = new Intent(this, SectionInfoActivity.class);
                 break;
             case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);

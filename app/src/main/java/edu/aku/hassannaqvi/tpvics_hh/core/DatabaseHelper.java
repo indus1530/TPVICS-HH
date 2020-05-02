@@ -937,6 +937,66 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
+    public FormsContract getFilledForm(String clusterCode, String hhNo) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable._ID,
+                FormsTable.COLUMN_UID,
+                FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_USER,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_LUID,
+                FormsTable.COLUMN_ENDINGDATETIME,
+                FormsTable.COLUMN_SINFO,
+                FormsTable.COLUMN_FSTATUS,
+                FormsTable.COLUMN_SE,
+                FormsTable.COLUMN_SM,
+                FormsTable.COLUMN_SN,
+                FormsTable.COLUMN_SO,
+                FormsTable.COLUMN_GPSLAT,
+                FormsTable.COLUMN_GPSLNG,
+                FormsTable.COLUMN_GPSDATE,
+                FormsTable.COLUMN_GPSACC,
+                FormsTable.COLUMN_DEVICETAGID,
+                FormsTable.COLUMN_DEVICEID,
+                FormsTable.COLUMN_APPVERSION,
+                FormsTable.COLUMN_CLUSTERCODE,
+                FormsTable.COLUMN_HHNO,
+                FormsTable.COLUMN_FORMTYPE
+        };
+
+        String whereClause = FormsTable.COLUMN_FSTATUS + " is null AND " + FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
+        String[] whereArgs = {clusterCode, hhNo};
+        String groupBy = null;
+        String having = null;
+        String orderBy = null;
+        FormsContract allFC = null;
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allFC = new FormsContract().Hydrate(c);
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
     public Collection<ChildContract> getUnsyncedChildForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;

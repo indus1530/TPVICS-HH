@@ -25,7 +25,7 @@ class SectionSubInfoActivity : AppCompatActivity() {
     }
 
     fun onChildViewClick() {
-
+        startActivity(Intent(this, SectionCHAActivity::class.java))
     }
 
     fun onFabBtnMenuClick() {

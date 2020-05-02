@@ -28,7 +28,9 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionInfoBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class SectionInfoActivity extends AppCompatActivity {
 
@@ -101,7 +103,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             finish();
-            startActivity(new Intent(SectionInfoActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf("5")));
+            startActivity(new Intent(SectionInfoActivity.this, SectionSubInfoActivity.class));
         }
     }
 
@@ -167,25 +169,36 @@ public class SectionInfoActivity extends AppCompatActivity {
             return;
         }*/
 
-        EnumBlockContract enumBlockContract = db.getEnumBlock(bi.hh07.getText().toString());
-        if (enumBlockContract != null) {
-            String selected = enumBlockContract.getGeoarea();
-            if (!selected.equals("")) {
+        //Check HH Exist or not
+        getEnumerationBlock()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(enumBlockContract -> {
+                    String selected = enumBlockContract.getGeoarea();
+                    if (!selected.equals("")) {
 
-                String[] selSplit = selected.split("\\|");
+                        String[] selSplit = selected.split("\\|");
 
-                bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
-         /*       bi.hh03.setText(selSplit[0]);
-                bi.hh04.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
-                bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
-                bi.hh06.setText(selSplit[3]);*/
-                bi.hh06txt.setText(selSplit[3]);
-                bi.geoarea.setText(new StringBuilder(selSplit[2]).append(", ").append(selSplit[1]).append(", ").append(selSplit[0]));
-            }
-        } else {
-            Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
-        }
+                        bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
+                             /*       bi.hh03.setText(selSplit[0]);
+                                    bi.hh04.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
+                                    bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
+                                    bi.hh06.setText(selSplit[3]);*/
+                        bi.hh06txt.setText(selSplit[3]);
+                        bi.geoarea.setText(new StringBuilder(selSplit[2]).append(", ").append(selSplit[1]).append(", ").append(selSplit[0]));
+                    }
+                }, error -> {
+                    Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
+                    bi.hh06txt.setText("Village");
+                    bi.geoarea.setText(new StringBuilder("Tehsil").append(", ").append("District").append(", ").append("Province"));
+                });
+    }
 
+    private Observable<EnumBlockContract> getEnumerationBlock() {
+        return Observable.create(emitter -> {
+            emitter.onNext(db.getEnumBlock(bi.hh07.getText().toString()));
+            emitter.onComplete();
+        });
     }
 
     public void BtnCheckHH() {
@@ -200,6 +213,15 @@ public class SectionInfoActivity extends AppCompatActivity {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
         }
+
+        /*Observable.create(emitter -> {
+            emitter.onNext(db.getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
+            emitter.onComplete();
+        })
+                .flatMap(blItem -> db.getFilledForm(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());*/
+
     }
 
     public void showTooltip(@NotNull View view) {

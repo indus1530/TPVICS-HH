@@ -460,7 +460,7 @@
                                 android:maxLength="2"
                                 app:defaultValue="00"
                                 app:maxValue="11"
-                                app:minValue="1"
+                                app:minValue="0"
                                 app:type="range" />
 
                         </LinearLayout>
