@@ -30,6 +30,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionInfoBinding;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class SectionInfoActivity extends AppCompatActivity {
@@ -201,9 +202,23 @@ public class SectionInfoActivity extends AppCompatActivity {
         });
     }
 
+    private Observable<BLRandomContract> getBLRandomBlock() {
+        return Observable.create(emitter -> {
+            emitter.onNext(db.getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
+            emitter.onComplete();
+        });
+    }
+
+    private Observable<FormsContract> getFilledForm() {
+        return Observable.create(emitter -> {
+            emitter.onNext(db.getFilledForm(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
+            emitter.onComplete();
+        });
+    }
+
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
-        bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase());
+        /*bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase());
         if (bl != null) {
             Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
             bi.hh08msg.setText("Household Found!");
@@ -212,15 +227,25 @@ public class SectionInfoActivity extends AppCompatActivity {
         } else {
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
-        /*Observable.create(emitter -> {
-            emitter.onNext(db.getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
-            emitter.onComplete();
-        })
-                .flatMap(blItem -> db.getFilledForm(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()))
+        getBLRandomBlock()
+                .flatMap((Function<BLRandomContract, Observable<FormsContract>>)
+                        blRandomContract -> {
+                            bl = blRandomContract;
+                            return getFilledForm();
+                        })
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());*/
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(form -> {
+                    Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
+                    bi.hh08msg.setText("Household Found!");
+                    bi.hh08name.setText(bl.getHhhead().toUpperCase());
+                    bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+                }, error -> {
+                    bi.fldGrpSectionA02.setVisibility(View.GONE);
+                    Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+                });
 
     }
 
