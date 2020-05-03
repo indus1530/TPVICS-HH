@@ -28,6 +28,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="@{() -> callback.onHHViewClick()}"
                 android:text="HOUSEHOLD"
+                android:enabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +41,7 @@
                 android:layout_marginTop="56dp"
                 android:onClick="@{() -> callback.onChildViewClick()}"
                 android:text="Child"
+                android:enabled="false"
                 app:layout_constraintTop_toBottomOf="@+id/btnHHView"
                 tools:layout_editor_absoluteX="0dp" />
 

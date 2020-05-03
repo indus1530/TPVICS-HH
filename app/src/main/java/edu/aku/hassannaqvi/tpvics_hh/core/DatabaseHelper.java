@@ -1020,19 +1020,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public int updateEnding() {
+    public int updateEnding(boolean flag) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
+        // New value for one column
         ContentValues values = new ContentValues();
-        values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
-        values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
-//        values.put(FormsTable.COLUMN_SE, MainApp.fc.getsE());
-//        values.put(FormsTable.COLUMN_STATUS, MainApp.fc.getStatus());
-        values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
+        if (flag) {
+            values.put(FormsTable.COLUMN_FSTATUS, MainApp.fc.getfStatus());
+        } else {
+            values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
+            values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
+            values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
+        }
 
-
-// Which row to update, based on the ID
+        // Which row to update, based on the ID
         String selection = FormsTable.COLUMN_ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 

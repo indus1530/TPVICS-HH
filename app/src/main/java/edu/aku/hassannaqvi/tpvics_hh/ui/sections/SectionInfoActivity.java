@@ -38,6 +38,7 @@ public class SectionInfoActivity extends AppCompatActivity {
     ActivitySectionInfoBinding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
+    private String message = "No Household found!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +104,14 @@ public class SectionInfoActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            bi.btnNext.setVisibility(View.GONE);
             finish();
             startActivity(new Intent(SectionInfoActivity.this, SectionSubInfoActivity.class));
         }
     }
 
     private void SaveDraft() throws JSONException {
-
+        if (MainApp.fc != null) return;
         MainApp.fc = new FormsContract();
         MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.fc.setUser(MainApp.userName);
@@ -218,17 +220,8 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void BtnCheckHH() {
         if (!Validator.emptyTextBox(this, bi.hh07)) return;
-        /*bl = MainApp.appInfo.getDbHelper().getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase());
-        if (bl != null) {
-            Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
-            bi.hh08msg.setText("Household Found!");
-            bi.hh08name.setText(bl.getHhhead().toUpperCase());
-            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
-        } else {
-            bi.fldGrpSectionA02.setVisibility(View.GONE);
-            Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
-        }*/
-
+        bl = null;
+        MainApp.fc = null;
         getBLRandomBlock()
                 .flatMap((Function<BLRandomContract, Observable<FormsContract>>)
                         blRandomContract -> {
@@ -237,16 +230,30 @@ public class SectionInfoActivity extends AppCompatActivity {
                         })
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .filter(form -> {
+                    if (!form.getfStatus().equals("")) {
+                        message = "Household already exist!";
+                        return true;
+                    } else return false;
+                })
                 .subscribe(form -> {
-                    Toast.makeText(this, "Household found!", Toast.LENGTH_SHORT).show();
-                    bi.hh08msg.setText("Household Found!");
-                    bi.hh08name.setText(bl.getHhhead().toUpperCase());
-                    bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+                    MainApp.fc = form;
+                    blRandomExist(bl, message);
                 }, error -> {
-                    bi.fldGrpSectionA02.setVisibility(View.GONE);
-                    Toast.makeText(this, "No Household found!", Toast.LENGTH_SHORT).show();
+                    blRandomExist(bl, message);
                 });
 
+    }
+
+    private void blRandomExist(BLRandomContract bl, String message) {
+        if (bl != null) {
+            bi.hh08msg.setText("Household Found!");
+            bi.hh08name.setText(bl.getHhhead().toUpperCase());
+            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+        } else {
+            bi.fldGrpSectionA02.setVisibility(View.GONE);
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void showTooltip(@NotNull View view) {

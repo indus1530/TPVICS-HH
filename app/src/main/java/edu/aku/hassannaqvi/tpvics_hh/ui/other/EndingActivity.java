@@ -17,9 +17,12 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityEndingBinding;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.SUB_INFO_END_FLAG;
+
 public class EndingActivity extends AppCompatActivity {
 
     ActivityEndingBinding bi;
+    private boolean subInfoEndActivityFlag = false;
 
 
     @Override
@@ -30,6 +33,8 @@ public class EndingActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         boolean check = getIntent().getBooleanExtra("complete", false);
+        subInfoEndActivityFlag = getIntent().getBooleanExtra(SUB_INFO_END_FLAG, false);
+
 
         if (check) {
             bi.istatusa.setEnabled(true);
@@ -57,7 +62,7 @@ public class EndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, MainActivity.class));
+                if (subInfoEndActivityFlag) startActivity(new Intent(this, MainActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -66,23 +71,28 @@ public class EndingActivity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        MainApp.fc.setIstatus(bi.istatusa.isChecked() ? "1"
+        String statusValue = bi.istatusa.isChecked() ? "1"
                 : bi.istatusb.isChecked() ? "2"
                 : bi.istatusc.isChecked() ? "3"
                 : bi.istatusd.isChecked() ? "4"
                 : bi.istatuse.isChecked() ? "5"
                 : bi.istatusf.isChecked() ? "6"
                 : bi.istatus96.isChecked() ? "96"
-                : "0");
+                : "0";
 
-        MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
-        MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        if (subInfoEndActivityFlag) {
+            MainApp.fc.setfStatus(statusValue);
+        } else {
+            MainApp.fc.setIstatus(statusValue);
+            MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
+            MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        }
     }
 
     public boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updateEnding();
+        int updcount = db.updateEnding(subInfoEndActivityFlag);
         if (updcount == 1) {
             return true;
         } else {

@@ -31,5 +31,8 @@ class CONSTANTS {
         const val LOGIN_RESULT_CODE = 10101
         const val LOGIN_SPLASH_FLAG = "splash_flag"
 
+        //SubInfo
+        const val SUB_INFO_END_FLAG = "sub_info_end_flag"
+
     }
 }
