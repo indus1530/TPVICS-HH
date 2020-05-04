@@ -1222,6 +1222,8 @@
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/ss23land"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:enabled='@{ss23c.checked ? false : true }'
                             android:text='@{ss23c.checked ? "" : ss23landx.getText().toString() }' />
 
