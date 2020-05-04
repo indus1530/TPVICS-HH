@@ -1,6 +1,5 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui.other;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -10,9 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import com.validatorcrawler.aliazaz.Validator;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHAActivity;
 
 public class ChildEndingActivity extends AppCompatActivity {
 
@@ -54,9 +51,6 @@ public class ChildEndingActivity extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 finish();
-                Class<?> T = EndingActivity.class;
-                if (MainApp.selectedChildren.getFirst().size() > 0) T = SectionCHAActivity.class;
-                startActivity(new Intent(this, T).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

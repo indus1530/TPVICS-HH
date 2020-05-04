@@ -5,7 +5,12 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -13,14 +18,13 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
@@ -93,6 +97,29 @@ public class SectionCHBActivity extends AppCompatActivity {
             }
         });
 
+        EditText[] txtListener = new EditText[]{bi.cb03dd, bi.cb03mm};
+        for (EditText txtItem : txtListener) {
+
+            txtItem.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    bi.cb04.setText(null);
+                    bi.cb04a.setText(null);
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+
+                }
+            });
+
+        }
+
     }
 
     private boolean UpdateDB() {
@@ -122,11 +149,10 @@ public class SectionCHBActivity extends AppCompatActivity {
         f1.put("cb03mm", bi.cb03mm.getText().toString());
         f1.put("cb03yy", bi.cb03yy.getText().toString());
 
-        f1.put("cb04mm", bi.cb04mm.getText().toString());
-        f1.put("cb04yy", bi.cb04yy.getText().toString());
+        f1.put("cb04mm", bi.cb04a.getText().toString());
+        f1.put("cb04yy", bi.cb04.getText().toString());
 
-        f1.put("cb05", bi.cb051.isChecked() ? "1" :
-                bi.cb052.isChecked() ? "2" : "0");
+        f1.put("cb05", bi.cb051.isChecked() ? "1" : bi.cb052.isChecked() ? "2" : "0");
 
         child.setsCB(String.valueOf(f1));
     }
@@ -162,6 +188,27 @@ public class SectionCHBActivity extends AppCompatActivity {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
+    public void cb03yyOnTextChanged(CharSequence s, int start, int before, int count) {
+        bi.cb04.setEnabled(false);
+        bi.cb04.setText(null);
+        bi.cb04a.setEnabled(false);
+        bi.cb04a.setText(null);
+        if (!bi.cb03dd.isRangeTextValidate() || !bi.cb03mm.isRangeTextValidate() || !bi.cb03yy.isRangeTextValidate())
+            return;
+        if (bi.cb03dd.getText().toString().equals("98") && bi.cb03mm.getText().toString().equals("98") && bi.cb03yy.getText().toString().equals("9998")) {
+            bi.cb04.setEnabled(true);
+            bi.cb04a.setEnabled(true);
+            return;
+        }
+        int day = bi.cb03dd.getText().toString().equals("98") ? 15 : Integer.parseInt(bi.cb03dd.getText().toString());
+        int month = Integer.parseInt(bi.cb03mm.getText().toString());
+        int year = Integer.parseInt(bi.cb03yy.getText().toString());
+
+        AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+        if (age == null) return;
+        bi.cb04.setText(String.valueOf(age.getYear()));
+        bi.cb04a.setText(String.valueOf(age.getMonth()));
+    }
 
     public void showTooltip(@NotNull View view) {
         if (view.getId() != View.NO_ID) {

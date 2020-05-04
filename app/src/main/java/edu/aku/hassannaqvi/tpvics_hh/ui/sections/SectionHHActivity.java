@@ -148,8 +148,6 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
 
     @Override
     public void endSecAActivity(boolean flag) {
-//        if (!flag) return;
-
         try {
             SaveDraft();
         } catch (Exception e) {
@@ -159,7 +157,6 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
             finish();
             startActivity(new Intent(this, EndingActivity.class).putExtra("complete", flag));
         }
-
     }
 
     public void showTooltip(@NotNull View view) {

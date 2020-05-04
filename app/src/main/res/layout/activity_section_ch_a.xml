@@ -297,7 +297,8 @@
                     android:layout_margin="12dp"
                     android:background="@color/grayOverlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview" />
+                    android:text="@string/end_interview"
+                    android:visibility="@{uf15b.checked ? View.VISIBLE : View.GONE}" />
 
                 <Button
                     android:id="@+id/btnNext"
@@ -307,7 +308,8 @@
                     android:background="@color/colorPrimary"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+                    android:text="@string/nextSection"
+                    android:visibility="@{uf15a.checked ? View.VISIBLE : View.GONE}" />
 
 
             </LinearLayout>
