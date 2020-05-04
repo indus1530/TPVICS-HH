@@ -1108,6 +1108,8 @@
     <string name='Q_uf9a'>uf9a</string>
     <string name='Q_uf9b'>uf9b</string>
     <string name="Q_ch03b">CH03b</string>
+    <string name="hhformInfo">بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں HOUSEHOLD</string>
+    <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
 
 
 </resources>
