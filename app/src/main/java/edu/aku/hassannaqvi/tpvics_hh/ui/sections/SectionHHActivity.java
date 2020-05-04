@@ -23,7 +23,6 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionHhBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSecAActivity;
 
@@ -81,7 +80,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(SectionHHActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf("5")));
+                startActivity(new Intent(SectionHHActivity.this, SectionSS1Activity.class));
             }
         }
     }

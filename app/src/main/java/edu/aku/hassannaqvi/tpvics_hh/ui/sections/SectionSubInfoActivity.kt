@@ -21,13 +21,13 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSecAActivity {
     private var flagNewForm = false
 
     init {
-        setUI()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
+        setUI()
     }
 
     fun onHHViewClick() {
