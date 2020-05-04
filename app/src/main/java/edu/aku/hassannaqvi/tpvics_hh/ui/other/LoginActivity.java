@@ -176,7 +176,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private void setListeners() {
-        spinnerProvince.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, SplashscreenActivity.provinces));
+        spinnerProvince.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SplashscreenActivity.provinces));
         spinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -186,7 +186,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     if (entry.getValue().getFirst().equals(spinnerProvince.getSelectedItem().toString()))
                         districts.add(entry.getKey());
                 }
-                spinnerDistrict.setAdapter(new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_dropdown_item_1line, districts));
+                spinnerDistrict.setAdapter(new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_list_item_1
+                        , districts));
             }
 
             @Override
