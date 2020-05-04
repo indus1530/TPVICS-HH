@@ -18,22 +18,19 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionHhBinding;
-import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.EndSecAActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
-public class SectionHHActivity extends AppCompatActivity implements EndSecAActivity {
+public class SectionHHActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionHhBinding bi;
     private DatabaseHelper db;
-    private BLRandomContract bl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +78,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(SectionHHActivity.this, FamilyMembersListActivity.class).putExtra("sno", Integer.valueOf("5")));
+                startActivity(new Intent(SectionHHActivity.this, SectionSS1Activity.class));
             }
         }
     }
@@ -151,7 +148,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
 
     @Override
     public void endSecAActivity(boolean flag) {
-        if (!flag) return;
+//        if (!flag) return;
 
         try {
             SaveDraft();
@@ -160,7 +157,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSecAActiv
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", flag));
         }
 
     }

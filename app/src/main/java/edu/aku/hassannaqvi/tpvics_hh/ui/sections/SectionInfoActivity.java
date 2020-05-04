@@ -104,7 +104,6 @@ public class SectionInfoActivity extends AppCompatActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            bi.btnNext.setVisibility(View.GONE);
             finish();
             startActivity(new Intent(SectionInfoActivity.this, SectionSubInfoActivity.class));
         }
@@ -145,7 +144,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hh08", bi.hh08.getText().toString());
         json.put("hh09", MainApp.userName);
         //json.put("hh10", bi.hh10.getText().toString());
-
         MainApp.fc.setsInfo(String.valueOf(json));
     }
 

@@ -53,8 +53,8 @@ fun openEndActivity(activity: Activity) {
     dialog.window!!.attributes = params
     dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
         activity.finish()
-        activity.startActivity(Intent(activity, EndingActivity::class.java).putExtra("complete", false)
-                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+        activity.startActivity(Intent(activity, EndingActivity::class.java).putExtra("complete", false))
+//                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
     dialog.findViewById<View>(R.id.btnNo).setOnClickListener { view: View? -> dialog.dismiss() }
 }
@@ -70,14 +70,15 @@ fun openChildEndActivity(activity: Activity) {
     params.height = WindowManager.LayoutParams.WRAP_CONTENT
     dialog.show()
     dialog.window!!.attributes = params
-    dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? ->
+    dialog.findViewById<View>(R.id.btnOk).setOnClickListener {
         activity.finish()
         activity.startActivity(Intent(activity, ChildEndingActivity::class.java).putExtra("complete", false))
     }
-    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { view: View? -> dialog.dismiss() }
+    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
 }
 
-fun contextEndActivity(activity: Activity) {
+@JvmOverloads
+fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
     dialog.setContentView(R.layout.item_dialog_2)
@@ -88,9 +89,9 @@ fun contextEndActivity(activity: Activity) {
     params.height = WindowManager.LayoutParams.WRAP_CONTENT
     dialog.show()
     dialog.window!!.attributes = params
-    val endSecAActivity = activity as EndSecAActivity
-    dialog.findViewById<View>(R.id.btnOk).setOnClickListener { view: View? -> endSecAActivity.endSecAActivity(true) }
-    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { view: View? -> dialog.dismiss() }
+    val endSecAActivity = activity as EndSectionActivity
+    dialog.findViewById<View>(R.id.btnOk).setOnClickListener { endSecAActivity.endSecAActivity(defaultFlag) }
+    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
 }
 
 fun getMemberIcon(gender: Int, age: String): Int {
@@ -98,6 +99,6 @@ fun getMemberIcon(gender: Int, age: String): Int {
     return if (memAge == -1) R.drawable.boy else if (memAge > 10) if (gender == 1) R.drawable.ctr_male else R.drawable.ctr_female else if (gender == 1) R.drawable.ctr_childboy else R.drawable.ctr_childgirl
 }
 
-interface EndSecAActivity {
+interface EndSectionActivity {
     fun endSecAActivity(flag: Boolean)
 }
