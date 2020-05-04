@@ -41,6 +41,7 @@ public class SectionCHBActivity extends AppCompatActivity {
         setTitle(R.string.chBsec);
         setupSkips();
 
+
     }
 
     private void setupSkips() {

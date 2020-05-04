@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--new Strings-->
-    <string name="app_name"> TPVICS-HH urdu </string>
+    <string name="app_name"> TPVICS - HOUSEHOLD SURVEY \n In Urdu Language </string>
 
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>

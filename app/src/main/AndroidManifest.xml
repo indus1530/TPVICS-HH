@@ -23,7 +23,12 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".ui.sections.SectionSubInfoActivity"></activity>
+        <activity
+            android:name=".ui.sections.SectionSubInfoActivity"
+            android:supportsRtl="false"
+            android:theme="@style/AppTheme"
+
+            ></activity>
         <activity
             android:name=".ui.sections.SectionCHAActivity"
             android:screenOrientation="portrait" />
