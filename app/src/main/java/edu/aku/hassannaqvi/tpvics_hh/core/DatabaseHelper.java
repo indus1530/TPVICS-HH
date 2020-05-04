@@ -536,9 +536,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_USER, fc.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
+        values.put(FormsTable.COLUMN_FSTATUS, fc.getfStatus());
+        values.put(FormsTable.COLUMN_FSTATUS88x, fc.getFstatus88x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, fc.getEndingdatetime());
         values.put(FormsTable.COLUMN_SINFO, fc.getsInfo());
-        values.put(FormsTable.COLUMN_FSTATUS, fc.getfStatus());
         values.put(FormsTable.COLUMN_SE, fc.getsE());
         values.put(FormsTable.COLUMN_SM, fc.getsM());
         values.put(FormsTable.COLUMN_SN, fc.getsN());
@@ -859,10 +860,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_FSTATUS,
+                FormsTable.COLUMN_FSTATUS88x,
                 FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_FSTATUS,
                 FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_SM,
                 FormsTable.COLUMN_SN,
@@ -1027,6 +1029,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         if (flag) {
             values.put(FormsTable.COLUMN_FSTATUS, MainApp.fc.getfStatus());
+            values.put(FormsTable.COLUMN_FSTATUS88x, MainApp.fc.getFstatus88x());
         } else {
             values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
             values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
@@ -1194,10 +1197,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_FSTATUS,
+                FormsTable.COLUMN_FSTATUS88x,
                 FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
-                FormsTable.COLUMN_FSTATUS,
                 FormsTable.COLUMN_SE,
                 FormsTable.COLUMN_SM,
                 FormsTable.COLUMN_SN,

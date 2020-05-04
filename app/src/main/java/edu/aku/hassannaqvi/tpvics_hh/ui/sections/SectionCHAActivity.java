@@ -18,11 +18,13 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
-public class SectionCHAActivity extends AppCompatActivity {
+public class SectionCHAActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChABinding bi;
     int position;
@@ -158,12 +160,22 @@ public class SectionCHAActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        openChildEndActivity(this);
+        if (!formValidation()) return;
+        contextEndActivity(this);
     }
 
     @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
+    public void endSecAActivity(boolean flag) {
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, ChildEndingActivity.class).putExtra("complete", flag));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
     }
-
 }

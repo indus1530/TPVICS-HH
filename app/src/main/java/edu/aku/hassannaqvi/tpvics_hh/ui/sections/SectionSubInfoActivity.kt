@@ -9,24 +9,26 @@ import edu.aku.hassannaqvi.tpvics_hh.R
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
-import edu.aku.hassannaqvi.tpvics_hh.utils.EndSecAActivity
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
 
-class SectionSubInfoActivity : AppCompatActivity(), EndSecAActivity {
+class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
 
     private lateinit var bi: ActivitySectionSubInfoBinding
     private var flagNewForm = false
-
-    init {
-    }
+    private var flagInCompleteForm = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
+    }
+
+    override fun onResume() {
+        super.onResume()
         setUI()
     }
 
@@ -68,8 +70,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSecAActivity {
                                 onBackPressed()
                             }
                             1 -> {
-                                if (flagNewForm) return@run
-                                contextEndActivity(this)
+                                if (flagNewForm || flagInCompleteForm) return@run
+                                contextEndActivity(this, false)
                             }
                             else -> {
                                 if (flagNewForm) return@run
@@ -84,21 +86,29 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSecAActivity {
     }
 
     private fun setUI() {
-        if (MainApp.fc.istatus == "1") {
-            bi.btnHHView.isEnabled = false
-            bi.btnChildView.isEnabled = true
-        } else {
-            bi.btnHHView.isEnabled = true
-            bi.btnChildView.isEnabled = false
-            flagNewForm = true
+        when (MainApp.fc.istatus) {
+            "1" -> {
+                bi.btnHHView.isEnabled = false
+                bi.btnChildView.isEnabled = true
+                flagNewForm = false
+            }
+            "" -> {
+                bi.btnHHView.isEnabled = true
+                bi.btnChildView.isEnabled = false
+                flagNewForm = true
+            }
+            else -> {
+                bi.btnHHView.isEnabled = false
+                bi.btnChildView.isEnabled = false
+                flagNewForm = false
+                flagInCompleteForm = true
+            }
         }
-
     }
 
     override fun endSecAActivity(flag: Boolean) {
-        if (!flag) return
         finish()
-        startActivity(Intent(this, EndingActivity::class.java).putExtra("complete", true).putExtra(SUB_INFO_END_FLAG, true)
+        startActivity(Intent(this, EndingActivity::class.java).putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 }

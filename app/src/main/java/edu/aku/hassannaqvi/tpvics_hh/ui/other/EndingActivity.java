@@ -35,7 +35,6 @@ public class EndingActivity extends AppCompatActivity {
         boolean check = getIntent().getBooleanExtra("complete", false);
         subInfoEndActivityFlag = getIntent().getBooleanExtra(SUB_INFO_END_FLAG, false);
 
-
         if (check) {
             bi.istatusa.setEnabled(true);
             bi.istatusb.setEnabled(false);
@@ -82,6 +81,7 @@ public class EndingActivity extends AppCompatActivity {
 
         if (subInfoEndActivityFlag) {
             MainApp.fc.setfStatus(statusValue);
+            MainApp.fc.setFstatus88x(bi.istatus96x.getText().toString());
         } else {
             MainApp.fc.setIstatus(statusValue);
             MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
