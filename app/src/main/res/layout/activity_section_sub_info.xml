@@ -66,7 +66,7 @@
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/btnHHView"
                 app:layout_constraintStart_toStartOf="@+id/btnHHView"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/hhInstruct" />
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -178,7 +178,7 @@
                 app:layout_optimizationLevel="ratio" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/hhInstruct"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -187,18 +187,21 @@
                 android:background="@color/white"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="16dp"
-
-                android:text="Instructions here \n ..."
-
+                android:text="@string/hhformInfo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#7f7f7f"
+
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnHHView" />
+                app:layout_constraintTop_toBottomOf="@+id/btnHHView"
+                tools:visibility="visible" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/childInstruct"
                 android:layout_width="0dp"
+                android:text="@string/childforminfo"
+                android:visibility="gone"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -206,8 +209,7 @@
                 android:background="@color/white"
                 android:gravity="center_horizontal|center_vertical"
                 android:padding="16dp"
-
-                android:text="Instructions here \n ..."
+                tools:visibility="visible"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#7f7f7f"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -225,7 +227,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/childInstruct" />
 
             <TextView
                 android:id="@+id/textView13"

@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
@@ -91,17 +92,26 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.btnHHView.isEnabled = false
                 bi.btnChildView.isEnabled = true
                 flagNewForm = false
+
+                bi.hhInstruct.visibility = View.GONE
+                bi.childInstruct.visibility = View.VISIBLE
             }
             "" -> {
                 bi.btnHHView.isEnabled = true
                 bi.btnChildView.isEnabled = false
                 flagNewForm = true
+
+                bi.hhInstruct.visibility = View.VISIBLE
+                bi.childInstruct.visibility = View.GONE
             }
             else -> {
                 bi.btnHHView.isEnabled = false
                 bi.btnChildView.isEnabled = false
                 flagNewForm = false
                 flagInCompleteForm = true
+
+                bi.hhInstruct.visibility = View.GONE
+                bi.childInstruct.visibility = View.GONE
             }
         }
     }
