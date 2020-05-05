@@ -104,6 +104,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         json.put("hh12", bi.hh12.getText().toString());
         json.put("hh13a", bi.hh13a.getText().toString());
         json.put("hh13b", bi.hh13b.getText().toString());
+
         json.put("hh14", bi.hh14.getText().toString());
 
         json.put("hh15", bi.hh15a.isChecked() ? "1"
@@ -115,10 +116,6 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
 
         json.put("hh17a", bi.hh17a.getText().toString());
         json.put("hh17b", bi.hh17b.getText().toString());
-
-        json.put("hh18", bi.hh18a.isChecked() ? "1"
-                : bi.hh18b.isChecked() ? "2"
-                : "0");
 
         json.put("hh18", bi.hh18a.isChecked() ? "1"
                 : bi.hh18b.isChecked() ? "2"
