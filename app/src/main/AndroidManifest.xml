@@ -26,9 +26,7 @@
         <activity
             android:name=".ui.sections.SectionSubInfoActivity"
             android:supportsRtl="false"
-            android:theme="@style/AppTheme"
-
-            ></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionCHAActivity"
             android:screenOrientation="portrait" />
@@ -87,6 +85,9 @@
         </activity>
         <activity
             android:name=".ui.other.EndingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.other.ChildEndingActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.MainActivity"

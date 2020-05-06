@@ -207,8 +207,8 @@ public class SectionCHBActivity extends AppCompatActivity {
 
         AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
         if (age == null) return;
-        bi.cb04mm.setText(String.valueOf(age.getYear()));
-        bi.cb04yy.setText(String.valueOf(age.getMonth()));
+        bi.cb04mm.setText(String.valueOf(age.getMonth()));
+        bi.cb04yy.setText(String.valueOf(age.getYear()));
     }
 
     public void showTooltip(@NotNull View view) {
