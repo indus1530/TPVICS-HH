@@ -546,6 +546,10 @@
 
     <string name="ec14"> بچے کا نام </string>
 
+    <string name="ec15"> (نام) کی جنس کیا ہے ؟ </string>
+    <string name="ec151"> لڑکا </string>
+    <string name="ec152"> لڑکی </string>
+
     <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
     <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
     <string name="ec18"> جواب دہندہ کا رشتہ بچے کے ساتھ </string>
@@ -612,10 +616,6 @@
     <string name="cb04"> عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. </string>
     <string name="cb04mm"> عمر (مکمل سالوں میں) </string>
     <string name="cb04yy"> عمر (مکمل مہینوں میں) </string>
-
-    <string name="cb05"> (نام) کی جنس کیا ہے ؟ </string>
-    <string name="cb051"> لڑکا </string>
-    <string name="cb052"> لڑکی </string>
 
     <string name="im1title1"> سے چیک کریں :CB4 اہل بچے کی عمر سوال نمبر </string>
     <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
@@ -870,7 +870,7 @@
     <string name='Q_cb02'>cb02</string>
     <string name='Q_cb03'>cb03</string>
     <string name='Q_cb04'>cb04</string>
-    <string name='Q_cb05'>cb05</string>
+    <string name='Q_ec15'>ec15</string>
     <string name='Q_ch_childid'>ch_childid</string>
     <string name='Q_ch_cluster'>ch_cluster</string>
     <string name='Q_ch_hno'>ch_hno</string>

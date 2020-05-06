@@ -153,8 +153,6 @@ public class SectionCHBActivity extends AppCompatActivity {
         f1.put("cb04mm", bi.cb04mm.getText().toString());
         f1.put("cb04yy", bi.cb04yy.getText().toString());
 
-        f1.put("cb05", bi.cb051.isChecked() ? "1" : bi.cb052.isChecked() ? "2" : "0");
-
         child.setsCB(String.valueOf(f1));
     }
 

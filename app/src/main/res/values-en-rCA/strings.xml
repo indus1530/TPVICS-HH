@@ -529,9 +529,9 @@
     <string name="cb04"> cb04: How old is (name)?  Record age in completed years and months. Record ‘0’ if less than 1 year.If  Responses to CB3 and CB4 are inconsistent, probe further and correct. </string>
     <string name="cb04mm"> Age (in completed years)</string>
     <string name="cb04yy"> Age (in completed Months)</string>
-    <string name="cb05"> cb05: What sex is (name)?  </string>
-    <string name="cb051"> Male</string>
-    <string name="cb052"> Female</string>
+    <string name="ec15"> ec15: What sex is (name)?  </string>
+    <string name="ec151"> Male</string>
+    <string name="ec152"> Female</string>
     <string name="im1title1"> im1title1: Check eligible child’s age in CB4:</string>
     <string name="imtitle2"> imtitle2: If child is not 12-23 months age group, probe once again and verify and if still not 12-23 months, end the interview with thanks to respondent. GO TO ELIGIBLE CHILD – INFORMATION PANEL ec22 and circle CHILD NOT ELIGIBLE/NOT 12-23 MONTHS AGE code 05.</string>
     <string name="im01"> im01: Do you have a vaccination card from a Government or private health provider where (name)’s vaccinations are written down? (If yes: may I see it please)</string>
@@ -746,7 +746,7 @@
     <string name='Q_cb02'>cb02</string>
     <string name='Q_cb03'>cb03</string>
     <string name='Q_cb04'>cb04</string>
-    <string name='Q_cb05'>cb05</string>
+    <string name='Q_ec15'>ec15</string>
     <string name='Q_ch_childid'>ch_childid</string>
     <string name='Q_ch_cluster'>ch_cluster</string>
     <string name='Q_ch_hno'>ch_hno</string>

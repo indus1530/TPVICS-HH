@@ -19,6 +19,100 @@
             style="@style/linearlayout_view_wt_bound">
 
 
+            <!-- ec14  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVec14"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_ec14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ec14"
+                            android:text="@string/ec14" />
+
+                        <TextView
+                            android:id="@+id/q_ec14"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ec14"
+                            android:layout_alignBottom="@id/qtxt_ec14"
+                            android:gravity="center"
+                            android:text="@string/Q_ec14" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/ec14"
+                        style="@style/EditTextAlpha"
+                        android:hint="@string/ec14" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- ec15  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVec15"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_ec15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ec15"
+                            android:text="@string/ec15" />
+
+                        <TextView
+                            android:id="@+id/q_ec15"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ec15"
+                            android:layout_alignBottom="@id/qtxt_ec15"
+                            android:text="@string/Q_ec15" />
+
+                    </RelativeLayout>
+
+                    <RadioGroup
+                        android:id="@+id/ec15"
+                        style="@style/hradiogroup">
+
+                        <RadioButton
+                            android:id="@+id/ec151"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/ec151" />
+
+                        <RadioButton
+                            android:id="@+id/ec152"
+                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/ec152" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <!-- ec16  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVec16"
@@ -51,8 +145,9 @@
                     </RelativeLayout>
 
                     <EditText
-                        android:id="@+id/ec16a"
-                        style="@style/EditTextAlpha" />
+                        android:id="@+id/ec16"
+                        style="@style/EditTextAlpha"
+                        android:hint="@string/ec16" />
 
                 </LinearLayout>
 
