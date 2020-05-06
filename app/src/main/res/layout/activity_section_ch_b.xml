@@ -426,60 +426,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- cb05  Radio   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb05"
-                style="@style/cardView">
-
-                <LinearLayout style="@style/vlinearlayout">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
-
-                        <TextView
-                            android:id="@+id/qtxt_cb05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_cb05"
-                            android:text="@string/cb05" />
-
-                        <TextView
-                            android:id="@+id/q_cb05"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_cb05"
-                            android:layout_alignBottom="@id/qtxt_cb05"
-                            android:text="@string/Q_cb05" />
-
-                    </RelativeLayout>
-
-                    <RadioGroup
-                        android:id="@+id/cb05"
-                        style="@style/hradiogroup">
-
-                        <RadioButton
-                            android:id="@+id/cb051"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/cb051" />
-
-                        <RadioButton
-                            android:id="@+id/cb052"
-                            style="@style/radiobutton"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:text="@string/cb052" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
 
             <!--ENDBUTTON linearlayout-->
             <LinearLayout
