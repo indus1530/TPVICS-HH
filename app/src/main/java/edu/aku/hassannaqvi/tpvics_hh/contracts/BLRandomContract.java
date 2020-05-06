@@ -13,7 +13,8 @@ public class BLRandomContract {
 
     private String _ID;
     private String LUID;
-    private String subVillageCode; // hh02
+    private String ebCode; // hh05
+    private String pCode; // hh02
     private String structure;  // Structure
     private String extension; // Extension
     private String hh;
@@ -27,13 +28,30 @@ public class BLRandomContract {
     private String rndType;
     private String assignHH;
 
+    public String getEbcode() {
+        return ebCode;
+    }
+
+    public void setEbcode(String ebcode) {
+        this.ebCode = ebcode;
+    }
+
+    public String getTabno() {
+        return tabno;
+    }
+
+    public void setTabno(String tabno) {
+        this.tabno = tabno;
+    }
+
     public BLRandomContract() {
     }
 
     public BLRandomContract Sync(JSONObject jsonObject) throws JSONException {
         this._ID = jsonObject.getString(SingleRandomHH.COLUMN_ID);
         this.LUID = jsonObject.getString(SingleRandomHH.COLUMN_LUID);
-        this.subVillageCode = jsonObject.getString(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE);
+        this.pCode = jsonObject.getString(SingleRandomHH.COLUMN_P_CODE);
+        this.ebCode = jsonObject.getString(SingleRandomHH.COLUMN_EB_CODE);
         this.structure = jsonObject.getString(SingleRandomHH.COLUMN_STRUCTURE_NO);
         this.structure = String.format("%04d", Integer.valueOf(this.structure));
 
@@ -55,7 +73,8 @@ public class BLRandomContract {
     public BLRandomContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_ID));
         this.LUID = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_LUID));
-        this.subVillageCode = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE));
+        this.pCode = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_P_CODE));
+        this.ebCode = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_EB_CODE));
         this.structure = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_STRUCTURE_NO));
         this.extension = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_FAMILY_EXT_CODE));
         this.hh = cursor.getString(cursor.getColumnIndex(SingleRandomHH.COLUMN_HH));
@@ -84,12 +103,12 @@ public class BLRandomContract {
         this.LUID = LUID;
     }
 
-    public String getSubVillageCode() {
-        return subVillageCode;
+    public String getpCode() {
+        return pCode;
     }
 
-    public void setSubVillageCode(String subVillageCode) {
-        this.subVillageCode = subVillageCode;
+    public void setpCode(String pCode) {
+        this.pCode = pCode;
     }
 
     public String getStructure() {
@@ -178,7 +197,8 @@ public class BLRandomContract {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
         public static final String COLUMN_LUID = "UID";
-        public static final String COLUMN_ENUM_BLOCK_CODE = "hh02";
+        public static final String COLUMN_P_CODE = "hh02";
+        public static final String COLUMN_EB_CODE = "hh05";
         public static final String COLUMN_STRUCTURE_NO = "hh03";
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH = "hh";

@@ -18,20 +18,20 @@
             style="@style/linearlayout_view_wt_bound">
 
             <!-- im25  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVim25"
-                style="@style/cardView">
+            <!--            <androidx.cardview.widget.CardView
+                            android:id="@+id/fldGrpCVim25"
+                            style="@style/cardView">
 
-                <LinearLayout style="@style/vlinearlayout">
+                            <LinearLayout style="@style/vlinearlayout">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/im25" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/im25" />
 
-                </LinearLayout>
+                            </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>-->
 
             <!-- im26a  TextArea   -->
             <androidx.cardview.widget.CardView

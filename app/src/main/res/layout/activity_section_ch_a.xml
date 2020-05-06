@@ -19,9 +19,9 @@
             style="@style/linearlayout_view_wt_bound">
 
 
-            <!-- uf09  Input   -->
+            <!-- ec16  Input   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf09"
+                android:id="@+id/fldGrpCVec16"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -32,26 +32,26 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_uf09"
+                            android:id="@+id/qtxt_ec16"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_uf09"
-                            android:text="@string/uf09" />
+                            android:layout_toEndOf="@id/q_ec16"
+                            android:text="@string/ec16" />
 
                         <TextView
-                            android:id="@+id/q_uf09"
+                            android:id="@+id/q_ec16"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_uf09"
-                            android:layout_alignBottom="@id/qtxt_uf09"
+                            android:layout_alignTop="@id/qtxt_ec16"
+                            android:layout_alignBottom="@id/qtxt_ec16"
                             android:gravity="center"
-                            android:text="@string/Q_uf09" />
+                            android:text="@string/Q_ec16" />
 
                     </RelativeLayout>
 
                     <EditText
-                        android:id="@+id/uf09a"
+                        android:id="@+id/ec16a"
                         style="@style/EditTextAlpha" />
 
                 </LinearLayout>
@@ -59,9 +59,9 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- uf9a  Input-Numeric   -->
+            <!-- ec17  Input-Numeric   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf9a"
+                android:id="@+id/fldGrpCVec17"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -72,26 +72,26 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_uf9a"
+                            android:id="@+id/qtxt_ec17"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_uf9a"
-                            android:text="@string/uf9a" />
+                            android:layout_toEndOf="@id/q_ec17"
+                            android:text="@string/ec17" />
 
                         <TextView
-                            android:id="@+id/q_uf9a"
+                            android:id="@+id/q_ec17"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_uf9a"
-                            android:layout_alignBottom="@id/qtxt_uf9a"
+                            android:layout_alignTop="@id/qtxt_ec17"
+                            android:layout_alignBottom="@id/qtxt_ec17"
                             android:gravity="center"
-                            android:text="@string/Q_uf9a" />
+                            android:text="@string/Q_ec17" />
 
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/uf9a"
+                        android:id="@+id/ec17"
                         style="@style/EditTextNum"
                         android:hint="@string/year"
                         android:maxLength="2"
@@ -104,9 +104,9 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- uf9b  Radio   -->
+            <!-- ec18  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf9b"
+                android:id="@+id/fldGrpCVec18"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -117,43 +117,43 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_uf9b"
+                            android:id="@+id/qtxt_ec18"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_uf9b"
-                            android:text="@string/uf9b" />
+                            android:layout_toEndOf="@id/q_ec18"
+                            android:text="@string/ec18" />
 
                         <TextView
-                            android:id="@+id/q_uf9b"
+                            android:id="@+id/q_ec18"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_uf9b"
-                            android:layout_alignBottom="@id/qtxt_uf9b"
+                            android:layout_alignTop="@id/qtxt_ec18"
+                            android:layout_alignBottom="@id/qtxt_ec18"
                             android:gravity="center"
-                            android:text="@string/Q_uf9b" />
+                            android:text="@string/Q_ec18" />
 
                     </RelativeLayout>
 
                     <RadioGroup
-                        android:id="@+id/uf9b"
+                        android:id="@+id/ec18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:id="@+id/uf9b1"
+                            android:id="@+id/ec181"
                             style="@style/radiobutton"
-                            android:text="@string/uf9b1" />
+                            android:text="@string/ec181" />
 
                         <RadioButton
-                            android:id="@+id/uf9b2"
+                            android:id="@+id/ec182"
                             style="@style/radiobutton"
-                            android:text="@string/uf9b2" />
+                            android:text="@string/ec182" />
 
                         <RadioButton
-                            android:id="@+id/uf9b98"
+                            android:id="@+id/ec1898"
                             style="@style/radiobutton"
-                            android:text="@string/uf9b98" />
+                            android:text="@string/ec1898" />
 
                     </RadioGroup>
 
@@ -161,9 +161,9 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- uf14  Radio   -->
+            <!-- ec19  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf14"
+                android:id="@+id/fldGrpCVec19"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -174,39 +174,39 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_uf14"
+                            android:id="@+id/qtxt_ec19"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_uf14"
-                            android:text="@string/uf14" />
+                            android:layout_toEndOf="@id/q_ec19"
+                            android:text="@string/ec19" />
 
                         <TextView
-                            android:id="@+id/q_uf14"
+                            android:id="@+id/q_ec19"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_uf14"
-                            android:layout_alignBottom="@id/qtxt_uf14"
+                            android:layout_alignTop="@id/qtxt_ec19"
+                            android:layout_alignBottom="@id/qtxt_ec19"
                             android:gravity="center"
-                            android:text="@string/Q_uf14" />
+                            android:text="@string/Q_ec19" />
 
                     </RelativeLayout>
 
 
                     <RadioGroup
-                        android:id="@+id/uf14"
+                        android:id="@+id/ec19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:id="@+id/uf14a"
+                            android:id="@+id/ec19a"
                             style="@style/radiobutton"
-                            android:text="@string/uf14a" />
+                            android:text="@string/ec19a" />
 
                         <RadioButton
-                            android:id="@+id/uf14b"
+                            android:id="@+id/ec19b"
                             style="@style/radiobutton"
-                            android:text="@string/uf14b" />
+                            android:text="@string/ec19b" />
 
                     </RadioGroup>
 
@@ -214,9 +214,9 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- uf15  Radio   -->
+            <!-- ec21  Radio   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf15"
+                android:id="@+id/fldGrpCVec21"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -227,38 +227,38 @@
                         android:background="@drawable/bottom">
 
                         <TextView
-                            android:id="@+id/qtxt_uf15"
+                            android:id="@+id/qtxt_ec21"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_uf15"
-                            android:text="@string/uf14" />
+                            android:layout_toEndOf="@id/q_ec21"
+                            android:text="@string/ec19" />
 
                         <TextView
-                            android:id="@+id/q_uf15"
+                            android:id="@+id/q_ec21"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_uf15"
-                            android:layout_alignBottom="@id/qtxt_uf15"
+                            android:layout_alignTop="@id/qtxt_ec21"
+                            android:layout_alignBottom="@id/qtxt_ec21"
                             android:gravity="center"
-                            android:text="@string/Q_uf15" />
+                            android:text="@string/Q_ec21" />
 
                     </RelativeLayout>
 
                     <RadioGroup
-                        android:id="@+id/uf15"
+                        android:id="@+id/ec21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:id="@+id/uf15a"
+                            android:id="@+id/ec21a"
                             style="@style/radiobutton"
-                            android:text="@string/uf15a" />
+                            android:text="@string/ec21a" />
 
                         <RadioButton
-                            android:id="@+id/uf15b"
+                            android:id="@+id/ec20b"
                             style="@style/radiobutton"
-                            android:text="@string/uf15b" />
+                            android:text="@string/ec20b" />
 
                     </RadioGroup>
 
@@ -266,9 +266,9 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- uf15b_title  Title   -->
+            <!-- ec20b_title  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVuf15b_title"
+                android:id="@+id/fldGrpCVec20b_title"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
@@ -277,7 +277,7 @@
                         style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/uf15b_title" />
+                        android:text="@string/ec20b_title" />
 
                 </LinearLayout>
 
@@ -298,7 +298,7 @@
                     android:background="@color/grayOverlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview"
-                    android:visibility="@{uf15b.checked ? View.VISIBLE : View.GONE}" />
+                    android:visibility="@{ec20b.checked ? View.VISIBLE : View.GONE}" />
 
                 <Button
                     android:id="@+id/btnNext"
@@ -309,7 +309,7 @@
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
-                    android:visibility="@{uf15a.checked ? View.VISIBLE : View.GONE}" />
+                    android:visibility="@{ec21a.checked ? View.VISIBLE : View.GONE}" />
 
 
             </LinearLayout>

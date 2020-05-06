@@ -50,7 +50,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         setTitle(R.string.hhsec);
     }
 
-    public void hh07TextChanged(CharSequence s, int start, int before, int count) {
+    public void hh11TextChanged(CharSequence s, int start, int before, int count) {
         bi.fldGrpSectionA01.setVisibility(View.GONE);
         bi.fldGrpSectionA02.setVisibility(View.GONE);
         Clear.clearAllFields(bi.fldGrpSectionA01);
@@ -58,16 +58,16 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void setUIComponent() {
 
-        bi.hh08.addTextChangedListener(new TextWatcher() {
+        bi.hh12.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 //      Toast.makeText(SectionHHActivity.this, charSequence+" i="+i+" i1="+i1+" i2="+i2, Toast.LENGTH_LONG).show();
 
                 if (i == 1 && i1 == 0 && i2 == 1) {
-                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                    bi.hh12.setText(bi.hh12.getText().toString() + "-");
                 }
                 if (i == 6 && i1 == 0 && i2 == 1) {
-                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                    bi.hh12.setText(bi.hh12.getText().toString() + "-");
                 }
             }
 
@@ -75,23 +75,23 @@ public class SectionInfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 if (i == 0 && i1 == 0 && i2 == 1) {
-                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                    bi.hh12.setText(bi.hh12.getText().toString() + "-");
                 }
                 if (i == 2 && i1 == 1 && i2 == 0) {
-                    bi.hh08.setText(bi.hh08.getText().toString().substring(0, 1));
+                    bi.hh12.setText(bi.hh12.getText().toString().substring(0, 1));
                 }
                 if (i == 1 && i1 == 4 && i2 == 5) {
-                    bi.hh08.setText(bi.hh08.getText().toString() + "-");
+                    bi.hh12.setText(bi.hh12.getText().toString() + "-");
                 }
                 if (i == 7 && i1 == 1 && i2 == 0) {
-                    bi.hh08.setText(bi.hh08.getText().toString().substring(0, 6));
+                    bi.hh12.setText(bi.hh12.getText().toString().substring(0, 6));
                 }
 
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-                bi.hh08.setSelection(bi.hh08.getText().toString().length());
+                bi.hh12.setSelection(bi.hh12.getText().toString().length());
             }
         });
 
@@ -117,8 +117,8 @@ public class SectionInfoActivity extends AppCompatActivity {
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-        MainApp.fc.setClusterCode(bi.hh07.getText().toString());
-        MainApp.fc.setHhno(bi.hh08.getText().toString());
+        MainApp.fc.setClusterCode(bi.hh11.getText().toString());
+        MainApp.fc.setHhno(bi.hh12.getText().toString());
         MainApp.fc.setLuid(bl.getLUID());
         MainApp.setGPS(this); // Set GPS
 
@@ -128,22 +128,22 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("rndid", bl.get_ID());
         json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
-        json.put("hh03", bl.getStructure());
-        json.put("hh07", bl.getExtension());
+        json.put("hh06", bl.getStructure());
+        json.put("hh11", bl.getExtension());
         json.put("hhhead", bl.getHhhead());
-        json.put("hh09", bl.getContact());
+        json.put("hh063", bl.getContact());
         json.put("hhss", bl.getSelStructure());
 
 
-        json.put("hh07", bi.hh07.getText().toString());
-        json.put("geoarea", bi.hh06txt.getText().toString() + ", " + bi.geoarea.getText().toString());
-  /*      json.put("hh04", bi.hh04.getText().toString());
-        json.put("hh05", bi.hh05.getText().toString());
-        json.put("hh06", bi.hh06.getText().toString());*/
-        json.put("hh07", bi.hh07.getText().toString());
+        json.put("hh11", bi.hh11.getText().toString());
+        json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
+  /*      json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());
-        json.put("hh09", MainApp.userName);
-        //json.put("hh10", bi.hh10.getText().toString());
+        json.put("hh09", bi.hh09.getText().toString());*/
+        json.put("hh11", bi.hh11.getText().toString());
+        json.put("hh12", bi.hh12.getText().toString());
+        json.put("hh063", MainApp.userName);
+        //json.put("hh074", bi.hh074.getText().toString());
         MainApp.fc.setsInfo(String.valueOf(json));
     }
 
@@ -153,13 +153,13 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     public void BtnCheckCluster() {
 
-        if (!Validator.emptyTextBox(this, bi.hh07)) return;
+        if (!Validator.emptyTextBox(this, bi.hh11)) return;
         boolean loginFlag;
-        if (bi.hh07.getText().toString().length() != 6) {
+        if (bi.hh11.getText().toString().length() != 6) {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
-        /*int cluster = Integer.parseInt(bi.hh07.getText().toString().substring(3, 6));
+        /*int cluster = Integer.parseInt(bi.hh11.getText().toString().substring(3, 6));
         if (cluster < 500) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {
@@ -181,43 +181,43 @@ public class SectionInfoActivity extends AppCompatActivity {
                         String[] selSplit = selected.split("\\|");
 
                         bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
-                             /*       bi.hh03.setText(selSplit[0]);
-                                    bi.hh04.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
-                                    bi.hh05.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
-                                    bi.hh06.setText(selSplit[3]);*/
-                        bi.hh06txt.setText(selSplit[3]);
+                             /*       bi.hh06.setText(selSplit[0]);
+                                    bi.hh07.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
+                                    bi.hh08.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
+                                    bi.hh09.setText(selSplit[3]);*/
+                        bi.hh09txt.setText(selSplit[3]);
                         bi.geoarea.setText(new StringBuilder(selSplit[2]).append(", ").append(selSplit[1]).append(", ").append(selSplit[0]));
                     }
                 }, error -> {
                     Toast.makeText(this, "Sorry cluster not found!!", Toast.LENGTH_SHORT).show();
-                    bi.hh06txt.setText("Village");
+                    bi.hh09txt.setText("Village");
                     bi.geoarea.setText(new StringBuilder("Tehsil").append(", ").append("District").append(", ").append("Province"));
                 });
     }
 
     private Observable<EnumBlockContract> getEnumerationBlock() {
         return Observable.create(emitter -> {
-            emitter.onNext(db.getEnumBlock(bi.hh07.getText().toString()));
+            emitter.onNext(db.getEnumBlock(bi.hh11.getText().toString()));
             emitter.onComplete();
         });
     }
 
     private Observable<BLRandomContract> getBLRandomBlock() {
         return Observable.create(emitter -> {
-            emitter.onNext(db.getHHFromBLRandom(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
+            emitter.onNext(db.getHHFromBLRandom(bi.hh11.getText().toString(), bi.hh12.getText().toString().toUpperCase()));
             emitter.onComplete();
         });
     }
 
     private Observable<FormsContract> getFilledForm() {
         return Observable.create(emitter -> {
-            emitter.onNext(db.getFilledForm(bi.hh07.getText().toString(), bi.hh08.getText().toString().toUpperCase()));
+            emitter.onNext(db.getFilledForm(bi.hh11.getText().toString(), bi.hh12.getText().toString().toUpperCase()));
             emitter.onComplete();
         });
     }
 
     public void BtnCheckHH() {
-        if (!Validator.emptyTextBox(this, bi.hh07)) return;
+        if (!Validator.emptyTextBox(this, bi.hh11)) return;
         bl = null;
         MainApp.fc = null;
         getBLRandomBlock()
@@ -245,10 +245,12 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     private void blRandomExist(BLRandomContract bl, String message) {
         if (bl != null) {
-            bi.hh08msg.setText("Household Found!");
-            bi.hh08name.setText(bl.getHhhead().toUpperCase());
+            bi.hh12msg.setText(message);
+            bi.hh12name.setText(bl.getHhhead().toUpperCase());
             bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
         } else {
+            bi.hh12msg.setText(message);
+            bi.hh12name.setText(null);
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         }

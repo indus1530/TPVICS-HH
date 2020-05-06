@@ -55,13 +55,13 @@ public class SectionSS1Activity extends AppCompatActivity {
             if (i == bi.ss07h.getId() || i == bi.ss07i.getId()) {
                 Clear.clearAllFields(bi.ss08cv, false);
                 Clear.clearAllFields(bi.ss09cv, false);
-                Clear.clearAllFields(bi.ss10cv, false);
+                //    Clear.clearAllFields(bi.ss10cv, false);
                 Clear.clearAllFields(bi.ss11cv, false);
                 Clear.clearAllFields(bi.ss12cv, false);
             } else {
                 Clear.clearAllFields(bi.ss08cv, true);
                 Clear.clearAllFields(bi.ss09cv, true);
-                Clear.clearAllFields(bi.ss10cv, true);
+                //   Clear.clearAllFields(bi.ss10cv, true);
                 Clear.clearAllFields(bi.ss11cv, true);
                 Clear.clearAllFields(bi.ss12cv, true);
             }
@@ -70,12 +70,12 @@ public class SectionSS1Activity extends AppCompatActivity {
 
         bi.ss09.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ss09b.getId()) {
-                Clear.clearAllFields(bi.ss10cv, false);
+                //      Clear.clearAllFields(bi.ss10cv, false);
                 Clear.clearAllFields(bi.ss11cv, false);
                 Clear.clearAllFields(bi.ss12cv, false);
 
             } else {
-                Clear.clearAllFields(bi.ss10cv, true);
+                //      Clear.clearAllFields(bi.ss10cv, true);
                 Clear.clearAllFields(bi.ss11cv, true);
                 Clear.clearAllFields(bi.ss12cv, true);
 
@@ -220,7 +220,7 @@ public class SectionSS1Activity extends AppCompatActivity {
                 : bi.ss09b.isChecked() ? "2"
                 : "0");
 
-        json.put("ss10", bi.ss10.getText().toString());
+        //json.put("ss10", bi.ss10.getText().toString());
 
         json.put("ss11", bi.ss11a.isChecked() ? "1"
                 : bi.ss11b.isChecked() ? "2"

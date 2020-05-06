@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/uf16" />
+                android:text="@string/ec22" />
 
             <!--Status-->
             <RadioGroup
@@ -35,37 +35,37 @@
                     android:id="@+id/istatusa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16a" />
+                    android:text="@string/ec22a" />
 
                 <RadioButton
                     android:id="@+id/istatusb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16b" />
+                    android:text="@string/ec22b" />
 
                 <RadioButton
                     android:id="@+id/istatusc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16c" />
+                    android:text="@string/ec22c" />
 
                 <RadioButton
                     android:id="@+id/istatusd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16d" />
+                    android:text="@string/ec22d" />
 
                 <RadioButton
                     android:id="@+id/istatuse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16e" />
+                    android:text="@string/ec22e" />
 
                 <RadioButton
                     android:id="@+id/istatusf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/uf16f" />
+                    android:text="@string/ec22f" />
 
                 <RadioButton
                     android:id="@+id/istatus96"

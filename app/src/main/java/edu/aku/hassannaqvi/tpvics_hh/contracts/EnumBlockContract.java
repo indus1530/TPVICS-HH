@@ -11,6 +11,7 @@ public class EnumBlockContract {
 
     private static final String TAG = "EnumBlock_CONTRACT";
     String dist_code;
+    String ebcode;
     String geoarea;
     String cluster;
 
@@ -20,12 +21,14 @@ public class EnumBlockContract {
 
     public EnumBlockContract Sync(JSONObject jsonObject) throws JSONException {
         this.dist_code = jsonObject.getString(EnumBlockTable.COLUMN_DIST_ID);
+        this.ebcode = jsonObject.getString(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE);
         this.geoarea = jsonObject.getString(EnumBlockTable.COLUMN_GEO_AREA);
         this.cluster = jsonObject.getString(EnumBlockTable.COLUMN_CLUSTER_AREA);
         return this;
     }
 
     public EnumBlockContract HydrateEnum(Cursor cursor) {
+        this.ebcode = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE));
         this.dist_code = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_DIST_ID));
         this.geoarea = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_GEO_AREA));
         this.cluster = cursor.getString(cursor.getColumnIndex(EnumBlockTable.COLUMN_CLUSTER_AREA));
@@ -38,6 +41,14 @@ public class EnumBlockContract {
 
     public void setDist_code(String dsit_code) {
         this.dist_code = dsit_code;
+    }
+
+    public String getEbcode() {
+        return ebcode;
+    }
+
+    public void setEbcode(String ebcode) {
+        this.ebcode = ebcode;
     }
 
     public String getGeoarea() {
@@ -59,6 +70,7 @@ public class EnumBlockContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
+        json.put(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE, this.ebcode == null ? JSONObject.NULL : this.ebcode);
         json.put(EnumBlockTable.COLUMN_DIST_ID, this.dist_code == null ? JSONObject.NULL : this.dist_code);
         json.put(EnumBlockTable.COLUMN_GEO_AREA, this.geoarea == null ? JSONObject.NULL : this.geoarea);
         json.put(EnumBlockTable.COLUMN_CLUSTER_AREA, this.cluster == null ? JSONObject.NULL : this.cluster);
@@ -70,6 +82,7 @@ public class EnumBlockContract {
 
         public static final String TABLE_NAME = "enumblock";
         public static final String COLUMN_DIST_ID = "dist_id";
+        public static final String COLUMN_ENUM_BLOCK_CODE = "ebcode";
         public static final String COLUMN_GEO_AREA = "geoarea";
         public static final String COLUMN_CLUSTER_AREA = "cluster_no";
 

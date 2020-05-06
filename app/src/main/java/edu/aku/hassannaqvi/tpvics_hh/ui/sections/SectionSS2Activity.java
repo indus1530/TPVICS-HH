@@ -140,13 +140,13 @@ public class SectionSS2Activity extends AppCompatActivity {
                 : "0");
 
 
-        json.put("ss16a", bi.ss16a.isChecked() ? "1" : "0");
+/*        json.put("ss16a", bi.ss16a.isChecked() ? "1" : "0");
         json.put("ss16b", bi.ss16b.isChecked() ? "2" : "0");
         json.put("ss16c", bi.ss16c.isChecked() ? "3" : "0");
         json.put("ss16d", bi.ss16d.isChecked() ? "4" : "0");
         json.put("ss16e", bi.ss16e.isChecked() ? "5" : "0");
         json.put("ss16f", bi.ss16f.isChecked() ? "6" : "0");
-        json.put("ss1696", bi.ss1696.isChecked() ? "96" : "0");
+        json.put("ss1696", bi.ss1696.isChecked() ? "96" : "0");*/
 
         json.put("ss17", bi.ss17a.isChecked() ? "1"
                 : bi.ss17b.isChecked() ? "2"

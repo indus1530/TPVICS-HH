@@ -42,11 +42,11 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
     private void setupListeners() {
 
-        bi.uf14.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.uf14a.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVuf15, false);
+        bi.ec19.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ec19a.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVec21, false);
             } else {
-                Clear.clearAllFields(bi.fldGrpCVuf15, true);
+                Clear.clearAllFields(bi.fldGrpCVec21, true);
             }
         }));
 
@@ -57,15 +57,15 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
             }
         };
 
-        bi.uf09.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childrenLst));
+        bi.ec16.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childrenLst));
 
-        bi.uf09.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.ec16.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 position = i;
                 if (i == 0) return;
-                selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.uf09.getSelectedItemPosition() - 1));
-                bi.uf09a.setText(new StringBuilder("Mother name:").append(selMWRA.getMotherName()));
+                selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.ec16.getSelectedItemPosition() - 1));
+                bi.ec16a.setText(new StringBuilder("Mother name:").append(selMWRA.getMotherName()));
             }
 
             @Override
@@ -108,25 +108,25 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         f1.put("mm_name", selMWRA.getMotherName());
         f1.put("appversion", MainApp.appInfo.getAppVersion());
 
-        f1.put("uf09", selMWRA.getName());
-        f1.put("uf09a", selMWRA.getMotherName());*/
+        f1.put("ec16", selMWRA.getName());
+        f1.put("ec16a", selMWRA.getMotherName());*/
 
-        f1.put("uf9a", bi.uf9a.getText().toString());
+        f1.put("ec17", bi.ec17.getText().toString());
 
-        f1.put("uf9b",
-                bi.uf9b1.isChecked() ? "1" :
-                        bi.uf9b2.isChecked() ? "2" :
-                                bi.uf9b98.isChecked() ? "98" :
+        f1.put("ec18",
+                bi.ec181.isChecked() ? "1" :
+                        bi.ec182.isChecked() ? "2" :
+                                bi.ec1898.isChecked() ? "98" :
                                         "0");
 
-        f1.put("uf14",
-                bi.uf14a.isChecked() ? "1" :
-                        bi.uf14b.isChecked() ? "2" :
+        f1.put("ec19",
+                bi.ec19a.isChecked() ? "1" :
+                        bi.ec19b.isChecked() ? "2" :
                                 "0");
 
-        f1.put("uf15",
-                bi.uf15a.isChecked() ? "1" :
-                        bi.uf15b.isChecked() ? "2" :
+        f1.put("ec21",
+                bi.ec21a.isChecked() ? "1" :
+                        bi.ec20b.isChecked() ? "2" :
                                 "0");
 
         child.setsCA(String.valueOf(f1));

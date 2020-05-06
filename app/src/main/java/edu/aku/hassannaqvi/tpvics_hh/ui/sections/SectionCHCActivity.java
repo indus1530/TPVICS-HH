@@ -43,27 +43,27 @@ public class SectionCHCActivity extends AppCompatActivity {
         bi.im01.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.im011.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
-                Clear.clearAllFields(bi.fldGrpCVim02a, false);
+                Clear.clearAllFields(bi.fldGrpCVim03, false);
             } else if (i == bi.im012.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
-                Clear.clearAllFields(bi.fldGrpCVim02a, true);
+                Clear.clearAllFields(bi.fldGrpCVim03, true);
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim02, true);
-                Clear.clearAllFields(bi.fldGrpCVim02a, true);
+                Clear.clearAllFields(bi.fldGrpCVim03, true);
             }
 
         }));
 
         bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
 /*            if (i == bi.im021.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim02a, false);
+                Clear.clearAllFields(bi.fldGrpCVim03, false);
 //                Clear.clearAllFields(bi.fldGrpSecChc2, false);
             } else {
-                Clear.clearAllFields(bi.fldGrpCVim02a, true);
+                Clear.clearAllFields(bi.fldGrpCVim03, true);
 //                Clear.clearAllFields(bi.fldGrpSecChc2, true);
             }*/
 
-            Clear.clearAllFields(bi.fldGrpCVim02a, i == bi.im022.getId());
+            Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im022.getId());
             im02Flag = i == bi.im021.getId();
 
         });
@@ -94,19 +94,19 @@ public class SectionCHCActivity extends AppCompatActivity {
                 bi.im021.isChecked() ? "1" :
                         bi.im022.isChecked() ? "2" :
                                 "0");
-        f1.put("im02a",
-                bi.im02a1.isChecked() ? "1" :
-                        bi.im02a2.isChecked() ? "2" :
-                                bi.im02a3.isChecked() ? "3" :
-                                        bi.im02a4.isChecked() ? "4" :
-                                                bi.im02a5.isChecked() ? "5" :
-                                                        bi.im02a6.isChecked() ? "6" :
-                                                                bi.im02a96.isChecked() ? "96" :
+        f1.put("im03",
+                bi.im031.isChecked() ? "1" :
+                        bi.im032.isChecked() ? "2" :
+                                bi.im033.isChecked() ? "3" :
+                                        bi.im034.isChecked() ? "4" :
+                                                bi.im035.isChecked() ? "5" :
+                                                        bi.im036.isChecked() ? "6" :
+                                                                bi.im0396.isChecked() ? "96" :
                                                                         "0");
 
-        f1.put("im03dd", bi.im03dd1.isChecked() ? "98" : bi.im03dd.getText().toString());
-        f1.put("im03mm", bi.im03mm.getText().toString());
-        f1.put("im03yy", bi.im03yy.getText().toString());
+        f1.put("im04dd", bi.im04dd1.isChecked() ? "98" : bi.im04dd.getText().toString());
+        f1.put("im04mm", bi.im04mm.getText().toString());
+        f1.put("im04yy", bi.im04yy.getText().toString());
 
         child.setsCC(String.valueOf(f1));
     }

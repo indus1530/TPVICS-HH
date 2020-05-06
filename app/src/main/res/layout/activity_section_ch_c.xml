@@ -168,92 +168,12 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!-- im02a  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVim02a"
-                    style="@style/cardView">
-
-                    <LinearLayout style="@style/vlinearlayout">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
-
-                            <TextView
-                                android:id="@+id/qtxt_im02a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_im02a"
-                                android:text="@string/im02a" />
-
-                            <TextView
-                                android:id="@+id/q_im02a"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_im02a"
-                                android:layout_alignBottom="@id/qtxt_im02a"
-                                android:gravity="center"
-                                android:text="@string/Q_im02a" />
-
-                        </RelativeLayout>
-
-
-                        <RadioGroup
-                            android:id="@+id/im02a"
-
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/im02a1"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a1" />
-
-                            <RadioButton
-                                android:id="@+id/im02a2"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a2" />
-
-                            <RadioButton
-                                android:id="@+id/im02a3"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a3" />
-
-                            <RadioButton
-                                android:id="@+id/im02a4"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a4" />
-
-                            <RadioButton
-                                android:id="@+id/im02a5"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a5" />
-
-                            <RadioButton
-                                android:id="@+id/im02a6"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a6" />
-
-                            <RadioButton
-                                android:id="@+id/im02a96"
-                                style="@style/radiobutton"
-                                android:text="@string/im02a96" />
-
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <!-- im03  Title   -->
+                <!-- im03  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim03"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/vlinearlayout">
-
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -274,7 +194,87 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_im03"
                                 android:layout_alignBottom="@id/qtxt_im03"
+                                android:gravity="center"
                                 android:text="@string/Q_im03" />
+
+                        </RelativeLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/im03"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/im031"
+                                style="@style/radiobutton"
+                                android:text="@string/im031" />
+
+                            <RadioButton
+                                android:id="@+id/im032"
+                                style="@style/radiobutton"
+                                android:text="@string/im032" />
+
+                            <RadioButton
+                                android:id="@+id/im033"
+                                style="@style/radiobutton"
+                                android:text="@string/im033" />
+
+                            <RadioButton
+                                android:id="@+id/im034"
+                                style="@style/radiobutton"
+                                android:text="@string/im034" />
+
+                            <RadioButton
+                                android:id="@+id/im035"
+                                style="@style/radiobutton"
+                                android:text="@string/im035" />
+
+                            <RadioButton
+                                android:id="@+id/im036"
+                                style="@style/radiobutton"
+                                android:text="@string/im036" />
+
+                            <RadioButton
+                                android:id="@+id/im0396"
+                                style="@style/radiobutton"
+                                android:text="@string/im0396" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- im04  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim04"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im04"
+                                android:text="@string/im04" />
+
+                            <TextView
+                                android:id="@+id/q_im04"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im04"
+                                android:layout_alignBottom="@id/qtxt_im04"
+                                android:text="@string/Q_im04" />
 
                         </RelativeLayout>
 
@@ -285,17 +285,17 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/im03dd" />
+                                android:text="@string/im04dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/im03dd"
+                                android:id="@+id/im04dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:enabled='@{!im03dd1.checked ? true : false}'
-                                android:hint="@string/im03dd"
+                                android:enabled='@{!im04dd1.checked ? true : false}'
+                                android:hint="@string/im04dd"
                                 android:maxLength="2"
-                                android:text='@{im03dd1.checked ? "" : im03dd.getText().toString() }'
+                                android:text='@{im04dd1.checked ? "" : im04dd.getText().toString() }'
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -308,10 +308,10 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/im03dd1" />
+                                android:text="@string/im04dd1" />
 
                             <CheckBox
-                                android:id="@+id/im03dd1"
+                                android:id="@+id/im04dd1"
                                 style="@style/checkbox"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -326,14 +326,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/im03mm" />
+                                android:text="@string/im04mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/im03mm"
+                                android:id="@+id/im04mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/im03mm"
+                                android:hint="@string/im04mm"
                                 android:maxLength="2"
                                 app:maxValue="11"
                                 app:minValue="1"
@@ -347,14 +347,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/im03yy" />
+                                android:text="@string/im04yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/im03yy"
+                                android:id="@+id/im04yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
-                                android:hint="@string/im03yy"
+                                android:hint="@string/im04yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
                                 app:minValue="2015"

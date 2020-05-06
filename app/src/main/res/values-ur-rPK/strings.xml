@@ -71,20 +71,20 @@
 
     <!--TPVICS STRINGS-->
     <string name="hhsec"> Section H1: HouseHold Information </string>
-    <string name="hh01"> جغرافیائی علاقہ </string>
-    <string name="hh02"> اینومیریشن بلاک نمبر </string>
-    <string name="hh03"> صوبہ </string>
-    <string name="hh04"> ضلع </string>
-    <string name="hh05"> تحصیل </string>
-    <string name="hh06"> شہر / گاؤں </string>
-    <string name="hh07"> کلسٹر </string>
-    <string name="hh08"> گھرانہ نمبر </string>
-    <string name="hh09"> انٹرویو لینے والے کا نام </string>
-    <string name="hh09a"> انٹرویو لینے والے کا کوڈ </string>
-    <string name="hh10"> سُپروائزر کا نام </string>
-    <string name="hh10a"> سُپروائزر کا  کوڈ </string>
-    <string name="hh11"> انٹرویو کی تاریخ </string>
-    <string name="hh12"> نٹرویو کا وقت </string>
+    <string name="hh10"> جغرافیائی علاقہ </string>
+    <string name="hh05"> اینومیریشن بلاک نمبر </string>
+    <string name="hh06"> صوبہ </string>
+    <string name="hh07"> ضلع </string>
+    <string name="hh08"> تحصیل </string>
+    <string name="hh09"> شہر / گاؤں </string>
+    <string name="hh11"> کلسٹر </string>
+    <string name="hh12"> گھرانہ نمبر </string>
+    <string name="hh063"> انٹرویو لینے والے کا نام </string>
+    <string name="hh063a"> انٹرویو لینے والے کا کوڈ </string>
+    <string name="hh074"> سُپروائزر کا نام </string>
+    <string name="hh074a"> سُپروائزر کا  کوڈ </string>
+    <string name="hh01"> انٹرویو کی تاریخ </string>
+    <string name="hh02"> نٹرویو کا وقت </string>
     <string name="hh13a"> جواب دہندہ کانام </string>
     <string name="hh13b"> جواب دہندگان کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
@@ -529,68 +529,69 @@
     <string name="ss28a"> مشاہدات </string>
 
 
-    <string name="uf01"> جغرافیائی علاقہ </string>
+    <string name="ec05"> جغرافیائی علاقہ </string>
 
-    <string name="uf02"> صوبہ </string>
+    <string name="ec06"> صوبہ </string>
 
-    <string name="uf03"> ضلع </string>
+    <string name="ec07"> ضلع </string>
 
-    <string name="uf04"> شہر </string>
+    <string name="ec08"> شہر </string>
 
-    <string name="uf05"> گاؤں </string>
+    <string name="ec09"> گاؤں </string>
 
-    <string name="uf06"> کلسٹر نمبر </string>
+    <string name="ec11"> کلسٹر نمبر </string>
 
-    <string name="uf07"> گھر کا نمبر </string>
+    <string name="ec12"> گھر کا نمبر </string>
 
-    <string name="uf08a_childid"> بچے کا لائن نمبر </string>
+    <string name="ec13"> بچے کا لائن نمبر </string>
 
-    <string name="uf08"> بچے کا نام </string>
+    <string name="ec14"> بچے کا نام </string>
 
-    <string name="uf09"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
-    <string name="uf9a"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
-    <string name="uf9b"> جواب دہندہ کا رشتہ بچے کے ساتھ </string>
-    <string name="uf9b1"> والی/والدہ، دیکھ بھال کرنے والا/والد </string>
-    <string name="uf9b2"> حفاظتی ٹیکے لگ گئے لیکن خاندان کے رکن کو معلوم نہیں </string>
-    <string name="uf9b98"> دیگر وضاحت </string>
+    <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
+    <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
+    <string name="ec18"> جواب دہندہ کا رشتہ بچے کے ساتھ </string>
+    <string name="ec181"> والی/والدہ، دیکھ بھال کرنے والا/والد </string>
+    <string name="ec182"> حفاظتی ٹیکے لگ گئے لیکن خاندان کے رکن کو معلوم نہیں </string>
+    <string name="ec1898"> دیگر وضاحت </string>
 
-    <string name="uf10"> انٹرویو لینے والے کا نام </string>
-    <string name="uf10a"> انٹرویو لینے والے کا کوڈ </string>
+    <string name="ec03"> انٹرویو لینے والے کا نام </string>
+    <string name="ec03a"> انٹرویو لینے والے کا کوڈ </string>
 
-    <string name="uf11"> سُپروائزر کا نام </string>
-    <string name="uf11a"> سُپروائزر کا کوڈ نمبر </string>
+    <string name="ec04"> سُپروائزر کا نام </string>
+    <string name="ec04a"> سُپروائزر کا کوڈ نمبر </string>
 
-    <string name="uf12"> انٹرویو کا دن / مہینہ / سال  </string>
-    <string name="uf12a"> دن </string>
-    <string name="uf12b"> مہینہ </string>
-    <string name="uf12c"> سال  </string>
+    <string name="ec01"> انٹرویو کا دن / مہینہ / سال  </string>
+    <string name="ec01a"> دن </string>
+    <string name="ec01b"> مہینہ </string>
+    <string name="ec01c"> سال  </string>
 
-    <string name="uf13"> وقت ریکارڈ کریں </string>
-    <string name="uf13a"> گھنٹے </string>
-    <string name="uf13b"> منٹس </string>
+    <string name="ec02"> وقت ریکارڈ کریں </string>
+    <string name="ec02a"> گھنٹے </string>
+    <string name="ec02b"> منٹس </string>
 
-    <string name="uf14"> چیک کریں کہ کیا آیا اس گھر میں جواب دہندہ کا انٹرویو گھریلو یا بچوں کے سوالنامہ کے لئے کر لیا گیا ہے ؟ </string>
-    <string name="uf14a"> ہاں، پہلے ہی انٹرویو ہو چکا ہے </string>
-    <string name="uf14b"> نہیں ، پہلا انٹرویو </string>
+    <string name="ec19"> چیک کریں کہ کیا آیا اس گھر میں جواب دہندہ کا انٹرویو گھریلو یا بچوں کے سوالنامہ کے لئے کر لیا گیا ہے ؟ </string>
+    <string name="ec19a"> ہاں، پہلے ہی انٹرویو ہو چکا ہے </string>
+    <string name="ec19b"> نہیں ، پہلا انٹرویو </string>
 
-    <string name="uf15"> براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں ؟ </string>
-    <string name="uf15_info"> اسلام و علیکم، میرا نام (آپ کا نام) ہے۔ ہ ہمارا تعلق قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔ میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً 30 منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں </string>
-    <string name="uf15a"> ہاں، اجازت مل گئی ہے </string>
-    <string name="uf15b"> نہیں، اجازت نہیں ملی </string>
-    <string name="uf15b_title"> اب میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں مزید تفصیل سے بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً  30منٹس لگیں گے۔ میں پھر کہتا / کہتی ہوں کہ، آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ اور رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+    <string name="ec21"> براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں ؟ </string>
+    <string name="ec21_info"> اسلام و علیکم، میرا نام (آپ کا نام) ہے۔ ہ ہمارا تعلق قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔ میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً 30 منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں </string>
+    <string name="ec21a"> ہاں، اجازت مل گئی ہے </string>
+    <string name="ec20b"> نہیں، اجازت نہیں ملی </string>
+    <string name="ec20b_title"> اب میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں مزید تفصیل سے بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً  30منٹس لگیں گے۔ میں پھر کہتا / کہتی ہوں کہ، آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ اور رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
 
-    <string name="uf16"> بارہ سے تئیس مہینے کے بچے کے انٹرویو کا نتیجہ </string>
-    <string name="uf16a"> مکمل </string>
-    <string name="uf16b"> جزوی طور پر مکمل </string>
-    <string name="uf16c"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
-    <string name="uf16d"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
-    <string name="uf16e"> بچہ اہل نہیں / بچے کی عمر 12 سے 23 مہینے نہیں ہے- </string>
-    <string name="uf16f">  معذوری (وضاحت کریں) </string>
-    <string name="uf16g"> انکار کردیا </string>
-    <string name="uf16h">  خالی گھر / غیر رہائشی </string>
-    <string name="uf16i"> گھر نہیں ملا </string>
-    <string name="uf1696">  دیگر وضاحت کریں </string>
+    <string name="ec22"> بارہ سے تئیس مہینے کے بچے کے انٹرویو کا نتیجہ </string>
+    <string name="ec22a"> مکمل </string>
+    <string name="ec22b"> جزوی طور پر مکمل </string>
+    <string name="ec22c"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="ec22d"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
+    <string name="ec22e"> بچہ اہل نہیں / بچے کی عمر 12 سے 23 مہینے نہیں ہے- </string>
+    <string name="ec22f">  معذوری (وضاحت کریں) </string>
+    <string name="ec22g"> انکار کردیا </string>
+    <string name="ec22h">  خالی گھر / غیر رہائشی </string>
+    <string name="ec22i"> گھر نہیں ملا </string>
+    <string name="ec2296">  دیگر وضاحت کریں </string>
 
+    <string name="ec0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb01"> آپ کی زیادہ سے زیادہ مکمل کردہ تعلیم کتنی ہے ؟ </string>
     <string name="cb01a"> گریڈ </string>
@@ -617,8 +618,8 @@
     <string name="cb051"> لڑکا </string>
     <string name="cb052"> لڑکی </string>
 
-    <string name="im1title1"> سے چیک کریں :CB4 اہل بچے کی عمر سوال نمبر </string>
-    <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل UF16 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
+    <string name="im1title1"> سے چیک کریں :EC4 اہل بچے کی عمر سوال نمبر </string>
+    <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
 
     <string name="im01"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
     <string name="im011"> ہاں دیکھ لیا </string>
@@ -629,112 +630,112 @@
     <string name="im021"> ہاں </string>
     <string name="im022"> نہیں </string>
 
-    <string name="im02a"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا ؟ </string>
-    <string name="im02a1"> میرے خیال سے اتنا اہم نہیں </string>
-    <string name="im02a2"> کبھی مرکز صحت میں نہیں گئے </string>
-    <string name="im02a3"> گم گیا ہے </string>
-    <string name="im02a4"> سہولت فراہم کرنے والے کے پاس کارڈ دستیاب نہیں تھا</string>
-    <string name="im02a5"> ویکسینیٹر/ مرکزصحت نے کارڈ مہیا نہیں کی</string>
-    <string name="im02a6"> ایسے کارڈوں سے واقف نہیں </string>
-    <string name="im02a96"> دیگر وضاحت کریں</string>
+    <string name="im03"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا ؟ </string>
+    <string name="im031"> میرے خیال سے اتنا اہم نہیں </string>
+    <string name="im032"> کبھی مرکز صحت میں نہیں گئے </string>
+    <string name="im033"> گم گیا ہے </string>
+    <string name="im034"> سہولت فراہم کرنے والے کے پاس کارڈ دستیاب نہیں تھا</string>
+    <string name="im035"> ویکسینیٹر/ مرکزصحت نے کارڈ مہیا نہیں کی</string>
+    <string name="im036"> ایسے کارڈوں سے واقف نہیں </string>
+    <string name="im0396"> دیگر وضاحت کریں</string>
 
-    <string name="im03"> کارڈ پر لکھی ہوئی تاریخ پیدائش چیک کر یں اور درج کریں۔ </string>
-    <string name="im03dd"> دن </string>
-    <string name="im03dd1"> دن معلوم نہیں </string>
-    <string name="im03mm"> مہینہ </string>
-    <string name="im03yy">  سال </string>
+    <string name="im04"> کارڈ پر لکھی ہوئی تاریخ پیدائش چیک کر یں اور درج کریں۔ </string>
+    <string name="im04dd"> دن </string>
+    <string name="im04dd1"> دن معلوم نہیں </string>
+    <string name="im04mm"> مہینہ </string>
+    <string name="im04yy">  سال </string>
 
-    <string name="im4title1"> حفاظتی ٹیکوں کی تفصیلات </string>
-    <string name="im4title2"> حفاظتی ٹیکوں کے کارڈ سے ہرحفاظتی ٹیکے کی تاریخ لکھ دیں۔ اگر کارڈ دکھاتا ہے کہ ویکسینیشن فراہم کی گئی تھی لیکن کوئی تاریخ ریکارڈ نہیں ہوئی یا اگر کارڈ میں لکھی ہوئی تاریخ واضع طور پر پڑھی نہیں جارہی ہے تو دن کے کالم میں &quot;44&quot; لکھیں۔ اگر مخصوص ویکسین کا کوئی ریکارڑنہیں ہے تو ، دن ، مہینے اور سال کے کالم میں &quot;97&quot; لکھیں</string>
+    <string name="im05title1"> حفاظتی ٹیکوں کی تفصیلات </string>
+    <string name="im05title2"> حفاظتی ٹیکوں کے کارڈ سے ہرحفاظتی ٹیکے کی تاریخ لکھ دیں۔ اگر کارڈ دکھاتا ہے کہ ویکسینیشن فراہم کی گئی تھی لیکن کوئی تاریخ ریکارڈ نہیں ہوئی یا اگر کارڈ میں لکھی ہوئی تاریخ واضع طور پر پڑھی نہیں جارہی ہے تو دن کے کالم میں &quot;44&quot; لکھیں۔ اگر مخصوص ویکسین کا کوئی ریکارڑنہیں ہے تو ، دن ، مہینے اور سال کے کالم میں &quot;97&quot; لکھیں</string>
 
-    <string name="im41bcg"> (بی سی جی) ٹی بی کی بیماری سے بچائو کا ٹیکہ </string>
-    <string name="im41bcgdd"> دن </string>
-    <string name="im41bcgmm"> مہینہ </string>
-    <string name="im41bcgyy"> سال </string>
+    <string name="im0501"> (بی سی جی) ٹی بی کی بیماری سے بچائو کا ٹیکہ </string>
+    <string name="im0501dd"> دن </string>
+    <string name="im0501mm"> مہینہ </string>
+    <string name="im0501yy"> سال </string>
 
-    <string name="im42opv0"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک </string>
-    <string name="im42opv0dd"> دن </string>
-    <string name="im42opv0mm"> مہینہ </string>
-    <string name="im42opv0yy"> سال </string>
+    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک </string>
+    <string name="im0502dd"> دن </string>
+    <string name="im0502mm"> مہینہ </string>
+    <string name="im0502yy"> سال </string>
 
-    <string name="im43opv1"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
-    <string name="im43opv1dd"> دن </string>
-    <string name="im43opv1mm"> مہینہ </string>
-    <string name="im43opv1yy"> سال </string>
+    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
+    <string name="im0503dd"> دن </string>
+    <string name="im0503mm"> مہینہ </string>
+    <string name="im0503yy"> سال </string>
 
-    <string name="im44penta1"> پہلی خوراک پینٹا وایلنٹ ویکسین </string>
-    <string name="im44penta1dd"> دن </string>
-    <string name="im44penta1mm"> مہینہ </string>
-    <string name="im44penta1yy"> سال </string>
+    <string name="im0504"> پہلی خوراک پینٹا وایلنٹ ویکسین </string>
+    <string name="im0504dd"> دن </string>
+    <string name="im0504mm"> مہینہ </string>
+    <string name="im0504yy"> سال </string>
 
-    <string name="im45pcv1"> پہلی خوراک نمونیا کی ویکسین </string>
-    <string name="im45pcv1dd"> دن </string>
-    <string name="im45pcv1mm"> مہینہ </string>
-    <string name="im45pcv1yy"> سال </string>
+    <string name="im0505"> پہلی خوراک نمونیا کی ویکسین </string>
+    <string name="im0505dd"> دن </string>
+    <string name="im0505mm"> مہینہ </string>
+    <string name="im0505yy"> سال </string>
 
-    <string name="im46rv1"> روٹا وائرس ویکسین 1 </string>
-    <string name="im46rv1dd"> دن </string>
-    <string name="im46rv1mm"> مہینہ </string>
-    <string name="im46rv1yy"> سال </string>
+    <string name="im0506"> روٹا وائرس ویکسین 1 </string>
+    <string name="im0506dd"> دن </string>
+    <string name="im0506mm"> مہینہ </string>
+    <string name="im0506yy"> سال </string>
 
-    <string name="im47opv2"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) دوسری خوراک </string>
-    <string name="im47opv2dd"> دن </string>
-    <string name="im47opv2mm"> مہینہ </string>
-    <string name="im47opv2yy"> سال </string>
+    <string name="im0507"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) دوسری خوراک </string>
+    <string name="im0507dd"> دن </string>
+    <string name="im0507mm"> مہینہ </string>
+    <string name="im0507yy"> سال </string>
 
-    <string name="im48penta2"> دوسری خوراک  پینٹاوایلنٹ ویکسین </string>
-    <string name="im48penta2dd"> دن </string>
-    <string name="im48penta2mm"> مہینہ </string>
-    <string name="im48penta2yy"> سال </string>
+    <string name="im0508"> دوسری خوراک  پینٹاوایلنٹ ویکسین </string>
+    <string name="im0508dd"> دن </string>
+    <string name="im0508mm"> مہینہ </string>
+    <string name="im0508yy"> سال </string>
 
-    <string name="im49pcv2"> دوسری  خوراک  نمونیا کی ویکسین </string>
-    <string name="im49pcv2dd"> دن </string>
-    <string name="im49pcv2mm"> مہینہ </string>
-    <string name="im49pcv2yy"> سال </string>
+    <string name="im0509"> دوسری  خوراک  نمونیا کی ویکسین </string>
+    <string name="im0509dd"> دن </string>
+    <string name="im0509mm"> مہینہ </string>
+    <string name="im0509yy"> سال </string>
 
-    <string name="im410rv2"> روٹا وائرس ویکسین 2 </string>
-    <string name="im410rv2dd"> دن </string>
-    <string name="im410rv2mm"> مہینہ </string>
-    <string name="im410rv2yy"> سال </string>
+    <string name="im0510"> روٹا وائرس ویکسین 2 </string>
+    <string name="im0510dd"> دن </string>
+    <string name="im0510mm"> مہینہ </string>
+    <string name="im0510yy"> سال </string>
 
-    <string name="im411opv3"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) تیسری خوراک </string>
-    <string name="im411opv3dd"> دن </string>
-    <string name="im411opv3mm"> مہینہ </string>
-    <string name="im411opv3yy"> سال </string>
+    <string name="im0511"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) تیسری خوراک </string>
+    <string name="im0511dd"> دن </string>
+    <string name="im0511mm"> مہینہ </string>
+    <string name="im0511yy"> سال </string>
 
-    <string name="im412penta3"> تیسری خوراک پینٹاوایلنٹ ویکسین </string>
-    <string name="im412penta3dd"> دن </string>
-    <string name="im412penta3mm"> مہینہ </string>
-    <string name="im412penta3yy"> سال </string>
+    <string name="im0512"> تیسری خوراک پینٹاوایلنٹ ویکسین </string>
+    <string name="im0512dd"> دن </string>
+    <string name="im0512mm"> مہینہ </string>
+    <string name="im0512yy"> سال </string>
 
-    <string name="im413pcv3"> تیسری خوراک (نمونیا کی ویکسین) </string>
-    <string name="im413pcv3dd"> دن </string>
-    <string name="im413pcv3mm"> مہینہ </string>
-    <string name="im413pcv3yy"> سال </string>
+    <string name="im0513"> تیسری خوراک (نمونیا کی ویکسین) </string>
+    <string name="im0513dd"> دن </string>
+    <string name="im0513mm"> مہینہ </string>
+    <string name="im0513yy"> سال </string>
 
-    <string name="im414ipv"> پولیو (آئی پی وی انجکشن) </string>
-    <string name="im414ipvdd"> دن </string>
-    <string name="im414ipvmm"> مہینہ </string>
-    <string name="im414ipvyy"> سال </string>
+    <string name="im0514"> پولیو (آئی پی وی انجکشن) </string>
+    <string name="im0514dd"> دن </string>
+    <string name="im0514mm"> مہینہ </string>
+    <string name="im0514yy"> سال </string>
 
-    <string name="im415measles1"> (خسرہ کا ٹیکہ) پہلی خوراک </string>
-    <string name="im415measles1dd"> دن </string>
-    <string name="im415measles1mm"> مہینہ </string>
-    <string name="im415measles1yy"> سال </string>
+    <string name="im0515"> (خسرہ کا ٹیکہ) پہلی خوراک </string>
+    <string name="im0515dd"> دن </string>
+    <string name="im0515mm"> مہینہ </string>
+    <string name="im0515yy"> سال </string>
 
-    <string name="im416measles2"> (خسرہ کا ٹیکہ) دوسری خوراک </string>
-    <string name="im416measles2dd"> دن </string>
-    <string name="im416measles2mm"> مہینہ </string>
-    <string name="im416measles2yy"> سال </string>
+    <string name="im0516"> (خسرہ کا ٹیکہ) دوسری خوراک </string>
+    <string name="im0516dd"> دن </string>
+    <string name="im0516mm"> مہینہ </string>
+    <string name="im0516yy"> سال </string>
 
-    <string name="im05"> اس کارڈ پر درج ویکسین کے علاوہ جو آپ نے مجھے دکھایا ہے، کیا بچے کو کوئی اور اضافی ویکسین بھی لگی ہے ؟  </string>
-    <string name="im051">  ہاں</string>
-    <string name="im052"> نہیں</string>
-    <string name="im053"> معلوم نہیں</string>
+    <string name="im06"> اس کارڈ پر درج ویکسین کے علاوہ جو آپ نے مجھے دکھایا ہے، کیا بچے کو کوئی اور اضافی ویکسین بھی لگی ہے ؟  </string>
+    <string name="im061">  ہاں</string>
+    <string name="im062"> نہیں</string>
+    <string name="im063"> معلوم نہیں</string>
 
-    <string name="im06">  ٓئی ایم۴ چیک کریں: کیا تمام حفاظتی ٹیکوں (بی سی جی سے لے کر خسرہ کی دوسری خوراک تک کی معلومات ریکارڈ کر لی گئی ہیں ؟ </string>
-    <string name="im061"> ہاں</string>
-    <string name="im062">   نہیں</string>
+    <string name="im07">  ٓئی ایم۴ چیک کریں: کیا تمام حفاظتی ٹیکوں (بی سی جی سے لے کر خسرہ کی دوسری خوراک تک کی معلومات ریکارڈ کر لی گئی ہیں ؟ </string>
+    <string name="im071"> ہاں</string>
+    <string name="im072">   نہیں</string>
 
     <string name="im08"> کیا بچے کو کوئی ویکسین لگی ہے جو اسے بیماریوں سے بچا سکے۔ اس میں حفاظتی ٹیکوں کی مہم کے دوران لگنے والی ویکسین ، حفاظتی ٹیکے لگانے والا دن یا بچوں کی صحت کے دن لگنے والی ویکسین شامل ہیں۔</string>
     <string name="im081"> ہاں</string>
@@ -864,6 +865,7 @@
     <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
     <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
 
+    <string name='Q_ec0_title'>ec0_title</string>
     <string name='Q_cb0_title'>cb0_title</string>
     <string name='Q_cb01'>cb01</string>
     <string name='Q_cb02'>cb02</string>
@@ -917,21 +919,21 @@
     <string name='Q_hf12_title2'>hf12_title2</string>
     <string name='Q_hf15'>hf15</string>
     <string name='Q_hfhf03b'>hfhf03b</string>
-    <string name='Q_hfim03a'>hfim03a</string>
-    <string name='Q_hh01'>hh01</string>
-    <string name='Q_hh02'>hh02</string>
-    <string name='Q_hh03'>hh03</string>
-    <string name='Q_hh04'>hh04</string>
+    <string name='Q_hfim04a'>hfim04a</string>
+    <string name='Q_hh10'>hh10</string>
     <string name='Q_hh05'>hh05</string>
     <string name='Q_hh06'>hh06</string>
     <string name='Q_hh07'>hh07</string>
     <string name='Q_hh08'>hh08</string>
     <string name='Q_hh09'>hh09</string>
-    <string name='Q_hh09a'>hh09a</string>
-    <string name='Q_hh10'>hh10</string>
-    <string name='Q_hh10a'>hh10a</string>
     <string name='Q_hh11'>hh11</string>
     <string name='Q_hh12'>hh12</string>
+    <string name='Q_hh063'>hh063</string>
+    <string name='Q_hh063a'>hh063a</string>
+    <string name='Q_hh074'>hh074</string>
+    <string name='Q_hh074a'>hh074a</string>
+    <string name='Q_hh01'>hh01</string>
+    <string name='Q_hh02'>hh02</string>
     <string name='Q_hh13'>hh13</string>
     <string name='Q_hh13a'>hh13a</string>
     <string name='Q_hh14'>hh14</string>
@@ -982,10 +984,10 @@
     <string name='Q_hw8b'>hw8b</string>
     <string name='Q_im01'>im01</string>
     <string name='Q_im02'>im02</string>
-    <string name='Q_im02a'>im02a</string>
     <string name='Q_im03'>im03</string>
-    <string name='Q_im05'>im05</string>
+    <string name='Q_im04'>im04</string>
     <string name='Q_im06'>im06</string>
+    <string name='Q_im07'>im07</string>
     <string name='Q_im08'>im08</string>
     <string name='Q_im09'>im09</string>
     <string name='Q_im1_title1'>im1_title1</string>
@@ -1010,24 +1012,24 @@
     <string name='Q_im26b'>im26b</string>
     <string name='Q_im26c'>im26c</string>
     <string name='Q_im26d'>im26d</string>
-    <string name='Q_im4_10rv2'>im4_10rv2</string>
-    <string name='Q_im4_11opv3'>im4_11opv3</string>
-    <string name='Q_im4_12penta3'>im4_12penta3</string>
-    <string name='Q_im4_13pcv3'>im4_13pcv3</string>
-    <string name='Q_im4_14ipv'>im4_14ipv</string>
-    <string name='Q_im4_15measles1'>im4_15measles1</string>
-    <string name='Q_im4_16measles2'>im4_16measles2</string>
-    <string name='Q_im4_1bcg'>im4_1bcg</string>
-    <string name='Q_im4_2opv0'>im4_2opv0</string>
-    <string name='Q_im4_3opv1'>im4_3opv1</string>
-    <string name='Q_im4_4penta1'>im4_4penta1</string>
-    <string name='Q_im4_5pcv1'>im4_5pcv1</string>
-    <string name='Q_im4_6rv1'>im4_6rv1</string>
-    <string name='Q_im4_7opv2'>im4_7opv2</string>
-    <string name='Q_im4_8penta2'>im4_8penta2</string>
-    <string name='Q_im4_9pcv2'>im4_9pcv2</string>
-    <string name='Q_im4_title1'>im4_title1</string>
-    <string name='Q_im4_title2'>im4_title2</string>
+    <string name='Q_im0510'>im0510</string>
+    <string name='Q_im0511'>im0511</string>
+    <string name='Q_im0512'>im0512</string>
+    <string name='Q_im0513'>im0513</string>
+    <string name='Q_im0514'>im0514</string>
+    <string name='Q_im0515'>im0515</string>
+    <string name='Q_im0516'>im0516</string>
+    <string name='Q_im0501'>im0501</string>
+    <string name='Q_im0502'>im0502</string>
+    <string name='Q_im0503'>im0503</string>
+    <string name='Q_im0504'>im0504</string>
+    <string name='Q_im0505'>im0505</string>
+    <string name='Q_im0506'>im0506</string>
+    <string name='Q_im0507'>im0507</string>
+    <string name='Q_im0508'>im0508</string>
+    <string name='Q_im0509'>im0509</string>
+    <string name='Q_im05_title1'>im05_title1</string>
+    <string name='Q_im05_title2'>im05_title2</string>
     <string name='Q_imtitle2'>imtitle2</string>
     <string name='Q_ss01'>ss01</string>
     <string name='Q_ss02'>ss02</string>
@@ -1086,28 +1088,28 @@
     <string name='Q_ss27'>ss27</string>
     <string name='Q_ss27_title'>ss27_title</string>
     <string name='Q_ss28'>ss28</string>
-    <string name='Q_uf01'>uf01</string>
-    <string name='Q_uf02'>uf02</string>
-    <string name='Q_uf03'>uf03</string>
-    <string name='Q_uf04'>uf04</string>
-    <string name='Q_uf05'>uf05</string>
-    <string name='Q_uf06'>uf06</string>
-    <string name='Q_uf07'>uf07</string>
-    <string name='Q_uf08'>uf08</string>
-    <string name='Q_uf08a_childid'>uf08a_childid</string>
-    <string name='Q_uf09'>uf09</string>
-    <string name='Q_uf10'>uf10</string>
-    <string name='Q_uf10a'>uf10a</string>
-    <string name='Q_uf11'>uf11</string>
-    <string name='Q_uf11a'>uf11a</string>
-    <string name='Q_uf12'>uf12</string>
-    <string name='Q_uf13'>uf13</string>
-    <string name='Q_uf14'>uf14</string>
-    <string name='Q_uf15'>uf15</string>
-    <string name='Q_uf15b_title'>uf15b_title</string>
-    <string name='Q_uf16'>uf16</string>
-    <string name='Q_uf9a'>uf9a</string>
-    <string name='Q_uf9b'>uf9b</string>
+    <string name='Q_ec05'>ec05</string>
+    <string name='Q_ec06'>ec06</string>
+    <string name='Q_ec07'>ec07</string>
+    <string name='Q_ec08'>ec08</string>
+    <string name='Q_ec09'>ec09</string>
+    <string name='Q_ec11'>ec11</string>
+    <string name='Q_ec12'>ec12</string>
+    <string name='Q_ec14'>ec14</string>
+    <string name='Q_ec13'>ec13</string>
+    <string name='Q_ec16'>ec16</string>
+    <string name='Q_ec03'>ec03</string>
+    <string name='Q_ec03a'>ec03a</string>
+    <string name='Q_ec04'>ec04</string>
+    <string name='Q_ec04a'>ec04a</string>
+    <string name='Q_ec01'>ec01</string>
+    <string name='Q_ec02'>ec02</string>
+    <string name='Q_ec19'>ec19</string>
+    <string name='Q_ec21'>ec21</string>
+    <string name='Q_ec20b_title'>ec20b_title</string>
+    <string name='Q_ec22'>ec22</string>
+    <string name='Q_ec17'>ec17</string>
+    <string name='Q_ec18'>ec18</string>
     <string name="Q_ch03b">CH03b</string>
     <string name="hhformInfo">بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں HOUSEHOLD</string>
     <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>

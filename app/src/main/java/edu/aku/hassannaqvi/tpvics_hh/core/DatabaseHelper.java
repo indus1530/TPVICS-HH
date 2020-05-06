@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -110,29 +111,39 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void syncEnumBlocks(JSONArray Enumlist) {
+    public int syncEnumBlocks(JSONArray Enumlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, null);
-        try {
+        int insertCount = 0;
+
             JSONArray jsonArray = Enumlist;
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+                JSONObject jsonObjectCC = null;
+                try {
+                    jsonObjectCC = jsonArray.getJSONObject(i);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 EnumBlockContract Vc = new EnumBlockContract();
-                Vc.Sync(jsonObjectCC);
+                try {
+                    Vc.Sync(jsonObjectCC);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 ContentValues values = new ContentValues();
 
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDist_code());
+                values.put(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE, Vc.getEbcode());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
                 values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
 
                 db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
+                long rowID = db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
+                if (rowID != -1) insertCount++;
             }
-        } catch (Exception e) {
-        } finally {
-            db.close();
-        }
+        return insertCount;
     }
 
     public void syncTalukas(JSONArray Talukaslist) {
@@ -162,14 +173,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void syncBLRandom(JSONArray BLlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(SingleRandomHH.TABLE_NAME, null, null);
-        try {
+
             JSONArray jsonArray = BLlist;
             for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
+                JSONObject jsonObjectCC = null;
+                try {
+                    jsonObjectCC = jsonArray.getJSONObject(i);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 BLRandomContract Vc = new BLRandomContract();
-                Vc.Sync(jsonObjectCC);
-
+                try {
+                    Vc.Sync(jsonObjectCC);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                Log.d(TAG, "syncBLRandom: " + Vc.get_ID());
                 ContentValues values = new ContentValues();
 
                 values.put(SingleRandomHH.COLUMN_ID, Vc.get_ID());
@@ -177,7 +197,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(SingleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
                 values.put(SingleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
                 values.put(SingleRandomHH.COLUMN_HH, Vc.getHh());
-                values.put(SingleRandomHH.COLUMN_ENUM_BLOCK_CODE, Vc.getSubVillageCode());
+                values.put(SingleRandomHH.COLUMN_P_CODE, Vc.getEbcode());
+                values.put(SingleRandomHH.COLUMN_EB_CODE, Vc.getpCode());
                 values.put(SingleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
                 values.put(SingleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
                 values.put(SingleRandomHH.COLUMN_CONTACT, Vc.getContact());
@@ -186,10 +207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 db.insert(SingleRandomHH.TABLE_NAME, null, values);
             }
-        } catch (Exception ignored) {
-        } finally {
-            db.close();
-        }
+
     }
 
     public void syncUCs(JSONArray UCslist) {
@@ -480,9 +498,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allVC;
     }
 
-    public void syncUser(JSONArray userlist) {
+    public int syncUser(JSONArray userlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(UsersContract.singleUser.TABLE_NAME, null, null);
+        int insertCount = 0;
         try {
             JSONArray jsonArray = userlist;
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -497,7 +516,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
                 values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
 //                values.put(singleUser.REGION_DSS, user.getREGION_DSS());
-                db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                long rowID = db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                if (rowID != -1) insertCount++;
             }
 
 
@@ -505,6 +525,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Log.d(TAG, "syncUser(e): " + e);
         } finally {
             db.close();
+            return insertCount;
         }
     }
 
@@ -1058,7 +1079,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleRandomHH.COLUMN_STRUCTURE_NO,
                 SingleRandomHH.COLUMN_FAMILY_EXT_CODE,
                 SingleRandomHH.COLUMN_HH,
-                SingleRandomHH.COLUMN_ENUM_BLOCK_CODE,
+                SingleRandomHH.COLUMN_P_CODE,
+                SingleRandomHH.COLUMN_EB_CODE,
                 SingleRandomHH.COLUMN_RANDOMDT,
                 SingleRandomHH.COLUMN_HH_SELECTED_STRUCT,
                 SingleRandomHH.COLUMN_CONTACT,
@@ -1066,7 +1088,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleRandomHH.COLUMN_SNO_HH
         };
 
-        String whereClause = SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
+        String whereClause = SingleRandomHH.COLUMN_P_CODE + "=? AND " + SingleRandomHH.COLUMN_HH + "=?";
         String[] whereArgs = new String[]{subAreaCode, hh};
         String groupBy = null;
         String having = null;
@@ -1107,6 +1129,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 EnumBlockTable._ID,
                 EnumBlockTable.COLUMN_DIST_ID,
+                EnumBlockTable.COLUMN_ENUM_BLOCK_CODE,
                 EnumBlockTable.COLUMN_GEO_AREA,
                 EnumBlockTable.COLUMN_CLUSTER_AREA
         };
@@ -1151,6 +1174,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 EnumBlockTable._ID,
                 EnumBlockTable.COLUMN_DIST_ID,
+                EnumBlockTable.COLUMN_ENUM_BLOCK_CODE,
                 EnumBlockTable.COLUMN_GEO_AREA,
                 EnumBlockTable.COLUMN_CLUSTER_AREA
         };

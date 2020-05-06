@@ -311,96 +311,96 @@
 
 
             <!-- ss16  Check   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/ss16cv"
-                style="@style/cardView">
+            <!--   <androidx.cardview.widget.CardView
+                   android:id="@+id/ss16cv"
+                   style="@style/cardView">
 
-                <LinearLayout style="@style/vlinearlayout">
+                   <LinearLayout style="@style/vlinearlayout">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom">
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/bottom">
 
-                        <TextView
-                            android:id="@+id/qtxt_ss16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toEndOf="@id/q_ss16"
-                            android:text="@string/ss16" />
+                           <TextView
+                               android:id="@+id/qtxt_ss16"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_toEndOf="@id/q_ss16"
+                               android:text="@string/ss16" />
 
-                        <TextView
-                            android:id="@+id/q_ss16"
-                            style="@style/quesNum"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignTop="@id/qtxt_ss16"
-                            android:layout_alignBottom="@id/qtxt_ss16"
-                            android:text="@string/Q_ss16"
-                            android:tooltipText="@string/ss18_info" />
+                           <TextView
+                               android:id="@+id/q_ss16"
+                               style="@style/quesNum"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_alignTop="@id/qtxt_ss16"
+                               android:layout_alignBottom="@id/qtxt_ss16"
+                               android:text="@string/Q_ss16"
+                               android:tooltipText="@string/ss18_info" />
 
-                    </RelativeLayout>
+                       </RelativeLayout>
 
-                    <LinearLayout
-                        android:id="@+id/fldGrpss16cv"
-                        style="@style/vlinearlayout"
-                        android:tag="0">
+                       <LinearLayout
+                           android:id="@+id/fldGrpss16cv"
+                           style="@style/vlinearlayout"
+                           android:tag="0">
 
-                        <CheckBox
-                            android:id="@+id/ss16a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16a" />
+                           <CheckBox
+                               android:id="@+id/ss16a"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16a" />
 
-                        <CheckBox
-                            android:id="@+id/ss16b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16b" />
+                           <CheckBox
+                               android:id="@+id/ss16b"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16b" />
 
-                        <CheckBox
-                            android:id="@+id/ss16c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16c" />
+                           <CheckBox
+                               android:id="@+id/ss16c"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16c" />
 
-                        <CheckBox
-                            android:id="@+id/ss16d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16d" />
+                           <CheckBox
+                               android:id="@+id/ss16d"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16d" />
 
-                        <CheckBox
-                            android:id="@+id/ss16e"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16e" />
+                           <CheckBox
+                               android:id="@+id/ss16e"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16e" />
 
-                        <CheckBox
-                            android:id="@+id/ss16f"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ss16f" />
+                           <CheckBox
+                               android:id="@+id/ss16f"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/ss16f" />
 
-                        <CheckBox
-                            android:id="@+id/ss1696"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/other" />
+                           <CheckBox
+                               android:id="@+id/ss1696"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="@string/other" />
 
-                        <EditText
-                            android:id="@+id/ss1696x"
-                            style="@style/EditTextAlpha"
-                            android:enabled='@{ss1696.checked ? true : false }'
-                            android:hint="@string/specify"
-                            android:tag="ss1696"
-                            android:text='@{ss1696.checked ? ss1696x.getText().toString() : "" }' />
+                           <EditText
+                               android:id="@+id/ss1696x"
+                               style="@style/EditTextAlpha"
+                               android:enabled='@{ss1696.checked ? true : false }'
+                               android:hint="@string/specify"
+                               android:tag="ss1696"
+                               android:text='@{ss1696.checked ? ss1696x.getText().toString() : "" }' />
 
-                    </LinearLayout>
+                       </LinearLayout>
 
-                </LinearLayout>
+                   </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+               </androidx.cardview.widget.CardView>-->
 
 
             <!-- ss17  Radio   -->

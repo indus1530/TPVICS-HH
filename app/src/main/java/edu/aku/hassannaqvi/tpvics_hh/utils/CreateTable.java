@@ -82,7 +82,8 @@ public final class CreateTable {
 
     public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + SingleRandomHH.TABLE_NAME + "("
             + SingleRandomHH.COLUMN_ID + " TEXT,"
-            + SingleRandomHH.COLUMN_ENUM_BLOCK_CODE + " TEXT,"
+            + SingleRandomHH.COLUMN_P_CODE + " TEXT,"
+            + SingleRandomHH.COLUMN_EB_CODE + " TEXT,"
             + SingleRandomHH.COLUMN_LUID + " TEXT,"
             + SingleRandomHH.COLUMN_HH + " TEXT,"
             + SingleRandomHH.COLUMN_STRUCTURE_NO + " TEXT,"
@@ -96,6 +97,7 @@ public final class CreateTable {
     public static final String SQL_CREATE_PSU_TABLE = "CREATE TABLE " + EnumBlockContract.EnumBlockTable.TABLE_NAME + " (" +
             EnumBlockContract.EnumBlockTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID + " TEXT, " +
+            EnumBlockContract.EnumBlockTable.COLUMN_ENUM_BLOCK_CODE + " TEXT, " +
             EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA + " TEXT, " +
             EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA + " TEXT " +
             ");";

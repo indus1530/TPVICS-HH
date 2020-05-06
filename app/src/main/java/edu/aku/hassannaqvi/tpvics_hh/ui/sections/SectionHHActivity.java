@@ -66,7 +66,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
             bi.btnEnd.setVisibility(View.VISIBLE);
             bi.btnNext.setVisibility(View.GONE);
         }
-        Clear.clearAllFields(bi.fldGrpAHH17, checkedId == bi.hh18a.getId());
+        Clear.clearAllFields(bi.fldGrpAHH19, checkedId == bi.hh18a.getId());
     }
 
     public void BtnContinue() {
@@ -100,8 +100,8 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put("hh11", bi.hh11.getText().toString());
-        json.put("hh12", bi.hh12.getText().toString());
+        json.put("hh01", bi.hh01.getText().toString());
+        json.put("hh02", bi.hh02.getText().toString());
         json.put("hh13a", bi.hh13a.getText().toString());
         json.put("hh13b", bi.hh13b.getText().toString());
 
@@ -114,8 +114,8 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         json.put("hh16a", bi.hh16a.getText().toString());
         json.put("hh16b", bi.hh16b.getText().toString());
 
-        json.put("hh17a", bi.hh17a.getText().toString());
-        json.put("hh17b", bi.hh17b.getText().toString());
+       /* json.put("hh17a", bi.hh17a.getText().toString());
+        json.put("hh17b", bi.hh17b.getText().toString());*/
 
         json.put("hh18", bi.hh18a.isChecked() ? "1"
                 : bi.hh18b.isChecked() ? "2"
