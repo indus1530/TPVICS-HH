@@ -103,14 +103,10 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         f1.put("hhno", MainApp.fc.getHhno());
         f1.put("cluster_no", MainApp.fc.getClusterCode());
         f1.put("_luid", MainApp.fc.getLuid());
-/*        f1.put("fm_uid", selMWRA.getUid());
-        f1.put("fm_serial", selMWRA.getSerialno());
-        f1.put("mm_name", selMWRA.getMotherName());
-        f1.put("appversion", MainApp.appInfo.getAppVersion());
 
-        f1.put("ec16", selMWRA.getName());
-        f1.put("ec16a", selMWRA.getMotherName());*/
-
+        f1.put("ec14", bi.ec14.getText().toString());
+        f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
+        f1.put("ec16", bi.ec16.getText().toString());
         f1.put("ec17", bi.ec17.getText().toString());
 
         f1.put("ec18",

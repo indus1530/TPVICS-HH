@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--new Strings-->
-    <string name="app_name"> TPVICS-HH urdu </string>
+    <string name="app_name"> TPVICS - HOUSEHOLD SURVEY \n In Urdu Language </string>
 
     <!-- Strings related to login -->
     <string name="btnSync">Sync</string>
@@ -84,7 +84,7 @@
     <string name="hh074"> سُپروائزر کا نام </string>
     <string name="hh074a"> سُپروائزر کا  کوڈ </string>
     <string name="hh01"> انٹرویو کی تاریخ </string>
-    <string name="hh02"> نٹرویو کا وقت </string>
+    <string name="hh02"> انٹرویو کا وقت </string>
     <string name="hh13a"> جواب دہندہ کانام </string>
     <string name="hh13b"> جواب دہندگان کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
@@ -95,12 +95,12 @@
 
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
 
-    <string name="hh16a"> گھر کے سربراہ کا نام</string>
-    <string name="hh16b"> گھر کے سربراہ کا فون  نمبر</string>
+    <string name="hh16a"> سربراہ کا نام </string>
+    <string name="hh16b"> سربراہ کا فون نمبر </string>
 
-    <string name="hh17"> گھرانے کے سربراہ  کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر ( اگر سربراہ جواب دہندہ نہیں ہے ) </string>
-    <string name="hh17a"> گھر کے سربراہ کا نام </string>
-    <string name="hh17b"> گھر کے سربراہ کا فون  نمبر </string>
+    <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
+    <string name="hh17a"> سربراہ کا نام </string>
+    <string name="hh17b"> سربراہ کا فون نمبر </string>
 
     <string name="hh18"> کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے </string>
@@ -504,7 +504,6 @@
     <string name="ss23c">معلوم نہیں</string>
     <string name="ss23land">زمین</string>
 
-
     <string name="ss24"> کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="ss24a"> ہاں</string>
     <string name="ss24b">  نہیں</string>
@@ -546,6 +545,10 @@
     <string name="ec13"> بچے کا لائن نمبر </string>
 
     <string name="ec14"> بچے کا نام </string>
+
+    <string name="ec15"> (نام) کی جنس کیا ہے ؟ </string>
+    <string name="ec151"> لڑکا </string>
+    <string name="ec152"> لڑکی </string>
 
     <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
     <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
@@ -614,11 +617,7 @@
     <string name="cb04mm"> عمر (مکمل سالوں میں) </string>
     <string name="cb04yy"> عمر (مکمل مہینوں میں) </string>
 
-    <string name="cb05"> (نام) کی جنس کیا ہے ؟ </string>
-    <string name="cb051"> لڑکا </string>
-    <string name="cb052"> لڑکی </string>
-
-    <string name="im1title1"> سے چیک کریں :EC4 اہل بچے کی عمر سوال نمبر </string>
+    <string name="im1title1"> سے چیک کریں :CB4 اہل بچے کی عمر سوال نمبر </string>
     <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
 
     <string name="im01"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
@@ -871,7 +870,7 @@
     <string name='Q_cb02'>cb02</string>
     <string name='Q_cb03'>cb03</string>
     <string name='Q_cb04'>cb04</string>
-    <string name='Q_cb05'>cb05</string>
+    <string name='Q_ec15'>ec15</string>
     <string name='Q_ch_childid'>ch_childid</string>
     <string name='Q_ch_cluster'>ch_cluster</string>
     <string name='Q_ch_hno'>ch_hno</string>
@@ -1111,8 +1110,8 @@
     <string name='Q_ec17'>ec17</string>
     <string name='Q_ec18'>ec18</string>
     <string name="Q_ch03b">CH03b</string>
-    <string name="hhformInfo">بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں HOUSEHOLD</string>
-    <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
+    <string name="hhformInfo"> ۔HOUSEHOLD بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں</string>
+    <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-\12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
 
 
 </resources>
