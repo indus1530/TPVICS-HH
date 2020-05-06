@@ -247,7 +247,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             break;
                         case "BLRandom":
                             Log.d(TAG, "onPostExecute: " + syncClass);
-                            db.syncBLRandom(jsonArray);
+                            insertCount = db.syncBLRandom(jsonArray);
                             position = 0;
                             break;
 
@@ -256,7 +256,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     pd.setMessage("Received: " + jsonArray.length());
                     list.get(position).setmessage("Received: " + jsonArray.length() + ", Saved: " + insertCount);
                     list.get(position).setstatus(insertCount == 0 ? "Unsuccessful" : "Successful");
-                    list.get(position).setstatusID(insertCount == 0 ? 1 : 3);
+                    list.get(position).setstatusID(insertCount == 0 ? 2 : 3);
                     adapter.updatesyncList(list);
 //                    pd.show();
                 } catch (JSONException e) {

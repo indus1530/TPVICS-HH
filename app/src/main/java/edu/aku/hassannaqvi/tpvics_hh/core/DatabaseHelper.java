@@ -116,33 +116,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.delete(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, null);
         int insertCount = 0;
 
-            JSONArray jsonArray = Enumlist;
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = null;
-                try {
-                    jsonObjectCC = jsonArray.getJSONObject(i);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                EnumBlockContract Vc = new EnumBlockContract();
-                try {
-                    Vc.Sync(jsonObjectCC);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                ContentValues values = new ContentValues();
-
-                values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDist_code());
-                values.put(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE, Vc.getEbcode());
-                values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
-                values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
-
-                db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
-                long rowID = db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
-                if (rowID != -1) insertCount++;
+        JSONArray jsonArray = Enumlist;
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject jsonObjectCC = null;
+            try {
+                jsonObjectCC = jsonArray.getJSONObject(i);
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
+
+            EnumBlockContract Vc = new EnumBlockContract();
+            try {
+                Vc.Sync(jsonObjectCC);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            ContentValues values = new ContentValues();
+
+            values.put(EnumBlockContract.EnumBlockTable.COLUMN_DIST_ID, Vc.getDist_code());
+            values.put(EnumBlockTable.COLUMN_ENUM_BLOCK_CODE, Vc.getEbcode());
+            values.put(EnumBlockContract.EnumBlockTable.COLUMN_GEO_AREA, Vc.getGeoarea());
+            values.put(EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA, Vc.getCluster());
+
+            db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
+            long rowID = db.insert(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, values);
+            if (rowID != -1) insertCount++;
+        }
         return insertCount;
     }
 
@@ -170,44 +170,46 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void syncBLRandom(JSONArray BLlist) {
+    public int syncBLRandom(JSONArray BLlist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(SingleRandomHH.TABLE_NAME, null, null);
 
-            JSONArray jsonArray = BLlist;
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectCC = null;
-                try {
-                    jsonObjectCC = jsonArray.getJSONObject(i);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                BLRandomContract Vc = new BLRandomContract();
-                try {
-                    Vc.Sync(jsonObjectCC);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                Log.d(TAG, "syncBLRandom: " + Vc.get_ID());
-                ContentValues values = new ContentValues();
-
-                values.put(SingleRandomHH.COLUMN_ID, Vc.get_ID());
-                values.put(SingleRandomHH.COLUMN_LUID, Vc.getLUID());
-                values.put(SingleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
-                values.put(SingleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
-                values.put(SingleRandomHH.COLUMN_HH, Vc.getHh());
-                values.put(SingleRandomHH.COLUMN_P_CODE, Vc.getEbcode());
-                values.put(SingleRandomHH.COLUMN_EB_CODE, Vc.getpCode());
-                values.put(SingleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
-                values.put(SingleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
-                values.put(SingleRandomHH.COLUMN_CONTACT, Vc.getContact());
-                values.put(SingleRandomHH.COLUMN_HH_SELECTED_STRUCT, Vc.getSelStructure());
-                values.put(SingleRandomHH.COLUMN_SNO_HH, Vc.getSno());
-
-                db.insert(SingleRandomHH.TABLE_NAME, null, values);
+        JSONArray jsonArray = BLlist;
+        int insertCount = 0;
+        for (int i = 0; i < jsonArray.length(); i++) {
+            JSONObject jsonObjectCC = null;
+            try {
+                jsonObjectCC = jsonArray.getJSONObject(i);
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
+            BLRandomContract Vc = new BLRandomContract();
+            try {
+                Vc.Sync(jsonObjectCC);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            Log.d(TAG, "syncBLRandom: " + Vc.get_ID());
+            ContentValues values = new ContentValues();
+
+            values.put(SingleRandomHH.COLUMN_ID, Vc.get_ID());
+            values.put(SingleRandomHH.COLUMN_LUID, Vc.getLUID());
+            values.put(SingleRandomHH.COLUMN_STRUCTURE_NO, Vc.getStructure());
+            values.put(SingleRandomHH.COLUMN_FAMILY_EXT_CODE, Vc.getExtension());
+            values.put(SingleRandomHH.COLUMN_HH, Vc.getHh());
+            values.put(SingleRandomHH.COLUMN_EB_CODE, Vc.getEbcode());
+            values.put(SingleRandomHH.COLUMN_P_CODE, Vc.getpCode());
+            values.put(SingleRandomHH.COLUMN_RANDOMDT, Vc.getRandomDT());
+            values.put(SingleRandomHH.COLUMN_HH_HEAD, Vc.getHhhead());
+            values.put(SingleRandomHH.COLUMN_CONTACT, Vc.getContact());
+            values.put(SingleRandomHH.COLUMN_HH_SELECTED_STRUCT, Vc.getSelStructure());
+            values.put(SingleRandomHH.COLUMN_SNO_HH, Vc.getSno());
+
+            long row = db.insert(SingleRandomHH.TABLE_NAME, null, values);
+            if (row != -1) insertCount++;
+        }
+        return insertCount;
     }
 
     public void syncUCs(JSONArray UCslist) {
