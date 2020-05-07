@@ -47,14 +47,14 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 listOf(
                         ActionItem(
                                 0,
-                                "Partial Complete",
-                                getDrawable(R.drawable.ic_battery_black_24dp)
+                                "Force Stop",
+                                getDrawable(R.drawable.ic_warning_black_24dp)
                         )
                         ,
                         ActionItem(
                                 1,
-                                "Force Stop",
-                                getDrawable(R.drawable.ic_warning_black_24dp)
+                                "Partial Complete",
+                                getDrawable(R.drawable.ic_battery_black_24dp)
                         )
                         ,
                         ActionItem(
@@ -67,12 +67,12 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                     run {
                         when (item.id) {
                             0 -> {
-                                if (flagNewForm) return@run
-                                onBackPressed()
-                            }
-                            1 -> {
                                 if (flagNewForm || flagInCompleteForm) return@run
                                 contextEndActivity(this, false)
+                            }
+                            1 -> {
+                                if (flagNewForm) return@run
+                                onBackPressed()
                             }
                             else -> {
                                 if (flagNewForm) return@run
@@ -87,7 +87,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     }
 
     private fun setUI() {
-        when (MainApp.fc.istatus) {
+        when (MainApp.fc.getfStatus()) {
             "1" -> {
                 bi.btnHHView.isEnabled = false
                 bi.btnChildView.isEnabled = true
@@ -116,7 +116,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         }
     }
 
-    override fun endSecAActivity(flag: Boolean) {
+    override fun endSecActivity(flag: Boolean) {
         finish()
         startActivity(Intent(this, EndingActivity::class.java).putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))

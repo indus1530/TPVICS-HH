@@ -19,30 +19,30 @@ public final class CreateTable {
             + FormsContract.FormsTable.TABLE_NAME + "("
             + FormsContract.FormsTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + FormsContract.FormsTable.COLUMN_PROJECT_NAME + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_USER + " TEXT,"
             + FormsContract.FormsTable.COLUMN_UID + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_LUID + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_GPSLAT + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_GPSLNG + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_GPSDATE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_GPSACC + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT,"
             + FormsContract.FormsTable.COLUMN_CLUSTERCODE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_HHNO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMTYPE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_LUID + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_USER + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SINFO + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SM + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SN + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SO + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_ISTATUS + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_ISTATUS88x + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FSTATUS + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FSTATUS88x + " TEXT,"
             + FormsContract.FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_GPSLAT + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_GPSLNG + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_GPSDATE + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_GPSACC + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_DEVICEID + " TEXT,"
-            + FormsContract.FormsTable.COLUMN_DEVICETAGID + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_ISTATUS + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_ISTATUS88x + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYNCED + " TEXT,"
             + FormsContract.FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
@@ -60,25 +60,6 @@ public final class CreateTable {
             VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME + " TEXT, " +
             VersionAppContract.VersionAppTable.COLUMN_PATH_NAME + " TEXT " +
             ");";
-/*
-    public static final String SQL_CREATE_TALUKAS = "CREATE TABLE " + TalukasContract.singleTalukas.TABLE_NAME + "("
-            + TalukasContract.singleTalukas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + TalukasContract.singleTalukas.COLUMN_TALUKA_CODE + " TEXT,"
-            + TalukasContract.singleTalukas.COLUMN_TALUKA + " TEXT );";
-
-
-    public static final String SQL_CREATE_UCS = "CREATE TABLE " + UCsContract.singleUCs.TABLE_NAME + "("
-            + UCsContract.singleUCs._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + UCsContract.singleUCs.COLUMN_UCCODE + " TEXT,"
-            + UCsContract.singleUCs.COLUMN_TALUKA_CODE + " TEXT,"
-            + UCsContract.singleUCs.COLUMN_UCS + " TEXT );";
-
-
-    public static final String SQL_CREATE_AREAS = "CREATE TABLE " + AreasContract.singleAreas.TABLE_NAME + "("
-            + AreasContract.singleAreas._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + AreasContract.singleAreas.COLUMN_AREACODE + " TEXT,"
-            + AreasContract.singleAreas.COLUMN_UC_CODE + " TEXT,"
-            + AreasContract.singleAreas.COLUMN_AREA + " TEXT );";*/
 
     public static final String SQL_CREATE_BL_RANDOM = "CREATE TABLE " + SingleRandomHH.TABLE_NAME + "("
             + SingleRandomHH.COLUMN_ID + " TEXT,"
@@ -104,17 +85,26 @@ public final class CreateTable {
 
     public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + SingleChild.TABLE_NAME + "("
             + SingleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleChild.COLUMN_UID + " TEXT,"
-            + SingleChild.COLUMN__UUID + " TEXT,"
             + SingleChild.COLUMN_DEVICEID + " TEXT,"
-            + SingleChild.COLUMN_FORMDATE + " TEXT,"
+            + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_USER + " TEXT,"
+            + SingleChild.COLUMN_UID + " TEXT,"
+            + SingleChild.COLUMN_UUID + " TEXT,"
+            + SingleChild.COLUMN_FORMDATE + " TEXT,"
             + SingleChild.COLUMN_SCA + " TEXT,"
             + SingleChild.COLUMN_SCB + " TEXT,"
             + SingleChild.COLUMN_SCC + " TEXT,"
-            + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
-            + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
+            + SingleChild.COLUMN_SYNCED_DATE + " TEXT,"
+
+            + SingleChild.COLUMN_CHILDNAME + " TEXT,"
+            + SingleChild.COLUMN_CHILDSERIAL + " TEXT,"
+            + SingleChild.COLUMN_AGEY + " TEXT,"
+            + SingleChild.COLUMN_AGEM + " TEXT,"
+            + SingleChild.COLUMN_CLUSTER + " TEXT,"
+            + SingleChild.COLUMN_HHNO + " TEXT,"
+            + SingleChild.COLUMN_CSTATUS + " TEXT,"
+            + SingleChild.COLUMN_CSTATUS88x + " TEXT );";
 
     public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +

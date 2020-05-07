@@ -34,7 +34,7 @@ class SplashscreenActivity : Activity() {
     }
 
     companion object {
-        private const val SPLASH_TIME_OUT = 2000
+        private const val SPLASH_TIME_OUT = 500
         lateinit var provinces: MutableList<String>
         lateinit var districtsMap: MutableMap<String, Pair<String, EnumBlockContract>>
     }

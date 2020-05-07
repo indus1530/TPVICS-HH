@@ -25,11 +25,15 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
+import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 
-public class SectionCHBActivity extends AppCompatActivity {
+public class SectionCHBActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChBBinding bi;
 
@@ -153,6 +157,9 @@ public class SectionCHBActivity extends AppCompatActivity {
         f1.put("cb04mm", bi.cb04mm.getText().toString());
         f1.put("cb04yy", bi.cb04yy.getText().toString());
 
+        child.setagem(bi.cb04mm.getText().toString());
+        child.setagey(bi.cb04yy.getText().toString());
+
         child.setsCB(String.valueOf(f1));
     }
 
@@ -170,7 +177,13 @@ public class SectionCHBActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCHCActivity.class));
+
+                //Calculate months
+                int totalMonths = Integer.parseInt(bi.cb04mm.getText().toString()) + Integer.parseInt(bi.cb04yy.getText().toString()) * 12;
+                boolean monthFlag = totalMonths >= 12 && totalMonths < 24;
+                if (monthFlag)
+                    openWarningActivity(this, "Current Child age leads to End this form.\nDo you want to Continue?");
+                else startActivity(new Intent(this, SectionCHCActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -244,4 +257,9 @@ public class SectionCHBActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void endSecActivity(boolean flag) {
+        startActivity(new Intent(this, ChildEndingActivity.class)
+                .putExtra(CHILD_ENDING_AGE_ISSUE, false));
+    }
 }

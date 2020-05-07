@@ -27,7 +27,6 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 public class SectionCHAActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChABinding bi;
-    int position;
 //    FamilyMembersContract selMWRA;
 
     @Override
@@ -95,16 +94,17 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.set_UUID(MainApp.fc.get_UID());
         child.setDeviceId(MainApp.appInfo.getDeviceID());
         child.setDevicetagID(MainApp.appInfo.getTagName());
+        child.sethhno(MainApp.fc.getHhno());
+        child.setcluster(MainApp.fc.getClusterCode());
         child.setFormDate(MainApp.fc.getFormDate());
         child.setUser(MainApp.userName);
         child.setChildName(bi.ec14.getText().toString());
 
         JSONObject f1 = new JSONObject();
-
-        f1.put("hhno", MainApp.fc.getHhno());
-        f1.put("cluster_no", MainApp.fc.getClusterCode());
         f1.put("_luid", MainApp.fc.getLuid());
-
+        f1.put("ec01", bi.ec01.getText().toString());
+        f1.put("ec02", bi.ec02.getText().toString());
+        f1.put("ec13", bi.ec13.getText().toString());
         f1.put("ec14", bi.ec14.getText().toString());
         f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
         f1.put("ec16", bi.ec16.getText().toString());
@@ -162,7 +162,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
     }
 
     @Override
-    public void endSecAActivity(boolean flag) {
+    public void endSecActivity(boolean flag) {
         try {
             SaveDraft();
         } catch (JSONException e) {

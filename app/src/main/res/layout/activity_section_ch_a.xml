@@ -18,6 +18,139 @@
             android:id="@+id/fldGrpSectionCHA"
             style="@style/linearlayout_view_wt_bound">
 
+            <!-- ec01  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ec01cv"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/hlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_ec01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ec01"
+                            android:text="@string/ec01" />
+
+                        <TextView
+                            android:id="@+id/q_ec01"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ec01"
+                            android:layout_alignBottom="@id/qtxt_ec01"
+                            android:text="@string/Q_ec01" />
+
+                    </RelativeLayout>
+
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        android:id="@+id/ec01"
+                        style="@style/EditTextNum"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:hint="DD/MM/YYYY"
+                        app:dateFormat="dd-MM-yyyy"
+                        app:maxDate="CR_DATE"
+                        app:minDate="01/01/2017" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- ec02  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ec02cv"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/hlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_ec02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ec02"
+                            android:text="@string/ec02" />
+
+                        <TextView
+                            android:id="@+id/q_ec02"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ec02"
+                            android:layout_alignBottom="@id/qtxt_ec02"
+                            android:text="@string/Q_ec02" />
+
+                    </RelativeLayout>
+
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerInputEditText
+                        android:id="@+id/ec02"
+                        style="@style/EditTextNum"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:hint="HH:mm"
+                        app:is24HourView="true"
+                        app:timeFormat="HH:mm" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- ec13  Input   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVec13"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_ec13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/q_ec13"
+                            android:text="@string/ec13" />
+
+                        <TextView
+                            android:id="@+id/q_ec13"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_ec13"
+                            android:layout_alignBottom="@id/qtxt_ec13"
+                            android:gravity="center"
+                            android:text="@string/Q_ec13" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/ec13"
+                        style="@style/EditTextNum"
+                        android:hint="@string/ec13"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <!-- ec14  Input   -->
             <androidx.cardview.widget.CardView
@@ -296,11 +429,14 @@
                         <RadioButton
                             android:id="@+id/ec19a"
                             style="@style/radiobutton"
+                            android:enabled="false"
                             android:text="@string/ec19a" />
 
                         <RadioButton
                             android:id="@+id/ec19b"
                             style="@style/radiobutton"
+                            android:checked="true"
+                            android:enabled="false"
                             android:text="@string/ec19b" />
 
                     </RadioGroup>

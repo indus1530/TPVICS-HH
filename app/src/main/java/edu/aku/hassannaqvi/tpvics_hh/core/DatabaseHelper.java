@@ -626,7 +626,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
 //        values.put(MWRATable._ID, mwra.get_ID());
-        values.put(SingleChild.COLUMN__UUID, childContract.get_UUID());
+        values.put(SingleChild.COLUMN_UUID, childContract.get_UUID());
         values.put(SingleChild.COLUMN_DEVICEID, childContract.getDeviceId());
         values.put(SingleChild.COLUMN_FORMDATE, childContract.getFormDate());
         values.put(SingleChild.COLUMN_USER, childContract.getUser());
@@ -634,6 +634,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(SingleChild.COLUMN_SCB, childContract.getsCB());
         values.put(SingleChild.COLUMN_SCC, childContract.getsCC());
         values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
+
+        values.put(SingleChild.COLUMN_CHILDNAME, childContract.getChildName());
+        values.put(SingleChild.COLUMN_CHILDSERIAL, childContract.getChildSerial());
+        values.put(SingleChild.COLUMN_AGEY, childContract.getagey());
+        values.put(SingleChild.COLUMN_AGEM, childContract.getagem());
+        values.put(SingleChild.COLUMN_CLUSTER, childContract.getcluster());
+        values.put(SingleChild.COLUMN_HHNO, childContract.gethhno());
+        values.put(SingleChild.COLUMN_CSTATUS, childContract.getCstatus());
+        values.put(SingleChild.COLUMN_CSTATUS88x, childContract.getCstatus88x());
 
 
         // Insert the new row, returning the primary key value of the new row
@@ -947,7 +956,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] columns = {
                 SingleChild._ID,
                 SingleChild.COLUMN_UID,
-                SingleChild.COLUMN__UUID,
+                SingleChild.COLUMN_UUID,
                 SingleChild.COLUMN_DEVICEID,
                 SingleChild.COLUMN_FORMDATE,
                 SingleChild.COLUMN_USER,
@@ -955,6 +964,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_SCB,
                 SingleChild.COLUMN_SCC,
                 SingleChild.COLUMN_DEVICETAGID,
+
+                SingleChild.COLUMN_CHILDNAME,
+                SingleChild.COLUMN_CHILDSERIAL,
+                SingleChild.COLUMN_AGEY,
+                SingleChild.COLUMN_AGEM,
+                SingleChild.COLUMN_CLUSTER,
+                SingleChild.COLUMN_HHNO,
+                SingleChild.COLUMN_CSTATUS,
+                SingleChild.COLUMN_CSTATUS88x,
 
         };
 
@@ -1051,11 +1069,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // New value for one column
         ContentValues values = new ContentValues();
         if (flag) {
-            values.put(FormsTable.COLUMN_FSTATUS, MainApp.fc.getfStatus());
-            values.put(FormsTable.COLUMN_FSTATUS88x, MainApp.fc.getFstatus88x());
-        } else {
             values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
             values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
+        } else {
+            values.put(FormsTable.COLUMN_FSTATUS, MainApp.fc.getfStatus());
+            values.put(FormsTable.COLUMN_FSTATUS88x, MainApp.fc.getFstatus88x());
             values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.fc.getEndingdatetime());
         }
 
@@ -1064,6 +1082,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateChildEnding() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(SingleChild.COLUMN_CSTATUS, MainApp.child.getCstatus());
+        values.put(SingleChild.COLUMN_CSTATUS88x, MainApp.child.getCstatus88x());
+
+        // Which row to update, based on the ID
+        String selection = SingleChild.COLUMN_ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.child.get_ID())};
+
+        int count = db.update(SingleChild.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -1244,11 +1281,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_FORMTYPE
         };
 
-        String whereClause = FormsTable.COLUMN_FSTATUS + " is null AND " + FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
+//        String whereClause = "(" + FormsTable.COLUMN_ISTATUS + " is null OR " + FormsTable.COLUMN_ISTATUS + "='') AND " + FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
+        String whereClause = FormsTable.COLUMN_CLUSTERCODE + "=? AND " + FormsTable.COLUMN_HHNO + "=?";
         String[] whereArgs = {clusterCode, hhNo};
         String groupBy = null;
         String having = null;
-        String orderBy = null;
+        String orderBy = FormsTable._ID + " DESC";
         FormsContract allFC = null;
         try {
             c = db.query(

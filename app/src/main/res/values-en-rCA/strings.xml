@@ -85,8 +85,8 @@
     <string name="hh074a"> hh074a: Supervisor\'s Code</string>
     <string name="hh01"> hh01: Date of interview:</string>
     <string name="hh02"> hh02: Time of interview: </string>
-    <string name="hh13a"> hh13A: Name of the Respondent</string>
-    <string name="hh13b"> hh13B: Respondent\'s Contact Number </string>
+    <string name="hh13"> Name of the Respondent</string>
+    <string name="hh13a"> Respondent\'s Contact Number </string>
     <string name="hh14"> hh14: Age of Respondent in completed   years      </string>
     <string name="hh15"> hh15: Is respondent Head of Household?</string>
     <string name="hh16"> hh16: Name and contact number of the head of Household: </string>
@@ -112,7 +112,7 @@
     <string name="hh20a"> Yes </string>
     <string name="hh20b"> No </string>
 
-    <string name="hh21"> HH21: If Yes, Numbers of childrens 12-23 months: </string>
+    <string name="hh20aa"> HH21: If Yes, Numbers of childrens 12-23 months: </string>
 
     <string name="hh22"> HH21: Result of Household Questionnaire interview . </string>
     <string name="hh22h"> Note: Discuss any result not completed with supervisor. </string>
@@ -814,6 +814,8 @@
     <string name='Q_hh14'>hh14</string>
     <string name='Q_hh15'>hh15</string>
     <string name='Q_hh16'>hh16</string>
+    <string name='Q_hh16a'>hh16a</string>
+    <string name='Q_hh16b'>hh16b</string>
     <string name='Q_hh17'>hh17</string>
     <string name='Q_hh18'>hh18</string>
     <string name='Q_hh19'>hh19</string>

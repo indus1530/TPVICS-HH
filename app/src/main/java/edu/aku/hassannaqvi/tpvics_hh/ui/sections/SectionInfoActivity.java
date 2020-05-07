@@ -38,7 +38,7 @@ public class SectionInfoActivity extends AppCompatActivity {
     ActivitySectionInfoBinding bi;
     private DatabaseHelper db;
     private BLRandomContract bl;
-    private String message = "No Household found!";
+    private String message = "Household found";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,11 +135,10 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hhss", bl.getSelStructure());
 
 
-        json.put("hh11", bi.hh11.getText().toString());
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
   /*      json.put("hh07", bi.hh07.getText().toString());
-        json.put("hh08", bi.hh08.getText().toString());
-        json.put("hh09", bi.hh09.getText().toString());*/
+        json.put("hh08", bi.hh08.getText().toString());*/
+        json.put("hh10", bi.hh10.getText().toString());
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
         json.put("hh063", MainApp.userName);
@@ -229,10 +228,10 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .filter(form -> {
-                    if (!form.getfStatus().equals("")) {
-                        message = "Household already exist!";
-                        return true;
-                    } else return false;
+                    if (!form.getIstatus().equals("")) {
+                        message = "Household already exist";
+                        return false;
+                    } else return true;
                 })
                 .subscribe(form -> {
                     MainApp.fc = form;
@@ -249,7 +248,7 @@ public class SectionInfoActivity extends AppCompatActivity {
             bi.hh12name.setText(bl.getHhhead().toUpperCase());
             bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
         } else {
-            bi.hh12msg.setText(message);
+            bi.hh12msg.setText("Household not found!!");
             bi.hh12name.setText(null);
             bi.fldGrpSectionA02.setVisibility(View.GONE);
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
