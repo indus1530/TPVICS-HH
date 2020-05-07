@@ -97,6 +97,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setDevicetagID(MainApp.appInfo.getTagName());
         child.setFormDate(MainApp.fc.getFormDate());
         child.setUser(MainApp.userName);
+        child.setChildName(bi.ec14.getText().toString());
 
         JSONObject f1 = new JSONObject();
 
