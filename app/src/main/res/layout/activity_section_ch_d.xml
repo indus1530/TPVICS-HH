@@ -91,58 +91,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0501dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0501dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0501dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0501mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0501mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0501mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0501yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0501yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0501yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -181,7 +172,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_im0502"
                                 android:layout_alignBottom="@id/qtxt_im0502"
-                                android:text="@string/Q_im0501" />
+                                android:text="@string/Q_im0502" />
 
                         </RelativeLayout>
 
@@ -189,58 +180,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0502dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0502dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0502dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0502mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0502mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0502mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0502yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0502yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0502yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -288,58 +270,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0503dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0503dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0503dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0503mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0503mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0503mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0503yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0503yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0503yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -387,58 +360,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0504dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0504dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0504dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0504mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0504mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0504mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0504yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0504yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0504yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -486,58 +450,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0505dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0505dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0505dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0505mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0505mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0505mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0505yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0505yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0505yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -585,58 +540,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0506dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0506dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0506dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0506mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0506mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0506mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0506yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0506yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0506yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -684,58 +630,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0507dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0507dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0507dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0507mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0507mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0507mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0507yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0507yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0507yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -779,62 +716,52 @@
 
                         </RelativeLayout>
 
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0508dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0508dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0508dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0508mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0508mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0508mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0508yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0508yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0508yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -879,62 +806,52 @@
 
                         </RelativeLayout>
 
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0509dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0509dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0509dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0509mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0509mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0509mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0509yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0509yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0509yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -982,58 +899,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0510dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0510dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0510dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0510mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0510mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0510mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0510yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0510yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0510yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1077,62 +985,52 @@
 
                         </RelativeLayout>
 
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0511dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0511dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0511dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0511mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0511mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0511mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0511yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0511yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0511yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1176,62 +1074,52 @@
 
                         </RelativeLayout>
 
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0512dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0512dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0512dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0512mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0512mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0512mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0512yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0512yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0512yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1279,58 +1167,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0513dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0513dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0513dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0513mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0513mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0513mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0513yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0513yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0513yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1374,67 +1253,52 @@
 
                         </RelativeLayout>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/im0514" />
-
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0514dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0514dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0514dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0514mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0514mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0514mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0514yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0514yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0514yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1482,58 +1346,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0515dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0515dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0515dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0515mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0515mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0515mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0515yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0515yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0515yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1581,58 +1436,49 @@
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0516dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0516dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0516dd"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0516mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0516mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im0516mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im0516yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im0516yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im0516yy"
                                 android:maxLength="4"
                                 app:maxValue="2020"
@@ -1740,17 +1586,22 @@
 
                         <RadioGroup
                             android:id="@+id/im07"
+                            style="@style/hlinearlayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im071"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im071" />
 
                             <RadioButton
                                 android:id="@+id/im072"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im072" />
 
                         </RadioGroup>
@@ -1794,22 +1645,29 @@
 
                     <RadioGroup
                         android:id="@+id/im08"
+                        style="@style/hlinearlayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/im081"
-                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/im081" />
 
                         <RadioButton
                             android:id="@+id/im082"
-                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/im082" />
 
                         <RadioButton
                             android:id="@+id/im083"
-                            style="@style/radiobutton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/im083" />
 
                     </RadioGroup>
@@ -1855,22 +1713,29 @@
 
                         <RadioGroup
                             android:id="@+id/im09"
+                            style="@style/hlinearlayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im091"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im091" />
 
                             <RadioButton
                                 android:id="@+id/im092"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im092" />
 
                             <RadioButton
                                 android:id="@+id/im093"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im093" />
 
                         </RadioGroup>
@@ -1912,22 +1777,29 @@
 
                         <RadioGroup
                             android:id="@+id/im10"
+                            style="@style/hlinearlayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/im101"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im101" />
 
                             <RadioButton
                                 android:id="@+id/im102"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im102" />
 
                             <RadioButton
                                 android:id="@+id/im103"
-                                style="@style/radiobutton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/im103" />
 
                         </RadioGroup>
@@ -1974,22 +1846,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im11"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im111"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im111" />
 
                                 <RadioButton
                                     android:id="@+id/im112"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im112" />
 
                                 <RadioButton
                                     android:id="@+id/im113"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im113" />
 
                             </RadioGroup>
@@ -2076,22 +1955,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im13"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im131"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im131" />
 
                                 <RadioButton
                                     android:id="@+id/im132"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im132" />
 
                                 <RadioButton
                                     android:id="@+id/im133"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im133" />
 
                             </RadioGroup>
@@ -2140,22 +2026,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im14"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im141"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im141" />
 
                                 <RadioButton
                                     android:id="@+id/im142"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im142" />
 
                                 <RadioButton
                                     android:id="@+id/im143"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im143" />
 
                             </RadioGroup>
@@ -2241,22 +2134,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im16"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im161"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im161" />
 
                                 <RadioButton
                                     android:id="@+id/im162"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im162" />
 
                                 <RadioButton
                                     android:id="@+id/im163"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im163" />
 
                             </RadioGroup>
@@ -2344,22 +2244,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im18"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im181"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im181" />
 
                                 <RadioButton
                                     android:id="@+id/im182"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im182" />
 
                                 <RadioButton
                                     android:id="@+id/im183"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im183" />
 
                             </RadioGroup>
@@ -2447,22 +2354,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im20"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im201"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im201" />
 
                                 <RadioButton
                                     android:id="@+id/im202"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im202" />
 
                                 <RadioButton
                                     android:id="@+id/im203"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im203" />
 
                             </RadioGroup>
@@ -2504,22 +2418,29 @@
 
                             <RadioGroup
                                 android:id="@+id/im21"
+                                style="@style/hlinearlayout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
                                 <RadioButton
                                     android:id="@+id/im211"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im211" />
 
                                 <RadioButton
                                     android:id="@+id/im212"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im212" />
 
                                 <RadioButton
                                     android:id="@+id/im213"
-                                    style="@style/radiobutton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/im213" />
 
                             </RadioGroup>
@@ -2862,31 +2783,32 @@
 
 
             <!--ENDBUTTON linearlayout-->
-             <LinearLayout
-                 style="@style/hlinearlayout"
-                 android:layout_gravity="start"
-                 android:layout_marginTop="24dp">
-                 <Button
-                     android:id="@+id/btnNext"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_margin="12dp"
-                     android:background="@color/colorPrimary"
-                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
-                     android:onClick="@{() -> callback.BtnContinue()}"
-                     android:text="@string/nextSection" />
+            <LinearLayout
+                style="@style/hlinearlayout"
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp">
 
-                 <Button
-                     android:id="@+id/btnEnd"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_margin="12dp"
-                     android:background="@color/grayOverlay"
-                     android:onClick="@{() -> callback.BtnEnd()}"
-                     android:text="@string/end_interview" />
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/grayOverlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
 
 
-             </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
