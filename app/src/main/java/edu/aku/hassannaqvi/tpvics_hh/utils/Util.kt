@@ -6,11 +6,14 @@ import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.view.LayoutInflater
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
 import edu.aku.hassannaqvi.tpvics_hh.R
+import edu.aku.hassannaqvi.tpvics_hh.databinding.ItemDialogBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import java.util.*
@@ -78,6 +81,29 @@ fun openChildEndActivity(activity: Activity) {
 }
 
 @JvmOverloads
+fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolean = true) {
+    val dialog = Dialog(activity)
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+    val bi: ItemDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.item_dialog, null, false)
+    dialog.setContentView(bi.root)
+    bi.content.text = message
+    dialog.setCancelable(false)
+    val params = WindowManager.LayoutParams()
+    params.copyFrom(dialog.window!!.attributes)
+    params.width = WindowManager.LayoutParams.WRAP_CONTENT
+    params.height = WindowManager.LayoutParams.WRAP_CONTENT
+    dialog.window!!.attributes = params
+    dialog.show()
+    bi.btnOk.setOnClickListener {
+        val endSecAActivity = activity as EndSectionActivity
+        endSecAActivity.endSecActivity(defaultFlag)
+    }
+    bi.btnNo.setOnClickListener {
+        dialog.dismiss()
+    }
+}
+
+@JvmOverloads
 fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -90,7 +116,7 @@ fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     dialog.show()
     dialog.window!!.attributes = params
     val endSecAActivity = activity as EndSectionActivity
-    dialog.findViewById<View>(R.id.btnOk).setOnClickListener { endSecAActivity.endSecAActivity(defaultFlag) }
+    dialog.findViewById<View>(R.id.btnOk).setOnClickListener { endSecAActivity.endSecActivity(defaultFlag) }
     dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
 }
 
@@ -100,5 +126,5 @@ fun getMemberIcon(gender: Int, age: String): Int {
 }
 
 interface EndSectionActivity {
-    fun endSecAActivity(flag: Boolean)
+    fun endSecActivity(flag: Boolean)
 }

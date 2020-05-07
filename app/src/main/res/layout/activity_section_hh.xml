@@ -61,7 +61,7 @@
                             android:layout_weight="1"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
-                            app:dateFormat="dd/MM/yyyy"
+                            app:dateFormat="dd-MM-yyyy"
                             app:maxDate="CR_DATE"
                             app:minDate="01/01/2017" />
 

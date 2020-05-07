@@ -54,9 +54,9 @@ public class ChildContract {
 
 
     public ChildContract hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN__ID));
+        this._ID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_ID));
         this.UID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_UID));
-        this._UUID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN__UUID));
+        this._UUID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_UUID));
         this.deviceId = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICEID));
         this.formDate = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_FORMDATE));
         this.user = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_USER));
@@ -81,9 +81,9 @@ public class ChildContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(SingleChild.COLUMN__ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(SingleChild.COLUMN_ID, this._ID == null ? JSONObject.NULL : this._ID);
         json.put(SingleChild.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
-        json.put(SingleChild.COLUMN__UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
+        json.put(SingleChild.COLUMN_UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
         json.put(SingleChild.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
         json.put(SingleChild.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(SingleChild.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
@@ -275,9 +275,9 @@ public class ChildContract {
     public static abstract class SingleChild implements BaseColumns {
 
         public static final String TABLE_NAME = "child_table";
-        public static final String COLUMN__ID = "_id";
+        public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN__UUID = "_uuid";
+        public static final String COLUMN_UUID = "_uuid";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_FORMDATE = "formdate";
         public static final String COLUMN_USER = "username";

@@ -432,14 +432,6 @@
                 style="@style/hlinearlayout"
                 android:layout_gravity="start"
                 android:layout_marginTop="24dp">
-                <Button
-                    android:id="@+id/btnEnd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:background="@color/grayOverlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -450,6 +442,15 @@
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/grayOverlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
 
 
             </LinearLayout>
