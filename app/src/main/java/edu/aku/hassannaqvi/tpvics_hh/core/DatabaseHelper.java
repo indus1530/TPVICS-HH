@@ -635,6 +635,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(SingleChild.COLUMN_SCC, childContract.getsCC());
         values.put(SingleChild.COLUMN_DEVICETAGID, childContract.getDevicetagID());
 
+        values.put(SingleChild.COLUMN_CHILDNAME, childContract.getChildName());
+        values.put(SingleChild.COLUMN_CHILDSERIAL, childContract.getChildSerial());
+        values.put(SingleChild.COLUMN_AGEY, childContract.getagey());
+        values.put(SingleChild.COLUMN_AGEM, childContract.getagem());
+        values.put(SingleChild.COLUMN_CLUSTER, childContract.getcluster());
+        values.put(SingleChild.COLUMN_HHNO, childContract.gethhno());
+        values.put(SingleChild.COLUMN_CSTATUS, childContract.getCstatus());
+        values.put(SingleChild.COLUMN_CSTATUS88x, childContract.getCstatus88x());
+
 
         // Insert the new row, returning the primary key value of the new row
         long newRowId;
@@ -955,6 +964,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_SCB,
                 SingleChild.COLUMN_SCC,
                 SingleChild.COLUMN_DEVICETAGID,
+
+                SingleChild.COLUMN_CHILDNAME,
+                SingleChild.COLUMN_CHILDSERIAL,
+                SingleChild.COLUMN_AGEY,
+                SingleChild.COLUMN_AGEM,
+                SingleChild.COLUMN_CLUSTER,
+                SingleChild.COLUMN_HHNO,
+                SingleChild.COLUMN_CSTATUS,
+                SingleChild.COLUMN_CSTATUS88x,
 
         };
 

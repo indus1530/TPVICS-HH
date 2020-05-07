@@ -114,7 +114,16 @@ public final class CreateTable {
             + SingleChild.COLUMN_SCC + " TEXT,"
             + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
             + SingleChild.COLUMN_SYNCED + " TEXT,"
-            + SingleChild.COLUMN_SYNCED_DATE + " TEXT );";
+            + SingleChild.COLUMN_SYNCED_DATE + " TEXT,"
+
+            + SingleChild.COLUMN_CHILDNAME + " TEXT,"
+            + SingleChild.COLUMN_CHILDSERIAL + " TEXT,"
+            + SingleChild.COLUMN_AGEY + " TEXT,"
+            + SingleChild.COLUMN_AGEM + " TEXT,"
+            + SingleChild.COLUMN_CLUSTER + " TEXT,"
+            + SingleChild.COLUMN_HHNO + " TEXT,"
+            + SingleChild.COLUMN_CSTATUS + " TEXT,"
+            + SingleChild.COLUMN_CSTATUS88x + " TEXT );";
 
     public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
