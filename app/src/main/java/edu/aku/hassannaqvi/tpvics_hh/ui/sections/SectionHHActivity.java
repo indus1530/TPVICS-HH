@@ -144,7 +144,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     }
 
     @Override
-    public void endSecAActivity(boolean flag) {
+    public void endSecActivity(boolean flag) {
         try {
             SaveDraft();
         } catch (Exception e) {

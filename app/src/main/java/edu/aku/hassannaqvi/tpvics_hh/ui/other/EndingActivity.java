@@ -80,12 +80,12 @@ public class EndingActivity extends AppCompatActivity {
                 : "0";
 
         if (subInfoEndActivityFlag) {
-            MainApp.fc.setfStatus(statusValue);
-            MainApp.fc.setFstatus88x(bi.istatus96x.getText().toString());
-        } else {
             MainApp.fc.setIstatus(statusValue);
             MainApp.fc.setIstatus88x(bi.istatus96x.getText().toString());
+        } else {
             MainApp.fc.setEndingdatetime(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+            MainApp.fc.setfStatus(statusValue);
+            MainApp.fc.setFstatus88x(bi.istatus96x.getText().toString());
         }
     }
 
