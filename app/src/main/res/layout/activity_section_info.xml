@@ -154,11 +154,13 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="end|center_vertical"
                             android:layout_margin="8dp"
-                            android:background="@color/yellow"
+                            android:background="@drawable/outline_btn"
+
                             android:onClick="@{() -> callback.BtnCheckCluster()}"
-                            android:padding="12dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
                             android:text="CHECK CLUSTER"
-                            android:textColor="@color/colorPrimaryDark" />
+                            android:textColor="@color/greenInfo" />
 
                     </LinearLayout>
 
@@ -262,11 +264,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="end|center_vertical"
                                 android:layout_margin="8dp"
-                                android:background="@color/yellow"
+                                android:background="@drawable/outline_btn"
                                 android:onClick="@{() -> callback.BtnCheckHH()}"
-                                android:padding="12dp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
                                 android:text="CHECK HOUSEHOLD"
-                                android:textColor="@color/colorPrimaryDark" />
+                                android:textColor="@color/greenInfo" />
 
                         </LinearLayout>
 
