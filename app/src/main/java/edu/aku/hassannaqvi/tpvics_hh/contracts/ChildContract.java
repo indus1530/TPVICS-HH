@@ -22,6 +22,10 @@ public class ChildContract {
     private String synced = "";
     private String synced_date = "";
 
+    //Temporary
+    private String childName;
+    private String childSerial;
+
      /*
     saved in JSON
     =============
@@ -81,6 +85,22 @@ public class ChildContract {
 
         return json;
 
+    }
+
+    public String getChildName() {
+        return childName;
+    }
+
+    public void setChildName(String childName) {
+        this.childName = childName;
+    }
+
+    public String getChildSerial() {
+        return childSerial;
+    }
+
+    public void setChildSerial(String childSerial) {
+        this.childSerial = childSerial;
     }
 
     public String get_ID() {
