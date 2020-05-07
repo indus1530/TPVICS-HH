@@ -99,6 +99,55 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+            <!-- Take Photo   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVtakePhoto"
+                style="@style/cardView">
+
+                <LinearLayout style="@style/vlinearlayout">
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <Button
+                            android:id="@+id/frontPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:onClick="takePhoto"
+                            android:text="Take Front Photo" />
+
+                        <Button
+                            android:id="@+id/backPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:onClick="takePhoto"
+                            android:text="Take Back Photo" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/hlinearlayout">
+
+                        <TextView
+                            android:id="@+id/frontFileName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75" />
+
+                        <TextView
+                            android:id="@+id/backFileName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.25" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- im26d  TextArea   -->
             <androidx.cardview.widget.CardView
