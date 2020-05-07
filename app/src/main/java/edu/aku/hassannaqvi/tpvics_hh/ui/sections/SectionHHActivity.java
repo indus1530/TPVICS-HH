@@ -43,19 +43,20 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     }
 
     private void setUIComponent() {
-
     }
+
 
     public void onCheckedHH20(RadioGroup group, int checkedId) {
         if (checkedId == bi.hh20a.getId()) {
             bi.btnEnd.setVisibility(View.GONE);
             bi.btnNext.setVisibility(View.VISIBLE);
+            bi.hh20aa.setEnabled(true);
         } else {
             bi.btnEnd.setVisibility(View.VISIBLE);
             bi.btnNext.setVisibility(View.GONE);
-            bi.hh21.setText(null);
+            bi.hh20aa.setText(null);
+            bi.hh20aa.setEnabled(false);
         }
-        bi.hh21.setEnabled(checkedId == bi.hh20a.getId());
     }
 
     public void onCheckedHH18(RadioGroup group, int checkedId) {
@@ -121,13 +122,13 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
                 : bi.hh18b.isChecked() ? "2"
                 : "0");
 
-        json.put("hh19", bi.hh19a.getText().toString());
+        json.put("hh19", bi.hh19.getText().toString());
 
         json.put("hh20", bi.hh20a.isChecked() ? "1"
                 : bi.hh20b.isChecked() ? "2"
                 : "0");
 
-        json.put("hh21", bi.hh21.getText().toString());
+        json.put("hh20a", bi.hh20aa.getText().toString());
 
         MainApp.fc.setsInfo(String.valueOf(json));
 

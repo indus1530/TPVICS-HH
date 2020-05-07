@@ -564,7 +564,7 @@
                             </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/hh19a"
+                                android:id="@+id/hh19"
                                 style="@style/EditTextNum"
                                 android:hint="@string/hh19a"
                                 android:maxLength="2"
@@ -637,9 +637,9 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- hh21  Radio   -->
+                    <!-- hh20aa  Radio   -->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/hh21cv"
+                        android:id="@+id/hh20aacv"
                         style="@style/cardView">
 
                         <LinearLayout style="@style/vlinearlayout">
@@ -650,25 +650,25 @@
                                 android:background="@drawable/bottom">
 
                                 <TextView
-                                    android:id="@+id/qtxt_hh21"
+                                    android:id="@+id/qtxt_hh20aa"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_toEndOf="@id/q_hh21"
-                                    android:text="@string/hh21" />
+                                    android:layout_toEndOf="@id/q_hh20aa"
+                                    android:text="@string/hh20aa" />
 
                                 <TextView
-                                    android:id="@+id/q_hh21"
+                                    android:id="@+id/q_hh20aa"
                                     style="@style/quesNum"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignTop="@id/qtxt_hh21"
-                                    android:layout_alignBottom="@id/qtxt_hh21"
-                                    android:text="@string/Q_hh21" />
+                                    android:layout_alignTop="@id/qtxt_hh20aa"
+                                    android:layout_alignBottom="@id/qtxt_hh20aa"
+                                    android:text="@string/Q_hh20a" />
 
                             </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/hh21"
+                                android:id="@+id/hh20aa"
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
                                 android:maxLength="2"
