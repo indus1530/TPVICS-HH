@@ -145,6 +145,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0501yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -243,6 +244,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0502yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -342,6 +344,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0503yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -441,6 +444,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0504yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -540,6 +544,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0505yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -639,6 +644,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0506yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -738,6 +744,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0507yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -837,6 +844,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0508yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -937,6 +945,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0509yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1036,6 +1045,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0510yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1135,6 +1145,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0511yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1234,6 +1245,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0512yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1333,6 +1345,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0513yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1437,6 +1450,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0514yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1536,6 +1550,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0515yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -1635,6 +1650,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im0516yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -2862,31 +2878,32 @@
 
 
             <!--ENDBUTTON linearlayout-->
-             <LinearLayout
-                 style="@style/hlinearlayout"
-                 android:layout_gravity="start"
-                 android:layout_marginTop="24dp">
-                 <Button
-                     android:id="@+id/btnNext"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_margin="12dp"
-                     android:background="@color/colorPrimary"
-                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
-                     android:onClick="@{() -> callback.BtnContinue()}"
-                     android:text="@string/nextSection" />
+            <LinearLayout
+                style="@style/hlinearlayout"
+                android:layout_gravity="start"
+                android:layout_marginTop="24dp">
 
-                 <Button
-                     android:id="@+id/btnEnd"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_margin="12dp"
-                     android:background="@color/grayOverlay"
-                     android:onClick="@{() -> callback.BtnEnd()}"
-                     android:text="@string/end_interview" />
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/colorPrimary"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
+
+                <Button
+                    android:id="@+id/btnEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:background="@color/grayOverlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
 
 
-             </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 

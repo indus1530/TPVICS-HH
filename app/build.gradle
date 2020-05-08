@@ -81,8 +81,17 @@ dependencies {
     implementation 'com.balysv:material-ripple:1.0.2'
     implementation 'com.google.android:flexbox:2.0.0'
     implementation 'com.github.whalemare:sheetmenu:2.0.1'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+
+    // LiveData
+    def lifecycle_version = '2.2.0'
+    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    // optional - ReactiveStreams support for LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    // Extensions
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
     //Date Time
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
     //SDP

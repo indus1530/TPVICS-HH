@@ -101,7 +101,7 @@ public final class CreateTable {
             + SingleChild.COLUMN_CHILDSERIAL + " TEXT,"
             + SingleChild.COLUMN_AGEY + " TEXT,"
             + SingleChild.COLUMN_AGEM + " TEXT,"
-            + SingleChild.COLUMN_CLUSTER + " TEXT,"
+            + SingleChild.COLUMN_CLUSTERCODE + " TEXT,"
             + SingleChild.COLUMN_HHNO + " TEXT,"
             + SingleChild.COLUMN_CSTATUS + " TEXT,"
             + SingleChild.COLUMN_CSTATUS88x + " TEXT );";
