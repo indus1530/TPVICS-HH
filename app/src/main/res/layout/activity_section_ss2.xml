@@ -1009,7 +1009,6 @@
                         app:minValue="0"
                         app:type="range" />
 
-
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
