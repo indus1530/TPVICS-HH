@@ -23,7 +23,6 @@ public class ChildEndingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_child_ending);
         bi.setCallback(this);
 
