@@ -585,7 +585,6 @@
                             android:id="@+id/ss06e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:text="@string/ss06e" />
 
                         <TextView
@@ -642,7 +641,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ss06l" />
 
-                        <CheckBox
+                        <RadioButton
                             android:id="@+id/ss06m"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
