@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
@@ -22,10 +25,19 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private var flagNewForm = false
     private var flagInCompleteForm = false
 
+    companion object {
+        lateinit var childList: LiveData<MutableList<ChildContract>>
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
+        childList = MutableLiveData()
+        /*val def = GlobalScope.launch { getAllHHChildFromDB(this@SectionSubInfoActivity, MainApp.fc) }
+        def.invokeOnCompletion {
+
+        }*/
     }
 
     override fun onResume() {

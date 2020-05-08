@@ -69,7 +69,7 @@ public class ChildContract {
         this.childSerial = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CHILDSERIAL));
         this.agey = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEY));
         this.agem = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEM));
-        this.cluster = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CLUSTER));
+        this.cluster = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CLUSTERCODE));
         this.hhno = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_HHNO));
         this.cstatus = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CSTATUS));
         this.cstatus88x = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CSTATUS88x));
@@ -92,7 +92,7 @@ public class ChildContract {
         json.put(SingleChild.COLUMN_CHILDSERIAL, this.childSerial == null ? JSONObject.NULL : this.childSerial);
         json.put(SingleChild.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
         json.put(SingleChild.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
-        json.put(SingleChild.COLUMN_CLUSTER, this.agey == null ? JSONObject.NULL : this.cluster);
+        json.put(SingleChild.COLUMN_CLUSTERCODE, this.agey == null ? JSONObject.NULL : this.cluster);
         json.put(SingleChild.COLUMN_HHNO, this.agem == null ? JSONObject.NULL : this.hhno);
         json.put(SingleChild.COLUMN_CSTATUS, this.agem == null ? JSONObject.NULL : this.cstatus);
         json.put(SingleChild.COLUMN_CSTATUS88x, this.agem == null ? JSONObject.NULL : this.cstatus88x);
@@ -292,7 +292,7 @@ public class ChildContract {
         public static final String COLUMN_CHILDSERIAL = "childSerial";
         public static final String COLUMN_AGEY = "agey";
         public static final String COLUMN_AGEM = "agem";
-        public static final String COLUMN_CLUSTER = "cluster";
+        public static final String COLUMN_CLUSTERCODE = "cluster_code";
         public static final String COLUMN_HHNO = "hhno";
         public static final String COLUMN_CSTATUS = "cstatus";
         public static final String COLUMN_CSTATUS88x = "cstatus88x";
