@@ -113,8 +113,10 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         f1.put("ec18",
                 bi.ec181.isChecked() ? "1" :
                         bi.ec182.isChecked() ? "2" :
-                                bi.ec1898.isChecked() ? "98" :
-                                        "0");
+                                bi.ec183.isChecked() ? "3" :
+                                        bi.ec184.isChecked() ? "4" :
+                                                bi.ec1898.isChecked() ? "98" :
+                                                        "0");
 
         f1.put("ec19",
                 bi.ec19a.isChecked() ? "1" :

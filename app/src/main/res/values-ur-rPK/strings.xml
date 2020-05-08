@@ -552,9 +552,11 @@
 
     <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
     <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
-    <string name="ec18"> جواب دہندہ کا رشتہ بچے کے ساتھ </string>
-    <string name="ec181"> والی/والدہ، دیکھ بھال کرنے والا/والد </string>
-    <string name="ec182"> حفاظتی ٹیکے لگ گئے لیکن خاندان کے رکن کو معلوم نہیں </string>
+    <string name="ec18"> بچے کے ساتھ جواب دہندہ کا رشتہ  </string>
+    <string name="ec181"> والدہ </string>
+    <string name="ec182"> والد </string>
+    <string name="ec183"> دیکھ بھال کرنے والا/والی </string>
+    <string name="ec184"> گھر کا کوئی اور رکن </string>
     <string name="ec1898"> دیگر وضاحت </string>
 
     <string name="ec03"> انٹرویو لینے والے کا نام </string>

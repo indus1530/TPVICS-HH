@@ -477,9 +477,11 @@
     <string name="ec16"> ec16: Mother’s/Caregiver’s name </string>
     <string name="ec17"> ec17: Age of  Mother/Care giver in complete years </string>
     <string name="ec18"> Relationship of respondent with child</string>
-    <string name="ec181"> Mother/Father/Primary Care Taker </string>
-    <string name="ec182"> Family Member without having knowledge if vaccination </string>
-    <string name="ec1898"> Other Specify</string>
+    <string name="ec181"> Father </string>
+    <string name="ec182"> Mother </string>
+    <string name="ec183"> Primary Care Taker </string>
+    <string name="ec184"> Family Member without having knowledge if vaccination</string>
+    <string name="ec1898"> دیگر وضاحت </string>
     <string name="ec03"> ec03: Interviewer’s name</string>
     <string name="ec03a"> ec03a: Interview\'s Code</string>
     <string name="ec04"> ec04: Supervisor’s name</string>

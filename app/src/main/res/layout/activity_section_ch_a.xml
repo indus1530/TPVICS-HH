@@ -379,6 +379,16 @@
                             android:text="@string/ec182" />
 
                         <RadioButton
+                            android:id="@+id/ec183"
+                            style="@style/radiobutton"
+                            android:text="@string/ec183" />
+
+                        <RadioButton
+                            android:id="@+id/ec184"
+                            style="@style/radiobutton"
+                            android:text="@string/ec184" />
+
+                        <RadioButton
                             android:id="@+id/ec1898"
                             style="@style/radiobutton"
                             android:text="@string/ec1898" />
@@ -462,7 +472,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/q_ec21"
-                            android:text="@string/ec19" />
+                            android:text="@string/ec21" />
 
                         <TextView
                             android:id="@+id/q_ec21"
