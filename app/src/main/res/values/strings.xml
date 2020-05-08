@@ -71,12 +71,12 @@
 
     <!--TPVICS STRINGS-->
     <string name="hhsec"> Section H1: HouseHold Information </string>
-    <string name="hh10"> جغرافیائی علاقہ </string>
     <string name="hh05"> اینومیریشن بلاک نمبر </string>
     <string name="hh06"> صوبہ </string>
     <string name="hh07"> ضلع </string>
     <string name="hh08"> تحصیل </string>
     <string name="hh09"> شہر / گاؤں </string>
+    <string name="hh10"> پتہ / ایڈریس (محلہ / نزدیک ترین مشہور جگہ) </string>
     <string name="hh11"> کلسٹر </string>
     <string name="hh12"> گھرانہ نمبر </string>
     <string name="hh063"> انٹرویو لینے والے کا نام </string>
@@ -85,8 +85,8 @@
     <string name="hh074a"> سُپروائزر کا  کوڈ </string>
     <string name="hh01"> انٹرویو کی تاریخ </string>
     <string name="hh02"> انٹرویو کا وقت </string>
-    <string name="hh13a"> جواب دہندہ کانام </string>
-    <string name="hh13b"> جواب دہندگان کا رابطہ نمبر </string>
+    <string name="hh13"> جواب دہندہ کا نام </string>
+    <string name="hh13a"> جواب دہندہ کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
 
     <string name="hh15"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
@@ -95,8 +95,8 @@
 
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
 
-    <string name="hh16a"> سربراہ کا نام </string>
-    <string name="hh16b"> سربراہ کا فون نمبر </string>
+    <string name="hh16a"> گھر کے سربراہ کا نام </string>
+    <string name="hh16b"> گھر کے سربراہ کا فون نمبر </string>
 
     <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
     <string name="hh17a"> سربراہ کا نام </string>
@@ -117,7 +117,7 @@
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
 
-    <string name="hh21"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+    <string name="hh20aa"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
 
     <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
@@ -129,7 +129,6 @@
     <string name="hh22f"> گھر نہیں ملا </string>
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
-
 
     <string name="chsec"> Child Information </string>
     <string name="chBsec"> Child Background </string>
@@ -938,6 +937,8 @@
     <string name='Q_hh14'>hh14</string>
     <string name='Q_hh15'>hh15</string>
     <string name='Q_hh16'>hh16</string>
+    <string name='Q_hh16a'>hh16a</string>
+    <string name='Q_hh16b'>hh16b</string>
     <string name='Q_hh17'>hh17</string>
     <string name='Q_hh18'>hh18</string>
     <string name='Q_hh19'>hh19</string>

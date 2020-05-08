@@ -1005,8 +1005,8 @@
                         android:layout_width="match_parent"
                         android:hint="@string/num"
                         android:maxLength="2"
-                        app:maxValue="15"
-                        app:minValue="1"
+                        app:maxValue="30"
+                        app:minValue="0"
                         app:type="range" />
 
 

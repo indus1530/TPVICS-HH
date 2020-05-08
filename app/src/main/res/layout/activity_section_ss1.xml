@@ -1148,11 +1148,11 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ss13f" />
 
-                        <RadioButton
+                        <!--<RadioButton
                             android:id="@+id/ss13g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/ss13g" />
+                            android:text="@string/ss13g" />-->
 
                         <RadioButton
                             android:id="@+id/ss1396"
