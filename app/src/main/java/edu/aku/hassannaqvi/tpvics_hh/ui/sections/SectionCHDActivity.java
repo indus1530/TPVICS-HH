@@ -108,9 +108,9 @@ public class SectionCHDActivity extends AppCompatActivity {
                     txt02 = editTextPicker02.getText().toString();
                     txt03 = editTextPicker03.getText().toString();
                 } else return;
-                if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97")) ||
-                        (!editTextPicker02.isRangeTextValidate() || txt02.trim().equals("44") || txt02.trim().equals("97")) ||
-                        (!editTextPicker03.isRangeTextValidate() || txt03.trim().equals("44") || txt03.trim().equals("97")))
+                if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
+                        (!editTextPicker02.isRangeTextValidate() || txt02.trim().equals("44") || txt02.trim().equals("97") || txt02.trim().equals("66") || txt02.trim().equals("86")) ||
+                        (!editTextPicker03.isRangeTextValidate() || txt03.trim().equals("44") || txt03.trim().equals("97") || txt03.trim().equals("66") || txt03.trim().equals("86")))
                     return;
                 int day = Integer.parseInt(txt01);
                 int month = Integer.parseInt(txt02);

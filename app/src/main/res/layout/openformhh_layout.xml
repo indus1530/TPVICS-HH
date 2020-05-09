@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="10dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabMenu"
+            android:id="@+id/statusFabBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_check" />
+            app:srcCompat="@drawable/ic_check"
+            tools:visibility="visible" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/parentLayout"
@@ -24,15 +28,14 @@
             android:elevation="1dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/fabMenu">
+            app:layout_constraintTop_toTopOf="@+id/statusFabBtn">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp">
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/genderImage"
+                    android:id="@+id/formImage"
                     android:layout_width="170dp"
                     android:layout_height="170dp"
                     android:layout_gravity="center_vertical"
@@ -49,16 +52,17 @@
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
                     android:text="HOUSEHOLD FORM"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/genderImage"
+                    app:layout_constraintStart_toEndOf="@+id/formImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/id"
+                    android:id="@+id/respName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -66,11 +70,11 @@
                     android:text="Respondent Name:"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/genderImage"
+                    app:layout_constraintStart_toEndOf="@+id/formImage"
                     app:layout_constraintTop_toBottomOf="@+id/name" />
 
                 <TextView
-                    android:id="@+id/id2"
+                    android:id="@+id/interviewDT"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -79,8 +83,8 @@
                     android:textSize="15sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/genderImage"
-                    app:layout_constraintTop_toBottomOf="@+id/id" />
+                    app:layout_constraintStart_toEndOf="@+id/formImage"
+                    app:layout_constraintTop_toBottomOf="@+id/respName" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

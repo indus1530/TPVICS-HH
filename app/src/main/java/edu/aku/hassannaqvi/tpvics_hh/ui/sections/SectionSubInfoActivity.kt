@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -25,8 +24,11 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private lateinit var bi: ActivitySectionSubInfoBinding
     private var flagNewForm = false
     private var flagInCompleteForm = false
-    private lateinit var mainVModel: MainVModel
     private var serial = 0
+    private var hhFlag = false
+    private var childFlag = false
+    private lateinit var mainVModel: MainVModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,23 +37,33 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         mainVModel = this.run {
             ViewModelProvider(this).get(MainVModel::class.java)
         }
-        mainVModel.populateChildListU5(this, MainApp.fc)
-        mainVModel.childU5.observe(this, Observer {
-            serial = it.size + 1
-        })
+
+        /*runBlocking {
+            launch(Dispatchers.Main) {
+                bi.txtCluster.text = MainApp.fc.clusterCode
+                bi.txtHHNo.text = MainApp.fc.hhno
+            }
+        }*/
 
     }
 
     override fun onResume() {
         super.onResume()
         setUI()
+
+        mainVModel.populateChildListU5(this, MainApp.fc)
+        mainVModel.childU5.observe(this, Observer {
+            serial = it.size + 1
+        })
     }
 
     fun onHHViewClick() {
+        if (!hhFlag) return
         startActivity(Intent(this, SectionHHActivity::class.java))
     }
 
     fun onChildViewClick() {
+        if (!childFlag) return
         startActivity(Intent(this, SectionCHAActivity::class.java).putExtra(CHILD_SERIAL, serial))
     }
 
@@ -103,29 +115,23 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private fun setUI() {
         when (MainApp.fc.getfStatus()) {
             "1" -> {
-                bi.btnHHView.isEnabled = false
-                bi.btnChildView.isEnabled = true
+                hhFlag = false
+                childFlag = true
                 flagNewForm = false
-
-                bi.hhInstruct.visibility = View.GONE
-                bi.childInstruct.visibility = View.VISIBLE
+                bi.instruction.text = getString(R.string.childforminfo)
             }
             "" -> {
-                bi.btnHHView.isEnabled = true
-                bi.btnChildView.isEnabled = false
+                hhFlag = true
+                childFlag = false
                 flagNewForm = true
-
-                bi.hhInstruct.visibility = View.VISIBLE
-                bi.childInstruct.visibility = View.GONE
+                bi.instruction.text = getString(R.string.hhformInfo)
             }
             else -> {
-                bi.btnHHView.isEnabled = false
-                bi.btnChildView.isEnabled = false
+                hhFlag = false
+                childFlag = false
                 flagNewForm = false
                 flagInCompleteForm = true
-
-                bi.hhInstruct.visibility = View.GONE
-                bi.childInstruct.visibility = View.GONE
+                bi.instruction.text = getString(R.string.end_interview)
             }
         }
     }
