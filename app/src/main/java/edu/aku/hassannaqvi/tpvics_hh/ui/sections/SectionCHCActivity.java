@@ -64,6 +64,7 @@ public class SectionCHCActivity extends AppCompatActivity {
             }*/
 
             Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im022.getId());
+            Clear.clearAllFields(bi.fldGrpCVim04, i == bi.im022.getId());
             im02Flag = i == bi.im021.getId();
 
         });
