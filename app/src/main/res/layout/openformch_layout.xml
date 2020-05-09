@@ -9,6 +9,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/parentLayout"
+            style="@style/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -25,8 +26,8 @@
 
                 <ImageView
                     android:id="@+id/formImage"
-                    android:layout_width="170dp"
-                    android:layout_height="170dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
@@ -43,7 +44,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
-                    android:text="CHILDREN FORM"
+                    android:text="CLICK FOR CHILDREN FORM"
                     android:textAlignment="center"
                     android:textColor="@color/colorSecondary"
                     android:textSize="20sp"

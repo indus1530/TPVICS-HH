@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -37,6 +38,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         mainVModel = this.run {
             ViewModelProvider(this).get(MainVModel::class.java)
         }
+        bi.txtCluster.text = MainApp.fc.clusterCode
+        bi.txtHHNo.text = MainApp.fc.hhno
 
         /*runBlocking {
             launch(Dispatchers.Main) {
@@ -50,7 +53,6 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     override fun onResume() {
         super.onResume()
         setUI()
-
         mainVModel.populateChildListU5(this, MainApp.fc)
         mainVModel.childU5.observe(this, Observer {
             serial = it.size + 1
@@ -115,6 +117,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private fun setUI() {
         when (MainApp.fc.getfStatus()) {
             "1" -> {
+                bi.hhScroll.name.text = "HOUSEHOLD FORM COMPLETED"
+                bi.hhScroll.status.visibility = View.VISIBLE
                 hhFlag = false
                 childFlag = true
                 flagNewForm = false
@@ -127,6 +131,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.instruction.text = getString(R.string.hhformInfo)
             }
             else -> {
+                bi.hhScroll.name.text = "HOUSEHOLD FORM COMPLETED"
+                bi.hhScroll.status.visibility = View.VISIBLE
                 hhFlag = false
                 childFlag = false
                 flagNewForm = false
@@ -134,6 +140,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.instruction.text = getString(R.string.end_interview)
             }
         }
+
+
     }
 
     override fun endSecActivity(flag: Boolean) {

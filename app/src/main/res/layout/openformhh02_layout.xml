@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -9,6 +10,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/parentLayout"
+            style="@style/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -23,17 +25,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <RelativeLayout
+                    android:id="@+id/status"
+                    android:layout_width="23dp"
+                    android:layout_height="0dp"
+                    android:background="@color/colorPrimary"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </RelativeLayout>
+
                 <ImageView
                     android:id="@+id/formImage"
-                    android:layout_width="170dp"
-                    android:layout_height="170dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     android:src="@drawable/hhform_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/status"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -43,7 +58,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:autoSizeTextType="uniform"
-                    android:text="HOUSEHOLD FORM"
+                    android:text="CLICK FOR HOUSEHOLD FORM"
                     android:textAlignment="center"
                     android:textColor="@color/colorSecondary"
                     android:textSize="20sp"
