@@ -95,12 +95,12 @@
                         <RadioButton
                             android:id="@+id/im012"
                             style="@style/radiobutton"
-                            android:text="@string/im012" />
+                            android:text="@string/im013" />
 
                         <RadioButton
                             android:id="@+id/im013"
                             style="@style/radiobutton"
-                            android:text="@string/im013" />
+                            android:text="@string/im012" />
 
                     </RadioGroup>
 

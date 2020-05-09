@@ -8,6 +8,7 @@
         android:id="@+id/parentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
         android:layout_margin="8dp"
         android:background="@drawable/card_design"
         android:elevation="1dp">

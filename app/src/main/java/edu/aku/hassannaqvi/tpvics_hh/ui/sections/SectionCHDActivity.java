@@ -137,7 +137,9 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     private void setupListeners() {
 
-        Clear.clearAllFields(bi.fldGrpSecChc2, getIntent().getBooleanExtra(IM02FLAG, true));
+        boolean flag = getIntent().getBooleanExtra(IM02FLAG, true);
+        if (!flag) imFlag = true;
+        Clear.clearAllFields(bi.fldGrpSecChc2, flag);
 
        /* bi.im06.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i != bi.im061.getId()) {
@@ -434,7 +436,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         if (!imFlag) {
-            Toast.makeText(this, "Invalid date!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return false;
         }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHD);
