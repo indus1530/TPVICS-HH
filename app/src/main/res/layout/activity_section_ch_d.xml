@@ -1620,6 +1620,13 @@
                                 android:layout_weight="1"
                                 android:text="@string/im072" />
 
+                            <RadioButton
+                                android:id="@+id/im073"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/im083" />
+
                         </RadioGroup>
 
                     </LinearLayout>
@@ -2647,6 +2654,14 @@
                                 android:id="@+id/im23a96"
                                 style="@style/radiobutton"
                                 android:text="@string/im23a96" />
+
+                            <EditText
+                                android:id="@+id/im23a96x"
+                                style="@style/EditTextAlpha"
+                                android:enabled='@{im23a96.checked ? true : false}'
+                                android:hint="@string/im23a96"
+                                android:tag="im23a96"
+                                android:text='@{im23a96.checked? im23a96x.getText().toString() : ""}' />
 
                         </RadioGroup>
 

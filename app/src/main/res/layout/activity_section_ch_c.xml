@@ -95,12 +95,12 @@
                         <RadioButton
                             android:id="@+id/im012"
                             style="@style/radiobutton"
-                            android:text="@string/im012" />
+                            android:text="@string/im013" />
 
                         <RadioButton
                             android:id="@+id/im013"
                             style="@style/radiobutton"
-                            android:text="@string/im013" />
+                            android:text="@string/im012" />
 
                     </RadioGroup>
 
@@ -335,7 +335,7 @@
                                 android:layout_weight="1"
                                 android:hint="@string/im04mm"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 

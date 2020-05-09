@@ -2,19 +2,19 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.CHILD_SERIAL
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
+import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -24,33 +24,47 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private lateinit var bi: ActivitySectionSubInfoBinding
     private var flagNewForm = false
     private var flagInCompleteForm = false
+    private var serial = 0
+    private var hhFlag = false
+    private var childFlag = false
+    private lateinit var mainVModel: MainVModel
 
-    companion object {
-        lateinit var childList: LiveData<MutableList<ChildContract>>
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
-        childList = MutableLiveData()
-        /*val def = GlobalScope.launch { getAllHHChildFromDB(this@SectionSubInfoActivity, MainApp.fc) }
-        def.invokeOnCompletion {
+        mainVModel = this.run {
+            ViewModelProvider(this).get(MainVModel::class.java)
+        }
 
+        /*runBlocking {
+            launch(Dispatchers.Main) {
+                bi.txtCluster.text = MainApp.fc.clusterCode
+                bi.txtHHNo.text = MainApp.fc.hhno
+            }
         }*/
+
     }
 
     override fun onResume() {
         super.onResume()
         setUI()
+
+        mainVModel.populateChildListU5(this, MainApp.fc)
+        mainVModel.childU5.observe(this, Observer {
+            serial = it.size + 1
+        })
     }
 
     fun onHHViewClick() {
+        if (!hhFlag) return
         startActivity(Intent(this, SectionHHActivity::class.java))
     }
 
     fun onChildViewClick() {
-        startActivity(Intent(this, SectionCHAActivity::class.java))
+        if (!childFlag) return
+        startActivity(Intent(this, SectionCHAActivity::class.java).putExtra(CHILD_SERIAL, serial))
     }
 
     fun onFabBtnMenuClick() {
@@ -101,29 +115,23 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private fun setUI() {
         when (MainApp.fc.getfStatus()) {
             "1" -> {
-                bi.btnHHView.isEnabled = false
-                bi.btnChildView.isEnabled = true
+                hhFlag = false
+                childFlag = true
                 flagNewForm = false
-
-                bi.hhInstruct.visibility = View.GONE
-                bi.childInstruct.visibility = View.VISIBLE
+                bi.instruction.text = getString(R.string.childforminfo)
             }
             "" -> {
-                bi.btnHHView.isEnabled = true
-                bi.btnChildView.isEnabled = false
+                hhFlag = true
+                childFlag = false
                 flagNewForm = true
-
-                bi.hhInstruct.visibility = View.VISIBLE
-                bi.childInstruct.visibility = View.GONE
+                bi.instruction.text = getString(R.string.hhformInfo)
             }
             else -> {
-                bi.btnHHView.isEnabled = false
-                bi.btnChildView.isEnabled = false
+                hhFlag = false
+                childFlag = false
                 flagNewForm = false
                 flagInCompleteForm = true
-
-                bi.hhInstruct.visibility = View.GONE
-                bi.childInstruct.visibility = View.GONE
+                bi.instruction.text = getString(R.string.end_interview)
             }
         }
     }

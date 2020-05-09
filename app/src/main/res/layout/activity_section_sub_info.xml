@@ -11,63 +11,63 @@
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity" />
+
     </data>
 
     <ScrollView
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:padding="16dp"
+        android:layout_height="match_parent"
         android:background="@drawable/sosas_bg"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="10dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
             android:background="@color/white54"
             android:elevation="1dp">
 
-            <Button
-                android:id="@+id/btnHHView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="18dp"
-                android:background="@color/colorPrimary"
-                android:drawableStart="@drawable/ic_home"
-                android:drawablePadding="8dp"
-                android:elevation="1dp"
-                android:enabled="false"
-                android:onClick="@{() -> callback.onHHViewClick()}"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:radius="2dp"
-                android:text="OPEN HOUSEHOLD FORM"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+            <!--            <Button
+                            android:id="@+id/btnHHView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="18dp"
+                            android:background="@color/colorPrimary"
+                            android:drawableStart="@drawable/ic_home"
+                            android:drawablePadding="8dp"
+                            android:elevation="1dp"
+                            android:enabled="false"
+                            android:onClick="@{() -> callback.onHHViewClick()}"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:radius="2dp"
+                            android:text="OPEN HOUSEHOLD FORM"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.458"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:layout_editor_absoluteY="376dp" />
 
-            <Button
-                android:id="@+id/btnChildView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_marginTop="16dp"
-                android:drawableStart="@drawable/ic_add_child"
-                android:drawablePadding="8dp"
-                android:elevation="1dp"
-                android:enabled="false"
-                android:onClick="@{() -> callback.onChildViewClick()}"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:radius="2dp"
-                android:text="ADD CHILD FORM"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="@+id/btnHHView"
-                app:layout_constraintStart_toStartOf="@+id/btnHHView"
-                app:layout_constraintTop_toBottomOf="@+id/hhInstruct" />
-
+                        <Button
+                            android:id="@+id/btnChildView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:drawableStart="@drawable/ic_add_child"
+                            android:drawablePadding="8dp"
+                            android:elevation="1dp"
+                            android:enabled="false"
+                            android:onClick="@{() -> callback.onChildViewClick()}"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:radius="2dp"
+                            android:text="ADD CHILD FORM"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="@+id/btnHHView"
+                            app:layout_constraintHorizontal_bias="0.254"
+                            app:layout_constraintStart_toStartOf="@+id/btnHHView"
+                            tools:layout_editor_absoluteY="443dp" />-->
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/faBtnMenu"
@@ -114,25 +114,23 @@
 
                 <TextView
                     android:id="@+id/textView10"
-
                     style="@style/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="CLUSTER" />
+                    android:text="CLUSTER"
+                    android:textColor="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/txtCluster"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:padding="16dp"
-
                     android:text="901001"
                     android:textColor="@color/colorPrimary" />
-
 
                 <TextView
                     android:id="@+id/textView11"
@@ -140,17 +138,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="HOUSEHOLD NO." />
+                    android:text="HOUSEHOLD NO."
+                    android:textColor="@color/colorPrimary" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/txtHHNo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:padding="16dp"
-
                     android:text="A-0001-001"
                     android:textColor="@color/colorPrimary" />
 
@@ -158,88 +156,69 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/instruction"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
-                android:layout_marginStart="16dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
                 android:background="@color/white"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
                 android:text="Instructions here"
-
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#7f7f7f"
+                android:textColor="@color/red"
                 app:layout_constraintDimensionRatio="16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
                 app:layout_optimizationLevel="ratio" />
 
-            <TextView
-                android:id="@+id/hhInstruct"
-                android:layout_width="0dp"
+            <include
+                android:id="@+id/hhScroll"
+                layout="@layout/openformhh02_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/white"
-                android:gravity="center_horizontal|center_vertical"
-                android:padding="16dp"
-                android:text="@string/hhformInfo"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#7f7f7f"
-
-                android:visibility="gone"
+                android:onClick="@{() -> callback.onHHViewClick()}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnHHView"
-                tools:visibility="visible" />
+                app:layout_constraintTop_toBottomOf="@+id/instruction" />
 
-            <TextView
-                android:id="@+id/childInstruct"
-                android:layout_width="0dp"
-                android:text="@string/childforminfo"
-                android:visibility="gone"
+            <include
+                android:id="@+id/childScroll"
+                layout="@layout/openformch_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/white"
-                android:gravity="center_horizontal|center_vertical"
-                android:padding="16dp"
-                tools:visibility="visible"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#7f7f7f"
+                android:onClick="@{() -> callback.onChildViewClick()}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnChildView" />
+                app:layout_constraintTop_toBottomOf="@+id/hhScroll" />
 
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:text="Children List"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/childInstruct" />
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:text="1. Hassan (16) - Completed\n2. Ali - Refused\n3. Sajid(19) - Completed "
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            <!--            <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:text="Children List"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/btnChildView" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="24dp"
+                            android:text="1. Hassan (16) - Completed\n2. Ali - Refused\n3. Sajid(19) - Completed "
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView12" />-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

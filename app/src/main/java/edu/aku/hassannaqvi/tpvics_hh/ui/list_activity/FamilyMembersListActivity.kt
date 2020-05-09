@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SERIAL_EXTRA
@@ -103,7 +103,7 @@ class FamilyMembersListActivity : AppCompatActivity() {
 
     private fun settingValue() {
         mainVModel = this.run {
-            ViewModelProviders.of(this)[MainVModel::class.java]
+            ViewModelProvider(this).get(MainVModel::class.java)
         }
         mainVModel.childLstU5.observe(this, Observer { item -> bi.contentScroll.under5.text = String.format("%02d", item.size) })
         mainVModel.childLstU12.observe(this, Observer { item -> bi.contentScroll.under12.text = String.format("%02d", item.size) })

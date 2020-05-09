@@ -138,7 +138,6 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
   /*      json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());*/
-        json.put("hh10", bi.hh10.getText().toString());
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
         json.put("hh063", MainApp.userName);
@@ -236,9 +235,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .subscribe(form -> {
                     MainApp.fc = form;
                     blRandomExist(bl, message);
-                }, error -> {
-                    blRandomExist(bl, message);
-                });
+                }, error -> blRandomExist(bl, message));
 
     }
 

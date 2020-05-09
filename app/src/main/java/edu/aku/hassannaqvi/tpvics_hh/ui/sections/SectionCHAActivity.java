@@ -21,6 +21,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
@@ -49,29 +50,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
             }
         }));
 
-        /*List<String> childrenLst = new ArrayList<String>() {
-            {
-                add("....");
-                addAll(MainApp.selectedChildren.getSecond());
-            }
-        };
-
-        bi.ec16.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childrenLst));
-
-        bi.ec16.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                position = i;
-                if (i == 0) return;
-                selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.ec16.getSelectedItemPosition() - 1));
-                bi.ec16a.setText(new StringBuilder("Mother name:").append(selMWRA.getMotherName()));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });*/
-
+        bi.ec13.setText(String.valueOf(getIntent().getIntExtra(CHILD_SERIAL, 0)));
     }
 
     private boolean UpdateDB() {
@@ -98,14 +77,15 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setcluster(MainApp.fc.getClusterCode());
         child.setFormDate(MainApp.fc.getFormDate());
         child.setUser(MainApp.userName);
+        child.setChildSerial(bi.ec13.getText().toString());
         child.setChildName(bi.ec14.getText().toString());
 
         JSONObject f1 = new JSONObject();
         f1.put("_luid", MainApp.fc.getLuid());
         f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
-        f1.put("ec13", bi.ec13.getText().toString());
-        f1.put("ec14", bi.ec14.getText().toString());
+        /*f1.put("ec13", bi.ec13.getText().toString());
+        f1.put("ec14", bi.ec14.getText().toString());*/
         f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
         f1.put("ec16", bi.ec16.getText().toString());
         f1.put("ec17", bi.ec17.getText().toString());
@@ -117,6 +97,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
                                         bi.ec184.isChecked() ? "4" :
                                                 bi.ec1898.isChecked() ? "98" :
                                                         "0");
+        f1.put("im236x", bi.im236x.getText().toString());
 
         f1.put("ec19",
                 bi.ec19a.isChecked() ? "1" :

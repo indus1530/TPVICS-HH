@@ -1,8 +1,14 @@
 package edu.aku.hassannaqvi.tpvics_hh.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract
+import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract
+import edu.aku.hassannaqvi.tpvics_hh.repository.getAllHHChildFromDB
+import kotlinx.coroutines.launch
 
 class MainVModel : ViewModel() {
 
@@ -16,6 +22,9 @@ class MainVModel : ViewModel() {
         private set
 
     var checkedItems = MutableLiveData<MutableList<Int>>()
+        private set
+
+    var childU5 = MutableLiveData<MutableList<ChildContract>>()
         private set
 
     fun setFamilyMembers(item: FamilyMembersContract) {
@@ -82,5 +91,11 @@ class MainVModel : ViewModel() {
         flag?.let { return true } ?: return false
     }
 
+    fun populateChildListU5(context: Context, form: FormsContract) {
+        viewModelScope.launch {
+            val lst = getAllHHChildFromDB(context, form)
+            childU5.value = lst
+        }
+    }
 
 }

@@ -223,6 +223,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <!-- cb03  (d/m/y)Title   -->
             <androidx.cardview.widget.CardView style="@style/cardView">
 
