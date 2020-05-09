@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -40,6 +41,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySyncBinding;
 import edu.aku.hassannaqvi.tpvics_hh.get.GetAllData;
 import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllData;
+import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllPhotos;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncDevice;
 
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
@@ -265,6 +267,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     }
 
+
     public void dbBackup() {
 
         sharedPref = getSharedPreferences("src", MODE_PRIVATE);
@@ -337,6 +340,50 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         super.onBackPressed();
         setResult(RESULT_OK);
         finish();
+    }
+
+    public void uploadPhotos(View view) {
+
+        String fileName = "";
+        String appFolder = PROJECT_NAME;
+
+        File sdDir = Environment
+                .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        Log.d("Files", "Path: " + sdDir);
+        File directory = new File(String.valueOf(sdDir), appFolder);
+        Log.d("Directory", "uploadPhotos: " + directory);
+        if (directory.exists()) {
+            File[] files = directory.listFiles(new FileFilter() {
+                @Override
+                public boolean accept(File file) {
+                    return (file.getPath().endsWith(".jpg") || file.getPath().endsWith(".jpeg"));
+                }
+            });
+
+
+            Log.d("Files", "Count: " + files.length);
+            if (files.length > 0) {
+                for (int i = 0; i < files.length; i++) {
+                    Log.d("Files", "FileName:" + files[i].getName());
+                    SyncAllPhotos syncAllPhotos = new SyncAllPhotos(files[i].getName(), this);
+                    syncAllPhotos.execute();
+
+                    try {
+                        //3000 ms delay to process upload of next file.
+                        Thread.sleep(3000);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else {
+                Toast.makeText(this, "No photos to upload.", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "No photos were taken", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private class SyncData extends AsyncTask<Boolean, String, String> {

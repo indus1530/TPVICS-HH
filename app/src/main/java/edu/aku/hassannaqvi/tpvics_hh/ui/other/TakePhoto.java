@@ -28,6 +28,8 @@ import java.util.List;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import id.zelory.compressor.Compressor;
 
+import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
+
 public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camera.PictureCallback {
 
     /*
@@ -305,7 +307,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
     }
 
     private File getDir(int i) {
-        String appFolder = getResources().getString(R.string.app_name);
+        String appFolder = PROJECT_NAME;
 
         if (i == 1) {
             File sdDir = Environment

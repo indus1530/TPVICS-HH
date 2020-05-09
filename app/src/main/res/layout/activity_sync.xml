@@ -23,6 +23,20 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btnUploadPhotos"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:elevation="2dp"
+                android:onClick="uploadPhotos"
+                android:padding="16dp"
+                android:text="Upload Photos"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
                 android:id="@+id/btnSync"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
