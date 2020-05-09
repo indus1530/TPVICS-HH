@@ -5,16 +5,17 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.CHILD_SERIAL
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
+import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -24,20 +25,21 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private lateinit var bi: ActivitySectionSubInfoBinding
     private var flagNewForm = false
     private var flagInCompleteForm = false
-
-    companion object {
-        lateinit var childList: LiveData<MutableList<ChildContract>>
-    }
+    private lateinit var mainVModel: MainVModel
+    private var serial = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
-        childList = MutableLiveData()
-        /*val def = GlobalScope.launch { getAllHHChildFromDB(this@SectionSubInfoActivity, MainApp.fc) }
-        def.invokeOnCompletion {
+        mainVModel = this.run {
+            ViewModelProvider(this).get(MainVModel::class.java)
+        }
+        mainVModel.populateChildListU5(this, MainApp.fc)
+        mainVModel.childU5.observe(this, Observer {
+            serial = it.size + 1
+        })
 
-        }*/
     }
 
     override fun onResume() {
@@ -50,7 +52,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     }
 
     fun onChildViewClick() {
-        startActivity(Intent(this, SectionCHAActivity::class.java))
+        startActivity(Intent(this, SectionCHAActivity::class.java).putExtra(CHILD_SERIAL, serial))
     }
 
     fun onFabBtnMenuClick() {

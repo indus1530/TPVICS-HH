@@ -21,6 +21,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
@@ -49,29 +50,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
             }
         }));
 
-        /*List<String> childrenLst = new ArrayList<String>() {
-            {
-                add("....");
-                addAll(MainApp.selectedChildren.getSecond());
-            }
-        };
-
-        bi.ec16.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, childrenLst));
-
-        bi.ec16.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                position = i;
-                if (i == 0) return;
-                selMWRA = mainVModel.getMemberInfo(MainApp.selectedChildren.getFirst().get(bi.ec16.getSelectedItemPosition() - 1));
-                bi.ec16a.setText(new StringBuilder("Mother name:").append(selMWRA.getMotherName()));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });*/
-
+        bi.ec13.setText(String.valueOf(getIntent().getIntExtra(CHILD_SERIAL, 0)));
     }
 
     private boolean UpdateDB() {

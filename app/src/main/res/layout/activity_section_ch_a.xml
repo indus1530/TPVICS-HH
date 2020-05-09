@@ -145,6 +145,7 @@
                         style="@style/EditTextNum"
                         android:hint="@string/ec13"
                         android:textAlignment="center"
+                        android:enabled="false"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 

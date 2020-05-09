@@ -997,7 +997,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_CSTATUS88x,
         };
 
-        String whereClause = SingleChild.COLUMN_CLUSTERCODE + "=? AND " + SingleChild.COLUMN_HHNO + "=? AND " + SingleChild.COLUMN_UUID + "=?";
+        String whereClause = SingleChild.COLUMN_CLUSTERCODE + "=? AND " + SingleChild.COLUMN_HHNO + "=? AND " + SingleChild.COLUMN_UUID + "=? AND (" + SingleChild.COLUMN_CSTATUS + " is not null OR " + SingleChild.COLUMN_CSTATUS + " !='')";
         String[] whereArgs = {clusterCode, hhNo, uuid};
         String groupBy = null;
         String having = null;
