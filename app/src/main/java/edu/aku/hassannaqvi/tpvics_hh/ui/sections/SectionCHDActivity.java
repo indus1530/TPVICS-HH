@@ -157,6 +157,21 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });*/
 
+        bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im071.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVim08, false);
+                Clear.clearAllFields(bi.fldGrpSecChc3, false);
+                Clear.clearAllFields(bi.fldGrpCVim23, true);
+                Clear.clearAllFields(bi.fldGrpCVim23a, true);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVim08, true);
+                Clear.clearAllFields(bi.fldGrpSecChc3, true);
+                Clear.clearAllFields(bi.fldGrpCVim23, false);
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);
+            }
+
+        });
+
         bi.im08.setOnCheckedChangeListener(((radioGroup, i) -> {
 
             if (i == bi.im081.getId()) {
@@ -218,7 +233,7 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });
 
-        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+        /*bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im231.getId() || i == bi.im232.getId() || i == bi.im233.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecChc4, false);
             } else if (i == bi.im234.getId()) {
@@ -229,6 +244,14 @@ public class SectionCHDActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpSecChc4, true);
             }
 
+        });*/
+
+        bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.im234.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVim23a, true);
+            }
         });
 
     }
@@ -303,7 +326,8 @@ public class SectionCHDActivity extends AppCompatActivity {
         json.put("im07",
                 bi.im071.isChecked() ? "1" :
                         bi.im072.isChecked() ? "2" :
-                                "0");
+                                bi.im073.isChecked() ? "3" :
+                                        "0");
         json.put("im08",
                 bi.im081.isChecked() ? "1" :
                         bi.im082.isChecked() ? "2" :
@@ -373,6 +397,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                                 bi.im23a3.isChecked() ? "3" :
                                         bi.im23a96.isChecked() ? "96" :
                                                 "0");
+        json.put("im23a96x", bi.im23a96x.getText().toString());
         json.put("im24",
                 bi.im241.isChecked() ? "1" :
                         bi.im242.isChecked() ? "2" :
