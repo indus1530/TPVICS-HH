@@ -114,7 +114,6 @@
 
                 <TextView
                     android:id="@+id/textView10"
-
                     style="@style/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -129,10 +128,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:padding="16dp"
-
                     android:text="901001"
                     android:textColor="@color/colorPrimary" />
-
 
                 <TextView
                     android:id="@+id/textView11"
@@ -150,10 +147,8 @@
                     android:layout_weight="1"
                     android:background="@color/white"
                     android:padding="16dp"
-
                     android:text="A-0001-001"
                     android:textColor="@color/colorPrimary" />
-
 
             </LinearLayout>
 
@@ -168,7 +163,6 @@
                 android:gravity="center_horizontal"
                 android:padding="16dp"
                 android:text="Instructions here"
-
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#7f7f7f"
                 app:layout_constraintDimensionRatio="16:9"
@@ -190,7 +184,6 @@
                 android:text="@string/hhformInfo"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#7f7f7f"
-
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -243,5 +236,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 </layout>
