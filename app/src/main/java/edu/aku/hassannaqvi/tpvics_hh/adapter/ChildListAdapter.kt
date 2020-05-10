@@ -21,7 +21,7 @@ class ChildListAdapter(private val mContext: Context, private var mList: List<Ch
         holder.bi.parentLayout.tag = i
         holder.bi.name.text = mList[i].childName
 //        holder.bi.childImage.setImageResource(getMemberIcon(mList[i].gender.toInt(), mList[i].age))
-        val age = mList[i].getagey().toInt().apply { this * 12 }.plus(mList[i].getagem().toInt())
+//        val age = mList[i].getagey().toInt().apply { this * 12 }.plus(mList[i].getagem().toInt())
 /*        holder.bi.dob.text = StringBuilder().append("Age:").append(if (age < 0) "-" else age).append(" Month(s)")
         holder.bi.index.text = String.format("%02d", Integer.valueOf(mList[i].childSerial))
         holder.bi.motherName.text = StringBuilder("Mother Name:").append(mList[i].motherName)

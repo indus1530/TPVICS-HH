@@ -14,12 +14,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:padding="10dp"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/childImage"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ctr_childboy"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +30,7 @@
                 android:id="@+id/name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:text="Child Name"
                 android:textAlignment="center"

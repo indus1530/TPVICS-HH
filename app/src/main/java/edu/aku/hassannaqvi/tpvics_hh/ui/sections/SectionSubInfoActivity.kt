@@ -41,6 +41,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
+        bi.formScroll.callback = this
         mainVModel = this.run {
             ViewModelProvider(this).get(MainVModel::class.java)
         }
