@@ -21,8 +21,6 @@ public class ChildContract {
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
-
-    //Temporary
     private String childName;
     private String childSerial;
     private String agey;
