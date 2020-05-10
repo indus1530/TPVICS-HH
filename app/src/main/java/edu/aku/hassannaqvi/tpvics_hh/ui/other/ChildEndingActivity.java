@@ -12,6 +12,7 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 
@@ -47,13 +48,13 @@ public class ChildEndingActivity extends AppCompatActivity {
             bi.istatus96.setEnabled(monthChild);
         }
 
-//
     }
 
     public void BtnEnd() {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
+                SectionSubInfoActivity.mainVModel.setChildListU5(MainApp.child);
                 finish();
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();

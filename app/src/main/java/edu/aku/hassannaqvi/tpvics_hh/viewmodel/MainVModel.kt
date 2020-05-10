@@ -91,9 +91,20 @@ class MainVModel : ViewModel() {
         flag?.let { return true } ?: return false
     }
 
+    // Functions for child viewmodel
+
+    fun setChildListU5(item: ChildContract) {
+        var lst = childU5.value
+        if (lst.isNullOrEmpty())
+            lst = mutableListOf()
+        lst.add(item)
+        childU5.value = lst
+    }
+
     fun populateChildListU5(context: Context, form: FormsContract) {
         viewModelScope.launch {
-            val lst = getAllHHChildFromDB(context, form)
+            var lst = getAllHHChildFromDB(context, form)
+            if (lst.isNullOrEmpty()) lst = mutableListOf()
             childU5.value = lst
         }
     }

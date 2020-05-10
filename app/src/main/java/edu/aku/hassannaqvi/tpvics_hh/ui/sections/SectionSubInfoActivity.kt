@@ -28,8 +28,10 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private var serial = 0
     private var hhFlag = false
     private var childFlag = false
-    private lateinit var mainVModel: MainVModel
 
+    companion object {
+        lateinit var mainVModel: MainVModel
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,20 +42,13 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         }
         bi.txtCluster.text = MainApp.fc.clusterCode
         bi.txtHHNo.text = MainApp.fc.hhno
-
-        /*runBlocking {
-            launch(Dispatchers.Main) {
-                bi.txtCluster.text = MainApp.fc.clusterCode
-                bi.txtHHNo.text = MainApp.fc.hhno
-            }
-        }*/
+        mainVModel.populateChildListU5(this, MainApp.fc)
 
     }
 
     override fun onResume() {
         super.onResume()
         setUI()
-        mainVModel.populateChildListU5(this, MainApp.fc)
         mainVModel.childU5.observe(this, Observer {
             serial = it.size + 1
         })
