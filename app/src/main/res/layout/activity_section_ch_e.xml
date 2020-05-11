@@ -182,6 +182,7 @@
                         android:id="@+id/im26d"
                         style="@style/EditTextAlpha"
                         android:ems="10"
+                        android:tag="-1"
                         android:gravity="start|top"
                         android:inputType="textMultiLine" />
 
