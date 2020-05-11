@@ -44,12 +44,15 @@ public class SectionCHCActivity extends AppCompatActivity {
             if (i == bi.im011.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
                 Clear.clearAllFields(bi.fldGrpCVim03, false);
+                Clear.clearAllFields(bi.fldGrpCVim04, true);
             } else if (i == bi.im012.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
+                Clear.clearAllFields(bi.fldGrpCVim04, false);
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim02, true);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
+                Clear.clearAllFields(bi.fldGrpCVim04, false);
             }
 
         }));
@@ -64,7 +67,6 @@ public class SectionCHCActivity extends AppCompatActivity {
             }*/
 
             Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im022.getId());
-            Clear.clearAllFields(bi.fldGrpCVim04, i == bi.im022.getId());
             im02Flag = i == bi.im021.getId();
 
         });
