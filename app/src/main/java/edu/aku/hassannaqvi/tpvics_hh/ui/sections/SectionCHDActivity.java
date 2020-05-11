@@ -271,6 +271,7 @@ public class SectionCHDActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+
         json.put("im0501dd", bi.im0501dd.getText().toString());
         json.put("im0501mm", bi.im0501mm.getText().toString());
         json.put("im0501yy", bi.im0501yy.getText().toString());
@@ -451,7 +452,7 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCHAActivity.class));
+                startActivity(new Intent(this, SectionCHEActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
