@@ -104,6 +104,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+
         json.put("hh01", bi.hh01.getText().toString());
         json.put("hh02", bi.hh02.getText().toString());
         json.put("hh10", bi.hh10.getText().toString());

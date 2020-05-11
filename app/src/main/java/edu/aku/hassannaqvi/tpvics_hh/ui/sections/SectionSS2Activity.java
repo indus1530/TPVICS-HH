@@ -102,7 +102,6 @@ public class SectionSS2Activity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
-
         json.put("ss15a", bi.ss15aa.isChecked() ? "1"
                 : bi.ss15ab.isChecked() ? "2"
                 : "0");
