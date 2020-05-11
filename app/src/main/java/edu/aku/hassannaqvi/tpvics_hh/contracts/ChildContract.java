@@ -296,10 +296,9 @@ public class ChildContract {
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
-
-        public static final String COLUMN_CHILDNAME = "childName";
-        public static final String COLUMN_CHILDSERIAL = "childSerial";
-        public static final String COLUMN_GENDER = "gender";
+        public static final String COLUMN_CHILDSERIAL = "ec13";
+        public static final String COLUMN_CHILDNAME = "ec14";
+        public static final String COLUMN_GENDER = "ec15";
         public static final String COLUMN_AGEY = "agey";
         public static final String COLUMN_AGEM = "agem";
         public static final String COLUMN_CLUSTERCODE = "cluster_code";
