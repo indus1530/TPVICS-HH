@@ -146,28 +146,28 @@ public class SectionSS1Activity extends AppCompatActivity {
 
         json.put("ss02", bi.ss02a.isChecked() ? "1"
                 : bi.ss02b.isChecked() ? "2"
-                : bi.ss0296.isChecked() ? "3"
+                : bi.ss0296.isChecked() ? "96"
                 : "0");
         json.put("ss0296x", bi.ss0296x.getText().toString());
 
 
-        json.put("ss03", bi.ss03a.isChecked() ? "1"
-                : bi.ss03b.isChecked() ? "2"
-                : bi.ss03c.isChecked() ? "3"
-                : bi.ss03d.isChecked() ? "4"
-                : bi.ss03e.isChecked() ? "5"
-                : bi.ss03f.isChecked() ? "6"
-                : bi.ss03g.isChecked() ? "7"
-                : bi.ss03h.isChecked() ? "8"
-                : bi.ss03i.isChecked() ? "9"
-                : bi.ss03j.isChecked() ? "10"
-                : bi.ss03k.isChecked() ? "11"
-                : bi.ss03l.isChecked() ? "12"
-                : bi.ss03m.isChecked() ? "13"
-                : bi.ss03n.isChecked() ? "14"
+        json.put("ss03", bi.ss03a.isChecked() ? "11"
+                : bi.ss03b.isChecked() ? "12"
+                : bi.ss03c.isChecked() ? "13"
+                : bi.ss03d.isChecked() ? "14"
+                : bi.ss03e.isChecked() ? "21"
+                : bi.ss03f.isChecked() ? "31"
+                : bi.ss03g.isChecked() ? "32"
+                : bi.ss03h.isChecked() ? "41"
+                : bi.ss03i.isChecked() ? "42"
+                : bi.ss03j.isChecked() ? "51"
+                : bi.ss03k.isChecked() ? "61"
+                : bi.ss03l.isChecked() ? "71"
+                : bi.ss03m.isChecked() ? "81"
+                : bi.ss03n.isChecked() ? "91"
                 : bi.ss0396.isChecked() ? "96"
                 : "0");
-        json.put("ss0396", bi.ss0396x.getText().toString());
+        json.put("ss0396x", bi.ss0396x.getText().toString());
 
         json.put("ss04", bi.ss04a.isChecked() ? "1"
                 : bi.ss04b.isChecked() ? "2"
@@ -184,23 +184,23 @@ public class SectionSS1Activity extends AppCompatActivity {
         json.put("ss0596x", bi.ss0596x.getText().toString());
 
 
-        json.put("ss06", bi.ss06a.isChecked() ? "1"
-                : bi.ss06b.isChecked() ? "2"
-                : bi.ss06c.isChecked() ? "3"
-                : bi.ss06d.isChecked() ? "4"
-                : bi.ss06e.isChecked() ? "5"
-                : bi.ss06f.isChecked() ? "6"
-                : bi.ss06g.isChecked() ? "7"
-                : bi.ss06h.isChecked() ? "8"
-                : bi.ss06i.isChecked() ? "9"
-                : bi.ss06j.isChecked() ? "10"
-                : bi.ss06k.isChecked() ? "11"
-                : bi.ss06l.isChecked() ? "12"
-                : bi.ss06m.isChecked() ? "13"
-                : bi.ss06n.isChecked() ? "14"
+        json.put("ss06", bi.ss06a.isChecked() ? "11"
+                : bi.ss06b.isChecked() ? "12"
+                : bi.ss06c.isChecked() ? "13"
+                : bi.ss06d.isChecked() ? "14"
+                : bi.ss06e.isChecked() ? "21"
+                : bi.ss06f.isChecked() ? "31"
+                : bi.ss06g.isChecked() ? "32"
+                : bi.ss06h.isChecked() ? "41"
+                : bi.ss06i.isChecked() ? "42"
+                : bi.ss06j.isChecked() ? "51"
+                : bi.ss06k.isChecked() ? "61"
+                : bi.ss06l.isChecked() ? "71"
+                : bi.ss06m.isChecked() ? "81"
+                : bi.ss06n.isChecked() ? "91"
                 : bi.ss0696.isChecked() ? "96"
                 : "0");
-        json.put("ss0696", bi.ss0696x.getText().toString());
+        json.put("ss0696x", bi.ss0696x.getText().toString());
 
         json.put("ss07", bi.ss07a.isChecked() ? "1"
                 : bi.ss07b.isChecked() ? "2"
@@ -230,8 +230,8 @@ public class SectionSS1Activity extends AppCompatActivity {
                 : bi.ss11b.isChecked() ? "2"
                 : "0");
 
-        json.put("ss12", bi.ss12a.isChecked() ? "1"
-                : bi.ss12b.isChecked() ? "2"
+        json.put("ss12", bi.ss12a.isChecked() ? "66"
+                : bi.ss12b.isChecked() ? "10"
                 : bi.ss1298.isChecked() ? "98"
                 : "0");
 

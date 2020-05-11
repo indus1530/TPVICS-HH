@@ -684,7 +684,7 @@
     <string name="im232"> Private health facility </string>
     <string name="im233"> Government outreach service </string>
     <string name="im234"> Not vaccinated</string>
-    <string name="im236"> Other (specify) </string>
+    <string name="im236x"> Other (specify) </string>
     <string name="im24"> im24: Why (name) is not vaccinated?   If the child has not received all their vaccinations, ask the mother/caretaker   Record all the reasons mentioned but do not prompt by asking specific. Encourage the mother to provide all reasons. </string>
     <string name="im241"> Place of immunization too far</string>
     <string name="im242"> Time of immunization not convenient </string>
