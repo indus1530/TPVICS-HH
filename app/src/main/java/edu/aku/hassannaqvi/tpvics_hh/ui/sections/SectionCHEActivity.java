@@ -109,10 +109,11 @@ public class SectionCHEActivity extends AppCompatActivity {
 
         Intent intent = new Intent(SectionCHEActivity.this, TakePhoto.class);
 
-        //intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_"+MainApp.child.getSNo+"_");
-        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+        intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
+        //intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
 
-        intent.putExtra("childName", "Hassan");
+        //intent.putExtra("childName", "Hassan");
+        intent.putExtra("childName", MainApp.child.getChildName());
 
         if (view.getId() == bi.frontPhoto.getId()) {
             intent.putExtra("picView", "front".toUpperCase());
