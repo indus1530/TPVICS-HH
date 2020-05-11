@@ -122,6 +122,7 @@
                             android:layout_marginBottom="15dp"
                             android:background="@drawable/outline_btn"
                             android:text="Take Front Photo"
+                            android:onClick="takePhoto"
                             android:textColor="@color/greenInfo" />
 
                         <Button
@@ -135,6 +136,7 @@
                             android:layout_marginBottom="15dp"
                             android:background="@drawable/outline_btn"
                             android:text="Take Back Photo"
+                            android:onClick="takePhoto"
                             android:textColor="@color/greenInfo" />
 
                     </LinearLayout>
