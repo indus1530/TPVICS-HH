@@ -128,10 +128,10 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("rndid", bl.get_ID());
         json.put("luid", bl.getLUID());
         json.put("randDT", bl.getRandomDT());
-        json.put("hh06", bl.getStructure());
-        json.put("hh11", bl.getExtension());
+        json.put("bl_hh06", bl.getStructure());
+        json.put("bl_hh11", bl.getExtension());
         json.put("hhhead", bl.getHhhead());
-        json.put("hh063", bl.getContact());
+        json.put("bl_hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
 
 
@@ -140,7 +140,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hh08", bi.hh08.getText().toString());*/
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
-        json.put("hh063", MainApp.userName);
+        json.put("hh09", MainApp.userName);
         //json.put("hh074", bi.hh074.getText().toString());
         MainApp.fc.setsInfo(String.valueOf(json));
     }
