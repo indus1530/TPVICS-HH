@@ -228,27 +228,27 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread())
                 .filter(form -> {
                     if (!form.getIstatus().equals("")) {
-                        message = "Household already exist";
+                        message = "Household Form Exist";
+                        blRandomExist(bl, message, false);
                         return false;
                     } else return true;
                 })
                 .subscribe(form -> {
                     MainApp.fc = form;
-                    blRandomExist(bl, message);
-                }, error -> blRandomExist(bl, message));
+                    blRandomExist(bl, message, true);
+                }, error -> blRandomExist(bl, message, true));
 
     }
 
-    private void blRandomExist(BLRandomContract bl, String message) {
+    private void blRandomExist(BLRandomContract bl, String message, Boolean flag) {
         if (bl != null) {
             bi.hh12msg.setText(message);
             bi.hh12name.setText(bl.getHhhead().toUpperCase());
-            bi.fldGrpSectionA02.setVisibility(View.VISIBLE);
+            bi.fldGrpSectionA02.setVisibility(flag ? View.VISIBLE : View.GONE);
         } else {
             bi.hh12msg.setText("Household not found!!");
             bi.hh12name.setText(null);
             bi.fldGrpSectionA02.setVisibility(View.GONE);
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         }
     }
 

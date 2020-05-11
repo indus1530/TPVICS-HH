@@ -27,48 +27,6 @@
             android:background="@color/white54"
             android:elevation="1dp">
 
-
-            <!--            <Button
-                            android:id="@+id/btnHHView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="18dp"
-                            android:background="@color/colorPrimary"
-                            android:drawableStart="@drawable/ic_home"
-                            android:drawablePadding="8dp"
-                            android:elevation="1dp"
-                            android:enabled="false"
-                            android:onClick="@{() -> callback.onHHViewClick()}"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"
-                            android:radius="2dp"
-                            android:text="OPEN HOUSEHOLD FORM"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.458"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:layout_editor_absoluteY="376dp" />
-
-                        <Button
-                            android:id="@+id/btnChildView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:drawableStart="@drawable/ic_add_child"
-                            android:drawablePadding="8dp"
-                            android:elevation="1dp"
-                            android:enabled="false"
-                            android:onClick="@{() -> callback.onChildViewClick()}"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"
-                            android:radius="2dp"
-                            android:text="ADD CHILD FORM"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="@+id/btnHHView"
-                            app:layout_constraintHorizontal_bias="0.254"
-                            app:layout_constraintStart_toStartOf="@+id/btnHHView"
-                            tools:layout_editor_absoluteY="443dp" />-->
-
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/faBtnMenu"
                 android:layout_width="wrap_content"
@@ -161,11 +119,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/white"
-                android:gravity="center_horizontal"
                 android:padding="16dp"
                 android:text="Instructions here"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/red"
+                android:textStyle="bold"
                 app:layout_constraintDimensionRatio="16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
