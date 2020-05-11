@@ -106,44 +106,59 @@
 
                 <LinearLayout style="@style/vlinearlayout">
 
-                    <LinearLayout style="@style/hlinearlayout">
+                    <LinearLayout
+                        style="@style/hlinearlayout"
+                        android:gravity="center_horizontal">
+
 
                         <Button
                             android:id="@+id/frontPhoto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
-                            android:onClick="takePhoto"
-                            android:text="Take Front Photo" />
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/outline_btn"
+                            android:text="Take Front Photo"
+                            android:textColor="@color/greenInfo" />
 
                         <Button
                             android:id="@+id/backPhoto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="4dp"
-                            android:onClick="takePhoto"
-                            android:text="Take Back Photo" />
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@drawable/outline_btn"
+                            android:text="Take Back Photo"
+                            android:textColor="@color/greenInfo" />
 
                     </LinearLayout>
 
-                    <LinearLayout style="@style/hlinearlayout">
+                    <LinearLayout
+                        style="@style/hlinearlayout"
+                        android:gravity="center_horizontal">
 
                         <TextView
                             android:id="@+id/frontFileName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.75" />
+                            android:layout_weight="1"
+                            android:textColor="#7f7f7f7f"
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/backFileName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="0.75" />
+                            android:layout_weight="1"
+                            android:textColor="#7f7f7f7f"
+                            android:textSize="14dp" />
 
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.25" />
 
                     </LinearLayout>
                 </LinearLayout>
