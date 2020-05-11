@@ -79,7 +79,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
         pd = new ProgressDialog(mContext);
         pd.setTitle("Syncing " + syncClass);
         pd.setMessage("Getting connected to server...");
-//        pd.show();
+        // pd.show();
         list.get(position).setstatus("Getting connected to server...");
         list.get(position).setstatusID(2);
         list.get(position).setmessage("");
@@ -108,6 +108,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
         list.get(position).setstatusID(2);
         list.get(position).setmessage("");
         adapter.updatesyncList(list);
+        pd.setMessage("Syncing");
+        // pd.show();
     }
 
     @Override
@@ -258,17 +260,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     list.get(position).setstatus(insertCount == 0 ? "Unsuccessful" : "Successful");
                     list.get(position).setstatusID(insertCount == 0 ? 2 : 3);
                     adapter.updatesyncList(list);
-//                    pd.show();
+                    // pd.show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
                 pd.setMessage("Received: " + result.length() + "");
                 list.get(position).setmessage("Received: " + result.length() + "");
-                list.get(position).setstatus("Successful");
-                list.get(position).setstatusID(3);
+                list.get(position).setstatus("Processed");
+                list.get(position).setstatusID(4);
                 adapter.updatesyncList(list);
-//                pd.show();
+                // pd.show();
             }
         } else {
             pd.setTitle("Connection Error");
@@ -277,8 +279,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
             list.get(position).setstatusID(1);
             list.get(position).setmessage("Server not found!");
             adapter.updatesyncList(list);
-//            pd.show();
+            // pd.show();
         }
+
+
     }
 
 }
