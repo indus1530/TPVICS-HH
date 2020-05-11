@@ -262,6 +262,6 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
     public void endSecActivity(boolean flag) {
         finish();
         startActivity(new Intent(this, ChildEndingActivity.class)
-                .putExtra(CHILD_ENDING_AGE_ISSUE, false));
+                .putExtra(CHILD_ENDING_AGE_ISSUE, true));
     }
 }

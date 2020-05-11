@@ -994,6 +994,7 @@
     <string name="cb03_info">" اگر ماں / دیکھ بھال کرنے والا  بچے کی پیدائش کی صحیح تاریخ جانتے ہیں ، تو پھر دن بھی ریکارڈ کریں؛ ورنہ ، دن کے لئے '98' پر نشان لگائیں۔ مہینہ اور سال ریکارڈ کرنا ضروری ہے مزید پوچھیں: (بچے/بچی )کی تاریخ پیدائش کیا ہے؟ "</string>
     <string name="hhformInfo">Please select Household button to enter household information.</string>
     <string name="childforminfo">Household information successfully entered, please click on CHILD button to enter 12-23 months Children information.</string>
+    <string name="childlistinfo">Entered Child List</string>
 
 
 </resources>

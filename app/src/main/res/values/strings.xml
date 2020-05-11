@@ -1115,6 +1115,7 @@
     <string name="Q_ch03b">CH03b</string>
     <string name="hhformInfo"> ۔HOUSEHOLD بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں</string>
     <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-\12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
+    <string name="childlistinfo">اندراج شدہ بچوں کی فہرست</string>
 
 
 </resources>

@@ -21,10 +21,9 @@ public class ChildContract {
     private String devicetagID = "";
     private String synced = "";
     private String synced_date = "";
-
-    //Temporary
     private String childName;
     private String childSerial;
+    private String gender;
     private String agey;
     private String agem;
     private String cluster;
@@ -67,6 +66,7 @@ public class ChildContract {
 
         this.childName = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CHILDNAME));
         this.childSerial = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CHILDSERIAL));
+        this.gender = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_GENDER));
         this.agey = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEY));
         this.agem = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEM));
         this.cluster = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CLUSTERCODE));
@@ -90,6 +90,7 @@ public class ChildContract {
 
         json.put(SingleChild.COLUMN_CHILDNAME, this.childName == null ? JSONObject.NULL : this.childName);
         json.put(SingleChild.COLUMN_CHILDSERIAL, this.childSerial == null ? JSONObject.NULL : this.childSerial);
+        json.put(SingleChild.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
         json.put(SingleChild.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
         json.put(SingleChild.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
         json.put(SingleChild.COLUMN_CLUSTERCODE, this.agey == null ? JSONObject.NULL : this.cluster);
@@ -126,6 +127,14 @@ public class ChildContract {
 
     public void setChildSerial(String childSerial) {
         this.childSerial = childSerial;
+    }
+
+    public String getgender() {
+        return gender;
+    }
+
+    public void setgender(String gender) {
+        this.gender = gender;
     }
 
     public String getagey() {
@@ -287,9 +296,9 @@ public class ChildContract {
         public static final String COLUMN_DEVICETAGID = "tagid";
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
-
-        public static final String COLUMN_CHILDNAME = "childName";
-        public static final String COLUMN_CHILDSERIAL = "childSerial";
+        public static final String COLUMN_CHILDSERIAL = "ec13";
+        public static final String COLUMN_CHILDNAME = "ec14";
+        public static final String COLUMN_GENDER = "ec15";
         public static final String COLUMN_AGEY = "agey";
         public static final String COLUMN_AGEM = "agem";
         public static final String COLUMN_CLUSTERCODE = "cluster_code";

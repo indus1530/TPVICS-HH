@@ -19,55 +19,13 @@
         android:layout_height="match_parent"
         android:background="@drawable/sosas_bg"
         android:fillViewport="true"
-        android:padding="10dp">
+        android:padding="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white54"
             android:elevation="1dp">
-
-
-            <!--            <Button
-                            android:id="@+id/btnHHView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="18dp"
-                            android:background="@color/colorPrimary"
-                            android:drawableStart="@drawable/ic_home"
-                            android:drawablePadding="8dp"
-                            android:elevation="1dp"
-                            android:enabled="false"
-                            android:onClick="@{() -> callback.onHHViewClick()}"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"
-                            android:radius="2dp"
-                            android:text="OPEN HOUSEHOLD FORM"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.458"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:layout_editor_absoluteY="376dp" />
-
-                        <Button
-                            android:id="@+id/btnChildView"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="16dp"
-                            android:drawableStart="@drawable/ic_add_child"
-                            android:drawablePadding="8dp"
-                            android:elevation="1dp"
-                            android:enabled="false"
-                            android:onClick="@{() -> callback.onChildViewClick()}"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"
-                            android:radius="2dp"
-                            android:text="ADD CHILD FORM"
-                            android:textColor="@color/white"
-                            app:layout_constraintEnd_toEndOf="@+id/btnHHView"
-                            app:layout_constraintHorizontal_bias="0.254"
-                            app:layout_constraintStart_toStartOf="@+id/btnHHView"
-                            tools:layout_editor_absoluteY="443dp" />-->
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/faBtnMenu"
@@ -161,11 +119,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/white"
-                android:gravity="center_horizontal"
                 android:padding="16dp"
                 android:text="Instructions here"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/red"
+                android:textStyle="bold"
                 app:layout_constraintDimensionRatio="16:9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -173,52 +131,14 @@
                 app:layout_optimizationLevel="ratio" />
 
             <include
-                android:id="@+id/hhScroll"
-                layout="@layout/openformhh02_layout"
+                android:id="@+id/formScroll"
+                layout="@layout/subinfo_func_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> callback.onHHViewClick()}"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/instruction" />
-
-            <include
-                android:id="@+id/childScroll"
-                layout="@layout/openformch_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> callback.onChildViewClick()}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hhScroll" />
-
-
-            <!--            <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="24dp"
-                            android:text="Children List"
-                            android:textStyle="bold"
-                            android:visibility="gone"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/btnChildView" />
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="24dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="24dp"
-                            android:text="1. Hassan (16) - Completed\n2. Ali - Refused\n3. Sajid(19) - Completed "
-                            android:visibility="gone"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView12" />-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

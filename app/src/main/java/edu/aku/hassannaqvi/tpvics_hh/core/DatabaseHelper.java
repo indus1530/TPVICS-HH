@@ -360,6 +360,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         values.put(SingleChild.COLUMN_CHILDNAME, childContract.getChildName());
         values.put(SingleChild.COLUMN_CHILDSERIAL, childContract.getChildSerial());
+        values.put(SingleChild.COLUMN_GENDER, childContract.getgender());
         values.put(SingleChild.COLUMN_AGEY, childContract.getagey());
         values.put(SingleChild.COLUMN_AGEM, childContract.getagem());
         values.put(SingleChild.COLUMN_CLUSTERCODE, childContract.getcluster());
@@ -690,6 +691,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 SingleChild.COLUMN_CHILDNAME,
                 SingleChild.COLUMN_CHILDSERIAL,
+                SingleChild.COLUMN_GENDER,
                 SingleChild.COLUMN_AGEY,
                 SingleChild.COLUMN_AGEM,
                 SingleChild.COLUMN_CLUSTERCODE,
@@ -989,6 +991,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 SingleChild.COLUMN_DEVICETAGID,
                 SingleChild.COLUMN_CHILDNAME,
                 SingleChild.COLUMN_CHILDSERIAL,
+                SingleChild.COLUMN_GENDER,
                 SingleChild.COLUMN_AGEY,
                 SingleChild.COLUMN_AGEM,
                 SingleChild.COLUMN_CLUSTERCODE,

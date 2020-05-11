@@ -2,13 +2,17 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.CHILD_SERIAL
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
+import edu.aku.hassannaqvi.tpvics_hh.adapter.ChildListAdapter
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
@@ -26,35 +30,34 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private var flagInCompleteForm = false
     private var serial = 0
     private var hhFlag = false
+    private lateinit var adapter: ChildListAdapter
     private var childFlag = false
-    private lateinit var mainVModel: MainVModel
 
+    companion object {
+        lateinit var mainVModel: MainVModel
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_sub_info)
         bi.callback = this
+        bi.formScroll.callback = this
         mainVModel = this.run {
             ViewModelProvider(this).get(MainVModel::class.java)
         }
-
-        /*runBlocking {
-            launch(Dispatchers.Main) {
-                bi.txtCluster.text = MainApp.fc.clusterCode
-                bi.txtHHNo.text = MainApp.fc.hhno
-            }
-        }*/
-
+        bi.txtCluster.text = MainApp.fc.clusterCode
+        bi.txtHHNo.text = MainApp.fc.hhno
+        setupRecyclerView(mutableListOf())
+        mainVModel.populateChildListU5(this, MainApp.fc)
+        mainVModel.childU5.observe(this, Observer {
+            serial = it.size + 1
+            adapter.setMList(it)
+        })
     }
 
     override fun onResume() {
         super.onResume()
         setUI()
-
-        mainVModel.populateChildListU5(this, MainApp.fc)
-        mainVModel.childU5.observe(this, Observer {
-            serial = it.size + 1
-        })
     }
 
     fun onHHViewClick() {
@@ -115,6 +118,8 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     private fun setUI() {
         when (MainApp.fc.getfStatus()) {
             "1" -> {
+                bi.formScroll.hhScroll.name.text = "HOUSEHOLD FORM COMPLETED"
+                bi.formScroll.hhScroll.status.visibility = View.VISIBLE
                 hhFlag = false
                 childFlag = true
                 flagNewForm = false
@@ -127,6 +132,9 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.instruction.text = getString(R.string.hhformInfo)
             }
             else -> {
+                bi.formScroll.hhScroll.name.text = "HOUSEHOLD FORM COMPLETED"
+                bi.formScroll.childScroll.name.text = "CHILD FORM IS BLOCKED\nContact Team Leader"
+                bi.formScroll.hhScroll.status.visibility = View.VISIBLE
                 hhFlag = false
                 childFlag = false
                 flagNewForm = false
@@ -134,11 +142,19 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.instruction.text = getString(R.string.end_interview)
             }
         }
+
+
     }
 
     override fun endSecActivity(flag: Boolean) {
         finish()
         startActivity(Intent(this, EndingActivity::class.java).putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+    }
+
+    private fun setupRecyclerView(membersLst: MutableList<ChildContract>) {
+        adapter = ChildListAdapter(this, membersLst, mainVModel)
+        bi.formScroll.recyclerViewChildren.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        bi.formScroll.recyclerViewChildren.adapter = adapter
     }
 }

@@ -99,6 +99,7 @@ public final class CreateTable {
 
             + SingleChild.COLUMN_CHILDNAME + " TEXT,"
             + SingleChild.COLUMN_CHILDSERIAL + " TEXT,"
+            + SingleChild.COLUMN_GENDER + " TEXT,"
             + SingleChild.COLUMN_AGEY + " TEXT,"
             + SingleChild.COLUMN_AGEM + " TEXT,"
             + SingleChild.COLUMN_CLUSTERCODE + " TEXT,"

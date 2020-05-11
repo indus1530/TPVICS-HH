@@ -12,6 +12,7 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 
@@ -37,23 +38,24 @@ public class ChildEndingActivity extends AppCompatActivity {
             bi.istatusf.setEnabled(false);
             bi.istatus96.setEnabled(false);
         } else {
-            boolean monthChild = getIntent().getBooleanExtra(CHILD_ENDING_AGE_ISSUE, true);
+            boolean monthChild = getIntent().getBooleanExtra(CHILD_ENDING_AGE_ISSUE, false);
+            boolean otherOptions = !monthChild;
             bi.istatusa.setEnabled(false);
-            bi.istatusb.setEnabled(monthChild);
-            bi.istatusc.setEnabled(monthChild);
-            bi.istatusd.setEnabled(monthChild);
+            bi.istatusb.setEnabled(otherOptions);
+            bi.istatusc.setEnabled(otherOptions);
+            bi.istatusd.setEnabled(otherOptions);
             bi.istatuse.setEnabled(monthChild);
-            bi.istatusf.setEnabled(monthChild);
-            bi.istatus96.setEnabled(monthChild);
+            bi.istatusf.setEnabled(otherOptions);
+            bi.istatus96.setEnabled(otherOptions);
         }
 
-//
     }
 
     public void BtnEnd() {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
+                SectionSubInfoActivity.mainVModel.setChildListU5(MainApp.child);
                 finish();
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
