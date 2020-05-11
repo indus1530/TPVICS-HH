@@ -395,12 +395,12 @@
                             android:text="@string/ec1898" />
 
                         <EditText
-                            android:id="@+id/im236x"
+                            android:id="@+id/ec1898x"
                             style="@style/EditTextAlpha"
                             android:enabled='@{ec1898.checked ? true : false}'
-                            android:hint="@string/im236"
+                            android:hint="@string/ec1898"
                             android:tag="ec1898"
-                            android:text='@{ec1898.checked? im236x.getText().toString() : ""}' />
+                            android:text='@{ec1898.checked? ec1898x.getText().toString() : ""}' />
 
                     </RadioGroup>
 

@@ -2579,13 +2579,13 @@
                         <RadioButton
                             android:id="@+id/im236"
                             style="@style/radiobutton"
-                            android:text="@string/im236" />
+                            android:text="@string/im236x" />
 
                         <EditText
                             android:id="@+id/im236x"
                             style="@style/EditTextAlpha"
                             android:enabled='@{im236.checked ? true : false}'
-                            android:hint="@string/im236"
+                            android:hint="@string/im236x"
                             android:tag="im236"
                             android:text='@{im236.checked? im236x.getText().toString() : ""}' />
 

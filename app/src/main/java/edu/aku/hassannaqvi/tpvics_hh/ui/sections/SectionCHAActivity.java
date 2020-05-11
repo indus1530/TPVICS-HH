@@ -85,9 +85,9 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         f1.put("_luid", MainApp.fc.getLuid());
         f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
-        /*f1.put("ec13", bi.ec13.getText().toString());
+        f1.put("ec13", bi.ec13.getText().toString());
         f1.put("ec14", bi.ec14.getText().toString());
-        f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");*/
+        f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
         f1.put("ec16", bi.ec16.getText().toString());
         f1.put("ec17", bi.ec17.getText().toString());
 
@@ -98,7 +98,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
                                         bi.ec184.isChecked() ? "4" :
                                                 bi.ec1898.isChecked() ? "98" :
                                                         "0");
-        f1.put("im236x", bi.im236x.getText().toString());
+        f1.put("ec1898x", bi.ec1898x.getText().toString());
 
         f1.put("ec19",
                 bi.ec19a.isChecked() ? "1" :
