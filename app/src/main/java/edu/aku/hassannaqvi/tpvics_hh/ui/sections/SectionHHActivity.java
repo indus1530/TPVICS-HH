@@ -69,6 +69,10 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         Clear.clearAllFields(bi.fldGrpAHH19, checkedId == bi.hh18a.getId());
     }
 
+    public void onCheckedHH15(RadioGroup group, int checkedId) {
+        Clear.clearAllFields(bi.fldGrpAHH16, checkedId == bi.hh15b.getId());
+    }
+
     public void BtnContinue() {
         if (formValidation()) {
             try {

@@ -125,6 +125,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     String DirectoryName;
     DatabaseHelper db;
     private UserLoginTask mAuthTask = null;
+    ArrayAdapter<String> provinceAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,7 +177,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private void setListeners() {
-        spinnerProvince.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SplashscreenActivity.provinces));
+        provinceAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SplashscreenActivity.provinces);
+        spinnerProvince.setAdapter(provinceAdapter);
         spinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -690,7 +692,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private void callingCoroutine() {
         //To call coroutine here
-        populatingSpinners(getApplicationContext(), new SplashscreenActivity.Continuation<Unit>() {
+        populatingSpinners(getApplicationContext(), provinceAdapter, new SplashscreenActivity.Continuation<Unit>() {
             @Override
             public void resume(Unit value) {
 

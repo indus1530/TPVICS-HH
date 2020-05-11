@@ -125,6 +125,10 @@ fun getMemberIcon(gender: Int, age: String): Int {
     return if (memAge == -1) R.drawable.boy else if (memAge > 10) if (gender == 1) R.drawable.ctr_male else R.drawable.ctr_female else if (gender == 1) R.drawable.ctr_childboy else R.drawable.ctr_childgirl
 }
 
+fun getMemberIcon(gender: Int): Int {
+    return if (gender == 1) R.drawable.ctr_childboy else R.drawable.ctr_childgirl
+}
+
 interface EndSectionActivity {
     fun endSecActivity(flag: Boolean)
 }

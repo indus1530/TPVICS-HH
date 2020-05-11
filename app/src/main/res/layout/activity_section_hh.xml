@@ -189,7 +189,7 @@
                             android:id="@+id/hh13"
                             style="@style/EditTextAlpha"
                             android:hint="@string/name"
-                            android:maxLength="20" />
+                            android:maxLength="25" />
 
                     </LinearLayout>
 
@@ -316,6 +316,7 @@
                             android:id="@+id/hh15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{callback.onCheckedHH15}"
                             android:orientation="horizontal">
 
                             <RadioButton
@@ -339,96 +340,92 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- hh16a  Input   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/hh16acv"
-                    style="@style/cardView">
+                <LinearLayout
+                    android:id="@+id/fldGrpAHH16"
+                    style="@style/linearlayout_view_wt_bound">
 
-                    <LinearLayout style="@style/vlinearlayout">
+                    <!-- hh16a  Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hh16acv"
+                        style="@style/cardView">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
+                        <LinearLayout style="@style/vlinearlayout">
 
-                            <TextView
-                                android:id="@+id/qtxt_hh16a"
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_hh16a"
-                                android:text="@string/hh16a" />
+                                android:background="@drawable/bottom">
 
-                            <TextView
-                                android:id="@+id/q_hh16a"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_hh16a"
-                                android:layout_alignBottom="@id/qtxt_hh16a"
-                                android:text="@string/Q_hh16a" />
+                                <TextView
+                                    android:id="@+id/qtxt_hh16a"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_hh16a"
+                                    android:text="@string/hh16a" />
 
-                        </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/q_hh16a"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_hh16a"
+                                    android:layout_alignBottom="@id/qtxt_hh16a"
+                                    android:text="@string/Q_hh16a" />
+
+                            </RelativeLayout>
 
                             <EditText
                                 android:id="@+id/hh16a"
                                 style="@style/EditTextAlpha"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:enabled="@{hh15b.checked ? true : false }"
                                 android:hint="@string/name"
-                                android:maxLength="30"
-                                android:text='@{hh15b.checked ? hh16a.getText().toString() : "" }' />
+                                android:maxLength="25" />
 
-                    </LinearLayout>
+                        </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
 
-                <!-- hh16b  Input   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/hh16bcv"
-                    style="@style/cardView">
+                    <!-- hh16b  Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hh16bcv"
+                        style="@style/cardView">
 
-                    <LinearLayout style="@style/vlinearlayout">
+                        <LinearLayout style="@style/vlinearlayout">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
-
-                            <TextView
-                                android:id="@+id/qtxt_hh16b"
+                            <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_hh16b"
-                                android:text="@string/hh16b" />
+                                android:background="@drawable/bottom">
 
-                            <TextView
-                                android:id="@+id/q_hh16b"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_hh16b"
-                                android:layout_alignBottom="@id/qtxt_hh16b"
-                                android:text="@string/Q_hh16b" />
+                                <TextView
+                                    android:id="@+id/qtxt_hh16b"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/q_hh16b"
+                                    android:text="@string/hh16b" />
 
-                        </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/q_hh16b"
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@id/qtxt_hh16b"
+                                    android:layout_alignBottom="@id/qtxt_hh16b"
+                                    android:text="@string/Q_hh16b" />
 
-                        <EditText
-                            android:id="@+id/hh16b"
-                            style="@style/EditTextNum"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:enabled="@{hh15b.checked ? true : false }"
-                            android:hint="@string/hh16b"
-                            android:maxLength="11"
-                            android:text='@{hh15b.checked ? hh16b.getText().toString() : "" }' />
+                            </RelativeLayout>
 
-                    </LinearLayout>
+                            <EditText
+                                android:id="@+id/hh16b"
+                                style="@style/EditTextNum"
+                                android:hint="@string/hh16b"
+                                android:maxLength="11" />
 
-                </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
 
                 <!-- hh17  Input   -->
