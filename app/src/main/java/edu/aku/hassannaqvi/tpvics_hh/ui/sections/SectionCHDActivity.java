@@ -24,7 +24,6 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChDBinding;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
-import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
@@ -452,8 +451,7 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-
+                startActivity(new Intent(this, SectionCHAActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
