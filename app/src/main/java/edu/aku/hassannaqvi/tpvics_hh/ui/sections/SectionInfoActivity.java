@@ -47,7 +47,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
         setUIComponent();
-        setTitle(R.string.hhsec);
+
     }
 
     public void hh11TextChanged(CharSequence s, int start, int before, int count) {

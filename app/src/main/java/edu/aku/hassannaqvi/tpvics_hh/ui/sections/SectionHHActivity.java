@@ -39,7 +39,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         bi.setCallback(this);
         db = MainApp.appInfo.getDbHelper();
         setUIComponent();
-        setTitle(R.string.hhsec);
+
     }
 
     private void setUIComponent() {

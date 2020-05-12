@@ -33,24 +33,31 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionCHAActivity"
+            android:label="@string/ch_title"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHBActivity"
+            android:label="@string/chBsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHCActivity"
+            android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHDActivity"
+            android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHEActivity"
+            android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionSS2Activity"
+            android:label="@string/sssec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionSS1Activity"
+            android:label="@string/sssec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SplashscreenActivity"

@@ -90,7 +90,6 @@
                                 android:background="@null"
                                 android:fontFamily="sans-serif"
                                 android:padding="0dp"
-                                android:text="Village"
                                 android:textSize="28sp"
                                 android:textStyle="bold" />
 
@@ -101,7 +100,6 @@
                                 android:background="@null"
                                 android:fontFamily="sans-serif"
                                 android:padding="0dp"
-                                android:text="Tehsil, District, Province"
                                 android:textColor="@color/gray"
                                 android:textSize="20sp" />
 
@@ -199,7 +197,6 @@
                                     android:fontFamily="sans-serif"
 
                                     android:padding="0dp"
-                                    android:text="Household Found"
                                     android:textSize="28sp"
                                     android:textStyle="bold" />
 
@@ -210,7 +207,6 @@
                                     android:background="@null"
                                     android:fontFamily="sans-serif"
                                     android:padding="@null"
-                                    android:text="Name of Head"
                                     android:textColor="@color/gray"
                                     android:textSize="20sp"
                                     android:typeface="sans" />

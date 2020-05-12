@@ -33,8 +33,9 @@ public class SectionCHCActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_c);
         bi.setCallback(this);
-        setTitle(R.string.chsec);
+
         setupListeners();
+
     }
 
     private void setupListeners() {
