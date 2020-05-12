@@ -102,6 +102,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0501dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -192,6 +193,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0502dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -283,6 +285,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0503dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -374,6 +377,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0504dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -465,6 +469,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0505dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -556,6 +561,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0506dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -647,6 +653,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0507dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -737,6 +744,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0508dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -828,6 +836,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0509dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -919,6 +928,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0510dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1009,6 +1019,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0511dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1099,6 +1110,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0512dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1190,6 +1202,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0513dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1280,6 +1293,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0514dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1371,6 +1385,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0515dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
@@ -1462,6 +1477,7 @@
                                 android:layout_weight="2"
                                 android:hint="@string/im0516dd"
                                 android:maxLength="2"
+                                app:defaultValue="97"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />

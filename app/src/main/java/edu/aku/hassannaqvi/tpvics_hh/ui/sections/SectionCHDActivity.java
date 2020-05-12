@@ -33,7 +33,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHDActivity extends AppCompatActivity {
 
     ActivitySectionChDBinding bi;
-    boolean imFlag = false;
+    boolean imFlag = false, daysFlag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,25 +71,63 @@ public class SectionCHDActivity extends AppCompatActivity {
         EditTextPicker editTextPicker02 = editTextsArray[1];
         EditTextPicker editTextPicker03 = editTextsArray[2];
 
-        for (EditTextPicker item : new EditTextPicker[]{editTextPicker01, editTextPicker02}) {
-            item.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        editTextPicker01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                editTextPicker03.setText(null);
+                editTextPicker03.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        editTextPicker01.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                editTextPicker03.setText(null);
+                editTextPicker03.setError(null);
+
+                editTextPicker02.setEnabled(true);
+                editTextPicker03.setEnabled(true);
+
+                daysFlag = true;
+                imFlag = true;
+
+                String txt01;
+                if (!TextUtils.isEmpty(editTextPicker01.getText())) {
+                    txt01 = editTextPicker01.getText().toString();
+
+                    if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) {
+                        editTextPicker02.setText(null);
+                        editTextPicker03.setText(null);
+                        editTextPicker02.setEnabled(false);
+                        editTextPicker03.setEnabled(false);
+                        editTextPicker01.setRangedefaultvalue(Float.parseFloat(txt01));
+
+                        daysFlag = false;
+                        imFlag = true;
+                    }
                 }
+            }
 
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    editTextPicker03.setText(null);
-                    editTextPicker03.setError(null);
-                }
+            @Override
+            public void afterTextChanged(Editable s) {
 
-                @Override
-                public void afterTextChanged(Editable s) {
-
-                }
-            });
-        }
+            }
+        });
 
         editTextPicker03.addTextChangedListener(new TextWatcher() {
             @Override
@@ -100,6 +138,7 @@ public class SectionCHDActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String txt01, txt02, txt03;
+                if (!daysFlag) return;
                 editTextPicker01.setEnabled(true);
                 editTextPicker02.setEnabled(true);
                 if (!TextUtils.isEmpty(editTextPicker01.getText()) && !TextUtils.isEmpty(editTextPicker02.getText()) && !TextUtils.isEmpty(editTextPicker03.getText())) {
@@ -108,8 +147,8 @@ public class SectionCHDActivity extends AppCompatActivity {
                     txt03 = editTextPicker03.getText().toString();
                 } else return;
                 if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
-                        (!editTextPicker02.isRangeTextValidate() || txt02.trim().equals("44") || txt02.trim().equals("97") || txt02.trim().equals("66") || txt02.trim().equals("86")) ||
-                        (!editTextPicker03.isRangeTextValidate() || txt03.trim().equals("44") || txt03.trim().equals("97") || txt03.trim().equals("66") || txt03.trim().equals("86")))
+                        (!editTextPicker02.isRangeTextValidate()) ||
+                        (!editTextPicker03.isRangeTextValidate()))
                     return;
                 int day = Integer.parseInt(txt01);
                 int month = Integer.parseInt(txt02);
@@ -233,19 +272,6 @@ public class SectionCHDActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVim22, false);
             }
         });
-
-        /*bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.im231.getId() || i == bi.im232.getId() || i == bi.im233.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecChc4, false);
-            } else if (i == bi.im234.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim23a, false);
-                Clear.clearAllFields(bi.fldGrpSecChc4, true);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVim23a, true);
-                Clear.clearAllFields(bi.fldGrpSecChc4, true);
-            }
-
-        });*/
 
         bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im234.getId()) {
