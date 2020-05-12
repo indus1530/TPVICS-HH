@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +21,8 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
+import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
@@ -26,7 +31,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHCActivity extends AppCompatActivity {
 
     ActivitySectionChCBinding bi;
-    boolean im02Flag = false;
+    boolean im02Flag = false, imFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,47 @@ public class SectionCHCActivity extends AppCompatActivity {
 
         });
 
+        bi.im04yy.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!bi.im011.isChecked()) return;
+                String txt01, txt02, txt03;
+                bi.im04dd.setEnabled(true);
+                bi.im04mm.setEnabled(true);
+                if (!TextUtils.isEmpty(bi.im04dd.getText()) && !TextUtils.isEmpty(bi.im04mm.getText()) && !TextUtils.isEmpty(bi.im04yy.getText())) {
+                    txt01 = bi.im04dd.getText().toString();
+                    txt02 = bi.im04mm.getText().toString();
+                    txt03 = bi.im04yy.getText().toString();
+                } else return;
+                if ((!bi.im04dd.isRangeTextValidate()) ||
+                        (!bi.im04mm.isRangeTextValidate()) ||
+                        (!bi.im04yy.isRangeTextValidate()))
+                    return;
+                int day = bi.im04dd.getText().toString().equals("98") ? 15 : Integer.parseInt(txt01);
+                int month = Integer.parseInt(txt02);
+                int year = Integer.parseInt(txt03);
+                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+                if (age == null) {
+                    bi.im04yy.setError("Invalid date!!");
+                    imFlag = false;
+                } else {
+                    imFlag = true;
+                    bi.im04dd.setEnabled(false);
+                    bi.im04mm.setEnabled(false);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
     }
 
     private boolean UpdateDB() {
@@ -108,7 +154,7 @@ public class SectionCHCActivity extends AppCompatActivity {
                                                                 bi.im0396.isChecked() ? "96" :
                                                                         "0");
 
-        f1.put("im04dd", bi.im04dd1.isChecked() ? "98" : bi.im04dd.getText().toString());
+        f1.put("im04dd", bi.im04dd.getText().toString());
         f1.put("im04mm", bi.im04mm.getText().toString());
         f1.put("im04yy", bi.im04yy.getText().toString());
 
@@ -116,6 +162,10 @@ public class SectionCHCActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
+        if (!imFlag) {
+            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHC);
     }
 

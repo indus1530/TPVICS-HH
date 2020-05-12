@@ -278,84 +278,56 @@
 
                         </RelativeLayout>
 
-
                         <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im04dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im04dd"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:enabled='@{!im04dd1.checked ? true : false}'
+                                android:layout_weight="2"
                                 android:hint="@string/im04dd"
                                 android:maxLength="2"
-                                android:text='@{im04dd1.checked ? "" : im04dd.getText().toString() }'
+                                app:defaultValue="98"
                                 app:maxValue="31"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="@string/im04dd1" />
-
-                            <CheckBox
-                                android:id="@+id/im04dd1"
-                                style="@style/checkbox"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:tag="-1" />
-
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im04mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im04mm"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="2"
                                 android:hint="@string/im04mm"
                                 android:maxLength="2"
                                 app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
-                        </LinearLayout>
-
-                        <LinearLayout style="@style/hlinearlayout">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:text="@string/im04yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im04yy"
                                 style="@style/EditTextNum"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_weight="4"
                                 android:hint="@string/im04yy"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
