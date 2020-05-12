@@ -155,7 +155,7 @@
 
                         <EditText
                             android:id="@+id/ch03"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/ch03" />
 
@@ -198,7 +198,7 @@
 
                         <EditText
                             android:id="@+id/ch03b"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/ch03b" />
 
@@ -309,12 +309,12 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/textView3Head"
+                                    style="@style/sub"
                                     android:text="@string/ch05c" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05c"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:digits="0123456789"
                                     android:hint="@string/ch05c"
@@ -337,12 +337,12 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/textView3Head"
+                                    style="@style/sub"
                                     android:text="@string/ch05b" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05b"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="@string/ch05b"
                                     android:inputType="number"
@@ -363,12 +363,12 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    style="@style/textView3Head"
+                                    style="@style/sub"
                                     android:text="@string/ch05a" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/ch05a"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="@string/ch05a"
                                     android:inputType="number"

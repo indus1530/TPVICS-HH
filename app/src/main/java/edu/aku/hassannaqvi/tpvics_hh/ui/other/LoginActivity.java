@@ -35,8 +35,8 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
@@ -113,7 +113,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     @BindView(R.id.email_sign_in_button)
     AppCompatButton mEmailSignInButton;
     @BindView(R.id.syncData)
-    ImageButton syncData;
+    Button syncData;
     @BindView(R.id.spinnerProvince)
     Spinner spinnerProvince;
     @BindView(R.id.spinners)

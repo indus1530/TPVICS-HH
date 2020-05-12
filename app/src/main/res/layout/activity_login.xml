@@ -20,12 +20,17 @@
     <ScrollView
         android:id="@+id/login_form"
         android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_gravity="center"
+            android:background="@color/dullWhile"
+            android:gravity="center"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:orientation="vertical">
@@ -40,10 +45,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="SIGN IN"
+                android:gravity="center"
+                android:text="@string/app_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black_overlay"
-                android:textSize="36sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_margin="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SIGN IN"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -57,7 +71,8 @@
                     android:layout_width="450dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:elevation="5dp"
+                    android:elevation="14dp"
+
                     app:cardCornerRadius="10dp">
 
                     <LinearLayout
@@ -92,12 +107,13 @@
                                     android:layout_height="56dp"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginBottom="4dp"
-                                    android:background="@drawable/et_style"
+                                    android:background="@color/dullWhile"
                                     android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
                                     android:drawablePadding="8dp"
                                     android:elevation="1dp"
                                     android:gravity="center_vertical"
                                     android:hint="Username"
+
                                     android:imeActionId="@+id/login"
                                     android:imeActionLabel="@string/action_sign_in_short"
                                     android:imeOptions="actionUnspecified"
@@ -134,7 +150,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="8"
-                                    android:background="@drawable/et_style"
+                                    android:background="@color/dullWhile"
                                     android:drawableStart="@drawable/ic_lock_black_24dp"
                                     android:drawablePadding="8dp"
                                     android:elevation="1dp"
@@ -178,6 +194,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Province"
+                                        android:minHeight="24dp"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                                         android:textColor="@color/black_overlay"
                                         android:textSize="17sp"
@@ -221,40 +238,27 @@
 
                             </LinearLayout>
 
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/email_sign_in_button"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/outline_btn"
+                                android:text="Login"
+                                android:textColor="@color/greenInfo"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@color/dullWhile"
+                            android:gravity="end"
                             android:orientation="horizontal">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Download / Upload Data"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/black_overlay" />
-
-                                <ImageButton
-                                    android:id="@+id/syncData"
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/circle_style"
-                                    android:src="@drawable/ic_download"
-                                    android:tint="@color/white" />
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="10dp"
-                                android:layout_height="0dp" />
 
                             <LinearLayout
                                 android:layout_width="wrap_content"
@@ -281,29 +285,39 @@
 
                         </LinearLayout>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/email_sign_in_button"
-                            android:layout_width="200dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:background="@drawable/outline_btn"
-                            android:text="Login"
-                            android:textColor="@color/greenInfo" />
 
                     </LinearLayout>
 
+
                 </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/syncData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="#0f0f0f0f"
+                    android:drawableStart="@drawable/ic_download"
+                    android:drawablePadding="12dp"
+                    android:padding="12dp"
+                    android:text="Download User Data"
+                    android:textColor="@color/black_overlay" />
 
                 <TextView
                     android:id="@+id/txtinstalldate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:textSize="16sp" />
+                    android:layout_marginBottom="12dp"
+                    android:shadowColor="#d6d6d6"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="Ver."
+                    android:textColor="#7f7f7f"
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
