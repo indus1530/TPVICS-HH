@@ -42,9 +42,8 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_ch_b);
         bi.setCallback(this);
-        setTitle(R.string.chBsec);
-        setupSkips();
 
+        setupSkips();
 
     }
 
