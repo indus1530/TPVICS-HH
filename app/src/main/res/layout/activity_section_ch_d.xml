@@ -1271,6 +1271,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- im0514  Title   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim0514"
@@ -1364,6 +1365,7 @@
 
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- im0515  Title   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVim0515"
@@ -1395,8 +1397,9 @@
 
                         </RelativeLayout>
 
-
-                        <LinearLayout style="@style/hlinearlayout">
+                        <LinearLayout
+                            style="@style/hlinearlayout"
+                            android:layoutDirection="ltr">
 
                             <TextView
                                 android:layout_width="wrap_content"
