@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -278,6 +279,21 @@ public class SectionCHDActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVim23a, false);
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim23a, true);
+            }
+        });
+
+        bi.im2499.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Clear.clearAllFields(bi.im24check, false);
+                    bi.im24check.setTag("-1");
+                    bi.im2499.setTag("0");
+                } else {
+                    Clear.clearAllFields(bi.im24check, true);
+                    bi.im24check.setTag("0");
+                    bi.im2499.setTag("-1");
+                }
             }
         });
 
