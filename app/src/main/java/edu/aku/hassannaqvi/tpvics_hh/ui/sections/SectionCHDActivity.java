@@ -394,23 +394,24 @@ public class SectionCHDActivity extends AppCompatActivity {
                                 bi.im163.isChecked() ? "98" :
                                         "0");
         json.put("im17", bi.im17.getText().toString());
-        json.put("im18",
-                bi.im181.isChecked() ? "1" :
-                        bi.im182.isChecked() ? "2" :
-                                bi.im183.isChecked() ? "98" :
-                                        "0");
+
+        json.put("im18", bi.im181.isChecked() ? "1"
+                : bi.im182.isChecked() ? "2"
+                : bi.im183.isChecked() ? "98"
+                : "0");
         json.put("im19", bi.im19.getText().toString());
-        json.put("im20",
-                bi.im201.isChecked() ? "1" :
-                        bi.im202.isChecked() ? "2" :
-                                bi.im203.isChecked() ? "98" :
-                                        "0");
-        json.put("im21",
-                bi.im211.isChecked() ? "1" :
-                        bi.im212.isChecked() ? "2" :
-                                bi.im213.isChecked() ? "98" :
-                                        "0");
+
+        json.put("im20", bi.im201.isChecked() ? "1"
+                : bi.im202.isChecked() ? "2"
+                : bi.im203.isChecked() ? "98"
+                : "0");
+
+        json.put("im21", bi.im211.isChecked() ? "1"
+                : bi.im212.isChecked() ? "2"
+                : bi.im213.isChecked() ? "98"
+                : "0");
         json.put("im22", bi.im22.getText().toString());
+
         json.put("im23",
                 bi.im231.isChecked() ? "1" :
                         bi.im232.isChecked() ? "2" :
@@ -419,33 +420,32 @@ public class SectionCHDActivity extends AppCompatActivity {
                                                 bi.im236.isChecked() ? "6" :
                                                         "0");
         json.put("im236x", bi.im236x.getText().toString());
-        json.put("im23a",
-                bi.im23a1.isChecked() ? "1" :
-                        bi.im23a2.isChecked() ? "2" :
-                                bi.im23a3.isChecked() ? "3" :
-                                        bi.im23a96.isChecked() ? "96" :
-                                                "0");
+
+        json.put("im23a", bi.im23a1.isChecked() ? "1"
+                : bi.im23a2.isChecked() ? "2"
+                : bi.im23a3.isChecked() ? "3"
+                : bi.im23a96.isChecked() ? "96"
+                : "0");
         json.put("im23a96x", bi.im23a96x.getText().toString());
-        json.put("im24",
-                bi.im241.isChecked() ? "1" :
-                        bi.im242.isChecked() ? "2" :
-                                bi.im243.isChecked() ? "3" :
-                                        bi.im244.isChecked() ? "4" :
-                                                bi.im245.isChecked() ? "5" :
-                                                        bi.im246.isChecked() ? "6" :
-                                                                bi.im247.isChecked() ? "7" :
-                                                                        bi.im248.isChecked() ? "8" :
-                                                                                bi.im249.isChecked() ? "9" :
-                                                                                        bi.im2410.isChecked() ? "10" :
-                                                                                                bi.im2411.isChecked() ? "11" :
-                                                                                                        bi.im2412.isChecked() ? "12" :
-                                                                                                                bi.im2413.isChecked() ? "13" :
-                                                                                                                        bi.im2414.isChecked() ? "14" :
-                                                                                                                                bi.im2415.isChecked() ? "15" :
-                                                                                                                                        bi.im2416.isChecked() ? "16" :
-                                                                                                                                                bi.im2417.isChecked() ? "98" :
-                                                                                                                                                        bi.im2499.isChecked() ? "98" :
-                                                                                                                                                                "0");
+
+        json.put("im241", bi.im241.isChecked() ? "1" : "0");
+        json.put("im242", bi.im242.isChecked() ? "2" : "0");
+        json.put("im243", bi.im243.isChecked() ? "3" : "0");
+        json.put("im244", bi.im244.isChecked() ? "4" : "0");
+        json.put("im245", bi.im245.isChecked() ? "5" : "0");
+        json.put("im246", bi.im246.isChecked() ? "6" : "0");
+        json.put("im247", bi.im247.isChecked() ? "7" : "0");
+        json.put("im248", bi.im248.isChecked() ? "8" : "0");
+        json.put("im249", bi.im249.isChecked() ? "9" : "0");
+        json.put("im2410", bi.im2410.isChecked() ? "10" : "0");
+        json.put("im2411", bi.im2411.isChecked() ? "11" : "0");
+        json.put("im2412", bi.im2412.isChecked() ? "12" : "0");
+        json.put("im2413", bi.im2413.isChecked() ? "13" : "0");
+        json.put("im2414", bi.im2414.isChecked() ? "14" : "0");
+        json.put("im2415", bi.im2415.isChecked() ? "15" : "0");
+        json.put("im2416", bi.im2416.isChecked() ? "16" : "0");
+        json.put("im2417", bi.im2417.isChecked() ? "98" : "0");
+        json.put("im2499", bi.im2499.isChecked() ? "98" : "0");
         json.put("im2417x", bi.im2417x.getText().toString());
 
 

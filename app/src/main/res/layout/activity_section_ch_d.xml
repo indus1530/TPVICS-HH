@@ -2741,104 +2741,98 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_im24"
                                 android:layout_alignBottom="@id/qtxt_im24"
-                                android:gravity="center"
                                 android:text="@string/Q_im24" />
 
                         </RelativeLayout>
 
-                        <RadioGroup
-                            android:id="@+id/im24"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/im24check"
+                            style="@style/vlinearlayout"
+                            android:tag="0">
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im241"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im241" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im242"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im242" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im243"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im243" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im244"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im244" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im245"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im245" />
 
                             <RadioButton
                                 android:id="@+id/im246"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im246" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im247"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im247" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im248"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im248" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im249"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im249" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2410"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2410" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2411"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2411" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2412"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2412" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2413"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2413" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2414"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2414" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2415"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2415" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2416"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2416" />
 
-                            <RadioButton
-                                android:id="@+id/im2499"
-                                style="@style/radiobutton"
-                                android:text="@string/im2499" />
-
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/im2417"
-                                style="@style/radiobutton"
+                                style="@style/checkbox"
                                 android:text="@string/im2417" />
 
                             <EditText
@@ -2849,7 +2843,13 @@
                                 android:tag="im2417"
                                 android:text='@{im2417.checked? im2417x.getText().toString() : ""}' />
 
-                        </RadioGroup>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/im2499"
+                            style="@style/checkbox"
+                            android:tag="-1"
+                            android:text="@string/im2499" />
 
                     </LinearLayout>
 

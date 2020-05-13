@@ -273,14 +273,11 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/cb03yy"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="0123456789"
-                                android:hint="@string/cb03yy"
-                                android:inputType="number"
+                                style="@style/EditTextNum"
+                                android:hint="@string/year"
                                 android:maxLength="4"
+                                app:mask="20##"
                                 android:onTextChanged="@{callback.cb03yyOnTextChanged}"
-                                android:textColor="@android:color/black"
                                 app:defaultValue="9998"
                                 app:maxValue="2020"
                                 app:minValue="2015"
@@ -301,12 +298,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/cb03mm"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/cb03mm"
-                                android:inputType="number"
+                                style="@style/EditTextNum"
+                                android:hint="@string/month"
                                 android:maxLength="2"
-                                android:textColor="@android:color/black"
                                 app:defaultValue="98"
                                 app:maxValue="12"
                                 app:minValue="1"
@@ -327,12 +321,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/cb03dd"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/cb03dd"
-                                android:inputType="number"
+                                style="@style/EditTextNum"
+                                android:hint="@string/days"
                                 android:maxLength="2"
-                                android:textColor="@android:color/black"
                                 app:defaultValue="98"
                                 app:maxValue="31"
                                 app:minValue="1"
