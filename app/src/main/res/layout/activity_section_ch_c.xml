@@ -277,7 +277,9 @@
 
                         </RelativeLayout>
 
-                        <LinearLayout style="@style/hlinearlayout">
+                        <LinearLayout
+                            style="@style/hlinearlayout"
+                            android:layoutDirection="ltr">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -336,7 +338,72 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+                <!-- Take Photo   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVtakePhoto"
+                    style="@style/cardView">
 
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <LinearLayout
+                            style="@style/hlinearlayout"
+                            android:gravity="center_horizontal">
+
+
+                            <Button
+                                android:id="@+id/frontPhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/outline_btn"
+                                android:onClick="takePhoto"
+                                android:text="Take Front Photo"
+                                android:textColor="@color/greenInfo" />
+
+                            <Button
+                                android:id="@+id/backPhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/outline_btn"
+                                android:onClick="takePhoto"
+                                android:text="Take Back Photo"
+                                android:textColor="@color/greenInfo" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/hlinearlayout"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/frontFileName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="#7f7f7f7f"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/backFileName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="#7f7f7f7f"
+                                android:textSize="14dp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <!--ENDBUTTON linearlayout-->

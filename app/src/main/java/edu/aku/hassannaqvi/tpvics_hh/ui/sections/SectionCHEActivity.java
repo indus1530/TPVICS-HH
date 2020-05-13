@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +18,6 @@ import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChEBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
-import edu.aku.hassannaqvi.tpvics_hh.ui.other.TakePhoto;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
@@ -106,67 +104,4 @@ public class SectionCHEActivity extends AppCompatActivity {
     }
 
 
-    public void takePhoto(View view) {
-
-        Intent intent = new Intent(SectionCHEActivity.this, TakePhoto.class);
-
-        intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
-        //intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
-
-        //intent.putExtra("childName", "Hassan");
-        intent.putExtra("childName", MainApp.child.getChildName());
-
-        if (view.getId() == bi.frontPhoto.getId()) {
-            intent.putExtra("picView", "front".toUpperCase());
-            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
-        } else {
-            intent.putExtra("picView", "back".toUpperCase());
-            startActivityForResult(intent, 2); // Activity is started with requestCode 2 = Back
-        }
-    }
-
-    // Call Back method  to get the Message form other Activity
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
-
-        String fileName = data.getStringExtra("FileName");
-
-        // Check if the requestCode 1 = Front : 2 = Back -- resultCode 1 = Success : 2 = Failure
-        // Results received with requestCode 1 = Front
-
-        if (requestCode == 1 && resultCode == 1) {
-            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
-
-            bi.frontFileName.setText(fileName);
-            bi.frontPhoto.setEnabled(false);
-
-
-        } else if (requestCode == 1 && resultCode != 1) {
-            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
-
-            //TODO: Implement functionality below when photo was not taken
-            // ...
-            bi.frontFileName.setText("Photo not taken.");
-
-        }
-
-        // Results received with requestCode 2 = Back
-        if (requestCode == 2 && resultCode == 1) {
-            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
-
-            bi.backFileName.setText(fileName);
-            bi.backPhoto.setEnabled(false);
-        } else if (requestCode == 2 && resultCode != 1) {
-
-            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
-
-            //TODO: Implement functionality below when photo was not taken
-            // ...
-            bi.backFileName.setText("Photo not taken.");
-
-        }
-    }
 }

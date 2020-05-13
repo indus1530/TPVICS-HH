@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
+import edu.aku.hassannaqvi.tpvics_hh.ui.other.TakePhoto;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
@@ -157,6 +159,8 @@ public class SectionCHCActivity extends AppCompatActivity {
         f1.put("im04dd", bi.im04dd.getText().toString());
         f1.put("im04mm", bi.im04mm.getText().toString());
         f1.put("im04yy", bi.im04yy.getText().toString());
+        f1.put("frontFileName", bi.frontFileName.getText().toString());
+        f1.put("backFileName", bi.backFileName.getText().toString());
 
         child.setsCC(String.valueOf(f1));
     }
@@ -198,4 +202,68 @@ public class SectionCHCActivity extends AppCompatActivity {
         Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
     }
 
+
+    public void takePhoto(View view) {
+
+        Intent intent = new Intent(this, TakePhoto.class);
+
+        intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
+        //intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+
+        //intent.putExtra("childName", "Hassan");
+        intent.putExtra("childName", MainApp.child.getChildName());
+
+        if (view.getId() == bi.frontPhoto.getId()) {
+            intent.putExtra("picView", "front".toUpperCase());
+            startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
+        } else {
+            intent.putExtra("picView", "back".toUpperCase());
+            startActivityForResult(intent, 2); // Activity is started with requestCode 2 = Back
+        }
+    }
+
+    // Call Back method  to get the Message form other Activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        Toast.makeText(this, requestCode + "_" + resultCode, Toast.LENGTH_SHORT).show();
+
+        String fileName = data.getStringExtra("FileName");
+
+        // Check if the requestCode 1 = Front : 2 = Back -- resultCode 1 = Success : 2 = Failure
+        // Results received with requestCode 1 = Front
+
+        if (requestCode == 1 && resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+
+            bi.frontFileName.setText(fileName);
+            bi.frontPhoto.setEnabled(false);
+
+
+        } else if (requestCode == 1 && resultCode != 1) {
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+
+            //TODO: Implement functionality below when photo was not taken
+            // ...
+            bi.frontFileName.setText("Photo not taken.");
+
+        }
+
+        // Results received with requestCode 2 = Back
+        if (requestCode == 2 && resultCode == 1) {
+            Toast.makeText(this, "Photo Taken", Toast.LENGTH_SHORT).show();
+
+            bi.backFileName.setText(fileName);
+            bi.backPhoto.setEnabled(false);
+        } else if (requestCode == 2 && resultCode != 1) {
+
+            Toast.makeText(this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+
+            //TODO: Implement functionality below when photo was not taken
+            // ...
+            bi.backFileName.setText("Photo not taken.");
+
+        }
+    }
 }
