@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--new Strings-->
+    <string name="app_name"> TPVICS - HOUSEHOLD SURVEY \n In Urdu Language </string>
+
+    <!-- Strings related to login -->
+    <string name="btnSync">Sync</string>
+    <string name="btnUpload">Upload</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
+
+
+    <string name="tdheading"> SECTION D: HOUSEHOLD MEMBER’S INFORMATION </string>
+    <string name="teheading"> SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15 &#8211; 49 years in the household) </string>
+    <string name="te2heading"> MATERNAL MORTALITY STATUS </string>
+    <string name="tfheading"> SECTION F: ANTENATAL CARE </string>
+    <string name="tiheading"> SECTION I: CHILD HEALTH </string>
+    <string name="ti2heading"> SECTION I2: ACUTE RESPIRATORY INFECTION (ARI) </string>
+    <string name="tjheading"> SECTION J: IMMUNIZATION </string>
+    <string name="tkheading"> SECTION K: FAMILY PLANNING </string>
+    <string name="tlheading"> SECTION L: WOMEN EMPOWERMENT </string>
+    <string name="tmheading"> SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD </string>
+    <string name="tnheading"> SECTION N: WATER AND SANITATION </string>
+    <string name="toheading"> SECTION O: HANDWASHING </string>
+
+    <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up</string>
+
+    <string name="splashText2">"Empowerment and Care  Strategies  to Address Health and Survival"</string>
+
+    <string name="sM">"Centre of Excellence Women &amp; Child Health"</string>
+    <string name="no"> نہیں </string>
+    <string name="dkn"> معلوم نہیں </string>
+    <string name="none"> کوئی نہیں </string>
+    <string name="never"> کبھی نہیں </string>
+    <string name="na"> قابل اطلاق / دستیاب نہیں  </string>
+    <string name="nap"> قابل اطلاق نہیں </string>
+    <string name="nav"> دستیاب نہیں </string>
+    <string name="ref"> انکار کر دیا </string>
+    <string name="other"> دیگر </string>
+    <string name="specify"> وضاحت کریں </string>
+    <string name="year"> سال </string>
+    <string name="month"> مہینہ </string>
+    <string name="weeks"> ہفتے </string>
+    <string name="days"> دن </string>
+    <string name="hours"> گھنٹے </string>
+    <string name="minutes"> منٹ </string>
+    <string name="kg"> کلوگرام </string>
+    <string name="km"> کلومیٹر </string>
+    <string name="cm"> سینٹی میٹر </string>
+    <string name="in"> انچ </string>
+    <string name="rupees"> روپے </string>
+    <string name="num"> اعداد </string>
+    <string name="name"> نام </string>
+    <string name="contactnum"> رابطہ نمبر </string>
+
+    <string name="total"> Total </string>
+    <string name="under1_2"> Child 12-23 Months </string>
+    <string name="under5"> Child Under 5 </string>
+
+    <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
+    <string name="newHHheadname"> نیا سربراہ کا نام </string>
+    <string name="a101"> کلسٹر نمبر </string>
+    <string name="a101a"> یہ معلومات ضلعی بنیاد پر بنائی گئی گاؤں کی فہرست پر مبنی ہوں گی۔ ہر انٹرویو کرنے والے کو جس علاقے کا وہ دورہ کرے گا کلسٹرز کی ایک فہرست دی جائے گی اور انٹرویو شروع کرنے سے پہلے اسی فہرست سے یہ معلومات درج کی جائیں گی۔ </string>
+
+    <!--TPVICS STRINGS-->
+    <string name="hhsec"> Section H1: HouseHold Information </string>
+    <string name="hh05"> اینومیریشن بلاک نمبر </string>
+    <string name="hh06"> صوبہ </string>
+    <string name="hh07"> ضلع </string>
+    <string name="hh08"> تحصیل </string>
+    <string name="hh09"> شہر / گاؤں </string>
+    <string name="hh10"> پتہ / ایڈریس (محلہ / نزدیک ترین مشہور جگہ) </string>
+    <string name="hh11"> کلسٹر </string>
+    <string name="hh12"> گھرانہ نمبر </string>
+    <string name="hh063"> انٹرویو لینے والے کا نام </string>
+    <string name="hh063a"> انٹرویو لینے والے کا کوڈ </string>
+    <string name="hh074"> سُپروائزر کا نام </string>
+    <string name="hh074a"> سُپروائزر کا  کوڈ </string>
+    <string name="hh01"> انٹرویو کی تاریخ </string>
+    <string name="hh02"> انٹرویو کا وقت </string>
+    <string name="hh13"> جواب دہندہ کانام </string>
+    <string name="hh13a"> جواب دہندہ کا رابطہ نمبر </string>
+    <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
+
+    <string name="hh15"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
+    <string name="hh15a"> ہاں </string>
+    <string name="hh15b"> نہیں </string>
+
+    <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
+
+    <string name="hh16a"> سربراہ کا نام </string>
+    <string name="hh16b"> سربراہ کا فون نمبر </string>
+
+    <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
+    <string name="hh17a"> سربراہ کا نام </string>
+    <string name="hh17b"> سربراہ کا فون نمبر </string>
+
+    <string name="hh18"> کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+    <string name="hh18a">  ہاں، اجازت مل گئی ہے </string>
+    <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
+
+    <string name="hh19"> اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
+    <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
+    <string name="hh19a"> افراد کی تعداد: </string>
+    <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
+    <string name="hh19_info"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔   اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے تو 95 درج کریں </string>
+
+    <string name="hh20"> کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
+    <string name="hh20_info"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
+    <string name="hh20a"> ہاں </string>
+    <string name="hh20b"> نہیں </string>
+
+    <string name="hh20aa"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
+
+    <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
+    <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
+    <string name="hh22a"> مکمل </string>
+    <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="hh22c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
+    <string name="hh22d"> انکار کردیا </string>
+    <string name="hh22e"> خالی گھر / غیر رہائشی </string>
+    <string name="hh22f"> گھر نہیں ملا </string>
+    <string name="hh2296"> دیگر </string>
+    <string name="hh2296x"> وضاحت کریں </string>
+
+
+    <string name="chsec"> Child Information </string>
+    <string name="chBsec"> Child Background </string>
+    <string name="ch_title"> بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج: </string>
+
+    <string name="ch_cluster"> کلسٹر نمبر: </string>
+
+    <string name="ch_hno"> گھر کا نمبر: </string>
+
+    <string name="ch_childid"> چائلڈ آئی ڈی </string>
+
+    <string name="ch01"> سیریل نمبر </string>
+
+    <string name="ch02"> بچے کا نام </string>
+
+    <string name="ch03"> باپ کا نام </string>
+
+    <string name="ch04"> جنس </string>
+    <string name="ch04a"> مرد </string>
+    <string name="ch04b"> عورت </string>
+
+    <string name="ch05"> تاریخ پیدائش </string>
+    <string name="ch05a"> دن </string>
+    <string name="ch05b"> مہینہ </string>
+    <string name="ch05c"> سال </string>
+
+    <string name="ch06"> عمر مہینوں مہیں </string>
+
+    <string name="ch07"> بچے کی عمر کی تصدیق کا زریعہ </string>
+    <string name="ch07a"> پیدائش کا سرٹیفکیٹ </string>
+    <string name="ch07b"> حفاظتی ٹیکوں کا کارڈ </string>
+    <string name="ch07c"> جواب دہندہ </string>
+    <string name="ch0796"> دیگر </string>
+
+    <string name="ch08"> کیا بچہ اس سروے کے لیے اہل ہے </string>
+    <string name="ch08a"> ہاں </string>
+    <string name="ch08b"> نہیں </string>
+    <string name="ch03b"> ماں کا نام </string>
+
+
+    <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
+    <string name="ss01">  گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
+    <string name="ss01a"> اردو </string>
+    <string name="ss01b"> پنجابی </string>
+    <string name="ss01c"> سند ھی </string>
+    <string name="ss01d"> پشتو </string>
+    <string name="ss01e"> بلوچی </string>
+    <string name="ss01f"> سرائیکی </string>
+    <string name="ss01g"> ھند کو </string>
+    <string name="ss01x"> دیگر وضاحت کریں </string>
+
+    <string name="ss02"> آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
+    <string name="ss02a"> اپنا </string>
+    <string name="ss02b"> کرائے کا </string>
+    <string name="ss02x"> دیگر وضاحت کریں </string>
+
+    <string name="ss03"> آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے </string>
+    <string name="ss03h1"> میونسپل کمیٹی کا پانی کا کنکشن </string>
+    <string name="ss03a"> گھر میں نلکا </string>
+    <string name="ss03b"> صحن میں نلکا </string>
+    <string name="ss03c">  پڑوسی کے گھر کا نلکا </string>
+    <string name="ss03d">  گلی / علاقہ کا نلکا </string>
+    <string name="ss03e"> ٹیوب ویل / بورنگ کا پانی </string>
+    <string name="ss03h2"> گہرا کنواں </string>
+    <string name="ss03f"> محفوظ کنواں </string>
+    <string name="ss03g"> غیر محفوظ کنواں </string>
+    <string name="ss03h3"> پانی کا چشمہ </string>
+    <string name="ss03h"> محفوظ چشمہ </string>
+    <string name="ss03i"> غیر محفوظ چشمہ </string>
+    <string name="ss03j">  بارش کا پانی </string>
+    <string name="ss03k">  پانی کا ٹینکر / ٹرک </string>
+    <string name="ss03l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
+    <string name="ss03m"> سطح والا پانی (دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی) </string>
+    <string name="ss03h4"> پیک شدہ پانی </string>
+    <string name="ss03n">  بوتل کا پانی </string>
+    <string name="ss03x"> دیگر </string>
+
+    <string name="ss04"> کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں ؟ </string>
+    <string name="ss04y"> ہاں </string>
+    <string name="ss04n"> نہیں </string>
+
+    <string name="ss05"> عموماً آپ  پینے کےپانی کو محفوظ  بنانے  کے لیے کیا کرتے ہیں ؟ </string>
+    <string name="ss05a"> ابالتے ہیں </string>
+    <string name="ss05b"> بلیچ/کلورین ملاتے ہیں </string>
+    <string name="ss05c"> کپڑے کے ذریعہ چھانتے ہیں </string>
+    <string name="ss05d"> پانی کا فلٹر استعمال کرتے ہیں </string>
+    <string name="ss05e"> سورج کی شعاعوں سے/دھوپ میں رکھتے ہیں </string>
+    <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں </string>
+    <string name="ss05x"> کریں </string>
+
+    <string name="ss06"> آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اور ہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے ؟ </string>
+    <string name="ss06_info"> اگر وضاحت درکار ہو تو اس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں </string>
+    <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن </string>
+    <string name="ss06a"> گھر میں نلکا </string>
+    <string name="ss06b"> صحن میں نلکا </string>
+    <string name="ss06c"> پڑوسی کے گھر کا نلکا </string>
+    <string name="ss06d">  گلی / علاقہ کا نلکا </string>
+    <string name="ss06e"> ٹیوب ویل / بورنگ کا پان </string>
+    <string name="ss06f_title"> گہراکنواں </string>
+    <string name="ss06f"> محفوظ کنواں </string>
+    <string name="ss06g"> غیر محفوظ کنواں </string>
+    <string name="ss06h_title"> پانی کا چشمہ </string>
+    <string name="ss06h"> محفوظ چشمہ </string>
+    <string name="ss06i"> غیر محفوظ چشمہ </string>
+    <string name="ss06j"> بارش کا پانی </string>
+    <string name="ss06k"> پانی کا ٹینکر / ٹرک </string>
+    <string name="ss06l"> ریڑھی کے ساتھ پانی کی چھوٹی ٹنکی </string>
+    <string name="ss06m"> سطح والا پانی ( دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی ) </string>
+    <string name="ss06n_title"> پیک شدہ پانی </string>
+    <string name="ss06n"> بوتل کا پانی </string>
+    <string name="ss06x"> دیگر </string>
+
+    <string name="ss07"> آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
+    <string name="ss07a_title"> فلش یا انڈیل کر پانی ڈالنے والا </string>
+    <string name="ss07a"> فلش سیوریج کے نظام سے منسلک  </string>
+    <string name="ss07b"> فلش سپٹک ٹینک سے منسلک  </string>
+    <string name="ss07c"> فلش گڑھے واے لیٹرین سے منسلک </string>
+    <string name="ss07d"> فلش کہیں اور </string>
+    <string name="ss07e_title"> گڑھے والا  لیٹرین </string>
+    <string name="ss07e"> بہتر ہوا دار گڑھے والا لیٹرین </string>
+    <string name="ss07f"> گڑھے والا لیٹرین ڈھکا ہوا </string>
+    <string name="ss07g"> گڑھے والا کھلاہوا  لیٹرین </string>
+    <string name="ss07h"> بالٹی والا ٹوائلٹ </string>
+    <string name="ss07i">  کوئی سہولت نہیں / جھاڑیوں / زمین پر </string>
+    <string name="ss07x"> دیگر وضاحت کریں </string>
+
+    <string name="ss08"> بیت الخلاء کی یہ سہولت کہاں واقع ہے ؟ </string>
+    <string name="ss08a"> اپنی  ذاتی رہائش / گھر میں </string>
+    <string name="ss08b">  اپنے صحن / پلاٹ میں </string>
+    <string name="ss08c"> کہیں اور </string>
+
+    <string name="ss09"> کیا اس بیت الخلاء کی سہولت کو دوسرے گھرانوں کے افراد بھی استعمال کر تے ہیں جو آپ کے گھرانے کے فرد نہیں ہیں ؟ </string>
+    <string name="ss09a"> ہاں </string>
+    <string name="ss09b"> نہیں </string>
+
+    <string name="ss10"> اگر ہاں، تو کتنے گھرانے اس بیت الخلاء کی  سہولت کو استعمال کرتے ہیں ؟ </string>
+    <string name="ss10a"> گھراںوں کی تعداد </string>
+
+    <string name="ss11"> کیا آپ یہ سہولت صرف ان دوسرے گھرانوں کے افراد کے ساتھ مل کر استعمال کرتے ہیں جنہیں آپ جانتے ہیں یا یہ سہولت عوام الناس کے استعمال کے لئے کھلی ہے ؟ </string>
+    <string name="ss11a"> صرف دوسرے گھرانے (عوام الناس نہیں) </string>
+    <string name="ss11b"> عوام الناس </string>
+
+    <string name="ss12"> مجموعی طور پر کتنے گھرانے اس سہولت کو استعمال کرتے ہیں، اپنے گھر کو شامل کرتے ہوئے بتائیں ؟ </string>
+    <string name="ss12a"> گھرانوں کی تعداد - اگر 10 سے کم  </string>
+    <string name="ss12b">  دس یا اس سے زیادہ گھرانے </string>
+    <string name="ss12c"> معلوم نہیں </string>
+
+    <string name="ss13"> سب سے چھوٹے بچے کا پاخانہ پھینکنے کے لیے کیا کرتے ہیں ؟ </string>
+    <string name="ss13a"> بچہ لیٹرین استعمال کرتا ہے </string>
+    <string name="ss13b"> پاخانہ لیٹرین سے بہادیتے ہیں </string>
+    <string name="ss13c"> پاخانہ نالی /گھڑھے سے بہادیتے ہیں </string>
+    <string name="ss13d"> کچرے میں پھینک دیتے ہیں </string>
+    <string name="ss13e"> کھلا پڑا رہتا ہے </string>
+    <string name="ss13f"> زمین میں دبا دیتے ہیں </string>
+    <string name="ss13g"> گھر میں 5 سال سے چھوٹا بچہ نہیں ہے </string>
+    <string name="ss13x"> دیگر وضاحت کریں  </string>
+
+    <string name="ss14"> کیا آپ کے گھر میں ان میں سے کچھ موجود ہے ؟ </string>
+    <string name="ss14a"> بجلی </string>
+    <string name="ss14aa"> ہاں </string>
+    <string name="ss14ab"> نہیں </string>
+
+    <string name="ss14b"> ریڈیو </string>
+    <string name="ss14ba"> ہاں </string>
+    <string name="ss14bb"> نہیں </string>
+
+    <string name="ss14c"> ٹیلی وژن </string>
+    <string name="ss14ca"> ہاں </string>
+    <string name="ss14cb"> نہیں </string>
+
+    <string name="ss14d"> ٹیلیفون </string>
+    <string name="ss14da"> ہاں </string>
+    <string name="ss14db"> نہیں </string>
+
+    <string name="ss14e"> فریج </string>
+    <string name="ss14ea"> ہاں </string>
+    <string name="ss14eb"> نہیں </string>
+
+    <string name="ss14f"> الماری </string>
+    <string name="ss14fa"> ہاں </string>
+    <string name="ss14fb"> نہیں </string>
+
+    <string name="ss14g"> کرسی </string>
+    <string name="ss14ga"> ہاں </string>
+    <string name="ss14gb"> نہیں </string>
+
+    <string name="ss14h"> روم کولر </string>
+    <string name="ss14ha"> ہاں </string>
+    <string name="ss14hb"> نہیں </string>
+
+    <string name="ss14i"> ائیرکنڈئشن </string>
+    <string name="ss14ia"> ہاں </string>
+    <string name="ss14ib"> نہیں </string>
+
+    <string name="ss14j"> واشنگ مشین </string>
+    <string name="ss14ja"> ہاں </string>
+    <string name="ss14jb"> نہیں </string>
+
+    <string name="ss14k"> پانی کا پمپ </string>
+    <string name="ss14ka"> ہاں </string>
+    <string name="ss14kb"> نہیں </string>
+
+    <string name="ss14l"> پلنگ </string>
+    <string name="ss14la"> ہاں </string>
+    <string name="ss14lb"> نہیں </string>
+
+    <string name="ss14m"> گھٹری </string>
+    <string name="ss14ma"> ہاں </string>
+    <string name="ss14mb"> نہیں </string>
+
+    <string name="ss14n"> صوفہ </string>
+    <string name="ss14na"> ہاں </string>
+    <string name="ss14nb"> نہیں </string>
+
+    <string name="ss14o"> کیمرہ </string>
+    <string name="ss14oa"> ہاں </string>
+    <string name="ss14ob"> نہیں </string>
+
+    <string name="ss14p">  سلائی میشن </string>
+    <string name="ss14pa"> ہاں </string>
+    <string name="ss14pb"> نہیں </string>
+
+    <string name="ss14q"> کمپیوٹر / لیپ ٹاپ </string>
+    <string name="ss14qa"> ہاں </string>
+    <string name="ss14qb"> نہیں </string>
+
+    <string name="ss14r"> انٹرنیٹ کا کنکشن </string>
+    <string name="ss14ra"> ہاں </string>
+    <string name="ss14rb"> نہیں </string>
+
+    <string name="ss14s"> ڈش / کیبل نیٹ ورک </string>
+    <string name="ss14sa"> ہاں </string>
+    <string name="ss14sb"> نہیں </string>
+
+    <string name="ss15"> کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں ؟ </string>
+    <string name="ss15a"> گھڑی </string>
+    <string name="ss15aa"> ہاں </string>
+    <string name="ss15ab"> نہیں </string>
+
+    <string name="ss15b">  موبائل فون  </string>
+    <string name="ss15ba"> ہاں </string>
+    <string name="ss15bb"> نہیں </string>
+
+    <string name="ss15c"> سائیکل </string>
+    <string name="ss15ca"> ہاں </string>
+    <string name="ss15cb"> نہیں </string>
+
+    <string name="ss15d">  موٹر سائیکل / سکوٹر  </string>
+    <string name="ss15da"> ہاں </string>
+    <string name="ss15db"> نہیں </string>
+
+    <string name="ss15e"> جانوروں سے چلائی جانے والی گاڑی </string>
+    <string name="ss15ea"> ہاں </string>
+    <string name="ss15eb"> نہیں </string>
+
+    <string name="ss15f">  گاڑی / ٹرک / بس </string>
+    <string name="ss15fa"> ہاں </string>
+    <string name="ss15fb"> نہیں </string>
+
+    <string name="ss15g"> ٹریکٹر </string>
+    <string name="ss15ga"> ہاں </string>
+    <string name="ss15gb"> نہیں </string>
+
+    <string name="ss15h"> موٹر کے ساتھ کشتی </string>
+    <string name="ss15ha"> ہاں </string>
+    <string name="ss15hb"> نہیں </string>
+
+    <string name="ss15i"> موٹر کے بغیر کشتی </string>
+    <string name="ss15ia"> ہاں </string>
+    <string name="ss15ib"> نہیں </string>
+
+    <string name="ss16"> مشاہدہ کریں- کہ گھر میں روشنی کے لئے کون سے آلات استعمال ہور ہے ہیں ۔ </string>
+    <string name="ss16a"> بلب  </string>
+    <string name="ss16b">  ٹیوب لائٹ </string>
+    <string name="ss16c">  ایل ای ڈی  بلب </string>
+    <string name="ss16d">  انرجی سیور </string>
+    <string name="ss16e"> موم بتی </string>
+    <string name="ss16f"> لالٹین </string>
+    <string name="ss16x"> دیگر وضاحت کریں </string>
+
+    <string name="ss17"> عام طورپر آپ کے گھر میں کھانا پکانے کے لیے کس قسم کا ایندھن /چولہااستعمال ہوتا ہے ؟ </string>
+    <string name="ss17a"> بجلی </string>
+    <string name="ss17b"> ایل – پی - جی  سیلنڈر </string>
+    <string name="ss17c"> قدرتی گیس </string>
+    <string name="ss17d"> بائیو گیس </string>
+    <string name="ss17e"> مٹی کا تیل </string>
+    <string name="ss17f"> قدرتی کوئلہ </string>
+    <string name="ss17g"> لکٹری کاکوئلہ </string>
+    <string name="ss17h"> لکٹری </string>
+    <string name="ss17i"> تنکے / جھاڑیاں / گھاس پھونس </string>
+    <string name="ss17j"> جانوروں کا گوبر </string>
+    <string name="ss17k"> گھر میں کھانا نہیں پکتا </string>
+    <string name="ss17x"> دیگر وضاحت کریں </string>
+
+    <string name="ss18"> گھر کے فرش بنانے میں کس قسم کا میٹریل استعمال کیا گیا ہے؟ </string>
+    <string name="ss18_info"> گھر کے فرش میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں اگر مشاہدہ کرنا ممکن نہیں ، تو جواب دہندہ سے کہیں کہ وہ فرش میں استعمال ہونے والے تعمیری مواد کا تعین کر کے بتائے۔ </string>
+    <string name="ss18a_title"> قدرتی فرش </string>
+    <string name="ss18a"> مٹی / چکنی مٹی / زمین / ریت </string>
+    <string name="ss18b"> جانوروں کا گوبر </string>
+    <string name="ss18c_title"> بنیادی / ابتدائی فرش </string>
+    <string name="ss18c"> لکٹری کے تختے </string>
+    <string name="ss18d"> کھجور یاناریل کے پتے / بانس </string>
+    <string name="ss18e_title"> تیار فرش </string>
+    <string name="ss18e"> لکڑی کا فرش یا پالش والی لکڑی </string>
+    <string name="ss18f"> لکڑی کی پلائی یا لکڑی کے ٹائلز </string>
+    <string name="ss18g"> سرامک ٹائلز </string>
+    <string name="ss18h"> سیمنٹ </string>
+    <string name="ss18i"> قالین </string>
+    <string name="ss18j"> اینٹیں </string>
+    <string name="ss18k"> چونے کا پتھر </string>
+    <string name="ss18x"> دیگر وضاحت کریں </string>
+
+    <string name="ss19"> گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔ </string>
+    <string name="ss19a_title"> قدرتی چھت </string>
+    <string name="ss19a"> کوئی چھت نہیں </string>
+    <string name="ss19b"> گھاس پھونس / کھجو ر کے پتے </string>
+    <string name="ss19c"> گھاس پھوس سے بنی ہوئی چھت </string>
+    <string name="ss19d_title"> بنیادی سادہ چھت </string>
+    <string name="ss19d">  تنکے کی  چٹائی </string>
+    <string name="ss19e"> کھجور یا ناریل کے درخت / بانس </string>
+    <string name="ss19f"> لکڑی کے تختے </string>
+    <string name="ss19g"> گتے سے بنی ہوئی چھت </string>
+    <string name="ss19h_title">  تیار چھت </string>
+    <string name="ss19h"> دھات / ٹین / سی جی آئی </string>
+    <string name="ss19i"> لکٹری سے بنی ہوئی چھت </string>
+    <string name="ss19j"> کیلا مائن / سیمنٹ فائبر </string>
+    <string name="ss19k"> سرامک ٹائلز </string>
+    <string name="ss19l"> سیمنٹ آر سی سی (پکی چھت) </string>
+    <string name="ss19m"> چھت میں استعمال ہونے والے ٹائلز </string>
+    <string name="ss19n"> اینٹیں </string>
+    <string name="ss19x"> دیگر وضاحت کریں </string>
+
+    <string name="ss20"> گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد: </string>
+    <string name="ss20a_title"> قدرتی دیواریں </string>
+    <string name="ss20a"> کوئی دیوار نہیں </string>
+    <string name="ss20b"> کھجور کے درخت / بانس </string>
+    <string name="ss20c"> چکنی مٹی </string>
+    <string name="ss20d"> بانس اور مٹی سے بنی ہوئی </string>
+    <string name="ss20d_title"> بنیادی سادہ دیواریں </string>
+    <string name="ss20e"> پتھر اور مٹی </string>
+    <string name="ss20f"> کچی اینٹوں سے بنی (بغیر لیپ) </string>
+    <string name="ss20g"> لکڑی کی پلائی </string>
+    <string name="ss20h"> گّتہ </string>
+    <string name="ss20i"> استعمال شدہ لکڑی </string>
+    <string name="ss20j"> کپڑا / پردے / شامیانہ </string>
+    <string name="ss20k"> سیمنٹ </string>
+    <string name="ss20k_title"> تیار دیواریں </string>
+    <string name="ss20l"> پتھر چونے / سیمنٹ کے ساتھ </string>
+    <string name="ss20m"> پکی اینٹیں </string>
+    <string name="ss20n"> سیمنٹ سے بنی ہوئی بلاکس </string>
+    <string name="ss20o"> کچی اینٹوں سے بنی (لیپ کی ہوئی) </string>
+    <string name="ss20p"> لکڑی کے تختے </string>
+    <string name="ss20x"> دیگر وضاحت کریں </string>
+
+    <string name="ss21"> آپ کے گھر میں کتنے کمرے سونے کے لیے استعمال ہوتے ہیں ؟ </string>
+    <string name="ss21a"> کمرے </string>
+
+    <string name="ss22"> کیا اس گھر میں رہنے والا کوئی فرد  زرعی زمین کا مالک ہے ؟ </string>
+    <string name="ss22a"> ہاں </string>
+    <string name="ss22b"> نہیں </string>
+
+    <!--<string name="ss23"> اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ / ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو \'00\' ریکارڈ کریں۔ </string>
+    <string name="ss23a"> ایکٹر </string>
+    <string name="ss23a_acr"> ایکڑز تعداد </string>
+    <string name="ss23b"> کنال </string>
+    <string name="ss23c"> معلوم نہیں </string>-->
+
+
+    <string name="ss23">اگر ہاں، تو اس گھر کے افراد کے پاس کتنے مربہ/ایکٹرپر مشتمل زمین ہے ؟ اگر 1 سے کم ہے، تو 00 ریکارڈ کریں۔</string>
+    <string name="ss23a">ایکٹر</string>
+    <string name="ss23b">کنال</string>
+    <string name="ss23c">معلوم نہیں</string>
+    <string name="ss23land">زمین</string>
+
+    <string name="ss24"> کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
+    <string name="ss24a"> ہاں</string>
+    <string name="ss24b">  نہیں</string>
+
+    <string name="ss25"> اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں ؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے اگر کوئی نہیں تو 000 ؟ </string>
+    <string name="ss25a"> مال مویشی (گائے اور بیل) </string>
+    <string name="ss25b"> گھوڑے / گدھے / خچر </string>
+    <string name="ss25c"> بکریاں </string>
+    <string name="ss25d"> بھیڑ </string>
+    <string name="ss25e"> مرغیاں </string>
+    <string name="ss25f"> بھینسیں </string>
+    <string name="ss25g"> اونٹ </string>
+
+    <string name="ss26"> کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے ؟ </string>
+    <string name="ss27_title"> جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اور پھر اس گھر میں موجود 12 – 23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں ۔ </string>
+    <string name="ss26a"> ہاں </string>
+    <string name="ss26b"> نہیں </string>
+
+    <string name="ss27"> وقت ریکارڈ کریں </string>
+
+    <string name="ss28"> اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+    <string name="ss28a"> مشاہدات </string>
+
+
+    <string name="ec05"> جغرافیائی علاقہ </string>
+
+    <string name="ec06"> صوبہ </string>
+
+    <string name="ec07"> ضلع </string>
+
+    <string name="ec08"> شہر </string>
+
+    <string name="ec09"> گاؤں </string>
+
+    <string name="ec11"> کلسٹر نمبر </string>
+
+    <string name="ec12"> گھر کا نمبر </string>
+
+    <string name="ec13"> بچے کا لائن نمبر </string>
+
+    <string name="ec14"> بچے کا نام </string>
+
+    <string name="ec15"> (نام) کی جنس کیا ہے ؟ </string>
+    <string name="ec151"> لڑکا </string>
+    <string name="ec152"> لڑکی </string>
+
+    <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
+    <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
+    <string name="ec18"> بچے کے ساتھ جواب دہندہ کا رشتہ  </string>
+    <string name="ec181"> والدہ </string>
+    <string name="ec182"> والد </string>
+    <string name="ec183"> دیکھ بھال کرنے والا/والی </string>
+    <string name="ec184"> گھر کا کوئی اور رکن </string>
+    <string name="ec1898"> دیگر وضاحت </string>
+
+    <string name="ec03"> انٹرویو لینے والے کا نام </string>
+    <string name="ec03a"> انٹرویو لینے والے کا کوڈ </string>
+
+    <string name="ec04"> سُپروائزر کا نام </string>
+    <string name="ec04a"> سُپروائزر کا کوڈ نمبر </string>
+
+    <string name="ec01"> انٹرویو کا دن / مہینہ / سال  </string>
+    <string name="ec01a"> دن </string>
+    <string name="ec01b"> مہینہ </string>
+    <string name="ec01c"> سال  </string>
+
+    <string name="ec02"> وقت ریکارڈ کریں </string>
+    <string name="ec02a"> گھنٹے </string>
+    <string name="ec02b"> منٹس </string>
+
+    <string name="ec19"> چیک کریں کہ کیا آیا اس گھر میں جواب دہندہ کا انٹرویو گھریلو یا بچوں کے سوالنامہ کے لئے کر لیا گیا ہے ؟ </string>
+    <string name="ec19a"> ہاں، پہلے ہی انٹرویو ہو چکا ہے </string>
+    <string name="ec19b"> نہیں ، پہلا انٹرویو </string>
+
+    <string name="ec21"> براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی/سکتا ہوں ؟ </string>
+    <string name="ec21_info"> اسلام و علیکم، میرا نام (آپ کا نام) ہے۔ ہ ہمارا تعلق قومی ادارہ صحت، حکومت پاکستان سے ہیں۔ ہم پاکستان میں بچوں کی صحت کے حوالے سے ایک سروے کا انعقاد کررہے ہیں۔ میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً 30 منٹس لگیں گے۔ آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں </string>
+    <string name="ec21a"> ہاں، اجازت مل گئی ہے </string>
+    <string name="ec20b"> نہیں، اجازت نہیں ملی </string>
+    <string name="ec20b_title"> اب میں آپ سے آپ کے (بچے کا نام) کی حفاظتی ٹیکوں کی گزشتہ معلومات کے بارے میں مزید تفصیل سے بات کرنا چاہتا / چاہتی ہوں۔ اس انٹرویو میں تقریباً  30منٹس لگیں گے۔ میں پھر کہتا / کہتی ہوں کہ، آپ سے حاصل کردہ تمام معلومات مکمل طور پر خفیہ اور رہیں گی اور آپ کا نام ظاہر نہیں کیا جائے گا۔ اگر آپ کسی سوال کا جواب نہیں دینا چاہتے یا اس انٹرویو کو روکنا چاہتے ہیں، تو براہ کرم مجھے بتائیں۔ کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
+
+    <string name="ec22"> بارہ سے تئیس مہینے کے بچے کے انٹرویو کا نتیجہ </string>
+    <string name="ec22a"> مکمل </string>
+    <string name="ec22b"> جزوی طور پر مکمل </string>
+    <string name="ec22c"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="ec22d"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
+    <string name="ec22e"> بچہ اہل نہیں / بچے کی عمر 12 سے 23 مہینے نہیں ہے- </string>
+    <string name="ec22f">  معذوری (وضاحت کریں) </string>
+    <string name="ec22g"> انکار کردیا </string>
+    <string name="ec22h">  خالی گھر / غیر رہائشی </string>
+    <string name="ec22i"> گھر نہیں ملا </string>
+    <string name="ec2296">  دیگر وضاحت کریں </string>
+
+    <string name="ec0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
+    <string name="cb0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
+    <string name="cb01"> آپ کی زیادہ سے زیادہ مکمل کردہ تعلیم کتنی ہے ؟ </string>
+    <string name="cb01a"> گریڈ </string>
+    <string name="cb01b"> مذہبی تعلیم </string>
+    <string name="cb01dk"> معلوم نہیں کے لئے 98 درج کریں </string>
+
+    <string name="cb02"> بچہ / بچی (نام) کے والد کی مکمل کردہ زیادہ سے زیادہ تعلیم کتنی ہے؟ </string>
+    <string name="cb02a"> گریڈ </string>
+    <string name="cb02b"> مذہبی تعلیم </string>
+    <string name="cb02dk"> معلوم نہیں کے لئے 98 درج کریں </string>
+
+    <string name="cb03">  بچہ/بچی (نام) کی  پیدائش کس دن، مہینے اور سال میں ہوئی تھی ؟ </string>
+    <string name="cb03_info"> اگر ماں / دیکھ بھال کرنے والا  بچے کی پیدائش کی صحیح تاریخ جانتے ہیں ، تو پھر دن بھی ریکارڈ کریں؛ ورنہ ، دن کے لئے \'98\' پر نشان لگائیں۔ مہینہ اور سال ریکارڈ کرنا ضروری ہے مزید پوچھیں: (بچے/بچی )کی تاریخ پیدائش کیا ہے؟ </string>
+    <string name="cb03dd"> پیدائش کا دن </string>
+    <string name="cb03mm"> پیدائش کا مہینہ </string>
+    <string name="cb03yy"> پیدائش کا سال </string>
+    <string name="cb03dk"> دن معلوم نہیں </string>
+
+    <string name="cb04"> عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. </string>
+    <string name="cb04mm"> عمر (مکمل سالوں میں) </string>
+    <string name="cb04yy"> عمر (مکمل مہینوں میں) </string>
+
+    <string name="im1title1"> سے چیک کریں :CB4 اہل بچے کی عمر سوال نمبر </string>
+    <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
+
+    <string name="im01"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
+    <string name="im011"> ہاں دیکھ لیا </string>
+    <string name="im012">  ہاں، کارڈنہیں دیکھا </string>
+    <string name="im013"> کارڈ نہیں ہے </string>
+
+    <string name="im02"> کیا بچے کے لئے آپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا ؟ </string>
+    <string name="im021"> ہاں </string>
+    <string name="im022"> نہیں </string>
+
+    <string name="im03"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا ؟ </string>
+    <string name="im031"> میرے خیال سے اتنا اہم نہیں </string>
+    <string name="im032"> کبھی مرکز صحت میں نہیں گئے </string>
+    <string name="im033"> گم گیا ہے </string>
+    <string name="im034"> سہولت فراہم کرنے والے کے پاس کارڈ دستیاب نہیں تھا</string>
+    <string name="im035"> ویکسینیٹر/ مرکزصحت نے کارڈ مہیا نہیں کی</string>
+    <string name="im036"> ایسے کارڈوں سے واقف نہیں </string>
+    <string name="im0396"> دیگر وضاحت کریں</string>
+
+    <string name="im04"> کارڈ پر لکھی ہوئی تاریخ پیدائش چیک کر یں اور درج کریں۔ </string>
+    <string name="im04dd"> دن </string>
+    <string name="im04dd1"> دن معلوم نہیں </string>
+    <string name="im04mm"> مہینہ </string>
+    <string name="im04yy">  سال </string>
+
+    <string name="im05title1"> حفاظتی ٹیکوں کی تفصیلات </string>
+    <string name="im05title2"> حفاظتی ٹیکوں کے کارڈ سے ہرحفاظتی ٹیکے کی تاریخ لکھ دیں۔ اگر کارڈ دکھاتا ہے کہ ویکسینیشن فراہم کی گئی تھی لیکن کوئی تاریخ ریکارڈ نہیں ہوئی یا اگر کارڈ میں لکھی ہوئی تاریخ واضع طور پر پڑھی نہیں جارہی ہے تو دن کے کالم میں &quot;44&quot; لکھیں۔ اگر مخصوص ویکسین کا کوئی ریکارڑنہیں ہے تو ، دن ، مہینے اور سال کے کالم میں &quot;97&quot; لکھیں</string>
+
+    <string name="im0501"> (بی سی جی) ٹی بی کی بیماری سے بچائو کا ٹیکہ </string>
+    <string name="im0501dd"> دن </string>
+    <string name="im0501mm"> مہینہ </string>
+    <string name="im0501yy"> سال </string>
+
+    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک </string>
+    <string name="im0502dd"> دن </string>
+    <string name="im0502mm"> مہینہ </string>
+    <string name="im0502yy"> سال </string>
+
+    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
+    <string name="im0503dd"> دن </string>
+    <string name="im0503mm"> مہینہ </string>
+    <string name="im0503yy"> سال </string>
+
+    <string name="im0504"> پہلی خوراک پینٹا وایلنٹ ویکسین </string>
+    <string name="im0504dd"> دن </string>
+    <string name="im0504mm"> مہینہ </string>
+    <string name="im0504yy"> سال </string>
+
+    <string name="im0505"> پہلی خوراک نمونیا کی ویکسین </string>
+    <string name="im0505dd"> دن </string>
+    <string name="im0505mm"> مہینہ </string>
+    <string name="im0505yy"> سال </string>
+
+    <string name="im0506"> روٹا وائرس ویکسین 1 </string>
+    <string name="im0506dd"> دن </string>
+    <string name="im0506mm"> مہینہ </string>
+    <string name="im0506yy"> سال </string>
+
+    <string name="im0507"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) دوسری خوراک </string>
+    <string name="im0507dd"> دن </string>
+    <string name="im0507mm"> مہینہ </string>
+    <string name="im0507yy"> سال </string>
+
+    <string name="im0508"> دوسری خوراک  پینٹاوایلنٹ ویکسین </string>
+    <string name="im0508dd"> دن </string>
+    <string name="im0508mm"> مہینہ </string>
+    <string name="im0508yy"> سال </string>
+
+    <string name="im0509"> دوسری  خوراک  نمونیا کی ویکسین </string>
+    <string name="im0509dd"> دن </string>
+    <string name="im0509mm"> مہینہ </string>
+    <string name="im0509yy"> سال </string>
+
+    <string name="im0510"> روٹا وائرس ویکسین 2 </string>
+    <string name="im0510dd"> دن </string>
+    <string name="im0510mm"> مہینہ </string>
+    <string name="im0510yy"> سال </string>
+
+    <string name="im0511"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) تیسری خوراک </string>
+    <string name="im0511dd"> دن </string>
+    <string name="im0511mm"> مہینہ </string>
+    <string name="im0511yy"> سال </string>
+
+    <string name="im0512"> تیسری خوراک پینٹاوایلنٹ ویکسین </string>
+    <string name="im0512dd"> دن </string>
+    <string name="im0512mm"> مہینہ </string>
+    <string name="im0512yy"> سال </string>
+
+    <string name="im0513"> تیسری خوراک (نمونیا کی ویکسین) </string>
+    <string name="im0513dd"> دن </string>
+    <string name="im0513mm"> مہینہ </string>
+    <string name="im0513yy"> سال </string>
+
+    <string name="im0514"> پولیو (آئی پی وی انجکشن) </string>
+    <string name="im0514dd"> دن </string>
+    <string name="im0514mm"> مہینہ </string>
+    <string name="im0514yy"> سال </string>
+
+    <string name="im0515"> (خسرہ کا ٹیکہ) پہلی خوراک </string>
+    <string name="im0515dd"> دن </string>
+    <string name="im0515mm"> مہینہ </string>
+    <string name="im0515yy"> سال </string>
+
+    <string name="im0516"> (خسرہ کا ٹیکہ) دوسری خوراک </string>
+    <string name="im0516dd"> دن </string>
+    <string name="im0516mm"> مہینہ </string>
+    <string name="im0516yy"> سال </string>
+
+    <string name="im06"> اس کارڈ پر درج ویکسین کے علاوہ جو آپ نے مجھے دکھایا ہے، کیا بچے کو کوئی اور اضافی ویکسین بھی لگی ہے ؟  </string>
+    <string name="im061">  ہاں</string>
+    <string name="im062"> نہیں</string>
+    <string name="im063"> معلوم نہیں</string>
+
+    <string name="im07">  ٓئی ایم۴ چیک کریں: کیا تمام حفاظتی ٹیکوں (بی سی جی سے لے کر خسرہ کی دوسری خوراک تک کی معلومات ریکارڈ کر لی گئی ہیں ؟ </string>
+    <string name="im071"> ہاں</string>
+    <string name="im072">   نہیں</string>
+
+    <string name="im08"> کیا بچے کو کوئی ویکسین لگی ہے جو اسے بیماریوں سے بچا سکے۔ اس میں حفاظتی ٹیکوں کی مہم کے دوران لگنے والی ویکسین ، حفاظتی ٹیکے لگانے والا دن یا بچوں کی صحت کے دن لگنے والی ویکسین شامل ہیں۔</string>
+    <string name="im081"> ہاں</string>
+    <string name="im082">  نہیں</string>
+    <string name="im083"> معلوم نہیں</string>
+
+    <string name="im09"> کیا بچےکوکبھی ٹی بی(تپ دق) کی بیماری سے بچاؤکے لئے بی سی جی کی ویکسین لگی ہے، یہ ایک انجکشن ہےجوعام طور پر بازو یا کندھے میں لگایا جاتا ہے جس کی وجہ سے بازو یا کندھے پر نشان پڑ جاتا ہے ؟ </string>
+    <string name="im091"> ہاں</string>
+    <string name="im092"> نہیں</string>
+    <string name="im093"> معلوم نہیں</string>
+
+    <string name="im10"> کیا بچےکوکبھی منہ کے ذ ریعے دیئے جانے والے  پولیو کی بیماری سے بچاؤکے قطرےپلوائے گئے ہیں؟   نشاندہی کرتے ہوئے  اس بات کی تحقیق کریں کہ بعض اوقات پولیو کے قطروں کی پہلی خوراک پیدائش کے وقت اور دیگر بیماریوں سے بچاؤکے انجکشن لگاتے وقت ایک ساتھ ہی دے دی جاتی ہے</string>
+    <string name="im101"> ہاں</string>
+    <string name="im102">  نہیں</string>
+    <string name="im103"> معلوم نہیں</string>
+
+    <string name="im11"> کیا پہلی بار پلائے گئے پولیو کے قطرے پیدائش کے بعد پہلے دو ہفتوں میں دیئے گئے تھے ؟ </string>
+    <string name="im111">  ہاں </string>
+    <string name="im112">  نہیں </string>
+    <string name="im113">  معلوم نہیں </string>
+
+    <string name="im12"> پولیو کے قطرے کتنی بار پلائے گئے تھے ؟ تعداد </string>
+
+    <string name="im13"> آخری بار جب بچے کو پولیو کے قطرے پلائے  گئے تھے؛ تو کیا اس وقت (بچے / بچی) کو پولیو سے بچائو کا ٹیکہ بھی لگوایا گیا تھا ؟ اس بات کی یقین دہانی کرنے کے لئے مزید پوچھیں کہ اس وقت قطرے اور ٹیکہ دونوں دیئے گئے تھے۔ </string>
+    <string name="im131"> ہاں </string>
+    <string name="im132"> نہیں </string>
+    <string name="im133"> معلوم نہیں </string>
+
+    <string name="im14"> کیا بچہ / بچی کو کبھی Pentavalent کا انجیکشن لگا ہے یہ ایک انجکشن ہے جو ران میں لگایا جاتا ہے جو بچہ / بچی کو تشنج، کالی کھانسی، خناق، ہیپاٹاٹس کی بیماری اور ہیمو فائلس انفلوئنزا بی سے محفوظ رکھتا ہے ؟ </string>
+    <string name="im141"> ہاں </string>
+    <string name="im142">  نہیں </string>
+    <string name="im143"> معلوم نہیں </string>
+
+    <string name="im15"> پینٹا ویلینٹ ویکسین کتنی بار لگی تھی ؟ تعداد  </string>
+
+    <string name="im16"> کیا (نام) کو کبھی نمونیہ Pneumococcal کی ویکسین لگی ہے جو ایک انجیکشن ران میں لگایا جاتا ہے جس سے وہ بچہ / بچی نمونیہ کان کا انفیکشن اور گردن توڑ بخار کی بیماریوں سے محفوظ رہتا ہے ؟ </string>
+    <string name="im161"> ہاں</string>
+    <string name="im162"> نہیں</string>
+    <string name="im163"> معلوم نہیں</string>
+
+    <string name="im17"> نمونیہ کی ویکسین کتنی بار لگی تھی ؟ تعداد </string>
+
+    <string name="im18"> کیا بچے کو کبھی روٹا وائرس سے بچاؤ کے قطرے پلاۓ گئے ہیں ؟ ہے ؟ یہ قطرے منہ کے ذریعے پیدائش کے چھے ہفتے بعد دی جاتی ہے،  روٹا وائرس چھوٹے بچوں میں شدید اسہال کی سب سے بڑی وجہ بنتی ہے۔ </string>
+    <string name="im181"> ہاں </string>
+    <string name="im182"> نہیں </string>
+    <string name="im183">  معلوم نہیں </string>
+
+    <string name="im19"> قطرے کتنی بار پلائے گئے تھے ؟ تعداد </string>
+
+    <string name="im20"> کیا بچہ / بچی (نام) کو کبھی آئی پی وی انجکشن لگا ہے، ایک انجکشن جو 14 ہفتے یا اس سے زیادہ عمر میں ران  میں لگایا جاتا ہے جس سے ( بچہ / بچی ) پولیو  کی بیماری سے محفوظ رہتا / رہتی ہے ؟ </string>
+    <string name="im201"> ہاں </string>
+    <string name="im202"> نہیں </string>
+    <string name="im203"> معلوم نہیں </string>
+
+    <string name="im21"> کیا بچے کو کبھی خسرہ کا ٹیکہ لگا ہے، جو ایک انجکشن 9 مہینے یا اس سے زیادہ عمر میں بازو میں لگایا جاتا ہے جس سے (بچہ / بچی) خسرہ کی بیماری سے محفوظ رہتا ہے ؟ </string>
+    <string name="im211"> ہاں </string>
+    <string name="im212"> نہیں </string>
+    <string name="im213"> معلوم نہیں </string>
+
+    <string name="im22"> کتنی بار خسرہ کا ٹیکہ لگا تھا ؟ تعداد </string>
+
+    <string name="im23"> بچے کو عام طور پر حفاظتی ٹیکے کہاں سے لگواتے ہیں ؟ اگر بچے کو حفاظتی ٹیکے مختلف ذرائع سے لگوائے گئے ہیں، تو معمول کے مطابق سب سے زیادہ ویکسین جس جگہ سے لگوائی گئیں ہیں اس کو بیان کریں۔ </string>
+    <string name="im231"> سرکاری مرکز صحت </string>
+    <string name="im232"> پرائیوٹ مرکز صحت </string>
+    <string name="im233"> سرکاری آؤٹ ریچ سروس </string>
+    <string name="im234"> حفاظتی ٹیکے نہیں لگوائے </string>
+    <string name="im236"> دیگر </string>
+
+    <string name="im23a"> کیا آپ براۓ مہربانی بتا سکتی ہیں کہ یہ مرکز صحت کہاں واقع ہے ؟ </string>
+    <string name="im23a1"> اسی احاطے کے دس کلومیڑ کے </string>
+    <string name="im23a2"> ضلع / شہر کے اندر </string>
+    <string name="im23a3"> ضلع / شہر سے باہر </string>
+    <string name="im23a96"> دیگر </string>
+
+
+    <string name="im24"> بچے کو حفاظتی ٹیکے کیوں نہیں لگوائے ؟ اگر بچے کو تمام حفاظتی ٹیکے نہیں لگوائے گئے، تو ماں / دیکھ بھال کرنے والے سے  پوچھیں۔ بتائی گئیں تمام وجوہات کو ریکارڈ کریں لیکن فوری طور پر کسی مخصوص وجہ پر مت جائیں۔ ماں کو تمام وجوہات فراہم کرنے کی ترغیب دیں۔ </string>
+    <string name="im241"> حفاظتی ٹیکوں کا مرکزبہت دور تھا </string>
+    <string name="im242"> حفاظتی ٹیکے لگائے جانے کا وقت مناسب نہیں تھا </string>
+    <string name="im243"> ماں مصروف تھی </string>
+    <string name="im244"> ماں کی بیماری سمیت، خاندانی مسائل </string>
+    <string name="im245"> بچہ بیمار تھا، لے کر نہیں گئے </string>
+    <string name="im246"> بچہ بیمار تھا، لے کر گئے تھے لیکن ویکسین نہیں لگائی </string>
+    <string name="im247"> طویل انتظار کرنے کی وجہ سے نہیں لگوائی </string>
+    <string name="im248"> افواہوں کی وجہ سے نہیں لگوائی </string>
+    <string name="im249"> حفاظتی ٹیکے لگوانے پر یقین نہیں ہے </string>
+    <string name="im2410"> ضمنی اثرات کا خوف </string>
+    <string name="im2411"> حفاظتی ٹیکے لگوانے کی جگہ اور وقت معلوم نہیں تھا </string>
+    <string name="im2412"> بچے کو لے کر گئے لیکن ویکسین نہیں تھی </string>
+    <string name="im2413"> بچے کو لے کر گئے لیکن ویکسین لگانے والا اسٹاف نہیں تھا </string>
+    <string name="im2414"> بچے کو لے کر گئے لیکن حفاظتی ٹیکوں کا مرکز بند تھا </string>
+    <string name="im2415"> بچہ بیمار تھا </string>
+    <string name="im2416"> بچے کو لے کر گئے لیکن ٹیکے لگانے کا دن نہیں تھا </string>
+    <string name="im2417"> دیگر </string>
+    <string name="im2499"> معلوم نہیں </string>
+
+    <string name="im25"> اس بچے کے حفاظتی ٹیکوں کے ریکارڈ کے لئے مرکز صحت پر ایک سوالنامہ کا فارم جاری کریں۔ اس سوالنامہ کا انفارمیشن پینل مکمل کریں۔ </string>
+
+    <string name="im26a"> حفاظتی ٹیکوں کے بارے میں جواب دہندہ کی معلومات  </string>
+    <string name="im26b"> سوالوں کے جواب میں جواب دہندہ کا تعاون اور رویہ۔   </string>
+    <string name="im26c"> کارڈ کی دستیابی ، تکمیل (خاص طور پر کارڈ دکھایا گیا لیکن آپ اسے واضح طور پر پڑھ نہیں سکے)  </string>
+    <string name="im26d"> دیگر تبصرے اگر کوئی  </string>
+
+
+    <string name="end_interview"> انٹرویو ختم کریں </string>
+    <string name="start_interview"> انٹرویو شروع کریں </string>
+    <string name="nextSection"> اگلا سیکشن </string>
+    <string name="nextPregnancy"> Next Pregnancy </string>
+    <string name="nextMortality"> Next Mortality </string>
+
+    <string name="dialog_text"> Surely! You Want To Exit this Child Module? </string>
+    <string name="countNo"> نہیں </string>
+    <string name="countYes"> جی ہاں </string>
+    <string name="countAlertMsg"> یقینا! آپ جاری رکھنا چاہتے ہیں </string>
+    <string name="splashText1">" Coverage Evaluation Survey, Pakistan, 2020 "</string>
+    <string name="title_activity_family_members_list">" Family Members List "</string>
+    <string name="yes">" ہاں "</string>
+    <string name="ss18g_title">Finished Floor</string>
+    <string name="ss18l">Bricks</string>
+    <string name="ss18m">Lime</string>
+    <string name="name_not_found">Name Not Found</string>
+    <string name="father_name_not_found">Father name Not Found</string>
+    <string name="mother_name_not_found">Mother name Not Found</string>
+    <string name="serialStart">00</string>
+    <string name="cb01_sub">"  جہاں تک ماں  یا دیکھ بھال کرنے والے کا تعلیمی گریڈ  ہےپوچھیں۔ (اگر غیر تعلیم تافتہ یا ان پڑھ تو 77 لکھیں اور مذہبی تعلیم کے لئے 20 لھکیں) "</string>
+    <string name="cb02_sub">اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں</string>
+    <string name="cb03_sub">اگر غیر تعلیم تافتہ یا ان پڑھ ہیں تو 77 لکھیں۔ کسی بھی قسم کی مذہبی تعلیم کے لئے &quot; 20 &quot; لکھیں</string>
+    <string name="cb04_sub">"عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں. اگرعمر 1 سال سے کم ہے تو سال میں '0' ریکارڈ کریں ۔ عمر مکمل سالوں اور مہینوں میں ریکارڈ کریں ۔ اگر عمر 1 سال سے کم ہے تو '0' ریکارڈ کریں کے جوابات مطابقت نہیں رکھتے یا ان میں تضادہے، تو مزید تحقیق کریں، اور ان کو درست کریں CB4 اور CB3 اگر سوال "</string>
+    <string name="im01_sub">" اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا/ سکتی ہوں"</string>
+
+    <string name='Q_ec0_title'>ec0_title</string>
+    <string name='Q_cb0_title'>cb0_title</string>
+    <string name='Q_cb01'>cb01</string>
+    <string name='Q_cb02'>cb02</string>
+    <string name='Q_cb03'>cb03</string>
+    <string name='Q_cb04'>cb04</string>
+    <string name='Q_ec15'>ec15</string>
+    <string name='Q_ch_childid'>ch_childid</string>
+    <string name='Q_ch_cluster'>ch_cluster</string>
+    <string name='Q_ch_hno'>ch_hno</string>
+    <string name='Q_ch_title'>ch_title</string>
+    <string name='Q_ch01'>ch01</string>
+    <string name='Q_ch02'>ch02</string>
+    <string name='Q_ch03'>ch03</string>
+    <string name='Q_ch04'>ch04</string>
+    <string name='Q_ch05'>ch05</string>
+    <string name='Q_ch06'>ch06</string>
+    <string name='Q_ch07'>ch07</string>
+    <string name='Q_ch08'>ch08</string>
+    <string name='Q_childid'>childid</string>
+    <string name='Q_hf_childid'>hf_childid</string>
+    <string name='Q_hf01'>hf01</string>
+    <string name='Q_hf01_title'>hf01_title</string>
+    <string name='Q_hf02'>hf02</string>
+    <string name='Q_hf03'>hf03</string>
+    <string name='Q_hf04'>hf04</string>
+    <string name='Q_hf05'>hf05</string>
+    <string name='Q_hf05a'>hf05a</string>
+    <string name='Q_hf06'>hf06</string>
+    <string name='Q_hf06a'>hf06a</string>
+    <string name='Q_hf07'>hf07</string>
+    <string name='Q_hf08'>hf08</string>
+    <string name='Q_hf09_title'>hf09_title</string>
+    <string name='Q_hf10'>hf10</string>
+    <string name='Q_hf11'>hf11</string>
+    <string name='Q_hf12_10rv2'>hf12_10rv2</string>
+    <string name='Q_hf12_11opv3'>hf12_11opv3</string>
+    <string name='Q_hf12_12penta3'>hf12_12penta3</string>
+    <string name='Q_hf12_13pcv3'>hf12_13pcv3</string>
+    <string name='Q_hf12_15measles1'>hf12_15measles1</string>
+    <string name='Q_hf12_16measles2'>hf12_16measles2</string>
+    <string name='Q_hf12_1bcg'>hf12_1bcg</string>
+    <string name='Q_hf12_2opv0'>hf12_2opv0</string>
+    <string name='Q_hf12_3opv1'>hf12_3opv1</string>
+    <string name='Q_hf12_4penta1'>hf12_4penta1</string>
+    <string name='Q_hf12_5pcv1'>hf12_5pcv1</string>
+    <string name='Q_hf12_6rv1'>hf12_6rv1</string>
+    <string name='Q_hf12_7opv2'>hf12_7opv2</string>
+    <string name='Q_hf12_8penta2'>hf12_8penta2</string>
+    <string name='Q_hf12_9pcv2'>hf12_9pcv2</string>
+    <string name='Q_hf12_title1'>hf12_title1</string>
+    <string name='Q_hf12_title2'>hf12_title2</string>
+    <string name='Q_hf15'>hf15</string>
+    <string name='Q_hfhf03b'>hfhf03b</string>
+    <string name='Q_hfim04a'>hfim04a</string>
+    <string name='Q_hh10'>hh10</string>
+    <string name='Q_hh05'>hh05</string>
+    <string name='Q_hh06'>hh06</string>
+    <string name='Q_hh07'>hh07</string>
+    <string name='Q_hh08'>hh08</string>
+    <string name='Q_hh09'>hh09</string>
+    <string name='Q_hh11'>hh11</string>
+    <string name='Q_hh12'>hh12</string>
+    <string name='Q_hh063'>hh063</string>
+    <string name='Q_hh063a'>hh063a</string>
+    <string name='Q_hh074'>hh074</string>
+    <string name='Q_hh074a'>hh074a</string>
+    <string name='Q_hh01'>hh01</string>
+    <string name='Q_hh02'>hh02</string>
+    <string name='Q_hh13'>hh13</string>
+    <string name='Q_hh13a'>hh13a</string>
+    <string name='Q_hh14'>hh14</string>
+    <string name='Q_hh15'>hh15</string>
+    <string name='Q_hh16'>hh16</string>
+    <string name='Q_hh16a'>hh16a</string>
+    <string name='Q_hh16b'>hh16b</string>
+    <string name='Q_hh17'>hh17</string>
+    <string name='Q_hh18'>hh18</string>
+    <string name='Q_hh19'>hh19</string>
+    <string name='Q_hh20'>hh20</string>
+    <string name='Q_hh20a'>hh20a</string>
+    <string name='Q_hh21'>hh21</string>
+    <string name='Q_hh22'>hh22</string>
+    <string name='Q_hw1'>hw1</string>
+    <string name='Q_hw12_10rv2'>hw12_10rv2</string>
+    <string name='Q_hw12_11opv3'>hw12_11opv3</string>
+    <string name='Q_hw12_12penta3'>hw12_12penta3</string>
+    <string name='Q_hw12_13pcv3'>hw12_13pcv3</string>
+    <string name='Q_hw12_14ipv'>hw12_14ipv</string>
+    <string name='Q_hw12_15measles1'>hw12_15measles1</string>
+    <string name='Q_hw12_16measles2'>hw12_16measles2</string>
+    <string name='Q_hw12_1bcg'>hw12_1bcg</string>
+    <string name='Q_hw12_2opv0'>hw12_2opv0</string>
+    <string name='Q_hw12_3opv1'>hw12_3opv1</string>
+    <string name='Q_hw12_4penta1'>hw12_4penta1</string>
+    <string name='Q_hw12_5pcv1'>hw12_5pcv1</string>
+    <string name='Q_hw12_6rv1'>hw12_6rv1</string>
+    <string name='Q_hw12_7opv2'>hw12_7opv2</string>
+    <string name='Q_hw12_8penta2'>hw12_8penta2</string>
+    <string name='Q_hw12_9pcv2'>hw12_9pcv2</string>
+    <string name='Q_hw12_title1'>hw12_title1</string>
+    <string name='Q_hw12_title2'>hw12_title2</string>
+    <string name='Q_hw12_title3'>hw12_title3</string>
+    <string name='Q_hw13'>hw13</string>
+    <string name='Q_hw15_1'>hw15_1</string>
+    <string name='Q_hw15_2'>hw15_2</string>
+    <string name='Q_hw15_3'>hw15_3</string>
+    <string name='Q_hw15_ex'>hw15_ex</string>
+    <string name='Q_hw2'>hw2</string>
+    <string name='Q_hw3'>hw3</string>
+    <string name='Q_hw3a'>hw3a</string>
+    <string name='Q_hw4'>hw4</string>
+    <string name='Q_hw5'>hw5</string>
+    <string name='Q_hw5a'>hw5a</string>
+    <string name='Q_hw6'>hw6</string>
+    <string name='Q_hw6a'>hw6a</string>
+    <string name='Q_hw7'>hw7</string>
+    <string name='Q_hw8a'>hw8a</string>
+    <string name='Q_hw8b'>hw8b</string>
+    <string name='Q_im01'>im01</string>
+    <string name='Q_im02'>im02</string>
+    <string name='Q_im03'>im03</string>
+    <string name='Q_im04'>im04</string>
+    <string name='Q_im06'>im06</string>
+    <string name='Q_im07'>im07</string>
+    <string name='Q_im08'>im08</string>
+    <string name='Q_im09'>im09</string>
+    <string name='Q_im1_title1'>im1_title1</string>
+    <string name='Q_im10'>im10</string>
+    <string name='Q_im11'>im11</string>
+    <string name='Q_im12'>im12</string>
+    <string name='Q_im13'>im13</string>
+    <string name='Q_im14'>im14</string>
+    <string name='Q_im15'>im15</string>
+    <string name='Q_im16'>im16</string>
+    <string name='Q_im17'>im17</string>
+    <string name='Q_im18'>im18</string>
+    <string name='Q_im19'>im19</string>
+    <string name='Q_im20'>im20</string>
+    <string name='Q_im21'>im21</string>
+    <string name='Q_im22'>im22</string>
+    <string name='Q_im23'>im23</string>
+    <string name='Q_im23a'>im23a</string>
+    <string name='Q_im24'>im24</string>
+    <string name='Q_im25'>im25</string>
+    <string name='Q_im26a'>im26a</string>
+    <string name='Q_im26b'>im26b</string>
+    <string name='Q_im26c'>im26c</string>
+    <string name='Q_im26d'>im26d</string>
+    <string name='Q_im0510'>im0510</string>
+    <string name='Q_im0511'>im0511</string>
+    <string name='Q_im0512'>im0512</string>
+    <string name='Q_im0513'>im0513</string>
+    <string name='Q_im0514'>im0514</string>
+    <string name='Q_im0515'>im0515</string>
+    <string name='Q_im0516'>im0516</string>
+    <string name='Q_im0501'>im0501</string>
+    <string name='Q_im0502'>im0502</string>
+    <string name='Q_im0503'>im0503</string>
+    <string name='Q_im0504'>im0504</string>
+    <string name='Q_im0505'>im0505</string>
+    <string name='Q_im0506'>im0506</string>
+    <string name='Q_im0507'>im0507</string>
+    <string name='Q_im0508'>im0508</string>
+    <string name='Q_im0509'>im0509</string>
+    <string name='Q_im05_title1'>im05_title1</string>
+    <string name='Q_im05_title2'>im05_title2</string>
+    <string name='Q_imtitle2'>imtitle2</string>
+    <string name='Q_ss01'>ss01</string>
+    <string name='Q_ss02'>ss02</string>
+    <string name='Q_ss03'>ss03</string>
+    <string name='Q_ss04'>ss04</string>
+    <string name='Q_ss05'>ss05</string>
+    <string name='Q_ss06'>ss06</string>
+    <string name='Q_ss07'>ss07</string>
+    <string name='Q_ss08'>ss08</string>
+    <string name='Q_ss09'>ss09</string>
+    <string name='Q_ss10'>ss10</string>
+    <string name='Q_ss11'>ss11</string>
+    <string name='Q_ss12'>ss12</string>
+    <string name='Q_ss13'>ss13</string>
+    <string name='Q_ss14'>ss14</string>
+    <string name='Q_ss14a'>ss14a</string>
+    <string name='Q_ss14b'>ss14b</string>
+    <string name='Q_ss14c'>ss14c</string>
+    <string name='Q_ss14d'>ss14d</string>
+    <string name='Q_ss14e'>ss14e</string>
+    <string name='Q_ss14f'>ss14f</string>
+    <string name='Q_ss14g'>ss14g</string>
+    <string name='Q_ss14h'>ss14h</string>
+    <string name='Q_ss14i'>ss14i</string>
+    <string name='Q_ss14j'>ss14j</string>
+    <string name='Q_ss14k'>ss14k</string>
+    <string name='Q_ss14l'>ss14l</string>
+    <string name='Q_ss14m'>ss14m</string>
+    <string name='Q_ss14n'>ss14n</string>
+    <string name='Q_ss14o'>ss14o</string>
+    <string name='Q_ss14p'>ss14p</string>
+    <string name='Q_ss14q'>ss14q</string>
+    <string name='Q_ss14r'>ss14r</string>
+    <string name='Q_ss14s'>ss14s</string>
+    <string name='Q_ss15'>ss15</string>
+    <string name='Q_ss15a'>ss15a</string>
+    <string name='Q_ss15b'>ss15b</string>
+    <string name='Q_ss15c'>ss15c</string>
+    <string name='Q_ss15d'>ss15d</string>
+    <string name='Q_ss15e'>ss15e</string>
+    <string name='Q_ss15f'>ss15f</string>
+    <string name='Q_ss15g'>ss15g</string>
+    <string name='Q_ss15h'>ss15h</string>
+    <string name='Q_ss15i'>ss15i</string>
+    <string name='Q_ss16'>ss16</string>
+    <string name='Q_ss17'>ss17</string>
+    <string name='Q_ss18'>ss18</string>
+    <string name='Q_ss19'>ss19</string>
+    <string name='Q_ss20'>ss20</string>
+    <string name='Q_ss21'>ss21</string>
+    <string name='Q_ss22'>ss22</string>
+    <string name='Q_ss23'>ss23</string>
+    <string name='Q_ss24'>ss24</string>
+    <string name='Q_ss25'>ss25</string>
+    <string name='Q_ss26'>ss26</string>
+    <string name='Q_ss27'>ss27</string>
+    <string name='Q_ss27_title'>ss27_title</string>
+    <string name='Q_ss28'>ss28</string>
+    <string name='Q_ec05'>ec05</string>
+    <string name='Q_ec06'>ec06</string>
+    <string name='Q_ec07'>ec07</string>
+    <string name='Q_ec08'>ec08</string>
+    <string name='Q_ec09'>ec09</string>
+    <string name='Q_ec11'>ec11</string>
+    <string name='Q_ec12'>ec12</string>
+    <string name='Q_ec14'>ec14</string>
+    <string name='Q_ec13'>ec13</string>
+    <string name='Q_ec16'>ec16</string>
+    <string name='Q_ec03'>ec03</string>
+    <string name='Q_ec03a'>ec03a</string>
+    <string name='Q_ec04'>ec04</string>
+    <string name='Q_ec04a'>ec04a</string>
+    <string name='Q_ec01'>ec01</string>
+    <string name='Q_ec02'>ec02</string>
+    <string name='Q_ec19'>ec19</string>
+    <string name='Q_ec21'>ec21</string>
+    <string name='Q_ec20b_title'>ec20b_title</string>
+    <string name='Q_ec22'>ec22</string>
+    <string name='Q_ec17'>ec17</string>
+    <string name='Q_ec18'>ec18</string>
+    <string name="Q_ch03b">CH03b</string>
+    <string name="hhformInfo"> ۔HOUSEHOLD بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں</string>
+    <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-\12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
+
+
+</resources>
