@@ -338,6 +338,8 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
+
                 <!-- Take Photo   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVtakePhoto"
@@ -348,7 +350,6 @@
                         <LinearLayout
                             style="@style/hlinearlayout"
                             android:gravity="center_horizontal">
-
 
                             <Button
                                 android:id="@+id/frontPhoto"
@@ -400,11 +401,13 @@
                                 android:textColor="#7f7f7f7f"
                                 android:textSize="14dp" />
 
-
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
+
             </LinearLayout>
+
 
             <!--ENDBUTTON linearlayout-->
             <LinearLayout

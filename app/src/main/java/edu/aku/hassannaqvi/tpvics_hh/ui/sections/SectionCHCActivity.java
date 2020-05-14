@@ -53,14 +53,23 @@ public class SectionCHCActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
                 Clear.clearAllFields(bi.fldGrpCVim03, false);
                 Clear.clearAllFields(bi.fldGrpCVim04, true);
+                bi.fldGrpCVtakePhoto.setVisibility(View.VISIBLE);
+                bi.frontFileName.setText("");
+                bi.backFileName.setText("");
             } else if (i == bi.im012.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
                 Clear.clearAllFields(bi.fldGrpCVim04, false);
+                bi.fldGrpCVtakePhoto.setVisibility(View.GONE);
+                bi.frontFileName.setText("");
+                bi.backFileName.setText("");
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim02, true);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
                 Clear.clearAllFields(bi.fldGrpCVim04, false);
+                bi.fldGrpCVtakePhoto.setVisibility(View.GONE);
+                bi.frontFileName.setText("");
+                bi.backFileName.setText("");
             }
 
         }));
