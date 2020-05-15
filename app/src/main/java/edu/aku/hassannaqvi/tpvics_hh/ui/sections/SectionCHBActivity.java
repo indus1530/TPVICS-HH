@@ -36,6 +36,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 public class SectionCHBActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChBBinding bi;
+    boolean dtFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +164,10 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
     }
 
     private boolean formValidation() {
+        if (!dtFlag) {
+            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHB);
     }
 
@@ -217,7 +222,12 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         int year = Integer.parseInt(bi.cb03yy.getText().toString());
 
         AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
-        if (age == null) return;
+        if (age == null) {
+            bi.cb03yy.setError("Invalid date!!");
+            dtFlag = false;
+            return;
+        }
+        dtFlag = true;
         bi.cb04mm.setText(String.valueOf(age.getMonth()));
         bi.cb04yy.setText(String.valueOf(age.getYear()));
     }
