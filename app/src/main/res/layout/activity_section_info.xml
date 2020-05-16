@@ -117,7 +117,7 @@
                             android:paddingStart="12dp"
                             android:paddingEnd="12dp"
                             android:text="CHECK CLUSTER"
-                            android:textColor="@color/greenInfo" />
+                            android:textColor="@color/redInfo" />
 
                     </LinearLayout>
 
@@ -224,7 +224,7 @@
                                 android:paddingStart="12dp"
                                 android:paddingEnd="12dp"
                                 android:text="CHECK HOUSEHOLD"
-                                android:textColor="@color/greenInfo" />
+                                android:textColor="@color/redInfo" />
 
                         </LinearLayout>
 

@@ -61,7 +61,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:text="Yes, Exit"
-            android:textColor="@color/greenInfo" />
+            android:textColor="@color/redInfo" />
 
         <View
             android:layout_width="0dp"
@@ -77,7 +77,7 @@
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
             android:text="No"
-            android:textColor="@color/greenInfo" />
+            android:textColor="@color/redInfo" />
 
     </LinearLayout>
 

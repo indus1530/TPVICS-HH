@@ -247,7 +247,7 @@
                                 android:layout_marginBottom="16dp"
                                 android:background="@drawable/outline_btn"
                                 android:text="Login"
-                                android:textColor="@color/greenInfo"
+                                android:textColor="@color/redInfo"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
                         </LinearLayout>

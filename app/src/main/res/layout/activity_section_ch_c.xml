@@ -43,6 +43,7 @@
                 <LinearLayout style="@style/vlinearlayout">
 
                     <TextView
+                        style="@style/info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/imtitle2" />
@@ -363,7 +364,7 @@
                                 android:background="@drawable/outline_btn"
                                 android:onClick="takePhoto"
                                 android:text="Take Front Photo"
-                                android:textColor="@color/greenInfo" />
+                                android:textColor="@color/redInfo" />
 
                             <Button
                                 android:id="@+id/backPhoto"
@@ -377,7 +378,7 @@
                                 android:background="@drawable/outline_btn"
                                 android:onClick="takePhoto"
                                 android:text="Take Back Photo"
-                                android:textColor="@color/greenInfo" />
+                                android:textColor="@color/redInfo" />
 
                         </LinearLayout>
 

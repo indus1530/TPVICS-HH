@@ -11,7 +11,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/greenInfo"
+            android:background="@color/redInfo"
             android:gravity="center"
             android:minHeight="160dp"
             android:orientation="vertical"
@@ -71,7 +71,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="Yes, Exit"
-                android:textColor="@color/greenInfo" />
+                android:textColor="@color/redInfo" />
 
             <View
                 android:layout_width="0dp"
@@ -87,7 +87,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="No"
-                android:textColor="@color/greenInfo" />
+                android:textColor="@color/redInfo" />
 
         </LinearLayout>
 
