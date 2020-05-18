@@ -215,6 +215,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         if (bi.cb03dd.getText().toString().equals("98") && bi.cb03mm.getText().toString().equals("98") && bi.cb03yy.getText().toString().equals("9998")) {
             bi.cb04mm.setEnabled(true);
             bi.cb04yy.setEnabled(true);
+            dtFlag = true;
             return;
         }
         int day = bi.cb03dd.getText().toString().equals("98") ? 15 : Integer.parseInt(bi.cb03dd.getText().toString());
