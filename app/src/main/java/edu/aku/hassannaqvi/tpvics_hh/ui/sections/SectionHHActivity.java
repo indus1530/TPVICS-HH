@@ -158,7 +158,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", flag));
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
         }
     }
 
