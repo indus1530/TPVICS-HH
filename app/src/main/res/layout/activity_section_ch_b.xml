@@ -280,7 +280,7 @@
                                 android:onTextChanged="@{callback.cb03yyOnTextChanged}"
                                 app:defaultValue="9998"
                                 app:maxValue="2020"
-                                app:minValue="2015"
+                                app:minValue="2018"
                                 app:type="range" />
 
                         </LinearLayout>

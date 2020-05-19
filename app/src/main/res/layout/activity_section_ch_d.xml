@@ -2456,6 +2456,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im21  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim21"
@@ -2520,6 +2521,7 @@
 
                     </androidx.cardview.widget.CardView>
 
+
                     <!-- im22  Input-Numeric   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVim22"
@@ -2567,6 +2569,7 @@
                 </LinearLayout>
 
             </LinearLayout>
+
 
             <!-- im23  Radio   -->
             <androidx.cardview.widget.CardView
@@ -2643,222 +2646,216 @@
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:id="@+id/fldGrpSecChc4"
-                style="@style/linearlayout_view_wt_bound">
 
-                <!-- im23a  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVim23a"
-                    style="@style/cardView">
+            <!-- im23a  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVim23a"
+                style="@style/cardView">
 
-                    <LinearLayout style="@style/vlinearlayout">
+                <LinearLayout style="@style/vlinearlayout">
 
-                        <RelativeLayout
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_im23a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
+                            android:layout_toEndOf="@id/q_im23a"
+                            android:text="@string/im23a" />
 
-                            <TextView
-                                android:id="@+id/qtxt_im23a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_im23a"
-                                android:text="@string/im23a" />
+                        <TextView
+                            android:id="@+id/q_im23a"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_im23a"
+                            android:layout_alignBottom="@id/qtxt_im23a"
+                            android:gravity="center"
+                            android:text="@string/Q_im23a" />
 
-                            <TextView
-                                android:id="@+id/q_im23a"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_im23a"
-                                android:layout_alignBottom="@id/qtxt_im23a"
-                                android:gravity="center"
-                                android:text="@string/Q_im23a" />
+                    </RelativeLayout>
 
-                        </RelativeLayout>
+                    <RadioGroup
+                        android:id="@+id/im23a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <RadioGroup
-                            android:id="@+id/im23a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/im23a1"
+                            style="@style/radiobutton"
+                            android:text="@string/im23a1" />
 
-                            <RadioButton
-                                android:id="@+id/im23a1"
-                                style="@style/radiobutton"
-                                android:text="@string/im23a1" />
+                        <RadioButton
+                            android:id="@+id/im23a2"
+                            style="@style/radiobutton"
+                            android:text="@string/im23a2" />
 
-                            <RadioButton
-                                android:id="@+id/im23a2"
-                                style="@style/radiobutton"
-                                android:text="@string/im23a2" />
+                        <RadioButton
+                            android:id="@+id/im23a3"
+                            style="@style/radiobutton"
+                            android:text="@string/im23a3" />
 
-                            <RadioButton
-                                android:id="@+id/im23a3"
-                                style="@style/radiobutton"
-                                android:text="@string/im23a3" />
+                        <RadioButton
+                            android:id="@+id/im23a96"
+                            style="@style/radiobutton"
+                            android:text="@string/im23a96" />
 
-                            <RadioButton
-                                android:id="@+id/im23a96"
-                                style="@style/radiobutton"
-                                android:text="@string/im23a96" />
+                        <EditText
+                            android:id="@+id/im23a96x"
+                            style="@style/EditTextAlpha"
+                            android:enabled='@{im23a96.checked ? true : false}'
+                            android:hint="@string/im23a96"
+                            android:text='@{im23a96.checked? im23a96x.getText().toString() : ""}' />
 
-                            <EditText
-                                android:id="@+id/im23a96x"
-                                style="@style/EditTextAlpha"
-                                android:enabled='@{im23a96.checked ? true : false}'
-                                android:hint="@string/im23a96"
-                                android:tag="im23a96"
-                                android:text='@{im23a96.checked? im23a96x.getText().toString() : ""}' />
+                    </RadioGroup>
 
-                        </RadioGroup>
+                </LinearLayout>
 
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-                <!-- im24  Radio   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVim24"
-                    style="@style/cardView">
+            <!-- im24  Radio   -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldGrpCVim24"
+                style="@style/cardView">
 
-                    <LinearLayout style="@style/vlinearlayout">
+                <LinearLayout style="@style/vlinearlayout">
 
-                        <RelativeLayout
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom">
+
+                        <TextView
+                            android:id="@+id/qtxt_im24"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
+                            android:layout_toEndOf="@id/q_im24"
+                            android:text="@string/im24" />
 
-                            <TextView
-                                android:id="@+id/qtxt_im24"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_im24"
-                                android:text="@string/im24" />
+                        <TextView
+                            android:id="@+id/q_im24"
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/qtxt_im24"
+                            android:layout_alignBottom="@id/qtxt_im24"
+                            android:text="@string/Q_im24" />
 
-                            <TextView
-                                android:id="@+id/q_im24"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_im24"
-                                android:layout_alignBottom="@id/qtxt_im24"
-                                android:text="@string/Q_im24" />
+                    </RelativeLayout>
 
-                        </RelativeLayout>
-
-                        <LinearLayout
-                            android:id="@+id/im24check"
-                            style="@style/vlinearlayout"
-                            android:tag="0">
-
-                            <CheckBox
-                                android:id="@+id/im241"
-                                style="@style/checkbox"
-                                android:text="@string/im241" />
-
-                            <CheckBox
-                                android:id="@+id/im242"
-                                style="@style/checkbox"
-                                android:text="@string/im242" />
-
-                            <CheckBox
-                                android:id="@+id/im243"
-                                style="@style/checkbox"
-                                android:text="@string/im243" />
-
-                            <CheckBox
-                                android:id="@+id/im244"
-                                style="@style/checkbox"
-                                android:text="@string/im244" />
-
-                            <CheckBox
-                                android:id="@+id/im245"
-                                style="@style/checkbox"
-                                android:text="@string/im245" />
-
-                            <RadioButton
-                                android:id="@+id/im246"
-                                style="@style/checkbox"
-                                android:text="@string/im246" />
-
-                            <CheckBox
-                                android:id="@+id/im247"
-                                style="@style/checkbox"
-                                android:text="@string/im247" />
-
-                            <CheckBox
-                                android:id="@+id/im248"
-                                style="@style/checkbox"
-                                android:text="@string/im248" />
-
-                            <CheckBox
-                                android:id="@+id/im249"
-                                style="@style/checkbox"
-                                android:text="@string/im249" />
-
-                            <CheckBox
-                                android:id="@+id/im2410"
-                                style="@style/checkbox"
-                                android:text="@string/im2410" />
-
-                            <CheckBox
-                                android:id="@+id/im2411"
-                                style="@style/checkbox"
-                                android:text="@string/im2411" />
-
-                            <CheckBox
-                                android:id="@+id/im2412"
-                                style="@style/checkbox"
-                                android:text="@string/im2412" />
-
-                            <CheckBox
-                                android:id="@+id/im2413"
-                                style="@style/checkbox"
-                                android:text="@string/im2413" />
-
-                            <CheckBox
-                                android:id="@+id/im2414"
-                                style="@style/checkbox"
-                                android:text="@string/im2414" />
-
-                            <CheckBox
-                                android:id="@+id/im2415"
-                                style="@style/checkbox"
-                                android:text="@string/im2415" />
-
-                            <CheckBox
-                                android:id="@+id/im2416"
-                                style="@style/checkbox"
-                                android:text="@string/im2416" />
-
-                            <CheckBox
-                                android:id="@+id/im2417"
-                                style="@style/checkbox"
-                                android:text="@string/im2417" />
-
-                            <EditText
-                                android:id="@+id/im2417x"
-                                style="@style/EditTextAlpha"
-                                android:enabled='@{im2417.checked ? true : false}'
-                                android:hint="@string/im2417"
-                                android:tag="im2417"
-                                android:text='@{im2417.checked? im2417x.getText().toString() : ""}' />
-
-                        </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/im24check"
+                        style="@style/vlinearlayout"
+                        android:tag="0">
 
                         <CheckBox
-                            android:id="@+id/im2499"
+                            android:id="@+id/im241"
                             style="@style/checkbox"
-                            android:tag="-1"
-                            android:text="@string/im2499" />
+                            android:text="@string/im241" />
+
+                        <CheckBox
+                            android:id="@+id/im242"
+                            style="@style/checkbox"
+                            android:text="@string/im242" />
+
+                        <CheckBox
+                            android:id="@+id/im243"
+                            style="@style/checkbox"
+                            android:text="@string/im243" />
+
+                        <CheckBox
+                            android:id="@+id/im244"
+                            style="@style/checkbox"
+                            android:text="@string/im244" />
+
+                        <CheckBox
+                            android:id="@+id/im245"
+                            style="@style/checkbox"
+                            android:text="@string/im245" />
+
+                        <RadioButton
+                            android:id="@+id/im246"
+                            style="@style/checkbox"
+                            android:text="@string/im246" />
+
+                        <CheckBox
+                            android:id="@+id/im247"
+                            style="@style/checkbox"
+                            android:text="@string/im247" />
+
+                        <CheckBox
+                            android:id="@+id/im248"
+                            style="@style/checkbox"
+                            android:text="@string/im248" />
+
+                        <CheckBox
+                            android:id="@+id/im249"
+                            style="@style/checkbox"
+                            android:text="@string/im249" />
+
+                        <CheckBox
+                            android:id="@+id/im2410"
+                            style="@style/checkbox"
+                            android:text="@string/im2410" />
+
+                        <CheckBox
+                            android:id="@+id/im2411"
+                            style="@style/checkbox"
+                            android:text="@string/im2411" />
+
+                        <CheckBox
+                            android:id="@+id/im2412"
+                            style="@style/checkbox"
+                            android:text="@string/im2412" />
+
+                        <CheckBox
+                            android:id="@+id/im2413"
+                            style="@style/checkbox"
+                            android:text="@string/im2413" />
+
+                        <CheckBox
+                            android:id="@+id/im2414"
+                            style="@style/checkbox"
+                            android:text="@string/im2414" />
+
+                        <CheckBox
+                            android:id="@+id/im2415"
+                            style="@style/checkbox"
+                            android:text="@string/im2415" />
+
+                        <CheckBox
+                            android:id="@+id/im2416"
+                            style="@style/checkbox"
+                            android:text="@string/im2416" />
+
+                        <CheckBox
+                            android:id="@+id/im2417"
+                            style="@style/checkbox"
+                            android:text="@string/im2417" />
+
+                        <EditText
+                            android:id="@+id/im2417x"
+                            style="@style/EditTextAlpha"
+                            android:enabled='@{im2417.checked ? true : false}'
+                            android:hint="@string/im2417"
+                            android:tag="im2417"
+                            android:text='@{im2417.checked? im2417x.getText().toString() : ""}' />
 
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                    <CheckBox
+                        android:id="@+id/im2499"
+                        style="@style/checkbox"
+                        android:tag="-1"
+                        android:text="@string/im2499" />
 
-            </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
             <!--ENDBUTTON linearlayout-->
