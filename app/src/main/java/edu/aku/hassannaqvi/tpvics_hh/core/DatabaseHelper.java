@@ -240,18 +240,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(UsersContract.singleUser.ROW_USERNAME, user.getUserName());
                 values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
                 values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
-//                values.put(singleUser.REGION_DSS, user.getREGION_DSS());
                 long rowID = db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
                 if (rowID != -1) insertCount++;
             }
 
-
         } catch (Exception e) {
             Log.d(TAG, "syncUser(e): " + e);
+            db.close();
         } finally {
             db.close();
-            return insertCount;
         }
+        return insertCount;
     }
 
     public boolean Login(String username, String password) throws SQLException {
