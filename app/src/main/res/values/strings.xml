@@ -598,11 +598,13 @@
     <string name="ec0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb01"> آپ کی زیادہ سے زیادہ مکمل کردہ تعلیم کتنی ہے ؟ </string>
+    <string name="cb01_info">غیر تعلیم یافتہ کے لئے 77 اور مذہبی تعلیم کے لئے  88 درج کریں </string>
     <string name="cb01a"> گریڈ </string>
     <string name="cb01b"> مذہبی تعلیم </string>
     <string name="cb01dk"> معلوم نہیں کے لئے 98 درج کریں </string>
 
     <string name="cb02"> بچہ / بچی (نام) کے والد کی مکمل کردہ زیادہ سے زیادہ تعلیم کتنی ہے؟ </string>
+    <string name="cb02_info">غیر تعلیم یافتہ کے لئے 77 اور مذہبی تعلیم کے لئے  88 درج کریں </string>
     <string name="cb02a"> گریڈ </string>
     <string name="cb02b"> مذہبی تعلیم </string>
     <string name="cb02dk"> معلوم نہیں کے لئے 98 درج کریں </string>
@@ -833,10 +835,10 @@
 
     <string name="im25"> اس بچے کے حفاظتی ٹیکوں کے ریکارڈ کے لئے مرکز صحت پر ایک سوالنامہ کا فارم جاری کریں۔ اس سوالنامہ کا انفارمیشن پینل مکمل کریں۔ </string>
 
-    <string name="im26a"> RESPONDENT KNOWLEDGE ABOUT IMMUNIZATION </string>
-    <string name="im26b"> RESPONDENT COOPERATION AND BEHAVIOUR IN RESPONDING TO QUESTION </string>
-    <string name="im26c"> CARD AVAILABILITY, COMPLETENESS (SPECIFICALLY ABOUT CARD SHOWS A DATE BUT YOU CANNOT  READ IT CLEARLY) </string>
-    <string name="im26d"> OTHER COMMENTS IF ANY </string>
+    <string name="im26a"> حفاظتی ٹیکوں کے بارے میں جواب دہندہ کی معلومات</string>
+    <string name="im26b">  سوالوں کے جواب میں جواب دہندہ کا تعاون اور رویہ۔ </string>
+    <string name="im26c">  کارڈ کی دستیابی ، تکمیل (خاص طور پر کارڈ دکھایا گیا لیکن آپ اسے واضح طور پر پڑھ نہیں سکے)  </string>
+    <string name="im26d"> دیگر تبصرے اگر کوئی </string>
 
 
     <string name="end_interview"> انٹرویو ختم کریں </string>
