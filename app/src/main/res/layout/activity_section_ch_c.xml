@@ -241,6 +241,14 @@
                                 style="@style/radiobutton"
                                 android:text="@string/im0396" />
 
+                            <EditText
+                                android:id="@+id/im0396x"
+                                style="@style/EditTextAlpha"
+                                android:hint="@string/specify"
+                                android:tag="im0396"
+                                android:text='@{im0396.checked? im0396x.getText().toString(): ""}'
+                                android:visibility='@{im0396.checked? View.VISIBLE : View.GONE}' />
+
                         </RadioGroup>
 
                     </LinearLayout>

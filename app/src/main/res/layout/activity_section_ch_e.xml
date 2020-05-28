@@ -48,6 +48,7 @@
                     <EditText
                         android:id="@+id/im26a"
                         style="@style/EditTextAlpha"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-,"
                         android:ems="10"
                         android:gravity="start|top"
                         android:inputType="textMultiLine" />
@@ -71,9 +72,11 @@
                     <EditText
                         android:id="@+id/im26b"
                         style="@style/EditTextAlpha"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-,"
                         android:ems="10"
                         android:gravity="start|top"
                         android:inputType="textMultiLine" />
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -93,9 +96,11 @@
                     <EditText
                         android:id="@+id/im26c"
                         style="@style/EditTextAlpha"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-,"
                         android:ems="10"
                         android:gravity="start|top"
                         android:inputType="textMultiLine" />
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -116,6 +121,7 @@
                     <EditText
                         android:id="@+id/im26d"
                         style="@style/EditTextAlpha"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-,"
                         android:ems="10"
                         android:tag="-1"
                         android:gravity="start|top"
