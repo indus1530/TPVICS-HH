@@ -147,7 +147,7 @@
 
                         <EditText
                             android:id="@+id/hh10"
-                            style="@style/EditTextAlpha"
+                            style="@style/EditTextAlphaNmeric"
                             android:hint="@string/hh10"
                             android:maxLength="40" />
 

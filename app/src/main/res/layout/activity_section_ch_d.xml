@@ -1912,6 +1912,7 @@
                                     android:layout_alignBottom="@id/qtxt_im11"
                                     android:gravity="center"
                                     android:text="@string/Q_im11" />
+
                             </RelativeLayout>
 
 
@@ -2163,8 +2164,8 @@
                                 android:id="@+id/im15"
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
-                                android:maxLength="2"
-                                app:maxValue="5"
+                                android:maxLength="1"
+                                app:maxValue="3"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -2272,8 +2273,8 @@
                                 android:id="@+id/im17"
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
-                                android:maxLength="2"
-                                app:maxValue="5"
+                                android:maxLength="1"
+                                app:maxValue="3"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -2382,8 +2383,8 @@
                                 android:id="@+id/im19"
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
-                                android:maxLength="2"
-                                app:maxValue="5"
+                                android:maxLength="1"
+                                app:maxValue="2"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -2557,8 +2558,8 @@
                                 android:id="@+id/im22"
                                 style="@style/EditTextNum"
                                 android:hint="@string/num"
-                                android:maxLength="2"
-                                app:maxValue="5"
+                                android:maxLength="1"
+                                app:maxValue="2"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -2635,9 +2636,9 @@
                         <EditText
                             android:id="@+id/im236x"
                             style="@style/EditTextAlpha"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.,"
                             android:enabled='@{im236.checked ? true : false}'
                             android:hint="@string/im236x"
-                            android:tag="im236"
                             android:text='@{im236.checked? im236x.getText().toString() : ""}' />
 
                     </RadioGroup>
@@ -2706,6 +2707,7 @@
                         <EditText
                             android:id="@+id/im23a96x"
                             style="@style/EditTextAlpha"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.,"
                             android:enabled='@{im23a96.checked ? true : false}'
                             android:hint="@string/im23a96"
                             android:text='@{im23a96.checked? im23a96x.getText().toString() : ""}' />
@@ -2777,7 +2779,7 @@
                             style="@style/checkbox"
                             android:text="@string/im245" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/im246"
                             style="@style/checkbox"
                             android:text="@string/im246" />
@@ -2840,6 +2842,7 @@
                         <EditText
                             android:id="@+id/im2417x"
                             style="@style/EditTextAlpha"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789-,"
                             android:enabled='@{im2417.checked ? true : false}'
                             android:hint="@string/im2417"
                             android:tag="im2417"

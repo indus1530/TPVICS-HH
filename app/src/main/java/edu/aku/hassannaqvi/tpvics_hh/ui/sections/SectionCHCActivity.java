@@ -33,7 +33,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 public class SectionCHCActivity extends AppCompatActivity {
 
     ActivitySectionChCBinding bi;
-    boolean im02Flag = false, imFlag = false;
+    boolean im02Flag = false, imFlag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,6 +173,7 @@ public class SectionCHCActivity extends AppCompatActivity {
                                                         bi.im036.isChecked() ? "6" :
                                                                 bi.im0396.isChecked() ? "96" :
                                                                         "0");
+        f1.put("im0396x", bi.im0396x.getText().toString());
 
         f1.put("im04dd", bi.im04dd.getText().toString());
         f1.put("im04mm", bi.im04mm.getText().toString());
