@@ -153,7 +153,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         if (!Validator.emptyTextBox(this, bi.hh11)) return;
         boolean loginFlag;
-        if (bi.hh11.getText().toString().length() != 6) {
+        if (bi.hh11.getText().toString().length() != 7) {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
