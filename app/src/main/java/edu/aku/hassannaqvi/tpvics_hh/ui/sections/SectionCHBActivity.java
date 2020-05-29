@@ -174,26 +174,25 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
     public void BtnContinue() {
 
         if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
+            //Calculate months
+            int totalMonths = Integer.parseInt(bi.cb04mm.getText().toString()) + Integer.parseInt(bi.cb04yy.getText().toString()) * 12;
+            boolean monthFlag = totalMonths >= 12 && totalMonths < 24;
+            if (monthFlag) {
 
-                //Calculate months
-                int totalMonths = Integer.parseInt(bi.cb04mm.getText().toString()) + Integer.parseInt(bi.cb04yy.getText().toString()) * 12;
-                boolean monthFlag = totalMonths >= 12 && totalMonths < 24;
-                if (monthFlag) {
+                try {
+                    SaveDraft();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (UpdateDB()) {
                     finish();
                     startActivity(new Intent(this, SectionCHCActivity.class));
-                } else
-                    openWarningActivity(this, "Current Child age leads to End this form.\nDo you want to Continue?");
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+                } else {
+                    Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                }
+            } else
+                openWarningActivity(this, "Current Child age leads to End this form.\nDo you want to Continue?");
         }
-
     }
 
     public void BtnEnd() {
@@ -270,8 +269,18 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
     @Override
     public void endSecActivity(boolean flag) {
-        finish();
-        startActivity(new Intent(this, ChildEndingActivity.class)
-                .putExtra(CHILD_ENDING_AGE_ISSUE, true));
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, ChildEndingActivity.class)
+                    .putExtra(CHILD_ENDING_AGE_ISSUE, true));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
