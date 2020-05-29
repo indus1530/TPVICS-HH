@@ -112,7 +112,6 @@ public class SectionInfoActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
         if (MainApp.fc != null) return;
         MainApp.fc = new FormsContract();
-        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
@@ -133,6 +132,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hhhead", bl.getHhhead());
         json.put("bl_hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
+        json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
 
 
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
