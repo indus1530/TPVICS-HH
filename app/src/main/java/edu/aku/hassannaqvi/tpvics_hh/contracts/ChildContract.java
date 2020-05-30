@@ -53,26 +53,26 @@ public class ChildContract {
 
 
     public ChildContract hydrate(Cursor cursor) {
-        this._ID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_ID));
-        this.UID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_UID));
-        this._UUID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_UUID));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICEID));
-        this.formDate = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_FORMDATE));
-        this.user = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_USER));
-        this.sCA = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCA));
-        this.sCB = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCB));
-        this.sCC = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_SCC));
-        this.devicetagID = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_DEVICETAGID));
+        this._ID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_ID));
+        this.UID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_UID));
+        this._UUID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_UUID));
+        this.deviceId = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_DEVICEID));
+        this.formDate = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_FORMDATE));
+        this.user = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_USER));
+        this.sCA = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SCA));
+        this.sCB = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SCB));
+        this.sCC = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SCC));
+        this.devicetagID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_DEVICETAGID));
 
-        this.childName = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CHILDNAME));
-        this.childSerial = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CHILDSERIAL));
-        this.gender = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_GENDER));
-        this.agey = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEY));
-        this.agem = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_AGEM));
-        this.cluster = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CLUSTERCODE));
-        this.hhno = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_HHNO));
-        this.cstatus = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CSTATUS));
-        this.cstatus88x = cursor.getString(cursor.getColumnIndex(SingleChild.COLUMN_CSTATUS88x));
+        this.childName = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_CHILDNAME));
+        this.childSerial = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_CHILDSERIAL));
+        this.gender = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_GENDER));
+        this.agey = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_AGEY));
+        this.agem = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_AGEM));
+        this.cluster = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_CLUSTERCODE));
+        this.hhno = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_HHNO));
+        this.cstatus = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_CSTATUS));
+        this.cstatus88x = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_CSTATUS88x));
 
         return this;
 
@@ -81,33 +81,33 @@ public class ChildContract {
     public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
-        json.put(SingleChild.COLUMN_ID, this._ID == null ? JSONObject.NULL : this._ID);
-        json.put(SingleChild.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
-        json.put(SingleChild.COLUMN_UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
-        json.put(SingleChild.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
-        json.put(SingleChild.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put(SingleChild.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
+        json.put(ChildTable.COLUMN_ID, this._ID == null ? JSONObject.NULL : this._ID);
+        json.put(ChildTable.COLUMN_UID, this.UID == null ? JSONObject.NULL : this.UID);
+        json.put(ChildTable.COLUMN_UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
+        json.put(ChildTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
+        json.put(ChildTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(ChildTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
-        json.put(SingleChild.COLUMN_CHILDNAME, this.childName == null ? JSONObject.NULL : this.childName);
-        json.put(SingleChild.COLUMN_CHILDSERIAL, this.childSerial == null ? JSONObject.NULL : this.childSerial);
-        json.put(SingleChild.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
-        json.put(SingleChild.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
-        json.put(SingleChild.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
-        json.put(SingleChild.COLUMN_CLUSTERCODE, this.agey == null ? JSONObject.NULL : this.cluster);
-        json.put(SingleChild.COLUMN_HHNO, this.agem == null ? JSONObject.NULL : this.hhno);
-        json.put(SingleChild.COLUMN_CSTATUS, this.agem == null ? JSONObject.NULL : this.cstatus);
-        json.put(SingleChild.COLUMN_CSTATUS88x, this.agem == null ? JSONObject.NULL : this.cstatus88x);
+        json.put(ChildTable.COLUMN_CHILDNAME, this.childName == null ? JSONObject.NULL : this.childName);
+        json.put(ChildTable.COLUMN_CHILDSERIAL, this.childSerial == null ? JSONObject.NULL : this.childSerial);
+        json.put(ChildTable.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
+        json.put(ChildTable.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
+        json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
+        json.put(ChildTable.COLUMN_CLUSTERCODE, this.agey == null ? JSONObject.NULL : this.cluster);
+        json.put(ChildTable.COLUMN_HHNO, this.agem == null ? JSONObject.NULL : this.hhno);
+        json.put(ChildTable.COLUMN_CSTATUS, this.agem == null ? JSONObject.NULL : this.cstatus);
+        json.put(ChildTable.COLUMN_CSTATUS88x, this.agem == null ? JSONObject.NULL : this.cstatus88x);
 
         if (this.sCA != null && !this.sCA.equals("")) {
-            json.put(SingleChild.COLUMN_SCA, this.sCA.equals("") ? JSONObject.NULL : new JSONObject(this.sCA));
+            json.put(ChildTable.COLUMN_SCA, this.sCA.equals("") ? JSONObject.NULL : new JSONObject(this.sCA));
         }
         if (this.sCB != null && !this.sCB.equals("")) {
-            json.put(SingleChild.COLUMN_SCB, this.sCB.equals("") ? JSONObject.NULL : new JSONObject(this.sCB));
+            json.put(ChildTable.COLUMN_SCB, this.sCB.equals("") ? JSONObject.NULL : new JSONObject(this.sCB));
         }
         if (this.sCC != null && !this.sCC.equals("")) {
-            json.put(SingleChild.COLUMN_SCC, this.sCC.equals("") ? JSONObject.NULL : new JSONObject(this.sCC));
+            json.put(ChildTable.COLUMN_SCC, this.sCC.equals("") ? JSONObject.NULL : new JSONObject(this.sCC));
         }
-        json.put(SingleChild.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(ChildTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 
         return json;
 
@@ -281,7 +281,7 @@ public class ChildContract {
         this.synced_date = synced_date;
     }
 
-    public static abstract class SingleChild implements BaseColumns {
+    public static abstract class ChildTable implements BaseColumns {
 
         public static final String TABLE_NAME = "child_table";
         public static final String COLUMN_ID = "_id";

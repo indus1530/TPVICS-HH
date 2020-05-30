@@ -228,6 +228,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .observeOn(AndroidSchedulers.mainThread())
                 .filter(form -> {
                     if (!form.getIstatus().equals("")) {
+
                         message = "Household Form Exist";
                         blRandomExist(bl, message, false);
                         return false;

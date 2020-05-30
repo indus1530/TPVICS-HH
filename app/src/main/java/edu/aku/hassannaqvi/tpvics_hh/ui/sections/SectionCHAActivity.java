@@ -58,7 +58,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
             child.setUID(MainApp.deviceId + child.get_ID());
-            db.updatesChildColumn(ChildContract.SingleChild.COLUMN_UID, child.getUID());
+            db.updatesChildColumn(ChildContract.ChildTable.COLUMN_UID, child.getUID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();

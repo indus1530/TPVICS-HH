@@ -129,7 +129,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesChildColumn(ChildContract.SingleChild.COLUMN_SCB, child.getsCB());
+        int updcount = db.updatesChildColumn(ChildContract.ChildTable.COLUMN_SCB, child.getsCB());
         if (updcount == 1) {
             return true;
         } else {

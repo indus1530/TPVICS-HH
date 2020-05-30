@@ -655,12 +655,12 @@
     <string name="im0501mm"> مہینہ </string>
     <string name="im0501yy"> سال </string>
 
-    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک </string>
+    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک (OPV0) </string>
     <string name="im0502dd"> دن </string>
     <string name="im0502mm"> مہینہ </string>
     <string name="im0502yy"> سال </string>
 
-    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
+    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے (OPV1) </string>
     <string name="im0503dd"> دن </string>
     <string name="im0503mm"> مہینہ </string>
     <string name="im0503yy"> سال </string>

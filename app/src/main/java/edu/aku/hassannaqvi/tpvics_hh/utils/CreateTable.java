@@ -1,7 +1,7 @@
 package edu.aku.hassannaqvi.tpvics_hh.utils;
 
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract.SingleRandomHH;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract.SingleChild;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract.ChildTable;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
@@ -83,29 +83,29 @@ public final class CreateTable {
             EnumBlockContract.EnumBlockTable.COLUMN_CLUSTER_AREA + " TEXT " +
             ");";
 
-    public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + SingleChild.TABLE_NAME + "("
-            + SingleChild._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + SingleChild.COLUMN_DEVICEID + " TEXT,"
-            + SingleChild.COLUMN_DEVICETAGID + " TEXT,"
-            + SingleChild.COLUMN_USER + " TEXT,"
-            + SingleChild.COLUMN_UID + " TEXT,"
-            + SingleChild.COLUMN_UUID + " TEXT,"
-            + SingleChild.COLUMN_FORMDATE + " TEXT,"
-            + SingleChild.COLUMN_SCA + " TEXT,"
-            + SingleChild.COLUMN_SCB + " TEXT,"
-            + SingleChild.COLUMN_SCC + " TEXT,"
-            + SingleChild.COLUMN_SYNCED + " TEXT,"
-            + SingleChild.COLUMN_SYNCED_DATE + " TEXT,"
+    public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + ChildTable.TABLE_NAME + "("
+            + ChildTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + ChildTable.COLUMN_DEVICEID + " TEXT,"
+            + ChildTable.COLUMN_DEVICETAGID + " TEXT,"
+            + ChildTable.COLUMN_USER + " TEXT,"
+            + ChildTable.COLUMN_UID + " TEXT,"
+            + ChildTable.COLUMN_UUID + " TEXT,"
+            + ChildTable.COLUMN_FORMDATE + " TEXT,"
+            + ChildTable.COLUMN_SCA + " TEXT,"
+            + ChildTable.COLUMN_SCB + " TEXT,"
+            + ChildTable.COLUMN_SCC + " TEXT,"
+            + ChildTable.COLUMN_SYNCED + " TEXT,"
+            + ChildTable.COLUMN_SYNCED_DATE + " TEXT,"
 
-            + SingleChild.COLUMN_CHILDNAME + " TEXT,"
-            + SingleChild.COLUMN_CHILDSERIAL + " TEXT,"
-            + SingleChild.COLUMN_GENDER + " TEXT,"
-            + SingleChild.COLUMN_AGEY + " TEXT,"
-            + SingleChild.COLUMN_AGEM + " TEXT,"
-            + SingleChild.COLUMN_CLUSTERCODE + " TEXT,"
-            + SingleChild.COLUMN_HHNO + " TEXT,"
-            + SingleChild.COLUMN_CSTATUS + " TEXT,"
-            + SingleChild.COLUMN_CSTATUS88x + " TEXT );";
+            + ChildTable.COLUMN_CHILDNAME + " TEXT,"
+            + ChildTable.COLUMN_CHILDSERIAL + " TEXT,"
+            + ChildTable.COLUMN_GENDER + " TEXT,"
+            + ChildTable.COLUMN_AGEY + " TEXT,"
+            + ChildTable.COLUMN_AGEM + " TEXT,"
+            + ChildTable.COLUMN_CLUSTERCODE + " TEXT,"
+            + ChildTable.COLUMN_HHNO + " TEXT,"
+            + ChildTable.COLUMN_CSTATUS + " TEXT,"
+            + ChildTable.COLUMN_CSTATUS88x + " TEXT );";
 
     public static final String SQL_CREATE_FAMILY_MEMBERS = "CREATE TABLE " + FamilyMembersContract.SingleMember.TABLE_NAME + "("
             + FamilyMembersContract.SingleMember.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +

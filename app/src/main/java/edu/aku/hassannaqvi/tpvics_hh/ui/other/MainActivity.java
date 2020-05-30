@@ -306,9 +306,9 @@ public class MainActivity extends AppCompatActivity {
         if (todaysForms.size() > 0) {
             rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
-            rSumText += "--------------------------------------------------\r\n";
-            rSumText += "[ DSS ID ] \t[Form Status] \t[Sync Status]\r\n";
-            rSumText += "--------------------------------------------------\r\n";
+            rSumText += "----------------------------------------------------------------\r\n";
+            rSumText += "[Cluster][Household][Children][Form Status][Sync Status]\r\n";
+            rSumText += "----------------------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
                 if (fc.getIstatus() != null) {
@@ -317,26 +317,43 @@ public class MainActivity extends AppCompatActivity {
                             iStatus = "Complete";
                             break;
                         case "2":
-                            iStatus = "Incomplete";
+                            iStatus = "No Resp";
                             break;
                         case "3":
-                            iStatus = "Refused";
+                            iStatus = "Empty";
                             break;
                         case "4":
                             iStatus = "Refused";
                             break;
+                        case "5":
+                            iStatus = "Non Res.";
+                            break;
+                        case "6":
+                            iStatus = "Not Found";
+                            break;
+                        case "96":
+                            iStatus = "Other";
+                            break;
                         default:
-                            iStatus = "N/A";
+                            iStatus = "\t\tN/A\t\t";
                     }
                 } else {
-                    iStatus = "N/A";
+                    iStatus = "\t\tN/A\t\t";
                 }
 
-                rSumText += fc.getLuid();
-                rSumText += "\t\t\t\t\t";
+                rSumText += fc.getClusterCode();
+                rSumText += "  ";
+
+                rSumText += fc.getHhno();
+                rSumText += "  \t\t";
+
+                int childCount = db.getChildrenByUID(fc.get_UID());
+                rSumText += childCount;
+                rSumText += "\t\t\t\t";
+
 
                 rSumText += iStatus;
-                rSumText += "\t\t\t\t\t";
+                rSumText += "\t\t\t\t";
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
