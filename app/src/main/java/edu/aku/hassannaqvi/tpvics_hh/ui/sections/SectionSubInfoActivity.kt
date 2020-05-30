@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.CHILD_SERIAL
+import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.FSTATUS_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
 import edu.aku.hassannaqvi.tpvics_hh.adapter.ChildListAdapter
@@ -105,7 +106,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                             }
                             else -> {
                                 if (flagNewForm) return@run
-                                contextEndActivity(this)
+                                contextEndActivity(this, MainApp.fc.getfStatus() == "1")
                             }
                         }
                     }
@@ -148,7 +149,9 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
 
     override fun endSecActivity(flag: Boolean) {
         finish()
-        startActivity(Intent(this, EndingActivity::class.java).putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
+        startActivity(Intent(this, EndingActivity::class.java)
+                .putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
+                .putExtra(FSTATUS_END_FLAG, MainApp.fc.getfStatus())
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 

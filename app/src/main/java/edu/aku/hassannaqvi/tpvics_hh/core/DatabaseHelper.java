@@ -808,6 +808,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (flag) {
             values.put(FormsTable.COLUMN_ISTATUS, MainApp.fc.getIstatus());
             values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.fc.getIstatus88x());
+            values.put(FormsTable.COLUMN_SINFO, MainApp.fc.getsInfo());
         } else {
             values.put(FormsTable.COLUMN_FSTATUS, MainApp.fc.getfStatus());
             values.put(FormsTable.COLUMN_FSTATUS88x, MainApp.fc.getFstatus88x());

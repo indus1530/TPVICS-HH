@@ -44,6 +44,37 @@ public class SectionCHDActivity extends AppCompatActivity {
         setTitle(R.string.im05title1);
         setupListeners();
         setupTextWatchers();
+        setupYears();
+
+    }
+
+    private void setupYears() {
+        EditTextPicker[] yearEdit = new EditTextPicker[]{bi.im0501yy
+                , bi.im0502yy
+                , bi.im0503yy
+                , bi.im0504yy
+                , bi.im0505yy
+                , bi.im0506yy
+                , bi.im0507yy
+                , bi.im0508yy
+                , bi.im0509yy
+                , bi.im0510yy
+                , bi.im0511yy
+                , bi.im0512yy
+                , bi.im0513yy
+                , bi.im0514yy
+                , bi.im0515yy
+                , bi.im0516yy};
+
+        if (SectionCHAActivity.localDate != null) {
+            int maxYears = SectionCHAActivity.localDate.getYear();
+            int minYears = SectionCHAActivity.localDate.minusYears(2).getYear();
+
+            for (EditTextPicker edit : yearEdit) {
+                edit.setMinvalue(minYears);
+                edit.setMaxvalue(maxYears);
+            }
+        }
 
     }
 
@@ -154,7 +185,12 @@ public class SectionCHDActivity extends AppCompatActivity {
                 int day = Integer.parseInt(txt01);
                 int month = Integer.parseInt(txt02);
                 int year = Integer.parseInt(txt03);
-                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+
+                AgeModel age;
+                if (SectionCHAActivity.localDate != null)
+                    age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+                else
+                    age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) {
                     editTextPicker03.setError("Invalid date!!");
                     imFlag = false;

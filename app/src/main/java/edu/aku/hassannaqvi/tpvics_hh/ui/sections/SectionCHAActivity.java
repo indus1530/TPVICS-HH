@@ -12,6 +12,14 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.Instant;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -28,7 +36,8 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 public class SectionCHAActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChABinding bi;
-//    FamilyMembersContract selMWRA;
+    //    FamilyMembersContract selMWRA;
+    public static LocalDate localDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,15 +83,18 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setDevicetagID(MainApp.appInfo.getTagName());
         child.sethhno(MainApp.fc.getHhno());
         child.setcluster(MainApp.fc.getClusterCode());
-        child.setFormDate(MainApp.fc.getFormDate());
+//        child.setFormDate(MainApp.fc.getFormDate());
+        child.setFormDate(bi.ec01.getText().toString());
         child.setUser(MainApp.userName);
         child.setChildSerial(bi.ec13.getText().toString());
         child.setChildName(bi.ec14.getText().toString());
         child.setgender(bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
 
         JSONObject f1 = new JSONObject();
+        f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+
         f1.put("_luid", MainApp.fc.getLuid());
-        f1.put("ec01", bi.ec01.getText().toString());
+//        f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
         f1.put("ec13", bi.ec13.getText().toString());
         f1.put("ec14", bi.ec14.getText().toString());
@@ -114,6 +126,15 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         // Deleting item in list
 /*        MainApp.selectedChildren.getFirst().remove(position - 1);
         MainApp.selectedChildren.getSecond().remove(position - 1);*/
+
+        //Setting Date
+        try {
+            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.ec01.getText().toString())) + "T06:24:01Z");
+            localDate = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

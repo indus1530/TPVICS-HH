@@ -339,7 +339,7 @@
                                 android:maxLength="4"
                                 app:mask="20##"
                                 app:maxValue="2020"
-                                app:minValue="2015"
+                                app:minValue="2018"
                                 app:type="range" />
 
                         </LinearLayout>
@@ -370,7 +370,7 @@
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginBottom="15dp"
                                 android:background="@drawable/outline_btn"
-                                android:onClick="takePhoto"
+                                android:onClick="@{(v) -> callback.takePhoto(1)}"
                                 android:text="Take Front Photo"
                                 android:textColor="@color/redInfo" />
 
@@ -384,7 +384,7 @@
                                 android:layout_marginEnd="8dp"
                                 android:layout_marginBottom="15dp"
                                 android:background="@drawable/outline_btn"
-                                android:onClick="takePhoto"
+                                android:onClick="@{(v) -> callback.takePhoto(2)}"
                                 android:text="Take Back Photo"
                                 android:textColor="@color/redInfo" />
 

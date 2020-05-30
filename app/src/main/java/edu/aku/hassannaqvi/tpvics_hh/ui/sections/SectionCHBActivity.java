@@ -46,6 +46,13 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
         setupSkips();
 
+        if (SectionCHAActivity.localDate != null) {
+            int maxYears = SectionCHAActivity.localDate.getYear();
+            int minYears = SectionCHAActivity.localDate.minusYears(5).getYear();
+            bi.cb03yy.setMinvalue(minYears);
+            bi.cb03yy.setMaxvalue(maxYears);
+        }
+
     }
 
     private void setupSkips() {
@@ -221,7 +228,11 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         int month = Integer.parseInt(bi.cb03mm.getText().toString());
         int year = Integer.parseInt(bi.cb03yy.getText().toString());
 
-        AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+        AgeModel age;
+        if (SectionCHAActivity.localDate != null)
+            age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+        else
+            age = DateRepository.Companion.getCalculatedAge(year, month, day);
         if (age == null) {
             bi.cb03yy.setError("Invalid date!!");
             dtFlag = false;

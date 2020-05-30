@@ -1,71 +1,77 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical|center_horizontal"
-    android:background="@android:color/white"
-    android:layoutDirection="ltr"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:theme="@style/AppTheme">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:drawableStart="@drawable/ic_stop"
-        android:drawablePadding="12dp"
-        android:gravity="center_vertical"
-        android:text="WARNING!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:textColor="@color/dullBlack"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="28dp"
-        android:drawablePadding="12dp"
-        android:gravity="center_vertical"
-        android:text="Are you sure, you want to exit Child Module without saving?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:textColor="@color/dullBlack" />
-
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
-        android:id="@+id/lyt_action"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="end"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@android:color/white"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:theme="@style/AppTheme">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnOk"
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@drawable/outline_btn"
+            android:layout_height="64dp"
+            android:drawableStart="@drawable/ic_stop"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="WARNING!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/dullBlack"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-            android:minWidth="64dp"
-            android:padding="12dp"
-            android:text="Yes"
-
-            android:textColor="@color/white" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNo"
+        <TextView
+            android:id="@+id/content"
             android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="28dp"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="Are you sure, you want to exit Child Module without saving?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="@color/dullBlack" />
+
+
+        <LinearLayout
+            android:id="@+id/lyt_action"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@drawable/outline_btn"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-            android:minWidth="64dp"
-            android:padding="12dp"
-            android:text="NO"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/outline_btn"
 
-            android:textColor="@color/white" />
+                android:minWidth="64dp"
+                android:padding="12dp"
+                android:text="Yes"
+
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/outline_btn"
+
+                android:minWidth="64dp"
+                android:padding="12dp"
+                android:text="NO"
+
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</layout>

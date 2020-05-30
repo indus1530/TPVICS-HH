@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +41,13 @@ public class SectionCHCActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         setupListeners();
+
+        if (SectionCHAActivity.localDate != null) {
+            int maxYears = SectionCHAActivity.localDate.getYear();
+            int minYears = SectionCHAActivity.localDate.minusYears(2).getYear();
+            bi.im04yy.setMinvalue(minYears);
+            bi.im04yy.setMaxvalue(maxYears);
+        }
 
     }
 
@@ -121,7 +127,12 @@ public class SectionCHCActivity extends AppCompatActivity {
                 int day = bi.im04dd.getText().toString().equals("98") ? 15 : Integer.parseInt(txt01);
                 int month = Integer.parseInt(txt02);
                 int year = Integer.parseInt(txt03);
-                AgeModel age = DateRepository.Companion.getCalculatedAge(year, month, day);
+
+                AgeModel age;
+                if (SectionCHAActivity.localDate != null)
+                    age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+                else
+                    age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) {
                     bi.im04yy.setError("Invalid date!!");
                     imFlag = false;
@@ -222,7 +233,7 @@ public class SectionCHCActivity extends AppCompatActivity {
     }
 
 
-    public void takePhoto(View view) {
+    public void takePhoto(int id) {
 
         Intent intent = new Intent(this, TakePhoto.class);
 
@@ -232,7 +243,7 @@ public class SectionCHCActivity extends AppCompatActivity {
         //intent.putExtra("childName", "Hassan");
         intent.putExtra("childName", MainApp.child.getChildName());
 
-        if (view.getId() == bi.frontPhoto.getId()) {
+        if (id == 1) {
             intent.putExtra("picView", "front".toUpperCase());
             startActivityForResult(intent, 1); // Activity is started with requestCode 1 = Front
         } else {

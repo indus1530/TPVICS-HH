@@ -33,6 +33,7 @@ class CONSTANTS {
 
         //SubInfo
         const val SUB_INFO_END_FLAG = "sub_info_end_flag"
+        const val FSTATUS_END_FLAG = "fstatus_end_flag"
 
         //Child Activity
         const val CHILD_ENDING_AGE_ISSUE = "childAgeIssue"
