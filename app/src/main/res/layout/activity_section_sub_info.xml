@@ -69,47 +69,55 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
-
-                <TextView
-                    android:id="@+id/textView10"
-                    style="@style/button"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
                     android:text="CLUSTER"
-                    android:textColor="@color/colorPrimary" />
+                    android:padding="0dp"
+                    android:textColor="#7f7f7f" />
 
                 <TextView
                     android:id="@+id/txtCluster"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:padding="16dp"
+                    android:padding="0dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
                     android:text="901001"
                     android:textColor="@color/colorPrimary" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView11"
-                    style="@style/button"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="HOUSEHOLD NO."
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="#7f7f7f" />
 
                 <TextView
                     android:id="@+id/txtHHNo"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:padding="16dp"
-                    android:text="A-0001-001"
-                    android:textColor="@color/colorPrimary" />
-
+                    android:padding="0dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="A-0001-001" />
+                </LinearLayout>
 
             </LinearLayout>
 

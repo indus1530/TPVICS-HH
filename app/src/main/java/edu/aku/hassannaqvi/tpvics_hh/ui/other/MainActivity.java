@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "----------------------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
-                if (fc.getIstatus() != null) {
+                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
                     switch (fc.getIstatus()) {
                         case "1":
                             iStatus = "Complete";
@@ -334,12 +334,13 @@ public class MainActivity extends AppCompatActivity {
                         case "96":
                             iStatus = "Other";
                             break;
+                        case "":
+                            iStatus = "Open";
+                            break;
                         default:
-                            iStatus = "\t\tN/A\t\t";
+                            iStatus = "\t\tN/A" + fc.getIstatus();
                     }
-                } else {
-                    iStatus = "\t\tN/A\t\t";
-                }
+
 
                 rSumText += fc.getClusterCode();
                 rSumText += "  ";

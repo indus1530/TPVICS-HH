@@ -747,6 +747,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_CLUSTERCODE,
                 FormsTable.COLUMN_HHNO,
                 FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_FSTATUS,
                 FormsTable.COLUMN_SYNCED,
 
         };
@@ -777,6 +778,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setClusterCode(c.getString(c.getColumnIndex(FormsTable.COLUMN_CLUSTERCODE)));
                 fc.setHhno(c.getString(c.getColumnIndex(FormsTable.COLUMN_HHNO)));
                 fc.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
+                fc.setfStatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_FSTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
             }
@@ -792,7 +794,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int getChildrenByUID(String UID) {
-        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN_UUID + " = '" + UID + "'";
+        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN_UUID + " = '" + UID + "' AND " + ChildTable.COLUMN_CSTATUS + " = '1'";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
         int count = cursor.getCount();
