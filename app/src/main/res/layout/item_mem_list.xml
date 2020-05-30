@@ -5,6 +5,7 @@
 
 
     <androidx.cardview.widget.CardView
+        style="@style/cardView"
         android:id="@+id/parentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,24 +41,14 @@
 
                 </RelativeLayout>
 
-                <View
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent" />
 
-                <ImageView
-                    android:id="@+id/genderImage"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/mother" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="12dp">
 
 
                     <TextView
@@ -65,8 +56,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/name_not_found"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimary"
+                        android:padding="0dp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -74,41 +65,44 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/father_name_not_found"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textColor="#7f7f7f" />
 
                     <TextView
                         android:id="@+id/motherName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/mother_name_not_found"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:textColor="#7f7f7f"
+
+                        />
 
                     <TextView
                         android:id="@+id/dob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text=""
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        android:text="12/10/2020"
+
+                        android:textColor="#7f7f7f" />
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="10dp"
-                    android:layout_height="match_parent" />
+
 
                 <LinearLayout
                     android:id="@+id/checkIcon"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.3"
                     android:gravity="center"
+                    android:padding="12dp"
                     android:visibility="gone"
                     tools:visibility="visible">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/check" />
+                        android:id="@+id/genderImage"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/mother" />
 
                 </LinearLayout>
 

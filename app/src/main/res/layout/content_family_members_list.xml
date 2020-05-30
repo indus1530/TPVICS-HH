@@ -12,6 +12,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:padding="24dp"
             android:layout_height="match_parent">
 
             <LinearLayout
@@ -37,18 +38,15 @@
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="@string/total"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/total"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="00"
                         android:textAllCaps="false"
@@ -68,18 +66,15 @@
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="@string/under1_2"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/under12"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="00"
                         android:textAllCaps="false"
@@ -99,18 +94,16 @@
                     <TextView
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
+                        android:textSize=""
                         android:text="@string/under5"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/under5"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:gravity="center"
                         android:text="00"
                         android:textAllCaps="false"
