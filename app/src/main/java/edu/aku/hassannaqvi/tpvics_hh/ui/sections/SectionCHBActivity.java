@@ -17,6 +17,12 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.Instant;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -46,9 +52,9 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
         setupSkips();
 
-        if (SectionCHAActivity.localDate != null) {
-            int maxYears = SectionCHAActivity.localDate.getYear();
-            int minYears = SectionCHAActivity.localDate.minusYears(5).getYear();
+        if (child.getLocalDate() != null) {
+            int maxYears = child.getLocalDate().getYear();
+            int minYears = child.getLocalDate().minusYears(5).getYear();
             bi.cb03yy.setMinvalue(minYears);
             bi.cb03yy.setMaxvalue(maxYears);
         }
@@ -168,6 +174,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         child.setagey(bi.cb04yy.getText().toString());
 
         child.setsCB(String.valueOf(f1));
+
     }
 
     private boolean formValidation() {
@@ -216,6 +223,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         bi.cb04mm.setText(null);
         bi.cb04yy.setEnabled(false);
         bi.cb04yy.setText(null);
+        child.setCalculatedDOB(null);
         if (!bi.cb03dd.isRangeTextValidate() || !bi.cb03mm.isRangeTextValidate() || !bi.cb03yy.isRangeTextValidate())
             return;
         if (bi.cb03dd.getText().toString().equals("98") && bi.cb03mm.getText().toString().equals("98") && bi.cb03yy.getText().toString().equals("9998")) {
@@ -229,8 +237,8 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         int year = Integer.parseInt(bi.cb03yy.getText().toString());
 
         AgeModel age;
-        if (SectionCHAActivity.localDate != null)
-            age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+        if (child.getLocalDate() != null)
+            age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), year, month, day);
         else
             age = DateRepository.Companion.getCalculatedAge(year, month, day);
         if (age == null) {
@@ -241,6 +249,17 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         dtFlag = true;
         bi.cb04mm.setText(String.valueOf(age.getMonth()));
         bi.cb04yy.setText(String.valueOf(age.getYear()));
+
+        //Setting Date
+        try {
+            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+                    bi.cb03dd.getText().toString() + "-" + bi.cb03mm.getText().toString() + "-" + bi.cb03yy.getText().toString()
+            )) + "T06:24:01Z");
+            child.setCalculatedDOB(LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void showTooltip(@NotNull View view) {

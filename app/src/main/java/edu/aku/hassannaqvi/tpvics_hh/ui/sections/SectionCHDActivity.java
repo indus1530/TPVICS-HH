@@ -66,9 +66,9 @@ public class SectionCHDActivity extends AppCompatActivity {
                 , bi.im0515yy
                 , bi.im0516yy};
 
-        if (SectionCHAActivity.localDate != null) {
-            int maxYears = SectionCHAActivity.localDate.getYear();
-            int minYears = SectionCHAActivity.localDate.minusYears(2).getYear();
+        if (child.getLocalDate() != null) {
+            int maxYears = child.getLocalDate().getYear();
+            int minYears = child.getLocalDate().minusYears(2).getYear();
 
             for (EditTextPicker edit : yearEdit) {
                 edit.setMinvalue(minYears);
@@ -79,22 +79,54 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private void setupTextWatchers() {
-        editTextImplementation(new EditTextPicker[]{bi.im0501dd, bi.im0501mm, bi.im0501yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0502dd, bi.im0502mm, bi.im0502yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0503dd, bi.im0503mm, bi.im0503yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0504dd, bi.im0504mm, bi.im0504yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0505dd, bi.im0505mm, bi.im0505yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0506dd, bi.im0506mm, bi.im0506yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0507dd, bi.im0507mm, bi.im0507yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0508dd, bi.im0508mm, bi.im0508yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0509dd, bi.im0509mm, bi.im0509yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0510dd, bi.im0510mm, bi.im0510yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0511dd, bi.im0511mm, bi.im0511yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0512dd, bi.im0512mm, bi.im0512yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0513dd, bi.im0513mm, bi.im0513yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0514dd, bi.im0514mm, bi.im0514yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0515dd, bi.im0515mm, bi.im0515yy});
-        editTextImplementation(new EditTextPicker[]{bi.im0516dd, bi.im0516mm, bi.im0516yy});
+
+        EditTextPicker[] BCG = new EditTextPicker[]{bi.im0501dd, bi.im0501mm, bi.im0501yy};
+        editTextImplementation(BCG);
+
+        EditTextPicker[] OPV0 = new EditTextPicker[]{bi.im0502dd, bi.im0502mm, bi.im0502yy};
+        editTextImplementation(OPV0);
+
+        EditTextPicker[] OPV1 = new EditTextPicker[]{bi.im0503dd, bi.im0503mm, bi.im0503yy};
+        editTextImplementation(OPV1);
+
+        EditTextPicker[] PENTA1 = new EditTextPicker[]{bi.im0504dd, bi.im0504mm, bi.im0504yy};
+        editTextImplementation(PENTA1);
+
+        EditTextPicker[] PCV1 = new EditTextPicker[]{bi.im0505dd, bi.im0505mm, bi.im0505yy};
+        editTextImplementation(PCV1);
+
+        EditTextPicker[] RV1 = new EditTextPicker[]{bi.im0506dd, bi.im0506mm, bi.im0506yy};
+        editTextImplementation(RV1);
+
+        EditTextPicker[] OPV2 = new EditTextPicker[]{bi.im0507dd, bi.im0507mm, bi.im0507yy};
+        editTextImplementation(OPV2);
+
+        EditTextPicker[] PENTA2 = new EditTextPicker[]{bi.im0508dd, bi.im0508mm, bi.im0508yy};
+        editTextImplementation(PENTA2);
+
+        EditTextPicker[] PCV2 = new EditTextPicker[]{bi.im0509dd, bi.im0509mm, bi.im0509yy};
+        editTextImplementation(PCV2);
+
+        EditTextPicker[] RV2 = new EditTextPicker[]{bi.im0510dd, bi.im0510mm, bi.im0510yy};
+        editTextImplementation(RV2);
+
+        EditTextPicker[] OPV3 = new EditTextPicker[]{bi.im0511dd, bi.im0511mm, bi.im0511yy};
+        editTextImplementation(OPV3);
+
+        EditTextPicker[] PENTA3 = new EditTextPicker[]{bi.im0512dd, bi.im0512mm, bi.im0512yy};
+        editTextImplementation(PENTA3);
+
+        EditTextPicker[] PCV3 = new EditTextPicker[]{bi.im0513dd, bi.im0513mm, bi.im0513yy};
+        editTextImplementation(PCV3);
+
+        EditTextPicker[] IPV = new EditTextPicker[]{bi.im0514dd, bi.im0514mm, bi.im0514yy};
+        editTextImplementation(IPV);
+
+        EditTextPicker[] MEASLES1 = new EditTextPicker[]{bi.im0515dd, bi.im0515mm, bi.im0515yy};
+        editTextImplementation(MEASLES1);
+
+        EditTextPicker[] MEASLES2 = new EditTextPicker[]{bi.im0516dd, bi.im0516mm, bi.im0516yy};
+        editTextImplementation(MEASLES2);
     }
 
     public void editTextImplementation(EditTextPicker[] editTextsArray) {
@@ -187,8 +219,8 @@ public class SectionCHDActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
 
                 AgeModel age;
-                if (SectionCHAActivity.localDate != null)
-                    age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+                if (child.getLocalDate() != null)
+                    age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
                 else
                     age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) {

@@ -15,6 +15,12 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.Instant;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -42,9 +48,9 @@ public class SectionCHCActivity extends AppCompatActivity {
 
         setupListeners();
 
-        if (SectionCHAActivity.localDate != null) {
-            int maxYears = SectionCHAActivity.localDate.getYear();
-            int minYears = SectionCHAActivity.localDate.minusYears(2).getYear();
+        if (child.getLocalDate() != null) {
+            int maxYears = child.getLocalDate().getYear();
+            int minYears = child.getLocalDate().minusYears(2).getYear();
             bi.im04yy.setMinvalue(minYears);
             bi.im04yy.setMaxvalue(maxYears);
         }
@@ -129,8 +135,8 @@ public class SectionCHCActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
 
                 AgeModel age;
-                if (SectionCHAActivity.localDate != null)
-                    age = DateRepository.Companion.getCalculatedAge(SectionCHAActivity.localDate, year, month, day);
+                if (child.getLocalDate() != null)
+                    age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), year, month, day);
                 else
                     age = DateRepository.Companion.getCalculatedAge(year, month, day);
                 if (age == null) {
@@ -140,6 +146,19 @@ public class SectionCHCActivity extends AppCompatActivity {
                     imFlag = true;
                     bi.im04dd.setEnabled(false);
                     bi.im04mm.setEnabled(false);
+
+                    if (child.getCalculatedDOB() == null) {
+                        //Setting Date
+                        try {
+                            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+                                    bi.im04dd.getText().toString() + "-" + bi.im04mm.getText().toString() + "-" + bi.im04yy.getText().toString()
+                            )) + "T06:24:01Z");
+                            child.setCalculatedDOB(LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate());
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                 }
             }
 

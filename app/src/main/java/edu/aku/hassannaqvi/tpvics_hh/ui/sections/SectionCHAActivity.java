@@ -13,7 +13,6 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.threeten.bp.Instant;
-import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 import org.threeten.bp.ZoneId;
 
@@ -37,7 +36,6 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
     ActivitySectionChABinding bi;
     //    FamilyMembersContract selMWRA;
-    public static LocalDate localDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,7 +128,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         //Setting Date
         try {
             Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.ec01.getText().toString())) + "T06:24:01Z");
-            localDate = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();
+            child.setLocalDate(LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate());
         } catch (ParseException e) {
             e.printStackTrace();
         }

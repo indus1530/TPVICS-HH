@@ -399,12 +399,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:textColor="#7f7f7f7f"
                                 android:textSize="14dp" />
 
                             <EditText
                                 android:id="@+id/backFileName"
                                 android:layout_width="0dp"
+                                android:enabled="false"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:textColor="#7f7f7f7f"

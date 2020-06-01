@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.LocalDate;
 
 public class ChildContract {
 
@@ -31,6 +32,9 @@ public class ChildContract {
     private String cstatus;
     private String cstatus88x;
 
+    //Date Settings
+    private LocalDate localDate = null, calculatedDOB = null;
+
 
      /*
     saved in JSON
@@ -51,6 +55,21 @@ public class ChildContract {
     * j_res_fm_serial
     * */
 
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
+
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
+    }
+
+    public LocalDate getCalculatedDOB() {
+        return calculatedDOB;
+    }
+
+    public void setCalculatedDOB(LocalDate calculatedDOB) {
+        this.calculatedDOB = calculatedDOB;
+    }
 
     public ChildContract hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_ID));
