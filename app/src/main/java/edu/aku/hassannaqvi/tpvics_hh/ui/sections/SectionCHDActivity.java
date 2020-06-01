@@ -230,9 +230,18 @@ public class SectionCHDActivity extends AppCompatActivity {
                     txt02 = editTextPicker02.getText().toString();
                     txt03 = editTextPicker03.getText().toString();
                 } else return;
-
                 if (respTextsArray != null) {
                     respLocalDate = getLocalDate(respTextsArray);
+                    int minYears, maxYears;
+                    if (respLocalDate != null) {
+                        minYears = respLocalDate.getYear();
+                        maxYears = respLocalDate.plusYears(2).getYear();
+                    } else {
+                        maxYears = child.getCalculatedDOB().getYear();
+                        minYears = child.getCalculatedDOB().minusYears(2).getYear();
+                    }
+                    editTextPicker03.setMinvalue(minYears);
+                    editTextPicker03.setMaxvalue(maxYears);
                 }
                 if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
                         (!editTextPicker02.isRangeTextValidate()) ||
