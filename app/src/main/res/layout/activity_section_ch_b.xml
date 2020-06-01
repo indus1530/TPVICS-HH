@@ -67,10 +67,10 @@
                     </RelativeLayout>
 
                     <TextView
-                        style="@style/info"
+                        style="@style/textView3Head"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb01_sub" />
+                        android:text="@string/cb01_info" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
@@ -161,10 +161,10 @@
                     </RelativeLayout>
 
                     <TextView
-                        style="@style/info"
+                        style="@style/textView3Head"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/cb02_sub" />
+                        android:text="@string/cb02_info" />
 
                     <LinearLayout style="@style/hlinearlayout">
 
