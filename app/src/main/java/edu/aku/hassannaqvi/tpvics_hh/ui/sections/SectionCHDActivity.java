@@ -221,6 +221,7 @@ public class SectionCHDActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String txt01, txt02, txt03;
+                LocalDate respLocalDate = null;
                 if (!daysFlag) return;
                 editTextPicker01.setEnabled(true);
                 editTextPicker02.setEnabled(true);
@@ -229,6 +230,10 @@ public class SectionCHDActivity extends AppCompatActivity {
                     txt02 = editTextPicker02.getText().toString();
                     txt03 = editTextPicker03.getText().toString();
                 } else return;
+
+                if (respTextsArray != null) {
+                    respLocalDate = getLocalDate(respTextsArray);
+                }
                 if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
                         (!editTextPicker02.isRangeTextValidate()) ||
                         (!editTextPicker03.isRangeTextValidate()))
@@ -238,13 +243,8 @@ public class SectionCHDActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
 
                 AgeModel age;
-
-                if (respTextsArray != null) {
-                    LocalDate respLocalDate = getLocalDate(respTextsArray);
-                    if (respLocalDate == null)
-                        age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
-                    else
-                        age = DateRepository.Companion.getCalculatedAge(respLocalDate, year, month, day);
+                if (respLocalDate != null) {
+                    age = DateRepository.Companion.getCalculatedAge(respLocalDate, year, month, day);
                 } else if (child.getCalculatedDOB() != null)
                     age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
                 else
