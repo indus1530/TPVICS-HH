@@ -48,13 +48,21 @@ public class SectionCHCActivity extends AppCompatActivity {
 
         setupListeners();
 
-        if (child.getLocalDate() != null) {
+        if (child.getCalculatedDOB() != null) {
+            int maxYears = child.getCalculatedDOB().getYear();
+            int minYears = child.getCalculatedDOB().minusYears(2).getYear();
+            setYearOfBirth(minYears, maxYears);
+        } else if (child.getLocalDate() != null) {
             int maxYears = child.getLocalDate().getYear();
             int minYears = child.getLocalDate().minusYears(2).getYear();
-            bi.im04yy.setMinvalue(minYears);
-            bi.im04yy.setMaxvalue(maxYears);
+            setYearOfBirth(minYears, maxYears);
         }
 
+    }
+
+    private void setYearOfBirth(int minYears, int maxYears) {
+        bi.im04yy.setMinvalue(minYears);
+        bi.im04yy.setMaxvalue(maxYears);
     }
 
     private void setupListeners() {
@@ -135,7 +143,9 @@ public class SectionCHCActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
 
                 AgeModel age;
-                if (child.getLocalDate() != null)
+                if (child.getCalculatedDOB() != null)
+                    age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
+                else if (child.getLocalDate() != null)
                     age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), year, month, day);
                 else
                     age = DateRepository.Companion.getCalculatedAge(year, month, day);
