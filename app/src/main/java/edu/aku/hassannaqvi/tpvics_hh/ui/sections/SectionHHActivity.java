@@ -74,7 +74,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     }
 
     public void BtnContinue() {
-        if (formValidation()) {
+        if (formValidation(true)) {
             try {
                 SaveDraft();
             } catch (Exception e) {
@@ -140,12 +140,16 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
 
     }
 
-    private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA);
+    private boolean formValidation(boolean flag) {
+        if (flag) {
+            if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionA01))
+                return false;
+            return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA02);
+        } else return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA01);
     }
 
     public void BtnEnd() {
-        if (formValidation()) {
+        if (formValidation(false)) {
             contextEndActivity(this);
         }
     }
