@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
@@ -57,6 +59,28 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         }));
 
         bi.ec13.setText(String.valueOf(getIntent().getIntExtra(CHILD_SERIAL, 0)));
+
+        bi.ec18.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.ec184.getId() || i == bi.ec1898.getId()) {
+                bi.ec19.clearCheck();
+                Clear.clearAllFields(bi.fldGrpCVec21, false);
+                bi.btnNext.setVisibility(View.VISIBLE);
+            } else {
+                bi.ec19b.setChecked(true);
+                bi.btnNext.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVec21, true);
+            }
+        });
+
+        bi.ec21.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.ec21b.getId()) {
+                bi.btnNext.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
+            } else {
+                bi.btnNext.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
+            }
+        });
     }
 
     private boolean UpdateDB() {
@@ -116,7 +140,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
         f1.put("ec21",
                 bi.ec21a.isChecked() ? "1" :
-                        bi.ec20b.isChecked() ? "2" :
+                        bi.ec21b.isChecked() ? "2" :
                                 "0");
 
         child.setsCA(String.valueOf(f1));
@@ -150,7 +174,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCHBActivity.class));
+                startActivity(new Intent(this, bi.ec184.isChecked() || bi.ec1898.isChecked() ? ChildEndingActivity.class : SectionCHBActivity.class).putExtra(CHILD_NO_ANSWER, true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }

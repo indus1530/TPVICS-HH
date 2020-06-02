@@ -19,12 +19,19 @@
             style="@style/linearlayout_view_wt_bound">
 
 
+            <!-- ec20b_title  Title   -->
             <!-- cb0_title  Title   -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb0_title"
+                android:id="@+id/fldGrpCVec20b_title"
                 style="@style/cardView">
 
                 <LinearLayout style="@style/vlinearlayout">
+
+                    <TextView
+                        style="@style/info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ec20b_title" />
 
                     <TextView
                         style="@style/info"

@@ -25,7 +25,7 @@ class DateRepository {
         }
 
         @JvmOverloads
-        fun getCalculatedAge(currentDate: LocalDate = LocalDate.now(), year: Int, month: Int, day: Int): AgeModel? {
+        fun getCalculatedAge(currentDate: LocalDate = LocalDate.now(), year: Int, month: Int, day: Int, allowCurrentAge: Boolean = true): AgeModel? {
 
             var curdate = currentDate.dayOfMonth
             var curmonth = currentDate.monthValue
@@ -33,7 +33,11 @@ class DateRepository {
 
             val calculateDate = getDate(year, month, if (day == 0) curdate else day)
                     ?: return null
-            if (calculateDate > currentDate) return null
+            if (allowCurrentAge) {
+                if (calculateDate > currentDate) return null
+            } else {
+                if (calculateDate >= currentDate) return null
+            }
 
             if (day > curdate) {
                 curmonth -= 1

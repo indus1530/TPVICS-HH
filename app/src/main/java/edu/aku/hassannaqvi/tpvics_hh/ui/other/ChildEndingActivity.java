@@ -15,6 +15,7 @@ import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
 
 public class ChildEndingActivity extends AppCompatActivity {
 
@@ -39,13 +40,18 @@ public class ChildEndingActivity extends AppCompatActivity {
             bi.istatus96.setEnabled(false);
         } else {
             boolean monthChild = getIntent().getBooleanExtra(CHILD_ENDING_AGE_ISSUE, false);
-            boolean otherOptions = !monthChild;
+            boolean noAnsChild = getIntent().getBooleanExtra(CHILD_NO_ANSWER, false);
+            boolean otherOptions = true;
+            if (monthChild)
+                otherOptions = false;
+            else if (noAnsChild)
+                otherOptions = false;
             bi.istatusa.setEnabled(false);
             bi.istatusb.setEnabled(otherOptions);
             bi.istatusc.setEnabled(otherOptions);
             bi.istatusd.setEnabled(otherOptions);
             bi.istatuse.setEnabled(monthChild);
-            bi.istatusf.setEnabled(otherOptions);
+            bi.istatusf.setEnabled(noAnsChild);
             bi.istatus96.setEnabled(otherOptions);
         }
 

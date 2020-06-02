@@ -24,6 +24,8 @@ import org.threeten.bp.ZoneId;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Objects;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -56,7 +58,7 @@ public class SectionCHDActivity extends AppCompatActivity {
     }
 
     private void setupYears() {
-        EditTextPicker[] yearEdit = new EditTextPicker[]{
+        /*EditTextPicker[] yearEdit = new EditTextPicker[]{
                 bi.im0501yy
                 , bi.im0502yy
                 , bi.im0503yy
@@ -82,7 +84,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 edit.setMinvalue(minYears);
                 edit.setMaxvalue(maxYears);
             }
-        }
+        }*/
 
     }
 
@@ -91,13 +93,14 @@ public class SectionCHDActivity extends AppCompatActivity {
         EditTextPicker editTextPicker01 = editTextsArray[0];
         EditTextPicker editTextPicker02 = editTextsArray[1];
         EditTextPicker editTextPicker03 = editTextsArray[2];
+        if (TextUtils.isEmpty(editTextPicker01.getText()) || TextUtils.isEmpty(editTextPicker02.getText()) || TextUtils.isEmpty(editTextPicker03.getText()))
+            return null;
         String txt01 = editTextPicker01.getText().toString();
-        String txt02 = editTextPicker02.getText().toString();
-        String txt03 = editTextPicker03.getText().toString();
-        if (TextUtils.isEmpty(txt01)) return null;
         if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86"))
             return null;
         try {
+            String txt02 = editTextPicker02.getText().toString();
+            String txt03 = editTextPicker03.getText().toString();
             Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
                     txt01 + "-" + txt02 + "-" + txt03
             )) + "T06:24:01Z");
@@ -108,66 +111,91 @@ public class SectionCHDActivity extends AppCompatActivity {
         return null;
     }
 
+    private void clearEditTextFields(ArrayList<EditTextPicker[]> respArrayList) {
+        if (respArrayList == null) return;
+        for (EditTextPicker[] editItems : respArrayList) {
+            for (EditTextPicker items : editItems) {
+                items.setText(null);
+                items.setError(null);
+            }
+        }
+    }
+
     private void setupTextWatchers() {
 
         EditTextPicker[] BCG = new EditTextPicker[]{bi.im0501dd, bi.im0501mm, bi.im0501yy};
-        editTextImplementation("BCG", BCG, null);
+        editTextImplementation("BCG", BCG, null, null);
 
         EditTextPicker[] OPV0 = new EditTextPicker[]{bi.im0502dd, bi.im0502mm, bi.im0502yy};
-        editTextImplementation("OPV0", OPV0, null);
-
         EditTextPicker[] OPV1 = new EditTextPicker[]{bi.im0503dd, bi.im0503mm, bi.im0503yy};
-        editTextImplementation("OPV1", OPV1, OPV0);
+        EditTextPicker[] OPV2 = new EditTextPicker[]{bi.im0507dd, bi.im0507mm, bi.im0507yy};
+        EditTextPicker[] OPV3 = new EditTextPicker[]{bi.im0511dd, bi.im0511mm, bi.im0511yy};
+        editTextImplementation("OPV0", OPV0, null, new ArrayList<EditTextPicker[]>() {
+            {
+                add(OPV1);
+                add(OPV2);
+                add(OPV3);
+            }
+        });
+        editTextImplementation("OPV1", OPV1, OPV0, null);
+        editTextImplementation("OPV2", OPV2, OPV1, null);
+        editTextImplementation("OPV3", OPV3, OPV2, null);
 
         EditTextPicker[] PENTA1 = new EditTextPicker[]{bi.im0504dd, bi.im0504mm, bi.im0504yy};
-        editTextImplementation("PENTA1", PENTA1, null);
+        EditTextPicker[] PENTA2 = new EditTextPicker[]{bi.im0508dd, bi.im0508mm, bi.im0508yy};
+        EditTextPicker[] PENTA3 = new EditTextPicker[]{bi.im0512dd, bi.im0512mm, bi.im0512yy};
+        editTextImplementation("PENTA1", PENTA1, null, new ArrayList<EditTextPicker[]>() {
+            {
+                add(PENTA2);
+                add(PENTA3);
+            }
+        });
+        editTextImplementation("PENTA2", PENTA2, PENTA1, null);
+        editTextImplementation("PENTA3", PENTA3, PENTA2, null);
 
         EditTextPicker[] PCV1 = new EditTextPicker[]{bi.im0505dd, bi.im0505mm, bi.im0505yy};
-        editTextImplementation("PCV1", PCV1, null);
+        EditTextPicker[] PCV2 = new EditTextPicker[]{bi.im0509dd, bi.im0509mm, bi.im0509yy};
+        EditTextPicker[] PCV3 = new EditTextPicker[]{bi.im0513dd, bi.im0513mm, bi.im0513yy};
+        editTextImplementation("PCV1", PCV1, null, new ArrayList<EditTextPicker[]>() {
+            {
+                add(PCV2);
+                add(PCV3);
+            }
+        });
+        editTextImplementation("PCV2", PCV2, PCV1, null);
+        editTextImplementation("PCV3", PCV3, PCV2, null);
 
         EditTextPicker[] RV1 = new EditTextPicker[]{bi.im0506dd, bi.im0506mm, bi.im0506yy};
-        editTextImplementation("RV1", RV1, null);
-
-        EditTextPicker[] PENTA2 = new EditTextPicker[]{bi.im0508dd, bi.im0508mm, bi.im0508yy};
-        editTextImplementation("PENTA2", PENTA2, PENTA1);
-
-        EditTextPicker[] PCV2 = new EditTextPicker[]{bi.im0509dd, bi.im0509mm, bi.im0509yy};
-        editTextImplementation("PCV2", PCV2, PCV1);
-
-        EditTextPicker[] OPV2 = new EditTextPicker[]{bi.im0507dd, bi.im0507mm, bi.im0507yy};
-        editTextImplementation("OPV2", OPV2, OPV1);
-
         EditTextPicker[] RV2 = new EditTextPicker[]{bi.im0510dd, bi.im0510mm, bi.im0510yy};
-        editTextImplementation("RV2", RV2, RV1);
-
-        EditTextPicker[] OPV3 = new EditTextPicker[]{bi.im0511dd, bi.im0511mm, bi.im0511yy};
-        editTextImplementation("OPV3", OPV3, OPV2);
-
-        EditTextPicker[] PENTA3 = new EditTextPicker[]{bi.im0512dd, bi.im0512mm, bi.im0512yy};
-        editTextImplementation("PENTA3", PENTA3, PENTA2);
-
-        EditTextPicker[] PCV3 = new EditTextPicker[]{bi.im0513dd, bi.im0513mm, bi.im0513yy};
-        editTextImplementation("PCV3", PCV3, PCV2);
+        editTextImplementation("RV1", RV1, null, new ArrayList<EditTextPicker[]>() {
+            {
+                add(RV2);
+            }
+        });
+        editTextImplementation("RV2", RV2, RV1, null);
 
         EditTextPicker[] IPV = new EditTextPicker[]{bi.im0514dd, bi.im0514mm, bi.im0514yy};
-        editTextImplementation("IPV", IPV, null);
+        editTextImplementation("IPV", IPV, null, null);
 
         EditTextPicker[] MEASLES1 = new EditTextPicker[]{bi.im0515dd, bi.im0515mm, bi.im0515yy};
-        editTextImplementation("MEASLES1", MEASLES1, null);
-
         EditTextPicker[] MEASLES2 = new EditTextPicker[]{bi.im0516dd, bi.im0516mm, bi.im0516yy};
-        editTextImplementation("MEASLES2", MEASLES2, MEASLES1);
+        editTextImplementation("MEASLES1", MEASLES1, null, new ArrayList<EditTextPicker[]>() {
+            {
+                add(MEASLES2);
+            }
+        });
+        editTextImplementation("MEASLES2", MEASLES2, MEASLES1, null);
     }
 
-    public void editTextImplementation(String type, EditTextPicker[] editTextsArray, EditTextPicker[] respTextsArray) {
+    public void editTextImplementation(String type, EditTextPicker[] editTextsArray, EditTextPicker[] respTextsArray, ArrayList<EditTextPicker[]> respArrayList) {
         if (editTextsArray.length != 3) return;
         EditTextPicker editTextPicker01 = editTextsArray[0];
         EditTextPicker editTextPicker02 = editTextsArray[1];
         EditTextPicker editTextPicker03 = editTextsArray[2];
 
         if (child.getCalculatedDOB() != null) {
-            int maxYears = child.getCalculatedDOB().getYear();
-            int minYears = child.getCalculatedDOB().minusYears(2).getYear();
+            int minYears = child.getCalculatedDOB().getYear();
+            int maxYears = child.getCalculatedDOB().plusYears(2).getYear();
             editTextPicker03.setMinvalue(minYears);
             editTextPicker03.setMaxvalue(maxYears);
         }
@@ -212,6 +240,24 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });
 
+        editTextPicker02.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                editTextPicker03.setText(null);
+                editTextPicker03.setError(null);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         editTextPicker03.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -220,51 +266,54 @@ public class SectionCHDActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String txt01, txt02, txt03;
-                LocalDate respLocalDate = null;
-                if (!daysFlag) return;
-                editTextPicker01.setEnabled(true);
-                editTextPicker02.setEnabled(true);
-                if (!TextUtils.isEmpty(editTextPicker01.getText()) && !TextUtils.isEmpty(editTextPicker02.getText()) && !TextUtils.isEmpty(editTextPicker03.getText())) {
-                    txt01 = editTextPicker01.getText().toString();
-                    txt02 = editTextPicker02.getText().toString();
-                    txt03 = editTextPicker03.getText().toString();
-                } else return;
-                if (respTextsArray != null) {
-                    respLocalDate = getLocalDate(respTextsArray);
-                    int minYears, maxYears;
-                    if (respLocalDate != null) {
-                        minYears = respLocalDate.getYear();
-                        maxYears = respLocalDate.plusYears(2).getYear();
-                    } else {
-                        maxYears = child.getCalculatedDOB().getYear();
-                        minYears = child.getCalculatedDOB().minusYears(2).getYear();
+                try {
+                    String txt01, txt02, txt03;
+                    LocalDate respLocalDate = null;
+                    if (!daysFlag) return;
+                    editTextPicker01.setEnabled(true);
+                    editTextPicker02.setEnabled(true);
+                    if (!TextUtils.isEmpty(editTextPicker01.getText()) && !TextUtils.isEmpty(editTextPicker02.getText()) && !TextUtils.isEmpty(editTextPicker03.getText())) {
+                        txt01 = editTextPicker01.getText().toString();
+                        txt02 = editTextPicker02.getText().toString();
+                        txt03 = editTextPicker03.getText().toString();
+                    } else return;
+                    clearEditTextFields(respArrayList);
+                    if (respTextsArray != null) {
+                        respLocalDate = getLocalDate(respTextsArray);
+                        int minYears, maxYears;
+                        if (respLocalDate != null) {
+                            minYears = respLocalDate.getYear();
+                        } else {
+                            minYears = child.getCalculatedDOB().getYear();
+                        }
+                        maxYears = child.getCalculatedDOB().plusYears(2).getYear();
+                        editTextPicker03.setMinvalue(minYears);
+                        editTextPicker03.setMaxvalue(maxYears);
                     }
-                    editTextPicker03.setMinvalue(minYears);
-                    editTextPicker03.setMaxvalue(maxYears);
-                }
-                if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
-                        (!editTextPicker02.isRangeTextValidate()) ||
-                        (!editTextPicker03.isRangeTextValidate()))
-                    return;
-                int day = Integer.parseInt(txt01);
-                int month = Integer.parseInt(txt02);
-                int year = Integer.parseInt(txt03);
+                    if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
+                            (!editTextPicker02.isRangeTextValidate()) ||
+                            (!editTextPicker03.isRangeTextValidate()))
+                        return;
+                    int day = Integer.parseInt(txt01);
+                    int month = Integer.parseInt(txt02);
+                    int year = Integer.parseInt(txt03);
 
-                AgeModel age;
-                if (respLocalDate != null) {
-                    age = DateRepository.Companion.getCalculatedAge(respLocalDate, year, month, day);
-                } else if (child.getCalculatedDOB() != null)
-                    age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
-                else
-                    age = DateRepository.Companion.getCalculatedAge(year, month, day);
-                if (age == null) {
-                    editTextPicker03.setError("Invalid date!!");
-                    imFlag = false;
-                } else {
-                    imFlag = true;
-                    editTextPicker01.setEnabled(false);
-                    editTextPicker02.setEnabled(false);
+                    AgeModel age;
+                    if (respLocalDate != null) {
+                        age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), Integer.parseInt(respTextsArray[2].getText().toString()), Integer.parseInt(respTextsArray[1].getText().toString()), Integer.parseInt(respTextsArray[0].getText().toString()), false);
+                    } else if (child.getCalculatedDOB() != null)
+                        age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), child.getCalculatedDOB().getYear(), child.getCalculatedDOB().getMonthValue(), child.getCalculatedDOB().getDayOfMonth(), false);
+                    else
+                        age = DateRepository.Companion.getCalculatedAge(year, month, day);
+                    if (age == null) {
+                        editTextPicker03.setError("Invalid date!!");
+                        imFlag = false;
+                    } else {
+                        imFlag = true;
+                        editTextPicker01.setEnabled(false);
+                        editTextPicker02.setEnabled(false);
+                    }
+                } catch (Exception ignored) {
                 }
             }
 
