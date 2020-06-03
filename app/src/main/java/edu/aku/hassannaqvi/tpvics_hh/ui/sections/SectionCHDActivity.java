@@ -195,7 +195,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
         if (child.getCalculatedDOB() != null) {
             int minYears = child.getCalculatedDOB().getYear();
-            int maxYears = child.getCalculatedDOB().plusYears(2).getYear();
+            int maxYears = child.getLocalDate().getYear();
             editTextPicker03.setMinvalue(minYears);
             editTextPicker03.setMaxvalue(maxYears);
         }
@@ -286,7 +286,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                         } else {
                             minYears = child.getCalculatedDOB().getYear();
                         }
-                        maxYears = child.getCalculatedDOB().plusYears(2).getYear();
+                        maxYears = child.getLocalDate().getYear();
                         editTextPicker03.setMinvalue(minYears);
                         editTextPicker03.setMaxvalue(maxYears);
                     }
@@ -427,16 +427,13 @@ public class SectionCHDActivity extends AppCompatActivity {
         });
 
         bi.im23.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i == bi.im234.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim23a, false);
-                Clear.clearAllFields(bi.fldGrpCVim24, true);
-            } else if (i != bi.im234.getId()) {
+            if (i != bi.im234.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim24, false);
                 Clear.clearAllFields(bi.fldGrpCVim23a, true);
-            } /*else {
-                //Clear.clearAllFields(bi.fldGrpCVim23a, true);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVim23a, false);
                 Clear.clearAllFields(bi.fldGrpCVim24, true);
-            }*/
+            }
         });
 
         bi.im2499.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

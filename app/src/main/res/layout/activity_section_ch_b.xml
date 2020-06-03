@@ -82,8 +82,8 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cb01a" />
 
@@ -92,8 +92,8 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb01a"
                             android:enabled='@{cb01dk.checked ? false : true}'
+                            android:hint="@string/cb01a"
                             android:maxLength="2"
                             android:text='@{cb01dk.checked ? "" : cb01a.getText().toString() }'
                             app:defaultValue="77"
@@ -106,23 +106,20 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cb01b" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/cb01b"
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb01b"
                             android:enabled='@{cb01dk.checked ? false : false}'
+                            android:hint="@string/cb01b"
                             android:maxLength="2"
-                            android:text='@{cb01dk.checked ? "" : cb01b.getText().toString() }'
-                            app:maxValue="20"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:text='@{cb01dk.checked ? "" : cb01b.getText().toString() }' />
 
                     </LinearLayout>
 
@@ -176,8 +173,8 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cb02a" />
 
@@ -186,8 +183,8 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb02a"
                             android:enabled='@{cb02dk.checked ? false : true}'
+                            android:hint="@string/cb02a"
                             android:maxLength="2"
                             android:text='@{cb02dk.checked ? "" : cb02a.getText().toString() }'
                             app:defaultValue="77"
@@ -200,23 +197,20 @@
                     <LinearLayout style="@style/hlinearlayout">
 
                         <TextView
-                            android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/cb02b" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/cb02b"
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:hint="@string/cb02b"
                             android:enabled='@{cb02dk.checked ? false : false}'
+                            android:hint="@string/cb02b"
                             android:maxLength="2"
-                            android:text='@{cb02dk.checked ? "" : cb02b.getText().toString() }'
-                            app:maxValue="20"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:text='@{cb02dk.checked ? "" : cb02b.getText().toString() }' />
 
                     </LinearLayout>
 
@@ -283,9 +277,9 @@
                                 style="@style/EditTextNum"
                                 android:hint="@string/year"
                                 android:maxLength="4"
-                                app:mask="20##"
                                 android:onTextChanged="@{callback.cb03yyOnTextChanged}"
                                 app:defaultValue="9998"
+                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />
@@ -433,10 +427,10 @@
                 android:layout_marginTop="24dp">
 
                 <Button
+                    android:id="@+id/btnNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="12dp"
-                    android:id="@+id/btnNext"
                     android:background="@color/colorPrimary"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"

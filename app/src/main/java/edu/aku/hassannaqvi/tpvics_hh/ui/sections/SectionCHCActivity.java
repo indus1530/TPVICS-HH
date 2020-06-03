@@ -77,18 +77,19 @@ public class SectionCHCActivity extends AppCompatActivity {
                 bi.backPhoto.setEnabled(true);
                 bi.frontPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
                 bi.backPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
-                bi.frontFileName.setText("");
-                bi.backFileName.setText("");
+                bi.frontFileName.setText(null);
+                bi.backFileName.setText(null);
             } else if (i == bi.im012.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim02, false);
-                Clear.clearAllFields(bi.fldGrpCVim03, true);
+                Clear.clearAllFields(bi.fldGrpCVim03, false);
                 Clear.clearAllFields(bi.fldGrpCVim04, false);
                 bi.frontPhoto.setEnabled(false);
                 bi.backPhoto.setEnabled(false);
                 bi.frontPhoto.setBackground(null);
                 bi.backPhoto.setBackground(null);
-                bi.frontFileName.setText("");
-                bi.backFileName.setText("");
+                bi.frontFileName.setText(null);
+                bi.backFileName.setText(null);
+                im02Flag = true;
             } else {
                 Clear.clearAllFields(bi.fldGrpCVim02, true);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
@@ -97,24 +98,15 @@ public class SectionCHCActivity extends AppCompatActivity {
                 bi.backPhoto.setEnabled(false);
                 bi.frontPhoto.setBackground(null);
                 bi.backPhoto.setBackground(null);
-                bi.frontFileName.setText("");
-                bi.backFileName.setText("");
+                bi.frontFileName.setText(null);
+                bi.backFileName.setText(null);
             }
 
         }));
 
         bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
-/*            if (i == bi.im021.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim03, false);
-//                Clear.clearAllFields(bi.fldGrpSecChc2, false);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVim03, true);
-//                Clear.clearAllFields(bi.fldGrpSecChc2, true);
-            }*/
-
             Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im022.getId());
-            im02Flag = i == bi.im021.getId();
-
+            im02Flag = i == bi.im021.getId() || i == bi.im022.getId();
         });
 
         bi.im04yy.addTextChangedListener(new TextWatcher() {

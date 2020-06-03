@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
@@ -42,7 +43,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 public class SectionCHBActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChBBinding bi;
-    boolean dtFlag = false;
+    boolean dtFlag = false, edGrade = false, edGrade02 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,20 +73,37 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
+                bi.cb01b.setText(null);
+                if (TextUtils.isEmpty(bi.cb01a.getText())) return;
+                if (bi.cb01a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb01a.getText().toString()) == 77) {
+                    bi.cb01b.setEnabled(true);
+                } else {
+                    bi.cb01b.setEnabled(false);
+                    edGrade02 = true;
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
+            }
+        });
 
-                if ((bi.cb01a.getText()).hashCode() == s.hashCode()) {
-                    if (bi.cb01a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb01a.getText().toString()) == 77) {
-                        bi.cb01b.setEnabled(true);
-                    } else {
-                        bi.cb01b.setEnabled(false);
-                        bi.cb01b.setText("");
-                    }
-                }
+        bi.cb01b.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (TextUtils.isEmpty(bi.cb01b.getText())) return;
+                edGrade = bi.cb01b.getText().toString().equals("20") || bi.cb01b.getText().toString().equals("77");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!edGrade) bi.cb01b.setError("Invalid grade");
+                else bi.cb01b.setError(null);
             }
         });
 
@@ -98,20 +116,37 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                bi.cb02b.setText(null);
+                if (TextUtils.isEmpty(bi.cb02a.getText())) return;
+                if (bi.cb02a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb02a.getText().toString()) == 77) {
+                    bi.cb02b.setEnabled(true);
+                } else {
+                    bi.cb02b.setEnabled(false);
+                    edGrade02 = true;
+                }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
+            }
+        });
 
-                if ((bi.cb02a.getText()).hashCode() == s.hashCode()) {
-                    if (bi.cb02a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb02a.getText().toString()) == 77) {
-                        bi.cb02b.setEnabled(true);
-                    } else {
-                        bi.cb02b.setEnabled(false);
-                        bi.cb02b.setText(null);
-                    }
-                }
+        bi.cb02b.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (TextUtils.isEmpty(bi.cb02b.getText())) return;
+                edGrade02 = bi.cb02b.getText().toString().equals("20") || bi.cb02b.getText().toString().equals("77");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!edGrade02) bi.cb02b.setError("Invalid grade");
+                else bi.cb02b.setError(null);
             }
         });
 
@@ -178,11 +213,17 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
     }
 
     private boolean formValidation() {
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHB))
+            return false;
+        if (!edGrade || !edGrade02) {
+            Toast.makeText(this, "Invalid Religious Grade!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         if (!dtFlag) {
             Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return false;
         }
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHB);
+        return true;
     }
 
     public void BtnContinue() {
