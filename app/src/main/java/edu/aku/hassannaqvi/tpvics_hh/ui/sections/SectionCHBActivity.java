@@ -43,7 +43,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 public class SectionCHBActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChBBinding bi;
-    boolean dtFlag = false, edGrade = false, edGrade02 = false;
+    boolean dtFlag = false, edGrade = true, edGrade02 = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +76,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
                 if (TextUtils.isEmpty(bi.cb01a.getText())) return;
                 if (bi.cb01a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb01a.getText().toString()) == 77) {
                     bi.cb01b.setEnabled(true);
+                    edGrade = false;
                 } else {
                     bi.cb01b.setEnabled(false);
                     edGrade = true;
@@ -119,6 +120,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
                 if (TextUtils.isEmpty(bi.cb02a.getText())) return;
                 if (bi.cb02a.getText().toString().trim().length() > 0 && Integer.parseInt(bi.cb02a.getText().toString()) == 77) {
                     bi.cb02b.setEnabled(true);
+                    edGrade02 = false;
                 } else {
                     bi.cb02b.setEnabled(false);
                     edGrade02 = true;

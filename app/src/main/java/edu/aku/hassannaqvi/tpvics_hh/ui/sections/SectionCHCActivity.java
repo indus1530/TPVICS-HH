@@ -221,6 +221,10 @@ public class SectionCHCActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return false;
         }
+        if (bi.im011.isChecked() && (TextUtils.isEmpty(bi.frontFileName.getText()) || TextUtils.isEmpty(bi.backFileName.getText()))) {
+            Toast.makeText(this, "No Photos attached", Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHC);
     }
 

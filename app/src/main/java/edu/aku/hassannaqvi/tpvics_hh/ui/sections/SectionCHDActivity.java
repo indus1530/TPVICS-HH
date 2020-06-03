@@ -381,6 +381,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpSecChc6, false);
                 Clear.clearAllFields(bi.fldGrpCVim23, false);
                 Clear.clearAllFields(bi.fldGrpCVim23a, false);
+                Clear.clearAllFields(bi.fldGrpCVim24, true);
             }
 
         }));
