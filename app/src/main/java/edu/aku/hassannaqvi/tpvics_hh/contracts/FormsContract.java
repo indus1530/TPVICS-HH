@@ -185,30 +185,30 @@ public class FormsContract extends LiveData<FormsContract> {
         json.put(FormsTable.COLUMN_UID, this._UID == null ? JSONObject.NULL : this._UID);
         json.put(FormsTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put(FormsTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
-        json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put("hh21", this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_FSTATUS, this.fStatus == null ? JSONObject.NULL : this.fStatus);
-        json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
+        json.put("hh2188x", this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(FormsTable.COLUMN_FSTATUS88x, this.fstatus88x == null ? JSONObject.NULL : this.fstatus88x);
         json.put(FormsTable.COLUMN_LUID, this.luid == null ? JSONObject.NULL : this.luid);
         json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
-        if (!this.sInfo.equals("")) {
+        if (this.sInfo != null && !this.sInfo.equals("")) {
             json.put(FormsTable.COLUMN_SINFO, new JSONObject(this.sInfo));
         }
 
-        if (!this.sE.equals("")) {
+        if (this.sE != null && !this.sE.equals("")) {
             json.put(FormsTable.COLUMN_SE, new JSONObject(this.sE));
         }
 
-        if (!this.sM.equals("")) {
+        if (this.sM != null && !this.sM.equals("")) {
             json.put(FormsTable.COLUMN_SM, new JSONObject(this.sM));
         }
 
-        if (!this.sN.equals("")) {
+        if (this.sN != null && !this.sN.equals("")) {
             json.put(FormsTable.COLUMN_SN, new JSONObject(this.sN));
         }
 
-        if (!this.sO.equals("")) {
+        if (this.sO != null && !this.sO.equals("")) {
             json.put(FormsTable.COLUMN_SO, new JSONObject(this.sO));
         }
 

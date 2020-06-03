@@ -47,7 +47,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_hh22"
                             android:layout_alignBottom="@id/qtxt_hh22"
-                            android:text="@string/Q_hh22" />
+                            android:text="@string/Q_hh21" />
 
                     </RelativeLayout>
 

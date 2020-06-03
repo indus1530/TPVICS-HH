@@ -114,17 +114,17 @@ public class ChildContract {
         json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
         json.put(ChildTable.COLUMN_CLUSTERCODE, this.cluster == null ? JSONObject.NULL : this.cluster);
         json.put(ChildTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
-        json.put(ChildTable.COLUMN_CSTATUS, this.cstatus == null ? JSONObject.NULL : this.cstatus);
-        json.put(ChildTable.COLUMN_CSTATUS88x, this.cstatus88x == null ? JSONObject.NULL : this.cstatus88x);
+        json.put("ec22", this.cstatus == null ? JSONObject.NULL : this.cstatus);
+        json.put("ec2288x", this.cstatus88x == null ? JSONObject.NULL : this.cstatus88x);
 
         if (this.sCA != null && !this.sCA.equals("")) {
-            json.put(ChildTable.COLUMN_SCA, this.sCA.equals("") ? JSONObject.NULL : new JSONObject(this.sCA));
+            json.put(ChildTable.COLUMN_SCA, new JSONObject(this.sCA));
         }
         if (this.sCB != null && !this.sCB.equals("")) {
-            json.put(ChildTable.COLUMN_SCB, this.sCB.equals("") ? JSONObject.NULL : new JSONObject(this.sCB));
+            json.put(ChildTable.COLUMN_SCB, new JSONObject(this.sCB));
         }
         if (this.sCC != null && !this.sCC.equals("")) {
-            json.put(ChildTable.COLUMN_SCC, this.sCC.equals("") ? JSONObject.NULL : new JSONObject(this.sCC));
+            json.put(ChildTable.COLUMN_SCC, new JSONObject(this.sCC));
         }
         json.put(ChildTable.COLUMN_DEVICETAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
 

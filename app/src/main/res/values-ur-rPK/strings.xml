@@ -4,8 +4,8 @@
     <string name="app_name"> TPVICS - HOUSEHOLD SURVEY \n In Urdu Language </string>
 
     <!-- Strings related to login -->
-    <string name="btnSync">Sync</string>
-    <string name="btnUpload">Upload</string>
+    <string name="btnSync">Download Data</string>
+    <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>
@@ -85,7 +85,7 @@
     <string name="hh074a"> سُپروائزر کا  کوڈ </string>
     <string name="hh01"> انٹرویو کی تاریخ </string>
     <string name="hh02"> انٹرویو کا وقت </string>
-    <string name="hh13"> جواب دہندہ کانام </string>
+    <string name="hh13"> جواب دہندہ کا نام </string>
     <string name="hh13a"> جواب دہندہ کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
 
@@ -95,8 +95,8 @@
 
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
 
-    <string name="hh16a"> سربراہ کا نام </string>
-    <string name="hh16b"> سربراہ کا فون نمبر </string>
+    <string name="hh16a"> گھر کے سربراہ کا نام </string>
+    <string name="hh16b"> گھر کے سربراہ کا فون نمبر </string>
 
     <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
     <string name="hh17a"> سربراہ کا نام </string>
@@ -122,14 +122,13 @@
     <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل </string>
-    <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
-    <string name="hh22c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
-    <string name="hh22d"> انکار کردیا </string>
-    <string name="hh22e"> خالی گھر / غیر رہائشی </string>
-    <string name="hh22f"> گھر نہیں ملا </string>
+    <string name="hh22b"> جزوی طور پر مکمل </string>
+    <string name="hh22c"> انکار کردیا </string>
+    <string name="hh22d"> بچے کی دیکھ بھال کرنے والا/والی  گھر پر موجود نہیں </string>
+    <string name="hh22e"> بچہ اہل نہیں/بچے کی عمر12 سے 23 مہینے نہیں ہے </string>
+    <string name="hh22f"> جواب دینے سے قاصر </string>
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
-
 
     <string name="chsec"> Child Information </string>
     <string name="chBsec"> Child Background </string>
@@ -550,8 +549,8 @@
     <string name="ec151"> لڑکا </string>
     <string name="ec152"> لڑکی </string>
 
-    <string name="ec16"> والدہ / دیکھ بھال کرنے والے  کا نام </string>
-    <string name="ec17"> والدہ / دیکھ بھال کرنے والے کی عمر مکمل سالوں میں </string>
+    <string name="ec16"> جواب دہندہ  کا نام </string>
+    <string name="ec17"> جواب دہندہ کی عمر مکمل سالوں میں </string>
     <string name="ec18"> بچے کے ساتھ جواب دہندہ کا رشتہ  </string>
     <string name="ec181"> والدہ </string>
     <string name="ec182"> والد </string>
@@ -596,7 +595,7 @@
     <string name="ec0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb0_title"> اس سے پہلے کہ میں انٹرویو کی شروعات کروں، کیا آپ گھر میں دستیاب بچے کا پیدائش کا سرٹیفیکیٹ، حفاضتی ٹیکوں کا کارڈ، اور حفاظتی ٹیکوں کا کوئی اور ریکارڈ جو صحت کی سہولت مہیا کرنے والے/والی سے ملا ہومجھے  لا کر دکھا سکتی ہیں؟  کیونکہ ہمیں ان دستاویزات کے حوالہ کی ضرورت پڑے گی۔ </string>
     <string name="cb01"> آپ کی زیادہ سے زیادہ مکمل کردہ تعلیم کتنی ہے ؟ </string>
-    <string name="cb01_info">غیر تعلیم یافتہ کے لئے 77 اور مذہبی تعلیم کے لئے  88 درج کریں </string>
+    <string name="cb01_info"> غیر تعلیم یافتہ کے لئے 77 اور مذہبی تعلیم کے لئے  88 درج کریں </string>
     <string name="cb01a"> گریڈ </string>
     <string name="cb01b"> مذہبی تعلیم </string>
     <string name="cb01dk"> معلوم نہیں کے لئے 98 درج کریں </string>
@@ -618,7 +617,7 @@
     <string name="cb04mm"> عمر (مکمل سالوں میں) </string>
     <string name="cb04yy"> عمر (مکمل مہینوں میں) </string>
 
-    <string name="im1title1"> اہل بچے کی عمر سوال نمبر:CB4 سے چیک کریں </string>
+    <string name="im1title1"> اہل بچے کی عمر سوال نمبر :CB4 سے چیک کریں </string>
     <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
 
     <string name="im01"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
@@ -653,12 +652,12 @@
     <string name="im0501mm"> مہینہ </string>
     <string name="im0501yy"> سال </string>
 
-    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک </string>
+    <string name="im0502"> پولیو (منہ کے ذریعے دیئے جانے والے قطرے) پہلی خوراک (OPV0) </string>
     <string name="im0502dd"> دن </string>
     <string name="im0502mm"> مہینہ </string>
     <string name="im0502yy"> سال </string>
 
-    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے </string>
+    <string name="im0503"> پولیو - پیدائش کے وقت منہ کے ذریعے دیئے جانے والے قطرے (OPV1) </string>
     <string name="im0503dd"> دن </string>
     <string name="im0503mm"> مہینہ </string>
     <string name="im0503yy"> سال </string>
@@ -802,7 +801,7 @@
     <string name="im232"> پرائیوٹ مرکز صحت </string>
     <string name="im233"> سرکاری آؤٹ ریچ سروس </string>
     <string name="im234"> حفاظتی ٹیکے نہیں لگوائے </string>
-    <string name="im236"> دیگر </string>
+    <string name="im236x"> دیگر </string>
 
     <string name="im23a"> کیا آپ براۓ مہربانی بتا سکتی ہیں کہ یہ مرکز صحت کہاں واقع ہے ؟ </string>
     <string name="im23a1"> اسی احاطے کے دس کلومیڑ کے </string>
@@ -833,10 +832,10 @@
 
     <string name="im25"> اس بچے کے حفاظتی ٹیکوں کے ریکارڈ کے لئے مرکز صحت پر ایک سوالنامہ کا فارم جاری کریں۔ اس سوالنامہ کا انفارمیشن پینل مکمل کریں۔ </string>
 
-    <string name="im26a"> حفاظتی ٹیکوں کے بارے میں جواب دہندہ کی معلومات  </string>
-    <string name="im26b"> سوالوں کے جواب میں جواب دہندہ کا تعاون اور رویہ۔   </string>
-    <string name="im26c"> کارڈ کی دستیابی ، تکمیل (خاص طور پر کارڈ دکھایا گیا لیکن آپ اسے واضح طور پر پڑھ نہیں سکے)  </string>
-    <string name="im26d"> دیگر تبصرے اگر کوئی  </string>
+    <string name="im26a"> حفاظتی ٹیکوں کے بارے میں جواب دہندہ کی معلومات</string>
+    <string name="im26b">  سوالوں کے جواب میں جواب دہندہ کا تعاون اور رویہ۔ </string>
+    <string name="im26c">  کارڈ کی دستیابی ، تکمیل (خاص طور پر کارڈ دکھایا گیا لیکن آپ اسے واضح طور پر پڑھ نہیں سکے)  </string>
+    <string name="im26d"> دیگر تبصرے اگر کوئی </string>
 
 
     <string name="end_interview"> انٹرویو ختم کریں </string>
@@ -1115,6 +1114,7 @@
     <string name="Q_ch03b">CH03b</string>
     <string name="hhformInfo"> ۔HOUSEHOLD بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں</string>
     <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-\12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
+    <string name="childlistinfo">اندراج شدہ بچوں کی فہرست</string>
 
 
 </resources>
