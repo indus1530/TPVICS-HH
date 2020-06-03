@@ -24,7 +24,9 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionHhBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.fc;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
 public class SectionHHActivity extends AppCompatActivity implements EndSectionActivity {
@@ -88,11 +90,11 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
     }
 
     private boolean UpdateDB() {
-        long updcount = db.addForm(MainApp.fc);
-        MainApp.fc.set_ID(String.valueOf(updcount));
+        long updcount = db.addForm(fc);
+        fc.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
-            MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
+            fc.set_UID(fc.getDeviceID() + fc.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, fc.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -105,7 +107,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
 
         JSONObject json = new JSONObject();
 
-        MainApp.fc.setFormDate(bi.hh01.getText().toString());
+        fc.setFormDate(bi.hh01.getText().toString());
 //        json.put("hh01", bi.hh01.getText().toString());
         json.put("hh02", bi.hh02.getText().toString());
         json.put("hh10", bi.hh10.getText().toString());
@@ -136,7 +138,14 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
 
         json.put("hh20a", bi.hh20aa.getText().toString());
 
-        MainApp.fc.setsInfo(String.valueOf(json));
+        try {
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(fc.getsInfo()), json);
+
+            fc.setsInfo(String.valueOf(json_merge));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
