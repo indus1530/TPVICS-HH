@@ -112,10 +112,10 @@ public class ChildContract {
         json.put(ChildTable.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
         json.put(ChildTable.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
         json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
-        json.put(ChildTable.COLUMN_CLUSTERCODE, this.agey == null ? JSONObject.NULL : this.cluster);
-        json.put(ChildTable.COLUMN_HHNO, this.agem == null ? JSONObject.NULL : this.hhno);
-        json.put(ChildTable.COLUMN_CSTATUS, this.agem == null ? JSONObject.NULL : this.cstatus);
-        json.put(ChildTable.COLUMN_CSTATUS88x, this.agem == null ? JSONObject.NULL : this.cstatus88x);
+        json.put(ChildTable.COLUMN_CLUSTERCODE, this.cluster == null ? JSONObject.NULL : this.cluster);
+        json.put(ChildTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
+        json.put(ChildTable.COLUMN_CSTATUS, this.cstatus == null ? JSONObject.NULL : this.cstatus);
+        json.put(ChildTable.COLUMN_CSTATUS88x, this.cstatus88x == null ? JSONObject.NULL : this.cstatus88x);
 
         if (this.sCA != null && !this.sCA.equals("")) {
             json.put(ChildTable.COLUMN_SCA, this.sCA.equals("") ? JSONObject.NULL : new JSONObject(this.sCA));
