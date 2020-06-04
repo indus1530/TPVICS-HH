@@ -110,8 +110,8 @@ public class ChildContract {
         json.put(ChildTable.COLUMN_CHILDNAME, this.childName == null ? JSONObject.NULL : this.childName);
         json.put(ChildTable.COLUMN_CHILDSERIAL, this.childSerial == null ? JSONObject.NULL : this.childSerial);
         json.put(ChildTable.COLUMN_GENDER, this.gender == null ? JSONObject.NULL : this.gender);
-        json.put(ChildTable.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
-        json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);
+        /*json.put(ChildTable.COLUMN_AGEY, this.agey == null ? JSONObject.NULL : this.agey);
+        json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);*/
         json.put(ChildTable.COLUMN_CLUSTERCODE, this.cluster == null ? JSONObject.NULL : this.cluster);
         json.put(ChildTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
         json.put("ec22", this.cstatus == null ? JSONObject.NULL : this.cstatus);
