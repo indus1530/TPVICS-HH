@@ -31,6 +31,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
@@ -78,6 +79,7 @@ public class MainApp extends Application {
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
+    public static EnumBlockContract enumBlockContract;
     public static LiveData<FormsContract> liveFC = new MutableLiveData<>();
     public static ChildContract child;
     public static FamilyMembersContract selectedKishMWRA;

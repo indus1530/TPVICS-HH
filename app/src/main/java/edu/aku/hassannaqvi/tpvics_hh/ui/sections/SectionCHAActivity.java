@@ -32,6 +32,7 @@ import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.enumBlockContract;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
 
 public class SectionCHAActivity extends AppCompatActivity implements EndSectionActivity {
@@ -118,6 +119,20 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         f1.put("_luid", MainApp.fc.getLuid());
 //        f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
+        f1.put("ec03", MainApp.userName);
+        f1.put("ec05", enumBlockContract.getEbcode());
+        String selected = enumBlockContract.getGeoarea();
+        if (!selected.equals("")) {
+            String[] selSplit = selected.split("\\|");
+            if (selSplit.length == 4) {
+                f1.put("ec06", selSplit[0]);
+                f1.put("ec07", selSplit[1]);
+                f1.put("ec08", selSplit[2]);
+                f1.put("ec09", selSplit[3]);
+            }
+        }
+        f1.put("ec11", MainApp.fc.getClusterCode());
+        f1.put("ec12", MainApp.fc.getHhno());
         f1.put("ec13", bi.ec13.getText().toString());
         f1.put("ec14", bi.ec14.getText().toString());
         f1.put("ec15", bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");

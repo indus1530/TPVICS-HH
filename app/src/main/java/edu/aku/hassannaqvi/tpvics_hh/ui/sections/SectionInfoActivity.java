@@ -33,6 +33,8 @@ import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.enumBlockContract;
+
 public class SectionInfoActivity extends AppCompatActivity {
 
     ActivitySectionInfoBinding bi;
@@ -138,6 +140,19 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
   /*      json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());*/
+        json.put("hh03", MainApp.userName);
+        json.put("hh05", enumBlockContract.getEbcode());
+        String selected = enumBlockContract.getGeoarea();
+        if (!selected.equals("")) {
+            String[] selSplit = selected.split("\\|");
+            if (selSplit.length == 4) {
+                json.put("hh06", selSplit[0]);
+                json.put("hh07", selSplit[1]);
+                json.put("hh08", selSplit[2]);
+                json.put("hh09", selSplit[3]);
+            }
+        }
+
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
         json.put("hh09", MainApp.userName);
@@ -173,6 +188,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(enumBlockContract -> {
+                    MainApp.enumBlockContract = enumBlockContract;
                     String selected = enumBlockContract.getGeoarea();
                     if (!selected.equals("")) {
 
