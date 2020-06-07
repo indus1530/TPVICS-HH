@@ -225,7 +225,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public int syncUser(JSONArray userList) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(UsersContract.singleUser.TABLE_NAME, null, null);
+        db.delete(UsersContract.SingleUser.TABLE_NAME, null, null);
         int insertCount = 0;
         try {
             JSONArray jsonArray = userList;
@@ -237,10 +237,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.Sync(jsonObjectUser);
                 ContentValues values = new ContentValues();
 
-                values.put(UsersContract.singleUser.ROW_USERNAME, user.getUserName());
-                values.put(UsersContract.singleUser.ROW_PASSWORD, user.getPassword());
-                values.put(UsersContract.singleUser.DIST_ID, user.getDIST_ID());
-                long rowID = db.insert(UsersContract.singleUser.TABLE_NAME, null, values);
+                values.put(UsersContract.SingleUser.ROW_USERNAME, user.getUserName());
+                values.put(UsersContract.SingleUser.ROW_PASSWORD, user.getPassword());
+                values.put(UsersContract.SingleUser.DIST_ID, user.getDIST_ID());
+                long rowID = db.insert(UsersContract.SingleUser.TABLE_NAME, null, values);
                 if (rowID != -1) insertCount++;
             }
 
@@ -256,13 +256,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean Login(String username, String password) throws SQLException {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.singleUser.TABLE_NAME + " WHERE " + UsersContract.singleUser.ROW_USERNAME + "=? AND " + UsersContract.singleUser.ROW_PASSWORD + "=?", new String[]{username, password});
+        Cursor mCursor = db.rawQuery("SELECT * FROM " + UsersContract.SingleUser.TABLE_NAME + " WHERE " + UsersContract.SingleUser.ROW_USERNAME + "=? AND " + UsersContract.SingleUser.ROW_PASSWORD + "=?", new String[]{username, password});
         if (mCursor != null) {
+            if (mCursor.getCount() > 0) {
 
-            /*if (mCursor.moveToFirst()) {
-                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.singleUser.DIST_ID));
-                }*/
-            return mCursor.getCount() > 0;
+                if (mCursor.moveToFirst()) {
+                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(UsersContract.SingleUser.ROW_USERNAME));
+                }
+                return true;
+            }
         }
         return false;
     }

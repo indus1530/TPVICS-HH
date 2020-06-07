@@ -34,6 +34,7 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import kotlin.Pair;
@@ -85,6 +86,7 @@ public class MainApp extends Application {
     public static FamilyMembersContract selectedKishMWRA;
     public static FamilyMembersContract indexKishMWRAChild;
     public static String userName = "0000";
+    public static UsersContract user;
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
