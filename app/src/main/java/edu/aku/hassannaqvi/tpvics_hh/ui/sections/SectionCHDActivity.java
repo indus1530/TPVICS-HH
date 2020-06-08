@@ -548,6 +548,8 @@ public class SectionCHDActivity extends AppCompatActivity {
                                 bi.im113.isChecked() ? "98" :
                                         "0");
         json.put("im12", bi.im12.getText().toString());
+        json.put("im12dk", bi.im12dk.isChecked() ? "98" : "0");
+
         json.put("im13",
                 bi.im131.isChecked() ? "1" :
                         bi.im132.isChecked() ? "2" :
@@ -559,18 +561,22 @@ public class SectionCHDActivity extends AppCompatActivity {
                                 bi.im143.isChecked() ? "98" :
                                         "0");
         json.put("im15", bi.im15.getText().toString());
+        json.put("im15dk", bi.im15dk.isChecked() ? "98" : "0");
+
         json.put("im16",
                 bi.im161.isChecked() ? "1" :
                         bi.im162.isChecked() ? "2" :
                                 bi.im163.isChecked() ? "98" :
                                         "0");
         json.put("im17", bi.im17.getText().toString());
+        json.put("im17dk", bi.im17dk.isChecked() ? "98" : "0");
 
         json.put("im18", bi.im181.isChecked() ? "1"
                 : bi.im182.isChecked() ? "2"
                 : bi.im183.isChecked() ? "98"
                 : "0");
         json.put("im19", bi.im19.getText().toString());
+        json.put("im19dk", bi.im19dk.isChecked() ? "98" : "0");
 
         json.put("im20", bi.im201.isChecked() ? "1"
                 : bi.im202.isChecked() ? "2"
@@ -582,6 +588,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 : bi.im213.isChecked() ? "98"
                 : "0");
         json.put("im22", bi.im22.getText().toString());
+        json.put("im22dk", bi.im22dk.isChecked() ? "98" : "0");
 
         json.put("im23", bi.im231.isChecked() ? "1"
                 : bi.im232.isChecked() ? "2"

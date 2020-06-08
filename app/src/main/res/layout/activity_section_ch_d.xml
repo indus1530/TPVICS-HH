@@ -1979,7 +1979,6 @@
                                     android:text="@string/Q_im12" />
                             </RelativeLayout>
 
-
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/im12"
                                 style="@style/EditTextNum"
@@ -1987,7 +1986,16 @@
                                 android:maxLength="2"
                                 app:maxValue="50"
                                 app:minValue="1"
+                                android:enabled='@{im12dk.checked ? false : false}'
+                                android:text='@{im12dk.checked ? "" : im12.getText().toString() }'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/im12dk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
 
                         </LinearLayout>
 
@@ -2167,7 +2175,16 @@
                                 android:maxLength="1"
                                 app:maxValue="3"
                                 app:minValue="1"
+                                android:enabled='@{im15dk.checked ? false : false}'
+                                android:text='@{im15dk.checked ? "" : im15.getText().toString() }'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/im15dk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
 
                         </LinearLayout>
 
@@ -2276,7 +2293,16 @@
                                 android:maxLength="1"
                                 app:maxValue="3"
                                 app:minValue="1"
+                                android:enabled='@{im17dk.checked ? false : false}'
+                                android:text='@{im17dk.checked ? "" : im17.getText().toString() }'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/im17dk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
 
                         </LinearLayout>
 
@@ -2386,7 +2412,16 @@
                                 android:maxLength="1"
                                 app:maxValue="2"
                                 app:minValue="1"
+                                android:enabled='@{im19dk.checked ? false : false}'
+                                android:text='@{im19dk.checked ? "" : im19.getText().toString() }'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/im19dk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
 
                         </LinearLayout>
 
@@ -2561,7 +2596,16 @@
                                 android:maxLength="1"
                                 app:maxValue="2"
                                 app:minValue="1"
+                                android:enabled='@{im22dk.checked ? false : false}'
+                                android:text='@{im22dk.checked ? "" : im22.getText().toString() }'
                                 app:type="range" />
+
+                            <CheckBox
+                                android:id="@+id/im22dk"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="-1"
+                                android:text="@string/dkn" />
 
                         </LinearLayout>
 
