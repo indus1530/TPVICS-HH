@@ -753,7 +753,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYNCED,
 
         };
-        String whereClause = FormsTable.COLUMN_FORMDATE + " Like ? ";
+        String whereClause = FormsTable.COLUMN_SINFO + " Like ? ";
         String[] whereArgs = new String[]{"%" + "\"sysdate\":\"" + spDateT.substring(0, 8).trim() + "\"," + "%"};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
