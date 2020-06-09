@@ -441,6 +441,7 @@ public class MainActivity extends AppCompatActivity {
     public void gotoC1(View view) {
     }
 
+
     public static class MyDialogFragment extends DialogFragment {
 
         String newVer, preVer;

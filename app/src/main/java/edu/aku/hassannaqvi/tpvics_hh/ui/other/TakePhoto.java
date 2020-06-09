@@ -85,6 +85,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
         picInfo = findViewById(R.id.picInfo);
         btnGrp = findViewById(R.id.btnGrp);
         btnGrp.setVisibility(View.GONE);
+        hideSystemUI();
 
         picInfo.setText(picView + "\r\n For: " + childName);
 
@@ -113,7 +114,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
                     Camera.Parameters parameters = camera.getParameters();
                     //parameters.setJpegQuality(88);
                     parameters.setAutoWhiteBalanceLock(true);
-                    parameters.setFlashMode(Camera.Parameters.WHITE_BALANCE_AUTO);
+                    //parameters.setFlashMode(Camera.Parameters.WHITE_BALANCE_AUTO);
                     parameters.set("rotation", 90);
                     parameters.set("iso", "auto");
                     //parameters.setPreviewSize(640, 480);
@@ -179,7 +180,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
 //        for (String effect : colorEffects) {
 //            Log.d("TAG", effect);
 //        }
-        parameters.setColorEffect(Camera.Parameters.WHITE_BALANCE_AUTO);
+        //parameters.setColorEffect(Camera.Parameters.WHITE_BALANCE_AUTO);
         //parameters.setPreviewSize(640, 480);
         //parameters.setPictureSize(640, 480);
         if (focusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE)) {
@@ -402,6 +403,32 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
 
     }
 */
+private void hideSystemUI() {
+    // Enables regular immersive mode.
+    // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
+    // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+    View decorView = getWindow().getDecorView();
+    decorView.setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_IMMERSIVE
+                    // Set the content to appear under the system bars so that the
+                    // content doesn't resize when the system bars hide and show.
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    // Hide the nav bar and status bar
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN);
+}
+
+    // Shows the system bars by removing all the flags
+// except for the ones that make the content appear under the system bars.
+    private void showSystemUI() {
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
 
     @Override
     public void onBackPressed() {
