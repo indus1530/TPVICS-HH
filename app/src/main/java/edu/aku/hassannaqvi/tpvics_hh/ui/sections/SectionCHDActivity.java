@@ -36,6 +36,7 @@ import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01CARDSEEN;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
@@ -54,6 +55,13 @@ public class SectionCHDActivity extends AppCompatActivity {
         setupListeners();
         setupTextWatchers();
         setupYears();
+
+        //imo7 Check
+        boolean im07 = getIntent().getBooleanExtra(IM01CARDSEEN, false);
+        if (im07) {
+            Clear.clearAllFields(bi.fldGrpCVim07, false);
+            bi.im071.setChecked(true);
+        }
 
     }
 

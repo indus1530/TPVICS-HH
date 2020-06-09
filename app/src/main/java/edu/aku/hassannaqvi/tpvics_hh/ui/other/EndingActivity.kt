@@ -92,7 +92,7 @@ class EndingActivity : AppCompatActivity() {
             MainApp.fc.istatus88x = bi.istatus96x.text.toString()
 
             val json = JSONObject()
-            json.put("ttChild", SectionSubInfoActivity.mainVModel.childLstU5.value?.size ?: 0)
+            json.put("ttChild", SectionSubInfoActivity.mainVModel.childU5.value?.size ?: 0)
             try {
                 val json_merge = JSONUtils.mergeJSONObjects(JSONObject(MainApp.fc.getsInfo()), json)
                 MainApp.fc.setsInfo(json_merge.toString())
