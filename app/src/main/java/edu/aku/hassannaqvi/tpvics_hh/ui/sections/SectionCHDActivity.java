@@ -104,7 +104,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(editTextPicker01.getText()) || TextUtils.isEmpty(editTextPicker02.getText()) || TextUtils.isEmpty(editTextPicker03.getText()))
             return null;
         String txt01 = editTextPicker01.getText().toString();
-        if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86"))
+        if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("88"))
             return null;
         try {
             String txt02 = editTextPicker02.getText().toString();
@@ -229,7 +229,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(editTextPicker01.getText())) {
                     txt01 = editTextPicker01.getText().toString();
 
-                    if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) {
+                    if (txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("88")) {
                         editTextPicker02.setText(null);
                         editTextPicker03.setText(null);
                         editTextPicker02.setEnabled(false);
@@ -298,7 +298,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                         editTextPicker03.setMinvalue(minYears);
                         editTextPicker03.setMaxvalue(maxYears);
                     }
-                    if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("86")) ||
+                    if ((!editTextPicker01.isRangeTextValidate() || txt01.trim().equals("44") || txt01.trim().equals("97") || txt01.trim().equals("66") || txt01.trim().equals("88")) ||
                             (!editTextPicker02.isRangeTextValidate()) ||
                             (!editTextPicker03.isRangeTextValidate()))
                         return;

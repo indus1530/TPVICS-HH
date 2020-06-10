@@ -164,6 +164,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     bi.cb04mm.setText(null);
                     bi.cb04yy.setText(null);
+                    bi.cb03yy.setText(null);
                 }
 
                 @Override
