@@ -115,7 +115,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
         JSONObject f1 = new JSONObject();
         f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-
+        f1.put("appversion", MainApp.appInfo.getAppVersion());
         f1.put("_luid", MainApp.fc.getLuid());
 //        f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
