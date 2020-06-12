@@ -406,9 +406,9 @@
                             <EditText
                                 android:id="@+id/backFileName"
                                 android:layout_width="0dp"
-                                android:enabled="false"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:textColor="#7f7f7f7f"
                                 android:textSize="14sp" />
 
@@ -433,7 +433,8 @@
                     style="@style/buttons_bottom"
                     android:background="@android:color/holo_green_light"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnEnd"

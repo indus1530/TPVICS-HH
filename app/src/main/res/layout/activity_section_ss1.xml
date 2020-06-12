@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -1059,6 +1060,18 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ss12a" />
 
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/ss12hh"
+                            style="@style/EditTextNum"
+                            android:enabled='@{ss12a.checked ? true : false }'
+                            android:hint="@string/ss12a"
+                            android:maxLength="1"
+                            android:tag="ss12a"
+                            android:text='@{ss12a.checked ? ss12hh.getText().toString() : "" }'
+                            app:maxValue="9"
+                            app:minValue="1"
+                            app:type="range" />
+
                         <RadioButton
                             android:id="@+id/ss12b"
                             android:layout_width="match_parent"
@@ -1777,7 +1790,8 @@
                     android:background="@color/colorPrimary"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnEnd"

@@ -1220,10 +1220,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
+                            android:enabled='@{ss23c.checked ? false : true }'
                             android:hint="@string/ss23land"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:enabled='@{ss23c.checked ? false : true }'
                             android:text='@{ss23c.checked ? "" : ss23landx.getText().toString() }' />
 
                     </RadioGroup>
@@ -1588,7 +1588,8 @@
                     android:background="@color/colorPrimary"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btnEnd"

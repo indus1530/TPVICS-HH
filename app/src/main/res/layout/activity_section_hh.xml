@@ -18,8 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                style="@style/vlinearlayout">
+            <LinearLayout style="@style/vlinearlayout">
 
                 <LinearLayout
                     android:id="@+id/fldGrpSectionA01"
@@ -748,7 +747,8 @@
                         android:background="@color/colorPrimary"
                         android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
                         android:onClick="@{() -> callback.BtnContinue()}"
-                        android:text="@string/nextSection" />
+                        android:text="@string/nextSection"
+                        android:textColor="@color/white" />
 
                 </LinearLayout>
 

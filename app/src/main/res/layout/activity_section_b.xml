@@ -613,7 +613,8 @@
                     android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
-                    android:text="@string/nextSection" />
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
 
 
             </LinearLayout>

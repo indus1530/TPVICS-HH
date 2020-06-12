@@ -74,25 +74,26 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
-                    android:text="CLUSTER"
-                    android:padding="0dp"
-                    android:textColor="#7f7f7f" />
 
-                <TextView
-                    android:id="@+id/txtCluster"
-                    android:layout_width="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="0dp"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:text="901001"
-                    android:textColor="@color/colorPrimary" />
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:text="CLUSTER"
+                        android:textColor="#7f7f7f" />
+
+                    <TextView
+                        android:id="@+id/txtCluster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:text="901001"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -100,23 +101,24 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HOUSEHOLD NO."
-                    android:textColor="#7f7f7f" />
 
-                <TextView
-                    android:id="@+id/txtHHNo"
-                    android:layout_width="wrap_content"
-                    android:layout_margin="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="0dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:text="A-0001-001" />
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HOUSEHOLD NO."
+                        android:textColor="#7f7f7f" />
+
+                    <TextView
+                        android:id="@+id/txtHHNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"
+                        android:text="A-0001-001"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </LinearLayout>
