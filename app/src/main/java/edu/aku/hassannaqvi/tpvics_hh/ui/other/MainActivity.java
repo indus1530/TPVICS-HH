@@ -50,6 +50,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
@@ -175,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formA:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
+            case R.id.pendingForms:
+                oF = new Intent(this, PendingFormsActivity.class);
+                break;
             /*case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);
                 break;
@@ -265,10 +269,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case R.id.onSync:
-                startActivity(new Intent(MainActivity.this, SyncActivity.class));
-                break;
+        if (item.getItemId() == R.id.onSync) {
+            startActivity(new Intent(MainActivity.this, SyncActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }

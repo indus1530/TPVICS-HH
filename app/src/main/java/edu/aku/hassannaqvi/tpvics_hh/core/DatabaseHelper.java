@@ -798,7 +798,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<FormsContract> getUnclosedForms() {
+    public ArrayList<FormsContract> getUnclosedForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -810,18 +810,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_FSTATUS,
                 FormsTable.COLUMN_SYNCED,
-
         };
         String whereClause = FormsTable.COLUMN_ISTATUS + " = ''";
         String[] whereArgs = null;
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
         String having = null;
-
-        String orderBy =
-                FormsTable.COLUMN_ID + " ASC";
-
-        Collection<FormsContract> allFC = new ArrayList<>();
+        String orderBy = FormsTable.COLUMN_ID + " ASC";
+        ArrayList<FormsContract> allFC = new ArrayList<>();
         try {
             c = db.query(
                     FormsTable.TABLE_NAME,  // The table to query
