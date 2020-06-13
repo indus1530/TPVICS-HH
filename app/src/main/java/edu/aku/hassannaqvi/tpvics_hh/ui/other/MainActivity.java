@@ -358,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
-                rSumText += "--------------------------------------------------\r\n";
+                rSumText += "----------------------------------------------------------------\r\n";
             }
         }
 
