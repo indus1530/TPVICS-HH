@@ -264,10 +264,12 @@ public class SectionCHCActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TakePhoto.class);
 
         intent.putExtra("picID", MainApp.fc.getClusterCode() + "_" + MainApp.fc.getHhno() + "_" + MainApp.child.getChildSerial() + "_");
-        //intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
-
-        //intent.putExtra("childName", "Hassan");
         intent.putExtra("childName", MainApp.child.getChildName());
+
+/*
+        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+        intent.putExtra("childName", "Hassan");
+*/
 
         if (id == 1) {
             intent.putExtra("picView", "front".toUpperCase());
