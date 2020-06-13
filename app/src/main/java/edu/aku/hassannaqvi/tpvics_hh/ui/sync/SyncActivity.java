@@ -76,6 +76,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         bi.noDataItem.setVisibility(View.VISIBLE);
         listActivityCreated = true;
         uploadlistActivityCreated = true;
+        sharedPref = getSharedPreferences("src", MODE_PRIVATE);
+        editor = sharedPref.edit();
         db = new DatabaseHelper(this);
         dbBackup();
 
@@ -88,6 +90,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     }
 
     public void onSyncDataClick() {
+
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
         ConnectivityManager connMgr = (ConnectivityManager)
@@ -257,8 +260,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = syncPref.edit();
 
-            editor.putString("LastUpSyncServer", dtToday);
-
+            editor.putString("LastDataUpload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
+            editor.apply();
             editor.apply();
 
         } else {
@@ -270,8 +273,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void dbBackup() {
 
-        sharedPref = getSharedPreferences("src", MODE_PRIVATE);
-        editor = sharedPref.edit();
+
 
         if (sharedPref.getBoolean("flag", false)) {
 
@@ -377,6 +379,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         e.printStackTrace();
                     }
                 }
+                editor.putString("LastPhotoUpload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
+                editor.apply();
             } else {
                 Toast.makeText(this, "No photos to upload.", Toast.LENGTH_SHORT).show();
             }
@@ -447,7 +451,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         @Override
         protected void onPostExecute(String s) {
             new Handler().postDelayed(() -> {
-
+                editor.putString("LastDataDownload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
+                editor.apply();
                 editor.putBoolean("flag", true);
                 editor.commit();
 

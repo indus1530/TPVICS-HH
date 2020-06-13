@@ -296,19 +296,18 @@ public class MainActivity extends AppCompatActivity {
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
         Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
+        Collection<FormsContract> unclosedForms = db.getUnclosedForms();
 
         rSumText += "TODAY'S RECORDS SUMMARY\r\n";
 
         rSumText += "=======================\r\n";
         rSumText += "\r\n";
         rSumText += "Total Forms Today" + "(" + dtToday1 + "): " + todaysForms.size() + "\r\n";
-        rSumText += "\r\n";
         if (todaysForms.size() > 0) {
-            rSumText += "\tFORMS' LIST: \r\n";
             String iStatus;
-            rSumText += "----------------------------------------------------------------\r\n";
+            rSumText += "---------------------------------------------------------\r\n";
             rSumText += "[Cluster][Household][Children][Form Status][Sync Status]\r\n";
-            rSumText += "----------------------------------------------------------------\r\n";
+            rSumText += "---------------------------------------------------------\r\n";
 
             for (FormsContract fc : todaysForms) {
                 Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
@@ -358,22 +357,30 @@ public class MainActivity extends AppCompatActivity {
 
                 rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
-                rSumText += "----------------------------------------------------------------\r\n";
+                rSumText += "---------------------------------------------------------\r\n";
             }
         }
+        SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
+        rSumText += "\r\nDEVICE INFORMATION\r\n";
+        rSumText += "=============================================================\r\n";
+
+        rSumText += "\t|| Last Data Download: \t\t" + syncPref.getString("LastDataDownload", "Never Downloaded   ");
+        rSumText += "\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Unsynced Forms: \t\t\t\t" + String.format("%02d", unsyncedForms.size());
+        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Open Forms: \t\t\t\t\t\t" + String.format("%02d", unclosedForms.size());
+        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t=========================================================\r\n";
 
 
         if (MainApp.admin) {
             bi.adminsec.setVisibility(View.VISIBLE);
             bi.databaseBtn.setVisibility(View.VISIBLE);
-            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-            rSumText += "Last Data Download: \t" + syncPref.getString("LastDownSyncServer", "Never Updated");
-            rSumText += "\r\n";
-            rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
-            rSumText += "\r\n";
-            rSumText += "\r\n";
-            rSumText += "Unsynced Forms: \t" + unsyncedForms.size();
-            rSumText += "\r\n";
+
         } else {
             bi.adminsec.setVisibility(View.GONE);
             bi.databaseBtn.setVisibility(View.GONE);
