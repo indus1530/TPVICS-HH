@@ -292,6 +292,9 @@ public class MainActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
+        bi.recordSummary.setVisibility(View.GONE);
+
+
         db = new DatabaseHelper(this);
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
@@ -362,18 +365,18 @@ public class MainActivity extends AppCompatActivity {
         }
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
         rSumText += "\r\nDEVICE INFORMATION\r\n";
-        rSumText += "=============================================================\r\n";
+        rSumText += "  =========================================================\r\n";
 
-        rSumText += "\t|| Last Data Download: \t\t" + syncPref.getString("LastDataDownload", "Never Downloaded   ");
-        rSumText += "\t\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
-        rSumText += "\t\t\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
-        rSumText += "\t\t\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Unsynced Forms: \t\t\t\t" + String.format("%02d", unsyncedForms.size());
-        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
         rSumText += "\t|| Open Forms: \t\t\t\t\t\t" + String.format("%02d", unclosedForms.size());
         rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Unsynced Forms: \t\t\t\t" + String.format("%02d", unsyncedForms.size());
+        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Download: \t\t" + syncPref.getString("LastDataDownload", "Never Downloaded   ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
+        rSumText += "\t|| Last Photo Upload: \t\t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
+        rSumText += "\t\t\t\t\t\t||\r\n";
         rSumText += "\t=========================================================\r\n";
 
 
@@ -446,6 +449,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoC1(View view) {
+    }
+
+    public void toggleSummary(View view) {
+
+        if (bi.recordSummary.getVisibility() == View.VISIBLE) {
+            bi.recordSummary.setVisibility(View.GONE);
+        } else {
+            bi.recordSummary.setVisibility(View.VISIBLE);
+        }
     }
 
 

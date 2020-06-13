@@ -114,6 +114,8 @@ public class ChildContract {
         json.put(ChildTable.COLUMN_AGEM, this.agem == null ? JSONObject.NULL : this.agem);*/
         json.put(ChildTable.COLUMN_CLUSTERCODE, this.cluster == null ? JSONObject.NULL : this.cluster);
         json.put(ChildTable.COLUMN_HHNO, this.hhno == null ? JSONObject.NULL : this.hhno);
+        json.put(ChildTable.COLUMN_CSTATUS, this.cstatus == null ? JSONObject.NULL : this.cstatus);
+        json.put(ChildTable.COLUMN_CSTATUS88x, this.cstatus88x == null ? JSONObject.NULL : this.cstatus88x);
         json.put("ec22", this.cstatus == null ? JSONObject.NULL : this.cstatus);
         json.put("ec2288x", this.cstatus88x == null ? JSONObject.NULL : this.cstatus88x);
 

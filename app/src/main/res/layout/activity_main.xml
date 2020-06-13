@@ -90,6 +90,10 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/txtSummary"
+                            android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                            android:drawablePadding="24dp"
+                            android:onClick="toggleSummary"
                             android:layout_width="match_parent"
                             android:layout_height="?attr/actionBarSize"
                             android:layout_gravity="center_horizontal"
