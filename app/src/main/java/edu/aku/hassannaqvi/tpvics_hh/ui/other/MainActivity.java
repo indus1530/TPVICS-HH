@@ -176,10 +176,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formA:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-            case R.id.pendingForms:
+          /*  case R.id.pendingForms:
                 oF = new Intent(this, PendingFormsActivity.class);
                 break;
-            /*case R.id.formB:
+            case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);
                 break;
             case R.id.formC1:
@@ -271,6 +271,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.onSync) {
             startActivity(new Intent(MainActivity.this, SyncActivity.class));
+        }
+
+        if (item.getItemId() == R.id.checkOpenForms) {
+            startActivity(new Intent(MainActivity.this, PendingFormsActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
@@ -367,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
         }
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
         rSumText += "\r\nDEVICE INFORMATION\r\n";
-        rSumText += "  =========================================================\r\n";
+        rSumText += "  ========================================================\r\n";
 
         rSumText += "\t|| Open Forms: \t\t\t\t\t\t" + String.format("%02d", unclosedForms.size());
         rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
@@ -377,9 +381,9 @@ public class MainActivity extends AppCompatActivity {
         rSumText += "\t\t\t\t\t\t||\r\n";
         rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
         rSumText += "\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Photo Upload: \t\t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
+        rSumText += "\t|| Last Photo Upload: \t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
         rSumText += "\t\t\t\t\t\t||\r\n";
-        rSumText += "\t=========================================================\r\n";
+        rSumText += "\t========================================================\r\n";
 
 
         if (MainApp.admin) {

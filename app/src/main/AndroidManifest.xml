@@ -29,7 +29,7 @@
         tools:replace="android:allowBackup">
         <activity
             android:name=".ui.list_activity.PendingFormsActivity"
-            android:label="Pending Forms"
+            android:label="Unfinished Forms"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionSubInfoActivity"

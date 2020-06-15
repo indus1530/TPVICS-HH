@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
 
@@ -184,7 +183,6 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
                     connection.disconnect();
             }
         } else {
-            Collection<FormsContract> unclosedForms = db.getUnclosedForms();
 
             return "No new records to sync.";
         }
@@ -260,11 +258,11 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
 
             pd.setMessage(result);
             pd.setTitle(syncClass + " Sync Failed");
-//            pd.show();
-            if (result.equals("No new records to sync")) {
-                Collection<FormsContract> unclosedForms = db.getUnclosedForms();
+//            pd.show(); m
+            if (result.equals("No new records to sync.")) {
+                //Collection<FormsContract> unclosedForms = db.getUnclosedForms();
 
-                uploadlist.get(position).setmessage(result + " Open Forms" + String.format("%02d", unclosedForms.size()));
+                uploadlist.get(position).setmessage(result /*+ " Open Forms" + String.format("%02d", unclosedForms.size())*/);
                 uploadlist.get(position).setstatus("Not processed");
                 uploadlist.get(position).setstatusID(4);
                 adapter.updatesyncList(uploadlist);
