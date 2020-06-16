@@ -6,6 +6,11 @@
         android:id="@+id/onSync"
         android:title="Sync Data"
         app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/checkOpenForms"
+        android:title="Unfinished Forms"
+        app:showAsAction="collapseActionView" />
     <item
         android:id="@+id/endInterview"
         android:title="End Interview"

@@ -27,7 +27,7 @@
 
                 <RelativeLayout
                     android:id="@+id/status"
-                    android:layout_width="23dp"
+                    android:layout_width="16dp"
                     android:layout_height="0dp"
                     android:background="@color/colorPrimary"
                     android:visibility="gone"
@@ -40,8 +40,8 @@
 
                 <ImageView
                     android:id="@+id/formImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
@@ -60,9 +60,8 @@
                     android:autoSizeTextType="uniform"
                     android:text="CLICK FOR HOUSEHOLD FORM"
                     android:textAlignment="center"
-                    android:textColor="@color/colorSecondary"
+                    android:textColor="#7f7f7f"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"

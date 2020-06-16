@@ -1,95 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/parentLayout"
-            style="@style/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
             android:background="@drawable/card_design"
-            android:elevation="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+
+            >
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <RelativeLayout
-                    android:id="@+id/status"
-                    android:layout_width="23dp"
-                    android:layout_height="0dp"
-                    android:background="@color/colorPrimary"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:visibility="visible">
-
-                </RelativeLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/formImage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/hhform_icon"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/status"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/hhno"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:autoSizeTextType="uniform"
-                    android:text="HHNO NO:"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorSecondary"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/formImage"
-                    app:layout_constraintTop_toBottomOf="@+id/cluster" />
+                    android:id="@+id/status"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:background="@color/colorPrimary"
+                    android:src="@drawable/ic_home" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp">
                 <TextView
                     android:id="@+id/cluster"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:autoSizeTextType="uniform"
                     android:text="CLUSTER NO:"
                     android:textAlignment="center"
                     android:textColor="@color/colorSecondary"
-                    android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/formImage"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:padding="0dp" />
+                <TextView
+                    android:id="@+id/hhno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HHNO NO:"
+                    android:textAlignment="center"
+                    android:padding="0dp"
+                    android:textColor="@color/gray_material"
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    />
+
+                </LinearLayout>
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
