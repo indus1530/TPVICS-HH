@@ -58,6 +58,12 @@ public class SectionInfoActivity extends AppCompatActivity {
         Clear.clearAllFields(bi.fldGrpSectionA01);
     }
 
+    public void hh12TextChanged(CharSequence s, int start, int before, int count) {
+        bi.hh12msg.setText(null);
+        bi.hh12name.setText(null);
+        bi.fldGrpSectionA02.setVisibility(View.GONE);
+    }
+
     private void setUIComponent() {
 
         bi.hh12.addTextChangedListener(new TextWatcher() {
@@ -112,7 +118,9 @@ public class SectionInfoActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
-        if (MainApp.fc != null) return;
+        if (MainApp.fc != null) {
+            if (MainApp.fc.getIstatus().equals("")) return;
+        }
         MainApp.fc = new FormsContract();
         MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
@@ -191,14 +199,8 @@ public class SectionInfoActivity extends AppCompatActivity {
                     MainApp.enumBlockContract = enumBlockContract;
                     String selected = enumBlockContract.getGeoarea();
                     if (!selected.equals("")) {
-
                         String[] selSplit = selected.split("\\|");
-
                         bi.fldGrpSectionA01.setVisibility(View.VISIBLE);
-                             /*       bi.hh06.setText(selSplit[0]);
-                                    bi.hh07.setText(selSplit[1].equals("") ? "----" : selSplit[1]);
-                                    bi.hh08.setText(selSplit[2].equals("") ? "----" : selSplit[2]);
-                                    bi.hh09.setText(selSplit[3]);*/
                         bi.hh09txt.setText(selSplit[3]);
                         bi.geoarea.setText(new StringBuilder(selSplit[2]).append(", ").append(selSplit[1]).append(", ").append(selSplit[0]));
                     }
@@ -243,8 +245,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .filter(form -> {
-                    if (!form.getIstatus().equals("")) {
-
+                    if (form.getIstatus().equals("1")) {
                         message = "Household Form Exist";
                         blRandomExist(bl, message, false);
                         return false;

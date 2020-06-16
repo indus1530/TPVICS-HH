@@ -6,13 +6,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.validatorcrawler.aliazaz.Validator;
-
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityChildEndingBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity;
+import edu.aku.hassannaqvi.tpvics_hh.validator.ValidatorClass;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
@@ -98,7 +97,7 @@ public class ChildEndingActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpEnd);
+        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.ec22));
     }
 
 

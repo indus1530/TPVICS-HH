@@ -167,6 +167,7 @@
                                 android:id="@+id/hh12"
                                 style="@style/EditTextNum"
                                 android:layout_width="match_parent"
+                                android:onTextChanged="@{callback::hh12TextChanged}"
                                 android:layout_height="match_parent"
                                 android:layout_toEndOf="@id/qtxt_hh12"
                                 android:hint="#-####-###"

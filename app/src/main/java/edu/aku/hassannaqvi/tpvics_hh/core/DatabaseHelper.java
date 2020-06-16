@@ -1139,7 +1139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] whereArgs = {clusterCode, hhNo};
         String groupBy = null;
         String having = null;
-        String orderBy = FormsTable._ID + " DESC";
+        String orderBy = FormsTable._ID + " ASC";
         FormsContract allFC = null;
         try {
             c = db.query(
