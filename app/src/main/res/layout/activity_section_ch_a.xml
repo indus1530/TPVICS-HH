@@ -58,7 +58,7 @@
                         android:hint="DD/MM/YYYY"
                         app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"
-                        app:minDate="01/01/2017" />
+                        app:minDate="01/01/2020" />
 
                 </LinearLayout>
 
