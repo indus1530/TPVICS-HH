@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.list_activity.PendingFormsActivity">
 
@@ -14,20 +13,45 @@
             type="edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.PendingFormsActivity" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textDirection="ltr">
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            style="@style/Base.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:paddingStart="18dp"
+            android:text="List of Unfinished Forms" />
+
+        <TextView
+            style="@style/labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="12dp"
+            android:padding="0dp"
+            android:paddingStart="20dp"
+            android:text="These forms will not be uploaded until closed from Household Screen"
+            android:textColor="#7f7f7f"
+            android:textSize="14dp"
+            android:textStyle="normal"
+
+
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/pendingform_layout" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

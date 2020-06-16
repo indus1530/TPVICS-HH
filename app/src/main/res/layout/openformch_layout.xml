@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,14 +25,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <RelativeLayout
+                    android:id="@+id/status"
+                    android:layout_width="16dp"
+                    android:layout_height="0dp"
+                    android:background="@color/colorSecondary"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="visible">
+
+                </RelativeLayout>
                 <ImageView
                     android:id="@+id/formImage"
-                    android:layout_width="130dp"
-                    android:layout_height="100dp"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginStart="0dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
                     android:src="@drawable/children"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -46,9 +59,8 @@
                     android:autoSizeTextType="uniform"
                     android:text="CLICK FOR CHILDREN FORM"
                     android:textAlignment="center"
-                    android:textColor="@color/colorSecondary"
+                    android:textColor="#7f7f7f"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"

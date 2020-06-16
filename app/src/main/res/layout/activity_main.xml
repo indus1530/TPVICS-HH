@@ -120,6 +120,20 @@
                         android:textSize="14sp"
                         android:typeface="monospace" />
 
+                    <TextView
+                        android:id="@+id/txtinstalldate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:shadowColor="#d6d6d6"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="Ver."
+                        android:textColor="#7f7f7f"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
 

@@ -300,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
 
         bi.recordSummary.setVisibility(View.GONE);
 
-
+        bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
         db = new DatabaseHelper(this);
 
         Collection<FormsContract> todaysForms = db.getTodayForms();
