@@ -474,6 +474,54 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });
 
+        bi.im15dk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Clear.clearAllFields(bi.im15, false);
+                } else {
+                    if (im07) return;
+                    Clear.clearAllFields(bi.im15, true);
+                }
+            }
+        });
+
+        bi.im17dk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Clear.clearAllFields(bi.im17, false);
+                } else {
+                    if (im07) return;
+                    Clear.clearAllFields(bi.im17, true);
+                }
+            }
+        });
+
+        bi.im19dk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Clear.clearAllFields(bi.im19, false);
+                } else {
+                    if (im07) return;
+                    Clear.clearAllFields(bi.im19, true);
+                }
+            }
+        });
+
+        bi.im22dk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    Clear.clearAllFields(bi.im22, false);
+                } else {
+                    if (im07) return;
+                    Clear.clearAllFields(bi.im22, true);
+                }
+            }
+        });
+
     }
 
     private boolean UpdateDB() {
