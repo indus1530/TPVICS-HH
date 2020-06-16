@@ -1969,10 +1969,8 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/im12"
                                     style="@style/EditTextNum"
-                                    android:enabled='@{im12dk.checked ? false : false}'
                                     android:hint="@string/num"
                                     android:maxLength="2"
-                                    android:text='@{im12dk.checked ? "" : im12.getText().toString() }'
                                     app:maxValue="50"
                                     app:minValue="1"
                                     app:type="range" />
@@ -2158,7 +2156,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/im15"
                                     style="@style/EditTextNum"
-                                    android:enabled='@{im15dk.checked ? false : false}'
+                                    android:enabled='@{im15dk.checked ? false : true}'
                                     android:hint="@string/num"
                                     android:maxLength="1"
                                     android:text='@{im15dk.checked ? "" : im15.getText().toString() }'
@@ -2276,7 +2274,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/im17"
                                     style="@style/EditTextNum"
-                                    android:enabled='@{im17dk.checked ? false : false}'
+                                    android:enabled='@{im17dk.checked ? false : true}'
                                     android:hint="@string/num"
                                     android:maxLength="1"
                                     android:text='@{im17dk.checked ? "" : im17.getText().toString() }'
@@ -2395,7 +2393,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/im19"
                                     style="@style/EditTextNum"
-                                    android:enabled='@{im19dk.checked ? false : false}'
+                                    android:enabled='@{im19dk.checked ? false : true}'
                                     android:hint="@string/num"
                                     android:maxLength="1"
                                     android:text='@{im19dk.checked ? "" : im19.getText().toString() }'
@@ -2579,7 +2577,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/im22"
                                     style="@style/EditTextNum"
-                                    android:enabled='@{im22dk.checked ? false : false}'
+                                    android:enabled='@{im22dk.checked ? false : true}'
                                     android:hint="@string/num"
                                     android:maxLength="1"
                                     android:text='@{im22dk.checked ? "" : im22.getText().toString() }'
