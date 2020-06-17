@@ -34,7 +34,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionSubInfoActivity"
-            android:supportsRtl="false"
+
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionCHAActivity"
