@@ -20,10 +20,7 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -110,7 +107,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                             }
                             else -> {
                                 if (flagNewForm) return@run
-                                contextEndActivity(this, MainApp.fc.getfStatus() == "1" && serial > 1 && getIstatusFromChild())
+                                endActivityStatus()
                             }
                         }
                     }
@@ -165,21 +162,22 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         bi.formScroll.recyclerViewChildren.adapter = adapter
     }
 
-    private fun getIstatusFromChild(): Boolean {
-        runBlocking {
-            val def = async { istatusRerieval() }
-            return@runBlocking def.await()
+    private fun endActivityStatus() {
+        GlobalScope.launch {
+            val def = GlobalScope.async { iStatusRetrieval() }
+            withContext(Dispatchers.Main) {
+                contextEndActivity(this@SectionSubInfoActivity, MainApp.fc.getfStatus() == "1" && serial > 1 && def.await())
+            }
         }
-        return false
     }
 
-    private suspend fun istatusRerieval() = withContext(Dispatchers.IO) {
+    private fun iStatusRetrieval(): Boolean {
         val childLst = mainVModel.childU5.value
         if (childLst != null) {
             for (items in childLst) {
-                if (items.cstatus == "1") return@withContext true
+                if (items.cstatus == "1") return true
             }
         }
-        return@withContext false
+        return false
     }
 }

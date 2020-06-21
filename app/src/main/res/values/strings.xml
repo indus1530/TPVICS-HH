@@ -122,11 +122,11 @@
     <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل </string>
-    <string name="hh22b"> جزوی طور پر مکمل </string>
-    <string name="hh22c"> انکار کردیا </string>
-    <string name="hh22d"> بچے کی دیکھ بھال کرنے والا/والی  گھر پر موجود نہیں </string>
-    <string name="hh22e"> بچہ اہل نہیں/بچے کی عمر12 سے 23 مہینے نہیں ہے </string>
-    <string name="hh22f"> جواب دینے سے قاصر </string>
+    <string name="hh22b"> گھرانے کا کوئی فرد یا سمجھدار جواب دہندہ گھر پر موجود نہیں </string>
+    <string name="hh22c"> گھرانے کے تمام افراد لمبے عرصے کے لیے گھر سے غیر حاضر تھے </string>
+    <string name="hh22d"> انکار کردیا </string>
+    <string name="hh22e"> خالی گھر / غیر رہائشی </string>
+    <string name="hh22f"> گھر نہیں ملا </string>
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
 
