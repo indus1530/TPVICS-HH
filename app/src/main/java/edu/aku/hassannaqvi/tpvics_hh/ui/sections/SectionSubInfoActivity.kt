@@ -20,6 +20,10 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
 import edu.aku.hassannaqvi.tpvics_hh.viewmodel.MainVModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import ru.whalemare.sheetmenu.ActionItem
 import ru.whalemare.sheetmenu.SheetMenu
 import ru.whalemare.sheetmenu.layout.GridLayoutProvider
@@ -106,7 +110,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                             }
                             else -> {
                                 if (flagNewForm) return@run
-                                contextEndActivity(this, MainApp.fc.getfStatus() == "1")
+                                contextEndActivity(this, MainApp.fc.getfStatus() == "1" && serial > 1 && getIstatusFromChild())
                             }
                         }
                     }
@@ -159,5 +163,23 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         adapter = ChildListAdapter(this, membersLst, mainVModel)
         bi.formScroll.recyclerViewChildren.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         bi.formScroll.recyclerViewChildren.adapter = adapter
+    }
+
+    private fun getIstatusFromChild(): Boolean {
+        runBlocking {
+            val def = async { istatusRerieval() }
+            return@runBlocking def.await()
+        }
+        return false
+    }
+
+    private suspend fun istatusRerieval() = withContext(Dispatchers.IO) {
+        val childLst = mainVModel.childU5.value
+        if (childLst != null) {
+            for (items in childLst) {
+                if (items.cstatus == "1") return@withContext true
+            }
+        }
+        return@withContext false
     }
 }

@@ -59,6 +59,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 style="@style/cardView"
+                android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -72,7 +73,6 @@
                         android:id="@+id/lblMainMenu"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"
-                        android:layout_marginTop="16dp"
                         android:background="@drawable/mainmenu"
                         android:gravity="center"
                         android:padding="10dp"
