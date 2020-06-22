@@ -740,7 +740,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public Collection<FormsContract> getTodayForms() {
+    public Collection<FormsContract> getTodayForms(String sysdate) {
+
+        // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -755,7 +757,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         };
         String whereClause = FormsTable.COLUMN_SINFO + " Like ? ";
-        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + " %"};
+        String[] whereArgs = new String[]{"%" + sysdate + " %"};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
         String having = null;

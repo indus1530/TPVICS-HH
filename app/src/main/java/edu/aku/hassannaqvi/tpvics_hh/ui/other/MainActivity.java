@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding bi;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     String dtToday1 = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
+    String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     AlertDialog.Builder builder;
@@ -303,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
         bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
         db = new DatabaseHelper(this);
 
-        Collection<FormsContract> todaysForms = db.getTodayForms();
+        Collection<FormsContract> todaysForms = db.getTodayForms(sysdateToday);
         Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
         Collection<FormsContract> unclosedForms = db.getUnclosedForms();
 
