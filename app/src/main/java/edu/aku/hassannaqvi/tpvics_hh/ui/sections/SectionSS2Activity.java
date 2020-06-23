@@ -268,8 +268,19 @@ public class SectionSS2Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionM);
-
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionM)) return false;
+        bi.ss25a.setFocusable(false);
+        if (bi.ss24a.isChecked()) {
+            int total = Integer.parseInt(bi.ss25a.getText().toString()) + Integer.parseInt(bi.ss25b.getText().toString()) + Integer.parseInt(bi.ss25c.getText().toString()) +
+                    Integer.parseInt(bi.ss25d.getText().toString()) + Integer.parseInt(bi.ss25e.getText().toString()) + Integer.parseInt(bi.ss25f.getText().toString()) +
+                    Integer.parseInt(bi.ss25g.getText().toString());
+            if (total == 0) {
+                bi.ss25a.setError("Invalid value!!");
+                bi.ss25a.setFocusable(true);
+                return false;
+            }
+        }
+        return true;
     }
 
 
