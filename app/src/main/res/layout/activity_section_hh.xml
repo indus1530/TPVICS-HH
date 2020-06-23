@@ -604,6 +604,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/hh19"
                                     style="@style/EditTextNum"
+                                    android:onTextChanged="@{callback.hh19OnTextChanged}"
                                     android:hint="@string/hh19a"
                                     android:maxLength="2"
                                     app:maxValue="95"

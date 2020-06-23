@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -69,6 +70,13 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
             bi.btnNext.setVisibility(View.GONE);
         }
         Clear.clearAllFields(bi.fldGrpAHH19, checkedId == bi.hh18a.getId());
+    }
+
+    public void hh19OnTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(bi.hh19.getText())) return;
+        if (!bi.hh19.isRangeTextValidate()) return;
+        int maxChild = Integer.parseInt(bi.hh19.getText().toString());
+        bi.hh20aa.setMaxvalue(maxChild - 1);
     }
 
     public void onCheckedHH15(RadioGroup group, int checkedId) {
