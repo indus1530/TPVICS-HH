@@ -119,7 +119,7 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun formValidation(): Boolean {
-        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.hh22h))
+        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatus96, bi.istatus96x, getString(R.string.hh22h))
     }
 
     override fun onBackPressed() {

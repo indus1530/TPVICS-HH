@@ -97,7 +97,7 @@ public class ChildEndingActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.ec22));
+        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatus96, bi.istatus96x, getString(R.string.ec22));
     }
 
 
