@@ -173,11 +173,11 @@
     <string name="ss01">  گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
     <string name="ss01a"> اردو </string>
     <string name="ss01b"> پنجابی </string>
-    <string name="ss01c"> سند ھی </string>
+    <string name="ss01c"> سندھی </string>
     <string name="ss01d"> پشتو </string>
     <string name="ss01e"> بلوچی </string>
     <string name="ss01f"> سرائیکی </string>
-    <string name="ss01g"> ھند کو </string>
+    <string name="ss01g"> ھندکو </string>
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
     <string name="ss02"> آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
@@ -219,7 +219,7 @@
     <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں </string>
     <string name="ss05x"> کریں </string>
 
-    <string name="ss06"> آپکے گھرانہ میں دوسرے مقاصد یعنی کھانا پکانے اور ہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے ؟ </string>
+    <string name="ss06"> آپکے گھرانے میں دوسرے مقاصد یعنی کھانا پکانے اور ہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے ؟ </string>
     <string name="ss06_info"> اگر وضاحت درکار ہو تو اس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں </string>
     <string name="ss06a_title"> میونسپل کمیٹی کا پانی کا کنکشن </string>
     <string name="ss06a"> گھر میں نلکا </string>
@@ -461,7 +461,7 @@
     <string name="ss19n"> اینٹیں </string>
     <string name="ss19x"> دیگر وضاحت کریں </string>
 
-    <string name="ss20"> گھر کی دیوار وں میں استعمال ہونے والا بنیادی مواد: </string>
+    <string name="ss20"> گھر کی دیواروں میں استعمال ہونے والا بنیادی مواد: </string>
     <string name="ss20a_title"> قدرتی دیواریں </string>
     <string name="ss20a"> کوئی دیوار نہیں </string>
     <string name="ss20b"> کھجور کے درخت / بانس </string>
