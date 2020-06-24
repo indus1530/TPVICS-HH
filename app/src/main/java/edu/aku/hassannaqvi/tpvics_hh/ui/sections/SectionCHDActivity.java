@@ -308,6 +308,12 @@ public class SectionCHDActivity extends AppCompatActivity {
                     int year = Integer.parseInt(txt03);
 
                     AgeModel age;
+                    age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), Integer.parseInt(editTextsArray[2].getText().toString()), Integer.parseInt(editTextsArray[1].getText().toString()), Integer.parseInt(editTextsArray[0].getText().toString()));
+                    if (age == null) {
+                        editTextPicker03.setError("Invalid date!!");
+                        imFlag = false;
+                        return;
+                    }
                     if (respLocalDate != null) {
                         age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), Integer.parseInt(respTextsArray[2].getText().toString()), Integer.parseInt(respTextsArray[1].getText().toString()), Integer.parseInt(respTextsArray[0].getText().toString()), false);
                     } else if (child.getCalculatedDOB() != null)
