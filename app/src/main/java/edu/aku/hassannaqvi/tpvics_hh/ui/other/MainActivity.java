@@ -50,6 +50,8 @@ import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportCluster;
+import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
@@ -277,6 +279,12 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.checkOpenForms) {
             startActivity(new Intent(MainActivity.this, PendingFormsActivity.class));
         }
+        if (item.getItemId() == R.id.formsReportDate) {
+            startActivity(new Intent(MainActivity.this, FormsReportDate.class));
+        }
+        if (item.getItemId() == R.id.formsReportCluster) {
+            startActivity(new Intent(MainActivity.this, FormsReportCluster.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -357,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
                 rSumText += fc.getHhno();
                 rSumText += "  \t\t";
 
-                int childCount = db.getChildrenByUID(fc.get_UID());
+                int childCount = db.getChildrenByUUID(fc.get_UID());
                 rSumText += childCount;
                 rSumText += "\t\t\t\t";
 

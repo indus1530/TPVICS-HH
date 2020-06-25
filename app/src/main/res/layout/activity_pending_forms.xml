@@ -19,34 +19,38 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            style="@style/Base.CardView"
+            style="@style/cardView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/labels"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="0dp"
-            android:paddingStart="18dp"
-            android:text="List of Unfinished Forms" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            style="@style/labels"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="12dp"
-            android:padding="0dp"
-            android:paddingStart="20dp"
-            android:text="These forms will not be uploaded until closed from Household Screen"
-            android:textColor="#7f7f7f"
-            android:textSize="14dp"
-            android:textStyle="normal"
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:paddingStart="18dp"
+                    android:text="List of Unfinished Forms" />
 
-
-            />
-
+                <TextView
+                    style="@style/labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginBottom="12dp"
+                    android:padding="0dp"
+                    android:paddingStart="20dp"
+                    android:text="These forms will not be uploaded until closed from Household Screen"
+                    android:textColor="#7f7f7f"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
