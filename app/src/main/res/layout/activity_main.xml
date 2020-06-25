@@ -171,28 +171,28 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!--
-                              <androidx.cardview.widget.CardView
-                                  android:id="@+id/pendingForms"
-                                  android:layout_width="wrap_content"
-                                  android:layout_height="wrap_content"
-                                  android:layout_gravity="center_horizontal"
-                                  android:layout_margin="12dp"
-                                  android:clickable="true"
-                                  android:elevation="@dimen/cardview_default_elevation"
-                                  android:foreground="?android:attr/selectableItemBackground"
-                         android:onClick='openForm'
-                                  app:cardCornerRadius="@dimen/cardview_default_radius">
 
-                              <RelativeLayout
-                                      android:layout_width="match_parent"
-                                      android:layout_height="match_parent"
-                                      android:background="@color/redInfo"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pendingForms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="12dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick='openForm'
+                    app:cardCornerRadius="@dimen/cardview_default_radius">
 
-                                      android:padding="12dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/redInfo"
 
-                                      <TextView
-                                          android:layout_width="wrap_content"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
                                           android:layout_height="wrap_content"
                                           android:layout_alignParentStart="true"
                                           android:layout_centerVertical="true"

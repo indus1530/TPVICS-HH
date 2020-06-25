@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.tpvics_hh;
+package edu.aku.hassannaqvi.tpvics_hh.utils;
 
 import android.app.IntentService;
 import android.content.Intent;
