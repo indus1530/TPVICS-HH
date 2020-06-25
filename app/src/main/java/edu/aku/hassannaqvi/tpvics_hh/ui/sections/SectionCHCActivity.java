@@ -21,6 +21,7 @@ import org.threeten.bp.ZoneId;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -29,17 +30,24 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
+import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.TakePhoto;
+import edu.aku.hassannaqvi.tpvics_hh.utils.DateUtils;
+import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
+import kotlin.Pair;
 
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01CARDSEEN;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 
-public class SectionCHCActivity extends AppCompatActivity {
+public class SectionCHCActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChCBinding bi;
     boolean im02Flag = false, imFlag = true;
+    Instant dtInstant = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +57,12 @@ public class SectionCHCActivity extends AppCompatActivity {
 
         setupListeners();
 
-        if (child.getCalculatedDOB() != null) {
+        /*if (child.getCalculatedDOB() != null) {
             int maxYears = child.getCalculatedDOB().getYear();
             int minYears = child.getCalculatedDOB().minusYears(2).getYear();
             setYearOfBirth(minYears, maxYears);
-        } else if (child.getLocalDate() != null) {
+        } else */
+        if (child.getLocalDate() != null) {
             int maxYears = child.getLocalDate().getYear();
             int minYears = child.getLocalDate().minusYears(2).getYear();
             setYearOfBirth(minYears, maxYears);
@@ -136,9 +145,10 @@ public class SectionCHCActivity extends AppCompatActivity {
                 int year = Integer.parseInt(txt03);
 
                 AgeModel age;
-                if (child.getCalculatedDOB() != null)
+                /*if (child.getCalculatedDOB() != null)
                     age = DateRepository.Companion.getCalculatedAge(child.getCalculatedDOB(), year, month, day);
-                else if (child.getLocalDate() != null)
+                else */
+                if (child.getLocalDate() != null)
                     age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), year, month, day);
                 else
                     age = DateRepository.Companion.getCalculatedAge(year, month, day);
@@ -150,17 +160,17 @@ public class SectionCHCActivity extends AppCompatActivity {
                     bi.im04dd.setEnabled(false);
                     bi.im04mm.setEnabled(false);
 
-                    if (child.getCalculatedDOB() == null) {
-                        //Setting Date
-                        try {
-                            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
-                                    bi.im04dd.getText().toString() + "-" + bi.im04mm.getText().toString() + "-" + bi.im04yy.getText().toString()
-                            )) + "T06:24:01Z");
-                            child.setCalculatedDOB(LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate());
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
+//                    if (child.getCalculatedDOB() == null) {
+                    //Setting Date
+                    try {
+                        dtInstant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+                                bi.im04dd.getText().toString() + "-" + bi.im04mm.getText().toString() + "-" + bi.im04yy.getText().toString()
+                        )) + "T06:24:01Z");
+
+                    } catch (ParseException e) {
+                        e.printStackTrace();
                     }
+//                    }
 
                 }
             }
@@ -169,6 +179,13 @@ public class SectionCHCActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
+        });
+
+        bi.im0497.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked)
+                Clear.clearAllFields(bi.fldGrpim04DT, false);
+            else
+                Clear.clearAllFields(bi.fldGrpim04DT, true);
         });
 
     }
@@ -211,10 +228,14 @@ public class SectionCHCActivity extends AppCompatActivity {
         f1.put("im04dd", bi.im04dd.getText().toString());
         f1.put("im04mm", bi.im04mm.getText().toString());
         f1.put("im04yy", bi.im04yy.getText().toString());
+        f1.put("im0497", bi.im0497.isChecked() ? "97" : "0");
         f1.put("frontFileName", bi.frontFileName.getText().toString());
         f1.put("backFileName", bi.backFileName.getText().toString());
 
         child.setsCC(String.valueOf(f1));
+
+        if (bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())
+            child.setCalculatedDOB(LocalDateTime.ofInstant(dtInstant, ZoneId.systemDefault()).toLocalDate());
     }
 
     private boolean formValidation() {
@@ -232,24 +253,52 @@ public class SectionCHCActivity extends AppCompatActivity {
     public void BtnContinue() {
 
         if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
+            //Calculate months
+            boolean monthFlag = true;
+            if (child.getCalculatedDOB() != null) {
+                Pair<String, String> month_year = getMonthAndYearFromDate(child.getCalculatedDOB().toString());
+                int totalMonths = Integer.parseInt(month_year.getFirst()) + Integer.parseInt(month_year.getSecond()) * 12;
+                monthFlag = totalMonths >= 12 && totalMonths < 24;
             }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, !im02Flag).putExtra(IM01CARDSEEN, bi.im011.isChecked()));
+            if (monthFlag) {
+                try {
+                    SaveDraft();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (UpdateDB()) {
+                    finish();
+                    startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, !im02Flag).putExtra(IM01CARDSEEN, bi.im011.isChecked()));
+                } else {
+                    Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                }
+            } else
+                openWarningActivity(this, "Current Child age leads to End this form.\nDo you want to Continue?");
 
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
         }
 
     }
 
-    public void BtnEnd() {
+    private Pair<String, String> getMonthAndYearFromDate(String date) {
+        Calendar cal = DateUtils.getCalendarDate(date);
+        int curdate = child.getLocalDate().getDayOfMonth();
+        int curmonth = child.getLocalDate().getMonthValue();
+        int curyear = child.getLocalDate().getYear();
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int month = cal.get(Calendar.MONTH) + 1;
+        int year = cal.get(Calendar.YEAR);
 
+        if (day > curdate) {
+            curmonth -= 1;
+        }
+        if (month > curmonth) {
+            curyear -= 1;
+            curmonth += 12;
+        }
+        return new Pair<>(String.valueOf(curmonth - month), String.valueOf(curyear - year));
+    }
+
+    public void BtnEnd() {
         openChildEndActivity(this);
     }
 
@@ -323,6 +372,22 @@ public class SectionCHCActivity extends AppCompatActivity {
                 bi.backFileName.setText("Photo not taken.");
 
             }
+        }
+    }
+
+    @Override
+    public void endSecActivity(boolean flag) {
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, ChildEndingActivity.class)
+                    .putExtra(CHILD_ENDING_AGE_ISSUE, true));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 }
