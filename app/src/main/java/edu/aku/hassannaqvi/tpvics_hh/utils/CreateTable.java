@@ -13,7 +13,7 @@ public final class CreateTable {
     public static final String DATABASE_NAME = "tpvics_hh.db";
     public static final String DB_NAME = "tpvics_hh_copy.db";
     public static final String PROJECT_NAME = "TPVICS_HH";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
@@ -29,6 +29,7 @@ public final class CreateTable {
             + FormsContract.FormsTable.COLUMN_GPSDATE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_GPSACC + " TEXT,"
             + FormsContract.FormsTable.COLUMN_FORMDATE + " TEXT,"
+            + FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_APPVERSION + " TEXT,"
             + FormsContract.FormsTable.COLUMN_CLUSTERCODE + " TEXT,"
             + FormsContract.FormsTable.COLUMN_HHNO + " TEXT,"
@@ -91,6 +92,7 @@ public final class CreateTable {
             + ChildTable.COLUMN_UID + " TEXT,"
             + ChildTable.COLUMN_UUID + " TEXT,"
             + ChildTable.COLUMN_FORMDATE + " TEXT,"
+            + ChildTable.COLUMN_SYSDATE + " TEXT,"
             + ChildTable.COLUMN_SCA + " TEXT,"
             + ChildTable.COLUMN_SCB + " TEXT,"
             + ChildTable.COLUMN_SCC + " TEXT,"
@@ -126,4 +128,10 @@ public final class CreateTable {
             FamilyMembersContract.SingleMember.COLUMN_SYNCED_DATE + " TEXT"
             + ");";
 
+    public static final String SQL_ALTER_FORMS = "ALTER TABLE " +
+            FormsContract.FormsTable.TABLE_NAME + " ADD COLUMN " +
+            FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT";
+    public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
+            ChildTable.TABLE_NAME + " ADD COLUMN " +
+            ChildTable.COLUMN_SYSDATE + " TEXT";
 }

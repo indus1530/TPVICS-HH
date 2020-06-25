@@ -123,12 +123,14 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
         MainApp.fc = new FormsContract();
         MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setUser(MainApp.userName);
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.hh11.getText().toString());
         MainApp.fc.setHhno(bi.hh12.getText().toString());
         MainApp.fc.setLuid(bl.getLUID());
+        MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         MainApp.setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
@@ -142,7 +144,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hhhead", bl.getHhhead());
         json.put("bl_hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
-        json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        //json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
 
 
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());

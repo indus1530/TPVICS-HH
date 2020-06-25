@@ -19,7 +19,6 @@ import org.threeten.bp.ZoneId;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -106,18 +105,19 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setDevicetagID(MainApp.appInfo.getTagName());
         child.sethhno(MainApp.fc.getHhno());
         child.setcluster(MainApp.fc.getClusterCode());
-//        child.setFormDate(MainApp.fc.getFormDate());
-        child.setFormDate(bi.ec01.getText().toString());
+        child.setFormDate(MainApp.fc.getFormDate());
+        child.setSysDate(MainApp.fc.getSysDate());
         child.setUser(MainApp.userName);
         child.setChildSerial(bi.ec13.getText().toString());
         child.setChildName(bi.ec14.getText().toString());
         child.setgender(bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
 
         JSONObject f1 = new JSONObject();
-        f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        //f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         f1.put("appversion", MainApp.appInfo.getAppVersion());
         f1.put("_luid", MainApp.fc.getLuid());
 //        f1.put("ec01", bi.ec01.getText().toString());
+        f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
         f1.put("ec03", MainApp.userName);
         f1.put("ec05", enumBlockContract.getEbcode());

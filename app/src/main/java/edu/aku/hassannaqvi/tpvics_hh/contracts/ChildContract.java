@@ -15,6 +15,7 @@ public class ChildContract {
     private String _UUID = "";
     private String deviceId = "";
     private String formDate = ""; // Date
+    private String sysDate = ""; // Date
     private String user = ""; // Interviewer
     private String sCA = "";
     private String sCB = "";
@@ -77,6 +78,7 @@ public class ChildContract {
         this._UUID = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_UUID));
         this.deviceId = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_DEVICEID));
         this.formDate = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_FORMDATE));
+        this.sysDate = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SYSDATE));
         this.user = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_USER));
         this.sCA = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SCA));
         this.sCB = cursor.getString(cursor.getColumnIndex(ChildTable.COLUMN_SCB));
@@ -105,6 +107,7 @@ public class ChildContract {
         json.put(ChildTable.COLUMN_UUID, this._UUID == null ? JSONObject.NULL : this._UUID);
         json.put(ChildTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
         json.put(ChildTable.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(ChildTable.COLUMN_SYSDATE, this.sysDate == null ? JSONObject.NULL : this.sysDate);
         json.put(ChildTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
 
         json.put(ChildTable.COLUMN_CHILDNAME, this.childName == null ? JSONObject.NULL : this.childName);
@@ -246,6 +249,14 @@ public class ChildContract {
         this.formDate = formDate;
     }
 
+    public String getSysDate() {
+        return sysDate;
+    }
+
+    public void setSysDate(String sysDate) {
+        this.sysDate = sysDate;
+    }
+
     public String getUser() {
         return user;
     }
@@ -310,6 +321,7 @@ public class ChildContract {
         public static final String COLUMN_UUID = "_uuid";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_FORMDATE = "formdate";
+        public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_USER = "username";
         public static final String COLUMN_SCA = "sca";
         public static final String COLUMN_SCB = "scb";
