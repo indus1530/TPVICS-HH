@@ -32,10 +32,8 @@ import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
-import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
@@ -235,7 +233,6 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
             int totalMonths = Integer.parseInt(bi.cb04mm.getText().toString()) + Integer.parseInt(bi.cb04yy.getText().toString()) * 12;
             boolean monthFlag = totalMonths >= 12 && totalMonths < 24;
             if (monthFlag) {
-
                 try {
                     SaveDraft();
                 } catch (JSONException e) {
@@ -349,8 +346,7 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, ChildEndingActivity.class)
-                    .putExtra(CHILD_ENDING_AGE_ISSUE, true));
+            startActivity(new Intent(this, SectionCHCActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
