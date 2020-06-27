@@ -279,7 +279,6 @@
                                 android:maxLength="4"
                                 android:onTextChanged="@{callback.cb03yyOnTextChanged}"
                                 app:defaultValue="9998"
-                                app:mask="20##"
                                 app:maxValue="2020"
                                 app:minValue="2015"
                                 app:type="range" />

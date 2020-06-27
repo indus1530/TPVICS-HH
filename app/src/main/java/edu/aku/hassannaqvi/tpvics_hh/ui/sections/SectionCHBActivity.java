@@ -264,6 +264,8 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
         bi.cb04yy.setEnabled(false);
         bi.cb04yy.setText(null);
         child.setCalculatedDOB(null);
+        if (TextUtils.isEmpty(bi.cb03dd.getText()) || TextUtils.isEmpty(bi.cb03mm.getText()) || TextUtils.isEmpty(bi.cb03yy.getText()))
+            return;
         if (!bi.cb03dd.isRangeTextValidate() || !bi.cb03mm.isRangeTextValidate() || !bi.cb03yy.isRangeTextValidate())
             return;
         if (bi.cb03dd.getText().toString().equals("98") && bi.cb03mm.getText().toString().equals("98") && bi.cb03yy.getText().toString().equals("9998")) {

@@ -127,6 +127,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                dtInstant = null;
                 if (!bi.im011.isChecked() || bi.im0497.isChecked()) return;
                 String txt01, txt02, txt03;
                 bi.im04dd.setEnabled(true);
@@ -182,9 +183,10 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
         });
 
         bi.im0497.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked)
+            if (isChecked) {
                 Clear.clearAllFields(bi.fldGrpim04DT, false);
-            else
+                imFlag = true;
+            } else
                 Clear.clearAllFields(bi.fldGrpim04DT, true);
         });
 
@@ -234,7 +236,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
 
         child.setsCC(String.valueOf(f1));
 
-        if (bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())
+        if (dtInstant != null)
             child.setCalculatedDOB(LocalDateTime.ofInstant(dtInstant, ZoneId.systemDefault()).toLocalDate());
     }
 
@@ -255,7 +257,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
         if (formValidation()) {
             //Calculate months
             boolean monthFlag = true;
-            if (child.getCalculatedDOB() != null || !(bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())) {
+            if (child.getCalculatedDOB() != null || dtInstant != null) {
                 Pair<String, String> month_year;
                 if (bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())
                     month_year = getMonthAndYearFromDate(LocalDateTime.ofInstant(dtInstant, ZoneId.systemDefault()).toLocalDate().toString());

@@ -350,7 +350,7 @@
                             android:id="@+id/im0497"
                             style="@style/checkbox"
                             android:tag="-1"
-                            android:text="@string/dkn" />
+                            android:text="@string/im0497" />
 
                     </LinearLayout>
 
