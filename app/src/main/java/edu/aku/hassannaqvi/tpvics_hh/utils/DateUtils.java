@@ -120,7 +120,7 @@ public class DateUtils {
     }
 
     public static Calendar getCalendarDate(String value) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         Calendar calendar = Calendar.getInstance();
         try {
             Date date = sdf.parse(value);

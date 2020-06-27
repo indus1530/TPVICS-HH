@@ -179,10 +179,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.formA:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-          /*  case R.id.pendingForms:
+            case R.id.pendingForms:
                 oF = new Intent(this, PendingFormsActivity.class);
                 break;
-            case R.id.formB:
+            /*case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);
                 break;
             case R.id.formC1:

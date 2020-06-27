@@ -127,7 +127,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!bi.im011.isChecked()) return;
+                if (!bi.im011.isChecked() || bi.im0497.isChecked()) return;
                 String txt01, txt02, txt03;
                 bi.im04dd.setEnabled(true);
                 bi.im04mm.setEnabled(true);
@@ -255,8 +255,11 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
         if (formValidation()) {
             //Calculate months
             boolean monthFlag = true;
-            if (child.getCalculatedDOB() != null) {
-                Pair<String, String> month_year = getMonthAndYearFromDate(child.getCalculatedDOB().toString());
+            if (child.getCalculatedDOB() != null || !(bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())) {
+                Pair<String, String> month_year;
+                if (bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())
+                    month_year = getMonthAndYearFromDate(LocalDateTime.ofInstant(dtInstant, ZoneId.systemDefault()).toLocalDate().toString());
+                else month_year = getMonthAndYearFromDate(child.getCalculatedDOB().toString());
                 int totalMonths = Integer.parseInt(month_year.getFirst()) + Integer.parseInt(month_year.getSecond()) * 12;
                 monthFlag = totalMonths >= 12 && totalMonths < 24;
             }
@@ -280,7 +283,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
     }
 
     private Pair<String, String> getMonthAndYearFromDate(String date) {
-        Calendar cal = DateUtils.getCalendarDate(date);
+        Calendar cal = DateUtils.getCalendarDate(date.replace("-", "/"));
         int curdate = child.getLocalDate().getDayOfMonth();
         int curmonth = child.getLocalDate().getMonthValue();
         int curyear = child.getLocalDate().getYear();
