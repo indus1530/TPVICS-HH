@@ -131,6 +131,7 @@ public class SectionHHActivity extends AppCompatActivity implements EndSectionAc
         json.put("hh16a", bi.hh16a.getText().toString());
         json.put("hh16b", bi.hh16b.getText().toString());
 
+        // removed duplication question of head of household and phone number
        /* json.put("hh17a", bi.hh17a.getText().toString());
         json.put("hh17b", bi.hh17b.getText().toString());*/
 
