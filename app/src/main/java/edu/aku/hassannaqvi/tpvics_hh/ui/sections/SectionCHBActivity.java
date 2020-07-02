@@ -210,6 +210,8 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
         child.setsCB(String.valueOf(f1));
 
+        if (child.getCalculatedDOB() == null)
+            child.setCalculatedDOB(DateRepository.Companion.getDOBFromAge(Integer.parseInt(bi.cb04yy.getText().toString()), Integer.parseInt(bi.cb04mm.getText().toString()), 15));
     }
 
     private boolean formValidation() {

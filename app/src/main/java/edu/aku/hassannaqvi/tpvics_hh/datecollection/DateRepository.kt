@@ -50,5 +50,10 @@ class DateRepository {
             }
             return AgeModel(curdate - day, curmonth - month, curyear - year)
         }
+
+        @JvmOverloads
+        fun getDOBFromAge(refDate: LocalDate = LocalDate.now(), year: Int, month: Int, day: Int): LocalDate {
+            return run { refDate.minusYears(year.toLong()).minusMonths(month.toLong()).minusDays(day.toLong()) }
+        }
     }
 }
