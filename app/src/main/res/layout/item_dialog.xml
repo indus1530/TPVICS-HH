@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme">
 
         <TextView
+            android:id="@+id/alertTitle"
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:drawableStart="@drawable/ic_stop"
@@ -50,11 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:background="@drawable/outline_btn"
-
                 android:minWidth="64dp"
                 android:padding="12dp"
                 android:text="Yes"
-
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -63,11 +62,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:background="@drawable/outline_btn"
-
                 android:minWidth="64dp"
                 android:padding="12dp"
                 android:text="NO"
-
                 android:textColor="@color/white" />
 
         </LinearLayout>

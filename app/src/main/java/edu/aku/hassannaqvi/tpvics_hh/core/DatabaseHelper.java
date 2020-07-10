@@ -95,11 +95,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.delete(EnumBlockContract.EnumBlockTable.TABLE_NAME, null, null);
         int insertCount = 0;
 
-        JSONArray jsonArray = enumList;
-        for (int i = 0; i < jsonArray.length(); i++) {
+        for (int i = 0; i < enumList.length(); i++) {
             JSONObject jsonObjectCC = null;
             try {
-                jsonObjectCC = jsonArray.getJSONObject(i);
+                jsonObjectCC = enumList.getJSONObject(i);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -167,13 +166,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return insertCount;
     }
 
-    public void syncVersionApp(JSONArray VersionList) {
+    public Integer syncVersionApp(JSONObject VersionList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppContract.VersionAppTable.TABLE_NAME, null, null);
+        long count = 0;
         try {
-            JSONArray jsonArray = VersionList;
-            JSONObject jsonObjectCC = jsonArray.getJSONObject(0);
-
+            JSONObject jsonObjectCC = ((JSONArray) VersionList.get(VersionAppContract.VersionAppTable.COLUMN_VERSION_PATH)).getJSONObject(0);
             VersionAppContract Vc = new VersionAppContract();
             Vc.Sync(jsonObjectCC);
 
@@ -183,11 +181,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME, Vc.getVersionname());
 
-            db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
-        } catch (Exception e) {
+            count = db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
+            if (count > 0) count = 1;
+
+        } catch (Exception ignored) {
         } finally {
             db.close();
         }
+
+        return (int) count;
     }
 
     public VersionAppContract getVersionApp() {
@@ -779,8 +781,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String groupBy = null;
         String having = null;
 
-        String orderBy =
-                FormsTable.COLUMN_ID + " ASC";
+        String orderBy = FormsTable.COLUMN_ID + " DESC";
 
         Collection<FormsContract> allFC = new ArrayList<>();
         try {

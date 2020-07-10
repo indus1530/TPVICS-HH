@@ -229,30 +229,30 @@ public class GetAllData extends AsyncTask<String, String, String> {
             if (result.length() > 0) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
-                    JSONArray jsonArray = new JSONArray(result);
+                    JSONArray jsonArray = new JSONArray();
                     Log.d(TAG, "onPostExecute: " + syncClass);
                     int insertCount = 0;
                     switch (syncClass) {
                         case "User":
+                            jsonArray = new JSONArray(result);
                             insertCount = db.syncUser(jsonArray);
                             position = 0;
                             break;
                         case "VersionApp":
-                            db.syncVersionApp(jsonArray);
+                            insertCount = db.syncVersionApp(new JSONObject(result));
+                            if (insertCount == 1) jsonArray.put("1");
                             position = 1;
                             break;
                         case "EnumBlock":
-                            db.syncEnumBlocks(jsonArray);
+                            jsonArray = new JSONArray(result);
                             insertCount = db.syncEnumBlocks(jsonArray);
-
                             position = 2;
                             break;
                         case "BLRandom":
-                            Log.d(TAG, "onPostExecute: " + syncClass);
+                            jsonArray = new JSONArray(result);
                             insertCount = db.syncBLRandom(jsonArray);
                             position = 0;
                             break;
-
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());

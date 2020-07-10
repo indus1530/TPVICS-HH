@@ -18,8 +18,6 @@ import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -78,6 +76,7 @@ import edu.aku.hassannaqvi.tpvics_hh.core.AppInfo;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.AndroidUtilityKt;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
@@ -289,17 +288,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     @OnClick(R.id.syncData)
     void onSyncDataClick() {
-        //TODO implement
-
-        // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-            startActivity(new Intent(this, SyncActivity.class).putExtra(CONSTANTS.SYNC_LOGIN, true));
-        } else {
-            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        if (!AndroidUtilityKt.isNetworkConnected(this)) {
+            Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
+            return;
         }
+        startActivity(new Intent(this, SyncActivity.class).putExtra(CONSTANTS.SYNC_LOGIN, true));
     }
 
     private void populateAutoComplete() {
@@ -422,12 +415,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mPasswordView.setTransformationMethod(null);
             mPasswordView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
         }
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        populateSpinner(this);
     }
 
     public void loadIMEI() {
@@ -608,9 +595,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         return provider1.equals(provider2);
     }
 
-    public void populateSpinner(Context context) {
-
-    }
 
     private interface ProfileQuery {
         String[] PROJECTION = {

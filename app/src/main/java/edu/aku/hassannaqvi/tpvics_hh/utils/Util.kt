@@ -104,6 +104,35 @@ fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolea
 }
 
 @JvmOverloads
+fun openWarningActivity(activity: Activity, title: String, message: String, btnYesTxt: String = "YES", btnNoTxt: String = "NO") {
+    val dialog = Dialog(activity)
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+    val bi: ItemDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.item_dialog, null, false)
+    dialog.setContentView(bi.root)
+    bi.alertTitle.text = title
+    bi.alertTitle.setTextColor(ContextCompat.getColor(activity, R.color.green))
+    bi.content.text = message
+    bi.btnOk.text = btnYesTxt
+    bi.btnOk.setBackgroundColor(ContextCompat.getColor(activity, R.color.green))
+    bi.btnNo.text = btnNoTxt
+    bi.btnNo.setBackgroundColor(ContextCompat.getColor(activity, R.color.gray))
+    dialog.setCancelable(false)
+    val params = WindowManager.LayoutParams()
+    params.copyFrom(dialog.window!!.attributes)
+    params.width = WindowManager.LayoutParams.WRAP_CONTENT
+    params.height = WindowManager.LayoutParams.WRAP_CONTENT
+    dialog.window!!.attributes = params
+    dialog.show()
+    bi.btnOk.setOnClickListener {
+        val warningActivity = activity as WarningActivityInterface
+        warningActivity.callWarningActivity()
+    }
+    bi.btnNo.setOnClickListener {
+        dialog.dismiss()
+    }
+}
+
+@JvmOverloads
 fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -131,4 +160,8 @@ fun getMemberIcon(gender: Int): Int {
 
 interface EndSectionActivity {
     fun endSecActivity(flag: Boolean)
+}
+
+interface WarningActivityInterface {
+    fun callWarningActivity()
 }

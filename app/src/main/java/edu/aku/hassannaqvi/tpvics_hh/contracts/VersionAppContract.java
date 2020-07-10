@@ -18,17 +18,16 @@ public class VersionAppContract {
     }
 
     public VersionAppContract Sync(JSONObject jsonObject) throws JSONException {
-        this.versioncode = jsonObject.getJSONObject(VersionAppTable.COLUMN_VERSION_PATH).getString(VersionAppTable.COLUMN_VERSION_CODE);
-        this.pathname = jsonObject.getString(VersionAppTable.COLUMN_PATH_NAME);
-        this.versionname = jsonObject.getJSONObject(VersionAppTable.COLUMN_VERSION_PATH).getString(VersionAppTable.COLUMN_VERSION_NAME);
+        this.versioncode = jsonObject.getString(VersionAppTable.COLUMN_VERSION_CODE);
+        this.pathname = jsonObject.getString(VersionAppTable.COLUMN_PATH_DUPLICATE);
+        this.versionname = jsonObject.getString(VersionAppTable.COLUMN_VERSION_NAME);
         return this;
     }
 
-    public VersionAppContract hydrate(Cursor cursor) {
+    public void hydrate(Cursor cursor) {
         this.versioncode = cursor.getString(cursor.getColumnIndex(VersionAppTable.COLUMN_VERSION_CODE));
         this.pathname = cursor.getString(cursor.getColumnIndex(VersionAppTable.COLUMN_PATH_NAME));
         this.versionname = cursor.getString(cursor.getColumnIndex(VersionAppTable.COLUMN_VERSION_NAME));
-        return this;
     }
 
     public String getVersioncode() {
@@ -58,10 +57,11 @@ public class VersionAppContract {
     public static abstract class VersionAppTable implements BaseColumns {
 
         public static final String TABLE_NAME = "versionApp";
-        public static final String COLUMN_VERSION_PATH = "apkData";
+        public static final String COLUMN_VERSION_PATH = "elements";
         public static final String COLUMN_VERSION_CODE = "versionCode";
         public static final String COLUMN_VERSION_NAME = "versionName";
         public static final String COLUMN_PATH_NAME = "path";
+        public static final String COLUMN_PATH_DUPLICATE = "outputFile";
 
         public static final String _URI = "output.json";
     }

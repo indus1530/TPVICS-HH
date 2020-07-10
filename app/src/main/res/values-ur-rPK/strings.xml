@@ -1,40 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--new Strings-->
-    <string name="app_name"> TPVICS - HOUSEHOLD SURVEY \n In Urdu Language </string>
-
-    <!-- Strings related to login -->
+    <!-- Default Strings -->
+    <string name="app_name"> TPVICS - HOUSEHOLD SURVEY in Urdu Language </string>
     <string name="btnSync">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email completions." </string>
-
-
-    <string name="tdheading"> SECTION D: HOUSEHOLD MEMBER’S INFORMATION </string>
-    <string name="teheading"> SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15 &#8211; 49 years in the household) </string>
-    <string name="te2heading"> MATERNAL MORTALITY STATUS </string>
-    <string name="tfheading"> SECTION F: ANTENATAL CARE </string>
-    <string name="tiheading"> SECTION I: CHILD HEALTH </string>
-    <string name="ti2heading"> SECTION I2: ACUTE RESPIRATORY INFECTION (ARI) </string>
-    <string name="tjheading"> SECTION J: IMMUNIZATION </string>
-    <string name="tkheading"> SECTION K: FAMILY PLANNING </string>
-    <string name="tlheading"> SECTION L: WOMEN EMPOWERMENT </string>
-    <string name="tmheading"> SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD </string>
-    <string name="tnheading"> SECTION N: WATER AND SANITATION </string>
-    <string name="toheading"> SECTION O: HANDWASHING </string>
-
+    <string name="error_incorrect_password">This password is incorrect</string>
     <string name="splashText">Supporting Women and Girls in Pakistan Scaling Up</string>
-
-    <string name="splashText2">"Empowerment and Care  Strategies  to Address Health and Survival"</string>
-
-    <string name="sM">"Centre of Excellence Women &amp; Child Health"</string>
+    <string name="splashText2">Empowerment and Care  Strategies  to Address Health and Survival</string>
+    <string name="check_pending_forms">CHECK PENDING FORMS</string>
+    <string name="open_new_form">OPEN NEW FORM</string>
+    <string name="records_summary">Records Summary</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="only_for_testing">ONLY FOR TESTING</string>
+    <string name="database">Database</string>
     <string name="no"> نہیں </string>
     <string name="dkn"> معلوم نہیں </string>
     <string name="none"> کوئی نہیں </string>
@@ -59,17 +43,29 @@
     <string name="num"> اعداد </string>
     <string name="name"> نام </string>
     <string name="contactnum"> رابطہ نمبر </string>
+    <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
+    <string name="newHHheadname"> نیا سربراہ کا نام </string>
+    <!--Deafult Strings End-->
 
+    <!--TPVICS STRINGS-->
+    <string name="tdheading"> SECTION D: HOUSEHOLD MEMBER’S INFORMATION </string>
+    <string name="teheading"> SECTION E: REPRODUCTIVE HEALTH (Complete this table for all married women aged 15 &#8211; 49 years in the household) </string>
+    <string name="te2heading"> MATERNAL MORTALITY STATUS </string>
+    <string name="tfheading"> SECTION F: ANTENATAL CARE </string>
+    <string name="tiheading"> SECTION I: CHILD HEALTH </string>
+    <string name="ti2heading"> SECTION I2: ACUTE RESPIRATORY INFECTION (ARI) </string>
+    <string name="tjheading"> SECTION J: IMMUNIZATION </string>
+    <string name="tkheading"> SECTION K: FAMILY PLANNING </string>
+    <string name="tlheading"> SECTION L: WOMEN EMPOWERMENT </string>
+    <string name="tmheading"> SECTION M: SOCIOL ECONOMIC STATUS OF HOUSEHOLD </string>
+    <string name="tnheading"> SECTION N: WATER AND SANITATION </string>
+    <string name="toheading"> SECTION O: HANDWASHING </string>
     <string name="total"> Total </string>
     <string name="under1_2"> Child 12-23 Months </string>
     <string name="under5"> Child Under 5 </string>
-
-    <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
-    <string name="newHHheadname"> نیا سربراہ کا نام </string>
     <string name="a101"> کلسٹر نمبر </string>
     <string name="a101a"> یہ معلومات ضلعی بنیاد پر بنائی گئی گاؤں کی فہرست پر مبنی ہوں گی۔ ہر انٹرویو کرنے والے کو جس علاقے کا وہ دورہ کرے گا کلسٹرز کی ایک فہرست دی جائے گی اور انٹرویو شروع کرنے سے پہلے اسی فہرست سے یہ معلومات درج کی جائیں گی۔ </string>
 
-    <!--TPVICS STRINGS-->
     <string name="hhsec"> Section H1: HouseHold Information </string>
     <string name="hh05"> اینومیریشن بلاک نمبر </string>
     <string name="hh06"> صوبہ </string>
@@ -88,37 +84,28 @@
     <string name="hh13"> جواب دہندہ کا نام </string>
     <string name="hh13a"> جواب دہندہ کا رابطہ نمبر </string>
     <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
-
     <string name="hh15"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
     <string name="hh15a"> ہاں </string>
     <string name="hh15b"> نہیں </string>
-
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
-
     <string name="hh16a">  گھر کے سربراہ کا نام </string>
     <string name="hh16b">  گھر کے سربراہ کا فون نمبر </string>
-
     <string name="hh17"> گھرانے کے سربراہ کے سوال نامے میں جواب دہندہ کا نام اور فون نمبر (اگر سربراہ جواب دہندہ نہیں ہے) </string>
     <string name="hh17a"> سربراہ کا نام </string>
     <string name="hh17b"> سربراہ کا فون نمبر </string>
-
     <string name="hh18"> کیا میں اب انٹرویو شروع کر سکتی / سکتا ہوں ؟ </string>
     <string name="hh18a">  ہاں، اجازت مل گئی ہے </string>
     <string name="hh18b"> نہیں، اجازت نہیں ملی </string>
-
     <string name="hh19"> اس گھرانے میں کتنے افراد رہتے ہیں ؟ </string>
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
     <string name="hh19_info"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔   اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے تو 95 درج کریں </string>
-
     <string name="hh20"> کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
     <string name="hh20_info"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
     <string name="hh20b"> نہیں </string>
-
     <string name="hh20aa"> اگر ہاں، تو 12–23 مہینے کی عمر کے بچوں کی تعداد بتائیں </string>
-
     <string name="hh22"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="hh22h"> نوٹ: نامکمل انٹرویو کے کسی بھی نتیجہ کی صورت میں سپروائزر سے رابطہ کریں </string>
     <string name="hh22a"> مکمل </string>
@@ -129,40 +116,28 @@
     <string name="hh22f"> گھر نہیں ملا </string>
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
-
     <string name="chsec"> Child Information </string>
     <string name="chBsec"> Child Background </string>
     <string name="ch_title"> بارہ سے تئیس ماہ کی عمر کے بچوں کی معلومات کا اندراج: </string>
-
     <string name="ch_cluster"> کلسٹر نمبر: </string>
-
     <string name="ch_hno"> گھر کا نمبر: </string>
-
     <string name="ch_childid"> چائلڈ آئی ڈی </string>
-
     <string name="ch01"> سیریل نمبر </string>
-
     <string name="ch02"> بچے کا نام </string>
-
     <string name="ch03"> باپ کا نام </string>
-
     <string name="ch04"> جنس </string>
     <string name="ch04a"> مرد </string>
     <string name="ch04b"> عورت </string>
-
     <string name="ch05"> تاریخ پیدائش </string>
     <string name="ch05a"> دن </string>
     <string name="ch05b"> مہینہ </string>
     <string name="ch05c"> سال </string>
-
     <string name="ch06"> عمر مہینوں مہیں </string>
-
     <string name="ch07"> بچے کی عمر کی تصدیق کا زریعہ </string>
     <string name="ch07a"> پیدائش کا سرٹیفکیٹ </string>
     <string name="ch07b"> حفاظتی ٹیکوں کا کارڈ </string>
     <string name="ch07c"> جواب دہندہ </string>
     <string name="ch0796"> دیگر </string>
-
     <string name="ch08"> کیا بچہ اس سروے کے لیے اہل ہے </string>
     <string name="ch08a"> ہاں </string>
     <string name="ch08b"> نہیں </string>
@@ -1116,6 +1091,5 @@
     <string name="hhformInfo"> ۔HOUSEHOLD بٹن پر کلک کر کے گھر کی معلومات کا اندراج کریں</string>
     <string name="childforminfo">گھر کی معلومات کا فارم کامیابی سے مکمل ہو گیا ہے اب CHILD کے بٹن پر کلک کر کے 23-\12 مہینے کے بچوں کی معلومات کے فارم کا اندراج کریں</string>
     <string name="childlistinfo">اندراج شدہ بچوں کی فہرست</string>
-
 
 </resources>

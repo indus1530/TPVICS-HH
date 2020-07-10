@@ -15,19 +15,13 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
-
-import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
@@ -37,7 +31,6 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
-import kotlin.Pair;
 
 
 /**
@@ -47,16 +40,13 @@ import kotlin.Pair;
 public class MainApp extends Application {
 
     public static final String TAG = "AppMain";
-    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
-    // public static final String _IP = "http://f38158";// .TEST server
+    //    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
+    public static final String _IP = "http://f38158";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/tpvics/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
     public static final String _PHOTO_UPLOAD_URL = MainApp._IP + "/tpvics/api/uploads.php";
 
     public static final String _UPDATE_URL = MainApp._IP + "/tpvics/app/";
-    public static final Integer MONTHS_LIMIT = 11;
-    public static final Integer DAYS_LIMIT = 29;
-    //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
     private static final int TWENTY_MINUTES = 1000 * 60 * 20;
@@ -75,59 +65,56 @@ public class MainApp extends Application {
     private static final long DAYS_IN_2_YEAR = 365 * 2;
     public static final long MILLISECONDS_IN_2Years = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_2_YEAR;
     public static String deviceId;
-    public static OnItemClick itemClick;
-    public static OnItemClick countItemClick;
+    public static OnItemClickInterface itemClick;
     public static AppInfo appInfo;
     public static Boolean admin = false;
     public static FormsContract fc;
     public static EnumBlockContract enumBlockContract;
-    public static LiveData<FormsContract> liveFC = new MutableLiveData<>();
     public static ChildContract child;
-    public static FamilyMembersContract selectedKishMWRA;
-    public static FamilyMembersContract indexKishMWRAChild;
     public static String userName = "0000";
     public static UsersContract user;
-    public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
-    public static String G102;
     public static SharedPreferences sharedPref;
     protected static LocationManager locationManager;
     public static String DIST_ID;
-    public static Pair<List<Integer>, List<String>> selectedChildren;
 
-    public static void setItemClick(OnItemClick itemClick) {
+    public static void setItemClick(OnItemClickInterface itemClick) {
         MainApp.itemClick = itemClick;
     }
 
-    public static void setGPS(Activity activity) {
-        SharedPreferences GPSPref = activity.getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-        try {
-            String lat = GPSPref.getString("Latitude", "0");
-            String lang = GPSPref.getString("Longitude", "0");
-            String acc = GPSPref.getString("Accuracy", "0");
-            String dt = GPSPref.getString("Time", "0");
+        /*Setting fonts*/
 
-            if (lat.equals("0") && lang.equals("0")) {
-                Toast.makeText(activity, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
-            }
-
-            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
-
-            MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
-            MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
-            MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
-//            MainApp.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
-            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
-
-        } catch (Exception e) {
-            Log.e("GPS", "setGPS: " + e.getMessage());
+        //TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/MBLateefi.ttf");
+        TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/JameelNooriNastaleeq.ttf");
+        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
+        // Requires Additional permission for 5.0 -- android.hardware.location.gps
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
         }
+        locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                MINIMUM_TIME_BETWEEN_UPDATES,
+                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+                new GPSLocationListener() // Implement this class from code
 
-
+        );
+        sharedPref = getSharedPreferences("PSUCodes", Context.MODE_PRIVATE);
+        //Initiate DateTime
+        AndroidThreeTen.init(this);
     }
 
     public static String getTagName(Context mContext) {
@@ -180,50 +167,6 @@ public class MainApp extends Application {
         bi.noBtn.setOnClickListener(v -> dialog.dismiss());
     }
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        // font from assets: "assets/fonts/Roboto-Regular.ttf
-
-        //TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/MBLateefi.ttf");
-
-        TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/JameelNooriNastaleeq.ttf");
-
-        deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID);
-
-
-        // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
-        // Requires Additional permission for 5.0 -- android.hardware.location.gps
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER,
-                MINIMUM_TIME_BETWEEN_UPDATES,
-                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
-                new GPSLocationListener() // Implement this class from code
-
-        );
-
-
-//        Initialize Dead Member List
-//        deadMembers = new ArrayList<String>();
-        sharedPref = getSharedPreferences("PSUCodes", Context.MODE_PRIVATE);
-
-        //Initiate DateTime
-        AndroidThreeTen.init(this);
-    }
-
     protected void showCurrentLocation() {
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -247,10 +190,6 @@ public class MainApp extends Application {
             //Toast.LENGTH_SHORT).show();
         }
 
-    }
-
-    public interface OnItemClick {
-        void itemClick();
     }
 
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
@@ -343,6 +282,10 @@ public class MainApp extends Application {
         public void onProviderEnabled(String s) {
 
         }
+    }
+
+    public interface OnItemClickInterface {
+        void itemClick();
     }
 
 }
