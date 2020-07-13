@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -34,7 +32,6 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportCluster;
@@ -47,6 +44,8 @@ import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 import edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt;
 import edu.aku.hassannaqvi.tpvics_hh.utils.WarningActivityInterface;
 
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.appInfo;
+
 public class MainActivity extends AppCompatActivity implements WarningActivityInterface {
 
     static File file;
@@ -58,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     private SharedPreferences sharedPrefDownload;
     private SharedPreferences.Editor editorDownload;
     private DownloadManager downloadManager;
+    private Boolean exit = false;
+
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -90,19 +91,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             }
         }
     };
-    private Boolean exit = false;
 
     void showDialog(String newVer, String preVer) {
-        /*FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
-        if (prev != null) {
-            ft.remove(prev);
-        }
-        ft.addToBackStack(null);
-
-        DialogFragment newFragment = MyDialogFragment.newInstance(newVer, preVer);
-        newFragment.show(ft, "dialog");*/
-
         UtilKt.openWarningActivity(
                 this,
                 getString(R.string.app_name) + " APP is available!",
@@ -110,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 "Install",
                 "Cancel"
         );
-
     }
 
     public void openForm(View v) {
@@ -169,11 +158,10 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
-        bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
-        DatabaseHelper db = new DatabaseHelper(this);
-        Collection<FormsContract> todaysForms = db.getTodayForms(sysdateToday);
-        Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
-        Collection<FormsContract> unclosedForms = db.getUnclosedForms();
+        bi.txtinstalldate.setText(appInfo.getAppInfo());
+        Collection<FormsContract> todaysForms = appInfo.getDbHelper().getTodayForms(sysdateToday);
+        Collection<FormsContract> unsyncedForms = appInfo.getDbHelper().getUnsyncedForms();
+        Collection<FormsContract> unclosedForms = appInfo.getDbHelper().getUnclosedForms();
 
         StringBuilder rSumText = new StringBuilder()
                 .append("TODAY'S RECORDS SUMMARY\r\n")
@@ -218,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 }
 
 
-                int childCount = db.getChildrenByUUID(fc.get_UID());
+                int childCount = appInfo.getDbHelper().getChildrenByUUID(fc.get_UID());
                 rSumText.append(fc.getClusterCode())
                         .append(fc.getHhno())
                         .append("  \t\t")
@@ -257,38 +245,39 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
-        VersionAppContract versionAppContract = db.getVersionApp();
+        VersionAppContract versionAppContract = appInfo.getDbHelper().getVersionApp();
         if (versionAppContract.getVersioncode() != null) {
-            preVer = MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode();
+            preVer = appInfo.getVersionName() + "." + appInfo.getVersionCode();
             newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
-            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
+            if (appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
-                String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
-                file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
+                String fileName = CreateTable.DATABASE_NAME.replace(".db", "_New_Apps");
+                file = new File(Environment.getDataDirectory() + File.separator + fileName, versionAppContract.getPathname());
 
                 if (file.exists()) {
-                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + "\nNew Ver.").append(newVer).append("  is downloaded. Kindly accept the installation prompt."));
+                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append("\nNew Ver.").append(newVer).append("  is downloaded. Kindly accept the installation prompt."));
                     showDialog(newVer, preVer);
                 } else {
-                    NetworkInfo networkInfo = ((ConnectivityManager) Objects.requireNonNull(getSystemService(Context.CONNECTIVITY_SERVICE))).getActiveNetworkInfo();
-                    if (networkInfo != null && networkInfo.isConnected()) {
-                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + "App \nNew Ver.").append(newVer).append("  is downloading.."));
-                        downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                        Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
-                        DownloadManager.Request request = new DownloadManager.Request(uri);
-                        request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
-                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                .setTitle("Downloading updated version of " + getString(R.string.app_name) + " Ver." + newVer);
-                        long refID = downloadManager.enqueue(request);
 
-                        editorDownload.putLong("refID", refID);
-                        editorDownload.putBoolean("flag", false);
-                        editorDownload.apply();
-
-                    } else {
-                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " App New Ver.").append(newVer).append("  is available..\n(Couldn't able to download due to Internet connectivity issue!!)"));
+                    if (!AndroidUtilityKt.isNetworkConnected(this)) {
+                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append(" App New Ver.").append(newVer).append("  is available..\n(Couldn't able to download due to Internet connectivity issue!!)"));
+                        return;
                     }
+
+                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append(" App \nNew Ver.").append(newVer).append("  is downloading.."));
+                    downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                    Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
+                    DownloadManager.Request request = new DownloadManager.Request(uri);
+                    request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
+                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                            .setTitle("Downloading updated version of " + getString(R.string.app_name) + " Ver." + newVer);
+                    long refID = downloadManager.enqueue(request);
+
+                    editorDownload.putLong("refID", refID);
+                    editorDownload.putBoolean("flag", false);
+                    editorDownload.apply();
+
                 }
 
             } else {
@@ -299,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 //        Testing visibility
-        if (Integer.parseInt(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0)
+        if (Integer.parseInt(appInfo.getVersionName().split("\\.")[0]) > 0)
             bi.testing.setVisibility(View.GONE);
         else
             bi.testing.setVisibility(View.VISIBLE);
@@ -333,43 +322,5 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
 
         }
     }
-
-//    public static class MyDialogFragment extends DialogFragment {
-//
-//        String newVer, preVer;
-//
-//        static MyDialogFragment newInstance(String newVer, String preVer) {
-//            MyDialogFragment f = new MyDialogFragment();
-//
-//            Bundle args = new Bundle();
-//            args.putString("newVer", newVer);
-//            args.putString("preVer", preVer);
-//            f.setArguments(args);
-//
-//            return f;
-//        }
-//
-//        @Override
-//        public Dialog onCreateDialog(Bundle savedInstanceState) {
-//            newVer = getArguments().getString("newVer");
-//            preVer = getArguments().getString("preVer");
-//
-//            return new AlertDialog.Builder(getActivity())
-//                    .setIcon(R.drawable.exclamation)
-//                    .setTitle(R.string.app_name + " APP is available!")
-//                    .setCancelable(false)
-//                    .setMessage(R.string.app_name + " App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
-//                    .setPositiveButton("INSTALL!!",
-//                            (dialog, whichButton) -> {
-//                                Intent intent = new Intent(Intent.ACTION_VIEW);
-//                                intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-//                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                                startActivity(intent);
-//                            }
-//                    )
-//                    .create();
-//        }
-//
-//    }
 
 }
