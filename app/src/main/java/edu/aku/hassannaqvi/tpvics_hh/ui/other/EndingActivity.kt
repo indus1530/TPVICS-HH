@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.validatorcrawler.aliazaz.Validator
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.R
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityEndingBinding
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionSubInfoActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils
-import edu.aku.hassannaqvi.tpvics_hh.validator.ValidatorClass
 import org.json.JSONException
 import org.json.JSONObject
 import java.text.SimpleDateFormat
@@ -119,7 +119,7 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun formValidation(): Boolean {
-        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatus96, bi.istatus96x, getString(R.string.hh22h))
+        return Validator.emptyCheckingContainer(this, bi.fldGrpEnd)
     }
 
     override fun onBackPressed() {
