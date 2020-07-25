@@ -92,10 +92,8 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:enabled='@{cb01dk.checked ? false : true}'
                             android:hint="@string/cb01a"
                             android:maxLength="2"
-                            android:text='@{cb01dk.checked ? "" : cb01a.getText().toString() }'
                             app:defaultValue="77"
                             app:maxValue="20"
                             app:minValue="1"
@@ -116,19 +114,17 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:enabled='@{cb01dk.checked ? false : false}'
                             android:hint="@string/cb01b"
-                            android:maxLength="2"
-                            android:text='@{cb01dk.checked ? "" : cb01b.getText().toString() }' />
+                            android:maxLength="2" />
 
                     </LinearLayout>
-
-                    <CheckBox
-                        android:id="@+id/cb01dk"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="-1"
-                        android:text="@string/cb01dk" />
+                    <!--
+                                        <CheckBox
+                                            android:id="@+id/cb01dk"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:tag="-1"
+                                            android:text="@string/cb01dk" />-->
 
                 </LinearLayout>
 
@@ -183,10 +179,10 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:enabled='@{cb02dk.checked ? false : true}'
+
                             android:hint="@string/cb02a"
                             android:maxLength="2"
-                            android:text='@{cb02dk.checked ? "" : cb02a.getText().toString() }'
+
                             app:defaultValue="77"
                             app:maxValue="20"
                             app:minValue="1"
@@ -207,19 +203,18 @@
                             style="@style/EditTextNum"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:enabled='@{cb02dk.checked ? false : false}'
+
                             android:hint="@string/cb02b"
-                            android:maxLength="2"
-                            android:text='@{cb02dk.checked ? "" : cb02b.getText().toString() }' />
+                            android:maxLength="2" />
 
                     </LinearLayout>
 
-                    <CheckBox
-                        android:id="@+id/cb02dk"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:tag="-1"
-                        android:text="@string/cb02dk" />
+                    <!--  <CheckBox
+                          android:id="@+id/cb02dk"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:tag="-1"
+                          android:text="@string/cb02dk" />-->
 
                 </LinearLayout>
 

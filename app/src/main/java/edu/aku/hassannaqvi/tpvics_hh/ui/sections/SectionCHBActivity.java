@@ -192,11 +192,11 @@ public class SectionCHBActivity extends AppCompatActivity implements EndSectionA
 
         f1.put("cb01a", bi.cb01a.getText().toString());
         f1.put("cb01b", bi.cb01b.getText().toString());
-        f1.put("cb01dk", bi.cb01dk.isChecked() ? "98" : "0");
+        //f1.put("cb01dk", bi.cb01dk.isChecked() ? "98" : "0");
 
         f1.put("cb02a", bi.cb02a.getText().toString());
         f1.put("cb02b", bi.cb02b.getText().toString());
-        f1.put("cb02dk", bi.cb02dk.isChecked() ? "98" : "0");
+       // f1.put("cb02dk", bi.cb02dk.isChecked() ? "98" : "0");
 
         f1.put("cb03dd", bi.cb03dd.getText().toString());
         f1.put("cb03mm", bi.cb03mm.getText().toString());
