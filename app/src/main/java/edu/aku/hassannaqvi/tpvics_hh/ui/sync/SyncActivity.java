@@ -262,7 +262,6 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
             editor.putString("LastDataUpload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
             editor.apply();
-            editor.apply();
 
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();

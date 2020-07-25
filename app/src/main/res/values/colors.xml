@@ -3,6 +3,9 @@
     <color name="colorAccent">#ff5252</color>
     <color name="colorPrimary">#b71c1c</color>
     <color name="colorPrimaryDark">#880E0e</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorPrimaryLight">#448aff</color>
+    <color name="colorPrimaryAlpha">#607d8b</color>
 
     <color name="ticker_red">#E91E63</color>
     <color name="dullWhile">#f2f2f2</color>
@@ -17,13 +20,12 @@
     <color name="red700">#D32F2F</color>
     <color name="orange600">#F4511E</color>
 
-    <color name="colorPrimaryDark1">#303F9F</color>
+
     <color name="dullWhite">#d6d6d6</color>
 
     <color name="colorSecondary">#00617d</color>
     <color name="redforborder">#EF9A9A</color>
-    <color name="colorPrimaryLight">#448aff</color>
-    <color name="colorPrimaryAlpha">#607d8b</color>
+
     <color name="pink_100">#9BD8FF</color>
     <color name="colorHeading">#99FFCC</color>
     <color name="colorRedsub">#d6ff8a80</color>

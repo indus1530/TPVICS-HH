@@ -7,7 +7,6 @@ import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.R
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract
 import kotlinx.coroutines.*
-
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.

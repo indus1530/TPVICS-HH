@@ -275,6 +275,12 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
             //syncStatus.setText(syncStatus.getText() + "\r\n" + syncClass + " Sync Failed");
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
+            pd.setTitle("Error");
+            pd.setMessage(e.getMessage());
+            uploadlist.get(position).setstatus("Failed");
+            uploadlist.get(position).setstatusID(1);
+            uploadlist.get(position).setmessage(e.getMessage());
+            adapter.updatesyncList(uploadlist);
         }
     }
 }

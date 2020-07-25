@@ -94,6 +94,7 @@
                     android:layout_marginLeft="17.50dp"
                     android:layout_marginRight="17.50dp"
                     android:layout_marginBottom="17.50dp"
+                    style="@style/TextAppearance.AppCompat.Small"
 
                     tools:text="Results:    " />
             </LinearLayout>

@@ -41,7 +41,7 @@
 
 
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
-        <item name="android:background">#e4e4e4</item>
+        <item name="android:background">@drawable/app_bg_gray</item>
         <item name="android:padding">18dp</item>
     </style>
 
@@ -549,8 +549,6 @@
 
     <style name="topBarStyle" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:background">@color/colorPrimary</item>
-
-
     </style>
 
     <style name="info_style">
