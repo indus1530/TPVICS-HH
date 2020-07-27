@@ -233,7 +233,7 @@ public class SectionSS1Activity extends AppCompatActivity {
                 : bi.ss12b.isChecked() ? "10"
                 : bi.ss1298.isChecked() ? "98"
                 : "0");
-        json.put("ss12hh", bi.ss12hh.getText().toString());
+        json.put("ss12hh", bi.ss12hh.getText().toString().trim().isEmpty() ? "-1" : bi.ss12hh.getText().toString());
 
         json.put("ss13", bi.ss13a.isChecked() ? "1"
                 : bi.ss13b.isChecked() ? "2"

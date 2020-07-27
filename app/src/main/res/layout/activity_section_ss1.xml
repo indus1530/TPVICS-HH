@@ -1064,7 +1064,7 @@
                             android:id="@+id/ss12hh"
                             style="@style/EditTextNum"
                             android:enabled='@{ss12a.checked ? true : false }'
-                            android:hint="@string/ss12a"
+                            android:hint="@string/ss12hh"
                             android:maxLength="1"
                             android:tag="ss12a"
                             android:text='@{ss12a.checked ? ss12hh.getText().toString() : "" }'

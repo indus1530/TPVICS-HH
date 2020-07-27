@@ -54,15 +54,21 @@ public class SectionCHEActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject f1 = new JSONObject();
+        JSONObject json = new JSONObject();
 
-        f1.put("im26a", bi.im26a.getText().toString());
-        f1.put("im26b", bi.im26b.getText().toString());
-        f1.put("im26c", bi.im26c.getText().toString());
-        f1.put("im26d", bi.im26d.getText().toString());
+        json.put("im25", bi.im2501.isChecked() ? "1"
+                : bi.im2502.isChecked() ? "2"
+                : bi.im2503.isChecked() ? "3"
+                : bi.im2504.isChecked() ? "4"
+                : "0");
+
+        json.put("im26a", bi.im26a.getText().toString());
+        json.put("im26b", bi.im26b.getText().toString());
+        json.put("im26c", bi.im26c.getText().toString());
+        json.put("im26d", bi.im26d.getText().toString());
 
         try {
-            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(child.getsCC()), f1);
+            JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(child.getsCC()), json);
 
             child.setsCC(String.valueOf(json_merge));
 
