@@ -133,7 +133,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.hh11.getText().toString());
-        MainApp.fc.setHhno(bi.hh12.getText().toString());
+        MainApp.fc.setHhno(bi.hh12.getText().toString().toUpperCase());
         MainApp.fc.setLuid(bl.getLUID());
         MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         setGPS(this); // Set GPS
