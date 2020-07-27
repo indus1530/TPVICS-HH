@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                     Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                startActivity(new Intent(this, SyncActivity.class));
+                oF = new Intent(this, SyncActivity.class);
                 break;
         }
         startActivity(oF);
