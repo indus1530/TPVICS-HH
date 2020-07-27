@@ -10,6 +10,7 @@
             type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHDActivity" />
     </data>
 
+
     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
         <!-- im05title2  Title   -->
@@ -28,6 +29,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -2877,6 +2879,74 @@
                             style="@style/checkbox"
                             android:tag="-1"
                             android:text="@string/im2499" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- im25  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim25"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im25"
+                                android:text="@string/im25" />
+
+                            <TextView
+                                android:id="@+id/q_im25"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im25"
+                                android:layout_alignBottom="@id/qtxt_im25"
+                                android:text="@string/Q_im25" />
+                        </RelativeLayout>
+
+                        <RadioGroup
+                            android:id="@+id/im25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/im2501"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im2501" />
+
+                            <RadioButton
+                                android:id="@+id/im2502"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im2502" />
+
+                            <RadioButton
+                                android:id="@+id/im2503"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im2503" />
+
+                            <RadioButton
+                                android:id="@+id/im2504"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im2504" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 

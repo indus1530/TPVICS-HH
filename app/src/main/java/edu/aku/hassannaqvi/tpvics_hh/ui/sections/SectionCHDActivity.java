@@ -701,6 +701,12 @@ public class SectionCHDActivity extends AppCompatActivity {
         json.put("im2499", bi.im2499.isChecked() ? "98" : "0");
         json.put("im2417x", bi.im2417x.getText().toString());
 
+        json.put("im25", bi.im2501.isChecked() ? "1"
+                : bi.im2502.isChecked() ? "2"
+                : bi.im2503.isChecked() ? "3"
+                : bi.im2504.isChecked() ? "4"
+                : "0");
+
 
         try {
             JSONObject json_merge = JSONUtils.mergeJSONObjects(new JSONObject(child.getsCC()), json);
