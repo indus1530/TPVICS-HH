@@ -37,8 +37,8 @@ import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 import kotlin.Pair;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01CARDSEEN;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02CARDSEEN;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
@@ -46,7 +46,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
 public class SectionCHCActivity extends AppCompatActivity implements EndSectionActivity {
 
     ActivitySectionChCBinding bi;
-    boolean im02Flag = false, imFlag = true;
+    boolean im01Flag = false, imFlag = true;
     Instant dtInstant = null;
 
     @Override
@@ -78,45 +78,46 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
     private void setupListeners() {
 
 
-        bi.im01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.im011.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim02, false);
+        bi.im02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.im021.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim03, false);
                 Clear.clearAllFields(bi.fldGrpCVim04, true);
+                Clear.clearAllFields(bi.fldGrpSecChc1, true);
                 bi.frontPhoto.setEnabled(true);
                 bi.backPhoto.setEnabled(true);
                 bi.frontPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
                 bi.backPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
                 bi.frontFileName.setText(null);
                 bi.backFileName.setText(null);
-            } else if (i == bi.im012.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVim02, false);
-                Clear.clearAllFields(bi.fldGrpCVim03, false);
-                Clear.clearAllFields(bi.fldGrpCVim04, false);
-                bi.frontPhoto.setEnabled(false);
-                bi.backPhoto.setEnabled(false);
-                bi.frontPhoto.setBackground(null);
-                bi.backPhoto.setBackground(null);
-                bi.frontFileName.setText(null);
-                bi.backFileName.setText(null);
-                im02Flag = true;
+                im01Flag = false;
             } else {
-                Clear.clearAllFields(bi.fldGrpCVim02, true);
                 Clear.clearAllFields(bi.fldGrpCVim03, true);
                 Clear.clearAllFields(bi.fldGrpCVim04, false);
+                Clear.clearAllFields(bi.fldGrpSecChc1, false);
                 bi.frontPhoto.setEnabled(false);
                 bi.backPhoto.setEnabled(false);
                 bi.frontPhoto.setBackground(null);
                 bi.backPhoto.setBackground(null);
                 bi.frontFileName.setText(null);
                 bi.backFileName.setText(null);
+                im01Flag = true;
             }
 
         }));
 
-        bi.im02.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im022.getId());
-            im02Flag = i == bi.im021.getId() || i == bi.im022.getId();
+        bi.im01.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVim02, i == bi.im011.getId());
+            Clear.clearAllFields(bi.fldGrpSecChc1, i == bi.im011.getId());
+            Clear.clearAllFields(bi.fldGrpCVim03, i == bi.im012.getId());
+
+            bi.frontPhoto.setEnabled(i == bi.im011.getId());
+            bi.backPhoto.setEnabled(i == bi.im011.getId());
+            bi.frontPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
+            bi.backPhoto.setBackground(getResources().getDrawable(R.drawable.outline_btn));
+            bi.frontFileName.setText(null);
+            bi.backFileName.setText(null);
+
+            im01Flag = i == bi.im012.getId();
         });
 
         bi.im04yy.addTextChangedListener(new TextWatcher() {
@@ -128,7 +129,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 dtInstant = null;
-                if (!bi.im011.isChecked() || bi.im0497.isChecked()) return;
+                if (!bi.im021.isChecked() || bi.im0497.isChecked()) return;
                 String txt01, txt02, txt03;
                 bi.im04dd.setEnabled(true);
                 bi.im04mm.setEnabled(true);
@@ -207,14 +208,14 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
 
         JSONObject f1 = new JSONObject();
 
-        f1.put("im01",
-                bi.im011.isChecked() ? "1" :
-                        bi.im012.isChecked() ? "2" :
-                                bi.im013.isChecked() ? "3" :
-                                        "0");
         f1.put("im02",
                 bi.im021.isChecked() ? "1" :
                         bi.im022.isChecked() ? "2" :
+                                bi.im023.isChecked() ? "3" :
+                                        "0");
+        f1.put("im01",
+                bi.im011.isChecked() ? "1" :
+                        bi.im012.isChecked() ? "2" :
                                 "0");
         f1.put("im03",
                 bi.im031.isChecked() ? "1" :
@@ -245,7 +246,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
             Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
             return false;
         }
-        if (bi.im011.isChecked() && (TextUtils.isEmpty(bi.frontFileName.getText()) || TextUtils.isEmpty(bi.backFileName.getText()))) {
+        if (bi.im021.isChecked() && (TextUtils.isEmpty(bi.frontFileName.getText()) || TextUtils.isEmpty(bi.backFileName.getText()))) {
             Toast.makeText(this, "No Photos attached", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -259,7 +260,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
             boolean monthFlag = true;
             if (child.getCalculatedDOB() != null || dtInstant != null) {
                 Pair<String, String> month_year;
-                if (bi.im011.isChecked() && dtInstant != null && !bi.im0497.isChecked())
+                if (bi.im021.isChecked() && dtInstant != null && !bi.im0497.isChecked())
                     month_year = getMonthAndYearFromDate(LocalDateTime.ofInstant(dtInstant, ZoneId.systemDefault()).toLocalDate().toString());
                 else month_year = getMonthAndYearFromDate(child.getCalculatedDOB().toString());
                 int totalMonths = Integer.parseInt(month_year.getFirst()) + Integer.parseInt(month_year.getSecond()) * 12;
@@ -273,7 +274,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
                 }
                 if (UpdateDB()) {
                     finish();
-                    startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM02FLAG, !im02Flag).putExtra(IM01CARDSEEN, bi.im011.isChecked()));
+                    startActivity(new Intent(this, SectionCHDActivity.class).putExtra(IM01FLAG, !im01Flag).putExtra(IM02CARDSEEN, bi.im021.isChecked()));
                 } else {
                     Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
                 }

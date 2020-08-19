@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,8 +35,8 @@ import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
 import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01CARDSEEN;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02CARDSEEN;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
 
@@ -55,45 +54,6 @@ public class SectionCHDActivity extends AppCompatActivity {
         setTitle(R.string.im05title1);
         setupListeners();
         setupTextWatchers();
-        setupYears();
-
-        //imo7 Check
-        im07 = getIntent().getBooleanExtra(IM01CARDSEEN, false);
-        if (im07) {
-            Clear.clearAllFields(bi.fldGrpCVim07, false);
-            bi.im071.setChecked(true);
-        }
-
-    }
-
-    private void setupYears() {
-        /*EditTextPicker[] yearEdit = new EditTextPicker[]{
-                bi.im0501yy
-                , bi.im0502yy
-                , bi.im0503yy
-                , bi.im0504yy
-                , bi.im0505yy
-                , bi.im0506yy
-                , bi.im0507yy
-                , bi.im0508yy
-                , bi.im0509yy
-                , bi.im0510yy
-                , bi.im0511yy
-                , bi.im0512yy
-                , bi.im0513yy
-                , bi.im0514yy
-                , bi.im0515yy
-                , bi.im0516yy};
-
-        if (child.getCalculatedDOB() != null) {
-            int maxYears = child.getCalculatedDOB().getYear();
-            int minYears = child.getCalculatedDOB().minusYears(2).getYear();
-
-            for (EditTextPicker edit : yearEdit) {
-                edit.setMinvalue(minYears);
-                edit.setMaxvalue(maxYears);
-            }
-        }*/
 
     }
 
@@ -343,27 +303,16 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     private void setupListeners() {
 
-        boolean flag = getIntent().getBooleanExtra(IM02FLAG, true);
+        boolean flag = getIntent().getBooleanExtra(IM01FLAG, true);
         if (!flag) imFlag = true;
         Clear.clearAllFields(bi.fldGrpSecChc2, flag);
 
-       /* bi.im06.setOnCheckedChangeListener((radioGroup, i) -> {
-            if (i != bi.im061.getId()) {
-                *//*bi.qim07.setEnabled(false);
-                Clear.clearAllFields(bi.qIm08, false);*//*
-                Clear.clearAllFields(bi.fldGrpCVim07, false);
-                Clear.clearAllFields(bi.fldGrpSecChc3, false);
-                Clear.clearAllFields(bi.fldGrpCVim08, false);
-                Clear.clearAllFields(bi.fldGrpCVim23, true);
-                Clear.clearAllFields(bi.fldGrpCVim23a, true);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVim07, true);
-                Clear.clearAllFields(bi.fldGrpSecChc3, true);
-                Clear.clearAllFields(bi.fldGrpCVim08, true);
-                Clear.clearAllFields(bi.fldGrpCVim23, false);
-                Clear.clearAllFields(bi.fldGrpCVim23a, false);
-            }
-        });*/
+        //imo7 Check
+        im07 = getIntent().getBooleanExtra(IM02CARDSEEN, false);
+        if (im07) {
+            Clear.clearAllFields(bi.fldGrpCVim07, false);
+            bi.im071.setChecked(true);
+        }
 
         bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im071.getId()) {
@@ -452,79 +401,60 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });
 
-        bi.im2499.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im24check, false);
-                    bi.im24check.setTag("-1");
-                    bi.im2499.setTag("0");
-                } else {
-                    Clear.clearAllFields(bi.im24check, true);
-                    bi.im24check.setTag("0");
-                    bi.im2499.setTag("-1");
-                }
+        bi.im2499.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im24check, false);
+                bi.im24check.setTag("-1");
+                bi.im2499.setTag("0");
+            } else {
+                Clear.clearAllFields(bi.im24check, true);
+                bi.im24check.setTag("0");
+                bi.im2499.setTag("-1");
             }
         });
 
-
-        bi.im1298.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im12, false);
-                } else {
-                    if (im07) return;
-                    Clear.clearAllFields(bi.im12, true);
-                }
+        bi.im1298.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im12, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im12, true);
             }
         });
 
-        bi.im1598.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im15, false);
-                } else {
-                    if (im07) return;
-                    Clear.clearAllFields(bi.im15, true);
-                }
+        bi.im1598.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im15, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im15, true);
             }
         });
 
-        bi.im1798.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im17, false);
-                } else {
-                    if (im07) return;
-                    Clear.clearAllFields(bi.im17, true);
-                }
+        bi.im1798.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im17, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im17, true);
             }
         });
 
-        bi.im1998.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im19, false);
-                } else {
-                    if (im07) return;
-                    Clear.clearAllFields(bi.im19, true);
-                }
+        bi.im1998.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im19, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im19, true);
             }
         });
 
-        bi.im2298.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Clear.clearAllFields(bi.im22, false);
-                } else {
-                    if (im07) return;
-                    Clear.clearAllFields(bi.im22, true);
-                }
+        bi.im2298.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im22, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im22, true);
             }
         });
 

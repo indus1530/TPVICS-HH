@@ -596,14 +596,14 @@
     <string name="im1title1"> اہل بچے کی عمر سوال نمبر :CB4 سے چیک کریں </string>
     <string name="imtitle2"> اگر بچہ 12 سے 23 ماہ کی عمر کے گروپ کا نہیں ہے، تو ایک بار پھر تحقیق کریں اور تصدیق کریں اور اگر پھر بھی اس کی عمر 12 سے 23 ماہ نہیں بنتی، تو جواب دہندہ کا شکریہ ادا کر کے انٹرویو کا اختتام کردیں۔ اہل بچے کے معلوماتی پینل ec22 پر جائیں، اور بچہ اہل نہیں بچے کی عمر 12 سے 23 مہینے نہیں کوڈ 05 پر نشان لگائیں ۔ </string>
 
-    <string name="im01"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
-    <string name="im011"> ہاں دیکھ لیا </string>
-    <string name="im012">  ہاں، کار ڈنہیں دیکھا </string>
-    <string name="im013"> کارڈ نہیں ہے </string>
+    <string name="im02"> کیا آپ کے پاس کسی سرکاری یا نجی مرکز صحت سے ملا ہوا حفاظتی ٹیکوں کا کارڈ موجود ہے جس میں بچہ / بچی (نام) کو لگنے والے حفاظتی ٹیکوں کا اندراج ہو ؟  اگر ہاں:  تو برائے مہربانی کیا میں اسے دیکھ سکتا / سکتی ہوں </string>
+    <string name="im021"> ہاں دیکھ لیا </string>
+    <string name="im022">  ہاں، کار ڈنہیں دیکھا </string>
+    <string name="im023"> کارڈ نہیں ہے </string>
 
-    <string name="im02"> کیا بچے کے لئے آپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا ؟ </string>
-    <string name="im021"> ہاں </string>
-    <string name="im022"> نہیں </string>
+    <string name="im01"> کیا بچے کے لئے آپ کے پاس کبھی کسی سرکاری یا نجی مرکز صحت کا حفاظتی ٹیکوں کا کارڈ موجود تھا ؟ </string>
+    <string name="im011"> ہاں </string>
+    <string name="im012"> نہیں </string>
 
     <string name="im03"> اگر نہیں تو ، آپ کو کوئی ویکسینیشن کارڈ کیوں نہیں ملا ؟ </string>
     <string name="im031"> میرے خیال سے اتنا اہم نہیں </string>
@@ -966,8 +966,8 @@
     <string name='Q_hw7'>hw7</string>
     <string name='Q_hw8a'>hw8a</string>
     <string name='Q_hw8b'>hw8b</string>
-    <string name='Q_im01'>im01</string>
-    <string name='Q_im02'>im02</string>
+    <string name="Q_im02">im02</string>
+    <string name="Q_im01">im01</string>
     <string name='Q_im03'>im03</string>
     <string name='Q_im04'>im04</string>
     <string name='Q_im06'>im06</string>
