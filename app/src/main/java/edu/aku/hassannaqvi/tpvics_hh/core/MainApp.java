@@ -46,7 +46,7 @@ public class MainApp extends Application {
     public static final String _SERVER_URL = "sync.php";
     public static final String _PHOTO_UPLOAD_URL = MainApp._IP + "/tpvics/api/uploads.php";
 
-    public static final String _UPDATE_URL = MainApp._IP + "/tpvics/app/";
+    public static final String _UPDATE_URL = MainApp._IP + "/tpvics/app/bl/";
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
     private static final int TWENTY_MINUTES = 1000 * 60 * 20;
