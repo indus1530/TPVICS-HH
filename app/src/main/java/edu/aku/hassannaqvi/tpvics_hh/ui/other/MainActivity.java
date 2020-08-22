@@ -108,19 +108,19 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.formA:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-            case R.id.pendingForms:
+        /*    case R.id.pendingForms:
                 oF = new Intent(this, PendingFormsActivity.class);
-                break;
+                break;*/
             case R.id.databaseBtn:
                 oF = new Intent(this, AndroidDatabaseManager.class);
                 break;
-            case R.id.uploadData:
+ /*           case R.id.uploadData:
                 if (!AndroidUtilityKt.isNetworkConnected(this)) {
                     Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 oF = new Intent(this, SyncActivity.class);
-                break;
+                break;*/
         }
         startActivity(oF);
     }
@@ -323,4 +323,11 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         }
     }
 
+    public void takePhotos(View view) {
+        Intent intent = new Intent(this, TakePhoto.class);
+        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
+        intent.putExtra("childName", "Hassan");
+        intent.putExtra("picView", "test");
+        startActivityForResult(intent, 1);
+    }
 }

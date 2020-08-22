@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "edu.aku.hassannaqvi.tpvics_hh",
+  "variantName": "debug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 1959,
+      "versionName": "1.8",
+      "enabled": true,
+      "outputFile": "app-debug.apk"
+    }
+  ]
+}

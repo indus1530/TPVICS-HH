@@ -45,10 +45,10 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
     public SyncAllPhotos(String fileName, Context c) {
         this.mContext = c;
         this.fileName = fileName;
-
-        sdDir = Environment
-                .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
         appFolder = PROJECT_NAME;
+        sdDir = new File(mContext.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES), appFolder);
+
     }
 
     @Override
@@ -66,7 +66,7 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
     protected String doInBackground(Void... params) {
 
 
-        filePath = new File(sdDir, appFolder);
+        filePath = sdDir;
         try {
             return uploadPhoto(String.valueOf(new File(filePath + File.separator + fileName)));
         } catch (Exception e) {
@@ -221,8 +221,8 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
 
     private void moveFile(String inputFile) {
         Toast.makeText(mContext, "Saving Photo...", Toast.LENGTH_LONG).show();
-        sdDir = Environment
-                .getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        sdDir = new File(mContext.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES), PROJECT_NAME);
         InputStream in = null;
         OutputStream out = null;
         File inputPath = filePath;
@@ -261,5 +261,27 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
             Log.e("tag", e.getMessage());
         }
 
+    }
+
+    private File getDir(int i) {
+        String albumName = PROJECT_NAME;
+
+        // getDir(1) is for existing photofile folder
+        if (i == 1) {
+            /*File sdDir = Environment
+                    .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);*/
+            File sdDir = new File(mContext.getExternalFilesDir(
+                    Environment.DIRECTORY_PICTURES), albumName);
+            return sdDir;
+        }
+        // getDir(0) is for uploaded folder where photofiles needs to be moved
+
+        else {
+            /*File sdDir = Environment
+                    .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);*/
+            File sdDir = new File(mContext.getExternalFilesDir(
+                    Environment.DIRECTORY_PICTURES), albumName + File.separator + "uploaded");
+            return sdDir;
+        }
     }
 }

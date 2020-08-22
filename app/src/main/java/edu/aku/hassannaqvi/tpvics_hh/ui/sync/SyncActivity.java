@@ -148,9 +148,9 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     }
 
     public void btnUploadPhotos(View view) {
-        File sdDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        Log.d("Files", "Path: " + sdDir);
-        File directory = new File(String.valueOf(sdDir), PROJECT_NAME);
+
+        File directory = new File(this.getExternalFilesDir(
+                Environment.DIRECTORY_PICTURES), PROJECT_NAME);
         Log.d("Directory", "uploadPhotos: " + directory);
         if (directory.exists()) {
             File[] files = directory.listFiles(file -> (file.getPath().endsWith(".jpg") || file.getPath().endsWith(".jpeg")));

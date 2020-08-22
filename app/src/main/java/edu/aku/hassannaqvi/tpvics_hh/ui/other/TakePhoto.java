@@ -63,7 +63,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
 
     private static final String TAG = "Photo Capture";
     Camera camera;
-    Context context;
+    //Context context;
     LinearLayout btnGrp;
     String picID;
     String picView;
@@ -239,8 +239,9 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
 
     @Override
     public void onPictureTaken(byte[] data, Camera camera) {
-
+        Log.d(TAG, "onPictureTaken: Start");
         File pictureFileDir = getDir(0);
+        Log.d(TAG, "onPictureTaken: Directory Created");
         if (!pictureFileDir.exists() && !pictureFileDir.mkdirs()) {
 
             Log.d(TAG, "Can't create directory to save image.");
@@ -307,7 +308,7 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
         }
     }
 
-    private File getDir(int i) {
+/*    private File getDir(int i) {
         String appFolder = PROJECT_NAME;
 
         if (i == 1) {
@@ -318,6 +319,24 @@ public class TakePhoto extends Activity implements SurfaceHolder.Callback, Camer
             File sdDir = Environment
                     .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
             return new File(sdDir, appFolder + File.separator + "temp");
+        }
+    }*/
+
+    private File getDir(int i) {
+        String albumName = PROJECT_NAME;
+
+        if (i == 1) {
+            /*File sdDir = Environment
+                    .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);*/
+            File sdDir = new File(this.getExternalFilesDir(
+                    Environment.DIRECTORY_PICTURES), albumName);
+            return sdDir;
+        } else {
+            /*File sdDir = Environment
+                    .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);*/
+            File sdDir = new File(this.getExternalFilesDir(
+                    Environment.DIRECTORY_PICTURES), albumName + File.separator + "temp");
+            return sdDir;
         }
     }
 
@@ -441,4 +460,5 @@ private void hideSystemUI() {
         setResult(0, intent);
         finish();//finishing activity
     }
+
 }
