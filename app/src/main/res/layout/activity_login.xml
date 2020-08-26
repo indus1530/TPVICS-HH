@@ -1,328 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white54"
-    android:fitsSystemWindows="true"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+    <data>
 
-    <ScrollView
-        android:id="@+id/login_form"
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.other.LoginActivity" />
+
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:background="@color/colorPrimary"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white54"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
 
+        <ScrollView
+            android:id="@+id/login_form"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:background="@color/dullWhile"
-            android:gravity="center"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/agakhan" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_margin="12dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="SIGN IN"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+            android:layout_gravity="center">
 
             <LinearLayout
-                android:id="@+id/email_login_form"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/dullWhile"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="450dp"
+                <ImageView
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:elevation="14dp"
-
-                    app:cardCornerRadius="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="20dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Username"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                android:textColor="@color/black_overlay"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="?attr/actionBarSize"
-                                android:layout_marginTop="10dp"
-                                android:orientation="horizontal">
-
-                                <EditText
-                                    android:id="@+id/email"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="56dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_marginBottom="4dp"
-                                    android:background="@color/dullWhile"
-                                    android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
-                                    android:drawablePadding="8dp"
-                                    android:elevation="1dp"
-                                    android:gravity="center_vertical"
-                                    android:hint="Username"
-
-                                    android:imeActionId="@+id/login"
-                                    android:imeActionLabel="@string/action_sign_in_short"
-                                    android:imeOptions="actionUnspecified"
-                                    android:inputType="textEmailAddress"
-                                    android:maxLines="1"
-                                    android:minWidth="280dp"
-                                    android:paddingStart="12dp"
-                                    android:paddingEnd="12dp"
-                                    android:radius="2dp"
-                                    android:singleLine="true"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="20sp" />
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Password"
-                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                android:textColor="@color/black_overlay"
-                                android:textSize="17sp"
-                                android:textStyle="bold" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="?attr/actionBarSize"
-                                android:layout_marginTop="10dp"
-                                android:orientation="horizontal">
-
-                                <EditText
-                                    android:id="@+id/password"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_weight="8"
-                                    android:background="@color/dullWhile"
-                                    android:drawableStart="@drawable/ic_lock_black_24dp"
-                                    android:drawablePadding="8dp"
-                                    android:elevation="1dp"
-                                    android:hint="@string/prompt_password"
-                                    android:imeActionLabel="@string/action_sign_in_short"
-                                    android:imeOptions="actionUnspecified"
-                                    android:inputType="textPassword"
-                                    android:maxLines="1"
-                                    android:minWidth="280dp"
-                                    android:paddingStart="12dp"
-                                    android:paddingEnd="12dp"
-                                    android:radius="2dp"
-                                    android:singleLine="true"
-                                    android:textColor="@color/colorPrimary"
-                                    android:textSize="20sp" />
-
-                                <ImageButton
-                                    android:id="@+id/showPassword"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2"
-                                    android:background="@drawable/et_style"
-                                    android:src="@drawable/ic_remove_red_eye_black_24dp"
-                                    android:textSize="20sp" />
-
-                            </LinearLayout>
-
-                            <!--Province-->
-                            <LinearLayout
-                                android:id="@+id/spinners"
-                                style="@style/linearlayout_view">
-
-                                <LinearLayout
-                                    style="@style/linearlayout_view"
-                                    android:layout_marginTop="10dp"
-                                    android:layoutDirection="ltr"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="Province"
-                                        android:minHeight="24dp"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                        android:textColor="@color/black_overlay"
-                                        android:textSize="17sp"
-                                        android:textStyle="bold" />
-
-                                    <Spinner
-                                        android:id="@+id/spinnerProvince"
-                                        style="@null"
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="10dp"
-                                        android:layout_weight="2" />
-
-                                </LinearLayout>
-
-                                <!--Districts-->
-                                <LinearLayout
-                                    style="@style/linearlayout_view"
-                                    android:layout_marginTop="10dp"
-                                    android:layoutDirection="ltr"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1"
-                                        android:text="District"
-                                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                                        android:textColor="@color/black_overlay"
-                                        android:textSize="17sp"
-                                        android:textStyle="bold" />
-
-                                    <Spinner
-                                        android:id="@+id/spinnerDistrict"
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="10dp"
-                                        android:layout_weight="2" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/email_sign_in_button"
-                                android:layout_width="200dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="16dp"
-                                android:background="@drawable/outline_btn"
-                                android:text="Login"
-                                android:textColor="@color/redInfo"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/dullWhile"
-                            android:gravity="end"
-                            android:orientation="horizontal">
-
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:visibility="gone">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Upload Data"
-                                    android:textColor="@color/black_overlay" />
-
-                                <ImageButton
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/circle_style"
-                                    android:src="@drawable/ic_upload"
-                                    android:tint="@color/white" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-                <Button
-                    android:id="@+id/syncData"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:background="#0f0f0f0f"
-                    android:drawableStart="@drawable/ic_download"
-                    android:drawablePadding="12dp"
-                    android:padding="12dp"
-                    android:text="Download User Data"
-                    android:textColor="@color/black_overlay" />
+                    android:layout_gravity="center"
+                    android:src="@drawable/agakhan" />
 
                 <TextView
-                    android:id="@+id/txtinstalldate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:layout_marginBottom="12dp"
-                    android:shadowColor="#d6d6d6"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="1"
-                    android:text="Ver."
-                    android:textColor="#7f7f7f"
-                    android:textSize="12sp" />
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:text="SIGN IN"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="14dp"
+
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Username"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black_overlay"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/email"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="56dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginBottom="4dp"
+                                        android:background="@color/dullWhile"
+                                        android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
+                                        android:drawablePadding="8dp"
+                                        android:elevation="1dp"
+                                        android:gravity="center_vertical"
+                                        android:hint="Username"
+                                        android:imeActionId="@+id/login"
+                                        android:imeActionLabel="@string/action_sign_in_short"
+                                        android:imeOptions="actionUnspecified"
+                                        android:inputType="textEmailAddress"
+                                        android:maxLines="1"
+                                        android:minWidth="280dp"
+                                        android:paddingStart="12dp"
+                                        android:paddingEnd="12dp"
+                                        android:radius="2dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="20sp" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Password"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/black_overlay"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/password"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_weight="8"
+                                        android:background="@color/dullWhile"
+                                        android:drawableStart="@drawable/ic_lock_black_24dp"
+                                        android:drawablePadding="8dp"
+                                        android:elevation="1dp"
+                                        android:hint="@string/prompt_password"
+                                        android:imeActionLabel="@string/action_sign_in_short"
+                                        android:imeOptions="actionUnspecified"
+                                        android:inputType="textPassword"
+                                        android:maxLines="1"
+                                        android:minWidth="280dp"
+                                        android:paddingStart="12dp"
+                                        android:paddingEnd="12dp"
+                                        android:radius="2dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="20sp" />
+
+                                    <ImageButton
+                                        android:id="@+id/showPassword"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="2"
+                                        android:background="@drawable/et_style"
+                                        android:src="@drawable/ic_remove_red_eye_black_24dp"
+                                        android:textSize="20sp" />
+
+                                </LinearLayout>
+
+                                <!--Province-->
+                                <LinearLayout
+                                    android:id="@+id/spinners"
+                                    style="@style/linearlayout_view">
+
+                                    <LinearLayout
+                                        style="@style/linearlayout_view"
+                                        android:layout_marginTop="10dp"
+                                        android:layoutDirection="ltr"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:minHeight="24dp"
+                                            android:text="Province"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                            android:textColor="@color/black_overlay"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <Spinner
+                                            android:id="@+id/spinnerProvince"
+                                            style="@null"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="2" />
+
+                                    </LinearLayout>
+
+                                    <!--Districts-->
+                                    <LinearLayout
+                                        style="@style/linearlayout_view"
+                                        android:layout_marginTop="10dp"
+                                        android:layoutDirection="ltr"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="District"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                            android:textColor="@color/black_overlay"
+                                            android:textSize="17sp"
+                                            android:textStyle="bold" />
+
+                                        <Spinner
+                                            android:id="@+id/spinnerDistrict"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_weight="2" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/email_sign_in_button"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@drawable/outline_btn"
+                                    android:text="Login"
+                                    android:textColor="@color/redInfo"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/dullWhile"
+                                android:gravity="end"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Upload Data"
+                                        android:textColor="@color/black_overlay" />
+
+                                    <ImageButton
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/circle_style"
+                                        android:src="@drawable/ic_upload"
+                                        android:tint="@color/white" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/syncData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:background="#0f0f0f0f"
+                        android:drawableStart="@drawable/ic_download"
+                        android:drawablePadding="12dp"
+                        android:padding="12dp"
+                        android:text="Download User Data"
+                        android:textColor="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/txtinstalldate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center"
+                        android:shadowColor="#d6d6d6"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="Ver."
+                        android:textColor="#7f7f7f"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </LinearLayout>
 
-</LinearLayout>
+</layout>
