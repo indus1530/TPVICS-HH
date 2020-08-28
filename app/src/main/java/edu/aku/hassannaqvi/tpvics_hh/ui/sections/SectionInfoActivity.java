@@ -187,8 +187,8 @@ public class SectionInfoActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
-        /*int cluster = Integer.parseInt(bi.hh11.getText().toString().substring(3, 6));
-        if (cluster < 500) {
+        int cluster = Integer.parseInt(bi.hh11.getText().toString().substring(0, 3));
+        if (cluster < 900) {
             loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
         } else {
             loginFlag = MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user");
@@ -196,7 +196,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (!loginFlag) {
             Toast.makeText(this, "Can't proceed test cluster for current user!!", Toast.LENGTH_SHORT).show();
             return;
-        }*/
+        }
 
         //Check HH Exist or not
         getEnumerationBlock()

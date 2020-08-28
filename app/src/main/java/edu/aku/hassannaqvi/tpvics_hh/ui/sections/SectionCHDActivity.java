@@ -307,13 +307,6 @@ public class SectionCHDActivity extends AppCompatActivity {
         if (!flag) imFlag = true;
         Clear.clearAllFields(bi.fldGrpSecChc2, flag);
 
-        //imo7 Check
-        im07 = getIntent().getBooleanExtra(IM02CARDSEEN, false);
-        if (im07) {
-            Clear.clearAllFields(bi.fldGrpCVim07, false);
-            bi.im071.setChecked(true);
-        }
-
         bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im071.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
@@ -457,6 +450,14 @@ public class SectionCHDActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.im22, true);
             }
         });
+
+
+        //imo7 Check
+        im07 = getIntent().getBooleanExtra(IM02CARDSEEN, false);
+        if (im07) {
+            Clear.clearAllFields(bi.fldGrpCVim07, false);
+            bi.im071.setChecked(true);
+        }
 
     }
 

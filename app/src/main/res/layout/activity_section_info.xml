@@ -62,7 +62,7 @@
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/qtxt_hh11"
                             android:inputType="number"
-                            android:maxLength="7"
+                            android:maxLength="9"
                             android:onTextChanged="@{callback::hh11TextChanged}"
                             android:textDirection="ltr" />
 
