@@ -52,73 +52,72 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.media:media:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-rc1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     testImplementation 'junit:junit:4.13'
-    implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
-    implementation 'com.jakewharton:butterknife:10.2.1'
-    kapt 'com.jakewharton:butterknife-compiler:10.2.1'
-    // RecyclerView
+
+    //RecyclerView
     implementation "androidx.recyclerview:recyclerview:1.1.0"
-    // For control over item selection of both touch and mouse driven selection
+    //For control over item selection of both touch and mouse driven selection
     implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
-
-    //Combobox
+    //DatePicker & Date Time
+    implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
+    //Showcase Library
+    implementation 'com.github.amlcurran.showcaseview:library:5.4.3'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.0'
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+    //Custom Spinner
     implementation 'com.github.arcadefire:nice-spinner:1.4.4'
+    //Custom Toast
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
-
-    //Ali mask
+    //Ali Libraries
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
     implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.3'
-
+    //Google GSON
     implementation 'com.google.code.gson:gson:2.8.6'
+    //Ripple effect
     implementation 'com.balysv:material-ripple:1.0.2'
+    //Flexbox
     implementation 'com.google.android:flexbox:2.0.0'
+    //Sheetmenu
     implementation 'com.github.whalemare:sheetmenu:2.0.1'
-
+    //Viewmodel libraries
     def lifecycle_version = "2.2.0"
-    def arch_version = "2.1.0"
-
-    // ViewModel
+    //ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    // LiveData
+    //LiveData
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    // Lifecycles only (without ViewModel or LiveData)
+    //Lifecycles only (without ViewModel or LiveData)
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
-    // Saved state module for ViewModel
+    //Saved state module for ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
-    // optional - ReactiveStreams support for LiveData
+    //optional - ReactiveStreams support for LiveData
     implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
-    //Live data End
-
-    //Date Time
-    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.4'
     //SDP
     implementation 'com.intuit.sdp:sdp-android:1.0.5'
-
     //Coroutine
     def coroutine_version = '1.3.7'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
-
     //RxJava
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation "io.reactivex.rxjava3:rxjava:3.0.3"
     implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
-
+    //Image Compressor
     implementation 'id.zelory:compressor:2.1.0'
-
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
-    implementation "androidx.work:work-runtime:2.4.0"
-
+    //Permission library
+    implementation 'com.nabinbhandari.android:permissions:3.8'
 }

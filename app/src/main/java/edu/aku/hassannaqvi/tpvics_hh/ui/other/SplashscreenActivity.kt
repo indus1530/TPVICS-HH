@@ -5,8 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract
+import edu.aku.hassannaqvi.tpvics_hh.contracts.DistrictContract
 import kotlinx.coroutines.*
+
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -35,7 +36,7 @@ class SplashscreenActivity : Activity() {
     companion object {
         private const val SPLASH_TIME_OUT = 500
         lateinit var provinces: MutableList<String>
-        lateinit var districtsMap: MutableMap<String, Pair<String, EnumBlockContract>>
+        lateinit var districtsMap: MutableMap<String, Pair<String, DistrictContract>>
     }
 
     override fun onPause() {

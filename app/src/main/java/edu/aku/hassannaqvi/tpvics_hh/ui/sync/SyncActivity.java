@@ -293,13 +293,13 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
-//                    Getting Enumblocks
+//                  getting Districts!!
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "District", syncListAdapter, list).execute();
                     bi.noItem.setVisibility(View.GONE);
 
                 } else {
@@ -311,6 +311,15 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         list.add(model);
                     }
                     new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
+
+//                    Getting Enumblocks
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
+                    bi.noItem.setVisibility(View.GONE);
 
                 }
 
