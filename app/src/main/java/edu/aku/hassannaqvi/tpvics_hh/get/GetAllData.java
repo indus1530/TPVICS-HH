@@ -234,10 +234,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
     @Override
     protected void onPostExecute(String result) {
 
-
+        Log.d(TAG, syncClass + " onPostExecute: " + result);
         //Do something with the JSON string
         if (result != null) {
-            if (result.length() > 0) {
+            Boolean test1 = result.length() > 0;
+            Boolean test2 = !result.equals("[]");
+            Log.d(TAG + " " + syncClass, "Test1: " + test1 + " Test2: " + test2);
+
+            if (result.length() > 0 && !result.equals("[]")) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
                     JSONArray jsonArray = new JSONArray();
@@ -289,8 +293,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     adapter.updatesyncList(list);
                 }
             } else {
-                pd.setMessage("Received: " + result.length() + "");
-                list.get(position).setmessage("Received: " + result.length() + "");
+                pd.setMessage("Received: No data - " + result);
+                list.get(position).setmessage("Received: No data - " + result);
                 list.get(position).setstatus("Processed");
                 list.get(position).setstatusID(4);
                 adapter.updatesyncList(list);
