@@ -85,7 +85,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void btnOnDownloadData(View v) {
         if (AndroidUtilityKt.isNetworkConnected(this)) {
-            bi.actionLbl.setText("Downloading Data");
+            bi.actionLbl.setText("Downloading Data...");
             if (sync_flag) new SyncData(SyncActivity.this, MainApp.DIST_ID).execute(true);
             else new SyncDevice(SyncActivity.this, true).execute();
         } else {
@@ -95,7 +95,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void btnOnUploadData(View v) {
         if (AndroidUtilityKt.isNetworkConnected(this)) {
-            bi.actionLbl.setText("Uploading Data");
+            bi.actionLbl.setText("Uploading Data...");
             DatabaseHelper db = new DatabaseHelper(this);
 
             new SyncDevice(this, false).execute();

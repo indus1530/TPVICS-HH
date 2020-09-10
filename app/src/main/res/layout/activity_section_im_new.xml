@@ -1,0 +1,331 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionCHDActivity" />
+    </data>
+
+
+    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fldGrpSectionCHD"
+                style="@style/linearlayout_view_wt_bound">
+                <!-- im08  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim08n"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im08"
+                                android:text="Does the card have BCG vaccine? " />
+
+                            <TextView
+                                android:id="@+id/q_im08"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im08"
+                                android:layout_alignBottom="@id/qtxt_im08"
+                                android:gravity="center"
+                                android:text="@string/Q_im08" />
+                        </RelativeLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/im08"
+                            style="@style/hlinearlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/im081"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/im081" />
+
+                            <RadioButton
+                                android:id="@+id/im082"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="@string/im082" />
+
+                            <RadioButton
+                                android:id="@+id/im083"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/im083" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- im08  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim08nn"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im09"
+                                android:text="Is the date mentioned on Card?" />
+
+                            <TextView
+                                android:id="@+id/q_im09"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im09"
+                                android:layout_alignBottom="@id/qtxt_im09"
+                                android:gravity="center"
+                                android:text="@string/Q_im09" />
+                        </RelativeLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/im09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/im091"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Yes, Date mentioned" />
+
+                            <RadioButton
+                                android:id="@+id/im092"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Vaccine Marked but No date (44)" />
+
+                            <RadioButton
+                                android:id="@+id/im093"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Date Unreadable (88)" />
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- im0501  Title   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim0501"
+                    style="@style/cardView">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im0501"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im0501"
+                                android:text="Date of BCG" />
+
+                            <TextView
+                                android:id="@+id/q_im0501"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im0501"
+                                android:layout_alignBottom="@id/qtxt_im0501"
+                                android:text="IM0901" />
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            style="@style/hlinearlayout"
+                            android:layoutDirection="ltr">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im0501dd" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/im0501dd"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/im0501dd"
+                                android:maxLength="2"
+                                app:defaultValue="97"
+                                app:maxValue="31"
+                                app:minValue="1"
+                                app:type="range" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im0501mm" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/im0501mm"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:hint="@string/im0501mm"
+                                android:maxLength="2"
+                                app:maxValue="12"
+                                app:minValue="1"
+                                app:type="range" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/im0501yy" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/im0501yy"
+                                style="@style/EditTextNum"
+                                android:layout_width="0dp"
+                                android:layout_weight="4"
+                                android:hint="@string/im0501yy"
+                                android:maxLength="4"
+                                app:mask="20##"
+                                app:maxValue="2020"
+                                app:minValue="2015"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!-- im08  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim08a"
+                    style="@style/cardView"
+                    android:visibility="gone">
+
+                    <LinearLayout style="@style/vlinearlayout">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom">
+
+                            <TextView
+                                android:id="@+id/qtxt_im09a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@id/q_im09a"
+                                android:text="Ask Mother if child has received BCG Vaccinations..." />
+
+                            <TextView
+                                android:id="@+id/q_im09a"
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@id/qtxt_im09a"
+                                android:layout_alignBottom="@id/qtxt_im09a"
+                                android:gravity="center"
+                                android:text="@string/Q_im09" />
+                        </RelativeLayout>
+
+
+                        <RadioGroup
+                            android:id="@+id/im09a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/im091a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Yes (??)" />
+
+                            <RadioButton
+                                android:id="@+id/im092a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No (97)" />
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <!--ENDBUTTON linearlayout-->
+                <LinearLayout
+                    style="@style/hlinearlayout"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="24dp">
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@color/colorPrimary"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_left_black_24dp"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:background="@color/grayOverlay"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>
