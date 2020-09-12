@@ -108,19 +108,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.formA:
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
-        /*    case R.id.pendingForms:
-                oF = new Intent(this, PendingFormsActivity.class);
-                break;*/
             case R.id.databaseBtn:
                 oF = new Intent(this, AndroidDatabaseManager.class);
                 break;
- /*           case R.id.uploadData:
-                if (!AndroidUtilityKt.isNetworkConnected(this)) {
-                    Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                oF = new Intent(this, SyncActivity.class);
-                break;*/
         }
         startActivity(oF);
     }
@@ -236,11 +226,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         bi.recordSummary.setText(rSumText);
 
         Log.d(TAG, "onCreate: " + rSumText);
-        if (MainApp.admin) {
-            bi.databaseBtn.setVisibility(View.VISIBLE);
-        } else {
-            bi.databaseBtn.setVisibility(View.GONE);
-        }
+        bi.databaseBtn.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
 
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
