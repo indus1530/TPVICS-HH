@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.utils;
 
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract.SingleRandomHH;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract.ChildTable;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.DistrictContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
@@ -13,7 +14,7 @@ public final class CreateTable {
     public static final String DATABASE_NAME = "tpvics_hh.db";
     public static final String DB_NAME = "tpvics_hh_copy.db";
     public static final String PROJECT_NAME = "TPVICS_HH";
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 1;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
@@ -128,10 +129,9 @@ public final class CreateTable {
             FamilyMembersContract.SingleMember.COLUMN_SYNCED_DATE + " TEXT"
             + ");";
 
-    public static final String SQL_ALTER_FORMS = "ALTER TABLE " +
-            FormsContract.FormsTable.TABLE_NAME + " ADD COLUMN " +
-            FormsContract.FormsTable.COLUMN_SYSDATE + " TEXT";
-    public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
-            ChildTable.TABLE_NAME + " ADD COLUMN " +
-            ChildTable.COLUMN_SYSDATE + " TEXT";
+    public static final String SQL_CREATE_DISTRICTS = "CREATE TABLE " + DistrictContract.DistrictTable.TABLE_NAME + "("
+            + DistrictContract.DistrictTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + DistrictContract.DistrictTable.COLUMN_DIST_ID + " TEXT,"
+            + DistrictContract.DistrictTable.COLUMN_DIST_NAME + " TEXT,"
+            + DistrictContract.DistrictTable.COLUMN_PROVINCE_NAME + " TEXT );";
 }

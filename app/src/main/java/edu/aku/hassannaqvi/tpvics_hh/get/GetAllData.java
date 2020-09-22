@@ -21,6 +21,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
+import edu.aku.hassannaqvi.tpvics_hh.contracts.DistrictContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.VersionAppContract;
@@ -63,11 +64,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "EnumBlock":
+            case "District":
                 position = 2;
                 break;
             case "BLRandom":
                 position = 0;
+                break;
+            case "EnumBlock":
+                position = 1;
                 break;
         }
         list.get(position).settableName(syncClass);
@@ -97,11 +101,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "EnumBlock":
+            case "District":
                 position = 2;
                 break;
             case "BLRandom":
                 position = 0;
+                break;
+            case "EnumBlock":
+                position = 1;
                 break;
         }
         list.get(position).setstatus("Syncing");
@@ -128,13 +135,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable._URI);
                     position = 1;
                     break;
-                case "EnumBlock":
-                    url = new URL(MainApp._HOST_URL + EnumBlockContract.EnumBlockTable._URI);
+                case "District":
+                    url = new URL(MainApp._HOST_URL + DistrictContract.DistrictTable._URI);
                     position = 2;
                     break;
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.SingleRandomHH._URI);
                     position = 0;
+                    break;
+                case "EnumBlock":
+                    url = new URL(MainApp._HOST_URL + EnumBlockContract.EnumBlockTable._URI);
+                    position = 1;
                     break;
             }
 
@@ -143,6 +154,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
+                case "EnumBlock":
                 case "BLRandom":
 
                     if (args[0] != null && !args[0].equals("")) {
@@ -171,9 +183,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         }
                     }
                     break;
-
-                case "EnumBlock":
                 case "User":
+                case "District":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
                     urlConnection.setDoInput(true);
@@ -223,10 +234,14 @@ public class GetAllData extends AsyncTask<String, String, String> {
     @Override
     protected void onPostExecute(String result) {
 
-
+        Log.d(TAG, syncClass + " onPostExecute: " + result);
         //Do something with the JSON string
         if (result != null) {
-            if (result.length() > 0) {
+            Boolean test1 = result.length() > 0;
+            Boolean test2 = !result.equals("[]");
+            Log.d(TAG + " " + syncClass, "Test1: " + test1 + " Test2: " + test2);
+
+            if (result.length() > 0 && !result.equals("[]")) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
                     JSONArray jsonArray = new JSONArray();
@@ -243,15 +258,20 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             if (insertCount == 1) jsonArray.put("1");
                             position = 1;
                             break;
-                        case "EnumBlock":
+                        case "District":
                             jsonArray = new JSONArray(result);
-                            insertCount = db.syncEnumBlocks(jsonArray);
+                            insertCount = db.syncDistrict(jsonArray);
                             position = 2;
                             break;
                         case "BLRandom":
                             jsonArray = new JSONArray(result);
                             insertCount = db.syncBLRandom(jsonArray);
                             position = 0;
+                            break;
+                        case "EnumBlock":
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncEnumBlocks(jsonArray);
+                            position = 1;
                             break;
                     }
 
@@ -273,8 +293,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     adapter.updatesyncList(list);
                 }
             } else {
-                pd.setMessage("Received: " + result.length() + "");
-                list.get(position).setmessage("Received: " + result.length() + "");
+                pd.setMessage("Received: No data - " + result);
+                list.get(position).setmessage("Received: No data - " + result);
                 list.get(position).setstatus("Processed");
                 list.get(position).setstatusID(4);
                 adapter.updatesyncList(list);

@@ -166,7 +166,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
                     //Setting Date
                     try {
                         dtInstant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
-                                bi.im04dd.getText().toString() + "-" + bi.im04mm.getText().toString() + "-" + bi.im04yy.getText().toString()
+                                day + "-" + month + "-" + year
                         )) + "T06:24:01Z");
 
                     } catch (ParseException e) {

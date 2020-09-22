@@ -85,7 +85,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void btnOnDownloadData(View v) {
         if (AndroidUtilityKt.isNetworkConnected(this)) {
-            bi.actionLbl.setText("Downloading Data");
+            bi.actionLbl.setText("Downloading Data...");
             if (sync_flag) new SyncData(SyncActivity.this, MainApp.DIST_ID).execute(true);
             else new SyncDevice(SyncActivity.this, true).execute();
         } else {
@@ -95,7 +95,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void btnOnUploadData(View v) {
         if (AndroidUtilityKt.isNetworkConnected(this)) {
-            bi.actionLbl.setText("Uploading Data");
+            bi.actionLbl.setText("Uploading Data...");
             DatabaseHelper db = new DatabaseHelper(this);
 
             new SyncDevice(this, false).execute();
@@ -293,13 +293,13 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
-//                    Getting Enumblocks
+//                  getting Districts!!
                     if (listActivityCreated) {
                         model = new SyncModel();
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "District", syncListAdapter, list).execute();
                     bi.noItem.setVisibility(View.GONE);
 
                 } else {
@@ -311,6 +311,15 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         list.add(model);
                     }
                     new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
+
+//                    Getting Enumblocks
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute(distID);
+                    bi.noItem.setVisibility(View.GONE);
 
                 }
 

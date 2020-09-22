@@ -170,7 +170,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
-        json.put("hh09", MainApp.userName);
+//        json.put("hh09", MainApp.userName);
         //json.put("hh074", bi.hh074.getText().toString());
         MainApp.fc.setsInfo(String.valueOf(json));
     }
@@ -183,7 +183,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         if (!Validator.emptyTextBox(this, bi.hh11)) return;
         boolean loginFlag;
-        if (bi.hh11.getText().toString().length() != 7) {
+        if (bi.hh11.getText().toString().length() != 9) {
             Toast.makeText(this, "Invalid Cluster length!!", Toast.LENGTH_SHORT).show();
             return;
         }
