@@ -66,11 +66,11 @@
     <string name="a101"> کلسٹر نمبر </string>
     <string name="a101a"> یہ معلومات ضلعی بنیاد پر بنائی گئی گاؤں کی فہرست پر مبنی ہوں گی۔ ہر انٹرویو کرنے والے کو جس علاقے کا وہ دورہ کرے گا کلسٹرز کی ایک فہرست دی جائے گی اور انٹرویو شروع کرنے سے پہلے اسی فہرست سے یہ معلومات درج کی جائیں گی۔ </string>
 
-    <string name="hhsec"> Section H1: HouseHold Information </string>
-    <string name="hh05"> اینومیریشن بلاک نمبر </string>
+    <string name="hhsec"> سیکشن ون : گھرانے کی معلومات </string>
+    <string name="hh05"> اینومیریشن بلاک نمبر / کلسٹر نمبر </string>
     <string name="hh06"> صوبہ </string>
     <string name="hh07"> ضلع </string>
-    <string name="hh08"> تحصیل </string>
+    <string name="hh08"> تحصیل / تعلقہ </string>
     <string name="hh09"> شہر / گاؤں </string>
     <string name="hh10"> پتہ / ایڈریس (محلہ / نزدیک ترین مشہور جگہ) </string>
     <string name="hh11"> کلسٹر </string>
@@ -80,13 +80,13 @@
     <string name="hh074"> سُپروائزر کا نام </string>
     <string name="hh074a"> سُپروائزر کا  کوڈ </string>
     <string name="hh01"> انٹرویو کی تاریخ </string>
-    <string name="hh02"> انٹرویو کا وقت </string>
+    <string name="hh02"> انٹرویو شروع کرنےکا وقت </string>
     <string name="hh13"> جواب دہندہ کا نام </string>
-    <string name="hh13a"> جواب دہندہ کا رابطہ نمبر </string>
-    <string name="hh14"> جواب دہندہ کی عمر مکمل سالوں میں </string>
+    <string name="hh13a"> جواب دہندہ کا فون نمبر </string>
+    <string name="hh14"> جواب دہندہ کی عمر( مکمل سالوں میں) </string>
     <string name="hh15"> کیا جواب دہندہ گھر کا سربراہ ہے </string>
-    <string name="hh15a"> ہاں </string>
-    <string name="hh15b"> نہیں </string>
+    <string name="hh15a"> ہاںگھر کا سر براہ ہے </string>
+    <string name="hh15b"> نہیں گھر کا کوئی اور فردہے </string>
     <string name="hh16"> گھر کے سربراہ کا نام اور فون نمبر </string>
     <string name="hh16a">  گھر کے سربراہ کا نام </string>
     <string name="hh16b">  گھر کے سربراہ کا فون نمبر </string>
@@ -100,7 +100,7 @@
     <string name="hh19h"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔ </string>
     <string name="hh19a"> افراد کی تعداد: </string>
     <string name="hh19b"> اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے </string>
-    <string name="hh19_info"> نوٹ: وہ افراد جو اس رہائش گاہ / احاطے میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا بانٹتے ہیں ۔   اگر اس گھر میں افراد کی تعداد 95 یا 95 سے زیادہ ہے تو 95 درج کریں </string>
+    <string name="hh19_info"> اگر اس گھرانے میں افراد کی تعداد95 یا اس سے زیادہ ہےتو95 ریکارڈ کرینگے۔ نوٹ: وہ افراد جو اس گھر میں رہتے ہیں اور عام طور پر ایک ساتھ کھانا کھاتے ہیں۔ </string>
     <string name="hh20"> کیا اس گھرانے میں کوئی 12–23 مہینے کی عمر کا بچہ موجود ہے ؟ </string>
     <string name="hh20_info"> یعنی، وہ بچے جو اپنی پہلی سالگرہ پر پہنچ چکے ہیں، لیکن دوسری سالگرہ منانے والے شامل نہیں ہیں </string>
     <string name="hh20a"> ہاں </string>
@@ -143,7 +143,7 @@
     <string name="ch08b"> نہیں </string>
     <string name="ch03b"> ماں کا نام </string>
 
-    <string name="sssec"> Section H3: SOCIO-ECONOMIC STATUS </string>
+    <string name="sssec"> سیکشن ایچ 3 : گھرانے کی معاشی اور سماجی حیثیت </string>
     <string name="ss01">  گھرانے کے سربراہ کی مادری زبان کیا ہے ؟ </string>
     <string name="ss01a"> اردو </string>
     <string name="ss01b"> پنجابی </string>
@@ -154,7 +154,7 @@
     <string name="ss01g"> ہندکو </string>
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
-    <string name="ss02"> آپ کے گھر کی مالکانہ حیثیت کیا ہے ؟ </string>
+    <string name="ss02"> گھرکی مالکانہ حیثیت کیا ہے ؟ </string>
     <string name="ss02a"> اپنا </string>
     <string name="ss02b"> کرائے کا </string>
     <string name="ss02x"> دیگر وضاحت کریں </string>
@@ -178,7 +178,7 @@
     <string name="ss03m"> سطح والا پانی (دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی) </string>
     <string name="ss03h4"> پیک شدہ پانی </string>
     <string name="ss03n">  بوتل کا پانی </string>
-    <string name="ss03x"> دیگر </string>
+    <string name="ss03x"> دیگر وضاحت کریں </string>
 
     <string name="ss04"> کیا  آپ پانی کو محفوظ بنانے کے لیے کوئی قدم اٹھاتے ہیں ؟ </string>
     <string name="ss04y"> ہاں </string>
@@ -191,7 +191,7 @@
     <string name="ss05d"> پانی کا فلٹر استعمال کرتے ہیں </string>
     <string name="ss05e"> سورج کی شعاعوں سے/دھوپ میں رکھتے ہیں </string>
     <string name="ss05f"> برتن میں پانی ڈال کر ٹھہرنے کا انتظار کرتے ہیں </string>
-    <string name="ss05x"> کریں </string>
+    <string name="ss05x"> دیگر وضاحت کریں </string>
 
     <string name="ss06"> آپکے گھرانے میں دوسرے مقاصد یعنی کھانا پکانے اور ہاتھ دھونے کے لئے استعمال ہونے والا پانی کا اہم ذریعہ کیا ہے ؟ </string>
     <string name="ss06_info"> اگر وضاحت درکار ہو تو اس جگہ کا تعین کرنے کے لئے کہ دے جہاں سے گھرانہ کے افراد زیادہ تر دوسرے مقاصد کے لئے استعمال ہونے والا پانی لاتے ہیں۔ ایک سے زیادہ جوابات آسکتے ہیں </string>
@@ -213,9 +213,9 @@
     <string name="ss06m"> سطح والا پانی ( دریا، جھیل، ڈیم، تالاب، ندی، نہر کا پانی ) </string>
     <string name="ss06n_title"> پیک شدہ پانی </string>
     <string name="ss06n"> بوتل کا پانی </string>
-    <string name="ss06x"> دیگر </string>
+    <string name="ss06x"> دیگر وضاحت کریں </string>
 
-    <string name="ss07"> آپ کے گھرانے کے افراد عام طور پر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟  اگر فلش یا پورفلش ہے تو پوچھئے، کہ پانی کا نکاس کہاں ہے ؟ اگر طے کرنا ممکن نہ ہو تو سہولت کا جائزہ  لینے کی اجازت مانگیں </string>
+    <string name="ss07"> آپ کے گھرانے کے افراد عام طورپر کس قسم کا بیت الخلاء استعمال کرتے ہیں ؟ اگر "فلش یا "پورفلش" ہے تو پوچھے، کہ پانی کا نکاس کہاں ہے؟ اگر طے کرنا ممکن نہ ہوتو سہولت کا جائزہ لینے کی اجازت مانگیں- </string>
     <string name="ss07a_title"> فلش یا انڈیل کر پانی ڈالنے والا </string>
     <string name="ss07a"> فلش سیوریج کے نظام سے منسلک  </string>
     <string name="ss07b"> فلش سپٹک ٹینک سے منسلک  </string>
@@ -338,8 +338,8 @@
     <string name="ss14sa"> ہاں </string>
     <string name="ss14sb"> نہیں </string>
 
-    <string name="ss15"> کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں ؟ </string>
-    <string name="ss15a"> گھڑی </string>
+    <string name="ss15"> کیا گھر کے کسی فرد کے پاس یہ چیزیں موجود ہیں؟] ایک سے زیادہ جوابات آسکتے ہیں[ ہر چیز کے لئے پوچھیں </string>
+    <string name="ss15a"> ہاتھ والی گھڑی </string>
     <string name="ss15aa"> ہاں </string>
     <string name="ss15ab"> نہیں </string>
 
@@ -388,7 +388,7 @@
     <string name="ss17a"> بجلی </string>
     <string name="ss17b"> ایل – پی - جی  سیلنڈر </string>
     <string name="ss17c"> قدرتی گیس </string>
-    <string name="ss17d"> بائیو گیس </string>
+    <string name="ss17d"> بائیو </string>
     <string name="ss17e"> مٹی کا تیل </string>
     <string name="ss17f"> قدرتی کوئلہ </string>
     <string name="ss17g"> لکٹری کاکوئلہ </string>
@@ -416,7 +416,7 @@
     <string name="ss18k"> چونے کا پتھر </string>
     <string name="ss18x"> دیگر وضاحت کریں </string>
 
-    <string name="ss19"> گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔ </string>
+    <string name="ss19"> گھر کی چھت میں استعمال ہونے والا بنیادی مواد۔ مشاہدہ کریں: </string>
     <string name="ss19a_title"> قدرتی چھت </string>
     <string name="ss19a"> کوئی چھت نہیں </string>
     <string name="ss19b"> گھاس پھونس / کھجو ر کے پتے </string>
@@ -436,7 +436,7 @@
     <string name="ss19n"> اینٹیں </string>
     <string name="ss19x"> دیگر وضاحت کریں </string>
 
-    <string name="ss20"> گھر کی دیواروں میں استعمال ہونے والا بنیادی مواد: </string>
+    <string name="ss20"> گھر کی دیواروں میں استعمال ہونے والا بنیادی مواد: مشاہدہ کریں: </string>
     <string name="ss20a_title"> قدرتی دیواریں </string>
     <string name="ss20a"> کوئی دیوار نہیں </string>
     <string name="ss20b"> کھجور کے درخت / بانس </string>
@@ -476,13 +476,13 @@
     <string name="ss23a">ایکٹر</string>
     <string name="ss23b">کنال</string>
     <string name="ss23c">معلوم نہیں</string>
-    <string name="ss23land">زمین</string>
+    <string name="ss23land"> رقبہ </string>
 
     <string name="ss24"> کیاآپ اپنا مال مویشی،جانور یا مرغی خانہ رکھتے ہیں؟</string>
     <string name="ss24a"> ہاں</string>
     <string name="ss24b">  نہیں</string>
 
-    <string name="ss25"> اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں ؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے اگر کوئی نہیں تو 000 ؟ </string>
+    <string name="ss25"> اگر ہاں تو آپ کے گھر میں کتنے مویشی جانور یا مرغیاں موجود ہیں ؟ ایک ایک کر کے جانوروں کے نام پوچھیں اور شمار کنندہ مشاہدہ کرے اگر کوئی نہیں تو 000 ؟ اگر تعداد 999 سے زیادہ ہو تو 999 درج کریں </string>
     <string name="ss25a"> مال مویشی (گائے اور بیل) </string>
     <string name="ss25b"> گھوڑے / گدھے / خچر </string>
     <string name="ss25c"> بکریاں </string>
@@ -492,29 +492,29 @@
     <string name="ss25g"> اونٹ </string>
 
     <string name="ss26"> کیا اس گھر میں موجود کسی فرد کا بینک میں اکاؤنٹ موجود ہے ؟ </string>
-    <string name="ss27_title"> جواب دہندہ مرد / عورت کے تعاون کرنے کا شکریہ ادا کریں اور پھر اس گھر میں موجود 12 – 23  ماہ کے بچوں کا سوالنامہ پوچھنا شروع کریں ۔ </string>
+    <string name="ss27_title"> اب سوال نمبر ایچ ایچ 21 [گھرانے کے انٹرویوکا نتیجہ] پرواپس جائیں اورانٹرویو کا نتیجہ درج کریں اور سوال نمبر SS28میں اپنے مشاہدہ کا اندراج کریں، کوئی مشاہدہ نہ ہونے کی صورت میں "NONE" درج کریں۔ جواب دہندہ مرد/عورت کے تعاون کرنے کا شکریہ ادا کریں اورپھر اس گھر میں موجود 12سے23 ماہ کے بچوں کا سوالنامہ بھرنا شروع کریں۔ </string>
     <string name="ss26a"> ہاں </string>
     <string name="ss26b"> نہیں </string>
 
-    <string name="ss27"> وقت ریکارڈ کریں </string>
+    <string name="ss27"> انٹرویو کے اختتام کا وقت ریکارڈ کریں۔ </string>
 
-    <string name="ss28"> اگر کوئی انٹرویو کرنے والے کے مشاہدات </string>
+    <string name="ss28"> انٹرویو کرنے والے کے مشاہدات (اگر کوئی) </string>
     <string name="ss28a"> مشاہدات </string>
 
 
-    <string name="ec05"> جغرافیائی علاقہ </string>
+    <string name="ec05"> اینومیریشن بلاک نمبر/ کلسٹر نمبر </string>
 
     <string name="ec06"> صوبہ </string>
 
     <string name="ec07"> ضلع </string>
 
-    <string name="ec08"> شہر </string>
+    <string name="ec08"> تحصیل / تعلقہ </string>
 
     <string name="ec09"> گاؤں </string>
 
     <string name="ec11"> کلسٹر نمبر </string>
 
-    <string name="ec12"> گھر کا نمبر </string>
+    <string name="ec12"> گھرانہ نمبر </string>
 
     <string name="ec13"> بچے کا لائن نمبر </string>
 
