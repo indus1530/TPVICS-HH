@@ -7,6 +7,7 @@ import android.provider.Settings;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -26,7 +27,7 @@ public final class AppInfo {
             installedOn = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).lastUpdateTime;
             versionCode = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionCode;
             versionName = context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0).versionName;
-            dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
+            dtToday = new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime());
             deviceID = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
             appVersion = versionName + "." + versionCode;
             tagName = getTagName(context);
@@ -56,7 +57,7 @@ public final class AppInfo {
     }
 
     public String getAppInfo() {
-        return "Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(getInfo().installedOn)) + " )";
+        return "Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM yyyy", Locale.getDefault()).format(new Date(getInfo().installedOn)) + " )";
     }
 
     public String getVersionName() {

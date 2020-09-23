@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
@@ -51,8 +52,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     static File file;
     private final String TAG = MainActivity.class.getName();
     private ActivityMainBinding bi;
-    private String dtToday = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
-    private String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
+    private String dtToday = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date());
+    private String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
     private String preVer = "", newVer = "";
     private SharedPreferences sharedPrefDownload;
     private SharedPreferences.Editor editorDownload;
@@ -212,9 +213,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
         rSumText.append("\r\nDEVICE INFORMATION\r\n")
                 .append("  ========================================================\r\n")
-                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format("%02d", unclosedForms.size()))
+                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format(Locale.getDefault(), "%02d", unclosedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
-                .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format("%02d", unsyncedForms.size()))
+                .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format(Locale.getDefault(), "%02d", unsyncedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
                 .append("\t|| Last Data Download: \t\t").append(syncPref.getString("LastDataDownload", "Never Downloaded   "))
                 .append("\t\t\t\t\t\t||\r\n")

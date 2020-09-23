@@ -113,7 +113,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setgender(bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
 
         JSONObject f1 = new JSONObject();
-        //f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        //f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
         f1.put("appversion", MainApp.appInfo.getAppVersion());
         f1.put("_luid", MainApp.fc.getLuid());
 //        f1.put("ec01", bi.ec01.getText().toString());
@@ -199,7 +199,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
     public void BtnEnd() {
         if (!formValidation()) return;
-        contextEndActivity(this);
+        contextEndActivity(this, false);
     }
 
     @Override
@@ -211,7 +211,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, ChildEndingActivity.class).putExtra("complete", flag));
+            startActivity(new Intent(this, ChildEndingActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }

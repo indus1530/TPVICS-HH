@@ -155,7 +155,8 @@
                         <RadioButton
                             android:id="@+id/im023"
                             style="@style/radiobutton"
-                            android:text="@string/im022" />
+                            android:text="@string/im022"
+                            android:visibility="gone" />
 
                     </RadioGroup>
 
@@ -214,7 +215,8 @@
                         <RadioButton
                             android:id="@+id/im033"
                             style="@style/radiobutton"
-                            android:text="@string/im033" />
+                            android:text="@string/im033"
+                            android:visibility="gone" />
 
                         <RadioButton
                             android:id="@+id/im034"

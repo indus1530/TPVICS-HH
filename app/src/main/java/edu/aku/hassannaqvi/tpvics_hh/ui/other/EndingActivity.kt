@@ -101,7 +101,7 @@ class EndingActivity : AppCompatActivity() {
             }
 
         } else {
-            MainApp.fc.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)
+            MainApp.fc.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(Date().time)
             MainApp.fc.setfStatus(statusValue)
             MainApp.fc.fstatus88x = bi.istatus96x.text.toString()
         }

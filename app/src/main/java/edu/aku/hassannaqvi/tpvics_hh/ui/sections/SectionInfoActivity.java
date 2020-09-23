@@ -25,6 +25,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
@@ -135,7 +136,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         MainApp.fc.setClusterCode(bi.hh11.getText().toString());
         MainApp.fc.setHhno(bi.hh12.getText().toString().toUpperCase());
         MainApp.fc.setLuid(bl.getLUID());
-        MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
         setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
@@ -149,7 +150,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hhhead", bl.getHhhead());
         json.put("bl_hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
-        //json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        //json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
 
 
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
