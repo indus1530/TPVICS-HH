@@ -1217,7 +1217,7 @@
 
                     </RadioGroup>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/ss23landx"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
@@ -1226,7 +1226,10 @@
                         android:hint="@string/ss23land"
                         android:inputType="number"
                         android:maxLength="3"
-                        android:text='@{ss23c.checked ? "" : ss23landx.getText().toString() }' />
+                        android:text='@{ss23c.checked ? "" : ss23landx.getText().toString() }'
+                        app:maxValue="999"
+                        app:minValue="1"
+                        app:type="range" />
 
                 </LinearLayout>
 

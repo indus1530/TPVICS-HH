@@ -81,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/specify"
                     android:maxLength="40"
+                    android:tag="istatus96"
                     android:text='@{istatus96.checked? istatus96x.getText().toString(): ""}'
                     android:visibility='@{istatus96.checked? View.VISIBLE : View.GONE}' />
 
