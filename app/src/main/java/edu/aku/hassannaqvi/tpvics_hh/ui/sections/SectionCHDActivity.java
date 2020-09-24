@@ -270,7 +270,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                     AgeModel age;
                     age = DateRepository.Companion.getCalculatedAge(child.getLocalDate(), Integer.parseInt(editTextsArray[2].getText().toString()), Integer.parseInt(editTextsArray[1].getText().toString()), Integer.parseInt(editTextsArray[0].getText().toString()));
                     if (age == null) {
-                        editTextPicker03.setError("Invalid date!!");
+                        editTextPicker03.setError("Invalid date");
                         imFlag = false;
                         return;
                     }
@@ -281,7 +281,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                     else
                         age = DateRepository.Companion.getCalculatedAge(year, month, day);
                     if (age == null) {
-                        editTextPicker03.setError("Invalid date!!");
+                        editTextPicker03.setError("Invalid date");
                         imFlag = false;
                     } else {
                         imFlag = true;
