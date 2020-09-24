@@ -277,7 +277,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                     if (respLocalDate != null) {
                         age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), Integer.parseInt(respTextsArray[2].getText().toString()), Integer.parseInt(respTextsArray[1].getText().toString()), Integer.parseInt(respTextsArray[0].getText().toString()), false);
                     } else if (child.getCalculatedDOB() != null)
-                        age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), child.getCalculatedDOB().getYear(), child.getCalculatedDOB().getMonthValue(), child.getCalculatedDOB().getDayOfMonth(), false);
+                        age = DateRepository.Companion.getCalculatedAge(Objects.requireNonNull(getLocalDate(editTextsArray)), child.getCalculatedDOB().getYear(), child.getCalculatedDOB().getMonthValue(), child.getCalculatedDOB().getDayOfMonth(), type.equals("BCG") || type.equals("OPV0"));
                     else
                         age = DateRepository.Companion.getCalculatedAge(year, month, day);
                     if (age == null) {
