@@ -91,7 +91,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
                 bi.backFileName.setText(null);
                 im01Flag = false;
             } else {
-                Clear.clearAllFields(bi.fldGrpCVim03, true);
+                Clear.clearAllFields(bi.fldGrpCVim03, false);
                 Clear.clearAllFields(bi.fldGrpCVim04, false);
                 Clear.clearAllFields(bi.fldGrpSecChc1, false);
                 bi.frontPhoto.setEnabled(false);

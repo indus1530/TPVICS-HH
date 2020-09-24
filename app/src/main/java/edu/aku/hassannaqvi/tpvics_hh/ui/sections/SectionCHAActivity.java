@@ -29,6 +29,7 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_PARENT_NA;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.enumBlockContract;
@@ -189,7 +190,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, bi.ec184.isChecked() || bi.ec1898.isChecked() ? ChildEndingActivity.class : SectionCHBActivity.class).putExtra(CHILD_NO_ANSWER, true));
+                startActivity(new Intent(this, bi.ec184.isChecked() || bi.ec1898.isChecked() ? ChildEndingActivity.class : SectionCHBActivity.class).putExtra(CHILD_PARENT_NA, true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -211,7 +212,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, ChildEndingActivity.class));
+            startActivity(new Intent(this, ChildEndingActivity.class).putExtra(CHILD_NO_ANSWER, true));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
