@@ -36,6 +36,7 @@ class EndingActivity : AppCompatActivity() {
             bi.istatusd.isEnabled = fStatusEndActivityFlag
             bi.istatuse.isEnabled = fStatusEndActivityFlag
             bi.istatusf.isEnabled = fStatusEndActivityFlag
+            bi.istatusg.isEnabled = fStatusEndActivityFlag
             bi.istatus96.isEnabled = fStatusEndActivityFlag
         } else {
             bi.istatusa.isEnabled = false
@@ -45,6 +46,7 @@ class EndingActivity : AppCompatActivity() {
                 bi.istatusd.isEnabled = true
                 bi.istatuse.isEnabled = true
                 bi.istatusf.isEnabled = true
+                bi.istatusg.isEnabled = true
                 bi.istatus96.isEnabled = true
             } else {
                 bi.istatusb.isEnabled = false
@@ -52,6 +54,7 @@ class EndingActivity : AppCompatActivity() {
                 bi.istatusd.isEnabled = false
                 bi.istatuse.isEnabled = false
                 bi.istatusf.isEnabled = false
+                bi.istatusg.isEnabled = false
                 bi.istatus96.isEnabled = false
                 when (fStatus.toInt()) {
                     1 -> {
@@ -60,6 +63,7 @@ class EndingActivity : AppCompatActivity() {
                         bi.istatusd.isEnabled = true
                         bi.istatuse.isEnabled = true
                         bi.istatusf.isEnabled = true
+                        bi.istatusg.isEnabled = true
                         bi.istatus96.isEnabled = true
                     }
                     2 -> bi.istatusb.isEnabled = true
@@ -67,6 +71,7 @@ class EndingActivity : AppCompatActivity() {
                     4 -> bi.istatusd.isEnabled = true
                     5 -> bi.istatuse.isEnabled = true
                     6 -> bi.istatusf.isEnabled = true
+                    6 -> bi.istatusg.isEnabled = true
                     96 -> bi.istatus96.isEnabled = true
                 }
             }
@@ -86,7 +91,8 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun saveDraft() {
-        val statusValue = if (bi.istatusa.isChecked) "1" else if (bi.istatusb.isChecked) "2" else if (bi.istatusc.isChecked) "3" else if (bi.istatusd.isChecked) "4" else if (bi.istatuse.isChecked) "5" else if (bi.istatusf.isChecked) "6" else if (bi.istatus96.isChecked) "96" else "0"
+        val statusValue = if (bi.istatusa.isChecked) "1" else if (bi.istatusb.isChecked) "2" else if (bi.istatusc.isChecked) "3" else if (bi.istatusd.isChecked) "4" else if (bi.istatuse.isChecked) "5"
+        else if (bi.istatusf.isChecked) "6" else if (bi.istatusg.isChecked) "7" else if (bi.istatus96.isChecked) "96" else "0"
         if (subInfoEndActivityFlag) {
             MainApp.fc.istatus = statusValue
             MainApp.fc.istatus88x = bi.istatus96x.text.toString()

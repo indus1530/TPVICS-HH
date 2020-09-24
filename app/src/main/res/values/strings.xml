@@ -114,6 +114,7 @@
     <string name="hh22d"> انکار کردیا </string>
     <string name="hh22e"> خالی گھر / غیر رہائشی </string>
     <string name="hh22f"> گھر نہیں ملا </string>
+    <string name="hh22g"> اس گھر میں 12سے23 مہینے کی عمر کا بچہ موجود نہیں ہے </string>
     <string name="hh2296"> دیگر </string>
     <string name="hh2296x"> وضاحت کریں </string>
     <string name="chsec"> Child Information </string>
@@ -152,6 +153,11 @@
     <string name="ss01e"> بلوچی </string>
     <string name="ss01f"> سرائیکی </string>
     <string name="ss01g"> ہندکو </string>
+    <string name="ss01h"> بروشکی </string>
+    <string name="ss01j"> شینا </string>
+    <string name="ss01k"> خوار </string>
+    <string name="ss01m"> واخی </string>
+    <string name="ss01n"> ڈھومکی </string>
     <string name="ss01x"> دیگر وضاحت کریں </string>
 
     <string name="ss02"> گھرکی مالکانہ حیثیت کیا ہے ؟ </string>
