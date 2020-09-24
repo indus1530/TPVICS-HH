@@ -102,6 +102,36 @@
                             android:text="@string/ss01g" />
 
                         <RadioButton
+                            android:id="@+id/ss01h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ss01h" />
+
+                        <RadioButton
+                            android:id="@+id/ss01j"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ss01j" />
+
+                        <RadioButton
+                            android:id="@+id/ss01k"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ss01k" />
+
+                        <RadioButton
+                            android:id="@+id/ss01m"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ss01m" />
+
+                        <RadioButton
+                            android:id="@+id/ss01n"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ss01n" />
+
+                        <RadioButton
                             android:id="@+id/ss0196"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
