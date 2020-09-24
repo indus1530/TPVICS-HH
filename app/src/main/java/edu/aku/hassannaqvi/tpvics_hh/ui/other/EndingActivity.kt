@@ -71,7 +71,7 @@ class EndingActivity : AppCompatActivity() {
                     4 -> bi.istatusd.isEnabled = true
                     5 -> bi.istatuse.isEnabled = true
                     6 -> bi.istatusf.isEnabled = true
-                    6 -> bi.istatusg.isEnabled = true
+                    7 -> bi.istatusg.isEnabled = true
                     96 -> bi.istatus96.isEnabled = true
                 }
             }
