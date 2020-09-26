@@ -24,7 +24,8 @@
                     style="@style/sub"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/im05title2" />
+                    android:text="@string/im05title2"
+                    android:textAlignment="textStart"/>
 
             </LinearLayout>
 
