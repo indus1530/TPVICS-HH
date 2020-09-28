@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -307,6 +308,11 @@ public class SectionCHDActivity extends AppCompatActivity {
         if (!flag) imFlag = true;
         Clear.clearAllFields(bi.fldGrpSecChc2, flag);
 
+        if (!flag) {
+            bi.fldGrpCVim05title2.setVisibility(View.GONE);
+            bi.im08.setFocusable(true);
+        }
+
         bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
             if (i == bi.im071.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVim08, false);
@@ -412,6 +418,15 @@ public class SectionCHDActivity extends AppCompatActivity {
             } else {
                 if (im07) return;
                 Clear.clearAllFields(bi.im12, true);
+            }
+        });
+
+        bi.im12d.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im12a, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im12a, true);
             }
         });
 
@@ -557,7 +572,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         json.put("im12", bi.im12.getText().toString());
         json.put("im12dk", bi.im1298.isChecked() ? "98" : "0");
 
-        json.put("im12a", bi.im12.getText().toString());
+        json.put("im12a", bi.im12a.getText().toString());
         json.put("im12d", bi.im12d.isChecked() ? "98" : "0");
 
         json.put("im13",

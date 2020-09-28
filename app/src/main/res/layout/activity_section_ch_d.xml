@@ -25,7 +25,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/im05title2"
-                    android:textAlignment="textStart"/>
+                    android:textAlignment="textStart" />
 
             </LinearLayout>
 
@@ -2042,7 +2042,8 @@
                         <!-- im13  Radio   -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVim13"
-                            style="@style/cardView">
+                            style="@style/cardView"
+                            android:visibility="gone">
 
                             <LinearLayout style="@style/vlinearlayout">
 
