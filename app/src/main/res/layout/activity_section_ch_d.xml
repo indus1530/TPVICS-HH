@@ -1989,6 +1989,56 @@
 
                         </androidx.cardview.widget.CardView>
 
+                        <!-- im12a  Input-Numeric   -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/fldGrpCVim12a"
+                            style="@style/cardView">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_im12a"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_im12a"
+                                        android:text="@string/im12a" />
+
+                                    <TextView
+                                        android:id="@+id/q_im12a"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_im12a"
+                                        android:layout_alignBottom="@id/qtxt_im12a"
+                                        android:text="@string/Q_im12a" />
+                                </RelativeLayout>
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/im12a"
+                                    style="@style/EditTextNum"
+                                    android:hint="@string/num"
+                                    android:maxLength="2"
+                                    app:maxValue="50"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <CheckBox
+                                    android:id="@+id/im12d"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:tag="-1"
+                                    android:text="@string/im12d" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
                         <!-- im13  Radio   -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVim13"

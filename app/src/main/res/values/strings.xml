@@ -683,7 +683,7 @@
     <string name="im0510mm"> مہینہ </string>
     <string name="im0510yy"> سال </string>
 
-    <string name="im0511"> (چودہ ہفتے پر)OPV3 پولیو کے قطرے </string>
+    <string name="im0511"> (چودہ ہفتے پر) OPV3 پولیو کے قطرے </string>
     <string name="im0511dd"> دن </string>
     <string name="im0511mm"> مہینہ </string>
     <string name="im0511yy"> سال </string>
@@ -747,6 +747,8 @@
     <string name="im113">  معلوم نہیں </string>
 
     <string name="im12"> مرکزصحت پر پولیو کے قطرےکتنی بار پلائے گئے تھے؟ تعداد </string>
+    <string name="im12a">قومی مہم کے دوران پولیو کے قطرے کتنی بار پلائے گئے تھے؟ </string>
+    <string name="im12d">معلوم نہیں</string>
 
 <!--    <string name="im13"> آخری بار جب بچے کو پولیو کے قطرے پلائے  گئے تھے؛ تو کیا اس وقت (بچے / بچی) کو پولیو سے بچائو کا ٹیکہ بھی لگوایا گیا تھا ؟ اس بات کی یقین دہانی کرنے کے لئے مزید پوچھیں کہ اس وقت قطرے اور ٹیکہ دونوں دیئے گئے تھے۔ </string>-->
     <string name="im13"> آخری بار (نام) نے پولیو کے قطرے کب پیئے تھے۔ اورکیا اس کو پولیو کے خلاف تحفظ فراہم کرنے والا انجکشن بھی لگاتھا؟ اس بات کی یقین دہانی کرنے کے لئےمزید پوچھیں کہ اس وقت قطرے اور ٹیکہ دونوں دیئے گئےتھے۔ </string>
@@ -815,7 +817,7 @@
     <string name="im243"> ماں مصروف تھی </string>
     <string name="im244"> ماں کی بیماری سمیت، خاندانی مسائل </string>
     <string name="im245"> بچہ بیمار تھا، لے کر نہیں گئے </string>
-    <string name="im25"> BCG کے SCAR نشان کو چیک کریں۔ </string>
+    <string name="im25"> ۔BCG کے SCAR نشان کو چنیک کریں۔ </string>
     <string name="im2501">نشان موجود ہے</string>
     <string name="im2502">نشان موجود نہیں</string>
     <string name="im2503">بچہ موجود نہیں</string>
@@ -1000,6 +1002,7 @@
     <string name='Q_im10'>im10</string>
     <string name='Q_im11'>im11</string>
     <string name='Q_im12'>im12</string>
+    <string name='Q_im12a'>im12a</string>
     <string name='Q_im13'>im13</string>
     <string name='Q_im14'>im14</string>
     <string name='Q_im15'>im15</string>
