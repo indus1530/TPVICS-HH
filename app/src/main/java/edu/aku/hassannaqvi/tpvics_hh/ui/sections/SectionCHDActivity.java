@@ -8,10 +8,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
@@ -29,6 +25,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
@@ -311,8 +310,8 @@ public class SectionCHDActivity extends AppCompatActivity {
         Clear.clearAllFields(bi.fldGrpSecChc2, flag);
 
         if (!flag) {
-            bi.fldGrpCVim05title2.setVisibility(View.GONE);
             bi.imsub.setText(getResources().getString(R.string.im05title3));
+            bi.scrollSecCD.post(() -> bi.scrollSecCD.smoothScrollTo(0, bi.fldGrpCVim08.getTop()));
         }
 
         bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
