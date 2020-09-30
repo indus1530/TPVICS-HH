@@ -310,7 +310,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
         if (!flag) {
             bi.fldGrpCVim05title2.setVisibility(View.GONE);
-            bi.im08.setFocusable(true);
+            bi.im08Relative.requestFocus();
         }
 
         bi.im07.setOnCheckedChangeListener((radioGroup, i) -> {
