@@ -21,16 +21,15 @@
             <LinearLayout style="@style/vlinearlayout">
 
                 <TextView
+                    android:id="@+id/imsub"
                     style="@style/sub"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/im05title2"
                     android:textAlignment="textStart" />
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
         <ScrollView
             android:layout_width="match_parent"
@@ -1681,7 +1680,6 @@
                     <LinearLayout style="@style/vlinearlayout">
 
                         <RelativeLayout
-                            android:id="@id/im08Relative"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bottom">
@@ -2013,6 +2011,9 @@
                                         android:text="@string/im12a" />
 
                                     <TextView
+                                        android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                        android:drawablePadding="16dp"
+                                        android:onClick="showTooltip"
                                         android:id="@+id/q_im12a"
                                         style="@style/quesNum"
                                         android:layout_width="wrap_content"
@@ -2646,7 +2647,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-
 
                 <!-- im23  Radio   -->
                 <androidx.cardview.widget.CardView
