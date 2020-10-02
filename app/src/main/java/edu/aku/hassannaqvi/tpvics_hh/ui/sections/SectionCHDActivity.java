@@ -413,14 +413,14 @@ public class SectionCHDActivity extends AppCompatActivity {
             }
         });
 
-//        bi.im1298.setOnCheckedChangeListener((compoundButton, b) -> {
-//            if (b) {
-//                Clear.clearAllFields(bi.im12, false);
-//            } else {
-//                if (im07) return;
-//                Clear.clearAllFields(bi.im12, true);
-//            }
-//        });
+        bi.im1298.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.im12, false);
+            } else {
+                if (im07) return;
+                Clear.clearAllFields(bi.im12, true);
+            }
+        });
 
         bi.im12d.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
@@ -571,7 +571,7 @@ public class SectionCHDActivity extends AppCompatActivity {
                                 bi.im113.isChecked() ? "98" :
                                         "0");
         json.put("im12", bi.im12.getText().toString());
-//        json.put("im12dk", bi.im1298.isChecked() ? "98" : "0");
+        json.put("im12dk", bi.im1298.isChecked() ? "98" : "0");
 
         json.put("im12a", bi.im12a.getText().toString());
         json.put("im12d", bi.im12d.isChecked() ? "98" : "0");

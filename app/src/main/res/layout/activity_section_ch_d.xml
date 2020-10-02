@@ -1979,12 +1979,12 @@
                                     app:type="range" />
 
 <!--                                Removed by Imtiaz Sb-->
-<!--                                <CheckBox-->
-<!--                                    android:id="@+id/im1298"-->
-<!--                                    android:layout_width="match_parent"-->
-<!--                                    android:layout_height="wrap_content"-->
-<!--                                    android:tag="-1"-->
-<!--                                    android:text="@string/dkn" />-->
+                                <CheckBox
+                                    android:id="@+id/im1298"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:tag="-1"
+                                    android:text="@string/dkn" />
 
                             </LinearLayout>
 
