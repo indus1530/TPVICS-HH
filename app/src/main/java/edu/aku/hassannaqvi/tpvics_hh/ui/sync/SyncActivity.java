@@ -210,7 +210,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
         if (sharedPref.getBoolean("flag", false)) {
 
-            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
+            String dt = sharedPref.getString("dt", "");
 
             if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
                 editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
