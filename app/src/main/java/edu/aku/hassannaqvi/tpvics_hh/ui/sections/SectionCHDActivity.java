@@ -8,6 +8,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.edittextpicker.aliazaz.EditTextPicker;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
@@ -25,9 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
@@ -665,7 +666,7 @@ public class SectionCHDActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         if (!imFlag) {
-            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid date", Toast.LENGTH_SHORT).show();
             return false;
         }
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionCHD);

@@ -1874,6 +1874,57 @@
                         android:id="@+id/fldGrpSecChc5"
                         style="@style/linearlayout_view_wt_bound">
 
+                        <!-- im12  Input-Numeric   -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/fldGrpCVim12"
+                            style="@style/cardView">
+
+                            <LinearLayout style="@style/vlinearlayout">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom">
+
+                                    <TextView
+                                        android:id="@+id/qtxt_im12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@id/q_im12"
+                                        android:text="@string/im12" />
+
+                                    <TextView
+                                        android:id="@+id/q_im12"
+                                        style="@style/quesNum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/qtxt_im12"
+                                        android:layout_alignBottom="@id/qtxt_im12"
+                                        android:gravity="center"
+                                        android:text="@string/Q_im12" />
+                                </RelativeLayout>
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/im12"
+                                    style="@style/EditTextNum"
+                                    android:hint="@string/num"
+                                    android:maxLength="2"
+                                    app:maxValue="50"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <!--                                Removed by Imtiaz Sb-->
+                                <CheckBox
+                                    android:id="@+id/im1298"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:tag="-1"
+                                    android:text="@string/dkn" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
                         <!-- im11  Radio   -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVim11"
@@ -1934,56 +1985,6 @@
                                         android:text="@string/im113" />
 
                                 </RadioGroup>
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <!-- im12  Input-Numeric   -->
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVim12"
-                            style="@style/cardView">
-
-                            <LinearLayout style="@style/vlinearlayout">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/bottom">
-
-                                    <TextView
-                                        android:id="@+id/qtxt_im12"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:layout_toEndOf="@id/q_im12"
-                                        android:text="@string/im12" />
-
-                                    <TextView
-                                        android:id="@+id/q_im12"
-                                        style="@style/quesNum"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignTop="@id/qtxt_im12"
-                                        android:layout_alignBottom="@id/qtxt_im12"
-                                        android:gravity="center"
-                                        android:text="@string/Q_im12" />
-                                </RelativeLayout>
-
-                                <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:id="@+id/im12"
-                                    style="@style/EditTextNum"
-                                    android:hint="@string/num"
-                                    android:maxLength="2"
-                                    app:maxValue="50"
-                                    app:minValue="1"
-                                    app:type="range" />
-
-                                <CheckBox
-                                    android:id="@+id/im1298"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:tag="-1"
-                                    android:text="@string/dkn" />
 
                             </LinearLayout>
 
