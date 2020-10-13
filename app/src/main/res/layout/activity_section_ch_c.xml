@@ -402,7 +402,7 @@
                             style="@style/hlinearlayout"
                             android:gravity="center_horizontal">
 
-                            <EditText
+                            <TextView
                                 android:id="@+id/frontFileName"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -411,7 +411,7 @@
                                 android:textColor="#7f7f7f7f"
                                 android:textSize="14sp" />
 
-                            <EditText
+                            <TextView
                                 android:id="@+id/backFileName"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
