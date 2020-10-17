@@ -9,8 +9,8 @@ buildscript {
         }*/
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
 //        classpath "gradle.plugin.me.tatarka:gradle-retrolambda:3.7.1"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,9 +21,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
+        maven {url "https://maven.google.com"}
         maven { url "https://jitpack.io" }
         google()
     }
