@@ -149,8 +149,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     public void btnUploadPhotos(View view) {
 
-        File directory = new File(this.getExternalFilesDir(
-                Environment.DIRECTORY_PICTURES), PROJECT_NAME);
+        File directory = new File(this.getExternalFilesDir(Environment.DIRECTORY_PICTURES), PROJECT_NAME);
         Log.d("Directory", "uploadPhotos: " + directory);
         if (directory.exists()) {
             File[] files = directory.listFiles(file -> (file.getPath().endsWith(".jpg") || file.getPath().endsWith(".jpeg")));
@@ -264,8 +263,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
     private class SyncData extends AsyncTask<Boolean, String, String> {
 
-        private Context mContext;
-        private String distID;
+        private final Context mContext;
+        private final String distID;
 
         private SyncData(Context mContext, String districtId) {
             this.mContext = mContext;

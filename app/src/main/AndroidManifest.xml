@@ -30,55 +30,66 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.sections.SectionIMNew"></activity>
         <activity
             android:name=".ui.list_activity.FormsReportCluster"
+            android:exported="false"
             android:label="Forms Report"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.list_activity.FormsReportDate"
+            android:exported="false"
             android:label="Forms Report"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.list_activity.PendingFormsActivity"
+            android:exported="false"
             android:label="Unfinished Forms"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionSubInfoActivity"
+            android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionCHAActivity"
+            android:exported="false"
             android:label="@string/ch_title"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHBActivity"
+            android:exported="false"
             android:label="@string/chBsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHCActivity"
+            android:exported="false"
             android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHDActivity"
+            android:exported="false"
             android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionCHEActivity"
+            android:exported="false"
             android:label="@string/chsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionSS2Activity"
+            android:exported="false"
             android:label="@string/sssec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionSS1Activity"
+            android:exported="false"
             android:label="@string/sssec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -89,51 +100,62 @@
         </activity>
         <activity
             android:name=".ui.other.LoginActivity"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionInfoActivity"
+            android:exported="false"
             android:label="@string/hhsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.sections.SectionHHActivity"
+            android:exported="false"
             android:label="@string/hhsec"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.list_activity.FamilyMembersListActivity"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionBActivity"
+            android:exported="false"
             android:label="@string/tdheading"
             android:parentActivityName=".ui.list_activity.FamilyMembersListActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FamilyMembersListActivity" />
+                android:value=".ui.list_activity.FamilyMembersListActivity" />
         </activity>
         <activity
             android:name=".ui.other.EndingActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.ChildEndingActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.MainActivity"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".core.AndroidDatabaseManager"
+            android:exported="false"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sync.SyncActivity"
+            android:exported="false"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.other.TakePhoto"
+            android:exported="false"
             android:hardwareAccelerated="true"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
