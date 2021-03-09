@@ -89,7 +89,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
-            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <intent-filter>
