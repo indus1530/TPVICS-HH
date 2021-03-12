@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -40,10 +42,10 @@ import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.AndroidUtilityKt;
 import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
 import edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt;
 import edu.aku.hassannaqvi.tpvics_hh.utils.WarningActivityInterface;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.SharedStorage;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.appInfo;
 
@@ -52,11 +54,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     static File file;
     private final String TAG = MainActivity.class.getName();
     private ActivityMainBinding bi;
-    private String dtToday = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date());
-    private String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
+    private final String dtToday = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date());
+    private final String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
     private String preVer = "", newVer = "";
-    private SharedPreferences sharedPrefDownload;
-    private SharedPreferences.Editor editorDownload;
     private DownloadManager downloadManager;
     private Boolean exit = false;
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
 
                 DownloadManager.Query query = new DownloadManager.Query();
-                query.setFilterById(sharedPrefDownload.getLong("refID", 0));
+                query.setFilterById(SharedStorage.INSTANCE.getDownloadFileRefID(MainActivity.this));
 
                 downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                 assert downloadManager != null;
@@ -74,9 +74,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 if (cursor.moveToFirst()) {
                     int colIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
                     if (DownloadManager.STATUS_SUCCESSFUL == cursor.getInt(colIndex)) {
-
-                        editorDownload.putBoolean("flag", true);
-                        editorDownload.commit();
 
                         Toast.makeText(context, "New App downloaded!!", Toast.LENGTH_SHORT).show();
                         bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " App New Version ").append(newVer).append("  Downloaded"));
@@ -217,11 +214,11 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
                 .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format(Locale.getDefault(), "%02d", unsyncedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
-                .append("\t|| Last Data Download: \t\t").append(syncPref.getString("LastDataDownload", "Never Downloaded   "))
+                .append("\t|| Last Data Download: \t\t").append(SharedStorage.INSTANCE.getLastDataDownload(this))
                 .append("\t\t\t\t\t\t||\r\n")
-                .append("\t|| Last Data Upload: \t\t\t").append(syncPref.getString("LastDataUpload", "Never Uploaded     "))
+                .append("\t|| Last Data Upload: \t\t\t").append(SharedStorage.INSTANCE.getLastDataUpload(this))
                 .append("\t\t\t\t\t\t||\r\n")
-                .append("\t|| Last Photo Upload: \t\t").append(syncPref.getString("LastPhotoUpload", "Never Uploaded     "))
+                .append("\t|| Last Photo Upload: \t\t").append(SharedStorage.INSTANCE.getLastPhotoUpload(this))
                 .append("\t\t\t\t\t\t||\r\n")
                 .append("\t========================================================\r\n");
         bi.recordSummary.setText(rSumText);
@@ -230,55 +227,53 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         bi.databaseBtn.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
 
         // Auto download app
-        sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
-        editorDownload = sharedPrefDownload.edit();
-        VersionAppContract versionAppContract = appInfo.getDbHelper().getVersionApp();
-        if (versionAppContract.getVersioncode() != null) {
+        VersionAppContract versionApp = appInfo.getDbHelper().getVersionApp();
+
+        if (versionApp != null) {
+            versionApp.getVersioncode();
             preVer = appInfo.getVersionName() + "." + appInfo.getVersionCode();
-            newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
-            if (appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
+            newVer = versionApp.getVersionname() + "." + versionApp.getVersioncode();
+            if (appInfo.getVersionCode() < Integer.parseInt(versionApp.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
-                String fileName = CreateTable.DATABASE_NAME.replace(".db", "_New_Apps");
-                file = new File(Environment.getDataDirectory() + File.separator + fileName, versionAppContract.getPathname());
+                String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
+                file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionApp.getPathname());
 
                 if (file.exists()) {
-                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append("\nNew Ver.").append(newVer).append("  is downloaded. Kindly accept the installation prompt."));
+                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " New Version ").append(newVer).append("  Downloaded"));
                     showDialog(newVer, preVer);
                 } else {
+                    NetworkInfo networkInfo = ((ConnectivityManager) Objects.requireNonNull(getSystemService(Context.CONNECTIVITY_SERVICE))).getActiveNetworkInfo();
+                    if (networkInfo != null && networkInfo.isConnected()) {
+                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " App New Version ").append(newVer).append("  Downloading.."));
+                        downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                        Uri uri = Uri.parse(MainApp._UPDATE_URL + versionApp.getPathname());
+                        DownloadManager.Request request = new DownloadManager.Request(uri);
+                        request.setDestinationInExternalPublicDir(fileName, versionApp.getPathname())
+                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                .setTitle("Downloading " + getString(R.string.app_name) + " App new App ver." + newVer);
 
-                    if (!AndroidUtilityKt.isNetworkConnected(this)) {
-                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append(" App New Ver.").append(newVer).append("  is available..\n(Couldn't able to download due to Internet connectivity issue!!)"));
-                        return;
+                        long refID = downloadManager.enqueue(request);
+                        SharedStorage.INSTANCE.setDownloadFileRefID(this, refID);
+
+                    } else {
+                        bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name) + " App New Version ").append(newVer).append("  Available..\n(Can't download.. Internet connectivity issue!!)"));
                     }
-
-                    bi.lblAppVersion.setText(new StringBuilder(getString(R.string.app_name)).append(" App \nNew Ver.").append(newVer).append("  is downloading.."));
-                    downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                    Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
-                    DownloadManager.Request request = new DownloadManager.Request(uri);
-                    request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
-                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            .setTitle("Downloading updated version of " + getString(R.string.app_name) + " Ver." + newVer);
-                    long refID = downloadManager.enqueue(request);
-
-                    editorDownload.putLong("refID", refID);
-                    editorDownload.putBoolean("flag", false);
-                    editorDownload.apply();
-
                 }
 
             } else {
                 bi.lblAppVersion.setVisibility(View.GONE);
                 bi.lblAppVersion.setText(null);
             }
+            registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
         }
-        registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 //        Testing visibility
-        if (Integer.parseInt(appInfo.getVersionName().split("\\.")[0]) > 0)
+        if (Integer.parseInt(appInfo.getVersionName().split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
-        else
+        } else {
             bi.testing.setVisibility(View.VISIBLE);
+        }
 
     }
 
@@ -308,13 +303,5 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             new Handler().postDelayed(() -> exit = false, 3 * 1000);
 
         }
-    }
-
-    public void takePhotos(View view) {
-        Intent intent = new Intent(this, TakePhoto.class);
-        intent.putExtra("picID", "901001" + "_" + "A-0001-001" + "_" + "1" + "_");
-        intent.putExtra("childName", "Hassan");
-        intent.putExtra("picView", "test");
-        startActivityForResult(intent, 1);
     }
 }

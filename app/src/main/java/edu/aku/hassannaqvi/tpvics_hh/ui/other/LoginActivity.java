@@ -22,14 +22,12 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
@@ -54,15 +52,8 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -89,9 +80,7 @@ import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_REA
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
 import static edu.aku.hassannaqvi.tpvics_hh.repository.SplashRepositoryKt.populatingSpinners;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DB_NAME;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.dbBackup;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.getPermissionsList;
 import static java.lang.Thread.sleep;
 
@@ -120,9 +109,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     LinearLayout spinners;
     @BindView(R.id.spinnerDistrict)
     Spinner spinnerDistrict;
-    SharedPreferences sharedPref;
-    SharedPreferences.Editor editor;
-    String DirectoryName;
     DatabaseHelper db;
     private UserLoginTask mAuthTask = null;
     ArrayAdapter<String> provinceAdapter;
@@ -158,30 +144,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 .singleShot(42)
                 .build();
 
-/*        TapTargetView.showFor(this,                 // `this` is an Activity
-                TapTarget.forView(findViewById(R.id.syncData), "Download Data", "Please download data before login")
-                        .outerCircleColor(R.color.colorPrimaryDark)      // Specify a color for the outer circle
-                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
-                        .targetCircleColor(R.color.white54)   // Specify a color for the target circle
-                        .titleTextSize(30)                  // Specify the size (in sp) of the title text
-                        .titleTextColor(R.color.white54)      // Specify the color of the title text
-                        .descriptionTextSize(20)            // Specify the size (in sp) of the description text
-                        .descriptionTextColor(R.color.white)  // Specify the color of the description text
-                        .textColor(R.color.white)            // Specify a color for both the title and description text
-                        .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
-                        .drawShadow(true)                   // Whether to draw a drop shadow or not
-                        .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                        .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
-                        .targetRadius(100),                  // Specify the target radius (in dp)
-                new TapTargetView.Listener() {              // The listener can listen for regular clicks, long clicks or cancels
-                    @Override
-                    public void onTargetClick(TapTargetView view) {
-                        super.onTargetClick(view);      // This call is optional
-                    }
-                });*/
-
-
-//        mPasswordView = findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener((textView, id, keyEvent) -> {
             if (id == R.id.login || id == EditorInfo.IME_NULL) {
                 attemptLogin();
@@ -195,8 +157,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         setListeners();
 
         db = new DatabaseHelper(this);
-//        DB backup
-        dbBackup();
+
+        //DB backup
+        dbBackup(this);
     }
 
     private void setListeners() {
@@ -264,64 +227,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
 
         return true;
-    }
-
-    public void dbBackup() {
-
-        sharedPref = getSharedPreferences("dss01", MODE_PRIVATE);
-        editor = sharedPref.edit();
-
-        if (sharedPref.getBoolean("flag", false)) {
-
-            String dt = sharedPref.getString("dt", "");
-
-            if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
-                editor.apply();
-            }
-
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + PROJECT_NAME);
-            boolean success = true;
-            if (!folder.exists()) {
-                success = folder.mkdirs();
-            }
-            if (success) {
-
-                DirectoryName = folder.getPath() + File.separator + sharedPref.getString("dt", "");
-                folder = new File(DirectoryName);
-                if (!folder.exists()) {
-                    success = folder.mkdirs();
-                }
-                if (success) {
-
-                    try {
-                        File dbFile = new File(this.getDatabasePath(DATABASE_NAME).getPath());
-                        FileInputStream fis = new FileInputStream(dbFile);
-                        String outFileName = DirectoryName + File.separator + DB_NAME;
-                        // Open the empty db as the output stream
-                        OutputStream output = new FileOutputStream(outFileName);
-
-                        // Transfer bytes from the inputfile to the outputfile
-                        byte[] buffer = new byte[1024];
-                        int length;
-                        while ((length = fis.read(buffer)) > 0) {
-                            output.write(buffer, 0, length);
-                        }
-                        // Close the streams
-                        output.flush();
-                        output.close();
-                        fis.close();
-                    } catch (IOException e) {
-                        Log.e("dbBackup:", Objects.requireNonNull(e.getMessage()));
-                    }
-
-                }
-
-            } else {
-                Toast.makeText(this, "Not create folder", Toast.LENGTH_SHORT).show();
-            }
-        }
-
     }
 
     @OnClick(R.id.syncData)
@@ -625,7 +530,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
         return provider1.equals(provider2);
     }
-
 
     private interface ProfileQuery {
         String[] PROJECTION = {

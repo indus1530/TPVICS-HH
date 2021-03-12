@@ -60,7 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.singleUCs.TABLE_NAME;
     private static final String SQL_DELETE_AREAS = "DROP TABLE IF EXISTS " + singleAreas.TABLE_NAME;
     private final String TAG = "DatabaseHelper";
-    private String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
+    private final String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -166,7 +166,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         try {
             JSONObject jsonObjectCC = ((JSONArray) VersionList.get(VersionAppContract.VersionAppTable.COLUMN_VERSION_PATH)).getJSONObject(0);
             VersionAppContract Vc = new VersionAppContract();
-            Vc.Sync(jsonObjectCC);
+            Vc.sync(jsonObjectCC);
 
             ContentValues values = new ContentValues();
 

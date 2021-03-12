@@ -42,5 +42,13 @@ class CONSTANTS {
         const val CHILD_PARENT_NA = "childPrNA"
         const val CHILD_SERIAL = "serial_extra"
 
+        //MainActivity
+        const val LAST_DATA_DOWNLOAD = "lastDataDownload"
+        const val LAST_PHOTO_UPLOAD = "lastPhotoUpload"
+        const val LAST_DATA_UPLOAD = "lastDataUpload"
+        const val DOWNLOAD_FILE_REFID = "downloadFileRefID"
+        const val TAG_NAME = "tagName"
+        const val BACKUP_DT = "backupDT"
+
     }
 }

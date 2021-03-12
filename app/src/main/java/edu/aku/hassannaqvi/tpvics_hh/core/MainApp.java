@@ -31,6 +31,7 @@ import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.contracts.UsersContract;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.CountAlertDialogLayoutBinding;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.SharedStorage;
 
 
 /**
@@ -118,8 +119,7 @@ public class MainApp extends Application {
     }
 
     public static String getTagName(Context mContext) {
-        SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
-        return sharedPref.getString("tagName", null);
+        return SharedStorage.INSTANCE.getTagName(mContext);
     }
 
     public static void endActivity(final Context context, final Activity activity) {

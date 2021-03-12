@@ -1,7 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui.sync;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -17,14 +16,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
@@ -41,15 +37,13 @@ import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllData;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncAllPhotos;
 import edu.aku.hassannaqvi.tpvics_hh.sync.SyncDevice;
 import edu.aku.hassannaqvi.tpvics_hh.utils.AndroidUtilityKt;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.SharedStorage;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DATABASE_NAME;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.DB_NAME;
 import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.dbBackup;
 
-public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDevicInterface {
-    SharedPreferences.Editor editor;
-    SharedPreferences sharedPref;
-    String DirectoryName;
+public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDeviceInterface {
+
     DatabaseHelper db;
     SyncListAdapter syncListAdapter;
     UploadListAdapter uploadListAdapter;
@@ -73,12 +67,9 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         bi.noDataItem.setVisibility(View.VISIBLE);
         listActivityCreated = true;
         uploadlistActivityCreated = true;
-        sharedPref = getSharedPreferences("src", MODE_PRIVATE);
-        editor = sharedPref.edit();
-        db = new DatabaseHelper(this);
-        dbBackup();
+        db = MainApp.appInfo.dbHelper;
+        dbBackup(this);
         sync_flag = getIntent().getBooleanExtra(CONSTANTS.SYNC_LOGIN, false);
-
         setAdapter();
         setUploadAdapter();
     }
@@ -136,11 +127,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
             uploadlistActivityCreated = false;
 
-            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = syncPref.edit();
-
-            editor.putString("LastDataUpload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
-            editor.apply();
+            SharedStorage.INSTANCE.setLastDataUpload(this, new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH).format(new Date()));
 
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
@@ -167,8 +154,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         e.printStackTrace();
                     }
                 }
-                editor.putString("LastPhotoUpload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
-                editor.apply();
+                SharedStorage.INSTANCE.setLastPhotoUpload(this, new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH).format(new Date()));
             } else {
                 Toast.makeText(this, "No photos to upload.", Toast.LENGTH_SHORT).show();
             }
@@ -203,62 +189,6 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         } else {
             bi.noDataItem.setVisibility(View.VISIBLE);
         }
-    }
-
-    private void dbBackup() {
-
-        if (sharedPref.getBoolean("flag", false)) {
-
-            String dt = sharedPref.getString("dt", "");
-
-            if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
-                editor.apply();
-            }
-
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + PROJECT_NAME);
-            boolean success = true;
-            if (!folder.exists()) {
-                success = folder.mkdirs();
-            }
-            if (success) {
-                DirectoryName = folder.getPath() + File.separator + sharedPref.getString("dt", "");
-                folder = new File(DirectoryName);
-                if (!folder.exists()) {
-                    success = folder.mkdirs();
-                }
-                if (success) {
-
-                    try {
-                        File dbFile = new File(this.getDatabasePath(DATABASE_NAME).getPath());
-                        FileInputStream fis = new FileInputStream(dbFile);
-
-                        String outFileName = DirectoryName + File.separator + DB_NAME;
-
-                        // Open the empty db as the output stream
-                        OutputStream output = new FileOutputStream(outFileName);
-
-                        // Transfer bytes from the inputfile to the outputfile
-                        byte[] buffer = new byte[1024];
-                        int length;
-                        while ((length = fis.read(buffer)) > 0) {
-                            output.write(buffer, 0, length);
-                        }
-                        // Close the streams
-                        output.flush();
-                        output.close();
-                        fis.close();
-                    } catch (IOException e) {
-                        Log.e("dbBackup:", e.getMessage());
-                    }
-
-                }
-
-            } else {
-                Toast.makeText(this, "Not create folder", Toast.LENGTH_SHORT).show();
-            }
-        }
-
     }
 
     private class SyncData extends AsyncTask<Boolean, String, String> {
@@ -330,15 +260,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
         @Override
         protected void onPostExecute(String s) {
-            new Handler().postDelayed(() -> {
-                editor.putString("LastDataDownload", new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(new Date()));
-                editor.apply();
-                editor.putBoolean("flag", true);
-                editor.commit();
-
-                dbBackup();
-
-            }, 1200);
+            new Handler().postDelayed(() -> SharedStorage.INSTANCE.setLastDataDownload(mContext, new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.ENGLISH).format(new Date())), 1200);
         }
     }
 
