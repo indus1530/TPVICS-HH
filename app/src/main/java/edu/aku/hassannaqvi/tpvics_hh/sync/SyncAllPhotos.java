@@ -25,7 +25,7 @@ import java.net.URL;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable.PROJECT_NAME;
+import static edu.aku.hassannaqvi.tpvics_hh.database.CreateTable.PROJECT_NAME;
 
 /**
  * Created by ali.azaz on 3/14/2018.
@@ -35,11 +35,11 @@ public class SyncAllPhotos extends AsyncTask<Void, Integer, String> {
 
 
     private String TAG;
-    private Context mContext;
-    private String fileName;
+    private final Context mContext;
+    private final String fileName;
     private File filePath;
     private File sdDir;
-    private String appFolder;
+    private final String appFolder;
     private ProgressDialog pd;
 
     public SyncAllPhotos(String fileName, Context c) {

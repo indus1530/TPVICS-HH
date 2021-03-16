@@ -14,14 +14,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="0dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="false"
-            android:layoutDirection="ltr"
+            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
@@ -31,7 +30,7 @@
                 android:layout_margin="12dp"
                 android:gravity="center_horizontal"
                 android:padding="12dp"
-                android:shadowColor="@color/grayOverlay"
+                android:shadowColor="@color/grayLight"
                 android:shadowDx="2"
                 android:shadowDy="2"
                 android:shadowRadius="2"
@@ -39,8 +38,9 @@
                 android:textColor="@color/colorPrimary" />
 
             <LinearLayout
-                style="@style/hlinearlayout"
-                android:gravity="center_horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
 
                 <Button
@@ -51,22 +51,23 @@
                     android:layout_margin="5dp"
                     android:background="@color/colorPrimary"
                     android:elevation="2dp"
-                    android:onClick="@{callback::btnOnDownloadData}"
+                    android:onClick="ProcessStart"
                     android:padding="16dp"
-                    android:text="@string/btnSync"
+                    android:text="@string/btnDownload"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/btnUpload"
                     style="@style/TextAppearance.AppCompat.Small"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_marginTop="15dp"
                     android:background="@color/colorPrimary"
                     android:elevation="2dp"
-                    android:onClick="@{callback::btnOnUploadData}"
+                    android:onClick="ProcessStart"
                     android:padding="16dp"
                     android:text="@string/btnUpload"
                     android:textColor="@color/white"
@@ -76,15 +77,17 @@
                     android:id="@+id/btnUploadPhotos"
                     style="@style/TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
+
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@color/colorPrimary"
                     android:elevation="2dp"
-                    android:onClick="@{callback::btnUploadPhotos}"
+                    android:onClick="UploadPhotos"
                     android:padding="16dp"
                     android:text="Upload Photos"
                     android:textColor="@color/white"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="visible" />
             </LinearLayout>
 
             <androidx.cardview.widget.CardView
@@ -94,76 +97,93 @@
                 app:cardCornerRadius="2dp"
                 app:cardElevation="1dp">
 
-                <LinearLayout style="@style/vlinearlayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/actionLbl"
+                        android:id="@+id/mTextViewS"
                         style="@style/labels"
+                        android:layout_margin="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@color/dullWhile"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/whiteOverlay"
                         android:elevation="1dp"
                         android:gravity="center_horizontal"
-                        android:shadowColor="@color/gray_material"
-                        android:text="No Action Selected" />
+                        android:paddingBottom="1dp"
+                        android:shadowColor="@color/grayLight"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="Upload Photo"
+                        android:visibility="gone" />
 
-                    <LinearLayout style="@style/hlinearlayout">
+                    <ProgressBar
+                        android:id="@+id/pBar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:progress="1"
+                        android:indeterminate="false"
+                        android:visibility="gone" />
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/rv_sync_list"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
-                                tools:listitem="@layout/sync_list_adapter" />
-
-
-                            <TextView
-                                android:id="@+id/no_item"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:gravity="center"
-                                android:text="No Activty"
-                                android:textColor="@color/red"
-                                android:visibility="gone" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/rv_upload_list"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:visibility="visible"
-                                tools:listitem="@layout/sync_list_adapter">
-
-                            </androidx.recyclerview.widget.RecyclerView>
-
-                            <TextView
-                                android:id="@+id/no_data_item"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:gravity="center"
-                                android:text="No Activty"
-                                android:textColor="@color/red"
-                                android:visibility="gone" />
-                        </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/photoLayout"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/dataLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/activityTitle"
+                            style="@style/labels"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:layout_marginBottom="1dp"
+
+                            android:background="@color/whiteOverlay"
+                            android:elevation="1dp"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="1dp"
+                            android:shadowColor="@color/grayLight"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="1"
+                            android:text="Download Data" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_upload_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            tools:listitem="@layout/sync_list_adapter">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <TextView
+                            android:id="@+id/no_data_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="No Activty"
+                            android:textColor="@color/redLight"
+                            android:visibility="gone" />
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>

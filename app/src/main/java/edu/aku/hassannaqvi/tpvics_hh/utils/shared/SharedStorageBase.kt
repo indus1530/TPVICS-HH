@@ -2,7 +2,6 @@ package edu.aku.hassannaqvi.tpvics_hh.utils.shared
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
-import edu.aku.hassannaqvi.tpvics_hh.R
 
 /*
 * @author Mustufa.Ansari
@@ -11,7 +10,7 @@ import edu.aku.hassannaqvi.tpvics_hh.R
 open class SharedStorageBase {
 
     fun put(context: Context, key: String?, objectValue: Any?) {
-        val mSharedPreferences = context.getSharedPreferences(context.applicationInfo.name.plus(context.resources.getString(R.string.app_name)), MODE_PRIVATE)
+        val mSharedPreferences = context.getSharedPreferences(context.applicationContext.packageName, MODE_PRIVATE)
         val editor = mSharedPreferences.edit()
         when (objectValue) {
             is String -> editor.putString(key, objectValue)
@@ -25,7 +24,7 @@ open class SharedStorageBase {
     }
 
     operator fun get(context: Context, key: String?, defaultObject: Any?): Any? {
-        val mSharedPreferences = context.getSharedPreferences(context.applicationInfo.name.plus(context.resources.getString(R.string.app_name)), MODE_PRIVATE)
+        val mSharedPreferences = context.getSharedPreferences(context.applicationContext.packageName, MODE_PRIVATE)
         return when (defaultObject) {
             is String -> mSharedPreferences.getString(key, defaultObject)
             is Int -> mSharedPreferences.getInt(key, defaultObject)

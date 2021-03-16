@@ -26,17 +26,17 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChBBinding;
-import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
-import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.datecollection.AgeModel;
+import edu.aku.hassannaqvi.tpvics_hh.utils.datecollection.DateRepository;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openWarningActivity;
 
 public class SectionCHBActivity extends AppCompatActivity implements EndSectionActivity {
 

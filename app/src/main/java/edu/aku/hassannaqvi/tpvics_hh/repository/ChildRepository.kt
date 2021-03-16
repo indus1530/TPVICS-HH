@@ -1,9 +1,9 @@
 package edu.aku.hassannaqvi.tpvics_hh.repository
 
 import android.content.Context
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext

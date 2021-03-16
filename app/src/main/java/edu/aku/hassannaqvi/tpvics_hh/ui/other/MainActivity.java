@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui.other;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -31,19 +32,20 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
+import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.CreateTable;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
+import edu.aku.hassannaqvi.tpvics_hh.models.VersionApp;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportCluster;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.tpvics_hh.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sections.SectionInfoActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
-import edu.aku.hassannaqvi.tpvics_hh.utils.CreateTable;
-import edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt;
+import edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.tpvics_hh.utils.WarningActivityInterface;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.SharedStorage;
 
@@ -54,8 +56,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     static File file;
     private final String TAG = MainActivity.class.getName();
     private ActivityMainBinding bi;
-    private final String dtToday = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date());
-    private final String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
+    private final String dtToday = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).format(new Date());
+    private final String sysdateToday = new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date());
     private String preVer = "", newVer = "";
     private DownloadManager downloadManager;
     private Boolean exit = false;
@@ -90,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         }
     };
 
-    void showDialog(String newVer, String preVer) {
-        UtilKt.openWarningActivity(
+    private void showDialog(String newVer, String preVer) {
+        AppUtilsKt.openWarningActivity(
                 this,
                 getString(R.string.app_name) + " APP is available!",
                 getString(R.string.app_name) + " App Ver." + newVer + " is now available. Your are currently using older Ver." + preVer + ".\nInstall new version to use this app.",
@@ -100,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         );
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void openForm(View v) {
         Intent oF = null;
         switch (v.getId()) {
@@ -113,12 +116,22 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         startActivity(oF);
     }
 
+    public void toggleSummary(View view) {
+        if (bi.recordSummary.getVisibility() == View.VISIBLE)
+            bi.recordSummary.setVisibility(View.GONE);
+        else
+            bi.recordSummary.setVisibility(View.VISIBLE);
+    }
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = null;
         switch (item.getItemId()) {
             case R.id.onSync:
-                intent = new Intent(MainActivity.this, SyncActivity.class);
+                intent = new Intent(MainActivity.this, SyncActivity.class)
+                        .putExtra(CONSTANTS.SYNC_LOGIN, true)
+                        .putExtra(CONSTANTS.SYNC_DISTRICTID_LOGIN, MainApp.DIST_ID);
                 break;
             case R.id.checkOpenForms:
                 intent = new Intent(MainActivity.this, PendingFormsActivity.class);
@@ -210,9 +223,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
         rSumText.append("\r\nDEVICE INFORMATION\r\n")
                 .append("  ========================================================\r\n")
-                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format(Locale.getDefault(), "%02d", unclosedForms.size()))
+                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format(Locale.ENGLISH, "%02d", unclosedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
-                .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format(Locale.getDefault(), "%02d", unsyncedForms.size()))
+                .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format(Locale.ENGLISH, "%02d", unsyncedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
                 .append("\t|| Last Data Download: \t\t").append(SharedStorage.INSTANCE.getLastDataDownload(this))
                 .append("\t\t\t\t\t\t||\r\n")
@@ -227,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         bi.databaseBtn.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
 
         // Auto download app
-        VersionAppContract versionApp = appInfo.getDbHelper().getVersionApp();
+        VersionApp versionApp = appInfo.getDbHelper().getVersionApp();
 
         if (versionApp != null) {
             versionApp.getVersioncode();
@@ -275,13 +288,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             bi.testing.setVisibility(View.VISIBLE);
         }
 
-    }
-
-    public void toggleSummary(View view) {
-        if (bi.recordSummary.getVisibility() == View.VISIBLE)
-            bi.recordSummary.setVisibility(View.GONE);
-        else
-            bi.recordSummary.setVisibility(View.VISIBLE);
     }
 
     @Override

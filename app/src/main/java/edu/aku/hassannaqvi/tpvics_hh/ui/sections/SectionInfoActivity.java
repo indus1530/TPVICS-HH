@@ -28,24 +28,24 @@ import java.util.Date;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.BLRandomContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.EnumBlockContract;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionInfoBinding;
+import edu.aku.hassannaqvi.tpvics_hh.models.BLRandom;
+import edu.aku.hassannaqvi.tpvics_hh.models.Clusters;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
-import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.enumBlockContract;
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.clusters;
 
 public class SectionInfoActivity extends AppCompatActivity {
 
     ActivitySectionInfoBinding bi;
     private DatabaseHelper db;
-    private BLRandomContract bl;
+    private BLRandom bl;
     private String message = "Household found";
 
     @Override
@@ -115,11 +115,11 @@ public class SectionInfoActivity extends AppCompatActivity {
         if (formValidation()) {
             try {
                 SaveDraft();
+                finish();
+                startActivity(new Intent(this, SectionSubInfoActivity.class));
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            finish();
-            startActivity(new Intent(SectionInfoActivity.this, SectionSubInfoActivity.class));
         }
     }
 
@@ -128,15 +128,14 @@ public class SectionInfoActivity extends AppCompatActivity {
             if (MainApp.fc.getIstatus().equals("")) return;
         }
         MainApp.fc = new FormsContract();
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setUser(MainApp.userName);
+        MainApp.fc.setUser(MainApp.user.getUserName());
         MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
         MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
         MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
         MainApp.fc.setClusterCode(bi.hh11.getText().toString());
         MainApp.fc.setHhno(bi.hh12.getText().toString().toUpperCase());
         MainApp.fc.setLuid(bl.getLUID());
-        MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        MainApp.fc.setSysDate(new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         setGPS(this); // Set GPS
 
         JSONObject json = new JSONObject();
@@ -150,15 +149,15 @@ public class SectionInfoActivity extends AppCompatActivity {
         json.put("hhhead", bl.getHhhead());
         json.put("bl_hh09", bl.getContact());
         json.put("hhss", bl.getSelStructure());
-        //json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        //json.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
 
 
         json.put("geoarea", bi.hh09txt.getText().toString() + ", " + bi.geoarea.getText().toString());
   /*      json.put("hh07", bi.hh07.getText().toString());
         json.put("hh08", bi.hh08.getText().toString());*/
-        json.put("hh03", MainApp.userName);
-        json.put("hh05", enumBlockContract.getEbcode());
-        String selected = enumBlockContract.getGeoarea();
+        json.put("hh03", MainApp.user.getUserName());
+        json.put("hh05", clusters.getEbcode());
+        String selected = clusters.getGeoarea();
         if (!selected.equals("")) {
             String[] selSplit = selected.split("\\|");
             if (selSplit.length == 4) {
@@ -171,8 +170,6 @@ public class SectionInfoActivity extends AppCompatActivity {
 
         json.put("hh11", bi.hh11.getText().toString());
         json.put("hh12", bi.hh12.getText().toString());
-//        json.put("hh09", MainApp.userName);
-        //json.put("hh074", bi.hh074.getText().toString());
         MainApp.fc.setsInfo(String.valueOf(json));
     }
 
@@ -190,9 +187,9 @@ public class SectionInfoActivity extends AppCompatActivity {
         }
         int cluster = Integer.parseInt(bi.hh11.getText().toString().substring(0, 3));
         if (cluster < 900) {
-            loginFlag = !(MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user"));
+            loginFlag = !(MainApp.user.getUserName().equals("test1234") || MainApp.user.getUserName().equals("dmu@aku") || MainApp.user.getUserName().startsWith("user"));
         } else {
-            loginFlag = MainApp.userName.equals("test1234") || MainApp.userName.equals("dmu@aku") || MainApp.userName.substring(0, 4).equals("user");
+            loginFlag = MainApp.user.getUserName().equals("test1234") || MainApp.user.getUserName().equals("dmu@aku") || MainApp.user.getUserName().startsWith("user");
         }
         if (!loginFlag) {
             Toast.makeText(this, "Can't proceed test cluster for current user!!", Toast.LENGTH_SHORT).show();
@@ -204,7 +201,7 @@ public class SectionInfoActivity extends AppCompatActivity {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(enumBlockContract -> {
-                    MainApp.enumBlockContract = enumBlockContract;
+                    MainApp.clusters = enumBlockContract;
                     String selected = enumBlockContract.getGeoarea();
                     if (!selected.equals("")) {
                         String[] selSplit = selected.split("\\|");
@@ -219,14 +216,14 @@ public class SectionInfoActivity extends AppCompatActivity {
                 });
     }
 
-    private Observable<EnumBlockContract> getEnumerationBlock() {
+    private Observable<Clusters> getEnumerationBlock() {
         return Observable.create(emitter -> {
             emitter.onNext(db.getEnumBlock(bi.hh11.getText().toString()));
             emitter.onComplete();
         });
     }
 
-    private Observable<BLRandomContract> getBLRandomBlock() {
+    private Observable<BLRandom> getBLRandomBlock() {
         return Observable.create(emitter -> {
             emitter.onNext(db.getHHFromBLRandom(bi.hh11.getText().toString(), bi.hh12.getText().toString().toUpperCase()));
             emitter.onComplete();
@@ -245,7 +242,7 @@ public class SectionInfoActivity extends AppCompatActivity {
         bl = null;
         MainApp.fc = null;
         getBLRandomBlock()
-                .flatMap((Function<BLRandomContract, Observable<FormsContract>>)
+                .flatMap((Function<BLRandom, Observable<FormsContract>>)
                         blRandomContract -> {
                             bl = blRandomContract;
                             return getFilledForm();
@@ -266,7 +263,7 @@ public class SectionInfoActivity extends AppCompatActivity {
 
     }
 
-    private void blRandomExist(BLRandomContract bl, String message, Boolean flag) {
+    private void blRandomExist(BLRandom bl, String message, Boolean flag) {
         if (bl != null) {
             bi.hh12msg.setText(message);
             bi.hh12name.setText(bl.getHhhead().toUpperCase());

@@ -17,12 +17,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSs1Binding;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openEndActivity;
 
 public class SectionSS1Activity extends AppCompatActivity {
 
@@ -42,11 +42,7 @@ public class SectionSS1Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.ss04.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ss04b.getId()) {
-                Clear.clearAllFields(bi.ss05cv, false);
-            } else {
-                Clear.clearAllFields(bi.ss05cv, true);
-            }
+            Clear.clearAllFields(bi.ss05cv, i != bi.ss04b.getId());
         }));
 
 

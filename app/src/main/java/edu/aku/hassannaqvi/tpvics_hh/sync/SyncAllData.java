@@ -23,9 +23,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 import java.util.List;
 
-import edu.aku.hassannaqvi.tpvics_hh.adapter.UploadListAdapter;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
-import edu.aku.hassannaqvi.tpvics_hh.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.tpvics_hh.adapters.UploadListAdapter;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
+import edu.aku.hassannaqvi.tpvics_hh.models.SyncModel;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -37,15 +37,18 @@ public class SyncAllData extends AsyncTask<Void, Integer, String> {
 
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
-    private UploadListAdapter adapter;
-    private List<SyncModel> uploadlist;
-    private int position;
-    private String TAG;
-    private Context mContext;
+    private final UploadListAdapter adapter;
+    private final List<SyncModel> uploadlist;
+    private final int position;
+    private final String TAG;
+    private final Context mContext;
     private ProgressDialog pd;
-    private String syncClass, url, tableName, updateSyncClass;
-    private Class contractClass;
-    private Collection dbData;
+    private final String syncClass;
+    private final String url;
+    private final String tableName;
+    private final String updateSyncClass;
+    private final Class contractClass;
+    private final Collection dbData;
     private DatabaseHelper db;
 
     public SyncAllData(Context mContext, String syncClass, String updateSyncClass, Class contractClass, String url,

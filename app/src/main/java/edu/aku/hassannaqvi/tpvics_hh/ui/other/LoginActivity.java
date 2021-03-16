@@ -63,10 +63,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.DistrictContract;
 import edu.aku.hassannaqvi.tpvics_hh.core.AppInfo;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.models.Districts;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.AndroidUtilityKt;
 import kotlin.Pair;
@@ -80,8 +79,8 @@ import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_REA
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
 import static edu.aku.hassannaqvi.tpvics_hh.repository.SplashRepositoryKt.populatingSpinners;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.dbBackup;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.getPermissionsList;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.dbBackup;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.getPermissionsList;
 import static java.lang.Thread.sleep;
 
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
@@ -109,7 +108,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     LinearLayout spinners;
     @BindView(R.id.spinnerDistrict)
     Spinner spinnerDistrict;
-    DatabaseHelper db;
     private UserLoginTask mAuthTask = null;
     ArrayAdapter<String> provinceAdapter;
 
@@ -156,8 +154,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         setListeners();
 
-        db = new DatabaseHelper(this);
-
         //DB backup
         dbBackup(this);
     }
@@ -170,7 +166,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0) return;
                 List<String> districts = new ArrayList<>(Collections.singletonList("...."));
-                for (Map.Entry<String, Pair<String, DistrictContract>> entry : SplashscreenActivity.districtsMap.entrySet()) {
+                for (Map.Entry<String, Pair<String, Districts>> entry : SplashscreenActivity.districtsMap.entrySet()) {
                     if (entry.getValue().getFirst().equals(spinnerProvince.getSelectedItem().toString()))
                         districts.add(entry.getKey());
                 }
@@ -235,7 +231,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
             return;
         }
-        startActivity(new Intent(this, SyncActivity.class).putExtra(CONSTANTS.SYNC_LOGIN, true));
+        startActivity(new Intent(this, SyncActivity.class));
     }
 
     private void populateAutoComplete() {
@@ -282,7 +278,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             if (!Validator.emptyCheckingContainer(this, spinners))
                 return;
             showProgress(true);
-            mAuthTask = new UserLoginTask(this, email, password);
+            mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
     }
@@ -632,12 +628,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         private final String mEmail;
         private final String mPassword;
-        private final Context mContext;
 
-        UserLoginTask(Context context, String email, String password) {
+        UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
-            mContext = context;
         }
 
 
@@ -675,15 +669,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             assert mlocManager != null;
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
+                MainApp.user = MainApp.appInfo.dbHelper.getLoginUser(mEmail, mPassword);
                 if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
-                        (mEmail.equals("guest@aku") && mPassword.equals("aku1234")) || db.Login(mEmail, mPassword)
-                        || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
-                    MainApp.userName = mEmail;
+                        (mEmail.equals("guest@aku") && mPassword.equals("aku1234"))
+                        || (mEmail.equals("test1234") && mPassword.equals("test1234")) || MainApp.user != null) {
                     MainApp.admin = mEmail.contains("@");
                     Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(iLogin);
-
                 } else {
                     mPasswordView.setError(getString(R.string.error_incorrect_password));
                     mPasswordView.requestFocus();

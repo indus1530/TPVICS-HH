@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -12,10 +13,10 @@ import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.CHILD_SERIAL
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.FSTATUS_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.Companion.SUB_INFO_END_FLAG
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.adapter.ChildListAdapter
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract
+import edu.aku.hassannaqvi.tpvics_hh.adapters.ChildListAdapter
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSubInfoBinding
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity
 import edu.aku.hassannaqvi.tpvics_hh.utils.contextEndActivity
@@ -38,6 +39,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
     companion object {
         lateinit var mainVModel: MainVModel
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +64,15 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         setUI()
     }
 
+    override fun endSecActivity(flag: Boolean) {
+        finish()
+        startActivity(Intent(this, EndingActivity::class.java)
+                .putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
+                .putExtra(FSTATUS_END_FLAG, MainApp.fc.getfStatus())
+                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+    }
+
+
     fun onHHViewClick() {
         if (!hhFlag) return
         startActivity(Intent(this, SectionHHActivity::class.java))
@@ -79,19 +90,17 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                         ActionItem(
                                 0,
                                 "Force Stop",
-                                getDrawable(R.drawable.ic_warning_black_24dp)
-                        )
-                        ,
+                                ContextCompat.getDrawable(this, R.drawable.ic_warning_black_24dp)
+                        ),
                         ActionItem(
                                 1,
                                 "Partial Complete",
-                                getDrawable(R.drawable.ic_battery_black_24dp)
-                        )
-                        ,
+                                ContextCompat.getDrawable(this, R.drawable.ic_battery_black_24dp)
+                        ),
                         ActionItem(
                                 2,
                                 "End Household",
-                                getDrawable(R.drawable.ic_closed_caption_black_24dp)
+                                ContextCompat.getDrawable(this, R.drawable.ic_closed_caption_black_24dp)
                         )
                 ),
                 onClick = { item: ActionItem ->
@@ -116,6 +125,7 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
         ).show(this)
 
     }
+
 
     private fun setUI() {
         when (MainApp.fc.getfStatus()) {
@@ -144,20 +154,10 @@ class SectionSubInfoActivity : AppCompatActivity(), EndSectionActivity {
                 bi.instruction.text = getString(R.string.end_interview)
             }
         }
-
-
-    }
-
-    override fun endSecActivity(flag: Boolean) {
-        finish()
-        startActivity(Intent(this, EndingActivity::class.java)
-                .putExtra("complete", flag).putExtra(SUB_INFO_END_FLAG, true)
-                .putExtra(FSTATUS_END_FLAG, MainApp.fc.getfStatus())
-                .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
     }
 
     private fun setupRecyclerView(membersLst: MutableList<ChildContract>) {
-        adapter = ChildListAdapter(this, membersLst, mainVModel)
+        adapter = ChildListAdapter(this, membersLst)
         bi.formScroll.recyclerViewChildren.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         bi.formScroll.recyclerViewChildren.adapter = adapter
     }

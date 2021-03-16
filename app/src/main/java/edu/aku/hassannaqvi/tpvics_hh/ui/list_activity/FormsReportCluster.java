@@ -15,9 +15,9 @@ import java.util.Date;
 import java.util.List;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.adapter.FormsAdapter;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
+import edu.aku.hassannaqvi.tpvics_hh.adapters.FormsAdapter;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 
 public class FormsReportCluster extends AppCompatActivity {
     DatabaseHelper db;
@@ -32,7 +32,7 @@ public class FormsReportCluster extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forms_report_cluster);
-        recyclerView = (RecyclerView) findViewById(R.id.fc_recycler_view);
+        recyclerView = findViewById(R.id.fc_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView

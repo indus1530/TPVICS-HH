@@ -2,7 +2,7 @@
 <resources>
     <!-- Default Strings -->
     <string name="app_name"> TPVICS - HOUSEHOLD SURVEY in Urdu Language </string>
-    <string name="btnSync">Download Data</string>
+    <string name="btnDownload">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

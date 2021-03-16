@@ -19,14 +19,16 @@ import java.util.*
 
 class EndingActivity : AppCompatActivity() {
     lateinit var bi: ActivityEndingBinding
-    private var subInfoEndActivityFlag = false
+    private val subInfoEndActivityFlag by lazy {
+        intent.getBooleanExtra(CONSTANTS.SUB_INFO_END_FLAG, false)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_ending)
         bi.callback = this
 
         val check = intent.getBooleanExtra("complete", false)
-        subInfoEndActivityFlag = intent.getBooleanExtra(CONSTANTS.SUB_INFO_END_FLAG, false)
         val fStatus = intent.getStringExtra(CONSTANTS.FSTATUS_END_FLAG)
         val fStatusEndActivityFlag = fStatus != null
         if (check) {
@@ -91,8 +93,17 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun saveDraft() {
-        val statusValue = if (bi.istatusa.isChecked) "1" else if (bi.istatusb.isChecked) "2" else if (bi.istatusc.isChecked) "3" else if (bi.istatusd.isChecked) "4" else if (bi.istatuse.isChecked) "5"
-        else if (bi.istatusf.isChecked) "6" else if (bi.istatusg.isChecked) "7" else if (bi.istatus96.isChecked) "96" else "0"
+        val statusValue = when {
+            bi.istatusa.isChecked -> "1"
+            bi.istatusb.isChecked -> "2"
+            bi.istatusc.isChecked -> "3"
+            bi.istatusd.isChecked -> "4"
+            bi.istatuse.isChecked -> "5"
+            bi.istatusf.isChecked -> "6"
+            bi.istatusg.isChecked -> "7"
+            bi.istatus96.isChecked -> "96"
+            else -> "0"
+        }
         if (subInfoEndActivityFlag) {
             MainApp.fc.istatus = statusValue
             MainApp.fc.istatus88x = bi.istatus96x.text.toString()

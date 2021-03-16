@@ -13,15 +13,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChEBinding;
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openChildEndActivity;
 
 public class SectionCHEActivity extends AppCompatActivity {
 

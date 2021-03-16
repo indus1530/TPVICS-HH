@@ -72,5 +72,7 @@
     <color name="died">#33A5A5A5</color>
     <color name="refused">#33EC701C</color>
     <color name="dssIncorrect">#337f00ff</color>
+    <color name="grayLight">#efefef</color>
+    <color name="redLight">#d6ef0000</color>
 
 </resources>

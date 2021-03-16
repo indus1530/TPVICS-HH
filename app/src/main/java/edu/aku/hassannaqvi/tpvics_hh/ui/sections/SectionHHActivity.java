@@ -19,16 +19,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionHhBinding;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.JSONUtils;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.fc;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.contextEndActivity;
 
 public class SectionHHActivity extends AppCompatActivity implements EndSectionActivity {
 

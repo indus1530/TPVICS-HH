@@ -17,13 +17,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionSs2Binding;
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.EndingActivity;
 
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openEndActivity;
 
 public class SectionSS2Activity extends AppCompatActivity {
 
@@ -42,20 +42,12 @@ public class SectionSS2Activity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.ss22.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ss22b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVss23, false);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVss23, true);
-            }
+            Clear.clearAllFields(bi.fldGrpCVss23, i != bi.ss22b.getId());
         }));
 
 
         bi.ss24.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ss24b.getId()) {
-                Clear.clearAllFields(bi.ss25cvall, false);
-            } else {
-                Clear.clearAllFields(bi.ss25cvall, true);
-            }
+            Clear.clearAllFields(bi.ss25cvall, i != bi.ss24b.getId());
         }));
 
     }

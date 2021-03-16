@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.contracts.DistrictContract
+import edu.aku.hassannaqvi.tpvics_hh.models.Districts
 import kotlinx.coroutines.*
 
 /**
@@ -36,7 +36,7 @@ class SplashscreenActivity : Activity() {
     companion object {
         private const val SPLASH_TIME_OUT = 500
         lateinit var provinces: MutableList<String>
-        lateinit var districtsMap: MutableMap<String, Pair<String, DistrictContract>>
+        lateinit var districtsMap: MutableMap<String, Pair<String, Districts>>
     }
 
     override fun onPause() {

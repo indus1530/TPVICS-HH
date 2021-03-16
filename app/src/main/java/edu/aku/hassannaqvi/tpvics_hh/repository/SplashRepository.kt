@@ -2,7 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.repository
 
 import android.content.Context
 import android.widget.ArrayAdapter
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.SplashscreenActivity.Companion.districtsMap
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.SplashscreenActivity.Companion.provinces
 import kotlinx.coroutines.Dispatchers

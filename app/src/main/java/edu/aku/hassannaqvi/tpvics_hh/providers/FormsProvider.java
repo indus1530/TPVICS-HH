@@ -22,8 +22,8 @@
  import android.database.sqlite.SQLiteDatabase;
  import android.net.Uri;
 
- import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract;
- import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
+ import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
+ import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 
  public class FormsProvider extends ContentProvider {
 

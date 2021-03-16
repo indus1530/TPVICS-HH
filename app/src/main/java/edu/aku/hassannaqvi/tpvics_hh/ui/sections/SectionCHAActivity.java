@@ -21,10 +21,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChABinding;
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
 
@@ -32,8 +32,8 @@ import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_NO_ANSWER;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_PARENT_NA;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_SERIAL;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.enumBlockContract;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.contextEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.clusters;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.contextEndActivity;
 
 public class SectionCHAActivity extends AppCompatActivity implements EndSectionActivity {
 
@@ -52,11 +52,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
     private void setupListeners() {
 
         bi.ec19.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ec19a.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVec21, false);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVec21, true);
-            }
+            Clear.clearAllFields(bi.fldGrpCVec21, i != bi.ec19a.getId());
         }));
 
         bi.ec13.setText(String.valueOf(getIntent().getIntExtra(CHILD_SERIAL, 0)));
@@ -89,7 +85,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         long updcount = db.addChild(child);
         child.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
-            child.setUID(MainApp.deviceId + child.get_ID());
+            child.setUID(MainApp.appInfo.getDeviceID() + child.get_ID());
             db.updatesChildColumn(ChildContract.ChildTable.COLUMN_UID, child.getUID());
             return true;
         } else {
@@ -108,21 +104,21 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
         child.setcluster(MainApp.fc.getClusterCode());
         child.setFormDate(MainApp.fc.getFormDate());
         child.setSysDate(MainApp.fc.getSysDate());
-        child.setUser(MainApp.userName);
+        child.setUser(MainApp.user.getUserName());
         child.setChildSerial(bi.ec13.getText().toString());
         child.setChildName(bi.ec14.getText().toString());
         child.setgender(bi.ec151.isChecked() ? "1" : bi.ec152.isChecked() ? "2" : "0");
 
         JSONObject f1 = new JSONObject();
-        //f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.getDefault()).format(new Date().getTime()));
+        //f1.put("sysdate", new SimpleDateFormat("dd-MM-yy HH:mm", Locale.ENGLISH).format(new Date().getTime()));
         f1.put("appversion", MainApp.appInfo.getAppVersion());
         f1.put("_luid", MainApp.fc.getLuid());
 //        f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec01", bi.ec01.getText().toString());
         f1.put("ec02", bi.ec02.getText().toString());
-        f1.put("ec03", MainApp.userName);
-        f1.put("ec05", enumBlockContract.getEbcode());
-        String selected = enumBlockContract.getGeoarea();
+        f1.put("ec03", MainApp.user.getUserName());
+        f1.put("ec05", clusters.getEbcode());
+        String selected = clusters.getGeoarea();
         if (!selected.equals("")) {
             String[] selSplit = selected.split("\\|");
             if (selSplit.length == 4) {

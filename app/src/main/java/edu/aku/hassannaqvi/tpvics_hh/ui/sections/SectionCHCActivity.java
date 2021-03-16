@@ -24,24 +24,24 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.contracts.ChildContract;
-import edu.aku.hassannaqvi.tpvics_hh.core.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivitySectionChCBinding;
-import edu.aku.hassannaqvi.tpvics_hh.datecollection.AgeModel;
-import edu.aku.hassannaqvi.tpvics_hh.datecollection.DateRepository;
+import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.ChildEndingActivity;
 import edu.aku.hassannaqvi.tpvics_hh.ui.other.TakePhoto;
 import edu.aku.hassannaqvi.tpvics_hh.utils.DateUtils;
 import edu.aku.hassannaqvi.tpvics_hh.utils.EndSectionActivity;
+import edu.aku.hassannaqvi.tpvics_hh.utils.datecollection.AgeModel;
+import edu.aku.hassannaqvi.tpvics_hh.utils.datecollection.DateRepository;
 import kotlin.Pair;
 
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.CHILD_ENDING_AGE_ISSUE;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM01FLAG;
 import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.IM02CARDSEEN;
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.child;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openChildEndActivity;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.UtilKt.openWarningActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openChildEndActivity;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.openWarningActivity;
 
 public class SectionCHCActivity extends AppCompatActivity implements EndSectionActivity {
 

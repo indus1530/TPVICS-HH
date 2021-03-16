@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import edu.aku.hassannaqvi.tpvics_hh.R
-import edu.aku.hassannaqvi.tpvics_hh.adapter.PendingListAdapter
-import edu.aku.hassannaqvi.tpvics_hh.contracts.FormsContract
+import edu.aku.hassannaqvi.tpvics_hh.adapters.PendingListAdapter
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityPendingFormsBinding
+import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract
 
 class PendingFormsActivity : AppCompatActivity() {
 
