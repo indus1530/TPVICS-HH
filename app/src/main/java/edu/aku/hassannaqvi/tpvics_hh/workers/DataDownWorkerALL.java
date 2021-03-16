@@ -23,6 +23,7 @@ import java.net.URL;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
 
 
 public class DataDownWorkerALL extends Worker {
@@ -43,7 +44,7 @@ public class DataDownWorkerALL extends Worker {
         //uploadColumns = workerParams.getInputData().getString("columns");
         uploadWhere = workerParams.getInputData().getString("where");
 
-        notify = new NotificationUtils(context, 1);
+        notify = new NotificationUtils(context, position + 1);
     }
 
     /*
@@ -100,7 +101,7 @@ public class DataDownWorkerALL extends Worker {
             Log.d(TAG, "Upload Begins: " + jsonTable.toString());
 
 
-            wr.writeBytes(String.valueOf(jsonTable));
+            wr.writeBytes(ServerSecurity.encrypt(String.valueOf(jsonTable)));
             wr.flush();
             wr.close();
 
@@ -122,6 +123,7 @@ public class DataDownWorkerALL extends Worker {
                     result.append(line);
 
                 }
+                result = new StringBuilder(ServerSecurity.decrypt(result.toString()));
                 if (result.toString().equals("[]")) {
                     notify.displayNotification(nTitle, "No data received from server");
                     Log.d(TAG, "No data received from server: " + result);
@@ -162,7 +164,7 @@ public class DataDownWorkerALL extends Worker {
 
         }
 
-        notify.displayNotification(nTitle, String.format(Locale.ENGLISH, "Download %d records", result.length()));
+        notify.displayNotification(nTitle, String.format(Locale.ENGLISH, "Downloaded %d records", result.length()));
         ///BE CAREFULL DATA.BUILDER CAN HAVE ONLY 1024O BYTES. EACH CHAR HAS 8 bits
         MainApp.downloadData[this.position] = String.valueOf(result);
 

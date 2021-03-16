@@ -193,7 +193,7 @@ public class BLRandom {
 
     public static abstract class BLRandomHHTable implements BaseColumns {
 
-        public static final String TABLE_NAME = "bl_randomized";
+        public static final String TABLE_NAME = "bl_randomised";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
         public static final String COLUMN_LUID = "UID";

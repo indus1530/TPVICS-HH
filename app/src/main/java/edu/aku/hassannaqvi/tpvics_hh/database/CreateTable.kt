@@ -104,7 +104,7 @@ object CreateTable {
             + ChildTable.COLUMN_CSTATUS88x + " TEXT );")
 
     const val SQL_CREATE_DISTRICTS = ("CREATE TABLE " + Districts.DistrictTable.TABLE_NAME + "("
-            + Districts.DistrictTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + Districts.DistrictTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + Districts.DistrictTable.COLUMN_DIST_ID + " TEXT,"
             + Districts.DistrictTable.COLUMN_DIST_NAME + " TEXT,"
             + Districts.DistrictTable.COLUMN_PROVINCE_NAME + " TEXT );")

@@ -39,7 +39,7 @@ final public class ServerSecurity {
             return new String(cipher.doFinal(cipherText), StandardCharsets.UTF_8);
         } catch (Exception e) {
             e.getMessage();
-            return null;
+            return "[]";
         }
     }
 }

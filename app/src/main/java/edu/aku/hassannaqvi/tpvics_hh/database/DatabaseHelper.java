@@ -212,7 +212,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 JSONObject jsonObjectUser = distList.getJSONObject(i);
 
                 Districts dist = new Districts();
-                dist.Sync(jsonObjectUser);
+                dist.sync(jsonObjectUser);
                 ContentValues values = new ContentValues();
 
                 values.put(Districts.DistrictTable.COLUMN_DIST_ID, dist.getDist_id());
@@ -510,12 +510,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
-        String[] columns = {
-                VersionApp.VersionAppTable.COLUMN_ID,
-                VersionApp.VersionAppTable.COLUMN_VERSION_CODE,
-                VersionApp.VersionAppTable.COLUMN_VERSION_NAME,
-                VersionApp.VersionAppTable.COLUMN_PATH_NAME
-        };
+        String[] columns = null;
 
         String whereClause = null;
         String[] whereArgs = null;
@@ -524,7 +519,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String orderBy = null;
 
-        VersionApp allVC = new VersionApp();
+        VersionApp allVC = null;
         try {
             c = db.query(
                     VersionApp.VersionAppTable.TABLE_NAME,  // The table to query
@@ -536,7 +531,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                allVC.hydrate(c);
+                allVC = new VersionApp().hydrate(c);
             }
         } finally {
             if (c != null) {
@@ -554,18 +549,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
-        String[] columns = {
-                FormsTable._ID,
-                FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_FORMDATE,
-                FormsTable.COLUMN_SYSDATE,
-                FormsTable.COLUMN_CLUSTERCODE,
-                FormsTable.COLUMN_HHNO,
-                FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_FSTATUS,
-                FormsTable.COLUMN_SYNCED,
-
-        };
+        String[] columns = null;
         String whereClause = FormsTable.COLUMN_SYSDATE + " Like ? ";
         String[] whereArgs = new String[]{"%" + sysdate + " %"};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
@@ -614,18 +598,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
-        String[] columns = {
-                FormsTable._ID,
-                FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_FORMDATE,
-                FormsTable.COLUMN_SYSDATE,
-                FormsTable.COLUMN_CLUSTERCODE,
-                FormsTable.COLUMN_HHNO,
-                FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_FSTATUS,
-                FormsTable.COLUMN_SYNCED,
-
-        };
+        String[] columns = null;
         String whereClause = FormsTable.COLUMN_CLUSTERCODE + " = ? ";
         String[] whereArgs = new String[]{cluster};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
@@ -944,19 +917,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
-        String[] columns = {
-                Districts.DistrictTable._ID,
-                Districts.DistrictTable.COLUMN_DIST_ID,
-                Districts.DistrictTable.COLUMN_DIST_NAME,
-                Districts.DistrictTable.COLUMN_PROVINCE_NAME
-        };
+        String[] columns = null;
 
         String whereClause = null;
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
 
-        String orderBy = Districts.DistrictTable._ID + " ASC";
+        String orderBy = Districts.DistrictTable.COLUMN_ID + " ASC";
         List<Districts> allEB = new ArrayList<>();
         try {
             c = db.query(
@@ -969,7 +937,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
-                allEB.add(new Districts().Hydrate(c));
+                allEB.add(new Districts().hydrate(c));
             }
         } finally {
             if (c != null) {
