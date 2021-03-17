@@ -101,7 +101,7 @@ public class DataDownWorkerALL extends Worker {
             Log.d(TAG, "Upload Begins: " + jsonTable.toString());
 
 
-            wr.writeBytes(ServerSecurity.encrypt(String.valueOf(jsonTable)));
+            wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable)));
             wr.flush();
             wr.close();
 
@@ -123,7 +123,7 @@ public class DataDownWorkerALL extends Worker {
                     result.append(line);
 
                 }
-                result = new StringBuilder(ServerSecurity.decrypt(result.toString()));
+                result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString()));
                 if (result.toString().equals("[]")) {
                     notify.displayNotification(nTitle, "No data received from server");
                     Log.d(TAG, "No data received from server: " + result);

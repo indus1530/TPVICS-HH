@@ -19,6 +19,7 @@ import org.threeten.bp.ZoneId;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
@@ -163,7 +164,7 @@ public class SectionCHAActivity extends AppCompatActivity implements EndSectionA
 
         //Setting Date
         try {
-            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.ec01.getText().toString())) + "T06:24:01Z");
+            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(bi.ec01.getText().toString())) + "T06:24:01Z");
             child.setLocalDate(LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate());
         } catch (ParseException e) {
             e.printStackTrace();

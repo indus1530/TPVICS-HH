@@ -151,7 +151,7 @@ public class SyncActivity extends AppCompatActivity {
                 }
                 MainApp.downloadData = new String[downloadTables.size()];
                 setAdapter(downloadTables);
-                BeginDownload();
+                beginDownload();
                 break;
 
             default:
@@ -274,7 +274,7 @@ public class SyncActivity extends AppCompatActivity {
     }
 
 
-    private void BeginDownload() {
+    private void beginDownload() {
         List<OneTimeWorkRequest> workRequests = new ArrayList<>();
         for (int i = 0; i < downloadTables.size(); i++) {
             Data.Builder data = new Data.Builder()

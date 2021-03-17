@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
@@ -62,7 +63,7 @@ public class DateUtils {
     }
 
     public static String convertDateFormat(String dateStr) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         try {
             Date d = sdf.parse(dateStr);
             return new SimpleDateFormat("dd/MM/yyyy").format(d);
@@ -134,7 +135,7 @@ public class DateUtils {
     }
 
     public static Calendar getDate(String value) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         Calendar calendar = Calendar.getInstance();
         try {
             Date date = sdf.parse(value);
@@ -185,7 +186,7 @@ public class DateUtils {
     }
 
     public static Calendar getCalDate(String value) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         Calendar calendar = Calendar.getInstance();
         try {
             Date date = sdf.parse(value);

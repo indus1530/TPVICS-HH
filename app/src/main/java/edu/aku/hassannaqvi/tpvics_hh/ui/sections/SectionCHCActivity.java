@@ -22,6 +22,7 @@ import org.threeten.bp.ZoneId;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
@@ -165,7 +166,7 @@ public class SectionCHCActivity extends AppCompatActivity implements EndSectionA
 //                    if (child.getCalculatedDOB() == null) {
                     //Setting Date
                     try {
-                        dtInstant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+                        dtInstant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(
                                 day + "-" + month + "-" + year
                         )) + "T06:24:01Z");
 

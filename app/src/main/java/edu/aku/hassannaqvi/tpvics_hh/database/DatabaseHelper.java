@@ -392,11 +392,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = null;
-
-        String whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_ISTATUS + " != '' ";
-
+        String whereClause = null;
         String[] whereArgs = null;
-
         String groupBy = null;
         String having = null;
 
@@ -434,9 +431,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = null;
-
-        String whereClause = ChildTable.COLUMN_SYNCED + " is null";
-
+        String whereClause = null;
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
@@ -1072,7 +1067,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void updateSyncedForms(String id) {
+    public void updateSyncedforms(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
@@ -1091,7 +1086,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedChildForms(String id) {
+    public void updateSyncedchild_table(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column

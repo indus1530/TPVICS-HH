@@ -66,6 +66,7 @@ import edu.aku.hassannaqvi.tpvics_hh.R;
 import edu.aku.hassannaqvi.tpvics_hh.core.AppInfo;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.models.Districts;
+import edu.aku.hassannaqvi.tpvics_hh.models.Users;
 import edu.aku.hassannaqvi.tpvics_hh.ui.sync.SyncActivity;
 import edu.aku.hassannaqvi.tpvics_hh.utils.AndroidUtilityKt;
 import kotlin.Pair;
@@ -673,6 +674,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
                         (mEmail.equals("guest@aku") && mPassword.equals("aku1234"))
                         || (mEmail.equals("test1234") && mPassword.equals("test1234")) || MainApp.user != null) {
+
+                    if (MainApp.user == null) {
+                        MainApp.user = new Users(mEmail, MainApp.DIST_ID);
+                    }
+
                     MainApp.admin = mEmail.contains("@");
                     Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(iLogin);

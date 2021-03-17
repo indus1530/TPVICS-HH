@@ -14,6 +14,7 @@ import android.text.format.DateFormat;
 import androidx.core.app.ActivityCompat;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
+import com.scottyab.rootbeer.RootBeer;
 
 import org.json.JSONArray;
 
@@ -86,6 +87,12 @@ public class MainApp extends Application {
         );
         //Initiate DateTime
         AndroidThreeTen.init(this);
+
+        RootBeer rootBeer = new RootBeer(this);
+        if (rootBeer.isRooted()) {
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+        }
     }
 
     protected void showCurrentLocation() {

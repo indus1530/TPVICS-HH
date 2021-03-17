@@ -14,6 +14,14 @@ class Users {
     var password: String = StringUtils.EMPTY
     var distID: String = StringUtils.EMPTY
 
+    constructor(userName: String, distID: String) {
+        this.userName = userName
+        this.distID = distID
+    }
+
+    constructor()
+
+
     @Throws(JSONException::class)
     fun sync(jsonObject: JSONObject): Users {
         userName = jsonObject.getString(UserTable.COLUMN_USERNAME)

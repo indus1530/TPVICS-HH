@@ -27,6 +27,7 @@ import org.threeten.bp.ZoneId;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.tpvics_hh.R;
@@ -73,7 +74,7 @@ public class SectionCHDActivity extends AppCompatActivity {
         try {
             String txt02 = editTextPicker02.getText().toString();
             String txt03 = editTextPicker03.getText().toString();
-            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).parse(
                     txt01 + "-" + txt02 + "-" + txt03
             )) + "T06:24:01Z");
             return LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();

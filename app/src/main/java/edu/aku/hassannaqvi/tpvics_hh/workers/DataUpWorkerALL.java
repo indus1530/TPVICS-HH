@@ -23,6 +23,7 @@ import java.net.URL;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
 
 
 public class DataUpWorkerALL extends Worker {
@@ -110,7 +111,7 @@ public class DataUpWorkerALL extends Worker {
             Log.d(TAG, "Upload Begins Length: " + jsonParam.length());
             Log.d(TAG, "Upload Begins: " + jsonParam);
 
-            wr.writeBytes(jsonParam.toString());
+            wr.writeBytes(ServerSecurity.INSTANCE.encrypt(jsonParam.toString()));
             wr.flush();
             wr.close();
 
