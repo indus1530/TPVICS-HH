@@ -63,6 +63,12 @@ public class MainApp extends Application {
     public void onCreate() {
         super.onCreate();
 
+        RootBeer rootBeer = new RootBeer(this);
+        if (rootBeer.isRooted()) {
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+        }
+
         /*Setting fonts*/
         TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/JameelNooriNastaleeq.ttf");
         // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
@@ -88,11 +94,6 @@ public class MainApp extends Application {
         //Initiate DateTime
         AndroidThreeTen.init(this);
 
-        RootBeer rootBeer = new RootBeer(this);
-        if (rootBeer.isRooted()) {
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-        }
     }
 
     protected void showCurrentLocation() {

@@ -23,6 +23,7 @@ import java.net.URL;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
 
 
@@ -101,7 +102,7 @@ public class DataDownWorkerALL extends Worker {
             Log.d(TAG, "Upload Begins: " + jsonTable.toString());
 
 
-            wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable)));
+            wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
             wr.flush();
             wr.close();
 
@@ -123,7 +124,7 @@ public class DataDownWorkerALL extends Worker {
                     result.append(line);
 
                 }
-                result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString()));
+                result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString(), Keys.INSTANCE.apiKey()));
                 if (result.toString().equals("[]")) {
                     notify.displayNotification(nTitle, "No data received from server");
                     Log.d(TAG, "No data received from server: " + result);
