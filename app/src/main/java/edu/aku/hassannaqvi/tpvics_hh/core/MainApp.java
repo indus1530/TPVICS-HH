@@ -21,10 +21,12 @@ import org.json.JSONArray;
 import java.io.File;
 import java.util.List;
 
+import edu.aku.hassannaqvi.tpvics_hh.BuildConfig;
 import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract;
 import edu.aku.hassannaqvi.tpvics_hh.models.Clusters;
 import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.models.Users;
+import timber.log.Timber;
 
 
 /**
@@ -34,8 +36,8 @@ import edu.aku.hassannaqvi.tpvics_hh.models.Users;
 public class MainApp extends Application {
 
     public static final String TAG = "AppMain";
-    //    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
-    public static final String _IP = "http://f38158";// .TEST server
+    public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
+    //    public static final String _IP = "http://f38158";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/tpvics/api/";// .TEST server;
     public static final String _SERVER_URL = "syncenc.php";
     public static final String _SERVER_GET_URL = "getdataenc.php";
@@ -93,6 +95,11 @@ public class MainApp extends Application {
         );
         //Initiate DateTime
         AndroidThreeTen.init(this);
+
+        //Timber
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
 
     }
 

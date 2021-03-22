@@ -109,12 +109,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(BLRandomHHTable.TABLE_NAME, null, null);
 
-        JSONArray jsonArray = blList;
         int insertCount = 0;
-        for (int i = 0; i < jsonArray.length(); i++) {
+        for (int i = 0; i < blList.length(); i++) {
             JSONObject jsonObjectCC = null;
             try {
-                jsonObjectCC = jsonArray.getJSONObject(i);
+                jsonObjectCC = blList.getJSONObject(i);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -125,7 +124,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            Log.d(TAG, "syncBLRandom: " + Vc.get_ID());
             ContentValues values = new ContentValues();
 
             values.put(BLRandomHHTable.COLUMN_ID, Vc.get_ID());
@@ -194,7 +192,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
 
         } catch (Exception e) {
-            Log.d(TAG, "syncUser(e): " + e);
             db.close();
         } finally {
             db.close();
@@ -223,7 +220,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
 
         } catch (Exception e) {
-            Log.d(TAG, "syncDist(e): " + e);
             db.close();
         } finally {
             db.close();

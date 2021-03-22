@@ -1,7 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.workers;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.work.Data;
@@ -25,6 +24,7 @@ import java.util.Locale;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
+import timber.log.Timber;
 
 
 public class DataUpWorkerALL extends Worker {
@@ -41,10 +41,9 @@ public class DataUpWorkerALL extends Worker {
         position = workerParams.getInputData().getInt("position", -2);
         uploadData = MainApp.uploadData.get(position);
 
-        Log.d(TAG, "Upload Begins uploadData.length(): " + uploadData.length());
-        Log.d(TAG, "Upload Begins uploadData: " + uploadData);
-
-        Log.d(TAG, "DataDownWorkerALL: position " + position);
+        Timber.tag(TAG).d("Upload Begins uploadData.length(): %s", uploadData.length());
+        Timber.tag(TAG).d("Upload Begins uploadData: %s", uploadData);
+        Timber.tag(TAG).d("DataDownWorkerALL: position %s", position);
         //uploadColumns = workerParams.getInputData().getString("columns");
         String uploadWhere = workerParams.getInputData().getString("where");
 
@@ -74,7 +73,7 @@ public class DataUpWorkerALL extends Worker {
 
             return Result.failure(data);
         }
-        Log.d(TAG, "doWork: Starting");
+        Timber.tag(TAG).d("doWork: Starting");
         String nTitle = uploadTable + " : Data Upload";
         notify.displayNotification(nTitle, "Initializing upload data connection");
 
@@ -83,7 +82,7 @@ public class DataUpWorkerALL extends Worker {
         URL url;
         try {
             url = new URL(MainApp._HOST_URL + MainApp._SERVER_URL);
-            Log.d(TAG, "doWork: Connecting...");
+            Timber.tag(TAG).d("doWork: Connecting...");
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
@@ -94,7 +93,7 @@ public class DataUpWorkerALL extends Worker {
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);
             urlConnection.connect();
-            Log.d(TAG, "downloadURL: " + url);
+            Timber.tag(TAG).d("downloadURL: %s", url);
 
             DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
 
@@ -102,28 +101,27 @@ public class DataUpWorkerALL extends Worker {
             JSONArray jsonParam = new JSONArray();
 
             jsonTable.put("table", uploadTable);
-            Log.d(TAG, "doWork: " + uploadData);
-            System.out.print("doWork: " + uploadData);
+            Timber.tag(TAG).d("doWork: %s", uploadData);
             //jsonSync.put(uploadData);
             jsonParam
                     .put(jsonTable)
                     .put(uploadData);
 
-            Log.d(TAG, "Upload Begins Length: " + jsonParam.length());
-            Log.d(TAG, "Upload Begins: " + jsonParam);
+            Timber.tag(TAG).d("Upload Begins Length: %s", jsonParam.length());
+            Timber.tag(TAG).d("Upload Begins: %s", jsonParam);
 
             wr.writeBytes(ServerSecurity.INSTANCE.encrypt(jsonParam.toString(), Keys.INSTANCE.apiKey()));
             wr.flush();
             wr.close();
 
-            Log.d(TAG, "doInBackground: " + urlConnection.getResponseCode());
+            Timber.tag(TAG).d("doInBackground: %s", urlConnection.getResponseCode());
 
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                Log.d(TAG, "Connection Response: " + urlConnection.getResponseCode());
+                Timber.tag(TAG).d("Connection Response: %s", urlConnection.getResponseCode());
                 notify.displayNotification(nTitle, "Start uploading data");
 
                 int length = urlConnection.getContentLength();
-                Log.d(TAG, "Content Length: " + length);
+                Timber.tag(TAG).d("Content Length: %s", length);
 
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
@@ -135,10 +133,10 @@ public class DataUpWorkerALL extends Worker {
 
                 }
                 notify.displayNotification(nTitle, "Upload data done");
-                Log.d(TAG, "doWork(EN): " + result.toString());
+                Timber.tag(TAG).d("doWork(EN): %s", result.toString());
             } else {
 
-                Log.d(TAG, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
+                Timber.tag(TAG).d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
                 notify.displayNotification(nTitle, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
                 data = new Data.Builder()
                         .putString("error", String.valueOf(urlConnection.getResponseCode()))
@@ -147,7 +145,7 @@ public class DataUpWorkerALL extends Worker {
                 return Result.failure(data);
             }
         } catch (java.net.SocketTimeoutException e) {
-            Log.d(TAG, "doWork (Timeout): " + e.getMessage());
+            Timber.tag(TAG).d("doWork (Timeout): %s", e.getMessage());
             notify.displayNotification(nTitle, "Timeout Error: " + e.getMessage());
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))
@@ -156,7 +154,7 @@ public class DataUpWorkerALL extends Worker {
             return Result.failure(data);
 
         } catch (IOException | JSONException e) {
-            Log.d(TAG, "doWork (IO Error): " + e.getMessage());
+            Timber.tag(TAG).d("doWork (IO Error): %s", e.getMessage());
             notify.displayNotification(nTitle, "IO Error: " + e.getMessage());
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))

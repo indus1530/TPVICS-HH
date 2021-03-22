@@ -25,6 +25,7 @@ import java.util.Locale;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
+import timber.log.Timber;
 
 
 public class DataDownWorkerALL extends Worker {
@@ -62,7 +63,7 @@ public class DataDownWorkerALL extends Worker {
     @Override
     public Result doWork() {
 
-        Log.d(TAG, "doWork: Starting");
+        Timber.tag(TAG).d("doWork: Starting");
         String nTitle = uploadTable + " : Data Upload";
         notify.displayNotification(nTitle, "Initializing download data connection");
 
@@ -72,7 +73,7 @@ public class DataDownWorkerALL extends Worker {
         Data data;
         try {
             url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
-            Log.d(TAG, "doWork: Connecting...");
+            Timber.tag(TAG).d("doWork: Connecting...");
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
@@ -83,7 +84,7 @@ public class DataDownWorkerALL extends Worker {
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);
             urlConnection.connect();
-            Log.d(TAG, "downloadURL: " + url);
+            Timber.tag(TAG).d("downloadURL: %s", url);
 
             DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
 
@@ -99,21 +100,21 @@ public class DataDownWorkerALL extends Worker {
             jsonParam.put(jsonTable);
             // .put(jsonSync);
 
-            Log.d(TAG, "Upload Begins: " + jsonTable.toString());
+            Timber.tag(TAG).d("Upload Begins: %s", jsonTable.toString());
 
 
             wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
             wr.flush();
             wr.close();
 
-            Log.d(TAG, "doInBackground: " + urlConnection.getResponseCode());
+            Timber.tag(TAG).d("doInBackground: %s", urlConnection.getResponseCode());
 
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                Log.d(TAG, "Connection Response: " + urlConnection.getResponseCode());
+                Timber.tag(TAG).d("Connection Response: %s", urlConnection.getResponseCode());
                 notify.displayNotification(nTitle, "Start downloading data");
 
                 int length = urlConnection.getContentLength();
-                Log.d(TAG, "Content Length: " + length);
+                Timber.tag(TAG).d("Content Length: %s", length);
 
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
@@ -127,16 +128,16 @@ public class DataDownWorkerALL extends Worker {
                 result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString(), Keys.INSTANCE.apiKey()));
                 if (result.toString().equals("[]")) {
                     notify.displayNotification(nTitle, "No data received from server");
-                    Log.d(TAG, "No data received from server: " + result);
+                    Timber.tag(TAG).d("No data received from server: %s", result);
                     data = new Data.Builder()
                             .putString("error", "No data received from server: " + result)
                             .putInt("position", this.position)
                             .build();
                     return Result.failure(data);
                 }
-                Log.d(TAG, "doWork(EN): " + result.toString());
+                Timber.d("doWork(EN): %s", result.toString());
             } else {
-                Log.d(TAG, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
+                Timber.d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
                 notify.displayNotification(nTitle, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
                 data = new Data.Builder()
                         .putString("error", String.valueOf(urlConnection.getResponseCode()))
@@ -145,7 +146,7 @@ public class DataDownWorkerALL extends Worker {
                 return Result.failure(data);
             }
         } catch (java.net.SocketTimeoutException e) {
-            Log.d(TAG, "doWork (Timeout): " + e.getMessage());
+            Timber.d("doWork (Timeout): %s", e.getMessage());
             notify.displayNotification(nTitle, "Timeout Error: " + e.getMessage());
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))
@@ -154,7 +155,7 @@ public class DataDownWorkerALL extends Worker {
             return Result.failure(data);
 
         } catch (IOException | JSONException e) {
-            Log.d(TAG, "doWork (IO Error): " + e.getMessage());
+            Timber.d("doWork (IO Error): %s", e.getMessage());
             notify.displayNotification(nTitle, "IO Error: " + e.getMessage());
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))
@@ -176,8 +177,8 @@ public class DataDownWorkerALL extends Worker {
 
 
         notify.displayNotification(nTitle, "Downloaded successfully");
-        Log.d(TAG, "doWork: " + result);
-        Log.d(TAG, "doWork (success) : position " + data.getInt("position", -1));
+        Timber.d("doWork: %s", result);
+        Timber.d("doWork (success) : position %s", data.getInt("position", -1));
         return Result.success(data);
     }
 

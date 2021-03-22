@@ -52,6 +52,9 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -621,6 +624,34 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
     }
 
+    private void doPermissionGrantedStuffs() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        // MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+        MainApp.IMEI = getDeviceId(this);
+
+    }
+
+    // New Function in LoginActivity
+    public String computeHash(String passwordInput) throws NoSuchAlgorithmException {
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        digest.reset();
+        byte[] byteData = digest.digest(passwordInput.getBytes(StandardCharsets.UTF_8));
+        StringBuilder sb = new StringBuilder();
+        for (byte byteDatum : byteData) {
+            sb.append(Integer.toString((byteDatum & 0xff) + 0x100, 16).substring(1));
+        }
+        return sb.toString();
+    }
+
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -670,22 +701,28 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             assert mlocManager != null;
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                MainApp.user = MainApp.appInfo.dbHelper.getLoginUser(mEmail, mPassword);
-                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
-                        (mEmail.equals("guest@aku") && mPassword.equals("aku1234"))
-                        || (mEmail.equals("test1234") && mPassword.equals("test1234")) || MainApp.user != null) {
+                try {
+                    MainApp.user = MainApp.appInfo.dbHelper.getLoginUser(mEmail, computeHash(mPassword));
 
-                    if (MainApp.user == null) {
-                        MainApp.user = new Users(mEmail, MainApp.DIST_ID);
+                    if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
+                            (mEmail.equals("guest@aku") && mPassword.equals("aku1234"))
+                            || (mEmail.equals("test1234") && mPassword.equals("test1234")) || MainApp.user != null) {
+
+                        if (MainApp.user == null) {
+                            MainApp.user = new Users(mEmail, MainApp.DIST_ID);
+                        }
+
+                        MainApp.admin = mEmail.contains("@");
+                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(iLogin);
+                    } else {
+                        mPasswordView.setError(getString(R.string.error_incorrect_password));
+                        mPasswordView.requestFocus();
+                        Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
                     }
 
-                    MainApp.admin = mEmail.contains("@");
-                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(iLogin);
-                } else {
-                    mPasswordView.setError(getString(R.string.error_incorrect_password));
-                    mPasswordView.requestFocus();
-                    Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
+                } catch (NoSuchAlgorithmException e) {
+                    e.printStackTrace();
                 }
 
 
@@ -716,22 +753,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mAuthTask = null;
             showProgress(false);
         }
-    }
-
-    private void doPermissionGrantedStuffs() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        // MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
-        MainApp.IMEI = getDeviceId(this);
-
     }
 }
 

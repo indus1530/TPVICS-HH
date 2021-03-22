@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,8 +33,10 @@ import org.json.JSONObject;
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -54,9 +55,11 @@ import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
 import edu.aku.hassannaqvi.tpvics_hh.models.SyncModel;
 import edu.aku.hassannaqvi.tpvics_hh.models.Users;
 import edu.aku.hassannaqvi.tpvics_hh.models.VersionApp;
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.SharedStorage;
 import edu.aku.hassannaqvi.tpvics_hh.workers.DataDownWorkerALL;
 import edu.aku.hassannaqvi.tpvics_hh.workers.DataUpWorkerALL;
 import edu.aku.hassannaqvi.tpvics_hh.workers.PhotoUploadWorkerAll;
+import timber.log.Timber;
 
 import static edu.aku.hassannaqvi.tpvics_hh.core.MainApp.sdDir;
 import static edu.aku.hassannaqvi.tpvics_hh.database.CreateTable.PROJECT_NAME;
@@ -165,12 +168,11 @@ public class SyncActivity extends AppCompatActivity {
         bi.mTextViewS.setVisibility(View.VISIBLE);
         bi.pBar.setVisibility(View.VISIBLE);
         bi.photoLayout.removeAllViews();
-        Log.d("Directory", "uploadPhotos: " + sdDir);
+        Timber.tag("Directory").d("uploadPhotos: %s", sdDir);
         if (sdDir.exists()) {
             File[] files = sdDir.listFiles(file -> (file.getPath().endsWith(".jpg") || file.getPath().endsWith(".jpeg")));
             sortBySize(files);
             bi.pBar.setProgress(0);
-            Log.d("Files", "Count: " + files.length);
             if (files.length > 0) {
 
                 int fcount = Math.min(files.length, 300);
@@ -212,6 +214,7 @@ public class SyncActivity extends AppCompatActivity {
                                             String message = workInfo.getState().name() + ": " + files[finalI].getName();
                                             mTextView1[0].setText(message);
                                             if (workInfo.getState() == WorkInfo.State.SUCCEEDED) {
+                                                SharedStorage.INSTANCE.setLastPhotoUpload(SyncActivity.this, new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date()));
                                                 message = workInfo.getState().name() + ": " + workInfo.getOutputData().getString("message");
                                                 mTextView1[0].setText(message);
                                                 mTextView1[0].setTextColor(Color.parseColor("#007f00"));
@@ -299,13 +302,17 @@ public class SyncActivity extends AppCompatActivity {
         wc.enqueue();
 
         wc.getWorkInfosLiveData().observe(this, workInfos -> {
-            Log.d(TAG, "workInfos: " + workInfos.size());
+
+            SharedStorage.INSTANCE.setLastDataDownload(this, new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date()));
+
+            Timber.tag(TAG).d("workInfos: %s", workInfos.size());
             for (WorkInfo workInfo : workInfos) {
-                Log.d(TAG, "workInfo: getState " + workInfo.getState());
-                Log.d(TAG, "workInfo: data " + workInfo.getOutputData().getString("data"));
-                Log.d(TAG, "workInfo: error " + workInfo.getOutputData().getString("error"));
-                Log.d(TAG, "workInfo: position " + workInfo.getOutputData().getInt("position", 0));
+                Timber.tag(TAG).d("workInfo: getState %s", workInfo.getState());
+                Timber.tag(TAG).d("workInfo: data %s", workInfo.getOutputData().getString("data"));
+                Timber.tag(TAG).d("workInfo: error %s", workInfo.getOutputData().getString("error"));
+                Timber.tag(TAG).d("workInfo: position %s", workInfo.getOutputData().getInt("position", 0));
             }
+
             for (WorkInfo workInfo : workInfos) {
                 int position = workInfo.getOutputData().getInt("position", 0);
                 String tableName = downloadTables.get(position).gettableName();
@@ -316,8 +323,6 @@ public class SyncActivity extends AppCompatActivity {
                     //Do something with the JSON string
                     if (result != null) {
                         if (result.length() > 0) {
-                            Log.d(TAG, "onChanged: result " + result);
-                            System.out.println("SYSTEM onChanged: result" + result);
                             DatabaseHelper db = new DatabaseHelper(SyncActivity.this);
                             try {
                                 JSONArray jsonArray = new JSONArray();
@@ -419,13 +424,14 @@ public class SyncActivity extends AppCompatActivity {
 
         // FOR WORKREQUESTS CHAIN (ONE TABLE DOWNLOADS AT A TIME)
         wc.getWorkInfosLiveData().observe(this, workInfos -> {
-            Log.d(TAG, "workInfos: " + workInfos.size());
+            SharedStorage.INSTANCE.setLastDataUpload(this, new SimpleDateFormat("dd-MM-yy", Locale.ENGLISH).format(new Date()));
+            Timber.tag(TAG).d("workInfos: %s", workInfos.size());
             for (WorkInfo workInfo : workInfos) {
-                Log.d(TAG, "workInfo: getState " + workInfo.getState());
-                Log.d(TAG, "workInfo: data " + workInfo.getTags());
-                Log.d(TAG, "workInfo: data " + workInfo.getOutputData().getString("message"));
-                Log.d(TAG, "workInfo: error " + workInfo.getOutputData().getString("error"));
-                Log.d(TAG, "workInfo: position " + workInfo.getOutputData().getInt("position", 0));
+                Timber.tag(TAG).d("workInfo: getState %s", workInfo.getState());
+                Timber.tag(TAG).d("workInfo: data %s", workInfo.getTags());
+                Timber.tag(TAG).d("workInfo: data %s", workInfo.getOutputData().getString("message"));
+                Timber.tag(TAG).d("workInfo: error %s", workInfo.getOutputData().getString("error"));
+                Timber.tag(TAG).d("workInfo: position %s", workInfo.getOutputData().getInt("position", 0));
             }
             for (WorkInfo workInfo : workInfos) {
                 int position = workInfo.getOutputData().getInt("position", 0);
@@ -443,14 +449,14 @@ public class SyncActivity extends AppCompatActivity {
                     if (result != null) {
                         if (result.length() > 0) {
                             try {
-                                Log.d(TAG, "onPostExecute: " + result);
+                                Timber.tag(TAG).d("onPostExecute: %s", result);
                                 json = new JSONArray(result);
 
                                 Method method = null;
                                 for (Method method1 : db.getClass().getDeclaredMethods()) {
-                                    Log.d(TAG, "onChanged Methods: " + method1.getName());
-                                    Log.d(TAG, "onChanged Names: updateSynced" + tableName);
-                                    Log.d(TAG, "onChanged Compare: " + method1.getName().equals("updateSynced" + tableName));
+                                    Timber.tag(TAG).d("onChanged Methods: %s", method1.getName());
+                                    Timber.tag(TAG).d("onChanged Names: updateSynced%s", tableName);
+                                    Timber.tag(TAG).d("onChanged Compare: %s", method1.getName().equals("updateSynced" + tableName));
                                     if (method1.getName().equals("updateSynced" + tableName)) {
                                         method = method1;
                                         Toast.makeText(SyncActivity.this, "updateSynced not found: updateSynced" + tableName, Toast.LENGTH_SHORT).show();
@@ -460,7 +466,6 @@ public class SyncActivity extends AppCompatActivity {
                                 if (method != null) {
                                     for (int i = 0; i < json.length(); i++) {
                                         JSONObject jsonObject = new JSONObject(json.getString(i));
-                                        Log.d(TAG, "onChanged: " + json.getString(i));
                                         if (jsonObject.getString("status").equals("1") && jsonObject.getString("error").equals("0")) {
                                             method.invoke(db, jsonObject.getString("id"));
                                             sSynced++;
@@ -541,9 +546,8 @@ public class SyncActivity extends AppCompatActivity {
 
     private void upDatePhotoCount() {
         if (sdDir.exists()) {
-            Log.d("DIR", "onCreate: " + sdDir.getName());
             File[] files = sdDir.listFiles(file -> (file.getPath().endsWith(".jpg") || file.getPath().endsWith(".jpeg")));
-
+            if (files == null) return;
             if (files.length < totalFiles) {
 
                 int filesProcessed = totalFiles - files.length;

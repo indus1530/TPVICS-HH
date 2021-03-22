@@ -29,6 +29,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 fun dbBackup(context: Context) {
+    return
     val dt: String = SharedStorage.getBackUpDTFolder(context)
     if (dt != SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).format(Date())) {
         SharedStorage.setBackUpDTFolder(context, SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH).format(Date()))

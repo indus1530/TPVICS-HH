@@ -131,4 +131,7 @@ dependencies {
 
     //Rooted
     implementation 'com.scottyab:rootbeer-lib:0.0.8'
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
