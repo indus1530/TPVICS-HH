@@ -149,7 +149,7 @@ public class SyncActivity extends AppCompatActivity {
                 } else {
                     // Set tables to DOWNLOAD
                     downloadTables.add(new SyncModel(Users.UserTable.TABLE_NAME.toLowerCase()));
-                    downloadTables.add(new SyncModel(VersionApp.VersionAppTable.TABLE_NAME.toLowerCase()));
+                    downloadTables.add(new SyncModel(VersionApp.VersionAppTable.TABLE_NAME));
                     downloadTables.add(new SyncModel(Districts.DistrictTable.TABLE_NAME.toLowerCase()));
                 }
                 MainApp.downloadData = new String[downloadTables.size()];

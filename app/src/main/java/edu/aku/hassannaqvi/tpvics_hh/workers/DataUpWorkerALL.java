@@ -89,6 +89,7 @@ public class DataUpWorkerALL extends Worker {
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
             urlConnection.setDoInput(true);
+            urlConnection.setRequestProperty("USER_AGENT", "SAMSUNG SM-T295");
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);

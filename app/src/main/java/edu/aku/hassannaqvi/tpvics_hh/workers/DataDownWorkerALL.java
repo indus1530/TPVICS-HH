@@ -1,7 +1,6 @@
 package edu.aku.hassannaqvi.tpvics_hh.workers;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.work.Data;
@@ -42,7 +41,7 @@ public class DataDownWorkerALL extends Worker {
         super(context, workerParams);
         uploadTable = workerParams.getInputData().getString("table");
         position = workerParams.getInputData().getInt("position", -2);
-        Log.d(TAG, "DataDownWorkerALL: position " + position);
+        Timber.tag(TAG).d("DataDownWorkerALL: position %s", position);
         //uploadColumns = workerParams.getInputData().getString("columns");
         uploadWhere = workerParams.getInputData().getString("where");
 
@@ -80,6 +79,7 @@ public class DataDownWorkerALL extends Worker {
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
             urlConnection.setDoInput(true);
+            urlConnection.setRequestProperty("USER_AGENT", "SAMSUNG SM-T295");
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);
