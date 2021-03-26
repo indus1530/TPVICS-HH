@@ -22,6 +22,7 @@ import java.net.URL;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
+import edu.aku.hassannaqvi.tpvics_hh.models.VersionApp;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.ServerSecurity;
 import timber.log.Timber;
@@ -94,6 +95,11 @@ public class DataDownWorkerALL extends Worker {
             jsonTable.put("table", uploadTable);
             //jsonTable.put("select", uploadColumns);
             jsonTable.put("filter", uploadWhere);
+
+            if (uploadTable.equals(VersionApp.VersionAppTable.TABLE_NAME)) {
+                jsonTable.put("folder", "/");
+            }
+
             //jsonTable.put("limit", "3");
             //jsonTable.put("orderby", "rand()");
             //jsonSync.put(uploadData);
