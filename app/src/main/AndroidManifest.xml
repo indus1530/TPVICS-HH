@@ -127,7 +127,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
-            android:name=".core.AndroidDatabaseManager"
+            android:name=".core.AndroidManager"
             android:exported="false"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"

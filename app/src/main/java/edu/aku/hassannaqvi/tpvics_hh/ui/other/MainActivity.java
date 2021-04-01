@@ -15,7 +15,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,7 +33,7 @@ import java.util.Objects;
 
 import edu.aku.hassannaqvi.tpvics_hh.CONSTANTS;
 import edu.aku.hassannaqvi.tpvics_hh.R;
-import edu.aku.hassannaqvi.tpvics_hh.core.AndroidDatabaseManager;
+import edu.aku.hassannaqvi.tpvics_hh.core.AndroidManager;
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.database.CreateTable;
 import edu.aku.hassannaqvi.tpvics_hh.databinding.ActivityMainBinding;
@@ -110,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 oF = new Intent(this, SectionInfoActivity.class);
                 break;
             case R.id.databaseBtn:
-                oF = new Intent(this, AndroidDatabaseManager.class);
+                oF = new Intent(this, AndroidManager.class);
                 break;
         }
         startActivity(oF);
@@ -176,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                     .append("---------------------------------------------------------\r\n");
 
             for (FormsContract fc : todaysForms) {
-                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
                 switch (fc.getIstatus()) {
                     case "1":
                         iStatus = "Complete";
@@ -236,9 +234,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                 .append("\t========================================================\r\n");
         bi.recordSummary.setText(rSumText);
 
-        Log.d(TAG, "onCreate: " + rSumText);
-        bi.databaseBtn.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
-
         // Auto download app
         VersionApp versionApp = appInfo.getDbHelper().getVersionApp();
 
@@ -286,6 +281,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);
+            bi.databaseBtn.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
         }
 
     }
