@@ -204,8 +204,6 @@ public class DataDownWorkerALL extends Worker {
         return Result.success(data);
     }
 
-
-
     private static SSLSocketFactory buildSslSocketFactory(Context context){
         try {
         CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -219,35 +217,25 @@ public class DataDownWorkerALL extends Worker {
             caInput.close();
         }
 
-// Create a KeyStore containing our trusted CAs
+        // Create a KeyStore containing our trusted CAs
         String keyStoreType = KeyStore.getDefaultType();
         KeyStore keyStore = KeyStore.getInstance(keyStoreType);
         keyStore.load(null, null);
         keyStore.setCertificateEntry("ca", ca);
 
-// Create a TrustManager that trusts the CAs in our KeyStore
-        String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
-        TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
-        tmf.init(keyStore);
+            // Create a TrustManager that trusts the CAs in our KeyStore
+            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
+            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
+            tmf.init(keyStore);
 
-// Create an SSLContext that uses our TrustManager
-        SSLContext context1 = SSLContext.getInstance("TLSv1.2");
-        context1.init(null, tmf.getTrustManagers(), null);
-        return context1.getSocketFactory();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (KeyStoreException e) {
-            e.printStackTrace();
-        } catch (KeyManagementException e) {
-            e.printStackTrace();
-        } catch (CertificateException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            // Create an SSLContext that uses our TrustManager
+            SSLContext context1 = SSLContext.getInstance("TLSv1.2");
+            context1.init(null, tmf.getTrustManagers(), null);
+            return context1.getSocketFactory();
+        } catch (NoSuchAlgorithmException | KeyStoreException | KeyManagementException | CertificateException | IOException e) {
             e.printStackTrace();
         }
         return null;
-
     }
-
 
 }

@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.tpvics_hh.workers;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 
 import androidx.annotation.NonNull;
 import androidx.work.Data;
@@ -19,7 +20,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.Locale;
+
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManagerFactory;
 
 import edu.aku.hassannaqvi.tpvics_hh.core.MainApp;
 import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys;
@@ -34,6 +48,7 @@ public class DataUpWorkerALL extends Worker {
     private final JSONArray uploadData;
     private final int position;
     private final NotificationUtils notify;
+    private final Context mContext;
 
     public DataUpWorkerALL(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -49,6 +64,8 @@ public class DataUpWorkerALL extends Worker {
 
         notify = new NotificationUtils(context, 2);
 
+        mContext = context;
+
     }
 
     /*
@@ -60,6 +77,40 @@ public class DataUpWorkerALL extends Worker {
      * It will display a notification
      * So that we will understand the work is executed
      * */
+
+    private static SSLSocketFactory buildSslSocketFactory(Context context) {
+        try {
+            CertificateFactory cf = CertificateFactory.getInstance("X.509");
+            AssetManager assetManager = context.getAssets();
+            InputStream caInput = assetManager.open("star_aku_edu.crt");
+            Certificate ca;
+            try {
+                ca = cf.generateCertificate(caInput);
+                System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+            } finally {
+                caInput.close();
+            }
+
+            // Create a KeyStore containing our trusted CAs
+            String keyStoreType = KeyStore.getDefaultType();
+            KeyStore keyStore = KeyStore.getInstance(keyStoreType);
+            keyStore.load(null, null);
+            keyStore.setCertificateEntry("ca", ca);
+
+            // Create a TrustManager that trusts the CAs in our KeyStore
+            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
+            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
+            tmf.init(keyStore);
+
+            // Create an SSLContext that uses our TrustManager
+            SSLContext context1 = SSLContext.getInstance("TLSv1.2");
+            context1.init(null, tmf.getTrustManagers(), null);
+            return context1.getSocketFactory();
+        } catch (NoSuchAlgorithmException | KeyStoreException | KeyManagementException | CertificateException | IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @NonNull
     @Override
@@ -83,7 +134,8 @@ public class DataUpWorkerALL extends Worker {
         try {
             url = new URL(MainApp._HOST_URL + MainApp._SERVER_URL);
             Timber.tag(TAG).d("doWork: Connecting...");
-            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
             urlConnection.setRequestMethod("POST");
