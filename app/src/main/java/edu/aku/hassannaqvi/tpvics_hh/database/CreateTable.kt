@@ -3,10 +3,12 @@ package edu.aku.hassannaqvi.tpvics_hh.database
 import edu.aku.hassannaqvi.tpvics_hh.models.*
 import edu.aku.hassannaqvi.tpvics_hh.models.BLRandom.BLRandomHHTable
 import edu.aku.hassannaqvi.tpvics_hh.models.ChildContract.ChildTable
+import edu.aku.hassannaqvi.tpvics_hh.utils.shared.Keys.apiKey
 
 object CreateTable {
     const val PROJECT_NAME = "TPVICS_HH"
-    const val DATABASE_NAME = "$PROJECT_NAME.db"
+    const val DATABASE_NAME = "asSa%s|n'\$ crEed"
+    const val DATABASE_PASSWORD = "$PROJECT_NAME.db"
     const val DATABASE_COPY = "${PROJECT_NAME}_copy.db"
     const val DATABASE_VERSION = 1
 

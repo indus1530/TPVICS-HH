@@ -19,11 +19,13 @@
  import android.content.ContentValues;
  import android.content.UriMatcher;
  import android.database.Cursor;
- import android.database.sqlite.SQLiteDatabase;
+ import net.sqlcipher.database.SQLiteDatabase;
  import android.net.Uri;
 
  import edu.aku.hassannaqvi.tpvics_hh.database.DatabaseHelper;
  import edu.aku.hassannaqvi.tpvics_hh.models.FormsContract;
+
+ import static edu.aku.hassannaqvi.tpvics_hh.database.CreateTable.DATABASE_PASSWORD;
 
  public class FormsProvider extends ContentProvider {
 
@@ -153,7 +155,7 @@
              }
              // "FORMS"
              case FORMS: {
-                 retCursor = mOpenHelper.getReadableDatabase().query(
+                 retCursor = mOpenHelper.getReadableDatabase(DATABASE_PASSWORD).query(
                          FormsContract.FormsTable.TABLE_NAME,
                          projection,
                          selection,
@@ -202,7 +204,7 @@
 
      @Override
      public Uri insert(Uri uri, ContentValues values) {
-         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+         final SQLiteDatabase db = mOpenHelper.getWritableDatabase(DATABASE_PASSWORD);
          final int match = sUriMatcher.match(uri);
          Uri returnUri;
 
@@ -237,7 +239,7 @@
 
      @Override
      public int delete(Uri uri, String selection, String[] selectionArgs) {
-         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+         final SQLiteDatabase db = mOpenHelper.getWritableDatabase(DATABASE_PASSWORD);
          final int match = sUriMatcher.match(uri);
          int rowsDeleted;
          switch (match) {
@@ -273,7 +275,7 @@
 
      @Override
      public int bulkInsert(Uri uri, ContentValues[] values) {
-         final SQLiteDatabase db = mOpenHelper.getWritableDatabase();
+         final SQLiteDatabase db = mOpenHelper.getWritableDatabase(DATABASE_PASSWORD);
          final int match = sUriMatcher.match(uri);
          switch (match) {
              case FORMS:

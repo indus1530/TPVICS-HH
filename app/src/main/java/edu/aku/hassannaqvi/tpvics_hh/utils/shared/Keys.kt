@@ -2,9 +2,12 @@ package edu.aku.hassannaqvi.tpvics_hh.utils.shared
 
 object Keys {
 
-    init {
+  /*  init {
         System.loadLibrary("native-lib")
     }
 
-    external fun apiKey(): String
+    external fun apiKey(): String*/
+  fun apiKey(): String {
+      return "asSa%s|n'$ crEed"
+  }
 }
