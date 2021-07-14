@@ -21,10 +21,10 @@ android {
 
         defaultConfig {
             applicationId "edu.aku.hassannaqvi.tpvics_hh"
-            minSdkVersion 23
-            targetSdkVersion 30
+            minSdkVersion 29
+            targetSdkVersion 29
             versionCode code
-            versionName "2.1"
+            versionName "2.5"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
     } else {
@@ -44,11 +44,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    externalNativeBuild {
+/*    externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
-    }
+    }*/
 
 }
 

@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.tpvics_hh.workers;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.work.Data;
@@ -29,8 +30,10 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.Locale;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
@@ -91,6 +94,14 @@ public class DataDownWorkerALL extends Worker {
             Timber.tag(TAG).d("doWork: Connecting...");
             urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
+            HostnameVerifier allHostsValid = new HostnameVerifier() {
+                public boolean verify(String hostname, SSLSession session) {
+                    //Logcat.d(hostname + " / " + apiHostname);
+                    Log.d(TAG, "verify: hostname "+ hostname);
+                    return true;
+                }
+            };
+            urlConnection.setDefaultHostnameVerifier(allHostsValid);
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
             urlConnection.setRequestMethod("POST");
@@ -157,6 +168,7 @@ public class DataDownWorkerALL extends Worker {
                             .build();
                     return Result.failure(data);
                 }
+                Timber.d("doWork(EN): %s", result.toString());
                 Timber.d("doWork(EN): %s", result.toString());
             } else {
                 Timber.d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
