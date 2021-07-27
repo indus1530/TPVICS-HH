@@ -50,10 +50,10 @@ public class DataDownWorkerALL extends Worker {
 
     private final int position;
     private final Context mContext;
-    HttpsURLConnection urlConnection;
     private final String uploadTable;
     private final String uploadWhere;
     private final NotificationUtils notify;
+    HttpsURLConnection urlConnection;
 
     public DataDownWorkerALL(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -77,6 +77,61 @@ public class DataDownWorkerALL extends Worker {
      * So that we will understand the work is executed
      * */
 
+    private static SSLSocketFactory buildSslSocketFactory(Context context) {
+        try {
+
+
+
+            CertificateFactory cf = CertificateFactory.getInstance("X.509");
+            AssetManager assetManager = context.getAssets();
+            InputStream caInput = assetManager.open("star_aku_edu.crt");
+            Certificate ca;
+            try {
+                ca = cf.generateCertificate(caInput);
+                System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+            } finally {
+                caInput.close();
+            }
+
+            // Create a KeyStore containing our trusted CAs
+            String keyStoreType = KeyStore.getDefaultType();
+            KeyStore keyStore = KeyStore.getInstance(keyStoreType);
+            keyStore.load(null, null);
+            keyStore.setCertificateEntry("ca", ca);
+
+            // Create a TrustManager that trusts the CAs in our KeyStore
+            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
+            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
+            tmf.init(keyStore);
+/*
+
+            SSLContext context = SSLContext.getInstance("TLS");
+            context.init(null, new X509TrustManager[]{new X509TrustManager() {
+                public void checkClientTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
+
+                public void checkServerTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
+
+                public X509Certificate[] getAcceptedIssuers() {
+                    return new X509Certificate[0];
+                }
+            }}, new SecureRandom());
+            HttpsURLConnection.setDefaultSSLSocketFactory(
+                    context.getSocketFactory());
+            */
+            // Create an SSLContext that uses our TrustManager
+            SSLContext context1 = SSLContext.getInstance("TLSv1.2");
+            context1.init(null, tmf.getTrustManagers(), null);
+            return context1.getSocketFactory();
+        } catch (NoSuchAlgorithmException | KeyStoreException | KeyManagementException | CertificateException | IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     @NonNull
     @Override
     public Result doWork() {
@@ -90,24 +145,35 @@ public class DataDownWorkerALL extends Worker {
         URL url;
         Data data;
         try {
+
             url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+
+
+            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+/*           */
+
+
             Timber.tag(TAG).d("doWork: Connecting...");
             urlConnection = (HttpsURLConnection) url.openConnection();
             urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
             HostnameVerifier allHostsValid = new HostnameVerifier() {
                 public boolean verify(String hostname, SSLSession session) {
                     //Logcat.d(hostname + " / " + apiHostname);
-                    Log.d(TAG, "verify: hostname "+ hostname);
+                    Log.d(TAG, "verify: hostname " + hostname);
                     return true;
                 }
             };
-            urlConnection.setDefaultHostnameVerifier(allHostsValid);
-            urlConnection.setReadTimeout(100000 /* milliseconds */);
-            urlConnection.setConnectTimeout(150000 /* milliseconds */);
+            HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
+            urlConnection.setReadTimeout(5000 /* milliseconds */);
+            urlConnection.setConnectTimeout(5000 /* milliseconds */);
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
             urlConnection.setDoInput(true);
-            urlConnection.setRequestProperty("USER_AGENT", "SAMSUNG SM-T295");
+            urlConnection.setRequestProperty("User-Agent", "SAMSUNG SM-T295");
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);
@@ -214,40 +280,6 @@ public class DataDownWorkerALL extends Worker {
         Timber.d("doWork: %s", result);
         Timber.d("doWork (success) : position %s", data.getInt("position", -1));
         return Result.success(data);
-    }
-
-    private static SSLSocketFactory buildSslSocketFactory(Context context){
-        try {
-        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-        AssetManager assetManager = context.getAssets();
-        InputStream caInput = assetManager.open("star_aku_edu.crt");
-        Certificate ca;
-        try {
-            ca = cf.generateCertificate(caInput);
-            System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
-        } finally {
-            caInput.close();
-        }
-
-        // Create a KeyStore containing our trusted CAs
-        String keyStoreType = KeyStore.getDefaultType();
-        KeyStore keyStore = KeyStore.getInstance(keyStoreType);
-        keyStore.load(null, null);
-        keyStore.setCertificateEntry("ca", ca);
-
-            // Create a TrustManager that trusts the CAs in our KeyStore
-            String tmfAlgorithm = TrustManagerFactory.getDefaultAlgorithm();
-            TrustManagerFactory tmf = TrustManagerFactory.getInstance(tmfAlgorithm);
-            tmf.init(keyStore);
-
-            // Create an SSLContext that uses our TrustManager
-            SSLContext context1 = SSLContext.getInstance("TLSv1.2");
-            context1.init(null, tmf.getTrustManagers(), null);
-            return context1.getSocketFactory();
-        } catch (NoSuchAlgorithmException | KeyStoreException | KeyManagementException | CertificateException | IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
 }
