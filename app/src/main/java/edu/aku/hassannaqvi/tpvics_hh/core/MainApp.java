@@ -16,6 +16,8 @@ import androidx.core.app.ActivityCompat;
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import com.scottyab.rootbeer.RootBeer;
 
+import net.sqlcipher.database.SQLiteDatabase;
+
 import org.json.JSONArray;
 
 import java.io.File;
@@ -100,7 +102,7 @@ public class MainApp extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
-
+        SQLiteDatabase.loadLibs(this);
     }
 
     protected void showCurrentLocation() {
