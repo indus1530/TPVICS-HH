@@ -68,10 +68,12 @@ public class MainApp extends Application {
         super.onCreate();
 
         RootBeer rootBeer = new RootBeer(this);
-        if (rootBeer.isRooted()) {
-      //     android.os.Process.killProcess(android.os.Process.myPid());
-      //    System.exit(1);
-        }
+       /* if (rootBeer.isRooted()) {
+         android.os.Process.killProcess(android.os.Process.myPid());
+         System.exit(1);
+        }*/
+
+
 
         /*Setting fonts*/
         TypefaceUtil.overrideFont(getApplicationContext(), "SANS_SERIF", "fonts/JameelNooriNastaleeq.ttf");

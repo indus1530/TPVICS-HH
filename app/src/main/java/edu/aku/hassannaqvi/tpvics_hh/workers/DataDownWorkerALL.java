@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.tpvics_hh.workers;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.work.Data;
@@ -26,13 +27,16 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
+import java.security.cert.CertificateExpiredException;
 import java.security.cert.CertificateFactory;
+import java.security.cert.CertificateNotYetValidException;
 import java.security.cert.X509Certificate;
 import java.util.Locale;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
@@ -79,7 +83,6 @@ public class DataDownWorkerALL extends Worker {
 
     private static SSLSocketFactory buildSslSocketFactory(Context context) {
         try {
-
 
 
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -144,22 +147,33 @@ public class DataDownWorkerALL extends Worker {
 
         URL url;
         Data data;
+        InputStream caInput = null;
+        Certificate ca = null;
         try {
+            CertificateFactory cf = CertificateFactory.getInstance("X.509");
+            AssetManager assetManager = mContext.getAssets();
+            caInput = assetManager.open("star_aku_edu.crt");
 
+
+            ca = cf.generateCertificate(caInput);
+            System.out.println("ca=" + ((X509Certificate) ca).getSubjectDN());
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                caInput.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try {
             url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
 
 
-            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
-                public boolean verify(String hostname, SSLSession session) {
-                    return true;
-                }
-            });
-/*           */
-
-
             Timber.tag(TAG).d("doWork: Connecting...");
-            urlConnection = (HttpsURLConnection) url.openConnection();
-            urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
             HostnameVerifier allHostsValid = new HostnameVerifier() {
                 public boolean verify(String hostname, SSLSession session) {
                     //Logcat.d(hostname + " / " + apiHostname);
@@ -167,7 +181,10 @@ public class DataDownWorkerALL extends Worker {
                     return true;
                 }
             };
-            HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
+            //HttpsURLConnection.setDefaultHostnameVerifier(allHostsValid);
+
+            urlConnection = (HttpsURLConnection) url.openConnection();
+            urlConnection.setSSLSocketFactory(buildSslSocketFactory(mContext));
             urlConnection.setReadTimeout(5000 /* milliseconds */);
             urlConnection.setConnectTimeout(5000 /* milliseconds */);
             urlConnection.setRequestMethod("POST");
@@ -178,71 +195,86 @@ public class DataDownWorkerALL extends Worker {
             urlConnection.setRequestProperty("charset", "utf-8");
             urlConnection.setUseCaches(false);
             urlConnection.connect();
-            Timber.tag(TAG).d("downloadURL: %s", url);
 
-            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+            Certificate[] certs = urlConnection.getServerCertificates();
 
-            JSONObject jsonTable = new JSONObject();
-            JSONArray jsonParam = new JSONArray();
+            if (certIsValid(certs, ca)) {
 
-            jsonTable.put("table", uploadTable);
-            //jsonTable.put("select", uploadColumns);
-            jsonTable.put("filter", uploadWhere);
+                Timber.tag(TAG).d("Certificate Matched!");
 
-            if (uploadTable.equals(VersionApp.VersionAppTable.TABLE_NAME)) {
-                jsonTable.put("folder", "/");
-            }
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
 
-            //jsonTable.put("limit", "3");
-            //jsonTable.put("orderby", "rand()");
-            //jsonSync.put(uploadData);
-            jsonParam.put(jsonTable);
-            // .put(jsonSync);
+                JSONObject jsonTable = new JSONObject();
+                JSONArray jsonParam = new JSONArray();
 
-            Timber.tag(TAG).d("Upload Begins: %s", jsonTable.toString());
+                jsonTable.put("table", uploadTable);
+                //jsonTable.put("select", uploadColumns);
+                jsonTable.put("filter", uploadWhere);
 
-
-            wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
-            wr.flush();
-            wr.close();
-
-            Timber.tag(TAG).d("doInBackground: %s", urlConnection.getResponseCode());
-
-            if (urlConnection.getResponseCode() == HttpsURLConnection.HTTP_OK) {
-                Timber.tag(TAG).d("Connection Response: %s", urlConnection.getResponseCode());
-                notify.displayNotification(nTitle, "Start downloading data");
-
-                int length = urlConnection.getContentLength();
-                Timber.tag(TAG).d("Content Length: %s", length);
-
-                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-
-                BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    result.append(line);
-
+                if (uploadTable.equals(VersionApp.VersionAppTable.TABLE_NAME)) {
+                    jsonTable.put("folder", "/");
                 }
-                result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString(), Keys.INSTANCE.apiKey()));
-                if (result.toString().equals("[]")) {
-                    notify.displayNotification(nTitle, "No data received from server");
-                    Timber.tag(TAG).d("No data received from server: %s", result);
+
+                //jsonTable.put("limit", "3");
+                //jsonTable.put("orderby", "rand()");
+                //jsonSync.put(uploadData);
+                jsonParam.put(jsonTable);
+                // .put(jsonSync);
+
+                Timber.tag(TAG).d("Upload Begins: %s", jsonTable.toString());
+
+
+                wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
+                wr.flush();
+                wr.close();
+
+                Timber.tag(TAG).d("doInBackground: %s", urlConnection.getResponseCode());
+
+                if (urlConnection.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+                    Timber.tag(TAG).d("Connection Response: %s", urlConnection.getResponseCode());
+                    notify.displayNotification(nTitle, "Start downloading data");
+
+                    int length = urlConnection.getContentLength();
+                    Timber.tag(TAG).d("Content Length: %s", length);
+
+                    InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        result.append(line);
+
+                    }
+                    result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString(), Keys.INSTANCE.apiKey()));
+                    if (result.toString().equals("[]")) {
+                        notify.displayNotification(nTitle, "No data received from server");
+                        Timber.tag(TAG).d("No data received from server: %s", result);
+                        data = new Data.Builder()
+                                .putString("error", "No data received from server: " + result)
+                                .putInt("position", this.position)
+                                .build();
+                        return Result.failure(data);
+                    }
+                    Timber.d("doWork(EN): %s", result.toString());
+                    Timber.d("doWork(EN): %s", result.toString());
+                } else {
+                    Timber.d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
+                    notify.displayNotification(nTitle, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
                     data = new Data.Builder()
-                            .putString("error", "No data received from server: " + result)
+                            .putString("error", String.valueOf(urlConnection.getResponseCode()))
                             .putInt("position", this.position)
                             .build();
                     return Result.failure(data);
                 }
-                Timber.d("doWork(EN): %s", result.toString());
-                Timber.d("doWork(EN): %s", result.toString());
             } else {
-                Timber.d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
-                notify.displayNotification(nTitle, "Connection Response (Server Failure): " + urlConnection.getResponseCode());
+                Timber.d("doWork (Invalid Certificate)");
+                notify.displayNotification(nTitle, "Invalid Certificate");
                 data = new Data.Builder()
-                        .putString("error", String.valueOf(urlConnection.getResponseCode()))
+                        .putString("error", "Invalid Certificate")
                         .putInt("position", this.position)
                         .build();
+
                 return Result.failure(data);
             }
         } catch (java.net.SocketTimeoutException e) {
@@ -254,6 +286,16 @@ public class DataDownWorkerALL extends Worker {
                     .build();
             return Result.failure(data);
 
+        } catch (SSLPeerUnverifiedException e) {
+            Timber.d("doWork (SSLPeerUnverifiedException): %s", e.getMessage());
+            Toast.makeText(mContext, "(SSLPeerUnverifiedException): %s" + e.getMessage(), Toast.LENGTH_SHORT).show();
+            notify.displayNotification(nTitle, "SSLPeerUnverifiedException: " + e.getMessage());
+            data = new Data.Builder()
+                    .putString("error", String.valueOf(e.getMessage()))
+                    .putInt("position", this.position)
+                    .build();
+
+            return Result.failure(data);
         } catch (IOException | JSONException e) {
             Timber.d("doWork (IO Error): %s", e.getMessage());
             notify.displayNotification(nTitle, "IO Error: " + e.getMessage());
@@ -280,6 +322,30 @@ public class DataDownWorkerALL extends Worker {
         Timber.d("doWork: %s", result);
         Timber.d("doWork (success) : position %s", data.getInt("position", -1));
         return Result.success(data);
+    }
+
+    private boolean certIsValid(Certificate[] certs, Certificate ca) {
+        for (Certificate cert : certs) {
+            System.out.println("Certificate is: " + cert);
+            if (cert instanceof X509Certificate) {
+
+                try {
+                    ((X509Certificate) cert).checkValidity();
+
+                    System.out.println("Certificate is active for current date");
+                    if (cert.equals(ca)) {
+
+                        return true;
+                    }
+                    //  Toast.makeText(mContext, "Certificate is active for current date", Toast.LENGTH_SHORT).show();
+                } catch (CertificateExpiredException | CertificateNotYetValidException e) {
+                    e.printStackTrace();
+                    return false;
+                }
+            }
+
+        }
+        return false;
     }
 
 }

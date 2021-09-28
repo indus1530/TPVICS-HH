@@ -1,5 +1,16 @@
 package edu.aku.hassannaqvi.tpvics_hh.ui.other;
 
+import static java.lang.Thread.sleep;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.LOGIN_SPLASH_FLAG;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
+import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
+import static edu.aku.hassannaqvi.tpvics_hh.repository.SplashRepositoryKt.populatingSpinners;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.dbBackup;
+import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.getPermissionsList;
+
 import android.Manifest;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -76,17 +87,6 @@ import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
 
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.LOGIN_SPLASH_FLAG;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_PHONE_STATE;
-import static edu.aku.hassannaqvi.tpvics_hh.CONSTANTS.TWO_MINUTES;
-import static edu.aku.hassannaqvi.tpvics_hh.repository.SplashRepositoryKt.populatingSpinners;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.dbBackup;
-import static edu.aku.hassannaqvi.tpvics_hh.utils.AppUtilsKt.getPermissionsList;
-import static java.lang.Thread.sleep;
-
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     protected static LocationManager locationManager;
@@ -117,6 +117,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);

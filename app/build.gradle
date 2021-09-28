@@ -31,12 +31,17 @@ android {
         throw new GradleException("Could not read version.properties!")
     }
     buildTypes {
-            release {
-            minifyEnabled false
+        release {
+            minifyEnabled true
+            useProguard true    // obfuscate
+
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled false
+            minifyEnabled true
+            useProguard false   // don't obfuscate
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {
@@ -127,7 +132,8 @@ dependencies {
     //WorkManager
     def work_version = '2.5.0'
     implementation "androidx.work:work-runtime:$work_version"// WorkManager (Java only)
-    implementation "androidx.work:work-runtime-ktx:$work_version" // WorkManager (Kotlin + coroutines)
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    // WorkManager (Kotlin + coroutines)
 
     //Rooted
     implementation 'com.scottyab:rootbeer-lib:0.0.8'

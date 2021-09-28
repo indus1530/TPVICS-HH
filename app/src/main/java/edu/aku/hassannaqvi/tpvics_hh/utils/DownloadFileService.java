@@ -30,7 +30,7 @@ public class DownloadFileService extends IntentService {
         String urlToDownload = intent.getStringExtra("url");
         ResultReceiver receiver = intent.getParcelableExtra("receiver");
         try {
-            URL url = new URL("http://43.245.131.159:8080/tmk/app/tmk_bl_sep_25.apk");
+            URL url = new URL(urlToDownload);
             URLConnection connection = url.openConnection();
             connection.connect();
             // this will be useful so that you can show a typical 0-100% progress bar
