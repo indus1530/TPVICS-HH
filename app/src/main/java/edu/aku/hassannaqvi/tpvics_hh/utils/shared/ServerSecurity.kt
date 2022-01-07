@@ -11,6 +11,7 @@ import javax.crypto.spec.SecretKeySpec
 
 object ServerSecurity {
 
+
     fun encrypt(plain: String, apikey: String): String {
         return try {
             val iv = ByteArray(16)

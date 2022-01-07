@@ -208,6 +208,7 @@ public class DataDownWorkerALL extends Worker {
                 JSONArray jsonParam = new JSONArray();
 
                 jsonTable.put("table", uploadTable);
+                jsonTable.put("check", uploadTable);
                 //jsonTable.put("select", uploadColumns);
                 jsonTable.put("filter", uploadWhere);
 
@@ -221,10 +222,11 @@ public class DataDownWorkerALL extends Worker {
                 jsonParam.put(jsonTable);
                 // .put(jsonSync);
 
+
                 Timber.tag(TAG).d("Upload Begins: %s", jsonTable.toString());
 
-
                 wr.writeBytes(ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
+                Timber.tag(TAG).d("Upload Begins: %s", ServerSecurity.INSTANCE.encrypt(String.valueOf(jsonTable), Keys.INSTANCE.apiKey()));
                 wr.flush();
                 wr.close();
 
@@ -246,6 +248,7 @@ public class DataDownWorkerALL extends Worker {
                         result.append(line);
 
                     }
+                    //Timber.d("doWork(EN): %s", result.toString());
                     result = new StringBuilder(ServerSecurity.INSTANCE.decrypt(result.toString(), Keys.INSTANCE.apiKey()));
                     if (result.toString().equals("[]")) {
                         notify.displayNotification(nTitle, "No data received from server");
@@ -256,7 +259,6 @@ public class DataDownWorkerALL extends Worker {
                                 .build();
                         return Result.failure(data);
                     }
-                    Timber.d("doWork(EN): %s", result.toString());
                     Timber.d("doWork(EN): %s", result.toString());
                 } else {
                     Timber.d("Connection Response (Server Failure): %s", urlConnection.getResponseCode());
